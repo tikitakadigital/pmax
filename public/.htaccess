@@ -35,6 +35,10 @@ ErrorDocument 404 /404.html
   RewriteEngine On
   RewriteBase /
 
+  # Redirect www to non-www (canonical domain)
+  RewriteCond %{HTTP_HOST} ^www\.pmax\.online [NC]
+  RewriteRule ^(.*)$ https://pmax.online/$1 [R=301,L]
+
   # Serve existing files and directories directly
   RewriteCond %{REQUEST_FILENAME} -f [OR]
   RewriteCond %{REQUEST_FILENAME} -d
