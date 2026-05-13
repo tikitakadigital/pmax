@@ -111,13 +111,7 @@ export default function Nav() {
             </svg>
           </button>
         </div>
-        <ul className="nav-drawer-links">
-          {links.map(({ href, label }) => (
-            <li key={href}><Link href={href}>{label}</Link></li>
-          ))}
-          <li><Link href={`${prefix}/contact`}>{t.cta} →</Link></li>
-        </ul>
-        <div style={{ marginTop: 'auto', display: 'flex', gap: 10, paddingTop: 32 }}>
+        <div className="nav-drawer-lang">
           {(['en', 'de', 'es'] as Locale[]).map(l => (
             <button
               key={l}
@@ -136,6 +130,12 @@ export default function Nav() {
             </button>
           ))}
         </div>
+        <ul className="nav-drawer-links">
+          {links.map(({ href, label }) => (
+            <li key={href}><Link href={href}>{label}</Link></li>
+          ))}
+          <li><Link href={`${prefix}/contact`}>{t.cta} →</Link></li>
+        </ul>
       </aside>
     </>
   )
