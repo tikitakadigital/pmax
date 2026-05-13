@@ -88,7 +88,7 @@ $body_text =
     $message;
 
 $headers = implode("\r\n", [
-    'From: pmax website <noreply@pmax.online>',
+    'From: pmax website <hello@pmax.online>',
     'Reply-To: ' . $name . ' <' . $email . '>',
     'Content-Type: text/plain; charset=UTF-8',
     'X-Mailer: PHP/' . phpversion(),
