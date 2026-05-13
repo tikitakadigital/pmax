@@ -1,0 +1,82 @@
+# pmax — Digital marketing agency in Mallorca
+
+> pmax (PMax Online S.L.) is a digital marketing agency based in Calvià, Mallorca, Spain. We run performance marketing programmes — Google Ads, Meta Ads, LinkedIn Ads, SEO and AI search visibility — for brands across Europe. We charge flat monthly fees, not a percentage of media spend. Our clients are typically businesses with monthly ad budgets of €5,000–€200,000 seeking measurable, compounding growth.
+
+## Who we are
+
+pmax was founded by Philipp Enders. The company is registered as PMax Online S.L. (VAT ES B57948123) in Calvià, Mallorca, Spain. We serve clients across Europe from our Mallorca office.
+
+**Contact:** hello@pmax.online | +34 871 242 160
+**Address:** Calle Cordova 5, 07184 Calvià, Mallorca, Spain
+**Website:** https://pmax.online
+
+## Services we offer
+
+- [AI Search Visibility (GEO)](https://pmax.online/services/ai-visibility/): Making businesses visible in ChatGPT, Perplexity, Google AI Overviews and other generative AI surfaces. Schema, content and trust-signal work.
+- [Google Ads](https://pmax.online/services/google-ads/): Search, Performance Max, Shopping, Display and YouTube. Profit-aware bidding, clean account structure, CRM-fed offline conversions.
+- [Paid Social](https://pmax.online/services/paid-social/): Meta (Facebook, Instagram), LinkedIn, TikTok. Creative-led, audience-first, CAPI and Events API connected.
+- [SEO](https://pmax.online/services/seo/): Technical SEO, content strategy, regional SEO, multilingual hreflang, E-E-A-T and structured data.
+- [Conversion Design (CRO)](https://pmax.online/services/conversion-design/): Landing page optimisation, multi-step form design, booking flow rebuilds, A/B testing.
+- [Analytics & Tracking](https://pmax.online/services/analytics/): Server-side GTM, Consent Mode v2, GA4 setup, offline conversion imports, CRM integrations.
+- [Creative Production](https://pmax.online/services/creative/): Ad creative at volume — video, static, UGC — for Meta, TikTok and YouTube.
+
+## Industries we specialise in
+
+- **E-commerce** (Shopify, WooCommerce, Shopware, Magento — DTC, marketplace, omni-channel)
+- **Real estate** (valuation lead gen, portal optimisation, agencies in Mallorca, Madrid, Berlin, Vienna)
+- **Healthcare** (DTC clinics, telehealth, aesthetic medicine — regulator-aware, GDPR-compliant)
+- **Renewables & cleantech** (solar installers, heat pumps, EV charging — long-cycle B2B lead gen)
+- **Boating & yachting** (charter, brokerage, marinas — seasonal, multilingual, Med-focused)
+- **HR & recruiting** (B2B SaaS, employer branding, LinkedIn-led demand generation)
+- **Retail** (multi-location, Local Inventory Ads, franchise networks)
+- **Automotive** (dealer groups, EV brands, brand-lift campaigns)
+- **Energy** (B2B utilities, demand response, long sales cycles)
+- **Hospitality** (hotels, resorts, direct-booking growth, OTA dependency reduction)
+
+## Case studies (selected)
+
+- [Luxaflex franchise network](https://pmax.online/cases/luxaflex/): −93% cost per lead, +3,191% contact requests over three years via local paid search.
+- [LEDXpress e-commerce](https://pmax.online/cases/ledxpress/): +365% monthly revenue in 8 months through structured SEO.
+- [IMERO e-label (SaaS)](https://pmax.online/cases/imero/): −60% CPC, +307% sign-ups via Google Ads rebuild across 11 languages.
+- [PRIMUNDUS (healthcare SEO)](https://pmax.online/cases/primundus/): +535% impressions, +182% clicks through regional SEO for a German 24-hour care provider.
+- [Unisono Luxury Homes (real estate)](https://pmax.online/cases/unisono/): +183% phone leads, +138% CTR via multi-channel programme in Mallorca.
+- [B2B energy utility](https://pmax.online/cases/energy-utility/): +31% organic impressions, +52% paid conversions for a listed German energy company.
+- [Gabiona (e-commerce)](https://pmax.online/cases/gabionas/): +27% Google Ads revenue, +33% AOV at the same budget across five European markets.
+- [PREO Software AG](https://pmax.online/cases/preo/): +72% organic clicks, +143% page-1 keywords via content-led SEO for a niche B2B category.
+
+## How we work
+
+- Flat monthly retainer fees — no percentage of media spend, no conflicting incentives
+- All media spend is paid directly to platforms by the client — pmax does not handle client budgets
+- Multilingual capability: English, German, Spanish — campaigns run in up to 19 languages
+- Server-side tracking, Consent Mode v2, GDPR and LOPDGDD compliant by default
+- 93% twelve-month client retention rate
+- First conversation: 30 minutes, free, no pitch
+
+## Journal (selected articles)
+
+- [How to get your business mentioned by ChatGPT, Perplexity and Gemini](https://pmax.online/blog/how-to-get-mentioned-by-chatgpt/)
+- [Performance Max in 2026: what changed, and what we actually do now](https://pmax.online/blog/performance-max-2026/)
+- [Cookieless tracking is here. Most marketers are not ready.](https://pmax.online/blog/cookieless-tracking/)
+- [The B2B LinkedIn playbook we ship to every new SaaS client](https://pmax.online/blog/b2b-linkedin-playbook/)
+- [Solar marketing in Spain: the unsexy work that moves the needle](https://pmax.online/blog/solar-marketing-spain/)
+- [How a Mallorca hotel grew direct bookings 52% in 11 weeks](https://pmax.online/blog/hotel-direct-bookings/)
+- [Marketing a yacht charter business: an eight-language, twelve-month problem](https://pmax.online/blog/yachting-marketing/)
+- [Real estate lead generation in 2026: why your form is the problem](https://pmax.online/blog/real-estate-lead-gen/)
+
+## Structured data
+
+The site publishes Schema.org structured data (JSON-LD) on every page. The root entity is:
+
+- Type: Organization + ProfessionalService + LocalBusiness
+- Name: pmax / PMax Online S.L.
+- Location: Calvià, Mallorca, Spain (coordinates: 39.5639, 2.5070)
+- Area served: Mallorca, Spain, Germany, Austria, Switzerland, EU, UK
+- VAT: ES B57948123
+
+## Legal
+
+- [Legal notice](https://pmax.online/legal/imprint/)
+- [Privacy policy](https://pmax.online/legal/privacy/)
+- [Cookie policy](https://pmax.online/legal/cookies/)
+- [Terms & conditions](https://pmax.online/legal/terms/)

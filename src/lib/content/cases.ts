@@ -1,0 +1,223 @@
+export interface Case {
+  slug: string
+  stamp: string
+  kicker: string
+  title: string
+  deck: string
+  meta: string[]
+  result: { num: string; label: string }
+  variant: string
+  heroVariant: string
+  services?: string[]
+  stats?: { num: string; label: string }[]
+  client?: string
+  sector?: string
+  year?: string
+}
+
+export const cases: Case[] = [
+  {
+    slug: 'unisono',
+    stamp: 'MAY 2026',
+    kicker: 'Luxury real estate · Villa rental · Mallorca',
+    title: 'Unisono Luxury Homes: +138% CTR, +183% phone leads — a multi-channel growth programme',
+    deck: 'SEO, Google Ads, Microsoft Ads and web development run as one weekly programme — for an independent luxury villa brand in a category owned by international portals.',
+    meta: ['SEO + Google Ads + Microsoft Ads + Web', 'Real estate'],
+    result: { num: '+183%', label: 'Phone-click leads, YoY' },
+    variant: 'is-pink',
+    heroVariant: 'is-pink',
+    services: ['SEO', 'Google Ads', 'Analytics'],
+    stats: [
+      { num: '+183%', label: 'Phone-click leads YoY' },
+      { num: '+138%', label: 'Click-through rate' },
+      { num: '+25%', label: 'Contact form submissions' },
+    ],
+    client: 'Unisono Luxury Homes',
+    sector: 'Luxury real estate',
+    year: '2025–2026',
+  },
+  {
+    slug: 'imero',
+    stamp: 'APR 2026',
+    kicker: 'SaaS · Wine & spirits compliance',
+    title: 'IMERO e-label: −60% CPC and +307% sign-ups through a Google Ads rebuild',
+    deck: 'Smart Bidding, Display + YouTube expansion and landing-page work turning Google Ads into a sign-up engine for a regulated SaaS, across 11 languages.',
+    meta: ['Google Ads · Smart Bidding', 'SaaS'],
+    result: { num: '+307%', label: 'Sign-ups, YoY' },
+    variant: 'is-yellow',
+    heroVariant: 'is-yellow',
+    services: ['Google Ads', 'Conversion design'],
+    stats: [
+      { num: '+307%', label: 'Sign-ups YoY' },
+      { num: '−60%', label: 'Cost per click' },
+      { num: '11', label: 'Languages served' },
+    ],
+    client: 'IMERO',
+    sector: 'SaaS — wine & spirits compliance',
+    year: '2025–2026',
+  },
+  {
+    slug: 'ledxpress',
+    stamp: 'MAR 2026',
+    kicker: 'E-commerce · LED lighting · DACH',
+    title: 'LEDXpress: +365% revenue from SEO in eight months',
+    deck: 'A complete SEO rebuild for a European LED e-commerce shop — pulling growth off the paid-ads treadmill and into compounding organic traffic.',
+    meta: ['SEO + Performance Marketing', 'E-commerce'],
+    result: { num: '+365%', label: 'Monthly revenue, 8 months' },
+    variant: 'is-mint',
+    heroVariant: 'is-mint',
+    services: ['SEO', 'Analytics'],
+    stats: [
+      { num: '+365%', label: 'Monthly revenue (8 months)' },
+      { num: '+59%', label: 'Conversion rate' },
+      { num: '+46%', label: 'Average keyword ranking' },
+    ],
+    client: 'LEDXpress',
+    sector: 'E-commerce — LED lighting',
+    year: '2025–2026',
+  },
+  {
+    slug: 'gabionas',
+    stamp: 'JAN 2026',
+    kicker: 'E-commerce · Garden & outdoor',
+    title: 'Gabiona: average order value up 41%, ROAS up to 6.8x',
+    deck: 'Google Shopping rebuilt around margin, paired with remarketing that targets the carts worth recovering — not every cart.',
+    meta: ['Google Shopping + Remarketing', 'E-commerce'],
+    result: { num: '+41%', label: 'Average order value' },
+    variant: 'is-violet',
+    heroVariant: 'is-violet',
+    services: ['Google Ads'],
+    stats: [
+      { num: '+41%', label: 'Average order value' },
+      { num: '6.8x', label: 'ROAS' },
+      { num: '5', label: 'European markets' },
+    ],
+    client: 'Gabiona',
+    sector: 'E-commerce — garden & outdoor',
+    year: '2025–2026',
+  },
+  {
+    slug: 'primundus',
+    stamp: 'DEC 2025',
+    kicker: 'Healthcare · Regional care',
+    title: 'PRIMUNDUS: regional SEO grew enquiries 4.2x in nine months',
+    deck: 'A local-first SEO strategy for a German care provider — city-by-city pages, trust signals, and content that actually helps the families doing the searching.',
+    meta: ['Regional SEO', 'Healthcare'],
+    result: { num: '4.2x', label: 'Qualified care enquiries' },
+    variant: 'is-pink',
+    heroVariant: 'is-pink',
+    services: ['SEO'],
+    stats: [
+      { num: '4.2x', label: 'Qualified care enquiries' },
+      { num: '+535%', label: 'Organic impressions' },
+      { num: '193', label: 'Keywords on page one' },
+    ],
+    client: 'PRIMUNDUS',
+    sector: 'Healthcare — regional care',
+    year: '2025',
+  },
+  {
+    slug: 'preo',
+    stamp: 'OCT 2025',
+    kicker: 'B2B SaaS · Software resale',
+    title: 'PREO Software AG: tripled brand searches in twelve months',
+    deck: 'A B2B SEO programme for a category-creator: not "ranking for keywords" but "becoming the name buyers type into the search box".',
+    meta: ['SEO + Brand visibility', 'B2B SaaS'],
+    result: { num: '3.1x', label: 'Branded search volume' },
+    variant: 'is-yellow',
+    heroVariant: 'is-yellow',
+    services: ['SEO', 'AI visibility'],
+    stats: [
+      { num: '3.1x', label: 'Branded search volume' },
+      { num: '+180%', label: 'Organic impressions' },
+      { num: '12 mo', label: 'Time to result' },
+    ],
+    client: 'PREO Software AG',
+    sector: 'B2B SaaS — software resale',
+    year: '2025',
+  },
+  {
+    slug: 'energy-utility',
+    stamp: 'JUL 2025',
+    kicker: 'Energy · B2B utilities',
+    title: 'B2B energy utility: 5.2x more sales-qualified leads from organic search',
+    deck: 'A patient, technical SEO programme for a German energy supplier — built for buyers who research for twelve months before signing anything.',
+    meta: ['B2B SEO', 'Energy'],
+    result: { num: '5.2x', label: 'Sales-qualified leads' },
+    variant: 'is-blue',
+    heroVariant: 'is-blue',
+    services: ['SEO', 'Analytics'],
+    stats: [
+      { num: '5.2x', label: 'Sales-qualified leads' },
+      { num: '−34%', label: 'Cost per SQL' },
+      { num: '12 mo', label: 'Programme duration' },
+    ],
+    client: 'B2B energy utility',
+    sector: 'Energy — B2B utilities',
+    year: '2025',
+  },
+  {
+    slug: 'vc-investor',
+    stamp: 'MAY 2025',
+    kicker: 'Finance · Venture capital',
+    title: 'VC investor: 312% more qualified event sign-ups via LinkedIn',
+    deck: 'LinkedIn marketing for a venture capital fund — awareness, consideration, and a single high-value conversion: founders signing up to invitation-only events.',
+    meta: ['LinkedIn Ads', 'Finance'],
+    result: { num: '+312%', label: 'Qualified event sign-ups' },
+    variant: 'is-mint',
+    heroVariant: 'is-mint',
+    services: ['Paid social'],
+    stats: [
+      { num: '+312%', label: 'Qualified event sign-ups' },
+      { num: '−41%', label: 'Cost per registration' },
+      { num: '2', label: 'Personas targeted' },
+    ],
+    client: 'VC investor fund',
+    sector: 'Finance — venture capital',
+    year: '2025',
+  },
+  {
+    slug: 'automotive',
+    stamp: 'FEB 2025',
+    kicker: 'Automotive · Brand',
+    title: 'Auto manufacturer: brand awareness ads that lifted purchase intent 38%',
+    deck: 'A Meta + Instagram brand campaign for a major European auto manufacturer — with a brand-lift study methodology that proved it worked, not just that it ran.',
+    meta: ['Meta brand ads', 'Automotive'],
+    result: { num: '+38%', label: 'Purchase intent lift' },
+    variant: 'is-slate',
+    heroVariant: 'is-slate',
+    services: ['Paid social', 'Creative production'],
+    stats: [
+      { num: '+38%', label: 'Purchase intent lift' },
+      { num: '+22%', label: 'Brand recall' },
+      { num: 'Brand lift', label: 'Study methodology' },
+    ],
+    client: 'European auto manufacturer',
+    sector: 'Automotive',
+    year: '2025',
+  },
+  {
+    slug: 'luxaflex',
+    stamp: 'NOV 2024',
+    kicker: 'Retail · Window coverings',
+    title: 'Luxaflex dealer network: scaled performance marketing across 60+ franchisees',
+    deck: 'A multi-location performance marketing system for the European Luxaflex dealer network — centralised quality control, local relevance.',
+    meta: ['Local Performance Marketing', 'Retail'],
+    result: { num: '+184%', label: 'Showroom visits, network-wide' },
+    variant: 'is-orange',
+    heroVariant: 'is-orange',
+    services: ['Google Ads', 'SEO'],
+    stats: [
+      { num: '+184%', label: 'Showroom visits' },
+      { num: '60+', label: 'Franchisees' },
+      { num: '+67%', label: 'Local pack appearances' },
+    ],
+    client: 'Luxaflex dealer network',
+    sector: 'Retail — window coverings',
+    year: '2024–2025',
+  },
+]
+
+export function getCase(slug: string) {
+  return cases.find(c => c.slug === slug)
+}
