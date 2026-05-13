@@ -11,13 +11,13 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     exit;
 }
 
-$raw  = file_get_contents('php://input');
-$body = json_decode($raw, true);
+// Read form-encoded POST data ($_POST) — avoids ModSecurity JSON rules
+$body = $_POST;
 
-if (!is_array($body)) {
+if (empty($body)) {
     ob_end_clean();
     http_response_code(400);
-    echo json_encode(['ok' => false, 'error' => 'Invalid request', 'debug' => 'body not array, raw=' . substr($raw, 0, 100)]);
+    echo json_encode(['ok' => false, 'error' => 'Invalid request', 'debug' => 'empty POST']);
     exit;
 }
 

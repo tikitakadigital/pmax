@@ -178,8 +178,7 @@ export default function ContactForm({ locale = 'en' }: { locale?: Locale }) {
     try {
       const res = await fetch('/contact.php', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(data),
+        body: new URLSearchParams(data as Record<string, string>),
       })
       const json = await res.json()
       setState(json.ok ? 'success' : 'error')
