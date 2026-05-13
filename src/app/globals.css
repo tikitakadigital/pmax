@@ -103,7 +103,7 @@ a:hover { color: var(--color-link-hover); }
 .nav-link::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 1px; background: var(--color-jelly-mint); transform: scaleX(0); transform-origin: left; transition: transform 200ms var(--ease-default); }
 .nav-link:hover { color: var(--color-jelly-mint); }
 .nav-link:hover::after, .nav-link.active::after { transform: scaleX(1); }
-.nav-right { display: flex; align-items: center; gap: 14px; }
+.nav-right { display: flex; align-items: center; gap: 14px; margin-left: auto; }
 .lang-switch { display: inline-flex; align-items: center; gap: 0; border: 1px solid #2d2d2d; border-radius: 30px; padding: 2px; }
 .lang-switch button { background: transparent; border: 0; font-family: var(--font-mono); font-size: 10px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #949494; cursor: pointer; padding: 6px 10px; border-radius: 20px; transition: all 150ms var(--ease-default); }
 .lang-switch button[aria-pressed="true"] { background: var(--color-jelly-mint); color: #000; }
