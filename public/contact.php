@@ -87,16 +87,15 @@ $body_text =
     "Topic:   " . ($topic ?: '-') . "\n\n" .
     $message;
 
-// Use minimal headers — cPanel's sendmail is strict about From matching a real mailbox
+// cPanel sendmail requires -f to set the envelope sender
 $headers = 'From: hello@pmax.online' . "\r\n" .
            'Reply-To: ' . $email . "\r\n" .
            'Content-Type: text/plain; charset=UTF-8';
 
-$sent = mail($to, $subject, $body_text, $headers);
+$sent = mail($to, $subject, $body_text, $headers, '-f hello@pmax.online');
 
-// Log failure reason for debugging
 if (!$sent) {
-    error_log('[pmax contact] mail() returned false. To=' . $to . ' From=hello@pmax.online');
+    error_log('[pmax contact] mail() failed — mail_enabled=' . (function_exists('mail') ? 'yes' : 'no') . ' to=' . $to);
 }
 
 if ($sent) {
