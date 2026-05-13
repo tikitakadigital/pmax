@@ -78,23 +78,26 @@ if ($url_count > 2) silent_drop();
 
 /* ── Send email ── */
 $to      = 'hello@pmax.online';
-$subject = '=?UTF-8?B?' . base64_encode('New enquiry from ' . $company) . '?=';
+$subject = 'New enquiry from ' . $company;
 $body_text =
     "Name:    $name\n" .
     "Company: $company\n" .
     "Email:   $email\n" .
-    "Phone:   " . ($phone ?: '—') . "\n" .
-    "Topic:   " . ($topic ?: '—') . "\n\n" .
+    "Phone:   " . ($phone ?: '-') . "\n" .
+    "Topic:   " . ($topic ?: '-') . "\n\n" .
     $message;
 
-$headers = implode("\r\n", [
-    'From: pmax website <hello@pmax.online>',
-    'Reply-To: ' . $name . ' <' . $email . '>',
-    'Content-Type: text/plain; charset=UTF-8',
-    'X-Mailer: PHP/' . phpversion(),
-]);
+// Use minimal headers — cPanel's sendmail is strict about From matching a real mailbox
+$headers = 'From: hello@pmax.online' . "\r\n" .
+           'Reply-To: ' . $email . "\r\n" .
+           'Content-Type: text/plain; charset=UTF-8';
 
 $sent = mail($to, $subject, $body_text, $headers);
+
+// Log failure reason for debugging
+if (!$sent) {
+    error_log('[pmax contact] mail() returned false. To=' . $to . ' From=hello@pmax.online');
+}
 
 if ($sent) {
     echo json_encode(['ok' => true]);
