@@ -52,23 +52,23 @@ export default async function LangHomePage({ params }: { params: Promise<{ lang:
       <main id="main">
 
         {/* HERO */}
-        <section className="hero" aria-labelledby="hero-title">
+        <section className="hero">
           <div className="container">
             <div className="hero-meta">
               <span className="live">{lang === 'de' ? 'Live von Mallorca' : 'En directo desde Mallorca'}</span>
               <span>Calvià · Hamburg · Remote</span>
               <span>{lang === 'de' ? 'Unabhängig seit 2023' : 'Independientes desde 2023'}</span>
             </div>
-            <h1 id="hero-title" className="hero-mark">
+            <div id="hero-title" className="hero-mark" aria-hidden="true">
               pmax<span className="dot-mark" aria-hidden="true" />
-            </h1>
+            </div>
             <div className="hero-rotator" aria-hidden="true">
               <div className="hero-rotator-list">
                 {h.rotator.map(w => <span key={w}>{w}</span>)}
               </div>
             </div>
             <div className="hero-tagline-row">
-              <p className="hero-whisper">{h.tagline}</p>
+              <h1 className="hero-whisper">{h.tagline}</h1>
               <div className="hero-actions">
                 <Link href={`${p}/cases`} className="btn-tertiary">{h.workCta.replace(' →', '')}</Link>
                 <Link href={`${p}/contact`} className="nav-cta">

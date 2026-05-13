@@ -49,7 +49,7 @@ export default function HomePage() {
       <main id="main">
 
         {/* HERO */}
-        <section className="hero" aria-labelledby="hero-title">
+        <section className="hero">
           <div className="container">
             <div className="hero-meta">
               <span className="live">Live from Mallorca</span>
@@ -57,16 +57,16 @@ export default function HomePage() {
               <span>Independent since 2023</span>
             </div>
 
-            <h1 id="hero-title" className="hero-mark">
+            <div id="hero-title" className="hero-mark" aria-hidden="true">
               pmax<span className="dot-mark" aria-hidden="true" />
-            </h1>
+            </div>
 
             <HeroRotator />
 
             <div className="hero-tagline-row">
-              <p className="hero-whisper">
+              <h1 className="hero-whisper">
                 A digital marketing agency built for results you can actually&nbsp;measure.
-              </p>
+              </h1>
               <div className="hero-actions">
                 <Link href="/cases" className="btn-tertiary">See our work</Link>
                 <Link href="/contact" className="nav-cta">
