@@ -1,9 +1,11 @@
 <?php
+ob_start(); // capture any stray PHP warnings before headers
 header('Content-Type: application/json');
 header('Access-Control-Allow-Origin: https://pmax.online');
 header('Access-Control-Allow-Methods: POST');
 
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+    ob_end_clean();
     http_response_code(405);
     echo json_encode(['ok' => false, 'error' => 'Method not allowed']);
     exit;
@@ -13,13 +15,15 @@ $raw  = file_get_contents('php://input');
 $body = json_decode($raw, true);
 
 if (!is_array($body)) {
+    ob_end_clean();
     http_response_code(400);
-    echo json_encode(['ok' => false, 'error' => 'Invalid request']);
+    echo json_encode(['ok' => false, 'error' => 'Invalid request', 'debug' => 'body not array, raw=' . substr($raw, 0, 100)]);
     exit;
 }
 
-/* ── Silent drop — return 200 so bots think they succeeded ── */
+/* ── Silent drop ── */
 function silent_drop() {
+    ob_end_clean();
     echo json_encode(['ok' => true]);
     exit;
 }
@@ -27,25 +31,30 @@ function silent_drop() {
 /* 1. Honeypot */
 if (!empty($body['website'])) silent_drop();
 
-/* 2. Time-gate: real users take > 3 s; reject tokens older than 2 h */
+/* 2. Time-gate */
 $loaded_at = isset($body['_t']) ? (int)$body['_t'] : 0;
 $elapsed   = (int)(microtime(true) * 1000) - $loaded_at;
-if (!$loaded_at || $elapsed < 3000 || $elapsed > 7200000) silent_drop();
+if (!$loaded_at || $elapsed < 3000 || $elapsed > 7200000) {
+    ob_end_clean();
+    // Temporarily return debug info instead of silent drop so we can diagnose
+    echo json_encode(['ok' => false, 'error' => 'time-gate', 'debug' => ['_t' => $body['_t'] ?? 'missing', 'elapsed_ms' => $elapsed]]);
+    exit;
+}
 
-/* 3. Rate limit: 3 submissions per IP per 15 minutes (file-based) */
+/* 3. Rate limit */
 $ip        = $_SERVER['REMOTE_ADDR'] ?? 'unknown';
 $rate_file = sys_get_temp_dir() . '/pmax_rate_' . md5($ip);
-$window    = 900; // 15 minutes in seconds
+$window    = 900;
 $max       = 3;
-
 $rate = ['count' => 0, 'reset' => time() + $window];
 if (file_exists($rate_file)) {
     $stored = json_decode(file_get_contents($rate_file), true);
     if ($stored && $stored['reset'] > time()) $rate = $stored;
 }
 if ($rate['count'] >= $max) {
+    ob_end_clean();
     http_response_code(429);
-    echo json_encode(['ok' => false, 'error' => 'Too many requests — please try again later.']);
+    echo json_encode(['ok' => false, 'error' => 'Too many requests']);
     exit;
 }
 $rate['count']++;
@@ -60,47 +69,37 @@ $phone   = trim($body['phone']   ?? '');
 $topic   = trim($body['topic']   ?? '');
 
 if (!$name || !$company || !$email || !$message) {
+    ob_end_clean();
     http_response_code(400);
-    echo json_encode(['ok' => false, 'error' => 'Missing required fields']);
+    echo json_encode(['ok' => false, 'error' => 'Missing required fields', 'debug' => ['name' => (bool)$name, 'company' => (bool)$company, 'email' => (bool)$email, 'message' => (bool)$message]]);
     exit;
 }
 
 /* 5. Email format */
 if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+    ob_end_clean();
     http_response_code(400);
-    echo json_encode(['ok' => false, 'error' => 'Invalid email address']);
+    echo json_encode(['ok' => false, 'error' => 'Invalid email']);
     exit;
 }
 
-/* 6. URL density — > 2 links in name + message is a spam signal */
+/* 6. URL density */
 $url_count = preg_match_all('/https?:\/\/|www\./i', $message . $name);
 if ($url_count > 2) silent_drop();
 
-/* ── Send email ── */
+/* ── Send ── */
 $to      = 'hello@pmax.online';
 $subject = 'New enquiry from ' . $company;
-$body_text =
-    "Name:    $name\n" .
-    "Company: $company\n" .
-    "Email:   $email\n" .
-    "Phone:   " . ($phone ?: '-') . "\n" .
-    "Topic:   " . ($topic ?: '-') . "\n\n" .
-    $message;
+$body_text = "Name:    $name\nCompany: $company\nEmail:   $email\nPhone:   " . ($phone ?: '-') . "\nTopic:   " . ($topic ?: '-') . "\n\n$message";
+$headers   = 'From: hello@pmax.online' . "\r\n" . 'Reply-To: ' . $email . "\r\n" . 'Content-Type: text/plain; charset=UTF-8';
 
-// cPanel sendmail requires -f to set the envelope sender
-$headers = 'From: hello@pmax.online' . "\r\n" .
-           'Reply-To: ' . $email . "\r\n" .
-           'Content-Type: text/plain; charset=UTF-8';
-
-$sent = mail($to, $subject, $body_text, $headers, '-f hello@pmax.online');
-
-if (!$sent) {
-    error_log('[pmax contact] mail() failed — mail_enabled=' . (function_exists('mail') ? 'yes' : 'no') . ' to=' . $to);
-}
+$stray = ob_get_clean(); // grab any PHP warnings before sending
+$sent  = mail($to, $subject, $body_text, $headers, '-f hello@pmax.online');
 
 if ($sent) {
     echo json_encode(['ok' => true]);
 } else {
+    error_log('[pmax contact] mail() failed stray_output=' . $stray);
     http_response_code(500);
-    echo json_encode(['ok' => false, 'error' => 'Failed to send — please email us directly.']);
+    echo json_encode(['ok' => false, 'error' => 'mail() failed', 'debug' => ['stray_output' => $stray]]);
 }
