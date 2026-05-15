@@ -77,9 +77,9 @@ export const de = {
     processTitle: <>Vier Schritte.<br />Keine Überraschungen.</>,
     processAside: 'Die meisten Agenturen verkaufen Präsentationen. Wir verkaufen Lösungen. Hier ist die Reihenfolge.',
     processSteps: [
-      { step: '01', word: 'Listen', time: '2 Wo.', desc: 'Zuerst verstehen wir das Geschäft. Dann die Daten, dann die Kanäle. Präsentationen kommen zuletzt.' },
-      { step: '02', word: 'Fix', time: '6 Wo.', desc: 'Tracking, Feeds, strukturierte Daten, Grundlagen. Die unspektakuläre Arbeit, von der alles andere abhängt.' },
-      { step: '03', word: 'Grow', time: '12 Wo.+', desc: 'Kampagnen skalieren, Creatives finden ihren Rhythmus, das Dashboard beginnt die Wahrheit zu sagen.' },
+      { step: '01', word: 'Listen', time: '2w', desc: 'Zuerst verstehen wir das Geschäft. Dann die Daten, dann die Kanäle. Präsentationen kommen zuletzt.' },
+      { step: '02', word: 'Fix', time: '6w', desc: 'Tracking, Feeds, strukturierte Daten, Grundlagen. Die unspektakuläre Arbeit, von der alles andere abhängt.' },
+      { step: '03', word: 'Grow', time: '12w+', desc: 'Kampagnen skalieren, Creatives finden ihren Rhythmus, das Dashboard beginnt die Wahrheit zu sagen.' },
       { step: '04', word: 'Defend', time: '∞', desc: 'SEO, KI-Suche, Markenschutz. Stille Arbeit, die sich über Jahre hinweg auszahlt.' },
     ],
     journalKicker: '04 — Journal',
