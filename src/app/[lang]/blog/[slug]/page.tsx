@@ -14,13 +14,20 @@ export function generateStaticParams() {
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string; slug: string }> }): Promise<Metadata> {
   const { lang, slug } = await params
+  const t = getT(lang)
   const post = getPost(slug)
+  const loc = t.blogPostDetail[slug]
+  const locPost = t.blog.posts.find(bp => bp.slug === slug)
   if (!post) return {}
+
+  const isTranslated = !!loc?.prose
   return {
-    title: post.seoTitle,
-    description: post.deck,
-    // Canonical points to the English version — the blog prose is in English
-    alternates: {
+    title: loc?.title ? `${loc.title} | pmax` : post.seoTitle,
+    description: loc?.deck ?? locPost?.deck ?? post.deck,
+    alternates: isTranslated ? {
+      canonical: `https://pmax.online/${lang}/blog/${slug}/`,
+      languages: { 'en': `https://pmax.online/blog/${slug}/`, 'de': `https://pmax.online/de/blog/${slug}/`, 'es': `https://pmax.online/es/blog/${slug}/`, 'x-default': `https://pmax.online/blog/${slug}/` },
+    } : {
       canonical: `https://pmax.online/blog/${slug}/`,
       languages: { 'en': `https://pmax.online/blog/${slug}/`, 'x-default': `https://pmax.online/blog/${slug}/` },
     },
@@ -35,15 +42,22 @@ export default async function BlogPostPage({ params }: { params: Promise<{ lang:
   const t = getT(lang)
   const b = t.blog
   const detail = getBlogDetail(slug)
+  const loc = t.blogPostDetail[slug]
   const p = `/${lang}`
 
   const locPost = b.posts.find(bp => bp.slug === slug)
   const blogLabel = lang === 'de' ? 'Journal' : 'Blog'
+  const isTranslated = !!loc?.prose
+
+  const title = loc?.title ?? locPost?.title ?? post.title
+  const deck = loc?.deck ?? locPost?.deck ?? post.deck
+  const prose = loc?.prose ?? detail?.prose ?? <p>{post.deck}</p>
+  const toc = loc?.toc ?? detail?.toc ?? []
 
   const jsonLd = breadcrumb([
     { name: 'Home', url: `https://pmax.online/${lang}/` },
     { name: blogLabel, url: `https://pmax.online/${lang}/blog/` },
-    { name: post.category, url: `https://pmax.online/blog/${slug}/` },
+    { name: post.category, url: `https://pmax.online/${lang}/blog/${slug}/` },
   ])
 
   return (
@@ -62,30 +76,31 @@ export default async function BlogPostPage({ params }: { params: Promise<{ lang:
               </nav>
               <span className="page-intro-eyebrow">{post.category} · {post.readTime} · {post.date}</span>
               <h1 className="page-intro-title" style={{ fontSize: 'clamp(40px, 7vw, 92px)' }}>
-                {locPost?.title ?? post.title}
+                {title}
               </h1>
-              <p className="page-intro-deck">{locPost?.deck ?? post.deck}</p>
+              <p className="page-intro-deck">{deck}</p>
 
-              {/* Language notice */}
-              <div style={{ marginTop: 32, padding: '14px 20px', background: 'rgba(255,255,255,0.04)', border: '1px solid #2d2d2d', borderRadius: 8, display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: 12 }}>
-                <span style={{ fontFamily: 'var(--font-mono)', fontSize: 11, letterSpacing: '1.5px', textTransform: 'uppercase', color: '#949494' }}>
-                  {b.langNotice}
-                </span>
-                <Link href={`/blog/${slug}`} style={{ fontFamily: 'var(--font-mono)', fontSize: 11, fontWeight: 700, letterSpacing: '1.5px', textTransform: 'uppercase', color: 'var(--color-jelly-mint)' }}>
-                  {b.readInEn}
-                </Link>
-              </div>
+              {!isTranslated && (
+                <div style={{ marginTop: 32, padding: '14px 20px', background: 'rgba(255,255,255,0.04)', border: '1px solid #2d2d2d', borderRadius: 8, display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: 12 }}>
+                  <span style={{ fontFamily: 'var(--font-mono)', fontSize: 11, letterSpacing: '1.5px', textTransform: 'uppercase', color: '#949494' }}>
+                    {b.langNotice}
+                  </span>
+                  <Link href={`/blog/${slug}`} style={{ fontFamily: 'var(--font-mono)', fontSize: 11, fontWeight: 700, letterSpacing: '1.5px', textTransform: 'uppercase', color: 'var(--color-jelly-mint)' }}>
+                    {b.readInEn}
+                  </Link>
+                </div>
+              )}
             </div>
           </section>
 
           <section className="section">
             <div className="container blog-layout">
               <div className="prose">
-                {detail?.prose ?? <p>{post.deck}</p>}
+                {prose}
               </div>
               <aside className="blog-aside">
                 <div className="blog-aside-label">{lang === 'de' ? 'Auf dieser Seite' : 'En esta página'}</div>
-                {(detail?.toc ?? []).map(item => <a key={item} href="#">{item}</a>)}
+                {toc.map(item => <a key={item} href="#">{item}</a>)}
                 <div style={{ marginTop: 24, borderTop: '1px solid #2d2d2d', paddingTop: 20, display: 'flex', flexDirection: 'column', gap: 10 }}>
                   <div className="blog-aside-label">{lang === 'de' ? 'Mehr von pmax' : 'Más de pmax'}</div>
                   <Link href={`${p}/services`}>{lang === 'de' ? 'Alle Leistungen →' : 'Todos los servicios →'}</Link>

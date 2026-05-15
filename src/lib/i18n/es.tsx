@@ -1,6 +1,6 @@
 import type { ReactNode } from 'react'
-import type { ServiceDetail, IndustryDetail } from './de'
-export type { ServiceDetail, IndustryDetail }
+import type { ServiceDetail, IndustryDetail, LocalizedCaseDetail, LocalizedBlogDetail } from './de'
+export type { ServiceDetail, IndustryDetail, LocalizedCaseDetail, LocalizedBlogDetail }
 
 export const es = {
   lang: 'es' as const,
@@ -604,6 +604,10 @@ export const es = {
       { slug: 'agency-pricing-honest', title: 'Por qué cobramos tarifas fijas, no un porcentaje de la inversión publicitaria', deck: 'Una breve nota sobre los incentivos perversos bajo los que operan la mayoría de agencias — y por qué nosotros no lo hacemos.' },
     ],
   },
+
+  caseDetail: {} as Record<string, LocalizedCaseDetail>,
+
+  blogPostDetail: {} as Record<string, LocalizedBlogDetail>,
 }
 
 export type EsTranslations = typeof es

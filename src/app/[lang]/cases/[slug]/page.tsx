@@ -17,10 +17,11 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   const t = getT(lang)
   const locItem = t.cases.items.find(i => i.slug === slug)
   const detail = getCaseDetail(slug)
+  const loc = t.caseDetail[slug]
   if (!detail && !locItem) return {}
   return {
-    title: detail?.metaTitle ?? `${locItem?.title} | pmax`,
-    description: detail?.metaDesc,
+    title: loc?.metaTitle ?? detail?.metaTitle ?? `${locItem?.title} | pmax`,
+    description: loc?.metaDesc ?? detail?.metaDesc,
     alternates: {
       canonical: `https://pmax.online/${lang}/cases/${slug}/`,
       languages: { 'en': `https://pmax.online/cases/${slug}/`, 'de': `https://pmax.online/de/cases/${slug}/`, 'es': `https://pmax.online/es/cases/${slug}/`, 'x-default': `https://pmax.online/cases/${slug}/` },
@@ -33,10 +34,16 @@ export default async function CasePage({ params }: { params: Promise<{ lang: str
   const t = getT(lang)
   const detail = getCaseDetail(slug)
   const locItem = t.cases.items.find(i => i.slug === slug)
+  const loc = t.caseDetail[slug]
   if (!detail) notFound()
 
   const p = `/${lang}`
   const casesLabel = lang === 'de' ? 'Referenzen' : lang === 'es' ? 'Trabajo' : 'Work'
+  const heroTitle = loc?.heroTitle ?? locItem?.title ?? detail.heroTitle
+  const stats = loc?.stats ?? detail.stats
+  const prose = loc?.prose ?? detail.prose
+  const isTranslated = !!loc?.prose
+
   const jsonLd = breadcrumb([
     { name: 'Home', url: `https://pmax.online/${lang}/` },
     { name: casesLabel, url: `https://pmax.online/${lang}/cases/` },
@@ -57,14 +64,14 @@ export default async function CasePage({ params }: { params: Promise<{ lang: str
               <span>{detail.breadcrumbLabel}</span>
             </nav>
             <span className="case-hero-kicker">{detail.heroKicker}</span>
-            <h1 className="case-hero-title">{locItem?.title ?? detail.heroTitle}</h1>
-            {detail.heroDeck && <p className="case-hero-deck">{detail.heroDeck}</p>}
+            <h1 className="case-hero-title">{heroTitle}</h1>
+            {(loc?.heroDeck ?? detail.heroDeck) && <p className="case-hero-deck">{loc?.heroDeck ?? detail.heroDeck}</p>}
           </div>
         </section>
 
         <section className="container" style={{ padding: '56px 0' }}>
           <ul className="stats reveal-stagger" style={{ listStyle: 'none', padding: 0 }}>
-            {detail.stats.map(({ num, label }) => (
+            {stats.map(({ num, label }) => (
               <li key={label} className="stat">
                 <span className="stat-num">{num}</span>
                 <span className="stat-label">{label}</span>
@@ -73,17 +80,18 @@ export default async function CasePage({ params }: { params: Promise<{ lang: str
           </ul>
         </section>
 
-        {/* Prose served in English — standard practice for multilingual case studies */}
         <section className="section">
           <div className="container">
-            <div style={{ marginBottom: 32, padding: '14px 20px', background: 'rgba(255,255,255,0.04)', border: '1px solid #2d2d2d', borderRadius: 8, fontFamily: 'var(--font-mono)', fontSize: 11, letterSpacing: '1.5px', textTransform: 'uppercase', color: '#949494', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: 12 }}>
-              <span>{lang === 'de' ? 'Dieser Fallstudie ist auf Englisch verfügbar' : 'Este caso de estudio está disponible en inglés'}</span>
-              <Link href={`/cases/${slug}`} style={{ color: 'var(--color-jelly-mint)' }}>
-                {lang === 'de' ? 'Auf Englisch lesen →' : 'Leer en inglés →'}
-              </Link>
-            </div>
+            {!isTranslated && (
+              <div style={{ marginBottom: 32, padding: '14px 20px', background: 'rgba(255,255,255,0.04)', border: '1px solid #2d2d2d', borderRadius: 8, fontFamily: 'var(--font-mono)', fontSize: 11, letterSpacing: '1.5px', textTransform: 'uppercase', color: '#949494', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: 12 }}>
+                <span>{lang === 'de' ? 'Diese Fallstudie ist auf Englisch verfügbar' : 'Este caso de estudio está disponible en inglés'}</span>
+                <Link href={`/cases/${slug}`} style={{ color: 'var(--color-jelly-mint)' }}>
+                  {lang === 'de' ? 'Auf Englisch lesen →' : 'Leer en inglés →'}
+                </Link>
+              </div>
+            )}
             <div className="prose" style={{ maxWidth: 760, margin: '0 auto' }}>
-              {detail.prose}
+              {prose}
             </div>
           </div>
         </section>

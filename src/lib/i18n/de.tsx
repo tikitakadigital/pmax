@@ -20,6 +20,22 @@ export interface IndustryDetail {
   faqs: { q: string; a: string }[]
 }
 
+export interface LocalizedCaseDetail {
+  metaTitle?: string
+  metaDesc?: string
+  heroTitle?: ReactNode
+  heroDeck?: string
+  stats?: { num: string; label: string }[]
+  prose?: ReactNode
+}
+
+export interface LocalizedBlogDetail {
+  title?: string
+  deck?: string
+  prose?: ReactNode
+  toc?: string[]
+}
+
 export const de = {
   lang: 'de' as const,
   htmlLang: 'de',
@@ -622,6 +638,10 @@ export const de = {
       { slug: 'agency-pricing-honest', title: 'Warum wir Festpreise berechnen, keine Prozentsätze des Mediabudgets', deck: 'Eine kurze Notiz über die perversen Anreize, unter denen die meisten Agenturen operieren — und warum wir das nicht tun.' },
     ],
   },
+
+  caseDetail: {} as Record<string, LocalizedCaseDetail>,
+
+  blogPostDetail: {} as Record<string, LocalizedBlogDetail>,
 }
 
 export type DeTranslations = typeof de
