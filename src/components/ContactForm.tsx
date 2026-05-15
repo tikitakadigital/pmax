@@ -174,20 +174,115 @@ export default function ContactForm({ locale = 'en' }: { locale?: Locale }) {
     e.preventDefault()
     if (!e.currentTarget.checkValidity()) { e.currentTarget.reportValidity(); return }
     setState('sending')
-    const data = Object.fromEntries(new FormData(e.currentTarget))
+    const d = Object.fromEntries(new FormData(e.currentTarget))
+    const name = String(d.name ?? '')
+    const company = String(d.company ?? '')
+    const email = String(d.email ?? '')
+    const phone = String(d.phone ?? '')
+    const topic = String(d.topic ?? '')
+    const message = String(d.message ?? '')
+
+    const replyStrings = {
+      en: {
+        subject: `We've got your message — pmax`,
+        greeting: `Hi ${name},`,
+        body: `Your message is in our inbox. We'll read it and get back to you within one working day — usually the same day.`,
+        urgent: `If it's urgent:`,
+      },
+      de: {
+        subject: `Ihre Nachricht ist angekommen — pmax`,
+        greeting: `Guten Tag ${name},`,
+        body: `Ihre Nachricht ist in unserem Posteingang. Wir lesen sie und melden uns innerhalb eines Werktages — meistens noch am selben Tag.`,
+        urgent: `Bei dringenden Anliegen:`,
+      },
+      es: {
+        subject: `Hemos recibido tu mensaje — pmax`,
+        greeting: `Hola ${name},`,
+        body: `Tu mensaje está en nuestra bandeja de entrada. Lo leeremos y te responderemos en un día laborable — normalmente el mismo día.`,
+        urgent: `Si es urgente:`,
+      },
+    }
+    const autoReply = replyStrings[locale] ?? replyStrings.en
+
+    const sig = `
+      <table style="margin-top:32px;border-top:1px solid #e5e5e5;padding-top:20px;width:100%">
+        <tr>
+          <td>
+            <p style="margin:0;font-family:-apple-system,'Helvetica Neue',sans-serif;font-size:14px;font-weight:700;color:#111">Philipp Enders</p>
+            <p style="margin:2px 0 0;font-size:13px;color:#666">Founder &amp; Director · pmax</p>
+            <p style="margin:8px 0 0;font-size:13px;color:#666">
+              <a href="mailto:hello@pmax.online" style="color:#111;text-decoration:none">hello@pmax.online</a><br>
+              <a href="tel:+34871242160" style="color:#111;text-decoration:none">+34 871 242 160</a><br>
+              <a href="https://pmax.online" style="color:#3cffd0;text-decoration:none">pmax.online</a>
+            </p>
+            <p style="margin:8px 0 0;font-size:12px;color:#999">PMax Online S.L. · Calle Cordova 5 · 07184 Calvià · Mallorca · Spain</p>
+          </td>
+        </tr>
+      </table>`
+
+    const notificationHtml = `<!DOCTYPE html><html><head><meta charset="utf-8"></head><body style="margin:0;padding:0;background:#f5f5f5;font-family:-apple-system,'Helvetica Neue',sans-serif">
+      <div style="max-width:600px;margin:0 auto;padding:32px 16px">
+        <div style="background:#fff;border-radius:8px;padding:32px">
+          <div style="border-bottom:2px solid #3cffd0;padding-bottom:16px;margin-bottom:24px">
+            <div style="font-size:22px;font-weight:900;color:#111;letter-spacing:-0.5px">pmax<span style="color:#3cffd0">.</span></div>
+            <div style="font-size:13px;color:#666;margin-top:4px">New enquiry from <strong>${company}</strong></div>
+          </div>
+          ${[
+            ['Name', name],
+            ['Company', company],
+            ['Email', `<a href="mailto:${email}" style="color:#111">${email}</a>`],
+            ...(phone ? [['Phone', `<a href="tel:${phone}" style="color:#111">${phone}</a>`]] : []),
+            ['Topic', topic || '—'],
+          ].map(([l, v]) => `
+            <div style="font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#949494;margin-bottom:4px">${l}</div>
+            <p style="font-size:15px;color:#111;margin:0 0 20px">${v}</p>`).join('')}
+          <div style="font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#949494;margin-bottom:8px">Message</div>
+          <div style="background:#f9f9f9;border-left:3px solid #3cffd0;padding:16px;font-size:15px;color:#111;line-height:1.6">${message.replace(/\n/g, '<br>')}</div>
+        </div>
+        <p style="text-align:center;font-size:12px;color:#999;margin-top:16px">pmax.online · Calle Cordova 5 · 07184 Calvià · Mallorca</p>
+      </div></body></html>`
+
+    const replyHtml = `<!DOCTYPE html><html><head><meta charset="utf-8"></head><body style="margin:0;padding:0;background:#f5f5f5;font-family:-apple-system,'Helvetica Neue',sans-serif">
+      <div style="max-width:600px;margin:0 auto;padding:32px 16px">
+        <div style="background:#fff;border-radius:8px;padding:32px">
+          <div style="border-bottom:2px solid #3cffd0;padding-bottom:16px;margin-bottom:24px">
+            <div style="font-size:22px;font-weight:900;color:#111;letter-spacing:-0.5px">pmax<span style="color:#3cffd0">.</span></div>
+          </div>
+          <p style="font-size:15px;color:#111;margin:0 0 16px">${autoReply.greeting}</p>
+          <p style="font-size:15px;color:#111;margin:0 0 16px;line-height:1.6">${autoReply.body}</p>
+          <p style="font-size:15px;color:#111;margin:0 0 4px">${autoReply.urgent}</p>
+          <p style="font-size:15px;font-weight:700;color:#111;margin:0">
+            <a href="tel:+34871242160" style="color:#111;text-decoration:none">+34 871 242 160</a>
+          </p>
+          ${sig}
+        </div>
+      </div></body></html>`
+
     try {
-      const res = await fetch('https://api.web3forms.com/submit', {
+      const res = await fetch('https://api.resend.com/emails/batch', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          access_key: 'b98fd912-d722-4d1d-856a-96c10165fac4',
-          subject: `New enquiry from ${data.company} — pmax.online`,
-          from_name: String(data.name),
-          ...data,
-        }),
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': 'Bearer re_WinFpHKX_JU85dFuSNEEGwGVpmhxkHXE6',
+        },
+        body: JSON.stringify([
+          {
+            from: 'pmax website <hello@pmax.online>',
+            to: 'hello@pmax.online',
+            reply_to: email,
+            subject: `New enquiry from ${company} — pmax.online`,
+            html: notificationHtml,
+          },
+          {
+            from: 'Philipp Enders — pmax <hello@pmax.online>',
+            to: email,
+            subject: autoReply.subject,
+            html: replyHtml,
+          },
+        ]),
       })
       const json = await res.json()
-      setState(json.success ? 'success' : 'error')
+      setState(json.data ? 'success' : 'error')
     } catch {
       setState('error')
     }
