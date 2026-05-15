@@ -605,9 +605,577 @@ export const es = {
     ],
   },
 
-  caseDetail: {} as Record<string, LocalizedCaseDetail>,
+  caseDetail: {
+    automotive: {
+      metaTitle: 'Jaguar Land Rover — +9,4 % de recuerdo publicitario via Meta | pmax',
+      metaDesc: 'Campaña de brand awareness para Jaguar Land Rover en Facebook e Instagram. +9,4 % de recuerdo publicitario estimado y −68 % en coste por visita a la landing page en 8 meses.',
+      heroTitle: 'Cómo incrementamos el recuerdo publicitario de Jaguar Land Rover un 9,4 % — y redujimos el coste por visita a la landing page un 68 %.',
+      stats: [
+        { num: '+9,4 %', label: 'Incremento estimado del recuerdo publicitario' },
+        { num: '−8,5 %', label: 'Coste por recuerdo publicitario estimado (por persona)' },
+        { num: '−68 %', label: 'Coste por visita a la landing page' },
+        { num: '2.380 M', label: 'Usuarios activos mensuales alcanzables en Meta' },
+      ],
+      prose: (<>
+        <div className="case-brief"><p>Uno de los fabricantes originales de tracción a las cuatro ruedas — más de 65 años construyendo SUVs duraderos y de alto rendimiento — quería usar la escala de Meta para mantenerse en la mente de los compradores de coches con intención de compra a través de múltiples líneas de modelo. El briefing era de awareness, pero el CMO quería que se midiera correctamente: no impresiones y alcance, sino si los anuncios realmente cambiaron lo que la gente recordaba.</p></div>
+        <section className="case-chapter"><span className="case-chapter-num">01</span><h2>El briefing — hacer la marca medible</h2><p>Con 2.380 millones de usuarios activos mensuales, Facebook e Instagram eran la opción obvia de escala para el lanzamiento de un SUV. La pregunta más difícil era cómo demostrar que el presupuesto funcionó. Elegimos el ad recall como KPI principal — una métrica de brand lift que mide lo memorable que es un anuncio para su audiencia — porque es el indicador anticipado más claro de que el creative está haciendo su trabajo en el feed.</p></section>
+        <section className="case-chapter"><span className="case-chapter-num">02</span><h2>Hacer las preguntas correctas, luego testear</h2><p>El trabajo comenzó como un proceso, no como un plan de medios. Anotamos las preguntas que realmente importaban y luego diseñamos tests para responderlas:</p><ul><li>¿Con qué tipo de contenido ya interactúa esta audiencia en las páginas orgánicas de Jaguar Land Rover?</li><li>¿Qué formatos de anuncio funcionan mejor — vídeo, imagen única, carrusel, anuncios dinámicos?</li><li>¿Qué opción de puja ofrece el incremento de recuerdo publicitario más barato y fiable?</li><li>¿Cómo se comparan las audiencias basadas en intereses con las conductuales más amplias a escala?</li></ul><p>Una plataforma de testing de datos de terceros ejecutó los experimentos. Cada audiencia y formato corrió contra un grupo de control para que los números de lift fueran defendibles, no solo indicativos.</p></section>
+        <section className="case-chapter"><span className="case-chapter-num">03</span><h2>El sistema creativo</h2><p>La agencia creativa de Jaguar Land Rover produjo el vídeo y la fotografía. Nosotros lo tradujimos en una biblioteca de anuncios funcional para Facebook feed, Instagram feed e Instagram Stories — construida para funcionar en los placements donde los compradores realmente hacen scroll.</p><p>Las campañas se dirigían a posibles compradores adultos de coches mayores de 25 años, luego ajustamos dentro de eso según las audiencias que se demostraban. El targeting por intereses se usó para añadir personas con pasiones adyacentes — deportes al aire libre, contenido de automoción premium, comunidades off-road.</p></section>
+        <section className="case-chapter"><span className="case-chapter-num">04</span><h2>Placements automáticos, split deliberado</h2><p>Dejamos que los placements automáticos de Meta hicieran su trabajo para la eficiencia, pero el gasto acabó aproximadamente 60/40 a favor de Facebook — lo que coincidía con donde el recuerdo publicitario era más barato de comprar. Las campañas también encajaban en el lanzamiento integrado más amplio de Jaguar Land Rover junto a TV, prensa y exterior.</p></section>
+        <section className="case-chapter"><span className="case-chapter-num">05</span><h2>Resultados — abril a noviembre de 2020</h2><p>Ocho meses de campañas always-on de awareness en Facebook e Instagram, medidas correctamente:</p><ul><li><strong>+9,4 %</strong> de incremento estimado del recuerdo publicitario</li><li><strong>−8,5 %</strong> en coste por recuerdo publicitario (por persona)</li><li><strong>−68 %</strong> en coste por visita a la landing page</li></ul><p>El incremento del recuerdo publicitario fue lo más importante. Es la métrica que demuestra que un gasto de marca está haciendo trabajo de marca — no solo comprando alcance que desaparece en cuanto termina la campaña.</p></section>
+        <div className="prose-callout"><div className="prose-callout-kicker">La conclusión</div><p>La brand en Meta solo funciona cuando alguien hace las preguntas correctas cada semana. La plataforma gastará con gusto un presupuesto mensual de seis cifras en impresiones que nadie recuerda. El trabajo que incrementa el recuerdo publicitario un 9,4 % es el trabajo que nadie ve: lecturas semanales de formatos, cortes de audiencia, tests de estrategia de puja, refresco de creatividades. Nada de eso es glamuroso. Todo ello se acumula.</p></div>
+      </>),
+    },
+    'energy-utility': {
+      metaTitle: 'Empresa energética B2B — caso de SEO y paid search | pmax',
+      metaDesc: 'Cómo una estrategia B2B de búsqueda paciente aumentó las impresiones orgánicas un 31 % y las conversiones de paid un 52 % para una empresa energética alemana con clientes industriales.',
+      heroTitle: '+31 % en impresiones orgánicas, +52 % en conversiones de paid — lo que ocurre cuando una agencia de SEO B2B se encuentra con un gigante energético cotizado.',
+      stats: [
+        { num: '+31 %', label: 'Impresiones orgánicas interanual' },
+        { num: '+24,4 %', label: 'Mejora de la posición media de ranking' },
+        { num: '−15 %', label: 'Tasa de rebote vs. año anterior' },
+        { num: '+52 %', label: 'Conversiones de paid search' },
+      ],
+      prose: (<>
+        <div className="case-brief"><p>Una empresa energética alemana cotizada que suministra electricidad y gas natural a clientes industriales, más un portfolio de socios energéticos B2B. El briefing abarcaba tanto búsqueda orgánica como pagada — la orgánica era la mitad más difícil, más lenta y más interesante del trabajo. Dentro de una categoría altamente regulada, con un enorme mapa de stakeholders internos y una arquitectura de sitio heredada de años de fusiones y rebranding.</p></div>
+        <section className="case-chapter"><span className="case-chapter-num">01</span><h2>El punto de partida: no un problema técnico, sino de coordinación</h2><p>Las empresas energéticas que sirven a clientes industriales tienen exigencias muy específicas del performance marketing. Largos ciclos de deliberación, decisiones lideradas por procurement, lenguaje regulado, compra con contratos intensivos. Nos contrataron para aumentar el tráfico orgánico y los leads cualificados — pero aprendimos rápido que las correcciones técnicas eran la parte fácil. La restricción real era interna: conseguir que los cambios fueran aprobados e implementados dentro de una organización regulada y cotizada se mueve al ritmo del stakeholder más lento, no al de la recomendación SEO más rápida.</p></section>
+        <section className="case-chapter"><span className="case-chapter-num">02</span><h2>El descubrimiento: «Roma no se construyó en un día»</h2><p>Una idea familiar dentro de cualquier gran empresa — menos familiar para las agencias más ágiles y pequeñas que se asocian con ellas. Mejorar el orgánico para esta empresa requería más que limpieza de metadatos, correcciones de compatibilidad móvil y remediación de Core Web Vitals. Requería paciencia y construcción de relaciones tanto como habilidad técnica en SEO.</p><p>No se nos contrató inicialmente para asesorar en cambios de contenido u optimización on-page. Pero cualquier buen socio de SEO B2B sabe que la corrección técnica por sí sola no mueve la gráfica — el buen contenido y una experiencia de usuario sólida sí lo hacen.</p></section>
+        <section className="case-chapter"><span className="case-chapter-num">03</span><h2>La metodología: orgánico y paid funcionando como uno</h2><p>Junto al programa SEO ejecutamos una estrategia de performance marketing B2B que combinó paid search en Google Ads y Bing Ads con campañas pagadas de LinkedIn y Xing — los canales que los responsables de decisiones de procurement en la industria alemana realmente usan.</p><ul><li>SEO técnico (metadatos, compatibilidad móvil, Core Web Vitals, schema, enlazado interno)</li><li>Contenido y optimización on-page, incorporados al alcance según se desarrolló la relación</li><li>Paid search en Google Ads &amp; Bing Ads con estrategia de puja y audiencia específica para B2B</li><li>Campañas pagadas de LinkedIn y Xing dirigidas a procurement industrial y compradores de energía</li></ul></section>
+        <section className="case-chapter"><span className="case-chapter-num">04</span><h2>El resultado: moviendo la gráfica, lentamente y luego de forma constante</h2><ul><li><strong>+31 % impresiones orgánicas interanual</strong> — visibilidad construida deliberadamente en las consultas que importan.</li><li><strong>+24,4 % posición media de ranking</strong> — una mejora estructural, no un pico.</li><li><strong>−15 % tasa de rebote</strong> — el trabajo on-page hacía coincidir las landing pages con la intención.</li><li><strong>+52 % conversiones de paid search</strong> — el programa de paid potenciando el orgánico, sin canibalizar.</li></ul></section>
+        <div className="case-callout"><span className="case-callout-kicker">Testimonio del cliente</span><p>«Solo podemos hablar positivamente de trabajar con pmax. Asumieron Google Ads, Bing y LinkedIn Ads, y ejecutaron campañas combinadas multicanal junto a eso. Somos un proveedor de energía puramente B2B, así que no es un entorno sencillo. Philipp realizó un análisis de audiencia muy deliberado y pudimos generar algunos leads muy interesantes. La colaboración fue un placer.»</p><span className="case-callout-attr">— Responsable de marketing, proveedor de energía B2B (Alemania)</span></div>
+        <div className="case-takeaway"><span className="case-takeaway-kicker">Lo que hizo que funcionara</span><p>Ser un buen socio significa llevar muchos sombreros — muchos que no encajan, muchos a los que no estás acostumbrado. Significa tomar la llamada a las 17:30 de un viernes, mantener una discusión de una hora sobre algo para lo que no tenías briefing, y entender que las personas dentro de grandes organizaciones a menudo necesitan superar muchos obstáculos para hacer avanzar cualquier cosa. Paciencia, comprensión y la construcción constante de buenas relaciones. Eso es lo que mueve la gráfica cuando el briefing es «posiciona este negocio regulado, cotizado y complejo».</p></div>
+      </>),
+    },
+    gabionas: {
+      metaTitle: 'Gabiona — +27 % de ingresos en Google Ads con el mismo presupuesto | pmax',
+      metaDesc: 'Google Shopping y remarketing dinámico aumentaron los ingresos de Gabiona un 27 % y el ticket medio un 33 % — en cinco mercados europeos con el mismo presupuesto.',
+      heroTitle: '+27 % de ingresos, +33 % de ticket medio — con el mismo presupuesto de Google Ads.',
+      stats: [
+        { num: '+33 %', label: 'Ticket medio interanual' },
+        { num: '+27 %', label: 'Ingresos de Google Ads interanual (mismo presupuesto)' },
+        { num: '+79 %', label: 'Clics interanual (mismo presupuesto)' },
+        { num: '5', label: 'Mercados europeos, una estrategia' },
+      ],
+      prose: (<>
+        <div className="case-brief"><p>Gabiona es un fabricante y minorista online alemán de productos de gavión — cestas, vallas, muros y accesorios para paisajismo, diseño de jardines, control de erosión y arquitectura. Venden en toda Europa, pero Alemania es el mercado local y absorbe la mayor parte de los recursos internos de la marca. Nuestro encargo cubría todo fuera del mercado local: los mercados con menor prioridad interna, la economía más difícil y el mismo presupuesto del año anterior.</p></div>
+        <section className="case-chapter"><span className="case-chapter-num">01</span><h2>El punto de partida: economía más difícil fuera de Alemania</h2><p>Vender gaviones en toda Europa suena sencillo hasta que miras la realidad operativa. Los recursos del sitio web en varios idiomas eran limitados. El envío desde Alemania a otros países europeos era más lento y caro de lo que los compradores modernos esperan. Trusted Shops solo estaba implementado en el mercado local.</p><p>Nada de eso estaba en nuestra mano cambiar. El encargo era diferente: con el mismo presupuesto del año anterior, aumentar los ingresos y el ticket medio en los mercados que sí trabajábamos — usando solo la estrategia de Google Ads.</p></section>
+        <section className="case-chapter"><span className="case-chapter-num">02</span><h2>Las dos palancas: Google Shopping y remarketing dinámico</h2><p>Tomamos una decisión temprana de concentrarnos en dos canales en lugar de repartir el presupuesto por todo el inventario de Google. Shopping para la demanda nueva. Remarketing dinámico para los compradores que Shopping ya había presentado a la marca.</p><h3>Google Shopping — el principal motor de ingresos</h3><p>Smart Shopping fue el caballo de batalla. Trabajamos estrechamente con la marca para identificar las líneas de producto y las oportunidades a nivel de categoría que justificaban la asignación presupuestaria más pesada — no por intuición, sino mediante investigación de mercado estructurada sobre dónde estaba realmente la demanda transfronteriza.</p><h3>Remarketing dinámico — cerrar la brecha</h3><p>Los gaviones no son una compra impulsiva. El ciclo de deliberación es largo, la cesta es grande y la mayoría de compradores vuelven al sitio múltiples veces antes de decidir. El remarketing dinámico nos dio los touchpoints para traer de vuelta a esos compradores exactamente a los productos que ya habían visto — no creatividades genéricas de marca, sino el SKU real. De ahí vino el incremento del ticket medio.</p></section>
+        <section className="case-chapter"><span className="case-chapter-num">03</span><h2>Estrategia de audiencia: construida sobre comportamiento real del usuario</h2><p>Para que el remarketing de display realmente rentabilizara, construimos listas de clientes dentro de Google Analytics que mapeaban dónde estaba cada usuario en el ciclo de decisión — no solo «visitó el sitio en los últimos 30 días». Luego usamos la investigación de mercado para posicionar las creatividades de remarketing en los momentos del user journey donde la intención estaba aumentando.</p></section>
+        <div className="case-quote"><blockquote>«Llevamos trabajando con el equipo un tiempo y estamos muy satisfechos con los resultados. Philipp es un socio reflexivo y experto en todo lo relacionado con el performance marketing — por eso continuamos la colaboración.»</blockquote><cite>Nelson Vollertsen · Ibendahl &amp; Thomsen GmbH</cite></div>
+        <section className="case-chapter"><span className="case-chapter-num">04</span><h2>El resultado: más compras, cestas más grandes, mismo gasto</h2><ul><li><strong>+79 % clics interanual</strong> — el trabajo estructural de Shopping y pujas hizo que cada euro llegara a notablemente más compradores.</li><li><strong>+27 % ingresos interanual</strong> — los clics adicionales no eran tráfico barato; convirtieron.</li><li><strong>+33 % ticket medio interanual</strong> — el remarketing hizo su trabajo. La gente volvió, compró más por pedido.</li></ul></section>
+        <div className="case-takeaway"><span className="case-takeaway-kicker">Lo que hizo que funcionara</span><p>Disciplina sobre amplitud. Smart Shopping como motor principal de ingresos, alimentado con investigación sobre dónde estaba la oportunidad real transfronteriza. Remarketing dinámico ajustado al ciclo de deliberación de una categoría de alta consideración. Audiencias construidas desde el comportamiento real del usuario. Y una configuración multiidioma que funcionó en todos los mercados.</p></div>
+      </>),
+    },
+    imero: {
+      metaTitle: 'IMERO — −60 % CPC y +307 % registros via Google Ads | pmax',
+      metaDesc: 'Reconstrucción de Google Ads — Smart Bidding, Display, YouTube y CRO de landing pages — redujo el CPC un 60 % y triplicó los registros para un SaaS regulado en 11 idiomas.',
+      heroTitle: '−60 % CPC, +307 % registros — una reconstrucción de Google Ads para un SaaS regulado, en 11 idiomas.',
+      stats: [
+        { num: '−59,95 %', label: 'Coste por clic medio' },
+        { num: '+306,75 %', label: 'Registros en la herramienta e-label' },
+        { num: '−62,19 %', label: 'Coste por conversión (registro)' },
+        { num: '11', label: 'Idiomas ejecutándose en paralelo' },
+      ],
+      prose: (<>
+        <div className="case-brief"><p>IMERO Technologies construye e-label, una herramienta de etiquetado digital que genera etiquetas con código QR para datos nutricionales y de ingredientes en vino y otras bebidas alcohólicas — la capa regulatoria que la UE ahora exige a los productores. Un producto real que resuelve un problema real de compliance, en un mercado que aún no sabe que necesita la respuesta. Nuestro encargo: convertir Google Ads en una máquina de registros.</p></div>
+        <section className="case-chapter"><span className="case-chapter-num">01</span><h2>El punto de partida: una cuenta optimizando hacia lo incorrecto</h2><p>Cuando tomamos la cuenta, las ineficiencias eran familiares pero costosas. Una configuración desestructurada. Objetivos de campaña poco claros. Investigación de palabras clave incompleta. Una estrategia de puja que perseguía el coste por clic en lugar de las conversiones. La plataforma hacía lo que se le decía — entregar clics baratos — no lo que el negocio realmente necesitaba: registros cualificados para una herramienta SaaS de nicho.</p></section>
+        <section className="case-chapter"><span className="case-chapter-num">02</span><h2>La mecánica: una estrategia de Google Ads basada en datos</h2><p>Cinco líneas de trabajo paralelas, auditadas semanalmente:</p><ul><li><strong>Google Search priorizado.</strong> Lideramos con Search para capturar empresas buscando activamente soluciones de etiquetado digital. Campañas segmentadas por oferta principal y audiencia.</li><li><strong>Relevancia del anuncio y targeting reconstruidos.</strong> Textos de anuncio reescritos para hablar al comprador real de IMERO — productores ante el nuevo requisito de la UE.</li><li><strong>Smart Bidding (Target CPA).</strong> Pasamos de pujas CPC a Target CPA para que la plataforma optimizara hacia leads de alta calidad al coste correcto.</li><li><strong>Expansión a Display y YouTube.</strong> Añadimos Display y YouTube para alcanzar a compradores potenciales en las fases de awareness y consideración.</li><li><strong>Optimización continua.</strong> Pujas ajustadas semanalmente. Conjuntos de palabras clave ganadoras expandidos, perdedores eliminados. Landing pages iteradas.</li></ul></section>
+        <section className="case-chapter"><span className="case-chapter-num">03</span><h2>El resultado: clics más baratos, más registros, huella de categoría</h2><ul><li><strong>−59,95 % CPC medio</strong> — mismas pujas, señales de plataforma más inteligentes.</li><li><strong>+306,75 % registros</strong> en la herramienta e-label interanual.</li><li><strong>−62,19 % coste por conversión</strong> — la palanca que realmente le importa al CFO.</li><li><strong>~22 % tasa de clics</strong> en campañas de Search — muy por encima de los benchmarks de la categoría.</li><li><strong>11 idiomas</strong> ejecutándose en paralelo, reflejando la huella de mercado europea de IMERO.</li></ul></section>
+        <div className="case-takeaway"><span className="case-takeaway-kicker">Lo que hizo que funcionara</span><p>Tratar Google Ads como un problema de ingeniería, no de compra de medios. Reconstruir la estructura. Hacer coincidir la estrategia de puja con el objetivo real del negocio. Añadir Display y YouTube para alcanzar a un comprador que aún no sabía que tenía el problema. Retargetear intensamente, optimizar semanalmente, arreglar las landing pages cada vez que surge una oportunidad de CRO.</p></div>
+      </>),
+    },
+    ledxpress: {
+      metaTitle: 'LEDXpress — +365 % de ingresos SEO en 8 meses | pmax',
+      metaDesc: 'Un programa SEO estructurado aumentó los ingresos de LEDXpress un 365 % en 8 meses — bases técnicas, contenido orientado a la intención y validación con datos de paid.',
+      heroTitle: <>+365 % de ingresos en 8 meses — cómo el SEO estructurado reconstruyó el mix de canales de LEDXpress.</>,
+      stats: [
+        { num: '+365 %', label: 'Crecimiento mensual de ingresos en 8 meses' },
+        { num: '+230 %', label: 'Clics orgánicos (1.030 → 3.430 / mes)' },
+        { num: '+59 %', label: 'Tasa de conversión (1,45 % → 2,30 %)' },
+        { num: '+46 %', label: 'Posición media de ranking (41,6 → 22,3)' },
+      ],
+      prose: (<>
+        <div className="case-brief"><p>LEDXpress es una tienda online europea de iluminación LED, lámparas y componentes eléctricos. Cuando llegaron a nosotros, el negocio crecía — pero el crecimiento se compraba, no se ganaba. La mayor parte de los ingresos se generaba mediante anuncios de pago, y el aumento de los costes publicitarios comenzaba a comprimir el margen. El encargo era sencillo: construir un programa SEO escalable que entregue crecimiento sostenible, independientemente del gasto en medios.</p></div>
+        <section className="case-chapter"><span className="case-chapter-num">01</span><h2>El punto de partida: potencial SEO sin explotar</h2><p>El panorama en el kickoff era familiar para cualquiera que haya auditado una tienda de e-commerce de tamaño mediano. Las palabras clave comerciales importantes no tenían posiciones top. Las páginas de categoría y producto no estaban alineadas con la intención de búsqueda real. Los fundamentos técnicos de SEO solo estaban parcialmente en su lugar.</p></section>
+        <div className="case-quote"><blockquote>«Estamos realmente satisfechos con la colaboración. Lo que destaca es que el equipo no solo ejecuta — piensa junto a nosotros y cuestiona nuestras suposiciones. Juntos hemos logrado un progreso real tanto en nuestro sitio web como en nuestra publicidad, siempre con el foco en el crecimiento sostenible y medible.»</blockquote><cite>Harrie Staps · LEDXpress</cite></div>
+        <section className="case-chapter"><span className="case-chapter-num">02</span><h2>SEO técnico como cimiento</h2><p>Ningún trabajo de contenido o posicionamiento se acumula sobre una base técnica rota. Así que empezamos ahí:</p><ul><li>Rastreo e indexación — URLs con parámetros limpias, fugas de navegación facetada, cadenas de canonicals y páginas que absorbían presupuesto de rastreo sin convertir jamás.</li><li>Velocidad de página — trabajo de Core Web Vitals en templates, pipeline de imágenes y etiquetas de terceros.</li><li>Enlazado interno — flujo de categoría a producto reestructurado para que la autoridad fluyera finalmente a las páginas que la necesitaban.</li><li>Datos estructurados — schema de Product, Offer, BreadcrumbList, Organization y Review en todo el catálogo.</li></ul></section>
+        <section className="case-chapter"><span className="case-chapter-num">03</span><h2>Investigación de palabras clave basada en la intención</h2><p>El error de la mayoría de programas de SEO para e-commerce es optimizar para el tráfico. Nosotros optimizamos para los ingresos. Cada palabra clave se puntuó contra tres cosas: intención comercial, potencial de tráfico y el margen de los productos que sacaría a la superficie.</p></section>
+        <section className="case-chapter"><span className="case-chapter-num">04</span><h2>La palanca que la mayoría de agencias SEO pasa por alto: datos de paid</h2><p>La forma más rápida de saber qué palabras clave generan realmente ingresos es mirar las que ya convierten en Google Ads. Usamos la cuenta de paid como un test A/B permanente para el targeting orgánico:</p><ul><li>Valor comercial de las palabras clave validado con datos de conversión en directo, no con estimaciones.</li><li>Términos long-tail rentables identificados, sobre los que la estrategia orgánica luego dobló la apuesta.</li><li>Ciclo de aprendizaje acortado de trimestres a semanas.</li></ul></section>
+        <section className="case-chapter"><span className="case-chapter-num">05</span><h2>Los resultados, 8 meses después</h2><p>El número titular son los ingresos: <strong>+365 % de crecimiento mensual de ingresos en 8 meses</strong>. Pero el desglose importa más, porque muestra que el crecimiento es estructural:</p><ul><li><strong>+230 % clics orgánicos</strong> — de 1.030 a 3.430 por mes.</li><li><strong>+59 % tasa de conversión</strong> — del 1,45 % al 2,30 %.</li><li><strong>+46 % mejora de la posición media de ranking</strong> — de 41,6 a 22,3.</li></ul></section>
+        <div className="case-takeaway"><span className="case-takeaway-kicker">Lo que hizo que funcionara</span><p>Un programa SEO de stack completo — técnico, contenido y off-page ejecutados como un solo workstream. Priorización basada en datos que usó los datos de conversión de paid para desriesgar cada apuesta orgánica. Y un enfoque implacable en tráfico de calidad de conversión en lugar de volumen de vanidad.</p></div>
+      </>),
+    },
+    luxaflex: {
+      metaTitle: 'Luxaflex — −93 % coste por lead, +3.191 % solicitudes | pmax',
+      metaDesc: 'Paid search local convirtió un programa fallido de Luxaflex en una máquina de crecimiento del 3.191 % — reduciendo el coste por lead un 93 % en tres años.',
+      heroTitle: <>Un programa de paid search fallido, reconstruido en una máquina de crecimiento del 3.191 % — siendo <em>genuinamente</em> local.</>,
+      heroDeck: 'Luxaflex® es el líder del mercado en persianas, toldos y cierres, y uno de los mayores minoristas de las marcas de cortinas más conocidas. Nos contrataron para arreglar un programa de paid search de franquicia donde el coste era demasiado alto y las ventas demasiado bajas.',
+      stats: [
+        { num: '−93 %', label: 'Coste por lead — formularios de contacto y llamadas combinados' },
+        { num: '+3.191 %', label: 'Crecimiento en solicitudes de contacto mensuales en tres años' },
+        { num: '+527 %', label: 'Incremento en valor de conversión en la red de franquicias' },
+        { num: '+270 %', label: 'Mejora de la tasa de conversión pese a un aumento dramático del tráfico' },
+      ],
+      prose: (<>
+        <div className="case-brief"><p>Los franquiciados de Luxaflex® ya habían utilizado paid media antes. No había funcionado — el coste por adquisición era demasiado alto y las ventas resultantes demasiado escasas para justificar la inversión. Nos pidieron que hiciéramos el trabajo correctamente: construir un programa de paid search que pudiera autofinanciarse y escalar en una red de franquicias nacional donde cada concesionario tenía diferente stock, diferentes plazos de entrega y diferente competencia local.</p></div>
+        <section className="case-chapter"><span className="case-chapter-num">01</span><h2>Primero los datos, antes de tocar los anuncios</h2><p>Lo primero que hicimos fue nada visible. Nos sentamos con cada franquiciado y aprendimos su ecosistema comercial, operativo y de promociones desde dentro — proceso de fabricación, plazos de entrega, margen bruto por familia de producto, y lo que el cliente típico de Luxaflex realmente quiere cuando descuelga el teléfono.</p><p>Solo cuando entendíamos la economía unitaria de cada concesionario decidíamos en qué canales apoyarnos. La respuesta no era más canales; era paid search bien hecho, enfocado en leads de alto volumen y bajo coste que los concesionarios pudieran realmente atender.</p></section>
+        <blockquote className="case-pullquote"><p>«Entender la importancia de la búsqueda local para esta operación de franquicia fue el principal desbloqueador — y lo que las agencias anteriores seguían pasando por alto.»</p><cite>— EQUIPO DE MARKETING DE FRANQUICIAS LUXAFLEX</cite></blockquote>
+        <section className="case-chapter"><span className="case-chapter-num">02</span><h2>El 46 % de las búsquedas de Google son locales. La mayor parte de nuestro presupuesto de palabras clave no lo era.</h2><p>Los términos de marca eran valiosos pero tenían techo. El volumen de búsqueda — y la demanda realmente incremental — estaba en consultas long-tail sin marca que seguían estando ancladas geográficamente: «Persianas Madrid», «Toldos Barcelona», «Estores cerca de mí».</p><p>Reconstruimos la estructura de la cuenta en torno a cuatro capas de palabras clave que se solapan:</p><ul><li><strong>Marca</strong> — defensivo, presupuesto con tope, alta intención</li><li><strong>Producto genérico</strong> — demanda a nivel de categoría, cualificada por targeting de landing page</li><li><strong>Hiper-local</strong> — modificadores geográficos long-tail mapeados al franquiciado más cercano</li><li><strong>Basado en ofertas</strong> — promociones estacionales sincronizadas con el stock y la capacidad del franquiciado</li></ul></section>
+        <section className="case-chapter"><span className="case-chapter-num">03</span><h2>La estacionalidad y la coordinación con los concesionarios hicieron el resto</h2><p>Las protecciones solares son un negocio estacional. Modelamos la estacionalidad por familia de producto y territorio de franquiciado, luego construimos de antemano los calendarios de pacing de creatividades y presupuesto.</p><p>La otra mitad del trabajo era coordinación poco glamurosa: check-ins semanales con los franquiciados para mantener las promociones consistentes entre anuncios, landing pages y stock en el showroom.</p></section>
+        <section className="case-chapter"><span className="case-chapter-num">04</span><h2>Lo que hicieron los números</h2><p>Tres años después, la misma red a través de la misma cuenta de Google Ads parecía un negocio diferente:</p><ul><li>Tasa de conversión <strong>+270 %</strong>, pese a que el tráfico subió bruscamente</li><li>Valor de conversión <strong>+527 %</strong></li><li>Conversiones mensuales <strong>+3.191 %</strong></li><li>Coste por conversión <strong>−93 %</strong></li></ul><p>Sin nuevo canal de medios. Sin producto milagroso. Solo una cuenta bien estructurada, targeting local honesto y la disciplina de mantener anuncios, landing pages y realidad del concesionario sincronizados.</p></section>
+      </>),
+    },
+    preo: {
+      metaTitle: 'PREO Software — +72 % clics orgánicos, +143 % página 1 | pmax',
+      metaDesc: 'El SEO basado en contenido abrió la categoría de licencias de software de segunda mano para PREO — clics orgánicos +72 % y rankings en página 1 +143 % interanual.',
+      heroTitle: '+72 % en clics orgánicos, +143 % en keywords en página 1 — cómo el SEO basado en contenido abrió una categoría B2B de nicho.',
+      stats: [
+        { num: '+72,2 %', label: 'Clics orgánicos interanual' },
+        { num: '+17,7 %', label: 'Mejora de la posición media interanual' },
+        { num: '+143 %', label: 'Rankings en página 1 vs. año anterior' },
+        { num: '132', label: 'Keywords en página 1, 41 en top 5, 25 en top 3' },
+      ],
+      prose: (<>
+        <div className="case-brief"><p>PREO Software AG es un trader especializado en licencias de software de segunda mano — una categoría que la mayoría de equipos de procurement no conoce hasta que alguien se la presenta. Los fundadores construyeron el negocio sobre la idea de que empresas de todo tamaño tienen licencias que ya no necesitan, y otras empresas necesitan licencias por las que no quieren pagar el precio completo. El mercado funciona. El problema era que casi nadie lo buscaba — porque casi nadie sabía que existía.</p></div>
+        <section className="case-chapter"><span className="case-chapter-num">01</span><h2>El punto de partida: un negocio que funciona con un techo de brand awareness</h2><p>PREO había conseguido cuentas enterprise reales a través de outbound y ventas directas. El producto funcionaba, la economía funcionaba, las referencias eran sólidas. Lo que no funcionaba era el inbound: el problema del producto de nicho limitaba la demanda orgánica porque los equipos de procurement no buscaban «licencias de software de segunda mano». Nuestro encargo: convertir la búsqueda orgánica en un segundo motor de crecimiento, de forma sostenible, sin atajos.</p></section>
+        <section className="case-chapter"><span className="case-chapter-num">02</span><h2>El descubrimiento: el contenido tiene que hacer la educación</h2><p>En una categoría donde el comprador aún no sabe que la categoría existe, el SEO no puede ser un juego de volumen de palabras clave. Tiene que ser un juego de educación. El contenido tiene que enseñar a los responsables de procurement e IT qué es una licencia usada, cuándo es legal, cómo funciona en la práctica, cómo son realmente los ahorros — y solo entonces se vuelve posible la búsqueda «comprar a PREO».</p></section>
+        <section className="case-chapter"><span className="case-chapter-num">03</span><h2>La mecánica: contenido + estructura de palabras clave, funcionando como uno</h2><ul><li>Investigación de palabras clave en profundidad que mapeó el recorrido real del comprador — desde «cómo funcionan las licencias de software usadas» hasta «¿es legal comprar Microsoft 365 de segunda mano?» hasta consultas comerciales en el fondo del funnel.</li><li>Un programa de contenido construido alrededor de ese mapa — piezas long-form, páginas de comparación, explicadores legales, calculadoras de ahorro — cada uno vinculado a una intención de búsqueda específica.</li><li>Texto del sitio web reescrito para usar las palabras clave objetivo deliberadamente, al servicio de la claridad para el lector.</li></ul></section>
+        <section className="case-chapter"><span className="case-chapter-num">04</span><h2>El resultado: clics, posiciones y huella de categoría</h2><ul><li><strong>+72,2 % clics orgánicos interanual</strong> — no impresiones de vanidad, visitas reales de personas que investigan la categoría.</li><li><strong>+17,7 % posición media</strong> — mejora estructural del ranking en el conjunto de palabras clave seguidas.</li><li><strong>+143 % keywords en página 1 vs. año anterior</strong> — la huella de categoría creció, no solo el ranking en términos existentes.</li><li><strong>132 keywords en página 1, 41 en el top 5, 25 en el top 3</strong> — posiciones defendibles en las consultas comerciales que generan realmente consultas.</li></ul></section>
+        <div className="case-takeaway"><span className="case-takeaway-kicker">Lo que hizo que funcionara</span><p>Aceptar que una categoría B2B de nicho necesita contenido que educa antes de vender — y combinar eso con una estrategia de palabras clave que lleva al comprador de la awareness a la intención. Luego la disciplina poco glamurosa de SEO técnico mensual y trabajo off-page deliberado, cada mes, sin interrupciones.</p></div>
+      </>),
+    },
+    primundus: {
+      metaTitle: 'PRIMUNDUS — SEO regional, +535 % impresiones | pmax',
+      metaDesc: 'SEO regional reorientado al comprador real aumentó las impresiones de PRIMUNDUS un 535 % y los clics un 182 % — para un proveedor alemán de cuidados domiciliarios 24 horas.',
+      heroTitle: '+535 % en impresiones, +182 % en clics — mediante una estrategia de SEO regional construida sobre cómo buscan realmente las familias que necesitan cuidados.',
+      stats: [
+        { num: '+535 %', label: 'Impresiones, últimos 6 meses vs. período anterior' },
+        { num: '+182 %', label: 'Clics, últimos 6 meses vs. período anterior' },
+        { num: '−9,95', label: 'Mejora de la posición media de ranking' },
+        { num: '193', label: 'Keywords posicionando en página 1' },
+      ],
+      prose: (<>
+        <div className="case-brief"><p>PRIMUNDUS es un proveedor alemán de cuidados domiciliarios en el segmento de cuidados 24 horas, que coloca cuidadoras polacas con familias de toda Alemania. Las cuidadoras están formadas internamente, hablan alemán con fluidez y se ocupan del cuidado, el acompañamiento y las tareas del hogar. La empresa ha colocado más de 10.000 cuidadoras en más de una década — pero la mayor parte de ese crecimiento vino de referencias, no de ser encontrados online. Nuestro encargo: hacer de la búsqueda orgánica el segundo motor de crecimiento.</p></div>
+        <section className="case-chapter"><span className="case-chapter-num">01</span><h2>El punto de partida: negocio sólido, huella digital escasa</h2><p>PRIMUNDUS es uno de los proveedores líderes en su segmento por volumen, pero la presencia orgánica del sitio web no lo reflejaba. Quien buscara fuera de consultas de marca no los habría encontrado. El objetivo era sostenible: aumentar el tráfico orgánico y, más importante, aumentar la proporción de consultas cualificadas provenientes de la búsqueda orgánica. Para hacerlo correctamente, necesitábamos una estrategia de SEO regional — una que alineara el sitio con cómo buscan realmente las familias en ciudades y regiones específicas cuando un padre o pareja necesita de repente cuidados continuos.</p></section>
+        <section className="case-chapter"><span className="case-chapter-num">02</span><h2>El descubrimiento: el comprador no es el paciente</h2><p>Un trabajo temprano que reformó toda la estrategia. En esta categoría, quien busca casi nunca es quien recibe los cuidados. Es el hijo adulto, el cónyuge, la sobrina que gestiona la logística familiar. Buscan con un lenguaje diferente, en momentos diferentes, con objeciones diferentes a las del paciente. El sitio antiguo estaba escrito para el paciente. El nuevo tenía que estar escrito para el comprador.</p></section>
+        <section className="case-chapter"><span className="case-chapter-num">03</span><h2>La mecánica: páginas regionales construidas sobre demanda real</h2><p>Una vez que mapeamos el panorama de palabras clave, emergió un patrón claro: la mejor práctica en esta categoría no es una página nacional única para «cuidados 24 horas». Es una red de páginas regionales, cada una dirigida a una ciudad o área de captación específica, cada una escrita para el comprador de esa región.</p><ul><li>Investigación de palabras clave en profundidad a nivel de ciudad — identificando qué regiones tenían demanda de búsqueda real que justificara una página dedicada.</li><li>Una nueva arquitectura de información — reconstruida alrededor de regiones, necesidades de cuidado y los momentos de decisión del comprador.</li><li>Contenido on-page reescrito con palabras clave objetivo usadas deliberadamente — escrito para que lea de forma natural para el familiar que busca.</li></ul></section>
+        <section className="case-chapter"><span className="case-chapter-num">04</span><h2>La capa técnica y off-page</h2><p>Ningún trabajo regional se acumula sin los cimientos debajo. SEO técnico habitual — rastreo, indexación, enlazado interno, datos estructurados, velocidad de página — complementado con un programa off-page deliberado y a largo plazo que construye backlinks de calidad de fuentes que importan en el panorama alemán de salud y cuidado de mayores. Las señales de confianza reforzaron las señales E-E-A-T que Google necesita para sentirse cómodo recomendando un sitio YMYL en una categoría sensible.</p></section>
+        <section className="case-chapter"><span className="case-chapter-num">05</span><h2>El resultado: visibilidad que se convirtió en consultas</h2><ul><li><strong>+535 % impresiones</strong> en los últimos seis meses vs. los seis anteriores.</li><li><strong>+182 % clics</strong> en el mismo período — visibilidad que se traduce en tráfico cualificado.</li><li><strong>Posición media de ranking mejorada en 9,95</strong> — el tipo de mejora estructural difícil de perder.</li><li><strong>193 keywords en página 1</strong>, <strong>79 en el top tres</strong>, <strong>22 en posición uno</strong>.</li></ul></section>
+        <div className="case-takeaway"><span className="case-takeaway-kicker">Lo que hizo que funcionara</span><p>Una estrategia de SEO regional que respetó cómo se comporta realmente la categoría — un comprador, muchas áreas de captación, todas profundamente locales. Una arquitectura del sitio reconstruida alrededor del comprador, no del paciente. Y la disciplina de combinar los fundamentos técnicos poco glamurosos con un programa off-page deliberado.</p></div>
+      </>),
+    },
+    unisono: {
+      metaTitle: 'Unisono Luxury Homes — +183 % leads por teléfono, +138 % CTR | pmax',
+      metaDesc: 'SEO, Google Ads, Microsoft Ads y reconstrucción web para una marca de villas de lujo en Mallorca. +183 % en clics al número de teléfono, +138 % CTR orgánico interanual.',
+      heroTitle: 'Unisono Luxury Homes — un programa multicanal construido alrededor de cómo reserva realmente un cliente de lujo.',
+      stats: [
+        { num: '+138 %', label: 'CTR orgánico interanual (0,8 % → 1,9 %)' },
+        { num: '+14,7', label: 'Posiciones medias de ranking ganadas (34,9 → 20,2)' },
+        { num: '+183 %', label: 'Clics en el número de teléfono interanual' },
+        { num: '+8,8 %', label: 'Solicitudes de contacto de alquiler interanual' },
+      ],
+      prose: (<>
+        <div className="case-brief"><p>Unisono Luxury Homes es una marca de villas de lujo de Mallorca — ventas y alquiler vacacional premium, con una clientela que investiga en tres idiomas y reserva por teléfono. Nuestro encargo: tener visibilidad orgánica en una categoría dominada por portales internacionales, gestionar Google y Microsoft Ads como canal de beneficio en lugar de línea de coste, y reconstruir el sitio web para que el trabajo anterior diera frutos.</p></div>
+        <section className="case-chapter"><span className="case-chapter-num">01</span><h2>El punto de partida: una categoría dominada por portales</h2><p>Las búsquedas de alquiler de lujo en Mallorca las dominan un puñado de plataformas internacionales con presupuestos publicitarios de ocho cifras. Para una marca independiente — un equipo pequeño, un portfolio curado, un número de teléfono que la gente usa de verdad — posicionarse orgánicamente frente a ellos parece imposible sobre el papel.</p><p>No lo es. Solo necesita reglas de juego diferentes: intención más precisa, páginas más rápidas, mejor contenido, schema real y la paciencia para jugar a 12 meses cuando los portales están jugando a 12 semanas.</p></section>
+        <section className="case-chapter"><span className="case-chapter-num">02</span><h2>La mecánica: cuatro canales, un calendario</h2><p>Cuatro disciplinas, ejecutadas como un único programa, auditadas semanalmente:</p><ul><li><strong>SEO.</strong> Clusters de temas construidos alrededor de la intención del comprador. Páginas de propiedades rediseñadas con schema adecuado, fotografía real y copy que responde la pregunta que realmente tiene un arrendatario de alto patrimonio. Hreflang implementado correctamente en inglés, alemán y español.</li><li><strong>Google Ads.</strong> Protección de marca, más búsqueda non-brand segmentada alrededor de la intención de alquiler de larga estancia y compra. Importaciones de conversiones offline desde el CRM.</li><li><strong>Microsoft Ads.</strong> A menudo ignorado en el segmento de lujo, nunca debería serlo. La audiencia de Bing sobre-indexa exactamente en el perfil demográfico que esta marca vende. CPCs más bajos, AOV más alto, economía de conversión 30–40 % mejor que Google en varios segmentos de alquiler.</li><li><strong>Desarrollo web.</strong> Reconstrucción completa del sitio — mismo diseño visual, nuevo stack tecnológico — tras diagnosticar que la plataforma legacy era el mayor freno individual a la conversión.</li></ul></section>
+        <section className="case-chapter"><span className="case-chapter-num">03</span><h2>Los resultados orgánicos: mismo sitio, dramáticamente más eficiente</h2><ul><li><strong>CTR orgánico: 0,8 % → 1,9 %.</strong> Un incremento relativo del 138 %. La misma superficie en Google convierte ahora una proporción mucho mayor de impresiones en clics.</li><li><strong>Posición media: 34,9 → 20,2.</strong> De la página cuatro a la página dos de media.</li><li><strong>Impresiones normalizadas a 19.800</strong> — deliberadamente, al podar páginas escasas y de intención incorrecta.</li></ul></section>
+        <section className="case-chapter"><span className="case-chapter-num">04</span><h2>Los resultados de conversión: donde se muestra realmente</h2><ul><li><strong>Clics en el número de teléfono: +183,33 % interanual.</strong> El evento más predictivo para este negocio. Quien hace clic en el número de teléfono, reserva.</li><li><strong>Solicitudes de alquiler: +8,77 % interanual.</strong> El formulario principal, creciendo sobre una base ya sólida.</li><li><strong>Solicitudes de contacto en alemán: +25 % interanual.</strong> Un área de crecimiento deliberado — uno de los mercados de origen de mayor margen para la marca.</li></ul></section>
+        <section className="case-chapter"><span className="case-chapter-num">05</span><h2>Por qué funcionó: las respuestas aburridas</h2><ul><li><strong>Un calendario.</strong> SEO, Google, Microsoft y web funcionaron desde un ritmo semanal compartido — no cuatro agencias, cuatro roadmaps, cuatro conjuntos de prioridades.</li><li><strong>Reconstruir antes de optimizar.</strong> Ningún SEO o gasto de paid iba a arreglar un sitio que se arrastraba bajo carga y perdía formularios en silencio.</li><li><strong>El teléfono es un canal.</strong> En el alquiler de lujo, la llamada es la conversión. Optimizar el camino hacia ella — visible, clicable, con conciencia del idioma — produjo el mayor incremento individual del programa.</li></ul></section>
+        <div className="case-takeaway"><span className="case-takeaway-kicker">Lo que hizo que funcionara</span><p>Tratar a Unisono como una marca con cuatro superficies de crecimiento interconectadas en lugar de cuatro canales en fila. La visibilidad orgánica duplicó la tasa de clics de cada aparición en Google. El paid cubrió el long-tail sin marca. Microsoft Ads captó la audiencia de alto valor que Google tiene mal valorada. Y la reconstrucción del sitio hizo que las tres inversiones trabajaran más duro al aterrizar.</p></div>
+      </>),
+    },
+    'vc-investor': {
+      metaTitle: 'Inversor VC campaña LinkedIn — +50 % VTR, −48 % CPM | pmax',
+      metaDesc: 'Campaña de LinkedIn por fases para un inversor VC de referencia en early-stage. +50 % view-through rate sobre el benchmark global de LinkedIn, −48 % CPM.',
+      heroTitle: 'Cómo una campaña de LinkedIn por fases logró +50 % VTR y −48 % CPM para un inversor VC early-stage de referencia.',
+      stats: [
+        { num: '+50 %', label: 'Tasa de reproducción de vídeo sobre el benchmark global de LinkedIn' },
+        { num: '−48 %', label: 'CPM por debajo del benchmark global de LinkedIn' },
+        { num: '+45 %', label: 'CTR de vídeo en la fase de conversión sobre el estándar de sponsored content' },
+        { num: '+250 %', label: 'CTR de conversión vs. fase de awareness' },
+      ],
+      prose: (<>
+        <div className="case-brief"><p>Uno de los inversores de capital riesgo más grandes y activos en early-stage de Alemania — conocido por su trabajo con empresas tecnológicas — necesitaba trasladar sus eventos de networking presenciales de referencia al entorno digital durante la pandemia. El encargo: registros digitales eficientes en coste para un evento concebido para conectar startups, pensadores innovadores, operadores de primer nivel, expertos y visionarios. LinkedIn era la plataforma adecuada; la pregunta era cómo usarla correctamente.</p></div>
+        <section className="case-chapter"><span className="case-chapter-num">01</span><h2>Estrategia por fases — awareness, consideración, conversión</h2><p>El Campaign Manager de LinkedIn es más sofisticado de lo que la mayoría le da crédito. Usamos su targeting avanzado para ejecutar una campaña por fases de seis semanas: construir visibilidad en la fase uno, reducir a audiencias comprometidas en la fase dos, empujar hacia registros de alta intención en la fase tres.</p></section>
+        <section className="case-chapter"><span className="case-chapter-num">02</span><h2>Awareness — encontrar las salas relevantes</h2><p>La fase uno se dirigía a CTOs, CEOs, fundadores y personas senior en desarrollo de negocio, IT, operaciones y gestión de proyectos — más audiencias personalizadas construidas a partir de las listas propias del cliente. Les mostramos un vídeo de 30 segundos pulido presentando el evento con CTA directo de «registrarse».</p><div className="prose-callout"><div className="prose-callout-kicker">Una nota sobre la construcción de audiencias</div><p>¿No sabes a quién dirigirte? Pregunta a tu propio equipo. En lugar de especular en una sala de reuniones, habla con las personas de tu call center o equipo de ventas — los que realmente conocen a tus clientes.</p></div></section>
+        <section className="case-chapter"><span className="case-chapter-num">03</span><h2>Consideración — donde se puso interesante</h2><p>Para la fase dos introdujimos un nuevo corte del vídeo para evitar la fatiga creativa y añadimos más «razones para creer». Nuevas variantes de copy añadieron un impulso basado en el tiempo para elevar la intención de registro. El corte de audiencia fue más preciso: retargeteamos a todos los que habían interactuado con el vídeo de awareness o la página de empresa del cliente, y dividimos a los espectadores de vídeo en dos cohortes — los que habían visto el 50 % y los que habían visto el 75 %.</p><div className="prose-callout"><div className="prose-callout-kicker">Incremento del CTR</div><p>El CTR de la fase dos fue un 200 % más alto que la fase uno. El objetivo de las fases es que evitas gastar la segunda mitad de tu presupuesto en personas que ya te dijeron que no les interesaba.</p></div></section>
+        <section className="case-chapter"><span className="case-chapter-num">04</span><h2>Conversión — último impulso, audiencia más ajustada</h2><p>La fase tres lanzó un tercer vídeo contra la cohorte más ajustada — espectadores que habían visto el 75 % y el 97 % del asset anterior. Curiosamente, la cohorte del 75 % superó a la del 97 %. Todavía no tenemos una explicación completamente satisfactoria para ello y lo reportamos porque todo caso de estudio honesto debería tener al menos un resultado que no se puede explicar ordenadamente.</p><p>El CTR de la fase de conversión fue un +250 % más alto que la fase de awareness y un +17 % más alto que la de consideración — evidencia clara de que el estrechamiento progresivo de la audiencia estaba haciendo el trabajo que se suponía que debía hacer.</p></section>
+        <div className="prose-callout"><div className="prose-callout-kicker">El resultado</div><p>Los objetivos de venta de entradas establecidos por el cliente se superaron. El coste por registro quedó sustancialmente por debajo del benchmark interno del cliente, y la campaña se convirtió en la plantilla para todos los eventos posteriores que la empresa realizó online durante los siguientes 18 meses. Lo que más importó fue la estructura por fases: el mismo presupuesto de medios, desplegado con audiencias progresivamente más ajustadas, produjo un CTR final un 250 % más alto que el equivalente de un único broadcast habría logrado.</p></div>
+      </>),
+    },
+  } as Record<string, LocalizedCaseDetail>,
 
-  blogPostDetail: {} as Record<string, LocalizedBlogDetail>,
+  blogPostDetail: {
+    'how-to-get-mentioned-by-chatgpt': {
+      toc: ['Qué es la visibilidad en IA', 'Por qué importa ahora', '5 acciones para este mes', 'Cómo puede ayudar pmax', 'Lecturas recomendadas'],
+      prose: (<>
+        <p>Cada semana un cliente nos hace la misma pregunta: «Estamos viendo menos clics de Google. ¿Es por ChatGPT?» La respuesta honesta es: probablemente sí, en parte. Y va a seguir pasando. En lugar de luchar contra ello, el movimiento inteligente es asegurarse de que tu negocio es el que ChatGPT, Perplexity y Gemini realmente recomiendan.</p>
+        <p>Esta es una guía corta y práctica. Sin jerga, sin alarmismo. Al final sabrás qué es la visibilidad en IA, por qué importa y las cinco acciones que cualquier negocio — incluido el tuyo — puede empezar este mes.</p>
+        <h2>¿Qué es exactamente la visibilidad en IA?</h2>
+        <p>Cuando alguien le pregunta a ChatGPT «cuál es la mejor agencia de marketing digital en Mallorca» o le pregunta a Perplexity «compara tres instaladores solares en España», la IA genera una respuesta que menciona negocios específicos por nombre. A veces enlaza a ellos. A veces resume su oferta. A veces simplemente los recomienda.</p>
+        <p>La visibilidad en IA (también llamada Generative Engine Optimisation o GEO) es la práctica de asegurarse de que tu negocio aparece en esa respuesta. Es una capa nueva sobre el SEO clásico — los fundamentos técnicos son los mismos — pero añade trabajo sobre datos estructurados, calidad de contenido y las señales de confianza que los modelos de IA realmente valoran.</p>
+        <h2>Por qué importa ahora</h2>
+        <ol>
+          <li><strong>La gente usa IA para investigar antes de comprar.</strong> Gartner estima que el 61 % de los recorridos de compra en 2026 pasarán por al menos una superficie de respuesta de IA.</li>
+          <li><strong>Las herramientas de IA son cada vez más transparentes con sus fuentes.</strong> ChatGPT, Perplexity y Gemini ya muestran sus fuentes. Las citas tienen valor directo y medible: generan clics y forman opiniones.</li>
+          <li><strong>El propio Google se está convirtiendo en una superficie de IA.</strong> Las AI Overviews aparecen ahora sobre los resultados tradicionales para la mayoría de consultas informativas.</li>
+        </ol>
+        <h2>Cinco acciones para empezar este mes</h2>
+        <h3>1. Audita dónde estás hoy</h3>
+        <p>Dedica una hora a lanzar 20 preguntas sobre tu categoría a ChatGPT, Perplexity y Gemini. Usa preguntas que haría un comprador real: «mejor X en Y para presupuesto Z», «compara A y B». Anota qué competidores se mencionan, en qué orden, con qué sentimiento. Esa es tu línea base.</p>
+        <h3>2. Haz tu página «Sobre nosotros» aburrida y factual</h3>
+        <p>Los modelos de IA citan negocios cuya identidad pueden verificar. Tu página Sobre nosotros debe indicar claramente: qué haces, dónde estás, quién fundó la empresa, cuándo, quién la dirige ahora y quiénes son tus clientes típicos. Español claro, hechos verificables, sin relleno de marketing.</p>
+        <h3>3. Añade los datos estructurados correctos</h3>
+        <p>El marcado Schema.org es cómo le dices a los rastreadores de IA qué es cada página. Como mínimo: schema de <code>Organization</code> en todo el sitio, schema de <code>Service</code> o <code>Product</code> en esas páginas y schema de <code>FAQPage</code> en tu FAQ. Si tu negocio depende de la ubicación, añade <code>LocalBusiness</code> con dirección completa y coordenadas geográficas.</p>
+        <h3>4. Consigue que te citen en lugares en los que la IA confía</h3>
+        <p>Los grandes modelos de lenguaje confían en fuentes en las que confían sus datos de entrenamiento: Wikipedia, publicaciones del sector, sitios de reseñas establecidos en tu categoría (G2, Capterra, Trustpilot, Tripadvisor según tu industria), y menciones en medios de alta autoridad. Las relaciones públicas basadas en afirmaciones verificables y comentarios de expertos tienden a ganar esas menciones.</p>
+        <h3>5. Mide mensualmente</h3>
+        <p>Vuelve a ejecutar esas mismas 20 consultas cada mes. Hay herramientas para esto (AthenaHQ, Profound, Otterly) — o puedes hacerlo manualmente. De cualquier forma: si no lo mides, no puedes mejorarlo.</p>
+        <div className="prose-callout">
+          <div className="prose-callout-kicker">La versión honesta</div>
+          <p>La visibilidad en IA no es un truco. Se gana. La mayoría de los negocios ven sus primeras citas fiables en 8–12 semanas de trabajo disciplinado.</p>
+        </div>
+        <h2>Cómo puede ayudar pmax</h2>
+        <p>Ejecutamos programas de visibilidad en IA para empresas en toda Europa. Si quieres una auditoría gratuita de una página sobre dónde está tu negocio hoy en ChatGPT, Perplexity y Gemini, <a href="/es/contact?topic=ai-audit">cuéntanos un poco sobre tu situación</a> y te la enviamos en una semana.</p>
+        <h2>Lecturas recomendadas</h2>
+        <ul>
+          <li><a href="/es/services/ai-visibility">Nuestra página de servicio de visibilidad en IA</a> — qué hay dentro de un programa</li>
+          <li><a href="/es/blog/gpt-shopping">Qué significa «ChatGPT shopping» para el e-commerce en 2026</a></li>
+          <li><a href="/es/blog/tracking-setup-guide">Una guía sin jerga para configurar el tracking correctamente</a></li>
+        </ul>
+      </>),
+    },
+    'performance-max-2026': {
+      toc: ['Las exclusiones de marca son imprescindibles', 'Reglas de valor por campaña', 'Estructura de grupos de assets', 'Search themes', 'Objetivos tROAS basados en beneficio', 'Grupos de listado para control del catálogo', 'Señales de audiencia de primera parte'],
+      prose: (<>
+        <p>Performance Max empezó como una caja negra. En 2026 es una caja negra un poco más transparente con muchos más controles. Esto es lo que realmente cambiamos primero.</p>
+        <h2>Las exclusiones de marca son ya imprescindibles</h2>
+        <p>El cambio más importante desde el lanzamiento: ya puedes excluir términos de búsqueda de marca de PMax. Úsalo. Configura una lista de exclusión de marca el primer día de cada campaña PMax y dirige el tráfico de marca a una campaña de Search bien gestionada con control manual. Vemos clientes que ahorran el 15–25 % de su presupuesto de PMax solo con esto en el primer mes.</p>
+        <h2>Reglas de valor por campaña</h2>
+        <p>Las reglas de valor te permiten decirle a PMax que un cliente en Alemania vale 1,3 veces lo que vale uno en Italia — o que un cliente recurrente vale 0,6 veces lo que vale uno nuevo. Combinado con segmentos de datos de primera parte, es la palanca más infrautilizada de la plataforma.</p>
+        <h2>Estructura de grupos de assets</h2>
+        <p>No pongas todo tu catálogo en un solo grupo de assets. Divide por nivel de margen o categoría de producto — cada grupo recibe su propio creativo, su propia señal de audiencia, su propio objetivo tROAS. Solo esto suele mover el ROAS combinado un 20–30 %.</p>
+        <h2>Search themes</h2>
+        <p>Úsalos, pero con moderación. PMax tiende a confiar demasiado en los search themes y a desperdiciar presupuesto en consultas adyacentes. Establece themes solo para consultas claramente infraatendidas que puedas demostrar que no están siendo cubiertas por tus campañas de Search existentes.</p>
+        <h2>Objetivos tROAS basados en beneficio</h2>
+        <p>Establecer el tROAS basándose en los ingresos es un error categorial. Calcúlalo sobre el margen bruto, introduce los valores de beneficio bruto como valor de conversión y observa cómo el algoritmo finalmente persigue a los clientes que realmente quieres.</p>
+        <h2>Grupos de listado para control del catálogo</h2>
+        <p>Los grupos de listado en PMax te permiten controlar qué productos se priorizan. Los usamos para impulsar productos de alto margen, bajo stock y estacionales en momentos específicos — una palanca pequeña, gran impacto en el beneficio cuando se usa bien.</p>
+        <h2>Señales de audiencia de primera parte</h2>
+        <p>Sube tu lista de customer match, tu cohorte de alto LTV, tu segmento de compradores recientes. PMax no los usa como targeting — pero sí como una señal potente para el algoritmo. El incremento es real.</p>
+        <h2>¿Necesitas ayuda con esto?</h2>
+        <p>Si algo de lo anterior te resulta familiar, <a href="/es/contact?topic=performance-max-2026">cuéntanos brevemente tu situación</a> y te respondemos en un día laborable. Primera conversación: 30 minutos, sin coste.</p>
+      </>),
+    },
+    'tracking-setup-guide': {
+      toc: ['Por qué los dashboards mienten', 'Tagging server-side', 'Consent Mode v2', 'Enhanced conversions', 'Importación de conversiones offline', 'Reconciliación'],
+      prose: (<>
+        <p>Si no puedes confiar en tus datos de marketing, no puedes tomar decisiones con ellos. Esta es una guía en castellano para construir un tracking que no mienta.</p>
+        <h2>Por qué los dashboards mienten</h2>
+        <p>El tracking de marketing tiene tres grandes enemigos en 2026: las restricciones de privacidad de iOS, el consentimiento de cookies y la brecha entre cuándo se hace clic en un anuncio y cuándo llegan realmente los ingresos. La configuración estándar de tracking que tiene la mayoría de sitios web fue diseñada para 2018. Ya no funciona.</p>
+        <h2>Tagging server-side</h2>
+        <p>Deja de enviar datos directamente desde el navegador del usuario a Google, Meta y el resto. Configura un contenedor server-side de Google Tag Manager — normalmente en un subdominio como <code>track.tudominio.com</code> — y enruta todo a través de él. Mejora el rendimiento, mejora la privacidad, mejora la calidad de los datos.</p>
+        <h2>Consent Mode v2</h2>
+        <p>Si operas en la UE y no has implementado Consent Mode v2, tus datos de Google Ads son materialmente peores de lo que deberían ser. Consent Mode permite a Google rellenar conversiones modeladas para los usuarios que no dan su consentimiento — recuperando el 30–50 % de los datos que estás perdiendo.</p>
+        <h2>Enhanced conversions</h2>
+        <p>Pasa direcciones de email con hash (con consentimiento) a las APIs de conversión de Google y Meta. Este único cambio suele mejorar el volumen de conversiones medidas en un 15–25 % en categorías con muchos usuarios de iOS.</p>
+        <h2>Importación de conversiones offline</h2>
+        <p>Si tienes un ciclo de ventas de más de una semana, necesitas importar conversiones offline. Conecta tu CRM a las APIs de eventos offline de Google Ads y Meta y devuelve los ingresos realmente cerrados. Las plataformas empezarán a optimizar para las personas correctas.</p>
+        <h2>Reconciliación</h2>
+        <p>Una vez al mes, compara los ingresos reportados por la plataforma publicitaria con tu contabilidad real. Apunta a una discrepancia inferior al 15 %. Cualquier cosa por encima significa que algo en la cadena está roto.</p>
+        <h2>¿Necesitas ayuda con esto?</h2>
+        <p>Si algo de lo anterior te resulta familiar, <a href="/es/contact?topic=tracking-setup-guide">cuéntanos brevemente tu situación</a> y te respondemos en un día laborable. Primera conversación: 30 minutos, sin coste.</p>
+      </>),
+    },
+    'meta-creative-volume': {
+      toc: ['El problema del volumen', 'Templatizar la marca no el asset', 'Hooks hooks hooks', 'UGC a escala', 'El briefing de creatividad de performance', 'Descartar semanalmente escalar mensualmente'],
+      prose: (<>
+        <p>La propia investigación de Meta dice que el creativo es el mayor motor del rendimiento en paid social. La mayoría de los pipelines creativos de las marcas se construyeron para un mundo en el que no era así. Aquí está cómo construir uno que encaje con 2026.</p>
+        <h2>El problema del volumen</h2>
+        <p>La biblioteca creativa de Meta ahora necesita 10–20 assets frescos a la semana para mantener el rendimiento estable. La mayoría de marcas publican 2–3. La brecha se muestra como frecuencia creciente, CTR cayendo y un CPM que deriva hacia arriba cada trimestre.</p>
+        <h2>Templatizar la marca, no el asset</h2>
+        <p>Construye un sistema de marca muy templado — tipografías, colores, primitivas de movimiento, layouts — y luego deja que los creadores trabajen rápido dentro de él. La marca la hace cumplir la plantilla; los creadores aportan las ideas. Así publicas 15 assets a la semana sin 15 revisiones de marca.</p>
+        <h2>Hooks, hooks, hooks</h2>
+        <p>Los primeros tres segundos de cada vídeo son los únicos que importan. Testeamos hooks más que cualquier otra cosa — mismo cuerpo, seis aperturas diferentes. El hook ganador se reutiliza en el creativo de la semana siguiente.</p>
+        <h2>UGC a escala</h2>
+        <p>Mantén un pequeño programa de creadores continuo — 5–10 creadores en retainer, con briefings semanales. Más barato que el creativo de agencia, más rápido que el creativo interno, y el algoritmo de Meta tiende a preferirlo.</p>
+        <h2>El briefing de creatividad de performance</h2>
+        <p>Los briefs van de tu equipo de medios a tu equipo creativo, no al revés. El brief contiene: para qué ad set es, qué debe testear el hook, cuál es el punto de prueba, qué debe impulsar el CTA. El input de marca llega después.</p>
+        <h2>Descartar semanalmente, escalar mensualmente</h2>
+        <p>Cada viernes, elimina todo lo que esté por debajo del umbral de rendimiento. Una vez al mes, identifica los tres mejores patrones creativos y briefea el creativo del mes siguiente en torno a ellos. Los aprendizajes se acumulan.</p>
+        <h2>¿Necesitas ayuda con esto?</h2>
+        <p>Si algo de lo anterior te resulta familiar, <a href="/es/contact?topic=meta-creative-volume">cuéntanos brevemente tu situación</a> y te respondemos en un día laborable. Primera conversación: 30 minutos, sin coste.</p>
+      </>),
+    },
+    'google-ads-mallorca': {
+      toc: ['La configuración geográfica predeterminada está mal', 'La configuración de idioma afecta en ambos sentidos', 'Tracking de conversiones local', 'Pujas para la estacionalidad turística', 'Local pack y Maps'],
+      prose: (<>
+        <p>Poner anuncios desde Mallorca es diferente. Tus clientes buscan en cinco idiomas, tus competidores están en Madrid, y la geolocalización predeterminada de Google está mal para ti. Esto es lo que hay que corregir.</p>
+        <h2>La configuración geográfica predeterminada está mal</h2>
+        <p>Google Ads viene con «Presencia o interés» como configuración de ubicación predeterminada. Para negocios locales en Mallorca, esto significa mostrar anuncios a cualquier persona en España que haya mostrado alguna vez «interés» en Mallorca — millones de personas que nunca serán clientes. Cambia a «Solo presencia» el primer día.</p>
+        <h2>La configuración de idioma afecta en ambos sentidos</h2>
+        <p>Los clientes de Mallorca buscan en español, catalán, alemán e inglés — a veces los cuatro en una misma sesión de búsqueda. No elijas un solo idioma. Construye campañas separadas por idioma, con palabras clave, anuncios y landing pages traducidos. Las copias autotraducidas te cuestan un 30–40 % del rendimiento.</p>
+        <h2>Tracking de conversiones local</h2>
+        <p>Para negocios con ubicación física (restaurantes, agencias, clínicas), el tracking de llamadas y el tracking de visitas en persona importan más que los formularios completados. Configúralos. La conversión «Store visits» de Google es gratuita e infrautilizada.</p>
+        <h2>Pujas para la estacionalidad turística</h2>
+        <p>El 50 % de las búsquedas comerciales en Mallorca ocurren entre abril y septiembre. No ejecutes pujas planas todo el año. Construye estrategias de puja por franja horaria y estación que coincidan con la curva real de demanda.</p>
+        <h2>Local pack y Maps</h2>
+        <p>Si eres un negocio de servicios, tu Perfil de Empresa de Google genera más ingresos que tus anuncios. Optimízalo correctamente: fotos actualizadas mensualmente, reseñas solicitadas cada trimestre, servicios correctamente categorizados. El trabajo se acumula.</p>
+        <h2>¿Necesitas ayuda con esto?</h2>
+        <p>Si algo de lo anterior te resulta familiar, <a href="/es/contact?topic=google-ads-mallorca">cuéntanos brevemente tu situación</a> y te respondemos en un día laborable. Primera conversación: 30 minutos, sin coste.</p>
+      </>),
+    },
+    'shopify-seo-2026': {
+      toc: ['Metadatos de páginas de colección', 'Navegación facetada', 'Schema de producto', 'Texto alternativo de imágenes', 'Velocidad del sitio', 'Contenido de blog que realmente posiciona', 'Enlazado interno desde páginas de colección', 'Hreflang para tiendas multiidioma'],
+      prose: (<>
+        <p>Shopify es una plataforma de comercio excelente con valores SEO predeterminados mediocres. Ocho correcciones específicas que, en nuestra experiencia, mueven el tráfico orgánico más que el resto combinadas.</p>
+        <h2>Metadatos de páginas de colección</h2>
+        <p>Los meta titles predeterminados de las páginas de colección de Shopify suelen ser solo el nombre de la colección. Malo. Reescribe cada meta title de colección siguiendo el patrón <code>{'{Nombre de colección} | {USP} | {Marca}'}</code> — y escribe una meta description real, no una etiqueta de descripción truncada.</p>
+        <h2>Navegación facetada</h2>
+        <p>Si tus colecciones tienen filtros (talla, color, precio), la configuración predeterminada de Shopify genera URLs duplicadas infinitas que diluyen el presupuesto de rastreo. Usa etiquetas canonical de forma agresiva e indexa como noindex las URLs de filtro que no añaden valor SEO.</p>
+        <h2>Schema de producto</h2>
+        <p>La mayoría de temas de Shopify incluyen schema de producto, pero suele estar incompleto. Añade los campos aggregateRating, número de reseñas, marca, GTIN, condición y disponibilidad a cada producto. Las interfaces de compras de IA en particular los ponderan mucho.</p>
+        <h2>Texto alternativo de imágenes</h2>
+        <p>Lo más omitido en Shopify. Cada imagen de producto debería tener texto alternativo descriptivo que incluya el nombre del producto y un atributo relevante. Usa el editor masivo de Shopify — una hora de trabajo, impacto SEO duradero.</p>
+        <h2>Velocidad del sitio</h2>
+        <p>Los temas de Shopify se han vuelto pesados. Ejecuta Lighthouse, identifica las 3–5 apps más pesadas y elimínalas. Usa las secciones nativas de Shopify en lugar de las basadas en apps siempre que sea posible. Objetivo: LCP por debajo de 2,5 segundos en móvil.</p>
+        <h2>Contenido de blog que realmente posiciona</h2>
+        <p>No uses el blog de Shopify para notas de prensa. Construye contenido que defina la categoría — guías de compra, comparativas, tutoriales de expertos — que enlace a colecciones de productos relevantes. Aquí es donde el SEO de Shopify se acumula.</p>
+        <h2>Enlazado interno desde páginas de colección</h2>
+        <p>Añade texto editorial genuino al inicio de cada página de colección (300–500 palabras) y enlaza desde él a colecciones relacionadas. La mayoría de temas de Shopify lo ocultan — encuentra la sección, actívala, escribe contenido real.</p>
+        <h2>Hreflang para tiendas multiidioma</h2>
+        <p>Si vendes en varios idiomas, configura hreflang correctamente. Shopify Markets lo gestiona si se configura correctamente, pero los valores predeterminados suelen estar mal. Audita cada mercado para verificar las etiquetas hreflang correctas.</p>
+        <h2>¿Necesitas ayuda con esto?</h2>
+        <p>Si algo de lo anterior te resulta familiar, <a href="/es/contact?topic=shopify-seo-2026">cuéntanos brevemente tu situación</a> y te respondemos en un día laborable. Primera conversación: 30 minutos, sin coste.</p>
+      </>),
+    },
+    'hotel-direct-bookings': {
+      toc: ['El punto de partida', 'El diagnóstico de cuatro semanas', 'La reconstrucción del flujo de reservas', 'El cambio en paid media', 'Los números'],
+      prose: (<>
+        <p>La mayoría de hoteles independientes pierden entre el 17 y el 22 % de sus ingresos en comisiones de OTA. Esta es la historia real de un hotel de Mallorca que recuperó la mayor parte de eso en menos de tres meses.</p>
+        <h2>El punto de partida</h2>
+        <p>Mar y Roca es un hotel boutique de 34 habitaciones en Port d&rsquo;Andratx. En 2024, el 78 % de sus reservas llegaban a través de Booking.com y Expedia — con una comisión media del 18 %. Las reservas directas se estancaron en torno al 22 %, a pesar de que la web parecía lo suficientemente moderna.</p>
+        <h2>El diagnóstico de cuatro semanas</h2>
+        <p>La web parecía moderna pero convertía mal: un flujo de reservas de cinco pasos, sin paridad de tarifas, lenta en móvil y una galería hero que no reflejaba cómo se sentía realmente el hotel. Los anuncios de Meta y Google eran genéricos y no mencionaban ventajas de precio frente a las OTAs.</p>
+        <h2>La reconstrucción del flujo de reservas</h2>
+        <p>Cinco pasos se convirtieron en tres. Mobile-first. Un mensaje claro de «Mejor tarifa garantizada — reserva directo y ahorra X€», vinculado a scraping de tarifas OTA en tiempo real para que el ahorro siempre fuera real. La tasa de conversión desde la entrada al motor de reservas hasta la reserva confirmada pasó del 2,1 % al 8,4 %.</p>
+        <h2>El cambio en paid media</h2>
+        <p>Meta y Google Hotel Ads. El creativo de Meta se centró en las habitaciones y vistas por las que el hotel era realmente conocido, no en imágenes genéricas de viajes. Google Hotel Ads se pujó agresivamente solo en rangos de fechas donde el hotel tenía disponibilidad — ahorrando presupuesto el resto del año.</p>
+        <h2>Los números</h2>
+        <p>A las 11 semanas, las reservas directas habían crecido un 52 % y las reservas totales un 11 %. Con ~350.000 € en ingresos directos mensuales frente a la tendencia anterior, la comisión OTA anual ahorrada fue de unos 184.000 €.</p>
+        <h2>¿Necesitas ayuda con esto?</h2>
+        <p>Si algo de lo anterior te resulta familiar, <a href="/es/contact?topic=hotel-direct-bookings">cuéntanos brevemente tu situación</a> y te respondemos en un día laborable. Primera conversación: 30 minutos, sin coste.</p>
+      </>),
+    },
+    'b2b-linkedin-playbook': {
+      toc: ['Diseño de audiencia', 'Tres objetivos de campaña tres audiencias', 'Los Thought Leader Ads están infrautilizados', 'Document Ads para la etapa de consideración', 'Conversation Ads para alta intención', 'Conversiones offline alimentadas por CRM', 'Lead scoring antes de que la plataforma vea el lead'],
+      prose: (<>
+        <p>LinkedIn es la plataforma publicitaria más cara en términos de CPM — y el lugar más barato para encontrar a un comprador B2B cuando se gestiona correctamente. Este es el playbook que desplegamos el primer día de cada retainer B2B SaaS.</p>
+        <h2>Diseño de audiencia — primeros principios</h2>
+        <p>«Responsables senior en [sector]» no es una audiencia. Es una descripción de trabajo. Construye audiencias a partir de datos reales de LTV de clientes: quién cierra, quién se queda, quién hace upsell. Luego construye audiencias de LinkedIn que encajen con esos patrones — función laboral + antigüedad + tamaño de empresa + stack tecnológico + geografía.</p>
+        <h2>Tres objetivos de campaña, tres audiencias</h2>
+        <p>Una campaña de awareness, una de consideración, una de conversión. Cada una recibe un tamaño de audiencia diferente, un formato creativo diferente, una estrategia de puja diferente. No las colapses en una — el algoritmo de LinkedIn necesita esa separación.</p>
+        <h2>Los Thought Leader Ads están infrautilizados</h2>
+        <p>Si tienes un fundador o líder senior que publica en LinkedIn, los Thought Leader Ads (donde promocionas su publicación orgánica como anuncio de pago) superan a los anuncios de cuenta de marca en 2–3x en engagement. Úsalos.</p>
+        <h2>Document Ads para la etapa de consideración</h2>
+        <p>Un informe o guía sectorial genuina, entregada como Document Ad, es el mejor asset de mid-funnel que ha lanzado LinkedIn. Se briefea una vez, se ejecuta durante seis meses, se observa cómo los leads se acumulan.</p>
+        <h2>Conversation Ads para alta intención</h2>
+        <p>Para eventos, demos y ABM, los Conversation Ads (en LinkedIn Messaging) cuestan rutinariamente un 40–60 % menos por reunión cualificada que los formularios. Funcionan mejor cuando están escritos como una persona real que se pone en contacto — no como un email de marketing.</p>
+        <h2>Conversiones offline alimentadas por CRM</h2>
+        <p>El mayor desbloqueador. Conecta la API de conversiones offline de LinkedIn a tu CRM. Devuelve eventos de MQL, SQL, oportunidad creada y closed-won con sus valores. El algoritmo de LinkedIn empieza a optimizar para ingresos reales.</p>
+        <h2>Lead scoring antes de que la plataforma vea el lead</h2>
+        <p>Usa una herramienta como Clearbit / 6sense / tu propio enriquecimiento para puntuar los leads antes de que se disparen como conversiones en LinkedIn. Solo dispara conversiones de «lead cualificado» para leads que valga la pena perseguir. El algoritmo de la plataforma se vuelve dramáticamente más preciso.</p>
+        <h2>¿Necesitas ayuda con esto?</h2>
+        <p>Si algo de lo anterior te resulta familiar, <a href="/es/contact?topic=b2b-linkedin-playbook">cuéntanos brevemente tu situación</a> y te respondemos en un día laborable. Primera conversación: 30 minutos, sin coste.</p>
+      </>),
+    },
+    'cookieless-tracking': {
+      toc: ['Qué cambió realmente', 'Tagging server-side', 'Consent Mode v2', 'APIs de conversión', 'Estrategia de datos de primera parte', 'Conversiones modeladas'],
+      prose: (<>
+        <p>Las cookies de terceros están funcionalmente muertas. Apple las eliminó en iOS hace cinco años, Chrome está terminando el trabajo ahora. Así es como se rastrean las conversiones en 2026 sin infringir la ley ni perder todos los datos.</p>
+        <h2>Qué cambió realmente</h2>
+        <p>La ITP de Apple, el Privacy Sandbox de Chrome y la presión de cumplimiento del RGPD/ePrivacy han reducido colectivamente la vida útil de una cookie de seguimiento de ~2 años a ~7 días en la mayoría de navegadores. La implicación: cualquier conversión que ocurra más de una semana después del clic es invisible para el tracking estándar.</p>
+        <h2>Tagging server-side</h2>
+        <p>Mueve tu gestor de etiquetas fuera del navegador del usuario y a tu propio servidor. Esto restaura la vida útil de las cookies a lo que permita tu dominio (normalmente 30–90+ días), mejora la velocidad del sitio y te da una forma respetuosa con la privacidad de pasar datos de primera parte a las plataformas publicitarias.</p>
+        <h2>Consent Mode v2</h2>
+        <p>El Consent Mode v2 de Google te permite decirle a Google si el usuario ha consentido las cookies de anuncios y analítica. Si no lo hizo, Google recibe «pings sin consentimiento» — señales anonimizadas que usa para modelar la conversión. Correctamente implementado, recuperas el 30–50 % de los datos que de otro modo perderías.</p>
+        <h2>APIs de conversión</h2>
+        <p>Meta CAPI, TikTok Events API, LinkedIn Conversions API, Google Enhanced Conversions. Todas te permiten enviar datos de primera parte con hash desde tu servidor a la plataforma. Todas mejoran la calidad de los datos. Todas están infrautilizadas.</p>
+        <h2>Estrategia de datos de primera parte</h2>
+        <p>Si no tienes una estrategia de datos de primera parte, constrúyela. Capturas de email, creación de cuentas, programas de fidelización, contenido cerrado — lo que encaje con tu negocio. Los datos de primera parte son ahora los cimientos de los que depende todo lo demás.</p>
+        <h2>Conversiones modeladas</h2>
+        <p>Espera que el 20–40 % de tus datos de conversión en 2026 sean modelados (estimados estadísticamente) en lugar de observados directamente. Esto es normal y no es un problema si el modelo está bien alimentado. La atribución día a día precisa ya es historia — acéptalo.</p>
+        <h2>¿Necesitas ayuda con esto?</h2>
+        <p>Si algo de lo anterior te resulta familiar, <a href="/es/contact?topic=cookieless-tracking">cuéntanos brevemente tu situación</a> y te respondemos en un día laborable. Primera conversación: 30 minutos, sin coste.</p>
+      </>),
+    },
+    'real-estate-lead-gen': {
+      toc: ['El problema del comprador motivado', 'Multistep supera al single-step', 'Preguntar primero lo fácil', 'Mostrar el progreso', 'La precalificación reduce el ruido', 'Higiene del teclado en móvil'],
+      prose: (<>
+        <p>El sector inmobiliario es una de las categorías de búsqueda con más intención de compra de Internet. Entonces, ¿por qué la mayoría de webs de agencias convierten por debajo del 1 %? Normalmente, el formulario.</p>
+        <h2>El problema del comprador motivado</h2>
+        <p>Un usuario que llega a la página «Valoración gratuita» de una agencia inmobiliaria tiene alta intención. Ya ha decidido que quizás quiere vender. El formulario es lo único que se interpone entre tú y un lead cualificado — y la mayoría de formularios están diseñados de una forma que hace perder a esas personas.</p>
+        <h2>Multistep supera al single-step</h2>
+        <p>Un formulario de 8 campos en una sola página convierte alrededor del 1,5 %. Los mismos 8 campos repartidos en 3 pasos lógicos convierten al 6–10 %. Cada paso es un pequeño compromiso; una vez que el usuario ha respondido la primera pregunta, es más probable que termine.</p>
+        <h2>Preguntar primero lo fácil</h2>
+        <p>«¿Cuál es el tipo de propiedad?» antes que «¿Cuál es tu dirección de email?». El usuario rellena su información personal al final, después de haber invertido ya esfuerzo. Dale la vuelta a esto y verás desplomarse las tasas de conversión.</p>
+        <h2>Mostrar el progreso</h2>
+        <p>Una barra de progreso en la parte superior del formulario («Paso 2 de 4») mejora notablemente la completitud. La gente está más dispuesta a terminar lo que ha empezado.</p>
+        <h2>La precalificación reduce el ruido</h2>
+        <p>Usa el formulario para precalificar: rango de presupuesto, plazo de venta, tipo de propiedad actual. La caída del 30 % en leads vale la pena — el 70 % que termina es dramáticamente más útil para tus agentes.</p>
+        <h2>Higiene del teclado en móvil</h2>
+        <p>Los campos de email deben activar teclados de email. Los campos de teléfono deben activar teclados numéricos. No hagas que un usuario en móvil cambie de teclado tres veces para rellenar tu formulario.</p>
+        <h2>¿Necesitas ayuda con esto?</h2>
+        <p>Si algo de lo anterior te resulta familiar, <a href="/es/contact?topic=real-estate-lead-gen">cuéntanos brevemente tu situación</a> y te respondemos en un día laborable. Primera conversación: 30 minutos, sin coste.</p>
+      </>),
+    },
+    'tiktok-organic-paid': {
+      toc: ['Los patrones de contenido que ganan impresiones', 'Spark Ads no posts impulsados', 'Liderado por creadores no por la marca', 'El bucle de acumulación'],
+      prose: (<>
+        <p>TikTok ya no es un canal de «¿deberíamos estar ahí?» para la mayoría de marcas. Es de «¿cómo estamos ahí de forma eficiente?». Esto es lo que funciona en 2026.</p>
+        <h2>Los patrones de contenido que ganan impresiones</h2>
+        <p>Tres patrones dominan el orgánico en 2026: <strong>el proceso entre bastidores</strong> (gente viendo cómo se hacen las cosas), <strong>el fundador ante la cámara</strong> (genuino, sin guión, baja producción) y <strong>el producto en contexto</strong> (mostrando cómo el producto encaja en una vida real, no en una perfecta). Casi todo lo demás rinde por debajo de lo esperado.</p>
+        <h2>Spark Ads, no posts impulsados</h2>
+        <p>Usa Spark Ads para promocionar contenido orgánico que ya haya generado engagement. No impulses posts — los Spark Ads llevan toda la prueba social del engagement orgánico original, lo que los hace funcionar dramáticamente mejor.</p>
+        <h2>Liderado por creadores, no por la marca</h2>
+        <p>La mayoría del creativo de cuentas de marca en TikTok muere. Consigue que los creadores hagan contenido para ti, obtén derechos de uso y ejecuta esos creativos como Spark Ads. El incremento sobre el creativo de cuenta de marca suele ser de 3–5x.</p>
+        <h2>El bucle de acumulación</h2>
+        <p>Identifica tus 3 vídeos orgánicos principales cada mes. Ponles Spark Ads. Usa los aprendizajes para briefear el contenido de creadores del mes siguiente. Repite. Las marcas que descifran TikTok acumulan este bucle mes a mes.</p>
+        <h2>¿Necesitas ayuda con esto?</h2>
+        <p>Si algo de lo anterior te resulta familiar, <a href="/es/contact?topic=tiktok-organic-paid">cuéntanos brevemente tu situación</a> y te respondemos en un día laborable. Primera conversación: 30 minutos, sin coste.</p>
+      </>),
+    },
+    'crm-conversion-imports': {
+      toc: ['La trampa del formulario completado', 'Conversiones offline explicadas', 'Implementación', 'Qué cambia', 'Errores comunes'],
+      prose: (<>
+        <p>Los equipos de marketing B2B optimizan para lo que pueden medir. Lo que pueden medir suele ser formularios completados. Por eso tantas cuentas de anuncios B2B producen cientos de MQLs y ningún ingreso.</p>
+        <h2>La trampa del formulario completado</h2>
+        <p>Si optimizas una plataforma publicitaria para conversiones de «formulario completado», encontrará los formularios completados más baratos posibles. Eso suele significar: los usuarios de menor intención, las empresas más pequeñas, los títulos de trabajo incorrectos. La plataforma está haciendo su trabajo correctamente — tú le estás dando el trabajo equivocado.</p>
+        <h2>Conversiones offline explicadas</h2>
+        <p>Todas las grandes plataformas publicitarias permiten ahora importar eventos offline: MQLs, SQLs, oportunidad creada, closed-won. Cada evento puede tener un valor asociado. La plataforma deja de optimizar para formularios y empieza a optimizar para eventos que realmente se correlacionan con los ingresos.</p>
+        <h2>Implementación</h2>
+        <p>Tres piezas: un ID de clic capturado en el envío del formulario (gclid para Google, fbclid para Meta, li_fat_id para LinkedIn), un campo de CRM que lo almacena, y una exportación diaria del CRM a la plataforma publicitaria con el ID de clic, el nombre del evento y el valor.</p>
+        <h2>Qué cambia</h2>
+        <p>A las 2–3 semanas de implementar correctamente las conversiones offline, la mayoría de cuentas B2B ven: un 30–50 % menos de volumen de MQL, pero 2–3x más SQLs y valores de pipeline dramáticamente más altos. El mismo gasto publicitario, un resultado de negocio dramáticamente mejor.</p>
+        <h2>Errores comunes</h2>
+        <p>Asegúrate de que los valores que estás devolviendo son económicamente significativos. Un evento de «closed-won» debería llevar el valor real del contrato, no un marcador fijo de 100 €. La plataforma optimiza contra los valores que le das.</p>
+        <h2>¿Necesitas ayuda con esto?</h2>
+        <p>Si algo de lo anterior te resulta familiar, <a href="/es/contact?topic=crm-conversion-imports">cuéntanos brevemente tu situación</a> y te respondemos en un día laborable. Primera conversación: 30 minutos, sin coste.</p>
+      </>),
+    },
+    'solar-marketing-spain': {
+      toc: ['El problema de Meta', 'Precalificar en la landing page', 'Incentivos específicos por región', 'Atribución de ciclo largo', 'Google Ads suele ser el canal de mayor intención'],
+      prose: (<>
+        <p>España es uno de los mejores mercados solares de Europa — y uno de los más competitivos. Aquí está por qué la mayoría de instaladores solares luchan en paid media, y qué hacen los que prosperan.</p>
+        <h2>El problema de Meta</h2>
+        <p>Los leads solares de Meta llegan baratos. También llegan sin cualificar. El funnel solar estándar en Meta — «Consigue presupuesto solar gratis» → formulario → llamada del equipo de ventas — desperdicia el 70–80 % del tiempo del equipo de ventas con personas que nunca iban a comprar.</p>
+        <h2>Precalificar en la landing page</h2>
+        <p>Añade un cuestionario de 3 preguntas antes del formulario: tipo de tejado, factura mensual de electricidad, situación de propiedad. El usuario que lo completa tiene 4–5 veces más probabilidades de comprar. El usuario que no lo completa ahorra al equipo de ventas una llamada.</p>
+        <h2>Incentivos específicos por región</h2>
+        <p>Los incentivos solares españoles varían por región — Andalucía, Cataluña, Madrid tienen todos esquemas diferentes. Las landing pages nacionales genéricas desperdician presupuesto. Construye landing pages regionales que lideren con el incentivo específico que aplica.</p>
+        <h2>Atribución de ciclo largo</h2>
+        <p>La instalación solar española media tarda 4–6 meses desde el primer clic en el anuncio hasta el contrato firmado. Si estás optimizando para atribución de primer toque, estás optimizando para los clientes incorrectos. Conecta conversiones offline alimentadas por CRM y deja que el algoritmo aprenda de las instalaciones reales.</p>
+        <h2>Google Ads suele ser el canal de mayor intención</h2>
+        <p>Para solar, Google Search capta mayor intención que Meta. La ponderación de presupuesto que ejecuta la mayoría de instaladores (60 % Meta, 40 % Google) suele estar al revés. Prueba lo contrario.</p>
+        <h2>¿Necesitas ayuda con esto?</h2>
+        <p>Si algo de lo anterior te resulta familiar, <a href="/es/contact?topic=solar-marketing-spain">cuéntanos brevemente tu situación</a> y te respondemos en un día laborable. Primera conversación: 30 minutos, sin coste.</p>
+      </>),
+    },
+    'creative-testing-framework': {
+      toc: ['Aislar una variable a la vez', 'Los hooks son la variable de mayor apalancamiento', 'Construir una plantilla ganadora', 'La significancia estadística es real', 'Aprendizajes multiplataforma'],
+      prose: (<>
+        <p>La mayoría de «frameworks de testing creativo» son simplemente «lanzar mucho y ver qué funciona». Eso no es un framework — es jugar a la ruleta. Así es como testear creatividades para que los aprendizajes se acumulen.</p>
+        <h2>Aislar una variable a la vez</h2>
+        <p>Si cambias el hook, el visual y la oferta en el mismo test, no has aprendido nada sobre cuál fue lo que movió la aguja. Mantén todo constante excepto la única variable que estás testeando. Más lento, pero los aprendizajes son reales.</p>
+        <h2>Los hooks son la variable de mayor apalancamiento</h2>
+        <p>Los primeros tres segundos de un vídeo, o el primer titular de un estático, determinan el 80 % del rendimiento. Testea hooks más que cualquier otra cosa.</p>
+        <h2>Construir una plantilla ganadora</h2>
+        <p>Cuando encuentres una combinación ganadora de hook + formato, documéntala. Construye el creativo del mes siguiente en torno a variaciones de esa plantilla. La biblioteca de patrones ganadores es el activo real.</p>
+        <h2>La significancia estadística es real</h2>
+        <p>No elimines creatividades después de un día. Tampoco escales ganadores después de un día. Espera al menos 200 conversiones por variante antes de declarar un ganador. La mayoría de tests creativos se eliminan demasiado pronto.</p>
+        <h2>Aprendizajes multiplataforma</h2>
+        <p>Un hook que funciona en TikTok normalmente funciona en Meta. Un visual que funciona en Meta normalmente funciona en Instagram. Testea en la plataforma más barata, despliega en las demás.</p>
+        <h2>¿Necesitas ayuda con esto?</h2>
+        <p>Si algo de lo anterior te resulta familiar, <a href="/es/contact?topic=creative-testing-framework">cuéntanos brevemente tu situación</a> y te respondemos en un día laborable. Primera conversación: 30 minutos, sin coste.</p>
+      </>),
+    },
+    'gpt-shopping': {
+      toc: ['Qué es realmente ChatGPT shopping', 'La calidad del feed de productos importa más que nunca', 'Marcado Schema.org de producto', 'Las reseñas como señal de ranking', 'La reputación de marca importa'],
+      prose: (<>
+        <p>OpenAI lanzó compras dentro de ChatGPT a finales de 2025. Para las marcas de e-commerce, es un nuevo canal de adquisición — y uno para el que la mayoría no se ha preparado.</p>
+        <h2>Qué es realmente ChatGPT shopping</h2>
+        <p>Cuando un usuario le pregunta a ChatGPT algo como «busco un buen jersey de lana por menos de 200 €», ChatGPT ahora genera recomendaciones de productos con imágenes, precios y enlaces directos al comerciante. No es publicidad — es orgánico. Y está creciendo rápido.</p>
+        <h2>La calidad del feed de productos importa más que nunca</h2>
+        <p>ChatGPT extrae datos de productos de los feeds de Google Shopping, los feeds de Bing Shopping y el marcado Schema.org de producto en las páginas del comerciante. Las marcas con los datos de producto más limpios aparecen. Las marcas con feeds desordenados no.</p>
+        <h2>Marcado Schema.org de producto</h2>
+        <p>Añade schema de Producto completo a cada página de producto: nombre, marca, imagen, descripción, ofertas (precio, moneda, disponibilidad), aggregateRating, número de reseñas, GTIN. Estos son los datos que las interfaces de compras de IA usan para posicionarte.</p>
+        <h2>Las reseñas como señal de ranking</h2>
+        <p>Las interfaces de compras de IA parecen ponderar fuertemente las puntuaciones agregadas de reseñas y los recuentos de reseñas. Si tus productos no tienen reseñas, no posicionan en las compras de IA. Pon en marcha un programa de recogida de reseñas.</p>
+        <h2>La reputación de marca importa</h2>
+        <p>Los modelos de IA citan marcas en las que confían sus datos de entrenamiento. Construir reconocimiento de marca genuino — a través de relaciones públicas, contenido, prueba social — se paga en visibilidad de compras de IA, no solo en métricas de marca clásicas.</p>
+        <h2>¿Necesitas ayuda con esto?</h2>
+        <p>Si algo de lo anterior te resulta familiar, <a href="/es/contact?topic=gpt-shopping">cuéntanos brevemente tu situación</a> y te respondemos en un día laborable. Primera conversación: 30 minutos, sin coste.</p>
+      </>),
+    },
+    'ga4-mistakes': {
+      toc: ['Tracking cross-dominio', 'Filtros de tráfico interno', 'Eventos personalizados para lo que realmente importa', 'Definiciones de conversión', 'Agrupación de canales', 'Definiciones de audiencia', 'Retención de datos'],
+      prose: (<>
+        <p>Google Analytics 4 lleva años disponible y la mayoría de configuraciones siguen cometiendo los mismos errores. Estos son los siete que corregimos en cada nuevo cliente.</p>
+        <h2>Tracking cross-dominio</h2>
+        <p>Si tu sitio abarca varios dominios (p. ej., sitio principal + subsistema de reservas), el 70 % de las instalaciones de GA4 rompen el tracking cross-dominio. La corrección son dos ajustes en el panel de administración — pero es crítica para una atribución precisa.</p>
+        <h2>Filtros de tráfico interno</h2>
+        <p>Tu equipo navegando por el sitio no debería contar como conversiones. Configura filtros de tráfico interno usando ajustes de IP o DEFINE-INTERNAL-TRAFFIC. Sí, requiere configurar las IPs de tu oficina. Hazlo de todas formas.</p>
+        <h2>Eventos personalizados para lo que realmente importa</h2>
+        <p>Los eventos predeterminados que GA4 dispara (page_view, scroll, file_download) se pierden los eventos que realmente importan para tu negocio. Configura eventos personalizados para: inicios de formulario, completados de formulario, reproducciones de vídeo, consultas de búsqueda, añadir al carrito, pasos de checkout. Usa Google Tag Manager.</p>
+        <h2>Definiciones de conversión</h2>
+        <p>Marca como conversiones solo los eventos que genuinamente indican valor de negocio. «Vista de página de contacto» no es una conversión. «Formulario de contacto enviado» sí lo es. Las definiciones de conversión laxas corrompen todos los informes posteriores.</p>
+        <h2>Agrupación de canales</h2>
+        <p>La agrupación de canales predeterminada de GA4 agrupa mal. Configura un grupo de canales personalizado que refleje cómo realmente piensas en tus canales.</p>
+        <h2>Definiciones de audiencia</h2>
+        <p>Crea audiencias de remarketing en GA4 para las cohortes que importan — abandonadores de carrito, lectores de blog, iniciadores de formularios de leads. Estas se pueden compartir automáticamente con Google Ads.</p>
+        <h2>Retención de datos</h2>
+        <p>GA4 tiene por defecto 2 meses de retención de datos a nivel de evento. Cámbialo a 14 meses en la administración. Te lo agradecerás en un año.</p>
+        <h2>¿Necesitas ayuda con esto?</h2>
+        <p>Si algo de lo anterior te resulta familiar, <a href="/es/contact?topic=ga4-mistakes">cuéntanos brevemente tu situación</a> y te respondemos en un día laborable. Primera conversación: 30 minutos, sin coste.</p>
+      </>),
+    },
+    'yachting-marketing': {
+      toc: ['El calendario de cuatro fases', 'Ocho idiomas no uno', 'Remarketing de ciclo largo', 'Gestión de leads de alto valor', 'Marca vs. performance'],
+      prose: (<>
+        <p>El marketing de charter náutico no se parece a ninguna otra categoría en la que trabajamos. La ventana de reserva es larga, el ticket medio es enorme y el cliente es genuinamente global. Así es como funciona realmente el plan de medios.</p>
+        <h2>El calendario de cuatro fases</h2>
+        <p>Una temporada de charter tiene cuatro fases distintas: <strong>early-bird</strong> (sep–dic, cerrando el año siguiente), <strong>reserva pico</strong> (ene–abr, cuando la mayoría decide), <strong>disponibilidad tardía</strong> (may–jul, last-minute), <strong>hombro</strong> (ago–sep, semanas de temporada baja). Cada fase necesita creatividades, pujas y audiencias diferentes. Tratar el año como una sola campaña cuesta un 30–40 % de eficiencia.</p>
+        <h2>Ocho idiomas, no uno</h2>
+        <p>Los clientes de charter buscan en inglés, alemán, francés, italiano, español, ruso, neerlandés y polaco. Ejecutar una campaña en inglés y esperar lo mejor te cuesta la mayoría de la demanda europea. Construye cuentas separadas, correctamente localizadas, por idioma.</p>
+        <h2>Remarketing de ciclo largo</h2>
+        <p>El charter mediterráneo típico se investiga 6–12 semanas antes de reservar. La ventana de remarketing estándar de Meta de 30 días se pierde el corazón del recorrido. Construye ventanas de remarketing de 60–90 días con límites de frecuencia para mantenerte en mente sin agotar.</p>
+        <h2>Gestión de leads de alto valor</h2>
+        <p>Una consulta entrante de charter vale de media más de 38.000 €. La velocidad de seguimiento importa enormemente. Normalmente conectamos los sistemas de reservas (MMK, Booking Manager) directamente a Slack para que el equipo de ventas vea las consultas en segundos, no en días.</p>
+        <h2>Marca vs. performance</h2>
+        <p>La mayoría de empresas de charter gastan demasiado en Google Search y muy poco en Meta de construcción de marca. El charter es una compra de alta consideración — el cliente necesita conocer tu marca meses antes de buscar. El presupuesto debería reflejarlo.</p>
+        <h2>¿Necesitas ayuda con esto?</h2>
+        <p>Si algo de lo anterior te resulta familiar, <a href="/es/contact?topic=yachting-marketing">cuéntanos brevemente tu situación</a> y te respondemos en un día laborable. Primera conversación: 30 minutos, sin coste.</p>
+      </>),
+    },
+    'agency-pricing-honest': {
+      toc: ['El problema de los incentivos', 'Cuándo importa esto', 'Las tarifas fijas resuelven el problema', 'Qué nos cuesta esto', 'Qué nos aporta esto'],
+      prose: (<>
+        <p>La mayoría de agencias de marketing digital cobran un porcentaje del gasto en medios. La mayoría de agencias de marketing digital tienen un incentivo para recomendar más gasto en medios. La conexión no es complicada.</p>
+        <h2>El problema de los incentivos</h2>
+        <p>Si una agencia cobra el 10 % de tu gasto en medios, cada 100.000 € adicionales de medios que gastas son 10.000 € más en su bolsillo. Esa tarifa se paga <em>independientemente de si los medios adicionales eran una buena idea</em>. El incentivo estructural es recomendar más medios — incluso cuando más no es la respuesta correcta.</p>
+        <h2>Cuándo importa esto</h2>
+        <p>A menudo, lo correcto para un cliente es <em>reducir</em> el gasto en medios. Recortar PMax desperdiciador. Pausar campañas de bajo margen. Reasignar de paid a SEO. Cada una de estas recomendaciones le cuesta dinero real a una agencia que cobra por porcentaje. Hemos visto agencias sentadas en cuentas que sabían que estaban gastando de más durante años antes de hacer la llamada.</p>
+        <h2>Las tarifas fijas resuelven el problema</h2>
+        <p>Cuando cobramos una tarifa mensual fija, nuestro incentivo es mantener al cliente. Nuestro incentivo para mantener al cliente es entregar resultados. La cantidad correcta de medios a gastar es lo que ofrezca el mejor resultado de negocio — y no tenemos ningún interés financiero en que eso sea un número mayor o menor.</p>
+        <h2>Qué nos cuesta esto</h2>
+        <p>Las tarifas fijas significan que una agencia más pequeña no puede escalar los ingresos tan rápido como una de porcentaje. Una agencia de porcentaje que hace crecer a un cliente de 100.000 € a 1 millón de € en gasto mensual hace crecer sus propios ingresos 10x. Nosotros no. Estamos bien con eso.</p>
+        <h2>Qué nos aporta esto</h2>
+        <p>Una tasa de retención de clientes a doce meses del 93 %, y un pipeline de inbound formado casi en su totalidad por referencias. El camino lento funciona.</p>
+        <h2>¿Necesitas ayuda con esto?</h2>
+        <p>Si algo de lo anterior te resulta familiar, <a href="/es/contact?topic=agency-pricing-honest">cuéntanos brevemente tu situación</a> y te respondemos en un día laborable. Primera conversación: 30 minutos, sin coste.</p>
+      </>),
+    },
+  } as Record<string, LocalizedBlogDetail>,
 }
 
 export type EsTranslations = typeof es

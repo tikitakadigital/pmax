@@ -22,7 +22,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
 
   const isTranslated = !!loc?.prose
   return {
-    title: loc?.title ? `${loc.title} | pmax` : post.seoTitle,
+    title: loc?.title ? `${loc.title} | pmax` : locPost?.title ? `${locPost.title} | pmax` : post.seoTitle,
     description: loc?.deck ?? locPost?.deck ?? post.deck,
     alternates: isTranslated ? {
       canonical: `https://pmax.online/${lang}/blog/${slug}/`,
@@ -49,6 +49,12 @@ export default async function BlogPostPage({ params }: { params: Promise<{ lang:
   const blogLabel = lang === 'de' ? 'Journal' : 'Blog'
   const isTranslated = !!loc?.prose
 
+  const categoryTranslations: Record<string, Record<string, string>> = {
+    de: { 'AI search': 'KI-Suche', 'Privacy': 'Datenschutz', 'Hospitality': 'Hotellerie', 'Real estate': 'Immobilien', 'Renewables': 'Energie', 'Boating': 'Yachting', 'Op-ed': 'Meinung' },
+    es: { 'AI search': 'IA & búsqueda', 'Privacy': 'Privacidad', 'Hospitality': 'Hostelería', 'Real estate': 'Inmobiliaria', 'Renewables': 'Energía solar', 'Boating': 'Náutica', 'Op-ed': 'Opinión' },
+  }
+  const localCategory = categoryTranslations[lang]?.[post.category] ?? post.category
+
   const title = loc?.title ?? locPost?.title ?? post.title
   const deck = loc?.deck ?? locPost?.deck ?? post.deck
   const prose = loc?.prose ?? detail?.prose ?? <p>{post.deck}</p>
@@ -57,7 +63,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ lang:
   const jsonLd = breadcrumb([
     { name: 'Home', url: `https://pmax.online/${lang}/` },
     { name: blogLabel, url: `https://pmax.online/${lang}/blog/` },
-    { name: post.category, url: `https://pmax.online/${lang}/blog/${slug}/` },
+    { name: localCategory, url: `https://pmax.online/${lang}/blog/${slug}/` },
   ])
 
   return (
@@ -72,9 +78,9 @@ export default async function BlogPostPage({ params }: { params: Promise<{ lang:
               <nav className="page-intro-crumbs" aria-label="Breadcrumb">
                 <Link href={p}>Home</Link><span className="sep">/</span>
                 <Link href={`${p}/blog`}>{blogLabel}</Link><span className="sep">/</span>
-                <span>{post.category}</span>
+                <span>{localCategory}</span>
               </nav>
-              <span className="page-intro-eyebrow">{post.category} · {post.readTime} · {post.date}</span>
+              <span className="page-intro-eyebrow">{localCategory} · {post.readTime} · {post.date}</span>
               <h1 className="page-intro-title" style={{ fontSize: 'clamp(40px, 7vw, 92px)' }}>
                 {title}
               </h1>
