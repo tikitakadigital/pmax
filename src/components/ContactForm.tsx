@@ -259,12 +259,9 @@ export default function ContactForm({ locale = 'en' }: { locale?: Locale }) {
       </div></body></html>`
 
     try {
-      const res = await fetch('https://api.resend.com/emails/batch', {
+      const res = await fetch('https://pmax-mailer.old-feather-370a.workers.dev', {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Authorization': 'Bearer re_WinFpHKX_JU85dFuSNEEGwGVpmhxkHXE6',
-        },
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify([
           {
             from: 'pmax website <hello@pmax.online>',
