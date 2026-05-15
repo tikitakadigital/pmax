@@ -35,7 +35,7 @@ export default async function LangHomePage({ params }: { params: Promise<{ lang:
   const p = `/${lang}`
 
   const marqueeServices = [
-    { label: 'Google Ads' }, { label: lang === 'de' ? 'KI-Suchbarkeit' : 'Visibilidad en IA', alt: true },
+    { label: 'Google Ads' }, { label: lang === 'de' ? 'KI-Sichtbarkeit' : 'Visibilidad en IA', alt: true },
     { label: 'Meta Ads' }, { label: 'SEO', alt: true },
     { label: 'LinkedIn Ads' }, { label: 'Performance Max', alt: true },
     { label: 'CRO' }, { label: lang === 'de' ? 'Creative' : 'Creatividad', alt: true },

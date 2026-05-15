@@ -26,7 +26,7 @@ export default function Footer({ locale = 'en' }: { locale?: string }) {
   const p = locale === 'en' ? '' : `/${locale}`
 
   const serviceLinks = [
-    { href: `${p}/services/ai-visibility`, label: locale === 'de' ? 'KI-Suchbarkeit' : locale === 'es' ? 'Visibilidad en IA' : 'AI search visibility' },
+    { href: `${p}/services/ai-visibility`, label: locale === 'de' ? 'KI-Sichtbarkeit' : locale === 'es' ? 'Visibilidad en IA' : 'AI search visibility' },
     { href: `${p}/services/google-ads`, label: 'Google Ads' },
     { href: `${p}/services/paid-social`, label: 'Paid social' },
     { href: `${p}/services/seo`, label: 'SEO' },

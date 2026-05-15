@@ -50,8 +50,8 @@ export const de = {
   },
 
   home: {
-    metaTitle: 'Digitalagentur Mallorca — Google Ads, SEO & KI-Suchbarkeit | pmax',
-    metaDesc: 'Google Ads, Meta, LinkedIn, SEO und KI-Suchbarkeit — von Mallorca aus für Marken in ganz Europa. Monatliche Festpreise, keine prozentualen Mediagebühren.',
+    metaTitle: 'Digitalagentur Mallorca — Google Ads, SEO & KI-Sichtbarkeit | pmax',
+    metaDesc: 'Google Ads, Meta, LinkedIn, SEO und KI-Sichtbarkeit — von Mallorca aus für Marken in ganz Europa. Monatliche Festpreise, keine prozentualen Mediagebühren.',
     rotator: ['Wachstum.', 'Sichtbarkeit.', 'Kunden.', 'Performance.'],
     tagline: 'Eine Digitalagentur, die auf messbare Ergebnisse baut.',
     deckEyebrow: 'Was wir tun',
@@ -98,7 +98,7 @@ export const de = {
 
   about: {
     metaTitle: 'Über pmax — Digitalagentur aus Mallorca | pmax',
-    metaDesc: 'Senior-Marketing-Team in Calvià, Mallorca. Google Ads, SEO und KI-Suchbarkeit für Marken in Europa. Festpreise, kein Agentur-Overhead.',
+    metaDesc: 'Senior-Marketing-Team in Calvià, Mallorca. Google Ads, SEO und KI-Sichtbarkeit für Marken in Europa. Festpreise, kein Agentur-Overhead.',
     eyebrow: 'Über pmax',
     title: <>Ein kleines Team.<br />Eine <em>klare Haltung</em>.</>,
     deck: 'Ein schlankes Team aus Marketern, Analysten und Kreativen mit Sitz in Calvià, Mallorca — wir entwickeln Performance- und KI-Sichtbarkeitsprogramme für Marken in ganz Europa.',
@@ -141,7 +141,7 @@ export const de = {
         Wir betreiben{' '}<a href="/de/services/google-ads">Google Ads</a>,{' '}
         <a href="/de/services/paid-social">Paid Social</a>,{' '}
         <a href="/de/services/seo">SEO</a>,{' '}
-        <a href="/de/services/ai-visibility">KI-Suchbarkeit</a>,{' '}
+        <a href="/de/services/ai-visibility">KI-Sichtbarkeit</a>,{' '}
         <a href="/de/services/analytics">Analytics</a>,{' '}
         <a href="/de/services/conversion-design">Conversion Design</a> und{' '}
         <a href="/de/services/creative">Creative Production</a> — sieben Leistungen, ein System.{' '}
@@ -190,7 +190,7 @@ export const de = {
     faqs: [
       {
         q: 'Welche Leistungen bietet pmax an?',
-        a: 'pmax bietet sieben Kernleistungen: KI-Suchbarkeit (GEO), Google Ads (Search, Shopping, Performance Max, YouTube), Paid Social (Meta, TikTok, LinkedIn, Microsoft Ads), SEO (technisch, inhaltlich, digital PR, lokal), Conversion Design (CRO und A/B-Tests), Analytics & Tracking (GA4, server-seitiges GTM, Consent Mode v2, CRM-basierte Offline-Conversions) und Creative Production (Performance-Creatives, Landingpages, UGC-Video in hoher Kadenz).',
+        a: 'pmax bietet sieben Kernleistungen: KI-Sichtbarkeit (GEO), Google Ads (Search, Shopping, Performance Max, YouTube), Paid Social (Meta, TikTok, LinkedIn, Microsoft Ads), SEO (technisch, inhaltlich, digital PR, lokal), Conversion Design (CRO und A/B-Tests), Analytics & Tracking (GA4, server-seitiges GTM, Consent Mode v2, CRM-basierte Offline-Conversions) und Creative Production (Performance-Creatives, Landingpages, UGC-Video in hoher Kadenz).',
       },
       {
         q: 'Mit welcher Unternehmensgröße arbeitet pmax?',
@@ -210,7 +210,7 @@ export const de = {
       },
     ],
     serviceItems: [
-      { slug: 'ai-visibility', num: '01', badge: 'Neu 2026', title: 'KI-Suchbarkeit (GEO)', deck: 'Immer mehr Menschen fragen ChatGPT, Perplexity oder Gemini, bevor sie Google öffnen. Wir sorgen dafür, dass Ihre Marke die Empfehlung ist — durch technische Grundlagen, strukturierte Daten und Inhalte, die KI-Modelle tatsächlich lesen können.', tags: ['Entities', 'Schema', 'llms.txt', 'Citation-Tracking'], variant: 'is-mint', featured: true },
+      { slug: 'ai-visibility', num: '01', badge: 'Neu 2026', title: 'KI-Sichtbarkeit (GEO)', deck: 'Immer mehr Menschen fragen ChatGPT, Perplexity oder Gemini, bevor sie Google öffnen. Wir sorgen dafür, dass Ihre Marke die Empfehlung ist — durch technische Grundlagen, strukturierte Daten und Inhalte, die KI-Modelle tatsächlich lesen können.', tags: ['Entities', 'Schema', 'llms.txt', 'Citation-Tracking'], variant: 'is-mint', featured: true },
       { slug: 'google-ads', num: '02', title: 'Google Ads & Performance Max', deck: 'Search, Shopping, Performance Max und YouTube — aufgebaut auf einem sauberen Conversion-Setup und einem Produktfeed, der wirklich verkauft. Keine Black Boxes.', tags: ['Search', 'PMax', 'Shopping', 'YouTube'], variant: 'is-slate' },
       { slug: 'paid-social', num: '03', title: 'Paid Social', deck: 'Meta, TikTok und LinkedIn — an Ihr CRM angebunden, mit einer soliden Creative-Pipeline versorgt, gemessen an der Kennzahl, die die Rechnungen bezahlt.', tags: ['Meta', 'TikTok', 'LinkedIn', 'Microsoft'], variant: 'is-outlined' },
       { slug: 'seo', num: '04', title: 'SEO', deck: 'Technisches SEO, Content und digitale PR. Wir erarbeiten Rankings auf dem langsamen, ehrlichen Weg — und dieselbe Arbeit zahlt sich auch in der KI-Suche aus.', tags: ['Technisch', 'Content', 'Local SEO', 'Digital PR'], variant: 'is-violet' },
@@ -222,9 +222,9 @@ export const de = {
 
   serviceDetail: {
     'ai-visibility': {
-      metaTitle: 'KI-Suchbarkeit (GEO) — ChatGPT & Perplexity | pmax',
+      metaTitle: 'KI-Sichtbarkeit (GEO) — ChatGPT & Perplexity | pmax',
       metaDesc: 'Zitiert werden von ChatGPT, Perplexity, Gemini und Google AI Overviews. Wir bauen Schema, Content und Trust-Signale, die KI-Zitate für Ihre Marke generieren.',
-      headline: <>KI-Such&shy;barkeit <em>(GEO)</em>.</>,
+      headline: <>KI-Sicht&shy;barkeit <em>(GEO)</em>.</>,
       deck: 'Wenn jemand ChatGPT, Perplexity, Gemini oder Googles AI Overviews nach einer Empfehlung in Ihrer Branche fragt — wir stellen sicher, dass Ihre Marke die Antwort ist. Mit Substanz, nicht mit Tricks.',
       stats: [
         { num: '61 %', label: 'der Kaufentscheidungen laufen heute über eine KI-Antwort (Gartner 2026)' },
@@ -591,7 +591,7 @@ export const de = {
 
   blog: {
     metaTitle: 'Journal — Leitfäden zu digitalem Marketing | pmax',
-    metaDesc: '18 praxisnahe Leitfäden zu Google Ads, Meta, SEO, KI-Suchbarkeit und Analytics. Geschrieben von den Menschen, die die Kampagnen betreiben.',
+    metaDesc: '18 praxisnahe Leitfäden zu Google Ads, Meta, SEO, KI-Sichtbarkeit und Analytics. Geschrieben von den Menschen, die die Kampagnen betreiben.',
     eyebrow: 'Das Journal',
     title: <>Klartext über<br /><em>digitales Marketing</em>.</>,
     deck: 'Praxisnotizen, Playbooks und Meinungen. Geschrieben von den Menschen, die die Arbeit machen, für die Menschen, die die Arbeit machen. Kein Content-Marketing-Bullshit.',
@@ -602,7 +602,7 @@ export const de = {
     promoDeck: 'Wir betreiben keine E-Mail-Liste — aber wenn Sie ein Thema haben, über das wir schreiben sollen, lassen Sie es uns wissen.',
     promoBtn: 'Thema einreichen',
     posts: [
-      { slug: 'how-to-get-mentioned-by-chatgpt', title: 'So wird Ihr Unternehmen von ChatGPT, Perplexity und Gemini empfohlen', deck: 'Ein verständlicher Leitfaden zur KI-Suchbarkeit 2026 — was es ist, warum es wichtig ist und fünf Maßnahmen für diesen Monat.' },
+      { slug: 'how-to-get-mentioned-by-chatgpt', title: 'So wird Ihr Unternehmen von ChatGPT, Perplexity und Gemini empfohlen', deck: 'Ein verständlicher Leitfaden zur KI-Sichtbarkeit 2026 — was es ist, warum es wichtig ist und fünf Maßnahmen für diesen Monat.' },
       { slug: 'performance-max-2026', title: 'Performance Max 2026: Was sich geändert hat — und was wir jetzt tun', deck: 'Ein praktischer Überblick über die sieben Performance-Max-Einstellungen, die wir bei jedem neuen Kunden-Account zuerst ändern.' },
       { slug: 'tracking-setup-guide', title: 'Ein klarer Leitfaden zum richtigen Aufbau von Marketing-Tracking', deck: 'Warum die meisten Dashboards ein bisschen lügen, wo die Abweichung herkommt und wie Sie Tracking so aufbauen, dass die Zahlen stimmen.' },
       { slug: 'meta-creative-volume', title: 'Meta sagt, Creative ist 56 % der Performance. So produzieren Sie wirklich so viel.', deck: 'Ein wöchentliches Creative-Produktionssystem, das läuft, ohne Ihre Designer zu überlasten.' },
