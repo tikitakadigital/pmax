@@ -176,7 +176,7 @@ export default function ContactForm({ locale = 'en' }: { locale?: Locale }) {
     setState('sending')
     const data = Object.fromEntries(new FormData(e.currentTarget))
     try {
-      const res = await fetch('/contact.php', {
+      const res = await fetch('/send.php', {
         method: 'POST',
         body: new URLSearchParams(data as Record<string, string>),
       })
