@@ -176,12 +176,18 @@ export default function ContactForm({ locale = 'en' }: { locale?: Locale }) {
     setState('sending')
     const data = Object.fromEntries(new FormData(e.currentTarget))
     try {
-      const res = await fetch('/send.php', {
+      const res = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
-        body: new URLSearchParams(data as Record<string, string>),
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          access_key: 'b98fd912-d722-4d1d-856a-96c10165fac4',
+          subject: `New enquiry from ${data.company} — pmax.online`,
+          from_name: String(data.name),
+          ...data,
+        }),
       })
       const json = await res.json()
-      setState(json.ok ? 'success' : 'error')
+      setState(json.success ? 'success' : 'error')
     } catch {
       setState('error')
     }
