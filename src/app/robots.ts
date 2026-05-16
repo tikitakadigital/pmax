@@ -8,7 +8,12 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: '*',
         allow: '/',
-        disallow: '/api/',
+        disallow: [
+          '/api/',
+          '/contact/?topic=',
+          '/de/contact/?topic=',
+          '/es/contact/?topic=',
+        ],
       },
     ],
     sitemap: 'https://pmax.online/sitemap.xml',
