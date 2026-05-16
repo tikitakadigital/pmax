@@ -925,6 +925,7 @@ export const de = {
       </>),
     },
     'meta-creative-volume': {
+      title: 'Meta Creative in Volumen produzieren — das System',
       toc: ['Das Volumenproblem', 'Brand als Template nicht als Asset', 'Hooks Hooks Hooks', 'UGC in großem Maßstab', 'Performance-Creative-Briefing', 'Wöchentlich aussortieren monatlich skalieren'],
       prose: (<>
         <p>Metas eigene Forschung besagt, dass Creative der größte Einzeltreiber der Paid-Social-Performance ist. Die meisten Creative-Pipelines von Marken wurden für eine Welt gebaut, in der das nicht so war. Hier ist, wie man eine aufbaut, die für 2026 geeignet ist.</p>
@@ -945,6 +946,7 @@ export const de = {
       </>),
     },
     'google-ads-mallorca': {
+      title: 'Google Ads Mallorca — lokales Targeting-Playbook',
       toc: ['Die Standard-Geo-Einstellungen sind falsch', 'Spracheinstellungen schneiden in beide Richtungen', 'Lokales Conversion-Tracking', 'Bidding für touristische Saisonalität', 'Local Pack und Maps'],
       prose: (<>
         <p>Anzeigen von Mallorca aus zu schalten ist anders. Ihre Kunden googeln in fünf Sprachen, Ihre Mitbewerber sitzen in Madrid, und Googles Standard-Geo-Targeting ist für Sie falsch. Hier ist, was zu korrigieren ist.</p>
@@ -987,6 +989,7 @@ export const de = {
       </>),
     },
     'hotel-direct-bookings': {
+      title: 'Mallorca-Hotel: +52 % Direktbuchungen in 11 Wochen',
       toc: ['Der Ausgangspunkt', 'Die Vier-Wochen-Diagnose', 'Der Buchungsfluss-Neuaufbau', 'Die Paid-Media-Verschiebung', 'Die Zahlen'],
       prose: (<>
         <p>Die meisten unabhängigen Hotels verlieren 17–22 % ihres Umsatzes an OTA-Provisionen. Hier ist die echte Geschichte eines Mallorca-Hotels, das den Großteil davon in weniger als drei Monaten zurückgewann.</p>
@@ -1005,6 +1008,7 @@ export const de = {
       </>),
     },
     'b2b-linkedin-playbook': {
+      title: 'B2B-LinkedIn-Playbook für SaaS-Kunden',
       toc: ['Zielgruppendesign', 'Drei Kampagnenziele drei Zielgruppen', 'Thought-Leader-Ads werden unterschätzt', 'Document Ads für die Consideration-Phase', 'Conversation Ads für hohe Intention', 'CRM-gespeiste Offline-Conversions', 'Lead-Scoring vor der Plattform'],
       prose: (<>
         <p>LinkedIn ist auf CPM-Basis die teuerste Werbeplattform — und der günstigste Ort, einen B2B-Käufer zu finden, wenn man es richtig macht. Hier ist das Playbook, das wir am ersten Tag jedes B2B-SaaS-Retainers einsetzen.</p>
@@ -1083,6 +1087,7 @@ export const de = {
       </>),
     },
     'crm-conversion-imports': {
+      title: 'CRM-Offline-Conversions: auf Umsatz optimieren',
       toc: ['Die Formulareinsendungs-Falle', 'Offline-Conversions erklärt', 'Implementierung', 'Was sich verändert', 'Häufige Fallstricke'],
       prose: (<>
         <p>B2B-Marketing-Teams optimieren für das, was sie messen können. Was sie messen können, sind normalerweise Formulareinsendungen. Deshalb produzieren so viele B2B-Werbekonten Hunderte von MQLs und keinen Umsatz.</p>
@@ -1101,6 +1106,7 @@ export const de = {
       </>),
     },
     'solar-marketing-spain': {
+      title: 'Solar-Marketing Spanien — was wirklich funktioniert',
       toc: ['Das Meta-Problem', 'Vorqualifizierung auf der Landingpage', 'Regionsspezifische Förderungen', 'Langzyklus-Attribution', 'Google Ads ist meist der hochintentionelle Kanal'],
       prose: (<>
         <p>Spanien ist einer der besten Solarmärkte in Europa — und einer der wettbewerbsintensivsten. Hier ist, warum die meisten Solar-Installateure mit Paid Media zu kämpfen haben und was die erfolgreichen tun.</p>
@@ -1177,6 +1183,7 @@ export const de = {
       </>),
     },
     'yachting-marketing': {
+      title: 'Yachting-Charter vermarkten — 8 Sprachen, 12 Monate',
       toc: ['Der Vier-Phasen-Kalender', 'Acht Sprachen nicht eine', 'Langzyklus-Remarketing', 'Hochwertige Lead-Bearbeitung', 'Brand vs. Performance'],
       prose: (<>
         <p>Yacht-Charter-Marketing ist ungleich jeder anderen Kategorie, in der wir arbeiten. Das Buchungsfenster ist lang, der durchschnittliche Ticketpreis enorm, und der Kunde ist wirklich global. Hier ist, wie der Media-Plan tatsächlich funktioniert.</p>

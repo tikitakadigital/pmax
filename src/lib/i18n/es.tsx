@@ -868,6 +868,7 @@ export const es = {
       </>),
     },
     'tracking-setup-guide': {
+      title: 'Guía de tracking de marketing sin jerga',
       toc: ['Por qué los dashboards mienten', 'Tagging server-side', 'Consent Mode v2', 'Enhanced conversions', 'Importación de conversiones offline', 'Reconciliación'],
       prose: (<>
         <p>Si no puedes confiar en tus datos de marketing, no puedes tomar decisiones con ellos. Esta es una guía en castellano para construir un tracking que no mienta.</p>
@@ -888,6 +889,7 @@ export const es = {
       </>),
     },
     'meta-creative-volume': {
+      title: 'Producir volumen creativo para Meta — el sistema',
       toc: ['El problema del volumen', 'Templatizar la marca no el asset', 'Hooks hooks hooks', 'UGC a escala', 'El briefing de creatividad de performance', 'Descartar semanalmente escalar mensualmente'],
       prose: (<>
         <p>La propia investigación de Meta dice que el creativo es el mayor motor del rendimiento en paid social. La mayoría de los pipelines creativos de las marcas se construyeron para un mundo en el que no era así. Aquí está cómo construir uno que encaje con 2026.</p>
@@ -908,6 +910,7 @@ export const es = {
       </>),
     },
     'google-ads-mallorca': {
+      title: 'Google Ads Mallorca — guía de targeting local',
       toc: ['La configuración geográfica predeterminada está mal', 'La configuración de idioma afecta en ambos sentidos', 'Tracking de conversiones local', 'Pujas para la estacionalidad turística', 'Local pack y Maps'],
       prose: (<>
         <p>Poner anuncios desde Mallorca es diferente. Tus clientes buscan en cinco idiomas, tus competidores están en Madrid, y la geolocalización predeterminada de Google está mal para ti. Esto es lo que hay que corregir.</p>
@@ -926,6 +929,7 @@ export const es = {
       </>),
     },
     'shopify-seo-2026': {
+      title: 'Shopify SEO 2026 — los ocho cambios que valen la pena',
       toc: ['Metadatos de páginas de colección', 'Navegación facetada', 'Schema de producto', 'Texto alternativo de imágenes', 'Velocidad del sitio', 'Contenido de blog que realmente posiciona', 'Enlazado interno desde páginas de colección', 'Hreflang para tiendas multiidioma'],
       prose: (<>
         <p>Shopify es una plataforma de comercio excelente con valores SEO predeterminados mediocres. Ocho correcciones específicas que, en nuestra experiencia, mueven el tráfico orgánico más que el resto combinadas.</p>
@@ -950,6 +954,7 @@ export const es = {
       </>),
     },
     'hotel-direct-bookings': {
+      title: 'Hotel Mallorca: +52 % reservas directas en 11 semanas',
       toc: ['El punto de partida', 'El diagnóstico de cuatro semanas', 'La reconstrucción del flujo de reservas', 'El cambio en paid media', 'Los números'],
       prose: (<>
         <p>La mayoría de hoteles independientes pierden entre el 17 y el 22 % de sus ingresos en comisiones de OTA. Esta es la historia real de un hotel de Mallorca que recuperó la mayor parte de eso en menos de tres meses.</p>
@@ -990,6 +995,7 @@ export const es = {
       </>),
     },
     'cookieless-tracking': {
+      title: 'Tracking sin cookies en 2026 — guía de adaptación',
       toc: ['Qué cambió realmente', 'Tagging server-side', 'Consent Mode v2', 'APIs de conversión', 'Estrategia de datos de primera parte', 'Conversiones modeladas'],
       prose: (<>
         <p>Las cookies de terceros están funcionalmente muertas. Apple las eliminó en iOS hace cinco años, Chrome está terminando el trabajo ahora. Así es como se rastrean las conversiones en 2026 sin infringir la ley ni perder todos los datos.</p>
@@ -1046,6 +1052,7 @@ export const es = {
       </>),
     },
     'crm-conversion-imports': {
+      title: 'Optimiza por ingresos, no por formularios',
       toc: ['La trampa del formulario completado', 'Conversiones offline explicadas', 'Implementación', 'Qué cambia', 'Errores comunes'],
       prose: (<>
         <p>Los equipos de marketing B2B optimizan para lo que pueden medir. Lo que pueden medir suele ser formularios completados. Por eso tantas cuentas de anuncios B2B producen cientos de MQLs y ningún ingreso.</p>
@@ -1064,6 +1071,7 @@ export const es = {
       </>),
     },
     'solar-marketing-spain': {
+      title: 'Marketing solar en España — qué funciona de verdad',
       toc: ['El problema de Meta', 'Precalificar en la landing page', 'Incentivos específicos por región', 'Atribución de ciclo largo', 'Google Ads suele ser el canal de mayor intención'],
       prose: (<>
         <p>España es uno de los mejores mercados solares de Europa — y uno de los más competitivos. Aquí está por qué la mayoría de instaladores solares luchan en paid media, y qué hacen los que prosperan.</p>
@@ -1100,6 +1108,7 @@ export const es = {
       </>),
     },
     'gpt-shopping': {
+      title: 'ChatGPT shopping para e-commerce en 2026',
       toc: ['Qué es realmente ChatGPT shopping', 'La calidad del feed de productos importa más que nunca', 'Marcado Schema.org de producto', 'Las reseñas como señal de ranking', 'La reputación de marca importa'],
       prose: (<>
         <p>OpenAI lanzó compras dentro de ChatGPT a finales de 2025. Para las marcas de e-commerce, es un nuevo canal de adquisición — y uno para el que la mayoría no se ha preparado.</p>
@@ -1140,6 +1149,7 @@ export const es = {
       </>),
     },
     'yachting-marketing': {
+      title: 'Marketing de charter náutico — 8 idiomas, 12 meses',
       toc: ['El calendario de cuatro fases', 'Ocho idiomas no uno', 'Remarketing de ciclo largo', 'Gestión de leads de alto valor', 'Marca vs. performance'],
       prose: (<>
         <p>El marketing de charter náutico no se parece a ninguna otra categoría en la que trabajamos. La ventana de reserva es larga, el ticket medio es enorme y el cliente es genuinamente global. Así es como funciona realmente el plan de medios.</p>
@@ -1158,6 +1168,7 @@ export const es = {
       </>),
     },
     'agency-pricing-honest': {
+      title: 'Tarifas fijas, no porcentaje del presupuesto',
       toc: ['El problema de los incentivos', 'Cuándo importa esto', 'Las tarifas fijas resuelven el problema', 'Qué nos cuesta esto', 'Qué nos aporta esto'],
       prose: (<>
         <p>La mayoría de agencias de marketing digital cobran un porcentaje del gasto en medios. La mayoría de agencias de marketing digital tienen un incentivo para recomendar más gasto en medios. La conexión no es complicada.</p>
