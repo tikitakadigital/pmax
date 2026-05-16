@@ -105,7 +105,7 @@ export default async function CasePage({ params }: { params: Promise<{ slug: str
                 <h2 className="promo-headline">{detail.promo.headline}</h2>
                 <p className="promo-deck">{detail.promo.deck}</p>
               </div>
-              <Link href={`/contact?topic=${detail.promo.topic}`} className="btn-primary" style={{ whiteSpace: 'nowrap', fontSize: 13, padding: '14px 22px' }}>
+              <Link href={`/contact/?topic=${detail.promo.topic}`} className="btn-primary" style={{ whiteSpace: 'nowrap', fontSize: 13, padding: '14px 22px' }}>
                 {detail.promo.ctaLabel} <span className="arrow" aria-hidden="true">→</span>
               </Link>
             </div>

@@ -58,7 +58,7 @@ const pages: Record<string, { title: string; description: string; body: React.Re
         <h3>When you visit our website</h3>
         <ul>
           <li>Server log files (IP address, user agent, referrer, timestamp)</li>
-          <li>Cookies and similar technologies (see our <a href="/legal/cookies">cookie policy</a>)</li>
+          <li>Cookies and similar technologies (see our <a href="/legal/cookies/">cookie policy</a>)</li>
           <li>Aggregated, anonymised analytics data via Google Analytics 4 with IP anonymisation enabled and only after consent</li>
         </ul>
         <h3>When you fill out our contact form</h3>
@@ -196,7 +196,7 @@ const pages: Record<string, { title: string; description: string; body: React.Re
         <h2>Contact</h2>
         <p>
           Questions: <a href="mailto:hello@pmax.online">hello@pmax.online</a>.
-          See also our <a href="/legal/privacy">full privacy policy</a>.
+          See also our <a href="/legal/privacy/">full privacy policy</a>.
         </p>
       </div>
     ),
@@ -270,7 +270,7 @@ export default async function LegalPage({ params }: { params: Promise<{ slug: st
             <nav className="page-intro-crumbs" aria-label="Breadcrumb">
               <Link href="/">Home</Link>
               <span className="sep">/</span>
-              <Link href="/legal/imprint">Legal</Link>
+              <Link href="/legal/imprint/">Legal</Link>
               <span className="sep">/</span>
               <span>{page.title}</span>
             </nav>

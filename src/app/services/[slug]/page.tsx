@@ -158,7 +158,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
               <h2 className="promo-headline">{detail.promoHeadline}</h2>
               <p className="promo-deck">{detail.promoDeck}</p>
             </div>
-            <Link href={`/contact?topic=${detail.promoTopic}`} className="btn-primary" style={{ whiteSpace: 'nowrap', fontSize: 13, padding: '14px 22px' }}>
+            <Link href={`/contact/?topic=${detail.promoTopic}`} className="btn-primary" style={{ whiteSpace: 'nowrap', fontSize: 13, padding: '14px 22px' }}>
               {detail.promoCtaLabel} <span className="arrow" aria-hidden="true">→</span>
             </Link>
           </div>

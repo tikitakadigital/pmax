@@ -70,7 +70,7 @@ const de: Record<string, LegalContent> = {
         <h3>Beim Besuch unserer Website</h3>
         <ul>
           <li>Server-Protokolldateien (IP-Adresse, Browser-User-Agent, Referrer, Zeitstempel)</li>
-          <li>Cookies und ähnliche Technologien (siehe unsere <a href="/de/legal/cookies">Cookie-Richtlinie</a>)</li>
+          <li>Cookies und ähnliche Technologien (siehe unsere <a href="/de/legal/cookies/">Cookie-Richtlinie</a>)</li>
           <li>Aggregierte, anonymisierte Analysedaten über Google Analytics 4 mit IP-Anonymisierung — ausschließlich nach Ihrer Einwilligung</li>
         </ul>
         <h3>Bei der Nutzung unseres Kontaktformulars</h3>
@@ -174,7 +174,7 @@ const de: Record<string, LegalContent> = {
         <h2>Kontakt</h2>
         <p>
           Fragen: <a href="mailto:hello@pmax.online">hello@pmax.online</a>.
-          Siehe auch unsere <a href="/de/legal/privacy">vollständige Datenschutzerklärung</a>.
+          Siehe auch unsere <a href="/de/legal/privacy/">vollständige Datenschutzerklärung</a>.
         </p>
       </div>
     ),
@@ -311,7 +311,7 @@ const es: Record<string, LegalContent> = {
         <h3>Cuando visitas nuestra web</h3>
         <ul>
           <li>Ficheros de registro del servidor (dirección IP, agente de usuario, referrer, marca de tiempo)</li>
-          <li>Cookies y tecnologías similares (consulta nuestra <a href="/es/legal/cookies">política de cookies</a>)</li>
+          <li>Cookies y tecnologías similares (consulta nuestra <a href="/es/legal/cookies/">política de cookies</a>)</li>
           <li>Datos analíticos agregados y anonimizados a través de Google Analytics 4 con anonimización de IP y solo con tu consentimiento</li>
         </ul>
         <h3>Cuando rellenas nuestro formulario de contacto</h3>
@@ -417,7 +417,7 @@ const es: Record<string, LegalContent> = {
         <h2>Contacto</h2>
         <p>
           Preguntas: <a href="mailto:hello@pmax.online">hello@pmax.online</a>.
-          Consulta también nuestra <a href="/es/legal/privacy">política de privacidad completa</a>.
+          Consulta también nuestra <a href="/es/legal/privacy/">política de privacidad completa</a>.
         </p>
       </div>
     ),

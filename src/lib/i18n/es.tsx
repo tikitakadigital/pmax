@@ -120,17 +120,17 @@ export const es = {
     servicesTitle: 'Qué hacemos',
     servicesText: (
       <>
-        Gestionamos{' '}<a href="/es/services/google-ads">Google Ads</a>,{' '}
-        <a href="/es/services/paid-social">paid social</a>,{' '}
-        <a href="/es/services/seo">SEO</a>,{' '}
-        <a href="/es/services/ai-visibility">visibilidad en IA</a>,{' '}
-        <a href="/es/services/analytics">analítica</a>,{' '}
-        <a href="/es/services/conversion-design">diseño de conversión</a> y{' '}
-        <a href="/es/services/creative">producción creativa</a> — siete servicios, un sistema.{' '}
-        <a href="/es/services">Ver todos los servicios →</a>
+        Gestionamos{' '}<a href="/es/services/google-ads/">Google Ads</a>,{' '}
+        <a href="/es/services/paid-social/">paid social</a>,{' '}
+        <a href="/es/services/seo/">SEO</a>,{' '}
+        <a href="/es/services/ai-visibility/">visibilidad en IA</a>,{' '}
+        <a href="/es/services/analytics/">analítica</a>,{' '}
+        <a href="/es/services/conversion-design/">diseño de conversión</a> y{' '}
+        <a href="/es/services/creative/">producción creativa</a> — siete servicios, un sistema.{' '}
+        <a href="/es/services/">Ver todos los servicios →</a>
       </>
     ),
-    casesText: <>Una selección de <a href="/es/cases">casos de estudio</a> está disponible en nuestro archivo de trabajo — diez proyectos con los números reales.</>,
+    casesText: <>Una selección de <a href="/es/cases/">casos de estudio</a> está disponible en nuestro archivo de trabajo — diez proyectos con los números reales.</>,
     startTitle: 'Iniciar un proyecto',
     startDeck: 'La primera llamada dura 30 minutos — a nuestra costa. Cuéntanos qué quieres construir.',
     startCta: 'Reservar llamada',
@@ -836,12 +836,12 @@ export const es = {
           <p>La visibilidad en IA no es un truco. Se gana. La mayoría de los negocios ven sus primeras citas fiables en 8–12 semanas de trabajo disciplinado.</p>
         </div>
         <h2>Cómo puede ayudar pmax</h2>
-        <p>Ejecutamos programas de visibilidad en IA para empresas en toda Europa. Si quieres una auditoría gratuita de una página sobre dónde está tu negocio hoy en ChatGPT, Perplexity y Gemini, <a href="/es/contact?topic=ai-audit">cuéntanos un poco sobre tu situación</a> y te la enviamos en una semana.</p>
+        <p>Ejecutamos programas de visibilidad en IA para empresas en toda Europa. Si quieres una auditoría gratuita de una página sobre dónde está tu negocio hoy en ChatGPT, Perplexity y Gemini, <a href="/es/contact/?topic=ai-audit">cuéntanos un poco sobre tu situación</a> y te la enviamos en una semana.</p>
         <h2>Lecturas recomendadas</h2>
         <ul>
-          <li><a href="/es/services/ai-visibility">Nuestra página de servicio de visibilidad en IA</a> — qué hay dentro de un programa</li>
-          <li><a href="/es/blog/gpt-shopping">Qué significa «ChatGPT shopping» para el e-commerce en 2026</a></li>
-          <li><a href="/es/blog/tracking-setup-guide">Una guía sin jerga para configurar el tracking correctamente</a></li>
+          <li><a href="/es/services/ai-visibility/">Nuestra página de servicio de visibilidad en IA</a> — qué hay dentro de un programa</li>
+          <li><a href="/es/blog/gpt-shopping/">Qué significa «ChatGPT shopping» para el e-commerce en 2026</a></li>
+          <li><a href="/es/blog/tracking-setup-guide/">Una guía sin jerga para configurar el tracking correctamente</a></li>
         </ul>
       </>),
     },
@@ -864,7 +864,7 @@ export const es = {
         <h2>Señales de audiencia de primera parte</h2>
         <p>Sube tu lista de customer match, tu cohorte de alto LTV, tu segmento de compradores recientes. PMax no los usa como targeting — pero sí como una señal potente para el algoritmo. El incremento es real.</p>
         <h2>¿Necesitas ayuda con esto?</h2>
-        <p>Si algo de lo anterior te resulta familiar, <a href="/es/contact?topic=performance-max-2026">cuéntanos brevemente tu situación</a> y te respondemos en un día laborable. Primera conversación: 30 minutos, sin coste.</p>
+        <p>Si algo de lo anterior te resulta familiar, <a href="/es/contact/?topic=performance-max-2026">cuéntanos brevemente tu situación</a> y te respondemos en un día laborable. Primera conversación: 30 minutos, sin coste.</p>
       </>),
     },
     'tracking-setup-guide': {
@@ -885,7 +885,7 @@ export const es = {
         <h2>Reconciliación</h2>
         <p>Una vez al mes, compara los ingresos reportados por la plataforma publicitaria con tu contabilidad real. Apunta a una discrepancia inferior al 15 %. Cualquier cosa por encima significa que algo en la cadena está roto.</p>
         <h2>¿Necesitas ayuda con esto?</h2>
-        <p>Si algo de lo anterior te resulta familiar, <a href="/es/contact?topic=tracking-setup-guide">cuéntanos brevemente tu situación</a> y te respondemos en un día laborable. Primera conversación: 30 minutos, sin coste.</p>
+        <p>Si algo de lo anterior te resulta familiar, <a href="/es/contact/?topic=tracking-setup-guide">cuéntanos brevemente tu situación</a> y te respondemos en un día laborable. Primera conversación: 30 minutos, sin coste.</p>
       </>),
     },
     'meta-creative-volume': {
@@ -906,7 +906,7 @@ export const es = {
         <h2>Descartar semanalmente, escalar mensualmente</h2>
         <p>Cada viernes, elimina todo lo que esté por debajo del umbral de rendimiento. Una vez al mes, identifica los tres mejores patrones creativos y briefea el creativo del mes siguiente en torno a ellos. Los aprendizajes se acumulan.</p>
         <h2>¿Necesitas ayuda con esto?</h2>
-        <p>Si algo de lo anterior te resulta familiar, <a href="/es/contact?topic=meta-creative-volume">cuéntanos brevemente tu situación</a> y te respondemos en un día laborable. Primera conversación: 30 minutos, sin coste.</p>
+        <p>Si algo de lo anterior te resulta familiar, <a href="/es/contact/?topic=meta-creative-volume">cuéntanos brevemente tu situación</a> y te respondemos en un día laborable. Primera conversación: 30 minutos, sin coste.</p>
       </>),
     },
     'google-ads-mallorca': {
@@ -925,7 +925,7 @@ export const es = {
         <h2>Local pack y Maps</h2>
         <p>Si eres un negocio de servicios, tu Perfil de Empresa de Google genera más ingresos que tus anuncios. Optimízalo correctamente: fotos actualizadas mensualmente, reseñas solicitadas cada trimestre, servicios correctamente categorizados. El trabajo se acumula.</p>
         <h2>¿Necesitas ayuda con esto?</h2>
-        <p>Si algo de lo anterior te resulta familiar, <a href="/es/contact?topic=google-ads-mallorca">cuéntanos brevemente tu situación</a> y te respondemos en un día laborable. Primera conversación: 30 minutos, sin coste.</p>
+        <p>Si algo de lo anterior te resulta familiar, <a href="/es/contact/?topic=google-ads-mallorca">cuéntanos brevemente tu situación</a> y te respondemos en un día laborable. Primera conversación: 30 minutos, sin coste.</p>
       </>),
     },
     'shopify-seo-2026': {
@@ -950,7 +950,7 @@ export const es = {
         <h2>Hreflang para tiendas multiidioma</h2>
         <p>Si vendes en varios idiomas, configura hreflang correctamente. Shopify Markets lo gestiona si se configura correctamente, pero los valores predeterminados suelen estar mal. Audita cada mercado para verificar las etiquetas hreflang correctas.</p>
         <h2>¿Necesitas ayuda con esto?</h2>
-        <p>Si algo de lo anterior te resulta familiar, <a href="/es/contact?topic=shopify-seo-2026">cuéntanos brevemente tu situación</a> y te respondemos en un día laborable. Primera conversación: 30 minutos, sin coste.</p>
+        <p>Si algo de lo anterior te resulta familiar, <a href="/es/contact/?topic=shopify-seo-2026">cuéntanos brevemente tu situación</a> y te respondemos en un día laborable. Primera conversación: 30 minutos, sin coste.</p>
       </>),
     },
     'hotel-direct-bookings': {
@@ -969,7 +969,7 @@ export const es = {
         <h2>Los números</h2>
         <p>A las 11 semanas, las reservas directas habían crecido un 52 % y las reservas totales un 11 %. Con ~350.000 € en ingresos directos mensuales frente a la tendencia anterior, la comisión OTA anual ahorrada fue de unos 184.000 €.</p>
         <h2>¿Necesitas ayuda con esto?</h2>
-        <p>Si algo de lo anterior te resulta familiar, <a href="/es/contact?topic=hotel-direct-bookings">cuéntanos brevemente tu situación</a> y te respondemos en un día laborable. Primera conversación: 30 minutos, sin coste.</p>
+        <p>Si algo de lo anterior te resulta familiar, <a href="/es/contact/?topic=hotel-direct-bookings">cuéntanos brevemente tu situación</a> y te respondemos en un día laborable. Primera conversación: 30 minutos, sin coste.</p>
       </>),
     },
     'b2b-linkedin-playbook': {
@@ -991,7 +991,7 @@ export const es = {
         <h2>Lead scoring antes de que la plataforma vea el lead</h2>
         <p>Usa una herramienta como Clearbit / 6sense / tu propio enriquecimiento para puntuar los leads antes de que se disparen como conversiones en LinkedIn. Solo dispara conversiones de «lead cualificado» para leads que valga la pena perseguir. El algoritmo de la plataforma se vuelve dramáticamente más preciso.</p>
         <h2>¿Necesitas ayuda con esto?</h2>
-        <p>Si algo de lo anterior te resulta familiar, <a href="/es/contact?topic=b2b-linkedin-playbook">cuéntanos brevemente tu situación</a> y te respondemos en un día laborable. Primera conversación: 30 minutos, sin coste.</p>
+        <p>Si algo de lo anterior te resulta familiar, <a href="/es/contact/?topic=b2b-linkedin-playbook">cuéntanos brevemente tu situación</a> y te respondemos en un día laborable. Primera conversación: 30 minutos, sin coste.</p>
       </>),
     },
     'cookieless-tracking': {
@@ -1012,7 +1012,7 @@ export const es = {
         <h2>Conversiones modeladas</h2>
         <p>Espera que el 20–40 % de tus datos de conversión en 2026 sean modelados (estimados estadísticamente) en lugar de observados directamente. Esto es normal y no es un problema si el modelo está bien alimentado. La atribución día a día precisa ya es historia — acéptalo.</p>
         <h2>¿Necesitas ayuda con esto?</h2>
-        <p>Si algo de lo anterior te resulta familiar, <a href="/es/contact?topic=cookieless-tracking">cuéntanos brevemente tu situación</a> y te respondemos en un día laborable. Primera conversación: 30 minutos, sin coste.</p>
+        <p>Si algo de lo anterior te resulta familiar, <a href="/es/contact/?topic=cookieless-tracking">cuéntanos brevemente tu situación</a> y te respondemos en un día laborable. Primera conversación: 30 minutos, sin coste.</p>
       </>),
     },
     'real-estate-lead-gen': {
@@ -1032,7 +1032,7 @@ export const es = {
         <h2>Higiene del teclado en móvil</h2>
         <p>Los campos de email deben activar teclados de email. Los campos de teléfono deben activar teclados numéricos. No hagas que un usuario en móvil cambie de teclado tres veces para rellenar tu formulario.</p>
         <h2>¿Necesitas ayuda con esto?</h2>
-        <p>Si algo de lo anterior te resulta familiar, <a href="/es/contact?topic=real-estate-lead-gen">cuéntanos brevemente tu situación</a> y te respondemos en un día laborable. Primera conversación: 30 minutos, sin coste.</p>
+        <p>Si algo de lo anterior te resulta familiar, <a href="/es/contact/?topic=real-estate-lead-gen">cuéntanos brevemente tu situación</a> y te respondemos en un día laborable. Primera conversación: 30 minutos, sin coste.</p>
       </>),
     },
     'tiktok-organic-paid': {
@@ -1048,7 +1048,7 @@ export const es = {
         <h2>El bucle de acumulación</h2>
         <p>Identifica tus 3 vídeos orgánicos principales cada mes. Ponles Spark Ads. Usa los aprendizajes para briefear el contenido de creadores del mes siguiente. Repite. Las marcas que descifran TikTok acumulan este bucle mes a mes.</p>
         <h2>¿Necesitas ayuda con esto?</h2>
-        <p>Si algo de lo anterior te resulta familiar, <a href="/es/contact?topic=tiktok-organic-paid">cuéntanos brevemente tu situación</a> y te respondemos en un día laborable. Primera conversación: 30 minutos, sin coste.</p>
+        <p>Si algo de lo anterior te resulta familiar, <a href="/es/contact/?topic=tiktok-organic-paid">cuéntanos brevemente tu situación</a> y te respondemos en un día laborable. Primera conversación: 30 minutos, sin coste.</p>
       </>),
     },
     'crm-conversion-imports': {
@@ -1067,7 +1067,7 @@ export const es = {
         <h2>Errores comunes</h2>
         <p>Asegúrate de que los valores que estás devolviendo son económicamente significativos. Un evento de «closed-won» debería llevar el valor real del contrato, no un marcador fijo de 100 €. La plataforma optimiza contra los valores que le das.</p>
         <h2>¿Necesitas ayuda con esto?</h2>
-        <p>Si algo de lo anterior te resulta familiar, <a href="/es/contact?topic=crm-conversion-imports">cuéntanos brevemente tu situación</a> y te respondemos en un día laborable. Primera conversación: 30 minutos, sin coste.</p>
+        <p>Si algo de lo anterior te resulta familiar, <a href="/es/contact/?topic=crm-conversion-imports">cuéntanos brevemente tu situación</a> y te respondemos en un día laborable. Primera conversación: 30 minutos, sin coste.</p>
       </>),
     },
     'solar-marketing-spain': {
@@ -1086,7 +1086,7 @@ export const es = {
         <h2>Google Ads suele ser el canal de mayor intención</h2>
         <p>Para solar, Google Search capta mayor intención que Meta. La ponderación de presupuesto que ejecuta la mayoría de instaladores (60 % Meta, 40 % Google) suele estar al revés. Prueba lo contrario.</p>
         <h2>¿Necesitas ayuda con esto?</h2>
-        <p>Si algo de lo anterior te resulta familiar, <a href="/es/contact?topic=solar-marketing-spain">cuéntanos brevemente tu situación</a> y te respondemos en un día laborable. Primera conversación: 30 minutos, sin coste.</p>
+        <p>Si algo de lo anterior te resulta familiar, <a href="/es/contact/?topic=solar-marketing-spain">cuéntanos brevemente tu situación</a> y te respondemos en un día laborable. Primera conversación: 30 minutos, sin coste.</p>
       </>),
     },
     'creative-testing-framework': {
@@ -1104,7 +1104,7 @@ export const es = {
         <h2>Aprendizajes multiplataforma</h2>
         <p>Un hook que funciona en TikTok normalmente funciona en Meta. Un visual que funciona en Meta normalmente funciona en Instagram. Testea en la plataforma más barata, despliega en las demás.</p>
         <h2>¿Necesitas ayuda con esto?</h2>
-        <p>Si algo de lo anterior te resulta familiar, <a href="/es/contact?topic=creative-testing-framework">cuéntanos brevemente tu situación</a> y te respondemos en un día laborable. Primera conversación: 30 minutos, sin coste.</p>
+        <p>Si algo de lo anterior te resulta familiar, <a href="/es/contact/?topic=creative-testing-framework">cuéntanos brevemente tu situación</a> y te respondemos en un día laborable. Primera conversación: 30 minutos, sin coste.</p>
       </>),
     },
     'gpt-shopping': {
@@ -1123,7 +1123,7 @@ export const es = {
         <h2>La reputación de marca importa</h2>
         <p>Los modelos de IA citan marcas en las que confían sus datos de entrenamiento. Construir reconocimiento de marca genuino — a través de relaciones públicas, contenido, prueba social — se paga en visibilidad de compras de IA, no solo en métricas de marca clásicas.</p>
         <h2>¿Necesitas ayuda con esto?</h2>
-        <p>Si algo de lo anterior te resulta familiar, <a href="/es/contact?topic=gpt-shopping">cuéntanos brevemente tu situación</a> y te respondemos en un día laborable. Primera conversación: 30 minutos, sin coste.</p>
+        <p>Si algo de lo anterior te resulta familiar, <a href="/es/contact/?topic=gpt-shopping">cuéntanos brevemente tu situación</a> y te respondemos en un día laborable. Primera conversación: 30 minutos, sin coste.</p>
       </>),
     },
     'ga4-mistakes': {
@@ -1145,7 +1145,7 @@ export const es = {
         <h2>Retención de datos</h2>
         <p>GA4 tiene por defecto 2 meses de retención de datos a nivel de evento. Cámbialo a 14 meses en la administración. Te lo agradecerás en un año.</p>
         <h2>¿Necesitas ayuda con esto?</h2>
-        <p>Si algo de lo anterior te resulta familiar, <a href="/es/contact?topic=ga4-mistakes">cuéntanos brevemente tu situación</a> y te respondemos en un día laborable. Primera conversación: 30 minutos, sin coste.</p>
+        <p>Si algo de lo anterior te resulta familiar, <a href="/es/contact/?topic=ga4-mistakes">cuéntanos brevemente tu situación</a> y te respondemos en un día laborable. Primera conversación: 30 minutos, sin coste.</p>
       </>),
     },
     'yachting-marketing': {
@@ -1164,7 +1164,7 @@ export const es = {
         <h2>Marca vs. performance</h2>
         <p>La mayoría de empresas de charter gastan demasiado en Google Search y muy poco en Meta de construcción de marca. El charter es una compra de alta consideración — el cliente necesita conocer tu marca meses antes de buscar. El presupuesto debería reflejarlo.</p>
         <h2>¿Necesitas ayuda con esto?</h2>
-        <p>Si algo de lo anterior te resulta familiar, <a href="/es/contact?topic=yachting-marketing">cuéntanos brevemente tu situación</a> y te respondemos en un día laborable. Primera conversación: 30 minutos, sin coste.</p>
+        <p>Si algo de lo anterior te resulta familiar, <a href="/es/contact/?topic=yachting-marketing">cuéntanos brevemente tu situación</a> y te respondemos en un día laborable. Primera conversación: 30 minutos, sin coste.</p>
       </>),
     },
     'agency-pricing-honest': {
@@ -1183,7 +1183,7 @@ export const es = {
         <h2>Qué nos aporta esto</h2>
         <p>Una tasa de retención de clientes a doce meses del 93 %, y un pipeline de inbound formado casi en su totalidad por referencias. El camino lento funciona.</p>
         <h2>¿Necesitas ayuda con esto?</h2>
-        <p>Si algo de lo anterior te resulta familiar, <a href="/es/contact?topic=agency-pricing-honest">cuéntanos brevemente tu situación</a> y te respondemos en un día laborable. Primera conversación: 30 minutos, sin coste.</p>
+        <p>Si algo de lo anterior te resulta familiar, <a href="/es/contact/?topic=agency-pricing-honest">cuéntanos brevemente tu situación</a> y te respondemos en un día laborable. Primera conversación: 30 minutos, sin coste.</p>
       </>),
     },
   } as Record<string, LocalizedBlogDetail>,

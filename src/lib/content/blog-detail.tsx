@@ -9,7 +9,7 @@ export interface BlogDetail {
 const NeedHelp = ({ topic }: { topic: string }) => (
   <>
     <h2>Need help with this?</h2>
-    <p>If any of the above feels like a problem you have, <a href={`/contact?topic=${topic}`}>tell us a bit about your situation</a> and we will come back within a working day. First conversation is 30 minutes, on us.</p>
+    <p>If any of the above feels like a problem you have, <a href={`/contact/?topic=${topic}`}>tell us a bit about your situation</a> and we will come back within a working day. First conversation is 30 minutes, on us.</p>
   </>
 )
 
@@ -52,12 +52,12 @@ export const blogDetails: BlogDetail[] = [
           <p>AI search visibility isn&rsquo;t a hack. It&rsquo;s earned. Most businesses will see their first reliable citations in 8&ndash;12 weeks of disciplined work. Anyone promising you faster than that is selling you a story &mdash; or doing something that&rsquo;ll get you delisted later.</p>
         </div>
         <h2>What pmax can do, if you want help</h2>
-        <p>We run AI visibility programmes for businesses across Europe &mdash; the full audit, the technical foundations, the content and PR support, and the monthly measurement. If you&rsquo;d like a free one-page audit of where your business stands in ChatGPT, Perplexity and Gemini today, <a href="/contact?topic=ai-audit">tell us a bit about you</a> and we&rsquo;ll send it back within a week.</p>
+        <p>We run AI visibility programmes for businesses across Europe &mdash; the full audit, the technical foundations, the content and PR support, and the monthly measurement. If you&rsquo;d like a free one-page audit of where your business stands in ChatGPT, Perplexity and Gemini today, <a href="/contact/?topic=ai-audit">tell us a bit about you</a> and we&rsquo;ll send it back within a week.</p>
         <h2>Further reading</h2>
         <ul>
-          <li><a href="/services/ai-visibility">Our AI visibility service page</a> &mdash; what&rsquo;s actually inside a programme</li>
-          <li><a href="/blog/gpt-shopping">What &ldquo;ChatGPT shopping&rdquo; means for e-commerce in 2026</a></li>
-          <li><a href="/blog/tracking-setup-guide">A no-jargon guide to setting up tracking properly</a></li>
+          <li><a href="/services/ai-visibility/">Our AI visibility service page</a> &mdash; what&rsquo;s actually inside a programme</li>
+          <li><a href="/blog/gpt-shopping/">What &ldquo;ChatGPT shopping&rdquo; means for e-commerce in 2026</a></li>
+          <li><a href="/blog/tracking-setup-guide/">A no-jargon guide to setting up tracking properly</a></li>
         </ul>
       </>
     ),

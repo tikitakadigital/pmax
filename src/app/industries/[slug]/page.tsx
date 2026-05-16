@@ -134,7 +134,7 @@ export default async function IndustryPage({ params }: { params: Promise<{ slug:
               <h2 className="promo-headline">Let&apos;s grow your {industryName.toLowerCase()} brand.</h2>
               <p className="promo-deck">Tell us about your current setup. We&apos;ll show you where the gaps are — no pitch, no pressure.</p>
             </div>
-            <Link href={`/contact?topic=${detail.promoTopic}`} className="btn-primary" style={{ whiteSpace: 'nowrap', fontSize: 13, padding: '14px 22px' }}>
+            <Link href={`/contact/?topic=${detail.promoTopic}`} className="btn-primary" style={{ whiteSpace: 'nowrap', fontSize: 13, padding: '14px 22px' }}>
               Get a free audit <span className="arrow" aria-hidden="true">→</span>
             </Link>
           </div>
