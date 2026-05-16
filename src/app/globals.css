@@ -76,7 +76,7 @@
    SITE CSS — exact values from site.css
    ============================================================ */
 * { box-sizing: border-box; }
-html { scroll-behavior: smooth; background: var(--color-canvas); color: var(--color-text-primary); font-family: var(--font-sans); font-size: 16px; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+html { scroll-behavior: smooth; background: var(--color-canvas); color: var(--color-text-primary); font-family: var(--font-sans); font-size: 16px; line-height: 1.6; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
 body { min-height: 100vh; overflow-x: hidden; }
 .cursor-dot { position: fixed; top: -7px; left: -7px; width: 14px; height: 14px; border-radius: 50%; background: var(--color-jelly-mint); box-shadow: 0 0 18px var(--color-jelly-mint); pointer-events: none; z-index: 9999; transform: translate(-100px, -100px); will-change: transform; }
 @media (pointer: coarse) { .cursor-dot { display: none; } }
