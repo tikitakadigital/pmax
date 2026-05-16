@@ -24,6 +24,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   return {
     title: loc?.title ? `${loc.title} | pmax` : locPost?.title ? `${locPost.title} | pmax` : post.seoTitle,
     description: loc?.deck ?? locPost?.deck ?? post.deck,
+    ...(isTranslated ? {} : { robots: { index: false } }),
     alternates: isTranslated ? {
       canonical: `https://pmax.online/${lang}/blog/${slug}/`,
       languages: { 'en': `https://pmax.online/blog/${slug}/`, 'de': `https://pmax.online/de/blog/${slug}/`, 'es': `https://pmax.online/es/blog/${slug}/`, 'x-default': `https://pmax.online/blog/${slug}/` },
