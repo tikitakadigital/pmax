@@ -25,6 +25,7 @@ jobs:
         run: npm run build
 
       - name: Deploy via SFTP
+        timeout-minutes: 30
         env:
           FTP_HOST: ${{ secrets.FTP_HOST }}
           FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
@@ -34,10 +35,11 @@ jobs:
           mkdir -p ~/.lftp
           cat > ~/.lftp/rc << 'EOF'
           set sftp:auto-confirm yes
-          set net:timeout 60
-          set net:max-retries 5
-          set net:reconnect-interval-base 5
-          set mirror:use-pget-n 4
+          set net:timeout 120
+          set net:max-retries 3
+          set net:reconnect-interval-base 10
+          set net:idle 30
+          set sftp:max-packets-in-flight 16
           EOF
           lftp -u "$FTP_USERNAME","$FTP_PASSWORD" "sftp://$FTP_HOST" \
             -e "mirror -R --delete --verbose out/ public_html/; quit"
