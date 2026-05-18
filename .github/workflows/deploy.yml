@@ -32,7 +32,7 @@ jobs:
           ---
           deployment:
             tasks:
-              - export DEPLOYPATH=/home/$USER/public_html/
+              - export DEPLOYPATH=$HOME/public_html/
               - /bin/rsync -av --delete --exclude='.cpanel.yml' --exclude='.git' . $DEPLOYPATH
           EOF
 
