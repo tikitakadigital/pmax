@@ -36,11 +36,26 @@ jobs:
               - /bin/rsync -av --delete --exclude='.cpanel.yml' --exclude='.git' . $DEPLOYPATH
           EOF
 
-          cd out
+          BUILD_DIR="$(pwd)/out"
+          REPO_URL="https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/tikitakadigital/pmax.git"
+
+          mkdir /tmp/deploy_work && cd /tmp/deploy_work
           git init
           git config user.email "ci@pmax.online"
           git config user.name "pmax CI"
+          git remote add origin "$REPO_URL"
+
+          # Fetch existing deploy branch to preserve history (enables fast-forward in cPanel)
+          git fetch origin deploy 2>/dev/null || true
+
+          if git show-ref --verify --quiet refs/remotes/origin/deploy; then
+            git checkout -b deploy origin/deploy
+            git rm -rf . --quiet
+          else
+            git checkout -b deploy
+          fi
+
+          cp -a "$BUILD_DIR/." .
           git add -A
-          git commit -m "Deploy $(date -u '+%Y-%m-%d %H:%M') UTC"
-          git remote add origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/tikitakadigital/pmax.git
-          git push --force origin HEAD:deploy
+          git diff --staged --quiet || git commit -m "Deploy $(date -u '+%Y-%m-%d %H:%M') UTC"
+          git push origin deploy
