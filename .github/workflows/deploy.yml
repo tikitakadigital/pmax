@@ -34,6 +34,8 @@ jobs:
             tasks:
               - export DEPLOYPATH=$HOME/public_html/
               - /bin/rsync -av --delete --exclude='.cpanel.yml' --exclude='.git' . $DEPLOYPATH
+              - find $DEPLOYPATH -type d -exec chmod 755 {} \;
+              - find $DEPLOYPATH -type f -exec chmod 644 {} \;
           EOF
 
           BUILD_DIR="$(pwd)/out"
