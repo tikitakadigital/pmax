@@ -24,22 +24,21 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: Deploy via SFTP
-        timeout-minutes: 30
-        env:
-          FTP_HOST: ${{ secrets.FTP_HOST }}
-          FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
-          FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+      - name: Push build to deploy branch
         run: |
-          sudo apt-get install -y lftp
-          mkdir -p ~/.lftp
-          cat > ~/.lftp/rc << 'EOF'
-          set sftp:auto-confirm yes
-          set net:timeout 120
-          set net:max-retries 3
-          set net:reconnect-interval-base 10
-          set net:idle 30
-          set sftp:max-packets-in-flight 16
+          cat > out/.cpanel.yml << 'EOF'
+          ---
+          deployment:
+            tasks:
+              - export DEPLOYPATH=/home/$USER/public_html/
+              - /bin/rsync -av --delete --exclude='.cpanel.yml' --exclude='.git' . $DEPLOYPATH
           EOF
-          lftp -u "$FTP_USERNAME","$FTP_PASSWORD" "sftp://$FTP_HOST" \
-            -e "mirror -R --delete --verbose out/ public_html/; quit"
+
+          cd out
+          git init
+          git config user.email "ci@pmax.online"
+          git config user.name "pmax CI"
+          git add -A
+          git commit -m "Deploy $(date -u '+%Y-%m-%d %H:%M') UTC"
+          git remote add origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/tikitakadigital/pmax.git
+          git push --force origin HEAD:deploy
