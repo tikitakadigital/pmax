@@ -228,6 +228,7 @@ export default function ContactForm({ locale = 'en' }: { locale?: Locale }) {
             <div style="font-size:13px;color:#666;margin-top:4px">New enquiry from <strong>${company}</strong></div>
           </div>
           ${[
+            ['Language', locale.toUpperCase()],
             ['Name', name],
             ['Company', company],
             ['Email', `<a href="mailto:${email}" style="color:#111">${email}</a>`],
