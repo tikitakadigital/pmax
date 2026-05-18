@@ -259,7 +259,7 @@ export default function ContactForm({ locale = 'en' }: { locale?: Locale }) {
       </div></body></html>`
 
     try {
-      const res = await fetch('https://pmax-mailer.old-feather-370a.workers.dev', {
+      const res = await fetch('https://pmax-mailer.long-math-4fe4.workers.dev', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify([
