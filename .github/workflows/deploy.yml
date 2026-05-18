@@ -40,4 +40,4 @@ jobs:
           set mirror:use-pget-n 4
           EOF
           lftp -u "$FTP_USERNAME","$FTP_PASSWORD" "sftp://$FTP_HOST" \
-            -e "mirror -R --delete --verbose out/ /public_html/; quit"
+            -e "mirror -R --delete --verbose out/ public_html/; quit"
