@@ -32,9 +32,8 @@ jobs:
           ---
           deployment:
             tasks:
-              - export DEPLOYPATH=$HOME/public_html/
-              - /bin/rsync -rl --size-only --chmod=Du=rwx,Dgo=rx,Fu=rw,Fgo=r --exclude='.cpanel.yml' --exclude='.git' . $DEPLOYPATH
-              - chmod 755 $DEPLOYPATH
+              - /bin/rsync -rl --size-only --chmod=Du=rwx,Dgo=rx,Fu=rw,Fgo=r --exclude='.cpanel.yml' --exclude='.git' . $HOME/public_html/
+              - chmod 755 $HOME/public_html/
           EOF
 
           BUILD_DIR="$(pwd)/out"
