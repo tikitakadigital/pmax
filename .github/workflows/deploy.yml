@@ -32,7 +32,7 @@ jobs:
           ---
           deployment:
             tasks:
-              - chmod 755 ~/public_html && /bin/rsync -rl --size-only --chmod=Du=rwx,Dgo=rx,Fu=rw,Fgo=r --exclude='.cpanel.yml' --exclude='.git' . ~/public_html/ && chmod 755 ~/public_html
+              - /bin/rsync -rl --size-only --exclude='.cpanel.yml' --exclude='.git' . ~/public_html/ && chmod -R a=rX,u+w ~/public_html/
           EOF
 
           BUILD_DIR="$(pwd)/out"
