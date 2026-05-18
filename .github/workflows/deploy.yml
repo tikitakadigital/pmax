@@ -32,7 +32,7 @@ jobs:
           ---
           deployment:
             tasks:
-              - /bin/rsync -rl --size-only --exclude='.cpanel.yml' --exclude='.git' . ~/public_html/ && chmod -R a=rX,u+w ~/public_html/
+              - rsync -rl --size-only --exclude='.cpanel.yml' --exclude='.git' . ~/public_html/ ; chmod -R a=rX,u+w ~/public_html/
           EOF
 
           BUILD_DIR="$(pwd)/out"
