@@ -53,3 +53,10 @@ jobs:
           git add -A
           git diff --staged --quiet || git commit -m "Deploy $(date -u '+%Y-%m-%d %H:%M') UTC"
           git push origin deploy
+
+      - name: Trigger cPanel deployment
+        run: |
+          curl -s -X POST \
+            -H "Authorization: cpanel pmax:${{ secrets.CPANEL_API_TOKEN }}" \
+            "https://rs00011.dp.smartservers.com.au:2083/execute/VersionControlDeployment/create" \
+            -d 'repository=/home1/pmax/repositories/pmax'
