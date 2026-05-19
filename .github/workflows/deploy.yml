@@ -45,12 +45,21 @@ jobs:
       - name: Package and deploy via PHP webhook
         run: |
           cd out && zip -r /tmp/deploy.zip .
-          RESP=$(curl -sS -X POST \
+
+          # Upload ZIP to home dir via cPanel API (port 2083, bypasses ModSecurity)
+          UPLOAD=$(curl -sS -X POST \
+            -H "Authorization: cpanel pmax:${{ secrets.CPANEL_API_TOKEN }}" \
+            "https://rs00011.dp.smartservers.com.au:2083/execute/Fileman/upload_files" \
+            -F "dir=/home1/pmax" \
+            -F "file-1=@/tmp/deploy.zip;filename=deploy_pending.zip")
+          echo "Upload response: $UPLOAD"
+
+          # Trigger PHP webhook via GET (no body — reads ZIP from local filesystem)
+          RESP=$(curl -sS \
             -H "X-Deploy-Secret: ${{ secrets.DEPLOY_SECRET }}" \
-            -H "Content-Type: application/zip" \
-            --data-binary @/tmp/deploy.zip \
             --max-time 180 \
             https://pmax.online/_deploy.php)
           echo "Deploy response: $RESP"
+
           HTTP=$(curl -s -o /dev/null -w "%{http_code}" https://pmax.online)
           echo "Site status: $HTTP"

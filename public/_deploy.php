@@ -1,5 +1,6 @@
 <?php
 define('SECRET', '%%DEPLOY_SECRET%%');
+define('ZIP_PATH', '/home1/pmax/deploy_pending.zip');
 
 if (
     empty($_SERVER['HTTP_X_DEPLOY_SECRET']) ||
@@ -12,28 +13,21 @@ if (
 set_time_limit(180);
 ini_set('memory_limit', '256M');
 
-$payload = file_get_contents('php://input');
-if (strlen($payload) < 100) {
-    http_response_code(400);
-    exit('Empty payload');
-}
-
-$tmp = sys_get_temp_dir() . '/deploy_' . uniqid() . '.zip';
-if (file_put_contents($tmp, $payload) === false) {
-    http_response_code(500);
-    exit('Write failed');
+if (!file_exists(ZIP_PATH)) {
+    http_response_code(404);
+    exit('No pending deploy found at ' . ZIP_PATH);
 }
 
 $zip = new ZipArchive();
-if ($zip->open($tmp) !== true) {
-    unlink($tmp);
+if ($zip->open(ZIP_PATH) !== true) {
+    unlink(ZIP_PATH);
     http_response_code(500);
     exit('ZIP open failed');
 }
 
 $zip->extractTo(__DIR__);
 $zip->close();
-unlink($tmp);
+unlink(ZIP_PATH);
 
 @chmod(__DIR__, 0755);
 
