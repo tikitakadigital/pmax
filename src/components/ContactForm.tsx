@@ -110,7 +110,7 @@ function makeRef(prefix: string) {
 
 type Locale = 'en' | 'de' | 'es'
 
-function SuccessPanel({ t, blogHref }: { t: typeof strings.en; blogHref: string }) {
+function SuccessPanel({ t, blogHref, ref }: { t: typeof strings.en; blogHref: string; ref: string }) {
   return (
     <div className="cf-result" role="status" aria-live="polite">
       <div className="cf-mark" aria-hidden="true">
@@ -124,7 +124,7 @@ function SuccessPanel({ t, blogHref }: { t: typeof strings.en; blogHref: string 
       </div>
       <div className="cf-meta">
         <span className="cf-stamp"><span className="cf-stamp-dot" />{t.receivedLabel} · <span>{timeNow()}</span></span>
-        <span className="cf-ref">REF · <span>{makeRef('A')}</span></span>
+        <span className="cf-ref">REF · <span>{ref}</span></span>
       </div>
       <h2 className="cf-title">{t.successTitle}</h2>
       <p className="cf-deck">{t.successDeck}</p>
@@ -164,6 +164,7 @@ function ErrorPanel({ t, onRetry }: { t: typeof strings.en; onRetry: () => void 
 
 export default function ContactForm({ locale = 'en' }: { locale?: Locale }) {
   const [state, setState] = useState<State>('form')
+  const [enquiryRef, setEnquiryRef] = useState('')
   const [loadedAt, setLoadedAt] = useState('')
   const formRef = useRef<HTMLFormElement>(null)
 
@@ -176,6 +177,7 @@ export default function ContactForm({ locale = 'en' }: { locale?: Locale }) {
     e.preventDefault()
     if (!e.currentTarget.checkValidity()) { e.currentTarget.reportValidity(); return }
     setState('sending')
+    const ref = makeRef('A')
     const d = Object.fromEntries(new FormData(e.currentTarget))
     const name = String(d.name ?? '')
     const company = String(d.company ?? '')
@@ -230,6 +232,7 @@ export default function ContactForm({ locale = 'en' }: { locale?: Locale }) {
             <div style="font-size:13px;color:#666;margin-top:4px">New enquiry from <strong>${company}</strong></div>
           </div>
           ${[
+            ['Ref', ref],
             ['Language', locale.toUpperCase()],
             ['Name', name],
             ['Company', company],
@@ -251,6 +254,7 @@ export default function ContactForm({ locale = 'en' }: { locale?: Locale }) {
           <div style="border-bottom:2px solid #3cffd0;padding-bottom:16px;margin-bottom:24px">
             <div style="font-size:22px;font-weight:900;color:#111;letter-spacing:-0.5px">pmax<span style="color:#3cffd0">.</span></div>
           </div>
+          <p style="font-size:13px;font-family:monospace;color:#949494;margin:0 0 20px">REF: ${ref}</p>
           <p style="font-size:15px;color:#111;margin:0 0 16px">${autoReply.greeting}</p>
           <p style="font-size:15px;color:#111;margin:0 0 16px;line-height:1.6">${autoReply.body}</p>
           <p style="font-size:15px;color:#111;margin:0 0 4px">${autoReply.urgent}</p>
@@ -283,6 +287,7 @@ export default function ContactForm({ locale = 'en' }: { locale?: Locale }) {
       })
       const json = await res.json()
       if (json.data) {
+        setEnquiryRef(ref)
         setState('success')
         window.dataLayer = window.dataLayer || []
         window.dataLayer.push({
@@ -304,7 +309,7 @@ export default function ContactForm({ locale = 'en' }: { locale?: Locale }) {
     formRef.current?.reset()
   }
 
-  if (state === 'success') return <SuccessPanel t={t} blogHref={blogHref} />
+  if (state === 'success') return <SuccessPanel t={t} blogHref={blogHref} ref={enquiryRef} />
   if (state === 'error') return <ErrorPanel t={t} onRetry={retry} />
 
   const sending = state === 'sending'
