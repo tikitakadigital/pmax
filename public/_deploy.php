@@ -1,6 +1,5 @@
 <?php
 define('SECRET', '%%DEPLOY_SECRET%%');
-define('ZIP_PATH', '/home1/pmax/deploy_pending.zip');
 
 if (
     empty($_SERVER['HTTP_X_DEPLOY_SECRET']) ||
@@ -13,21 +12,31 @@ if (
 set_time_limit(180);
 ini_set('memory_limit', '256M');
 
-if (!file_exists(ZIP_PATH)) {
+$zip_file = isset($_SERVER['HTTP_X_DEPLOY_FILE']) ? basename($_SERVER['HTTP_X_DEPLOY_FILE']) : '';
+if (!$zip_file || !preg_match('/^deploy_[0-9]+\.zip$/', $zip_file)) {
+    http_response_code(400);
+    exit('Missing or invalid X-Deploy-File header');
+}
+
+$zip_path = '/home1/pmax/' . $zip_file;
+if (!file_exists($zip_path)) {
     http_response_code(404);
-    exit('No pending deploy found at ' . ZIP_PATH);
+    exit('Deploy file not found: ' . $zip_path);
 }
 
 $zip = new ZipArchive();
-if ($zip->open(ZIP_PATH) !== true) {
-    unlink(ZIP_PATH);
+if ($zip->open($zip_path) !== true) {
     http_response_code(500);
     exit('ZIP open failed');
 }
 
 $zip->extractTo(__DIR__);
 $zip->close();
-unlink(ZIP_PATH);
+
+// Clean up all deploy ZIPs (including any old deploy_pending.zip)
+foreach (glob('/home1/pmax/deploy_*.zip') as $f) {
+    @unlink($f);
+}
 
 // Fix permissions recursively (PHP umask can create files at 600/700)
 $iter = new RecursiveIteratorIterator(

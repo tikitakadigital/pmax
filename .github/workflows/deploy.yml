@@ -33,24 +33,21 @@ jobs:
 
       - name: Package and deploy via PHP webhook
         run: |
-          cd out && zip -r /tmp/deploy.zip .
+          TS=$(date +%s)
+          ZIP_FILE="deploy_${TS}.zip"
 
-          # Delete old ZIP if it exists (upload fails on existing files)
-          DEL=$(curl -sS -X POST \
-            -H "Authorization: cpanel pmax:${{ secrets.CPANEL_API_TOKEN }}" \
-            "https://rs00011.dp.smartservers.com.au:2083/execute/Fileman/delete_files" \
-            -d 'files[0][dir]=/home1/pmax&files[0][file]=deploy_pending.zip')
-          echo "Delete old ZIP: $DEL"
+          # Zip in subshell so working dir stays at workspace root
+          (cd out && zip -r /tmp/${ZIP_FILE} .)
 
-          # Upload new ZIP via cPanel API (port 2083, bypasses ModSecurity)
+          # Upload ZIP with unique timestamped name (no conflict with old files)
           UPLOAD=$(curl -sS -X POST \
             -H "Authorization: cpanel pmax:${{ secrets.CPANEL_API_TOKEN }}" \
             "https://rs00011.dp.smartservers.com.au:2083/execute/Fileman/upload_files" \
             -F "dir=/home1/pmax" \
-            -F "file-1=@/tmp/deploy.zip;filename=deploy_pending.zip")
+            -F "file-1=@/tmp/${ZIP_FILE};filename=${ZIP_FILE}")
           echo "Upload: $UPLOAD"
 
-          # Write new _deploy.php via Fileman so the correct version runs the extraction
+          # Bootstrap new _deploy.php via Fileman before triggering
           BOOT=$(curl -sS -X POST \
             -H "Authorization: cpanel pmax:${{ secrets.CPANEL_API_TOKEN }}" \
             "https://rs00011.dp.smartservers.com.au:2083/execute/Fileman/save_file_content" \
@@ -60,9 +57,10 @@ jobs:
             -d "charset=utf-8")
           echo "Bootstrap: $BOOT"
 
-          # Trigger webhook (GET, no body — PHP reads ZIP from /home1/pmax/)
+          # Trigger webhook — PHP reads ZIP by name, extracts, fixes perms, cleans up
           RESP=$(curl -sS \
             -H "X-Deploy-Secret: ${{ secrets.DEPLOY_SECRET }}" \
+            -H "X-Deploy-File: ${ZIP_FILE}" \
             --max-time 180 \
             https://pmax.online/_deploy.php)
           echo "Deploy: $RESP"
