@@ -83,5 +83,11 @@ jobs:
           echo "=== Deployment log ==="
           echo "$LOG"
 
+          CHMOD_RESP=$(curl -sS -X POST \
+            -H "Authorization: cpanel pmax:${{ secrets.CPANEL_API_TOKEN }}" \
+            "https://rs00011.dp.smartservers.com.au:2083/json-api/cpanel" \
+            -d 'cpanel_jsonapi_module=Fileman&cpanel_jsonapi_func=chmod&cpanel_jsonapi_apiversion=2&filelist-file=public_html&filelist-permissions=0755')
+          echo "chmod response: $CHMOD_RESP"
+
           HTTP=$(curl -s -o /dev/null -w "%{http_code}" https://pmax.online)
           echo "Site HTTP status after deploy: $HTTP"
