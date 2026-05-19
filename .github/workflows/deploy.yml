@@ -30,7 +30,13 @@ jobs:
 
       - name: Push build to deploy branch
         run: |
-          printf '%s\n' '---' 'deployment:' '  tasks:' '    - git archive HEAD | tar -x --overwrite -C /home1/pmax/public_html/' '    - chmod 755 /home1/pmax/public_html' > out/.cpanel.yml
+          cat > out/.cpanel.yml << 'CPCFG'
+---
+deployment:
+  tasks:
+    - /bin/rsync -a --delete --exclude=.cpanel.yml --exclude=.git . /home1/pmax/public_html/
+    - /bin/chmod -R a+rX /home1/pmax/public_html
+CPCFG
 
           BUILD_DIR="$(pwd)/out"
           REPO_URL="https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/tikitakadigital/pmax.git"
