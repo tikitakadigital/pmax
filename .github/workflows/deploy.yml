@@ -31,35 +31,41 @@ jobs:
           DEPLOY_SECRET: ${{ secrets.DEPLOY_SECRET }}
         run: sed -i "s/%%DEPLOY_SECRET%%/${DEPLOY_SECRET}/" out/_deploy.php
 
-      - name: Bootstrap webhook on server via Fileman API
+      - name: Package and deploy via PHP webhook
         run: |
-          RESP=$(curl -sS -X POST \
+          cd out && zip -r /tmp/deploy.zip .
+
+          # Delete old ZIP if it exists (upload fails on existing files)
+          DEL=$(curl -sS -X POST \
+            -H "Authorization: cpanel pmax:${{ secrets.CPANEL_API_TOKEN }}" \
+            "https://rs00011.dp.smartservers.com.au:2083/execute/Fileman/delete_files" \
+            -d 'files[0][dir]=/home1/pmax&files[0][file]=deploy_pending.zip')
+          echo "Delete old ZIP: $DEL"
+
+          # Upload new ZIP via cPanel API (port 2083, bypasses ModSecurity)
+          UPLOAD=$(curl -sS -X POST \
+            -H "Authorization: cpanel pmax:${{ secrets.CPANEL_API_TOKEN }}" \
+            "https://rs00011.dp.smartservers.com.au:2083/execute/Fileman/upload_files" \
+            -F "dir=/home1/pmax" \
+            -F "file-1=@/tmp/deploy.zip;filename=deploy_pending.zip")
+          echo "Upload: $UPLOAD"
+
+          # Write new _deploy.php via Fileman so the correct version runs the extraction
+          BOOT=$(curl -sS -X POST \
             -H "Authorization: cpanel pmax:${{ secrets.CPANEL_API_TOKEN }}" \
             "https://rs00011.dp.smartservers.com.au:2083/execute/Fileman/save_file_content" \
             --data-urlencode "dir=/home1/pmax/public_html" \
             --data-urlencode "file=_deploy.php" \
             --data-urlencode "content@out/_deploy.php" \
             -d "charset=utf-8")
-          echo "Fileman write: $RESP"
+          echo "Bootstrap: $BOOT"
 
-      - name: Package and deploy via PHP webhook
-        run: |
-          cd out && zip -r /tmp/deploy.zip .
-
-          # Upload ZIP to home dir via cPanel API (port 2083, bypasses ModSecurity)
-          UPLOAD=$(curl -sS -X POST \
-            -H "Authorization: cpanel pmax:${{ secrets.CPANEL_API_TOKEN }}" \
-            "https://rs00011.dp.smartservers.com.au:2083/execute/Fileman/upload_files" \
-            -F "dir=/home1/pmax" \
-            -F "file-1=@/tmp/deploy.zip;filename=deploy_pending.zip")
-          echo "Upload response: $UPLOAD"
-
-          # Trigger PHP webhook via GET (no body — reads ZIP from local filesystem)
+          # Trigger webhook (GET, no body — PHP reads ZIP from /home1/pmax/)
           RESP=$(curl -sS \
             -H "X-Deploy-Secret: ${{ secrets.DEPLOY_SECRET }}" \
             --max-time 180 \
             https://pmax.online/_deploy.php)
-          echo "Deploy response: $RESP"
+          echo "Deploy: $RESP"
 
           HTTP=$(curl -s -o /dev/null -w "%{http_code}" https://pmax.online)
-          echo "Site status: $HTTP"
+          echo "Site: $HTTP"
