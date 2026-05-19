@@ -77,7 +77,7 @@
    ============================================================ */
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; background: var(--color-canvas); color: var(--color-text-primary); font-family: var(--font-sans); font-size: 16px; line-height: 1.6; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
-body { min-height: 100vh; overflow-x: clip; }
+body { min-height: 100vh; overflow-x: hidden; }
 .cursor-dot { position: fixed; top: -7px; left: -7px; width: 14px; height: 14px; border-radius: 50%; background: var(--color-jelly-mint); box-shadow: 0 0 18px var(--color-jelly-mint); pointer-events: none; z-index: 9999; transform: translate(-100px, -100px); will-change: transform; }
 @media (pointer: coarse) { .cursor-dot { display: none; } }
 img, svg, video { max-width: 100%; display: block; }
@@ -105,9 +105,9 @@ a:hover { color: var(--color-link-hover); }
 .nav-link:hover::after, .nav-link.active::after { transform: scaleX(1); }
 .nav-right { display: flex; align-items: center; gap: 14px; margin-left: auto; }
 .lang-switch { display: inline-flex; align-items: center; gap: 0; border: 1px solid #2d2d2d; border-radius: 30px; padding: 2px; }
-.lang-switch button { background: transparent; border: 0; font-family: var(--font-mono); font-size: 10px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #949494; cursor: pointer; padding: 6px 10px; border-radius: 20px; transition: all 150ms var(--ease-default); }
-.lang-switch button[aria-pressed="true"] { background: var(--color-jelly-mint); color: #000; }
-.lang-switch button:hover:not([aria-pressed="true"]) { color: #fff; }
+.lang-switch a { background: transparent; font-family: var(--font-mono); font-size: 10px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #949494; padding: 6px 10px; border-radius: 20px; transition: all 150ms var(--ease-default); display: inline-block; }
+.lang-switch a[aria-current="page"] { background: var(--color-jelly-mint); color: #000; }
+.lang-switch a:hover:not([aria-current="page"]) { color: #fff; }
 .nav-cta { background: var(--color-jelly-mint); color: #000; font-family: var(--font-mono); font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; padding: 10px 18px; border-radius: 24px; display: inline-flex; align-items: center; gap: 6px; transition: background 180ms var(--ease-default), box-shadow 180ms var(--ease-default); }
 .nav-cta:hover { background: rgba(255,255,255,0.2); box-shadow: 0 0 0 1px #c2c2c2; color: #000; }
 .nav-cta .arrow { transition: transform 180ms var(--ease-default); }

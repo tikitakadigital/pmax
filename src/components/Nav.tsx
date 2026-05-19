@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
-import { usePathname, useRouter } from 'next/navigation'
+import { usePathname } from 'next/navigation'
 
 const labels = {
   en: { services: 'Services', industries: 'Industries', cases: 'Work', blog: 'Journal', about: 'About', cta: 'Start a project' },
@@ -21,12 +21,11 @@ function detectLocale(pathname: string): Locale {
 function switchedPath(pathname: string, target: Locale): string {
   const stripped = pathname.replace(/^\/(de|es)/, '') || '/'
   if (target === 'en') return stripped
-  return `/${target}${stripped === '/' ? '' : stripped}`
+  return `/${target}${stripped === '/' ? '/' : stripped}`
 }
 
 export default function Nav() {
   const pathname = usePathname()
-  const router = useRouter()
   const [open, setOpen] = useState(false)
 
   const locale = detectLocale(pathname)
@@ -53,10 +52,6 @@ export default function Nav() {
     return pathname.startsWith(href)
   }
 
-  function handleLangSwitch(target: Locale) {
-    router.push(switchedPath(pathname, target))
-  }
-
   return (
     <>
       <a href="#main" className="skip-link">Skip to content</a>
@@ -77,9 +72,11 @@ export default function Nav() {
 
           <div className="nav-right">
             <div className="lang-switch" role="group" aria-label="Language">
-              <button type="button" aria-pressed={locale === 'en'} onClick={() => handleLangSwitch('en')}>EN</button>
-              <button type="button" aria-pressed={locale === 'de'} onClick={() => handleLangSwitch('de')}>DE</button>
-              <button type="button" aria-pressed={locale === 'es'} onClick={() => handleLangSwitch('es')}>ES</button>
+              {(['en', 'de', 'es'] as Locale[]).map(l => (
+                <Link key={l} href={switchedPath(pathname, l)} aria-current={locale === l ? 'page' : undefined}>
+                  {l.toUpperCase()}
+                </Link>
+              ))}
             </div>
             <Link href={`${prefix}/contact`} className="nav-cta">
               {t.cta} <span className="arrow" aria-hidden="true">→</span>
@@ -113,21 +110,21 @@ export default function Nav() {
         </div>
         <div className="nav-drawer-lang">
           {(['en', 'de', 'es'] as Locale[]).map(l => (
-            <button
+            <Link
               key={l}
-              type="button"
-              onClick={() => handleLangSwitch(l)}
+              href={switchedPath(pathname, l)}
+              aria-current={locale === l ? 'page' : undefined}
               style={{
                 fontFamily: 'var(--font-mono)', fontSize: 11, fontWeight: 700,
                 letterSpacing: '1.5px', textTransform: 'uppercase',
                 padding: '8px 14px', border: '1px solid',
                 borderColor: locale === l ? 'var(--color-jelly-mint)' : '#2d2d2d',
                 color: locale === l ? 'var(--color-jelly-mint)' : '#949494',
-                background: 'transparent', cursor: 'pointer', borderRadius: 20,
+                borderRadius: 20, display: 'inline-block',
               }}
             >
               {l.toUpperCase()}
-            </button>
+            </Link>
           ))}
         </div>
         <ul className="nav-drawer-links">
