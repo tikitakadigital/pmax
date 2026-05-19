@@ -64,3 +64,19 @@ jobs:
             -d 'repository_root=/home1/pmax/repositories/pmax')
           echo "cPanel API response: $RESPONSE"
           echo "$RESPONSE" | grep -q '"status":1' && echo "Deployment triggered successfully" || echo "WARNING: unexpected response"
+
+          LOG_PATH=$(echo "$RESPONSE" | grep -o '"log_path":"[^"]*"' | cut -d'"' -f4)
+          echo "Waiting 60s for cPanel to finish deployment..."
+          sleep 60
+
+          LOG_DIR=$(dirname "$LOG_PATH")
+          LOG_FILE=$(basename "$LOG_PATH")
+          LOG=$(curl -sS \
+            -H "Authorization: cpanel pmax:${{ secrets.CPANEL_API_TOKEN }}" \
+            "https://rs00011.dp.smartservers.com.au:2083/execute/Fileman/get_file_content" \
+            -d "dir=${LOG_DIR}&file=${LOG_FILE}")
+          echo "=== Deployment log ==="
+          echo "$LOG"
+
+          HTTP=$(curl -s -o /dev/null -w "%{http_code}" https://pmax.online)
+          echo "Site HTTP status after deploy: $HTTP"
