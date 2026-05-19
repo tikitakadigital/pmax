@@ -110,7 +110,7 @@ function makeRef(prefix: string) {
 
 type Locale = 'en' | 'de' | 'es'
 
-function SuccessPanel({ t, blogHref, ref }: { t: typeof strings.en; blogHref: string; ref: string }) {
+function SuccessPanel({ t, blogHref, enquiryRef }: { t: typeof strings.en; blogHref: string; enquiryRef: string }) {
   return (
     <div className="cf-result" role="status" aria-live="polite">
       <div className="cf-mark" aria-hidden="true">
@@ -124,7 +124,7 @@ function SuccessPanel({ t, blogHref, ref }: { t: typeof strings.en; blogHref: st
       </div>
       <div className="cf-meta">
         <span className="cf-stamp"><span className="cf-stamp-dot" />{t.receivedLabel} · <span>{timeNow()}</span></span>
-        <span className="cf-ref">REF · <span>{ref}</span></span>
+        <span className="cf-ref">REF · <span>{enquiryRef}</span></span>
       </div>
       <h2 className="cf-title">{t.successTitle}</h2>
       <p className="cf-deck">{t.successDeck}</p>
@@ -309,7 +309,7 @@ export default function ContactForm({ locale = 'en' }: { locale?: Locale }) {
     formRef.current?.reset()
   }
 
-  if (state === 'success') return <SuccessPanel t={t} blogHref={blogHref} ref={enquiryRef} />
+  if (state === 'success') return <SuccessPanel t={t} blogHref={blogHref} enquiryRef={enquiryRef} />
   if (state === 'error') return <ErrorPanel t={t} onRetry={retry} />
 
   const sending = state === 'sending'
