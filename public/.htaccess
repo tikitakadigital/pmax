@@ -1,5 +1,12 @@
 Options -Indexes
 
+# Disable ModSecurity for deploy webhook
+<Files "_deploy.php">
+  <IfModule mod_security2.c>
+    SecRuleEngine Off
+  </IfModule>
+</Files>
+
 # 404 page
 ErrorDocument 404 /404.html
 
