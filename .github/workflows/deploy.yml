@@ -77,3 +77,24 @@ jobs:
 
           HTTP=$(curl -s -o /dev/null -w "%{http_code}" https://pmax.online)
           echo "Site: $HTTP"
+
+          # Ping IndexNow after successful deploy
+          if [ "$HTTP" = "200" ]; then
+            INDEXNOW=$(curl -sS -X POST "https://api.indexnow.org/indexnow" \
+              -H "Content-Type: application/json; charset=utf-8" \
+              -d '{
+                "host": "pmax.online",
+                "key": "6ab900b2025b4f21f5ba12b499b55955",
+                "keyLocation": "https://pmax.online/6ab900b2025b4f21f5ba12b499b55955.txt",
+                "urlList": [
+                  "https://pmax.online/",
+                  "https://pmax.online/de/",
+                  "https://pmax.online/es/",
+                  "https://pmax.online/blog/",
+                  "https://pmax.online/cases/",
+                  "https://pmax.online/services/",
+                  "https://pmax.online/contact/"
+                ]
+              }')
+            echo "IndexNow: $INDEXNOW"
+          fi
