@@ -57,6 +57,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       description: post.deck,
       type: 'article',
       publishedTime: post.date,
+      images: [{ url: '/og-image.jpg', width: 1200, height: 630 }],
     },
   }
 }
