@@ -63,6 +63,14 @@ jobs:
 
       - name: Trigger cPanel deployment
         run: |
+          # Add a temporary cron to fix public_html permissions after rsync resets them to 700
+          CRON_CMD="/bin/chmod 755 /home1/pmax/public_html"
+          ADD_CRON=$(curl -sS -X POST \
+            -H "Authorization: cpanel pmax:${{ secrets.CPANEL_API_TOKEN }}" \
+            "https://rs00011.dp.smartservers.com.au:2083/execute/Cron/add_line" \
+            -d "command=${CRON_CMD}&minute=*&hour=*&day=*&month=*&weekday=*")
+          echo "Add cron response: $ADD_CRON"
+
           RESPONSE=$(curl -sS -X POST \
             -H "Authorization: cpanel pmax:${{ secrets.CPANEL_API_TOKEN }}" \
             "https://rs00011.dp.smartservers.com.au:2083/execute/VersionControlDeployment/create" \
@@ -70,24 +78,15 @@ jobs:
           echo "cPanel API response: $RESPONSE"
           echo "$RESPONSE" | grep -q '"status":1' && echo "Deployment triggered successfully" || echo "WARNING: unexpected response"
 
-          LOG_PATH=$(echo "$RESPONSE" | grep -o '"log_path":"[^"]*"' | cut -d'"' -f4)
-          echo "Waiting 60s for cPanel to finish deployment..."
-          sleep 60
+          echo "Waiting 90s for deployment + cron to run..."
+          sleep 90
 
-          LOG_DIR=$(dirname "$LOG_PATH")
-          LOG_FILE=$(basename "$LOG_PATH")
-          LOG=$(curl -sS \
+          # Remove the temporary cron
+          RM_CRON=$(curl -sS -X POST \
             -H "Authorization: cpanel pmax:${{ secrets.CPANEL_API_TOKEN }}" \
-            "https://rs00011.dp.smartservers.com.au:2083/execute/Fileman/get_file_content" \
-            -d "dir=${LOG_DIR}&file=${LOG_FILE}")
-          echo "=== Deployment log ==="
-          echo "$LOG"
-
-          CHMOD_RESP=$(curl -sS -X POST \
-            -H "Authorization: cpanel pmax:${{ secrets.CPANEL_API_TOKEN }}" \
-            "https://rs00011.dp.smartservers.com.au:2083/execute/Fileman/chmod" \
-            -d 'filelist=[{"file":"public_html","permissions":"0755"}]')
-          echo "chmod response: $CHMOD_RESP"
+            "https://rs00011.dp.smartservers.com.au:2083/execute/Cron/remove_line" \
+            -d "command=${CRON_CMD}&minute=*&hour=*&day=*&month=*&weekday=*")
+          echo "Remove cron response: $RM_CRON"
 
           HTTP=$(curl -s -o /dev/null -w "%{http_code}" https://pmax.online)
           echo "Site HTTP status after deploy: $HTTP"
