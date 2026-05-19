@@ -61,6 +61,6 @@ jobs:
           RESPONSE=$(curl -sS -X POST \
             -H "Authorization: cpanel pmax:${{ secrets.CPANEL_API_TOKEN }}" \
             "https://rs00011.dp.smartservers.com.au:2083/execute/VersionControlDeployment/create" \
-            -d 'repository=/home1/pmax/repositories/pmax')
+            -d 'repository_root=/home1/pmax/repositories/pmax')
           echo "cPanel API response: $RESPONSE"
           echo "$RESPONSE" | grep -q '"status":1' && echo "Deployment triggered successfully" || echo "WARNING: unexpected response"
