@@ -78,23 +78,18 @@ jobs:
           HTTP=$(curl -s -o /dev/null -w "%{http_code}" https://pmax.online)
           echo "Site: $HTTP"
 
-          # Ping IndexNow after successful deploy
+          # Ping IndexNow with all URLs from sitemap after successful deploy
           if [ "$HTTP" = "200" ]; then
+            URLS=$(python3 -c "
+import xml.etree.ElementTree as ET, json
+root = ET.parse('out/sitemap.xml').getroot()
+ns = {'s': 'http://www.sitemaps.org/schemas/sitemap/0.9'}
+urls = [u.find('s:loc', ns).text for u in root.findall('s:url', ns) if u.find('s:loc', ns) is not None]
+print(json.dumps(urls))
+")
+            echo "Submitting $(echo $URLS | python3 -c 'import sys,json; print(len(json.load(sys.stdin)))') URLs to IndexNow"
             INDEXNOW=$(curl -sS -X POST "https://api.indexnow.org/indexnow" \
               -H "Content-Type: application/json; charset=utf-8" \
-              -d '{
-                "host": "pmax.online",
-                "key": "6ab900b2025b4f21f5ba12b499b55955",
-                "keyLocation": "https://pmax.online/6ab900b2025b4f21f5ba12b499b55955.txt",
-                "urlList": [
-                  "https://pmax.online/",
-                  "https://pmax.online/de/",
-                  "https://pmax.online/es/",
-                  "https://pmax.online/blog/",
-                  "https://pmax.online/cases/",
-                  "https://pmax.online/services/",
-                  "https://pmax.online/contact/"
-                ]
-              }')
+              -d "{\"host\":\"pmax.online\",\"key\":\"6ab900b2025b4f21f5ba12b499b55955\",\"keyLocation\":\"https://pmax.online/6ab900b2025b4f21f5ba12b499b55955.txt\",\"urlList\":${URLS}}")
             echo "IndexNow: $INDEXNOW"
           fi
