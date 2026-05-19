@@ -30,7 +30,7 @@ jobs:
 
       - name: Push build to deploy branch
         run: |
-          printf '%s\n' '---' 'deployment:' '  tasks:' '    - git archive HEAD | tar -x --overwrite -C /home1/pmax/public_html/' > out/.cpanel.yml
+          printf '%s\n' '---' 'deployment:' '  tasks:' '    - git archive HEAD | tar -x --overwrite -C /home1/pmax/public_html/' '    - chmod 755 /home1/pmax/public_html' > out/.cpanel.yml
 
           BUILD_DIR="$(pwd)/out"
           REPO_URL="https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/tikitakadigital/pmax.git"
