@@ -29,6 +29,14 @@ $zip->extractTo(__DIR__);
 $zip->close();
 unlink(ZIP_PATH);
 
+// Fix permissions recursively (PHP umask can create files at 600/700)
+$iter = new RecursiveIteratorIterator(
+    new RecursiveDirectoryIterator(__DIR__, RecursiveDirectoryIterator::SKIP_DOTS),
+    RecursiveIteratorIterator::SELF_FIRST
+);
+foreach ($iter as $item) {
+    @chmod($item->getPathname(), $item->isDir() ? 0755 : 0644);
+}
 @chmod(__DIR__, 0755);
 
 header('Content-Type: text/plain');
