@@ -63,30 +63,12 @@ jobs:
 
       - name: Trigger cPanel deployment
         run: |
-          # Add a temporary cron to fix public_html permissions after rsync resets them to 700
-          CRON_CMD="/bin/chmod 755 /home1/pmax/public_html"
-          ADD_CRON=$(curl -sS -X POST \
-            -H "Authorization: cpanel pmax:${{ secrets.CPANEL_API_TOKEN }}" \
-            "https://rs00011.dp.smartservers.com.au:2083/execute/Cron/add_line" \
-            -d "command=${CRON_CMD}&minute=*&hour=*&day=*&month=*&weekday=*")
-          echo "Add cron response: $ADD_CRON"
-
           RESPONSE=$(curl -sS -X POST \
             -H "Authorization: cpanel pmax:${{ secrets.CPANEL_API_TOKEN }}" \
             "https://rs00011.dp.smartservers.com.au:2083/execute/VersionControlDeployment/create" \
             -d 'repository_root=/home1/pmax/repositories/pmax')
           echo "cPanel API response: $RESPONSE"
-          echo "$RESPONSE" | grep -q '"status":1' && echo "Deployment triggered successfully" || echo "WARNING: unexpected response"
-
-          echo "Waiting 90s for deployment + cron to run..."
-          sleep 90
-
-          # Remove the temporary cron
-          RM_CRON=$(curl -sS -X POST \
-            -H "Authorization: cpanel pmax:${{ secrets.CPANEL_API_TOKEN }}" \
-            "https://rs00011.dp.smartservers.com.au:2083/execute/Cron/remove_line" \
-            -d "command=${CRON_CMD}&minute=*&hour=*&day=*&month=*&weekday=*")
-          echo "Remove cron response: $RM_CRON"
-
+          echo "$RESPONSE" | grep -q '"status":1' && echo "Deployment triggered OK" || echo "WARNING: unexpected response"
+          sleep 30
           HTTP=$(curl -s -o /dev/null -w "%{http_code}" https://pmax.online)
-          echo "Site HTTP status after deploy: $HTTP"
+          echo "Site status: $HTTP"
