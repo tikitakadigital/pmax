@@ -268,7 +268,7 @@ export default function ContactForm({ locale = 'en' }: { locale?: Locale }) {
             from: 'pmax website <hello@pmax.online>',
             to: 'hello@pmax.online',
             reply_to: email,
-            subject: `New enquiry from ${company} — pmax.online`,
+            subject: `[${locale.toUpperCase()}] New enquiry from ${company} — pmax.online`,
             html: notificationHtml,
           },
           {
