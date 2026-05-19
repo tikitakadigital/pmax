@@ -288,6 +288,8 @@ export default function ContactForm({ locale = 'en' }: { locale?: Locale }) {
         window.dataLayer.push({
           event: 'generate_lead',
           form_locale: locale.toUpperCase(),
+          form_topic: topic || 'not_selected',
+          page_path: window.location.pathname,
         })
       } else {
         setState('error')
