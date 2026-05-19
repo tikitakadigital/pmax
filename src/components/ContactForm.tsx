@@ -3,6 +3,8 @@
 import { useState, useRef, useEffect } from 'react'
 import Link from 'next/link'
 
+declare global { interface Window { dataLayer: Record<string, unknown>[] } }
+
 type State = 'form' | 'sending' | 'success' | 'error'
 
 const strings = {
@@ -280,7 +282,16 @@ export default function ContactForm({ locale = 'en' }: { locale?: Locale }) {
         ]),
       })
       const json = await res.json()
-      setState(json.data ? 'success' : 'error')
+      if (json.data) {
+        setState('success')
+        window.dataLayer = window.dataLayer || []
+        window.dataLayer.push({
+          event: 'generate_lead',
+          form_locale: locale.toUpperCase(),
+        })
+      } else {
+        setState('error')
+      }
     } catch {
       setState('error')
     }
