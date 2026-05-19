@@ -9,8 +9,6 @@ jobs:
     runs-on: ubuntu-latest
     env:
       FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
-    permissions:
-      contents: write
 
     steps:
       - name: Checkout
@@ -28,47 +26,31 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: Push build to deploy branch
+      - name: Inject deploy secret into webhook script
+        env:
+          DEPLOY_SECRET: ${{ secrets.DEPLOY_SECRET }}
+        run: sed -i "s/%%DEPLOY_SECRET%%/${DEPLOY_SECRET}/" out/_deploy.php
+
+      - name: Bootstrap webhook on server via Fileman API
         run: |
-          printf '%s\n' \
-            'deployment:' \
-            '  tasks:' \
-            '    - /bin/rsync -a --delete --exclude=.cpanel.yml --exclude=.git . /home1/pmax/public_html/' \
-            '    - /bin/chmod -R a+rX /home1/pmax/public_html' \
-            > out/.cpanel.yml
-
-          BUILD_DIR="$(pwd)/out"
-          REPO_URL="https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/tikitakadigital/pmax.git"
-
-          mkdir /tmp/deploy_work && cd /tmp/deploy_work
-          git init
-          git config user.email "ci@pmax.online"
-          git config user.name "pmax CI"
-          git remote add origin "$REPO_URL"
-
-          # Fetch existing deploy branch to preserve history (enables fast-forward in cPanel)
-          git fetch origin deploy 2>/dev/null || true
-
-          if git show-ref --verify --quiet refs/remotes/origin/deploy; then
-            git checkout -b deploy origin/deploy
-            git rm -rf . --quiet
-          else
-            git checkout -b deploy
-          fi
-
-          cp -a "$BUILD_DIR/." .
-          git add -A
-          git diff --staged --quiet || git commit -m "Deploy $(date -u '+%Y-%m-%d %H:%M') UTC"
-          git push origin deploy
-
-      - name: Trigger cPanel deployment
-        run: |
-          RESPONSE=$(curl -sS -X POST \
+          RESP=$(curl -sS -X POST \
             -H "Authorization: cpanel pmax:${{ secrets.CPANEL_API_TOKEN }}" \
-            "https://rs00011.dp.smartservers.com.au:2083/execute/VersionControlDeployment/create" \
-            -d 'repository_root=/home1/pmax/repositories/pmax')
-          echo "cPanel API response: $RESPONSE"
-          echo "$RESPONSE" | grep -q '"status":1' && echo "Deployment triggered OK" || echo "WARNING: unexpected response"
-          sleep 30
+            "https://rs00011.dp.smartservers.com.au:2083/execute/Fileman/save_file_content" \
+            --data-urlencode "dir=/home1/pmax/public_html" \
+            --data-urlencode "file=_deploy.php" \
+            --data-urlencode "content@out/_deploy.php" \
+            -d "charset=utf-8")
+          echo "Fileman write: $RESP"
+
+      - name: Package and deploy via PHP webhook
+        run: |
+          cd out && zip -r /tmp/deploy.zip .
+          RESP=$(curl -sS -X POST \
+            -H "X-Deploy-Secret: ${{ secrets.DEPLOY_SECRET }}" \
+            -H "Content-Type: application/zip" \
+            --data-binary @/tmp/deploy.zip \
+            --max-time 180 \
+            https://pmax.online/_deploy.php)
+          echo "Deploy response: $RESP"
           HTTP=$(curl -s -o /dev/null -w "%{http_code}" https://pmax.online)
           echo "Site status: $HTTP"
