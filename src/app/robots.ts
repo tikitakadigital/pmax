@@ -10,6 +10,7 @@ export default function robots(): MetadataRoute.Robots {
         allow: '/',
         disallow: [
           '/api/',
+          '/_next/static/media/',
           '/contact/?topic=',
           '/de/contact/?topic=',
           '/es/contact/?topic=',
