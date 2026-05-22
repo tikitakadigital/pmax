@@ -146,7 +146,7 @@ export default function AboutPage() {
                     and still runs accounts personally.
                   </p>
                   <a
-                    href="https://www.linkedin.com/company/pmax-online-s-l/"
+                    href="https://www.linkedin.com/in/philippenders/"
                     target="_blank"
                     rel="noopener noreferrer"
                     style={{ display: 'inline-flex', gap: 8, marginTop: 18, fontFamily: 'var(--font-mono)', fontSize: 11, fontWeight: 700, letterSpacing: '1.5px', textTransform: 'uppercase', color: 'var(--color-jelly-mint)' }}
