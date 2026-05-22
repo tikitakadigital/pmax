@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import Link from 'next/link'
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
@@ -78,14 +79,23 @@ export default async function AboutPage({ params }: { params: Promise<{ lang: st
             </div>
 
             <aside style={{ display: 'flex', flexDirection: 'column', gap: 24 }}>
-              <div className="card-outlined reveal" style={{ padding: 28 }}>
-                <div style={{ fontFamily: 'var(--font-mono)', fontSize: 11, fontWeight: 700, letterSpacing: '1.5px', textTransform: 'uppercase', color: 'var(--color-jelly-mint)', marginBottom: 14 }}>
-                  {a.leadershipLabel}
+              <div className="card-outlined reveal" style={{ padding: 0, overflow: 'hidden' }}>
+                <Image
+                  src="/philipp-enders.webp"
+                  alt={`Philipp Enders, ${a.founderRole}`}
+                  width={720}
+                  height={844}
+                  style={{ width: '100%', height: 'auto', display: 'block' }}
+                />
+                <div style={{ padding: 28 }}>
+                  <div style={{ fontFamily: 'var(--font-mono)', fontSize: 11, fontWeight: 700, letterSpacing: '1.5px', textTransform: 'uppercase', color: 'var(--color-jelly-mint)', marginBottom: 14 }}>
+                    {a.leadershipLabel}
+                  </div>
+                  <div style={{ fontFamily: 'var(--font-display)', fontWeight: 900, fontSize: 36, lineHeight: 0.95, color: '#fff', marginBottom: 8 }}>Philipp Enders</div>
+                  <div style={{ fontFamily: 'var(--font-mono)', fontSize: 11, letterSpacing: '1.5px', textTransform: 'uppercase', color: '#949494', marginBottom: 14 }}>{a.founderRole}</div>
+                  <p style={{ fontFamily: 'var(--font-sans)', fontSize: 14, lineHeight: 1.6, color: '#e9e9e9', margin: 0 }}>{a.founderBio}</p>
+                  <a href="https://www.linkedin.com/company/pmax-online-s-l/" target="_blank" rel="noopener noreferrer" style={{ display: 'inline-flex', gap: 8, marginTop: 18, fontFamily: 'var(--font-mono)', fontSize: 11, fontWeight: 700, letterSpacing: '1.5px', textTransform: 'uppercase', color: 'var(--color-jelly-mint)' }}>LinkedIn →</a>
                 </div>
-                <div style={{ fontFamily: 'var(--font-display)', fontWeight: 900, fontSize: 36, lineHeight: 0.95, color: '#fff', marginBottom: 8 }}>Philipp Enders</div>
-                <div style={{ fontFamily: 'var(--font-mono)', fontSize: 11, letterSpacing: '1.5px', textTransform: 'uppercase', color: '#949494', marginBottom: 14 }}>{a.founderRole}</div>
-                <p style={{ fontFamily: 'var(--font-sans)', fontSize: 14, lineHeight: 1.6, color: '#e9e9e9', margin: 0 }}>{a.founderBio}</p>
-                <a href="https://www.linkedin.com/company/pmax-online-s-l/" target="_blank" rel="noopener noreferrer" style={{ display: 'inline-flex', gap: 8, marginTop: 18, fontFamily: 'var(--font-mono)', fontSize: 11, fontWeight: 700, letterSpacing: '1.5px', textTransform: 'uppercase', color: 'var(--color-jelly-mint)' }}>LinkedIn →</a>
               </div>
 
               <div className="card-slate reveal" style={{ padding: 28 }}>
