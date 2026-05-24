@@ -7,7 +7,17 @@ export default function RevealObserver() {
   const pathname = usePathname()
 
   useEffect(() => {
-    // Enable animations — content stays visible if this never runs
+    const elements = document.querySelectorAll<Element>('.reveal, .reveal-stagger')
+
+    // Mark viewport-visible elements before enabling animations to prevent a
+    // frame where they flash invisible between js-reveal being added and the
+    // IntersectionObserver firing.
+    elements.forEach((el) => {
+      if (el.getBoundingClientRect().top < window.innerHeight + 100) {
+        el.classList.add('is-visible')
+      }
+    })
+
     document.documentElement.classList.add('js-reveal')
 
     const observer = new IntersectionObserver(
@@ -22,7 +32,7 @@ export default function RevealObserver() {
       { threshold: 0, rootMargin: '0px 0px 0px 0px' }
     )
 
-    document.querySelectorAll<Element>('.reveal, .reveal-stagger').forEach((el) => {
+    elements.forEach((el) => {
       if (!el.classList.contains('is-visible')) {
         observer.observe(el)
       }
