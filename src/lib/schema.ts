@@ -50,7 +50,10 @@ export const org = {
     jobTitle: 'Founder & Director',
     sameAs: 'https://www.linkedin.com/in/philipp-enders/',
   },
-  sameAs: ['https://www.linkedin.com/company/pmax-online-s-l/'],
+  sameAs: [
+    'https://www.linkedin.com/company/pmax-online-s-l/',
+    'https://www.facebook.com/profile.php?viewas=100000686899395&id=61590296614624',
+  ],
   priceRange: '€€€',
   currenciesAccepted: 'EUR',
   paymentAccepted: 'Bank transfer, invoice',
