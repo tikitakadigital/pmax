@@ -59,6 +59,9 @@
   .cmp-takeaway .k { font-family: var(--font-mono); font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--color-jelly-mint); display: block; margin-bottom: 8px; }
   .cmp-takeaway p { margin: 0; color: #f6f4ef; font-size: 16px; line-height: 1.55; }
   .cmp-quote { font-family: var(--font-serif, Georgia, serif); font-size: 22px; font-style: italic; line-height: 1.45; color: #fff; border-left: 3px solid var(--color-jelly-mint); padding: 6px 22px; margin: 28px 0; }
+  .cmp-screenshot { margin: 32px 0; border: 1px solid #2d2d2d; border-radius: 8px; overflow: hidden; background: #0a0a0a; }
+  .cmp-screenshot img { display: block; width: 100%; height: auto; }
+  .cmp-screenshot figcaption { padding: 12px 18px; font-family: var(--font-mono); font-size: 10px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #6a6a6a; border-top: 1px solid #2d2d2d; }
   .cmp-faq summary { cursor: pointer; padding: 16px 0; font-weight: 700; color: #fff; border-bottom: 1px solid #2d2d2d; list-style: none; position: relative; padding-right: 32px; }
   .cmp-faq summary::after { content: "+"; position: absolute; right: 6px; top: 50%; transform: translateY(-50%); color: var(--color-jelly-mint); font-family: var(--font-mono); font-size: 20px; }
   .cmp-faq[open] summary::after { content: "−"; }
@@ -74,7 +77,7 @@
   "author":{"@type":"Person","name":"Philipp Enders","jobTitle":"Founder & Director, pmax","url":"https://pmax.online/about/","sameAs":["https://www.linkedin.com/in/philippenders/"]},
   "datePublished":"2026-05-26","dateModified":"2026-05-26",
   "publisher":{"@type":"Organization","name":"pmax","logo":{"@type":"ImageObject","url":"https://pmax.online/favicon.svg","width":512,"height":512}},
-  "image":"https://pmax.online/og-image.jpg",
+  "image":["https://pmax.online/og-image.jpg","https://pmax.online/blog/google-ads-vs-meta-ads-vs-tiktok-ads-ecommerce-2026/pmax-branded-search-absorbed-attribution-2026.webp"],
   "mainEntityOfPage":"https://pmax.online/de/blog/google-ads-vs-meta-ads-vs-tiktok-ads-ecommerce-2026/",
   "inLanguage":"de-DE"
 }
@@ -264,6 +267,18 @@
         <li>Brand Search <strong>absorbiert und doppelt gezählt</strong> wird;</li>
         <li>die Conversion-Daten <strong>flach</strong> sind — nur Form-Fills, keine Offline-Events.</li>
       </ul>
+
+      <figure class="cmp-screenshot">
+        <picture>
+          <source srcset="../../../blog/google-ads-vs-meta-ads-vs-tiktok-ads-ecommerce-2026/pmax-branded-search-absorbed-attribution-2026.webp" type="image/webp" />
+          <img src="../../../blog/google-ads-vs-meta-ads-vs-tiktok-ads-ecommerce-2026/pmax-branded-search-absorbed-attribution-2026.png"
+               width="1600" height="902"
+               loading="lazy" decoding="async"
+               alt="Google Ads Suchbegriffe-Bericht einer Performance-Max-Kampagne, der zeigt, wie eine Marken-Suchanfrage von PMax vereinnahmt und als PMax-Conversion verbucht wird. Echter Kunden-Account, anonymisiert. Q1 2026." />
+        </picture>
+        <figcaption>Abb. 1 · Eine Marken-Suchanfrage, vereinnahmt von Performance Max und als PMax-Conversion verbucht. Echter Kunden-Account, anonymisiert. €103.208,70 Spend im Zeitraum · Q1 2026.</figcaption>
+      </figure>
+
       <div class="cmp-quote">"PMax schlägt Meta meist dann, wenn bereits Brand-Search-Nachfrage existiert. Fehlt sie, gewinnt meist Meta — vorausgesetzt das Creative-Volumen stimmt."</div>
 
       <h2 id="the-honest-mix">Der ehrliche Mix — unsere Standardempfehlung</h2>

@@ -70,6 +70,7 @@
   .cmp-screenshot figcaption { padding: 12px 18px; font-family: var(--font-mono); font-size: 10px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #6a6a6a; border-top: 1px solid #2d2d2d; }
   .cmp-screenshot .placeholder { display: flex; align-items: center; justify-content: center; aspect-ratio: 16/9; background: linear-gradient(135deg, #0a0a0a, #1a1a1a); border-bottom: 1px solid #2d2d2d; }
   .cmp-screenshot .placeholder span { font-family: var(--font-mono); font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #6a6a6a; padding: 16px 24px; border: 1px dashed #3a3a3a; }
+  .cmp-screenshot img { display: block; width: 100%; height: auto; }
 
   .cmp-quote { font-family: var(--font-serif, Georgia, serif); font-size: 22px; font-style: italic; line-height: 1.45; color: #fff; border-left: 3px solid var(--color-jelly-mint); padding: 6px 22px; margin: 28px 0; }
 
@@ -104,7 +105,7 @@
     "name": "pmax",
     "logo": { "@type": "ImageObject", "url": "https://pmax.online/favicon.svg", "width": 512, "height": 512 }
   },
-  "image": "https://pmax.online/og-image.jpg",
+  "image": ["https://pmax.online/og-image.jpg","https://pmax.online/blog/google-ads-vs-meta-ads-vs-tiktok-ads-ecommerce-2026/pmax-branded-search-absorbed-attribution-2026.webp"],
   "mainEntityOfPage": "https://pmax.online/blog/google-ads-vs-meta-ads-vs-tiktok-ads-ecommerce-2026/",
   "inLanguage": "en-GB",
   "about": [
@@ -381,6 +382,17 @@
         <li>Brand search is being <strong>absorbed and double-counted</strong> in the PMax ROAS number.</li>
         <li>Conversion data is shallow — <strong>form fills only, no offline events</strong>.</li>
       </ul>
+
+      <figure class="cmp-screenshot">
+        <picture>
+          <source srcset="pmax-branded-search-absorbed-attribution-2026.webp" type="image/webp" />
+          <img src="pmax-branded-search-absorbed-attribution-2026.png"
+               width="1600" height="902"
+               loading="lazy" decoding="async"
+               alt="Google Ads search-terms report from a Performance Max campaign showing a branded search query absorbed into the PMax campaign and credited as a PMax conversion. Real client account, anonymised. Q1 2026." />
+        </picture>
+        <figcaption>Fig. 1 · A branded query absorbed by Performance Max and attributed to PMax conversions. Real client account, anonymised. €103,208.70 spend across the period · Q1 2026.</figcaption>
+      </figure>
 
       <div class="cmp-quote">"PMax usually outperforms Meta when branded search demand already exists. Where it does not, Meta usually wins — provided the creative volume is there."</div>
 
