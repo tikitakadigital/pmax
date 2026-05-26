@@ -41,7 +41,7 @@ const categoryLinks: Record<string, { label: string; href: string }[]> = {
 }
 
 export function generateStaticParams() {
-  return posts.map(p => ({ slug: p.slug }))
+  return posts.filter(p => !p.external).map(p => ({ slug: p.slug }))
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {

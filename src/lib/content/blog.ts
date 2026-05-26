@@ -9,9 +9,23 @@ export interface Post {
   deck: string
   variant: string
   featured?: boolean
+  external?: boolean
 }
 
 export const posts: Post[] = [
+  {
+    slug: 'google-ads-vs-meta-ads-vs-tiktok-ads-ecommerce-2026',
+    stamp: 'MAY 26',
+    date: 'May 26, 2026',
+    readTime: '14 min',
+    category: 'Paid media',
+    title: 'Google Ads vs Meta Ads vs TikTok Ads for ecommerce in 2026.',
+    seoTitle: 'Google Ads vs Meta Ads vs TikTok Ads for Ecommerce 2026 | pmax',
+    deck: 'A brutally practical, side-by-side comparison of the three biggest paid channels for ecommerce in 2026 — based on €2.1M of pmax-managed spend in Q1.',
+    variant: 'is-slate',
+    featured: true,
+    external: true,
+  },
   {
     slug: 'how-to-get-mentioned-by-chatgpt',
     stamp: 'APR 04',
