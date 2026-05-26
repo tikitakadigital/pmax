@@ -78,6 +78,16 @@ jobs:
           HTTP=$(curl -s -o /dev/null -w "%{http_code}" https://pmax.online)
           echo "Site: $HTTP"
 
+          # Purge Cloudflare cache after successful deploy
+          if [ "$HTTP" = "200" ]; then
+            CF_PURGE=$(curl -sS -X POST \
+              "https://api.cloudflare.com/client/v4/zones/${{ secrets.CLOUDFLARE_ZONE_ID }}/purge_cache" \
+              -H "Authorization: Bearer ${{ secrets.CLOUDFLARE_API_TOKEN }}" \
+              -H "Content-Type: application/json" \
+              --data '{"purge_everything":true}')
+            echo "Cloudflare purge: $CF_PURGE"
+          fi
+
           # Ping IndexNow with all URLs from sitemap after successful deploy
           if [ "$HTTP" = "200" ]; then
             URLS=$(python3 -c "import xml.etree.ElementTree as ET,json; root=ET.parse('out/sitemap.xml').getroot(); ns={'s':'http://www.sitemaps.org/schemas/sitemap/0.9'}; urls=[u.find('s:loc',ns).text for u in root.findall('s:url',ns) if u.find('s:loc',ns) is not None]; print(json.dumps(urls))")
