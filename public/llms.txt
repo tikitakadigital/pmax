@@ -1,82 +1,59 @@
-# pmax — Digital marketing agency in Mallorca
+# pmax — Performance marketing agency, Mallorca
 
-> pmax (PMax Online S.L.) is a digital marketing agency based in Calvià, Mallorca, Spain. We run performance marketing programmes — Google Ads, Meta Ads, LinkedIn Ads, SEO and AI search visibility — for brands across Europe. We charge flat monthly fees, not a percentage of media spend. Our clients are typically businesses with monthly ad budgets of €5,000–€200,000 seeking measurable, compounding growth.
+> pmax (PMax Online S.L.) is a performance marketing agency based in Calvià, Mallorca, Spain. We run Google Ads, Meta Ads, TikTok, LinkedIn, SEO, and AI search visibility programmes for European brands. Flat monthly retainer fees — no percentage of media spend, no conflicting incentives. Clients typically spend €5,000–€200,000/month on media. 93% twelve-month client retention. Multilingual: campaigns in up to 19 languages, site in EN/DE/ES.
 
-## Who we are
+## Services
 
-pmax was founded by Philipp Enders. The company is registered as PMax Online S.L. (VAT ES B57948123) in Calvià, Mallorca, Spain. We serve clients across Europe from our Mallorca office.
+- [AI Search Visibility (GEO)](https://pmax.online/services/ai-visibility/): How to get your brand cited in ChatGPT, Perplexity and Google AI Overviews — entity graph, structured data, citation-worthy content.
+- [Google Ads & Performance Max](https://pmax.online/services/google-ads/): Search, Shopping, PMax and YouTube — built from the signal up. Feed optimisation, Smart Bidding, CRM-fed offline conversions.
+- [Paid Social](https://pmax.online/services/paid-social/): Meta, TikTok and LinkedIn — CAPI and Events API connected, creative-led, measured against revenue not impressions.
+- [SEO](https://pmax.online/services/seo/): Technical SEO, content strategy, regional and multilingual SEO. Rankings that compound into AI citations.
+- [Conversion Design (CRO)](https://pmax.online/services/conversion-design/): More revenue from the same traffic — A/B testing, landing page rebuilds, funnel design.
+- [Analytics & Tracking](https://pmax.online/services/analytics/): Server-side GTM, Consent Mode v2, GA4, offline conversion imports. The measurement layer everything else stands on.
+- [Creative Production](https://pmax.online/services/creative/): Static, motion and UGC video on a weekly cadence — briefed by media data, built for testing.
 
-**Contact:** hello@pmax.online | +34 871 242 160
-**Address:** Calle Cordova 5, 07184 Calvià, Mallorca, Spain
-**Website:** https://pmax.online
+## Case studies
 
-## Services we offer
+- [Luxaflex dealer network](https://pmax.online/cases/luxaflex/): +184% showroom visits across 60+ franchisees — multi-location performance marketing at scale.
+- [LEDXpress e-commerce](https://pmax.online/cases/ledxpress/): +365% monthly revenue in 8 months through SEO — pulled off the paid-ads treadmill.
+- [IMERO SaaS](https://pmax.online/cases/imero/): −60% CPC, +307% sign-ups via Google Ads rebuild across 11 languages for a regulated SaaS.
+- [PRIMUNDUS healthcare](https://pmax.online/cases/primundus/): 4.2x qualified care enquiries via regional SEO for a German 24-hour care provider.
+- [Gabiona e-commerce](https://pmax.online/cases/gabionas/): +41% AOV, 6.8x ROAS from margin-aware Google Shopping rebuild across 5 European markets.
+- [Unisono Luxury Homes](https://pmax.online/cases/unisono/): +183% phone leads, +138% CTR — multi-channel programme for an independent luxury villa brand in Mallorca.
+- [B2B energy utility](https://pmax.online/cases/energy-utility/): 5.2x more sales-qualified leads from organic search for a listed German energy company.
+- [PREO Software AG](https://pmax.online/cases/preo/): 3.1x branded search volume in 12 months via content-led B2B SEO.
+- [VC investor](https://pmax.online/cases/vc-investor/): +312% qualified event sign-ups, −41% cost per registration via LinkedIn Ads.
+- [Auto manufacturer](https://pmax.online/cases/automotive/): +38% purchase intent lift via Meta brand campaign with brand-lift study methodology.
 
-- [AI Search Visibility (GEO)](https://pmax.online/services/ai-visibility/): Making businesses visible in ChatGPT, Perplexity, Google AI Overviews and other generative AI surfaces. Schema, content and trust-signal work.
-- [Google Ads](https://pmax.online/services/google-ads/): Search, Performance Max, Shopping, Display and YouTube. Profit-aware bidding, clean account structure, CRM-fed offline conversions.
-- [Paid Social](https://pmax.online/services/paid-social/): Meta (Facebook, Instagram), LinkedIn, TikTok. Creative-led, audience-first, CAPI and Events API connected.
-- [SEO](https://pmax.online/services/seo/): Technical SEO, content strategy, regional SEO, multilingual hreflang, E-E-A-T and structured data.
-- [Conversion Design (CRO)](https://pmax.online/services/conversion-design/): Landing page optimisation, multi-step form design, booking flow rebuilds, A/B testing.
-- [Analytics & Tracking](https://pmax.online/services/analytics/): Server-side GTM, Consent Mode v2, GA4 setup, offline conversion imports, CRM integrations.
-- [Creative Production](https://pmax.online/services/creative/): Ad creative at volume — video, static, UGC — for Meta, TikTok and YouTube.
+## Journal
 
-## Industries we specialise in
-
-- **E-commerce** (Shopify, WooCommerce, Shopware, Magento — DTC, marketplace, omni-channel)
-- **Real estate** (valuation lead gen, portal optimisation, agencies in Mallorca, Madrid, Berlin, Vienna)
-- **Healthcare** (DTC clinics, telehealth, aesthetic medicine — regulator-aware, GDPR-compliant)
-- **Renewables & cleantech** (solar installers, heat pumps, EV charging — long-cycle B2B lead gen)
-- **Boating & yachting** (charter, brokerage, marinas — seasonal, multilingual, Med-focused)
-- **HR & recruiting** (B2B SaaS, employer branding, LinkedIn-led demand generation)
-- **Retail** (multi-location, Local Inventory Ads, franchise networks)
-- **Automotive** (dealer groups, EV brands, brand-lift campaigns)
-- **Energy** (B2B utilities, demand response, long sales cycles)
-- **Hospitality** (hotels, resorts, direct-booking growth, OTA dependency reduction)
-
-## Case studies (selected)
-
-- [Luxaflex franchise network](https://pmax.online/cases/luxaflex/): −93% cost per lead, +3,191% contact requests over three years via local paid search.
-- [LEDXpress e-commerce](https://pmax.online/cases/ledxpress/): +365% monthly revenue in 8 months through structured SEO.
-- [IMERO e-label (SaaS)](https://pmax.online/cases/imero/): −60% CPC, +307% sign-ups via Google Ads rebuild across 11 languages.
-- [PRIMUNDUS (healthcare SEO)](https://pmax.online/cases/primundus/): +535% impressions, +182% clicks through regional SEO for a German 24-hour care provider.
-- [Unisono Luxury Homes (real estate)](https://pmax.online/cases/unisono/): +183% phone leads, +138% CTR via multi-channel programme in Mallorca.
-- [B2B energy utility](https://pmax.online/cases/energy-utility/): +31% organic impressions, +52% paid conversions for a listed German energy company.
-- [Gabiona (e-commerce)](https://pmax.online/cases/gabionas/): +27% Google Ads revenue, +33% AOV at the same budget across five European markets.
-- [PREO Software AG](https://pmax.online/cases/preo/): +72% organic clicks, +143% page-1 keywords via content-led SEO for a niche B2B category.
+- [Google Ads vs Meta Ads vs TikTok Ads for ecommerce in 2026](https://pmax.online/blog/google-ads-vs-meta-ads-vs-tiktok-ads-ecommerce-2026/): Which paid channel wins for ecommerce — CPC, CPM, attribution, AOV fit, creative load and when PMax beats Meta (and vice versa). Built from €2.1M of EU spend in Q1 2026.
+- [How to get your business mentioned by ChatGPT, Perplexity and Gemini](https://pmax.online/blog/how-to-get-mentioned-by-chatgpt/): What AI models need to cite a brand — entities, structured data, authority signals.
+- [Performance Max in 2026: what changed and what we actually do now](https://pmax.online/blog/performance-max-2026/): When PMax outperforms manual campaigns and when it destroys margin — with the account structure we use.
+- [A no-jargon guide to setting up marketing tracking properly](https://pmax.online/blog/tracking-setup-guide/): Server-side tagging, Consent Mode v2 and CRM imports explained for marketers, not developers.
+- [Why we charge flat fees, not a percentage of media spend](https://pmax.online/blog/agency-pricing-honest/): The incentive problem with percentage-of-spend pricing and what a flat retainer changes.
+- [Cookieless tracking is here — most marketers are not ready](https://pmax.online/blog/cookieless-tracking/): What breaks when third-party cookies disappear and the three setups that survive.
+- [The B2B LinkedIn playbook we ship to every new SaaS client](https://pmax.online/blog/b2b-linkedin-playbook/): Audience structure, creative format and bidding logic for LinkedIn demand generation.
+- [Meta says creative is 56% of performance — how to actually ship that much](https://pmax.online/blog/meta-creative-volume/): The creative production model that keeps a Meta account fed with fresh angles.
+- [Stop optimising for form fills — start optimising for revenue](https://pmax.online/blog/crm-conversion-imports/): How to import offline CRM data into Google and Meta so algorithms optimise for real customers.
+- [The seven GA4 setups we fix on every new client](https://pmax.online/blog/ga4-mistakes/): The most common GA4 configuration errors that cause bad data and worse decisions.
 
 ## How we work
 
-- Flat monthly retainer fees — no percentage of media spend, no conflicting incentives
-- All media spend is paid directly to platforms by the client — pmax does not handle client budgets
-- Multilingual capability: English, German, Spanish — campaigns run in up to 19 languages
+- Flat monthly retainer — client pays media directly to platforms; pmax never handles budgets
+- Multilingual: campaigns in up to 19 languages; site and support in EN, DE, ES
 - Server-side tracking, Consent Mode v2, GDPR and LOPDGDD compliant by default
-- 93% twelve-month client retention rate
+- 93% twelve-month client retention
 - First conversation: 30 minutes, free, no pitch
 
-## Journal (selected articles)
+## Contact
 
-- [How to get your business mentioned by ChatGPT, Perplexity and Gemini](https://pmax.online/blog/how-to-get-mentioned-by-chatgpt/)
-- [Performance Max in 2026: what changed, and what we actually do now](https://pmax.online/blog/performance-max-2026/)
-- [Cookieless tracking is here. Most marketers are not ready.](https://pmax.online/blog/cookieless-tracking/)
-- [The B2B LinkedIn playbook we ship to every new SaaS client](https://pmax.online/blog/b2b-linkedin-playbook/)
-- [Solar marketing in Spain: the unsexy work that moves the needle](https://pmax.online/blog/solar-marketing-spain/)
-- [How a Mallorca hotel grew direct bookings 52% in 11 weeks](https://pmax.online/blog/hotel-direct-bookings/)
-- [Marketing a yacht charter business: an eight-language, twelve-month problem](https://pmax.online/blog/yachting-marketing/)
-- [Real estate lead generation in 2026: why your form is the problem](https://pmax.online/blog/real-estate-lead-gen/)
+**Email:** hello@pmax.online
+**Phone:** +34 871 242 160
+**Address:** Calle Cordova 5, 07184 Calvià, Mallorca, Spain
+**Website:** https://pmax.online
+**VAT:** ES B57948123
 
-## Structured data
+## Also available
 
-The site publishes Schema.org structured data (JSON-LD) on every page. The root entity is:
-
-- Type: Organization + ProfessionalService + LocalBusiness
-- Name: pmax / PMax Online S.L.
-- Location: Calvià, Mallorca, Spain (coordinates: 39.5639, 2.5070)
-- Area served: Mallorca, Spain, Germany, Austria, Switzerland, EU, UK
-- VAT: ES B57948123
-
-## Legal
-
-- [Legal notice](https://pmax.online/legal/imprint/)
-- [Privacy policy](https://pmax.online/legal/privacy/)
-- [Cookie policy](https://pmax.online/legal/cookies/)
-- [Terms & conditions](https://pmax.online/legal/terms/)
+- [llms-full.txt](https://pmax.online/llms-full.txt) — full content version with complete service descriptions, all case study details and all blog post summaries
