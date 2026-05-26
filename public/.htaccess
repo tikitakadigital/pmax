@@ -55,6 +55,10 @@ ErrorDocument 404 /404.html
   RewriteCond %{HTTP_HOST} ^www\.pmax\.online [NC]
   RewriteRule ^(.*)$ https://pmax.online/$1 [R=301,L]
 
+  # Redirect /index.html → / and /path/index.html → /path/
+  RewriteRule ^index\.html$ / [R=301,L]
+  RewriteRule ^(.+)/index\.html$ /$1/ [R=301,L]
+
   # Serve existing files and directories directly
   RewriteCond %{REQUEST_FILENAME} -f [OR]
   RewriteCond %{REQUEST_FILENAME} -d
