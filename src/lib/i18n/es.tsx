@@ -953,7 +953,7 @@ export const es = {
         <p>Añade texto editorial genuino al inicio de cada página de colección (300–500 palabras) y enlaza desde él a colecciones relacionadas. La mayoría de temas de Shopify lo ocultan — encuentra la sección, actívala, escribe contenido real.</p>
         <h2>Hreflang para tiendas multiidioma</h2>
         <p>Si vendes en varios idiomas, configura hreflang correctamente. Shopify Markets lo gestiona si se configura correctamente, pero los valores predeterminados suelen estar mal. Audita cada mercado para verificar las etiquetas hreflang correctas.</p>
-        <p>Lecturas relacionadas: nuestro <a href="/es/services/seo/">servicio de SEO</a> — y <a href="/es/blog/how-to-get-mentioned-by-chatgpt/">cómo los datos estructurados también generan citas en ChatGPT</a>.</p>
+        <p>Lecturas relacionadas: nuestro <a href="/es/services/seo/">servicio de SEO</a>, nuestro <a href="/es/industries/ecommerce/">playbook de marketing para e-commerce</a> — y <a href="/es/blog/how-to-get-mentioned-by-chatgpt/">cómo los datos estructurados también generan citas en ChatGPT</a>.</p>
         <h2>¿Necesitas ayuda con esto?</h2>
         <p>Si algo de lo anterior te resulta familiar, <a href="/es/contact/?topic=shopify-seo-2026">cuéntanos brevemente tu situación</a> y te respondemos en un día laborable. Primera conversación: 30 minutos, sin coste.</p>
       </>),
@@ -973,7 +973,7 @@ export const es = {
         <p><a href="/es/services/paid-social/">Meta</a> y <a href="/es/services/google-ads/">Google Hotel Ads</a>. El creativo de Meta se centró en las habitaciones y vistas por las que el hotel era realmente conocido, no en imágenes genéricas de viajes. Google Hotel Ads se pujó agresivamente solo en rangos de fechas donde el hotel tenía disponibilidad — ahorrando presupuesto el resto del año.</p>
         <h2>Los números</h2>
         <p>A las 11 semanas, las reservas directas habían crecido un 52 % y las reservas totales un 11 %. Con ~350.000 € en ingresos directos mensuales frente a la tendencia anterior, la comisión OTA anual ahorrada fue de unos 184.000 €.</p>
-        <p>Utilizamos <a href="/es/services/conversion-design/">diseño de conversión (CRO)</a>, <a href="/es/services/google-ads/">Google Ads</a> y <a href="/es/services/paid-social/">Meta Ads</a>. Más <a href="/es/cases/">resultados de clientes</a>.</p>
+        <p>Utilizamos <a href="/es/services/conversion-design/">diseño de conversión (CRO)</a>, <a href="/es/services/google-ads/">Google Ads</a> y <a href="/es/services/paid-social/">Meta Ads</a>. Más en nuestro <a href="/es/industries/hospitality/">playbook de marketing para hostelería</a> y en nuestros <a href="/es/cases/">resultados de clientes</a>.</p>
         <h2>¿Necesitas ayuda con esto?</h2>
         <p>Si algo de lo anterior te resulta familiar, <a href="/es/contact/?topic=hotel-direct-bookings">cuéntanos brevemente tu situación</a> y te respondemos en un día laborable. Primera conversación: 30 minutos, sin coste.</p>
       </>),
@@ -996,7 +996,7 @@ export const es = {
         <p>El mayor desbloqueador. Conecta la API de conversiones offline de LinkedIn a tu CRM. Devuelve eventos de MQL, SQL, oportunidad creada y closed-won con sus valores. El algoritmo de LinkedIn empieza a optimizar para ingresos reales.</p>
         <h2>Lead scoring antes de que la plataforma vea el lead</h2>
         <p>Usa una herramienta como Clearbit / 6sense / tu propio enriquecimiento para puntuar los leads antes de que se disparen como conversiones en LinkedIn. Solo dispara conversiones de «lead cualificado» para leads que valga la pena perseguir. El algoritmo de la plataforma se vuelve dramáticamente más preciso.</p>
-        <p>Lecturas relacionadas: nuestro <a href="/es/services/paid-social/">servicio de paid social</a> (LinkedIn, Meta, TikTok) — y <a href="/es/blog/crm-conversion-imports/">conversiones offline del CRM para un algoritmo más inteligente</a>.</p>
+        <p>Lecturas relacionadas: nuestro <a href="/es/services/paid-social/">servicio de paid social</a> (LinkedIn, Meta, TikTok), nuestro <a href="/es/industries/hr/">playbook de marketing para RRHH y recruiting</a> — y <a href="/es/blog/crm-conversion-imports/">conversiones offline del CRM para un algoritmo más inteligente</a>.</p>
         <h2>¿Necesitas ayuda con esto?</h2>
         <p>Si algo de lo anterior te resulta familiar, <a href="/es/contact/?topic=b2b-linkedin-playbook">cuéntanos brevemente tu situación</a> y te respondemos en un día laborable. Primera conversación: 30 minutos, sin coste.</p>
       </>),
@@ -1039,7 +1039,7 @@ export const es = {
         <p>Usa el formulario para precalificar: rango de presupuesto, plazo de venta, tipo de propiedad actual. La caída del 30 % en leads vale la pena — el 70 % que termina es dramáticamente más útil para tus agentes.</p>
         <h2>Higiene del teclado en móvil</h2>
         <p>Los campos de email deben activar teclados de email. Los campos de teléfono deben activar teclados numéricos. No hagas que un usuario en móvil cambie de teclado tres veces para rellenar tu formulario.</p>
-        <p>Esto es central en nuestro <a href="/es/services/conversion-design/">servicio de diseño de conversión (CRO)</a>.</p>
+        <p>Esto es central en nuestro <a href="/es/services/conversion-design/">servicio de diseño de conversión (CRO)</a>. Más en nuestro <a href="/es/industries/real-estate/">playbook de marketing inmobiliario</a>.</p>
         <h2>¿Necesitas ayuda con esto?</h2>
         <p>Si algo de lo anterior te resulta familiar, <a href="/es/contact/?topic=real-estate-lead-gen">cuéntanos brevemente tu situación</a> y te respondemos en un día laborable. Primera conversación: 30 minutos, sin coste.</p>
       </>),
@@ -1056,7 +1056,7 @@ export const es = {
         <p>La mayoría del creativo de cuentas de marca en TikTok muere. Consigue que los creadores hagan contenido para ti, obtén derechos de uso y ejecuta esos creativos como Spark Ads. El incremento sobre el creativo de cuenta de marca suele ser de 3–5x.</p>
         <h2>El bucle de acumulación</h2>
         <p>Identifica tus 3 vídeos orgánicos principales cada mes. Ponles Spark Ads. Usa los aprendizajes para briefear el contenido de creadores del mes siguiente. Repite. Las marcas que descifran TikTok acumulan este bucle mes a mes.</p>
-        <p>Lecturas relacionadas: nuestro <a href="/es/services/paid-social/">servicio de paid social</a> y <a href="/es/services/creative/">producción creativa</a> — y <a href="/es/blog/meta-creative-volume/">cómo construir un pipeline creativo para Meta</a> (los principios son idénticos en TikTok).</p>
+        <p>Lecturas relacionadas: nuestro <a href="/es/services/paid-social/">servicio de paid social</a> y <a href="/es/services/creative/">producción creativa</a>, nuestro <a href="/es/industries/ecommerce/">playbook de marketing para e-commerce</a> — y <a href="/es/blog/meta-creative-volume/">cómo construir un pipeline creativo para Meta</a> (los principios son idénticos en TikTok).</p>
         <h2>¿Necesitas ayuda con esto?</h2>
         <p>Si algo de lo anterior te resulta familiar, <a href="/es/contact/?topic=tiktok-organic-paid">cuéntanos brevemente tu situación</a> y te respondemos en un día laborable. Primera conversación: 30 minutos, sin coste.</p>
       </>),
@@ -1096,6 +1096,7 @@ export const es = {
         <p>La instalación solar española media tarda 4–6 meses desde el primer clic en el anuncio hasta el contrato firmado. Si estás optimizando para atribución de primer toque, estás optimizando para los clientes incorrectos. Conecta conversiones offline alimentadas por CRM y deja que el algoritmo aprenda de las instalaciones reales.</p>
         <h2>Google Ads suele ser el canal de mayor intención</h2>
         <p>Para solar, <a href="/es/services/google-ads/">Google Ads</a> capta mayor intención que <a href="/es/services/paid-social/">Meta</a>. La ponderación de presupuesto que ejecuta la mayoría de instaladores (60 % Meta, 40 % Google) suele estar al revés. Prueba lo contrario.</p>
+        <p>Más en nuestro <a href="/es/industries/renewables/">playbook de marketing para energías renovables y cleantech</a>.</p>
         <h2>¿Necesitas ayuda con esto?</h2>
         <p>Si algo de lo anterior te resulta familiar, <a href="/es/contact/?topic=solar-marketing-spain">cuéntanos brevemente tu situación</a> y te respondemos en un día laborable. Primera conversación: 30 minutos, sin coste.</p>
       </>),
@@ -1134,7 +1135,7 @@ export const es = {
         <p>Las interfaces de compras de IA parecen ponderar fuertemente las puntuaciones agregadas de reseñas y los recuentos de reseñas. Si tus productos no tienen reseñas, no posicionan en las compras de IA. Pon en marcha un programa de recogida de reseñas.</p>
         <h2>La reputación de marca importa</h2>
         <p>Los modelos de IA citan marcas en las que confían sus datos de entrenamiento. Construir reconocimiento de marca genuino — a través de relaciones públicas, contenido, prueba social — se paga en visibilidad de compras de IA, no solo en métricas de marca clásicas.</p>
-        <p>Lecturas relacionadas: nuestro <a href="/es/services/ai-visibility/">servicio de visibilidad en IA</a> — y <a href="/es/blog/how-to-get-mentioned-by-chatgpt/">cómo conseguir que ChatGPT y Perplexity te mencionen</a>.</p>
+        <p>Lecturas relacionadas: nuestro <a href="/es/services/ai-visibility/">servicio de visibilidad en IA</a>, nuestro <a href="/es/industries/ecommerce/">playbook de marketing para e-commerce</a> — y <a href="/es/blog/how-to-get-mentioned-by-chatgpt/">cómo conseguir que ChatGPT y Perplexity te mencionen</a>.</p>
         <h2>¿Necesitas ayuda con esto?</h2>
         <p>Si algo de lo anterior te resulta familiar, <a href="/es/contact/?topic=gpt-shopping">cuéntanos brevemente tu situación</a> y te respondemos en un día laborable. Primera conversación: 30 minutos, sin coste.</p>
       </>),
@@ -1177,6 +1178,7 @@ export const es = {
         <p>Una consulta entrante de charter vale de media más de 38.000 €. La velocidad de seguimiento importa enormemente. Normalmente conectamos los sistemas de reservas (MMK, Booking Manager) directamente a Slack para que el equipo de ventas vea las consultas en segundos, no en días.</p>
         <h2>Marca vs. performance</h2>
         <p>La mayoría de empresas de charter gastan demasiado en <a href="/es/services/google-ads/">Google Search</a> y muy poco en <a href="/es/services/paid-social/">Meta</a> de construcción de marca. El charter es una compra de alta consideración — el cliente necesita conocer tu marca meses antes de buscar. El presupuesto debería reflejarlo.</p>
+        <p>Más en nuestro <a href="/es/industries/boating/">playbook de marketing para náutica y yachting</a>.</p>
         <h2>¿Necesitas ayuda con esto?</h2>
         <p>Si algo de lo anterior te resulta familiar, <a href="/es/contact/?topic=yachting-marketing">cuéntanos brevemente tu situación</a> y te respondemos en un día laborable. Primera conversación: 30 minutos, sin coste.</p>
       </>),

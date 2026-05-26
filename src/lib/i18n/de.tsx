@@ -988,7 +988,7 @@ export const de = {
         <p>Fügen Sie echten Redaktionstext am Anfang jeder Collection-Seite hinzu (300–500 Wörter) und verlinken Sie auf verwandte Collections. Die meisten Shopify-Themes verstecken das — finden Sie den Bereich, aktivieren Sie ihn, schreiben Sie echten Content.</p>
         <h2>Hreflang für mehrsprachige Shops</h2>
         <p>Wenn Sie in mehreren Sprachen verkaufen, richten Sie Hreflang richtig ein. Shopify Markets handhabt das, wenn korrekt konfiguriert, aber die Standardeinstellungen sind normalerweise falsch. Auditieren Sie jeden Markt auf korrekte Hreflang-Tags.</p>
-        <p>Weiterführende Links: unsere <a href="/de/services/seo/">SEO-Leistung</a> — und <a href="/de/blog/how-to-get-mentioned-by-chatgpt/">wie strukturierte Daten auch ChatGPT-Nennungen erzeugen</a>.</p>
+        <p>Weiterführende Links: unsere <a href="/de/services/seo/">SEO-Leistung</a>, unser <a href="/de/industries/ecommerce/">E-Commerce-Marketing-Playbook</a> — und <a href="/de/blog/how-to-get-mentioned-by-chatgpt/">wie strukturierte Daten auch ChatGPT-Nennungen erzeugen</a>.</p>
         <h2>Brauchen Sie dabei Unterstützung?</h2>
         <p>Falls Ihnen das oben Genannte bekannt vorkommt, <a href="/de/contact/?topic=shopify-seo-2026">schildern Sie uns kurz Ihre Situation</a> und wir melden uns innerhalb eines Werktages. Das erste Gespräch: 30 Minuten, auf unsere Rechnung.</p>
       </>),
@@ -1008,7 +1008,7 @@ export const de = {
         <p><a href="/de/services/paid-social/">Meta</a> und <a href="/de/services/google-ads/">Google Hotel Ads</a>. Das Meta-Creative konzentrierte sich auf die Zimmer und Ausblicke, für die das Hotel wirklich bekannt war, nicht auf generische Reisebilder. Google Hotel Ads wurden nur auf Datumsbereiche geboten, an denen das Hotel Verfügbarkeit hatte.</p>
         <h2>Die Zahlen</h2>
         <p>Nach 11 Wochen waren Direktbuchungen um 52 % gewachsen und Gesamtbuchungen um 11 %. Bei rund 350.000 € monatlichem Direktumsatz gegenüber der vorherigen Verlaufsrate betrug die jährlich eingesparte OTA-Provision etwa 184.000 €.</p>
-        <p>Wir nutzten <a href="/de/services/conversion-design/">Conversion Design (CRO)</a>, <a href="/de/services/google-ads/">Google Ads</a> und <a href="/de/services/paid-social/">Meta Ads</a>. Weitere <a href="/de/cases/">Referenzen</a>.</p>
+        <p>Wir nutzten <a href="/de/services/conversion-design/">Conversion Design (CRO)</a>, <a href="/de/services/google-ads/">Google Ads</a> und <a href="/de/services/paid-social/">Meta Ads</a>. Mehr in unserem <a href="/de/industries/hospitality/">Hospitality-Marketing-Playbook</a> und unseren <a href="/de/cases/">Referenzen</a>.</p>
         <h2>Brauchen Sie dabei Unterstützung?</h2>
         <p>Falls Ihnen das oben Genannte bekannt vorkommt, <a href="/de/contact/?topic=hotel-direct-bookings">schildern Sie uns kurz Ihre Situation</a> und wir melden uns innerhalb eines Werktages. Das erste Gespräch: 30 Minuten, auf unsere Rechnung.</p>
       </>),
@@ -1032,7 +1032,7 @@ export const de = {
         <p>Das größte Unlock. Verbinden Sie LinkedIns Offline-Conversion-API mit Ihrem CRM. Speisen Sie MQL, SQL, Opportunity Created und Closed-Won-Events mit ihren Werten zurück. LinkedIns Algorithmus beginnt, für tatsächliche Einnahmen zu optimieren.</p>
         <h2>Lead-Scoring vor der Plattform</h2>
         <p>Nutzen Sie ein Tool wie Clearbit / 6sense / Ihre eigene Anreicherung, um Leads zu bewerten, bevor sie als Conversions in LinkedIn feuern. Feuern Sie „qualifizierter Lead"-Conversions nur für Leads, die es wert sind. Der Algorithmus wird dramatisch genauer.</p>
-        <p>Weiterführende Links: unsere <a href="/de/services/paid-social/">Paid Social Leistung</a> (LinkedIn, Meta, TikTok) — und <a href="/de/blog/crm-conversion-imports/">CRM-Offline-Conversions für einen intelligenteren Algorithmus</a>.</p>
+        <p>Weiterführende Links: unsere <a href="/de/services/paid-social/">Paid Social Leistung</a> (LinkedIn, Meta, TikTok), unser <a href="/de/industries/hr/">HR &amp; Recruiting Marketing-Playbook</a> — und <a href="/de/blog/crm-conversion-imports/">CRM-Offline-Conversions für einen intelligenteren Algorithmus</a>.</p>
         <h2>Brauchen Sie dabei Unterstützung?</h2>
         <p>Falls Ihnen das oben Genannte bekannt vorkommt, <a href="/de/contact/?topic=b2b-linkedin-playbook">schildern Sie uns kurz Ihre Situation</a> und wir melden uns innerhalb eines Werktages. Das erste Gespräch: 30 Minuten, auf unsere Rechnung.</p>
       </>),
@@ -1074,7 +1074,7 @@ export const de = {
         <p>Nutzen Sie das Formular zur Vorqualifizierung: Budgetbereich, Verkaufszeitplan, aktueller Immobilientyp. Der 30-%-Rückgang bei Leads lohnt sich — die 70 %, die fertigmachen, sind für Ihre Makler dramatisch nützlicher.</p>
         <h2>Mobile-Tastatur-Hygiene</h2>
         <p>E-Mail-Felder sollten E-Mail-Tastaturen auslösen. Telefonfelder sollten numerische Tastaturen auslösen. Machen Sie einem mobilen Nutzer nicht das dreifache Tastaturwechseln beim Ausfüllen Ihres Formulars.</p>
-        <p>Das ist Kern unserer <a href="/de/services/conversion-design/">Conversion Design (CRO) Leistung</a>.</p>
+        <p>Das ist Kern unserer <a href="/de/services/conversion-design/">Conversion Design (CRO) Leistung</a>. Mehr in unserem <a href="/de/industries/real-estate/">Immobilien-Marketing-Playbook</a>.</p>
         <h2>Brauchen Sie dabei Unterstützung?</h2>
         <p>Falls Ihnen das oben Genannte bekannt vorkommt, <a href="/de/contact/?topic=real-estate-lead-gen">schildern Sie uns kurz Ihre Situation</a> und wir melden uns innerhalb eines Werktages. Das erste Gespräch: 30 Minuten, auf unsere Rechnung.</p>
       </>),
@@ -1091,7 +1091,7 @@ export const de = {
         <p>Die meisten Marken-Konto-Creatives auf TikTok sterben. Lassen Sie Creator Content für Sie erstellen, holen Sie sich Usage Rights und schalten Sie diese Creatives als Spark Ads. Der Lift gegenüber Marken-Konto-Creatives ist normalerweise 3–5x.</p>
         <h2>Die Compounding-Schleife</h2>
         <p>Identifizieren Sie jeden Monat Ihre Top-3-organischen Videos. Spark-Ad-schalten Sie sie. Nutzen Sie die Erkenntnisse, um den Creator-Content des nächsten Monats zu briefen. Wiederholen. Die Marken, die TikTok knacken, kompoundieren diese Schleife Monat für Monat.</p>
-        <p>Weiterführende Links: unsere <a href="/de/services/paid-social/">Paid Social Leistung</a> und <a href="/de/services/creative/">Creative Production</a> — und <a href="/de/blog/meta-creative-volume/">wie man eine Meta-Creative-Pipeline aufbaut</a> (die Prinzipien sind auf TikTok identisch).</p>
+        <p>Weiterführende Links: unsere <a href="/de/services/paid-social/">Paid Social Leistung</a> und <a href="/de/services/creative/">Creative Production</a>, unser <a href="/de/industries/ecommerce/">E-Commerce-Marketing-Playbook</a> — und <a href="/de/blog/meta-creative-volume/">wie man eine Meta-Creative-Pipeline aufbaut</a> (die Prinzipien sind auf TikTok identisch).</p>
         <h2>Brauchen Sie dabei Unterstützung?</h2>
         <p>Falls Ihnen das oben Genannte bekannt vorkommt, <a href="/de/contact/?topic=tiktok-organic-paid">schildern Sie uns kurz Ihre Situation</a> und wir melden uns innerhalb eines Werktages. Das erste Gespräch: 30 Minuten, auf unsere Rechnung.</p>
       </>),
@@ -1131,6 +1131,7 @@ export const de = {
         <p>Die durchschnittliche spanische Solarinstallation dauert 4–6 Monate vom ersten Anzeigenklick bis zum unterzeichneten Vertrag. Wenn Sie für First-Touch-Attribution optimieren, optimieren Sie für die falschen Kunden. Verbinden Sie CRM-gespeiste Offline-Conversions und lassen Sie den Algorithmus von tatsächlichen Installationen lernen.</p>
         <h2>Google Ads ist meist der hochintentionelle Kanal</h2>
         <p>Für Solar erfasst <a href="/de/services/google-ads/">Google Ads</a> höhere Intention als <a href="/de/services/paid-social/">Meta</a>. Die Budgetgewichtung, die die meisten Installateure fahren (60 % Meta, 40 % Google), ist normalerweise umgekehrt. Testen Sie das Gegenteil.</p>
+        <p>Mehr in unserem <a href="/de/industries/renewables/">Erneuerbare Energien &amp; Cleantech Marketing-Playbook</a>.</p>
         <h2>Brauchen Sie dabei Unterstützung?</h2>
         <p>Falls Ihnen das oben Genannte bekannt vorkommt, <a href="/de/contact/?topic=solar-marketing-spain">schildern Sie uns kurz Ihre Situation</a> und wir melden uns innerhalb eines Werktages. Das erste Gespräch: 30 Minuten, auf unsere Rechnung.</p>
       </>),
@@ -1168,7 +1169,7 @@ export const de = {
         <p>KI-Shopping-Interfaces scheinen aggregierte Review-Scores und Review-Anzahlen stark zu gewichten. Wenn Ihre Produkte keine Bewertungen haben, ranken sie nicht im KI-Shopping. Starten Sie ein Review-Sammlungsprogramm.</p>
         <h2>Markenreputation zählt</h2>
         <p>KI-Modelle zitieren Marken, denen ihre Trainingsdaten vertrauen. Echte Markenbekanntheit aufzubauen — durch PR, Content, Social Proof — zahlt sich in KI-Shopping-Sichtbarkeit aus, nicht nur in klassischen Markenmetriken.</p>
-        <p>Weiterführende Links: unsere <a href="/de/services/ai-visibility/">KI-Sichtbarkeits-Leistung</a> — und <a href="/de/blog/how-to-get-mentioned-by-chatgpt/">wie ChatGPT und Perplexity auf Sie aufmerksam werden</a>.</p>
+        <p>Weiterführende Links: unsere <a href="/de/services/ai-visibility/">KI-Sichtbarkeits-Leistung</a>, unser <a href="/de/industries/ecommerce/">E-Commerce-Marketing-Playbook</a> — und <a href="/de/blog/how-to-get-mentioned-by-chatgpt/">wie ChatGPT und Perplexity auf Sie aufmerksam werden</a>.</p>
         <h2>Brauchen Sie dabei Unterstützung?</h2>
         <p>Falls Ihnen das oben Genannte bekannt vorkommt, <a href="/de/contact/?topic=gpt-shopping">schildern Sie uns kurz Ihre Situation</a> und wir melden uns innerhalb eines Werktages. Das erste Gespräch: 30 Minuten, auf unsere Rechnung.</p>
       </>),
@@ -1211,6 +1212,7 @@ export const de = {
         <p>Eine eingehende Charter-Anfrage ist im Durchschnitt 38.000 € + wert. Die Follow-up-Geschwindigkeit ist enorm wichtig. Wir verbinden Buchungssysteme (MMK, Booking Manager) normalerweise direkt mit Slack, damit das Vertriebsteam Anfragen in Sekunden sieht.</p>
         <h2>Brand vs. Performance</h2>
         <p>Die meisten Charter-Unternehmen geben zu viel für <a href="/de/services/google-ads/">Google Search</a> und zu wenig für Brand-Building-<a href="/de/services/paid-social/">Meta</a> aus. Charter ist ein Hochüberlegungskauf — der Kunde muss Ihre Marke Monate kennen, bevor er sucht. Das Budget sollte das widerspiegeln.</p>
+        <p>Mehr in unserem <a href="/de/industries/boating/">Boating &amp; Yachting Marketing-Playbook</a>.</p>
         <h2>Brauchen Sie dabei Unterstützung?</h2>
         <p>Falls Ihnen das oben Genannte bekannt vorkommt, <a href="/de/contact/?topic=yachting-marketing">schildern Sie uns kurz Ihre Situation</a> und wir melden uns innerhalb eines Werktages. Das erste Gespräch: 30 Minuten, auf unsere Rechnung.</p>
       </>),

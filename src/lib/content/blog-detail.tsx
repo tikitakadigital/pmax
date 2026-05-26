@@ -181,7 +181,7 @@ export const blogDetails: BlogDetail[] = [
         <p>Add genuine editorial copy at the top of each collection page (300&ndash;500 words), and link from it to related collections. Most Shopify themes hide this &mdash; find the section, enable it, write real content.</p>
         <h2>Hreflang for multilingual stores</h2>
         <p>If you sell in multiple languages, get hreflang right. Shopify Markets handles this if configured correctly, but the defaults are usually wrong. Audit every market for proper hreflang tags.</p>
-        <p>Related: our <a href="/services/seo/">SEO service</a> &mdash; and <a href="/blog/how-to-get-mentioned-by-chatgpt/">how to get mentioned by ChatGPT and Perplexity</a> (the structured data work here compounds into AI citations).</p>
+        <p>Related: our <a href="/services/seo/">SEO service</a>, our <a href="/industries/ecommerce/">e-commerce marketing playbook</a> &mdash; and <a href="/blog/how-to-get-mentioned-by-chatgpt/">how to get mentioned by ChatGPT and Perplexity</a> (the structured data work here compounds into AI citations).</p>
         <NeedHelp topic="shopify-seo-2026" />
       </>
     ),
@@ -203,7 +203,7 @@ export const blogDetails: BlogDetail[] = [
         <p><a href="/services/paid-social/">Meta</a> and <a href="/services/google-ads/">Google Hotel Ads</a>. The Meta creative focused on the rooms and views the hotel was actually known for, not generic travel imagery. Google Hotel Ads were bid aggressively only on date ranges where the hotel had availability &mdash; saving budget the rest of the year.</p>
         <h2>The numbers</h2>
         <p>11 weeks in, direct bookings had grown 52% and total bookings had grown 11% (so the direct shift was new revenue, not stolen from OTAs). At ~&euro;350,000 in monthly direct revenue versus the previous run-rate, the annual OTA commission saved was about &euro;184,000.</p>
-        <p>We used <a href="/services/conversion-design/">conversion design (CRO)</a>, <a href="/services/google-ads/">Google Ads</a> and <a href="/services/paid-social/">Meta Ads</a> to get there. More <a href="/cases/">client cases</a>.</p>
+        <p>We used <a href="/services/conversion-design/">conversion design (CRO)</a>, <a href="/services/google-ads/">Google Ads</a> and <a href="/services/paid-social/">Meta Ads</a> to get there. More in our <a href="/industries/hospitality/">hospitality marketing playbook</a> and <a href="/cases/">client cases</a>.</p>
         <NeedHelp topic="hotel-direct-bookings" />
       </>
     ),
@@ -229,7 +229,7 @@ export const blogDetails: BlogDetail[] = [
         <p>The biggest unlock. Wire LinkedIn&rsquo;s offline conversion API to your CRM. Pass back MQL, SQL, opportunity created, and closed-won events with their values. LinkedIn&rsquo;s algorithm starts optimising for actual revenue.</p>
         <h2>Lead scoring before the platform sees the lead</h2>
         <p>Use a tool like Clearbit / 6sense / your own enrichment to score leads before they fire as conversions in LinkedIn. Only fire &ldquo;qualified lead&rdquo; conversions for leads worth pursuing. The platform&rsquo;s algorithm gets dramatically more accurate.</p>
-        <p>Related: our <a href="/services/paid-social/">paid social service</a> (LinkedIn, Meta, TikTok) &mdash; and <a href="/blog/crm-conversion-imports/">using CRM offline conversions to make the algorithm smarter</a>.</p>
+        <p>Related: our <a href="/services/paid-social/">paid social service</a> (LinkedIn, Meta, TikTok), our <a href="/industries/hr/">HR &amp; recruiting marketing playbook</a> &mdash; and <a href="/blog/crm-conversion-imports/">using CRM offline conversions to make the algorithm smarter</a>.</p>
         <NeedHelp topic="b2b-linkedin-playbook" />
       </>
     ),
@@ -277,7 +277,7 @@ export const blogDetails: BlogDetail[] = [
         <p>Use the form to pre-qualify: budget range, timeline to sell, current property type. The 30% drop in leads is worth it &mdash; the 70% that finish are dramatically more useful to your agents.</p>
         <h2>Mobile keyboard hygiene</h2>
         <p>Email fields should trigger email keyboards. Phone fields should trigger numeric keyboards. Do not make a mobile user switch keyboards three times to fill in your form.</p>
-        <p>This is core to our <a href="/services/conversion-design/">conversion design (CRO) service</a>.</p>
+        <p>This is core to our <a href="/services/conversion-design/">conversion design (CRO) service</a>. More in our <a href="/industries/real-estate/">real estate marketing playbook</a>.</p>
         <NeedHelp topic="real-estate-lead-gen" />
       </>
     ),
@@ -297,7 +297,7 @@ export const blogDetails: BlogDetail[] = [
         <p>Most brand-account creative on TikTok dies. Get creators making content for you, get them on usage rights, and run those creatives as Spark Ads. The lift over brand-account creative is usually 3&ndash;5x.</p>
         <h2>The compounding loop</h2>
         <p>Identify your top 3 organic videos every month. Spark Ad them. Use the learnings to brief next month&rsquo;s creator content. Repeat. The brands that crack TikTok compound this loop month after month.</p>
-        <p>Related: our <a href="/services/paid-social/">paid social service</a> and <a href="/services/creative/">creative production</a> &mdash; and <a href="/blog/meta-creative-volume/">how to build a creative pipeline for Meta</a> (the principles are identical on TikTok).</p>
+        <p>Related: our <a href="/services/paid-social/">paid social service</a> and <a href="/services/creative/">creative production</a>, our <a href="/industries/ecommerce/">e-commerce marketing playbook</a> &mdash; and <a href="/blog/meta-creative-volume/">how to build a creative pipeline for Meta</a> (the principles are identical on TikTok).</p>
         <NeedHelp topic="tiktok-organic-paid" />
       </>
     ),
@@ -341,6 +341,7 @@ export const blogDetails: BlogDetail[] = [
         <p>The average Spanish solar install takes 4&ndash;6 months from first ad click to signed contract. If you are optimising for first-touch attribution, you are optimising for the wrong customers. Wire CRM-fed offline conversions and let the algorithm learn from actual installs.</p>
         <h2>Google Ads is usually the higher-intent channel</h2>
         <p>For solar, <a href="/services/google-ads/">Google Ads</a> captures higher-intent than <a href="/services/paid-social/">Meta</a>. Budget weighting most installers run (60% Meta, 40% Google) is usually backwards. Test the inverse.</p>
+        <p>More in our <a href="/industries/renewables/">renewables &amp; cleantech marketing playbook</a>.</p>
         <NeedHelp topic="solar-marketing-spain" />
       </>
     ),
@@ -384,7 +385,7 @@ export const blogDetails: BlogDetail[] = [
         <p>AI shopping interfaces seem to heavily weight aggregate review scores and review counts. If your products do not have reviews, they do not rank in AI shopping. Get a review collection programme running.</p>
         <h2>Brand reputation matters</h2>
         <p>AI models cite brands their training data trusts. Building genuine brand recognition &mdash; through PR, content, social proof &mdash; pays back in AI shopping visibility, not just in classical brand metrics.</p>
-        <p>Related: our <a href="/services/ai-visibility/">AI search visibility service</a> &mdash; and <a href="/blog/how-to-get-mentioned-by-chatgpt/">how to get mentioned by ChatGPT and Perplexity</a>.</p>
+        <p>Related: our <a href="/services/ai-visibility/">AI search visibility service</a>, our <a href="/industries/ecommerce/">e-commerce marketing playbook</a> &mdash; and <a href="/blog/how-to-get-mentioned-by-chatgpt/">how to get mentioned by ChatGPT and Perplexity</a>.</p>
         <NeedHelp topic="gpt-shopping" />
       </>
     ),
@@ -432,6 +433,7 @@ export const blogDetails: BlogDetail[] = [
         <p>An inbound charter enquiry is worth &euro;38,000+ on average. The follow-up speed matters enormously. We typically wire booking systems (MMK, Booking Manager) directly into Slack so the sales team sees enquiries in seconds, not days.</p>
         <h2>Brand vs performance</h2>
         <p>Most charter businesses overspend on <a href="/services/google-ads/">Google search</a> and underspend on brand-building <a href="/services/paid-social/">Meta</a>. Charter is a high-consideration purchase &mdash; the customer needs to know your brand exists months before they search. Budget should reflect that.</p>
+        <p>More in our <a href="/industries/boating/">boating &amp; yachting marketing playbook</a>.</p>
         <NeedHelp topic="yachting-marketing" />
       </>
     ),
