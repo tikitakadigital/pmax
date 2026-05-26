@@ -64,7 +64,11 @@
   .cmp-screenshot { margin: 32px 0; border: 1px solid #2d2d2d; border-radius: 8px; overflow: hidden; background: #0a0a0a; }
   .cmp-screenshot img { display: block; width: 100%; height: auto; }
   .cmp-screenshot figcaption { padding: 12px 18px; font-family: var(--font-mono); font-size: 10px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #6a6a6a; border-top: 1px solid #2d2d2d; }
-  @media (max-width: 880px) { .cmp-toc { position: static; } }
+  .cmp-body { display: grid; grid-template-columns: 1fr 220px; gap: 64px; align-items: flex-start; }
+  @media (max-width: 880px) {
+    .cmp-body { display: block; }
+    .cmp-toc { position: static; display: none; }
+  }
 </style>
 
 <script type="application/ld+json">
@@ -168,7 +172,7 @@
 </section>
 
 <section class="section">
-  <div class="container" style="display:grid; grid-template-columns: 1fr 220px; gap: 64px; align-items:flex-start;">
+  <div class="container cmp-body">
     <div class="prose">
       <p><strong>Si vendes online en 2026, estás usando al menos una de estas tres: Google Ads, Meta Ads, TikTok Ads.</strong> La mayoría de las marcas de ecommerce usan las tres a la vez, sin un marco honesto para decidir cuál merece el próximo euro. Este artículo es ese marco — basado en aproximadamente €2,1M de gasto ecommerce gestionado por pmax en Q1 2026, en 14 retainers activos entre la UE y el Reino Unido.</p>
       <p>Es opinionado. No va a halagar a todas las plataformas. Salta a la tabla comparativa si quieres la respuesta en 30 segundos.</p>

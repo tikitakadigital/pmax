@@ -82,8 +82,10 @@
   .cmp-faq[open] summary::after { content: "−"; }
   .cmp-faq p { padding: 12px 0 18px; color: #c2c2c2; margin: 0; }
 
+  .cmp-body { display: grid; grid-template-columns: 1fr 220px; gap: 64px; align-items: flex-start; }
   @media (max-width: 880px) {
-    .cmp-toc { position: static; }
+    .cmp-body { display: block; }
+    .cmp-toc { position: static; display: none; }
   }
 </style>
 
@@ -219,7 +221,7 @@
 </section>
 
 <section class="section">
-  <div class="container" style="display:grid; grid-template-columns: 1fr 220px; gap: 64px; align-items:flex-start;">
+  <div class="container cmp-body">
 
     <div class="prose">
 

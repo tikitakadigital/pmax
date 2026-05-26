@@ -69,7 +69,11 @@
   .cmp-faq summary::after { content: "+"; position: absolute; right: 6px; top: 50%; transform: translateY(-50%); color: var(--color-jelly-mint); font-family: var(--font-mono); font-size: 20px; }
   .cmp-faq[open] summary::after { content: "−"; }
   .cmp-faq p { padding: 12px 0 18px; color: #c2c2c2; margin: 0; }
-  @media (max-width: 880px) { .cmp-toc { position: static; } }
+  .cmp-body { display: grid; grid-template-columns: 1fr 220px; gap: 64px; align-items: flex-start; }
+  @media (max-width: 880px) {
+    .cmp-body { display: block; }
+    .cmp-toc { position: static; display: none; }
+  }
 </style>
 
 <script type="application/ld+json">
@@ -173,7 +177,7 @@
 </section>
 
 <section class="section">
-  <div class="container" style="display:grid; grid-template-columns: 1fr 220px; gap: 64px; align-items:flex-start;">
+  <div class="container cmp-body">
 
     <div class="prose">
       <p><strong>Wer 2026 online verkauft, fährt mindestens eines davon: Google Ads, Meta Ads, TikTok Ads.</strong> Die meisten E-Commerce-Marken fahren alle drei gleichzeitig — ohne ehrliches Framework, welcher Kanal den nächsten Euro verdient. Dieser Beitrag ist genau dieses Framework, auf Basis von rund €2,1 Mio. pmax-gemanagtem E-Commerce-Spend in Q1 2026 über 14 aktive Retainer in EU und UK.</p>
