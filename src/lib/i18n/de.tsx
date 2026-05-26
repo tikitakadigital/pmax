@@ -900,6 +900,7 @@ export const de = {
         <p>Listing-Gruppen in PMax ermöglichen es Ihnen zu steuern, welche Produkte priorisiert werden. Wir nutzen sie, um margenstarke, niedrig bestandene, saisonale Produkte zu bestimmten Zeiten zu pushen — ein kleiner Hebel, große Auswirkung auf den Gewinn.</p>
         <h2>First-Party-Audience-Signale</h2>
         <p>Laden Sie Ihre Customer-Match-Liste, Ihr High-LTV-Cohort, Ihr Segment der jüngsten Käufer hoch. PMax nutzt diese nicht als Targeting — aber als starkes Signal für den Algorithmus. Der Lift ist real.</p>
+        <p>Verwandte Leistungen: <a href="/de/services/google-ads/">Google Ads &amp; Performance Max</a> — und wie PMax in den größeren <a href="/de/blog/google-ads-vs-meta-ads-vs-tiktok-ads-ecommerce-2026/">Google vs. Meta vs. TikTok Channel-Mix</a> passt.</p>
         <h2>Brauchen Sie dabei Unterstützung?</h2>
         <p>Falls Ihnen das oben Genannte bekannt vorkommt, <a href="/de/contact/?topic=performance-max-2026">schildern Sie uns kurz Ihre Situation</a> und wir melden uns innerhalb eines Werktages. Das erste Gespräch: 30 Minuten, auf unsere Rechnung.</p>
       </>),
@@ -915,11 +916,12 @@ export const de = {
         <h2>Consent Mode v2</h2>
         <p>Wenn Sie in der EU tätig sind und Consent Mode v2 nicht implementiert haben, sind Ihre Google Ads-Daten wesentlich schlechter als nötig. Consent Mode ermöglicht Google, modellierte Conversions für nicht einwilligende Nutzer aufzufüllen — 30–50 % der verlorenen Daten werden so zurückgewonnen.</p>
         <h2>Enhanced Conversions</h2>
-        <p>Übergeben Sie gehashte E-Mail-Adressen (mit Einwilligung) an die Conversion-APIs von Google und Meta. Diese einzelne Änderung verbessert das gemessene Conversion-Volumen in iOS-lastigen Kategorien typischerweise um 15–25 %.</p>
+        <p>Übergeben Sie gehashte E-Mail-Adressen (mit Einwilligung) an die <a href="/de/services/analytics/">Conversion-APIs</a> von Google und Meta. Diese einzelne Änderung verbessert das gemessene Conversion-Volumen in iOS-lastigen Kategorien typischerweise um 15–25 %.</p>
         <h2>Offline-Conversion-Imports</h2>
         <p>Wenn Ihr Verkaufszyklus länger als eine Woche ist, benötigen Sie Offline-Conversion-Imports. Verbinden Sie Ihr CRM mit den Offline-Events-APIs und speisen Sie tatsächlich abgeschlossene Umsätze zurück. Die Plattformen beginnen dann, für die richtigen Menschen zu optimieren.</p>
         <h2>Abgleich</h2>
         <p>Vergleichen Sie einmal im Monat den von der Anzeigenplattform gemeldeten Umsatz mit Ihrer tatsächlichen Buchhaltung. Streben Sie eine Abweichung von unter 15 % an. Alles darüber bedeutet, dass irgendetwas in der Kette defekt ist.</p>
+        <p>Weiterführende Links: <a href="/de/blog/cookieless-tracking/">Cookieless Tracking 2026</a> — und <a href="/de/blog/crm-conversion-imports/">CRM-Daten für bessere Offline-Conversions nutzen</a>.</p>
         <h2>Brauchen Sie dabei Unterstützung?</h2>
         <p>Falls Ihnen das oben Genannte bekannt vorkommt, <a href="/de/contact/?topic=tracking-setup-guide">schildern Sie uns kurz Ihre Situation</a> und wir melden uns innerhalb eines Werktages. Das erste Gespräch: 30 Minuten, auf unsere Rechnung.</p>
       </>),
@@ -936,11 +938,12 @@ export const de = {
         <h2>Hooks, Hooks, Hooks</h2>
         <p>Die ersten drei Sekunden jedes Videos sind die einzigen, die zählen. Wir testen Hooks mehr als alles andere — gleicher Body, sechs verschiedene Eröffnungssekunden. Der gewinnende Hook wird in der nächsten Woche wiederverwendet.</p>
         <h2>UGC in großem Maßstab</h2>
-        <p>Führen Sie ein kleines, laufendes Creator-Programm durch — 5–10 Creator auf Retainer, wöchentlich gebrieft. Günstiger als Agentur-Creative, schneller als internes Creative, und Metas Algorithmus bevorzugt es tendenziell.</p>
+        <p>Führen Sie ein kleines, laufendes <a href="/de/services/creative/">Creator-Programm</a> durch — 5–10 Creator auf Retainer, wöchentlich gebrieft. Günstiger als Agentur-Creative, schneller als internes Creative, und Metas Algorithmus bevorzugt es tendenziell.</p>
         <h2>Performance-Creative-Briefing</h2>
         <p>Briefs gehen von Ihrem Media-Team an Ihr Creative-Team, nicht umgekehrt. Das Brief enthält: für welches Ad-Set, was der Hook testen soll, was der Proof Point ist, was der CTA antreiben muss. Brand-Input kommt danach.</p>
         <h2>Wöchentlich aussortieren, monatlich skalieren</h2>
         <p>Jeden Freitag alles unter der Performance-Schwelle beenden. Einmal im Monat die drei besten Creative-Muster identifizieren und das Creative des nächsten Monats darum herum briefen. Die Erkenntnisse kompoundieren.</p>
+        <p>Weiterführende Links: <a href="/de/blog/creative-testing-framework/">Creative-Tests, die sich wirklich aufbauen</a> — und unsere <a href="/de/services/paid-social/">Paid Social Leistung</a>.</p>
         <h2>Brauchen Sie dabei Unterstützung?</h2>
         <p>Falls Ihnen das oben Genannte bekannt vorkommt, <a href="/de/contact/?topic=meta-creative-volume">schildern Sie uns kurz Ihre Situation</a> und wir melden uns innerhalb eines Werktages. Das erste Gespräch: 30 Minuten, auf unsere Rechnung.</p>
       </>),
@@ -960,6 +963,7 @@ export const de = {
         <p>50 % der kommerziellen Suchanfragen auf Mallorca finden zwischen April und September statt. Fahren Sie keine flachen Gebote das ganze Jahr. Bauen Sie tages- und saisonparted Bidding-Strategien, die der tatsächlichen Nachfragekurve entsprechen.</p>
         <h2>Local Pack und Maps</h2>
         <p>Wenn Sie ein Dienstleistungsunternehmen sind, generiert Ihr Google-Unternehmensprofil mehr Umsatz als Ihre Anzeigen. Optimieren Sie es ordentlich: Fotos monatlich aktualisiert, Reviews vierteljährlich angefragt, Leistungen richtig kategorisiert. Die Arbeit kompoundiert.</p>
+        <p>Unsere <a href="/de/services/google-ads/">Google Ads &amp; Performance Max Leistung</a> — gebaut für Mallorcas mehrsprachige, saisonale Nachfrage.</p>
         <h2>Brauchen Sie dabei Unterstützung?</h2>
         <p>Falls Ihnen das oben Genannte bekannt vorkommt, <a href="/de/contact/?topic=google-ads-mallorca">schildern Sie uns kurz Ihre Situation</a> und wir melden uns innerhalb eines Werktages. Das erste Gespräch: 30 Minuten, auf unsere Rechnung.</p>
       </>),
@@ -984,6 +988,7 @@ export const de = {
         <p>Fügen Sie echten Redaktionstext am Anfang jeder Collection-Seite hinzu (300–500 Wörter) und verlinken Sie auf verwandte Collections. Die meisten Shopify-Themes verstecken das — finden Sie den Bereich, aktivieren Sie ihn, schreiben Sie echten Content.</p>
         <h2>Hreflang für mehrsprachige Shops</h2>
         <p>Wenn Sie in mehreren Sprachen verkaufen, richten Sie Hreflang richtig ein. Shopify Markets handhabt das, wenn korrekt konfiguriert, aber die Standardeinstellungen sind normalerweise falsch. Auditieren Sie jeden Markt auf korrekte Hreflang-Tags.</p>
+        <p>Weiterführende Links: unsere <a href="/de/services/seo/">SEO-Leistung</a> — und <a href="/de/blog/how-to-get-mentioned-by-chatgpt/">wie strukturierte Daten auch ChatGPT-Nennungen erzeugen</a>.</p>
         <h2>Brauchen Sie dabei Unterstützung?</h2>
         <p>Falls Ihnen das oben Genannte bekannt vorkommt, <a href="/de/contact/?topic=shopify-seo-2026">schildern Sie uns kurz Ihre Situation</a> und wir melden uns innerhalb eines Werktages. Das erste Gespräch: 30 Minuten, auf unsere Rechnung.</p>
       </>),
@@ -1000,9 +1005,10 @@ export const de = {
         <h2>Der Buchungsfluss-Neuaufbau</h2>
         <p>Fünf Schritte wurden zu drei. Mobile-First. Eine klare Botschaft „Bester Preis garantiert — direkt buchen und X € sparen", verknüpft mit Live-OTA-Rate-Scraping, damit die Ersparnis immer real war. Die Conversion-Rate vom Buchungsmaschinen-Einstieg bis zur bestätigten Buchung stieg von 2,1 % auf 8,4 %.</p>
         <h2>Die Paid-Media-Verschiebung</h2>
-        <p>Meta und Google Hotel Ads. Das Meta-Creative konzentrierte sich auf die Zimmer und Ausblicke, für die das Hotel wirklich bekannt war, nicht auf generische Reisebilder. Google Hotel Ads wurden nur auf Datumsbereiche geboten, an denen das Hotel Verfügbarkeit hatte.</p>
+        <p><a href="/de/services/paid-social/">Meta</a> und <a href="/de/services/google-ads/">Google Hotel Ads</a>. Das Meta-Creative konzentrierte sich auf die Zimmer und Ausblicke, für die das Hotel wirklich bekannt war, nicht auf generische Reisebilder. Google Hotel Ads wurden nur auf Datumsbereiche geboten, an denen das Hotel Verfügbarkeit hatte.</p>
         <h2>Die Zahlen</h2>
         <p>Nach 11 Wochen waren Direktbuchungen um 52 % gewachsen und Gesamtbuchungen um 11 %. Bei rund 350.000 € monatlichem Direktumsatz gegenüber der vorherigen Verlaufsrate betrug die jährlich eingesparte OTA-Provision etwa 184.000 €.</p>
+        <p>Wir nutzten <a href="/de/services/conversion-design/">Conversion Design (CRO)</a>, <a href="/de/services/google-ads/">Google Ads</a> und <a href="/de/services/paid-social/">Meta Ads</a>. Weitere <a href="/de/cases/">Referenzen</a>.</p>
         <h2>Brauchen Sie dabei Unterstützung?</h2>
         <p>Falls Ihnen das oben Genannte bekannt vorkommt, <a href="/de/contact/?topic=hotel-direct-bookings">schildern Sie uns kurz Ihre Situation</a> und wir melden uns innerhalb eines Werktages. Das erste Gespräch: 30 Minuten, auf unsere Rechnung.</p>
       </>),
@@ -1026,6 +1032,7 @@ export const de = {
         <p>Das größte Unlock. Verbinden Sie LinkedIns Offline-Conversion-API mit Ihrem CRM. Speisen Sie MQL, SQL, Opportunity Created und Closed-Won-Events mit ihren Werten zurück. LinkedIns Algorithmus beginnt, für tatsächliche Einnahmen zu optimieren.</p>
         <h2>Lead-Scoring vor der Plattform</h2>
         <p>Nutzen Sie ein Tool wie Clearbit / 6sense / Ihre eigene Anreicherung, um Leads zu bewerten, bevor sie als Conversions in LinkedIn feuern. Feuern Sie „qualifizierter Lead"-Conversions nur für Leads, die es wert sind. Der Algorithmus wird dramatisch genauer.</p>
+        <p>Weiterführende Links: unsere <a href="/de/services/paid-social/">Paid Social Leistung</a> (LinkedIn, Meta, TikTok) — und <a href="/de/blog/crm-conversion-imports/">CRM-Offline-Conversions für einen intelligenteren Algorithmus</a>.</p>
         <h2>Brauchen Sie dabei Unterstützung?</h2>
         <p>Falls Ihnen das oben Genannte bekannt vorkommt, <a href="/de/contact/?topic=b2b-linkedin-playbook">schildern Sie uns kurz Ihre Situation</a> und wir melden uns innerhalb eines Werktages. Das erste Gespräch: 30 Minuten, auf unsere Rechnung.</p>
       </>),
@@ -1041,11 +1048,12 @@ export const de = {
         <h2>Consent Mode v2</h2>
         <p>Googles Consent Mode v2 ermöglicht es Ihnen, Google mitzuteilen, ob der Nutzer in Anzeigen- und Analytics-Cookies eingewilligt hat. Falls nicht, erhält Google anonymisierte Signale zur Modellierung der Conversion. Korrekt implementiert, erholen Sie 30–50 % der Daten, die Sie sonst verlieren würden.</p>
         <h2>Conversion-APIs</h2>
-        <p>Meta CAPI, TikTok Events API, LinkedIn Conversions API, Google Enhanced Conversions. Alle ermöglichen es Ihnen, gehashte First-Party-Daten von Ihrem Server an die Plattform zu senden. Alle verbessern die Datenqualität. Alle werden zu wenig genutzt.</p>
+        <p>Meta CAPI, TikTok Events API, LinkedIn Conversions API, <a href="/de/services/analytics/">Google Enhanced Conversions</a>. Alle ermöglichen es Ihnen, gehashte First-Party-Daten von Ihrem Server an die Plattform zu senden. Alle verbessern die Datenqualität. Alle werden zu wenig genutzt.</p>
         <h2>First-Party-Datenstrategie</h2>
         <p>Wenn Sie keine First-Party-Datenstrategie haben, bauen Sie eine. E-Mail-Captures, Kontoerstellung, Treueprogramme, Gated Content — was auch immer zu Ihrem Unternehmen passt. First-Party-Daten sind jetzt das Fundament, von dem alles andere abhängt.</p>
         <h2>Modellierte Conversions</h2>
         <p>Erwarten Sie, dass 20–40 % Ihrer Conversion-Daten 2026 modelliert statt direkt beobachtet werden. Das ist normal und kein Problem, wenn das Modell gut gespeist ist. Präzise tägliche Attribution ist aber vorbei — akzeptieren Sie das.</p>
+        <p>Weiterführende Links: <a href="/de/blog/tracking-setup-guide/">Tracking richtig aufbauen</a> — und unsere <a href="/de/services/analytics/">Analytics &amp; Tracking Leistung</a>.</p>
         <h2>Brauchen Sie dabei Unterstützung?</h2>
         <p>Falls Ihnen das oben Genannte bekannt vorkommt, <a href="/de/contact/?topic=cookieless-tracking">schildern Sie uns kurz Ihre Situation</a> und wir melden uns innerhalb eines Werktages. Das erste Gespräch: 30 Minuten, auf unsere Rechnung.</p>
       </>),
@@ -1066,6 +1074,7 @@ export const de = {
         <p>Nutzen Sie das Formular zur Vorqualifizierung: Budgetbereich, Verkaufszeitplan, aktueller Immobilientyp. Der 30-%-Rückgang bei Leads lohnt sich — die 70 %, die fertigmachen, sind für Ihre Makler dramatisch nützlicher.</p>
         <h2>Mobile-Tastatur-Hygiene</h2>
         <p>E-Mail-Felder sollten E-Mail-Tastaturen auslösen. Telefonfelder sollten numerische Tastaturen auslösen. Machen Sie einem mobilen Nutzer nicht das dreifache Tastaturwechseln beim Ausfüllen Ihres Formulars.</p>
+        <p>Das ist Kern unserer <a href="/de/services/conversion-design/">Conversion Design (CRO) Leistung</a>.</p>
         <h2>Brauchen Sie dabei Unterstützung?</h2>
         <p>Falls Ihnen das oben Genannte bekannt vorkommt, <a href="/de/contact/?topic=real-estate-lead-gen">schildern Sie uns kurz Ihre Situation</a> und wir melden uns innerhalb eines Werktages. Das erste Gespräch: 30 Minuten, auf unsere Rechnung.</p>
       </>),
@@ -1082,6 +1091,7 @@ export const de = {
         <p>Die meisten Marken-Konto-Creatives auf TikTok sterben. Lassen Sie Creator Content für Sie erstellen, holen Sie sich Usage Rights und schalten Sie diese Creatives als Spark Ads. Der Lift gegenüber Marken-Konto-Creatives ist normalerweise 3–5x.</p>
         <h2>Die Compounding-Schleife</h2>
         <p>Identifizieren Sie jeden Monat Ihre Top-3-organischen Videos. Spark-Ad-schalten Sie sie. Nutzen Sie die Erkenntnisse, um den Creator-Content des nächsten Monats zu briefen. Wiederholen. Die Marken, die TikTok knacken, kompoundieren diese Schleife Monat für Monat.</p>
+        <p>Weiterführende Links: unsere <a href="/de/services/paid-social/">Paid Social Leistung</a> und <a href="/de/services/creative/">Creative Production</a> — und <a href="/de/blog/meta-creative-volume/">wie man eine Meta-Creative-Pipeline aufbaut</a> (die Prinzipien sind auf TikTok identisch).</p>
         <h2>Brauchen Sie dabei Unterstützung?</h2>
         <p>Falls Ihnen das oben Genannte bekannt vorkommt, <a href="/de/contact/?topic=tiktok-organic-paid">schildern Sie uns kurz Ihre Situation</a> und wir melden uns innerhalb eines Werktages. Das erste Gespräch: 30 Minuten, auf unsere Rechnung.</p>
       </>),
@@ -1101,6 +1111,7 @@ export const de = {
         <p>Innerhalb von 2–3 Wochen nach der ordentlichen Implementierung sehen die meisten B2B-Konten: 30–50 % geringeres MQL-Volumen, aber 2–3x mehr SQLs und dramatisch höhere Pipeline-Werte. Dasselbe Werbebudget, dramatisch besseres Geschäftsergebnis.</p>
         <h2>Häufige Fallstricke</h2>
         <p>Stellen Sie sicher, dass die Werte, die Sie zurückspeisen, wirtschaftlich bedeutsam sind. Ein „Closed-Won"-Event sollte den tatsächlichen Vertragswert tragen, nicht einen festen 100-€-Platzhalter. Die Plattform optimiert gegen die Werte, die Sie ihr geben.</p>
+        <p>Weiterführende Links: <a href="/de/blog/tracking-setup-guide/">Tracking richtig aufbauen</a> und unsere <a href="/de/services/analytics/">Analytics &amp; Tracking Leistung</a>.</p>
         <h2>Brauchen Sie dabei Unterstützung?</h2>
         <p>Falls Ihnen das oben Genannte bekannt vorkommt, <a href="/de/contact/?topic=crm-conversion-imports">schildern Sie uns kurz Ihre Situation</a> und wir melden uns innerhalb eines Werktages. Das erste Gespräch: 30 Minuten, auf unsere Rechnung.</p>
       </>),
@@ -1119,7 +1130,7 @@ export const de = {
         <h2>Langzyklus-Attribution</h2>
         <p>Die durchschnittliche spanische Solarinstallation dauert 4–6 Monate vom ersten Anzeigenklick bis zum unterzeichneten Vertrag. Wenn Sie für First-Touch-Attribution optimieren, optimieren Sie für die falschen Kunden. Verbinden Sie CRM-gespeiste Offline-Conversions und lassen Sie den Algorithmus von tatsächlichen Installationen lernen.</p>
         <h2>Google Ads ist meist der hochintentionelle Kanal</h2>
-        <p>Für Solar erfasst Google Search höhere Intention als Meta. Die Budgetgewichtung, die die meisten Installateure fahren (60 % Meta, 40 % Google), ist normalerweise umgekehrt. Testen Sie das Gegenteil.</p>
+        <p>Für Solar erfasst <a href="/de/services/google-ads/">Google Ads</a> höhere Intention als <a href="/de/services/paid-social/">Meta</a>. Die Budgetgewichtung, die die meisten Installateure fahren (60 % Meta, 40 % Google), ist normalerweise umgekehrt. Testen Sie das Gegenteil.</p>
         <h2>Brauchen Sie dabei Unterstützung?</h2>
         <p>Falls Ihnen das oben Genannte bekannt vorkommt, <a href="/de/contact/?topic=solar-marketing-spain">schildern Sie uns kurz Ihre Situation</a> und wir melden uns innerhalb eines Werktages. Das erste Gespräch: 30 Minuten, auf unsere Rechnung.</p>
       </>),
@@ -1138,6 +1149,7 @@ export const de = {
         <p>Beenden Sie Creatives nicht nach einem Tag. Skalieren Sie Gewinner auch nicht nach einem Tag. Warten Sie auf mindestens 200 Conversions pro Variante, bevor Sie einen Gewinner erklären. Die meisten Creative-Tests werden zu früh beendet.</p>
         <h2>Kanalübergreifende Erkenntnisse</h2>
         <p>Ein Hook, der auf TikTok funktioniert, funktioniert normalerweise auf Meta. Ein Visual, das auf Meta funktioniert, funktioniert normalerweise auf Instagram. Testen Sie auf der günstigsten Plattform, deployen Sie auf den anderen.</p>
+        <p>Unsere <a href="/de/services/creative/">Creative Production Leistung</a> liefert den wöchentlichen Rhythmus, der das möglich macht — und <a href="/de/blog/meta-creative-volume/">wie man eine nachhaltige Meta-Creative-Pipeline aufbaut</a>.</p>
         <h2>Brauchen Sie dabei Unterstützung?</h2>
         <p>Falls Ihnen das oben Genannte bekannt vorkommt, <a href="/de/contact/?topic=creative-testing-framework">schildern Sie uns kurz Ihre Situation</a> und wir melden uns innerhalb eines Werktages. Das erste Gespräch: 30 Minuten, auf unsere Rechnung.</p>
       </>),
@@ -1156,6 +1168,7 @@ export const de = {
         <p>KI-Shopping-Interfaces scheinen aggregierte Review-Scores und Review-Anzahlen stark zu gewichten. Wenn Ihre Produkte keine Bewertungen haben, ranken sie nicht im KI-Shopping. Starten Sie ein Review-Sammlungsprogramm.</p>
         <h2>Markenreputation zählt</h2>
         <p>KI-Modelle zitieren Marken, denen ihre Trainingsdaten vertrauen. Echte Markenbekanntheit aufzubauen — durch PR, Content, Social Proof — zahlt sich in KI-Shopping-Sichtbarkeit aus, nicht nur in klassischen Markenmetriken.</p>
+        <p>Weiterführende Links: unsere <a href="/de/services/ai-visibility/">KI-Sichtbarkeits-Leistung</a> — und <a href="/de/blog/how-to-get-mentioned-by-chatgpt/">wie ChatGPT und Perplexity auf Sie aufmerksam werden</a>.</p>
         <h2>Brauchen Sie dabei Unterstützung?</h2>
         <p>Falls Ihnen das oben Genannte bekannt vorkommt, <a href="/de/contact/?topic=gpt-shopping">schildern Sie uns kurz Ihre Situation</a> und wir melden uns innerhalb eines Werktages. Das erste Gespräch: 30 Minuten, auf unsere Rechnung.</p>
       </>),
@@ -1178,6 +1191,7 @@ export const de = {
         <p>Bauen Sie Remarketing-Zielgruppen in GA4 für die Kohorten auf, die wichtig sind — Warenkorbabbrecher, Blog-Leser, Lead-Formular-Starter. Diese können automatisch mit Google Ads geteilt werden.</p>
         <h2>Datenspeicherung</h2>
         <p>GA4 speichert Event-Level-Daten standardmäßig 2 Monate lang. Ändern Sie es in Admin auf 14 Monate. Sie werden sich in einem Jahr dafür bedanken.</p>
+        <p>Weiterführende Links: unsere <a href="/de/services/analytics/">Analytics &amp; Tracking Leistung</a> — und <a href="/de/blog/tracking-setup-guide/">der vollständige Tracking-Leitfaden</a>.</p>
         <h2>Brauchen Sie dabei Unterstützung?</h2>
         <p>Falls Ihnen das oben Genannte bekannt vorkommt, <a href="/de/contact/?topic=ga4-mistakes">schildern Sie uns kurz Ihre Situation</a> und wir melden uns innerhalb eines Werktages. Das erste Gespräch: 30 Minuten, auf unsere Rechnung.</p>
       </>),
@@ -1196,7 +1210,7 @@ export const de = {
         <h2>Hochwertige Lead-Bearbeitung</h2>
         <p>Eine eingehende Charter-Anfrage ist im Durchschnitt 38.000 € + wert. Die Follow-up-Geschwindigkeit ist enorm wichtig. Wir verbinden Buchungssysteme (MMK, Booking Manager) normalerweise direkt mit Slack, damit das Vertriebsteam Anfragen in Sekunden sieht.</p>
         <h2>Brand vs. Performance</h2>
-        <p>Die meisten Charter-Unternehmen geben zu viel für Google Search und zu wenig für Brand-Building-Meta aus. Charter ist ein Hochüberlegungskauf — der Kunde muss Ihre Marke Monate kennen, bevor er sucht. Das Budget sollte das widerspiegeln.</p>
+        <p>Die meisten Charter-Unternehmen geben zu viel für <a href="/de/services/google-ads/">Google Search</a> und zu wenig für Brand-Building-<a href="/de/services/paid-social/">Meta</a> aus. Charter ist ein Hochüberlegungskauf — der Kunde muss Ihre Marke Monate kennen, bevor er sucht. Das Budget sollte das widerspiegeln.</p>
         <h2>Brauchen Sie dabei Unterstützung?</h2>
         <p>Falls Ihnen das oben Genannte bekannt vorkommt, <a href="/de/contact/?topic=yachting-marketing">schildern Sie uns kurz Ihre Situation</a> und wir melden uns innerhalb eines Werktages. Das erste Gespräch: 30 Minuten, auf unsere Rechnung.</p>
       </>),
@@ -1214,7 +1228,7 @@ export const de = {
         <h2>Was uns das kostet</h2>
         <p>Festpreise bedeuten, dass eine kleinere Agentur den Umsatz nicht so schnell skalieren kann wie eine prozentualsbasierte. Eine prozentualsbasierte Agentur, die einen Kunden von 100.000 € auf 1 Mio. € monatliche Ausgaben steigert, steigert ihren eigenen Umsatz 10-fach. Wir nicht. Das ist uns recht.</p>
         <h2>Was uns das bringt</h2>
-        <p>Eine 93-%-Zwölf-Monats-Kundenbindungsrate und eine Inbound-Pipeline, die fast vollständig aus Empfehlungen besteht. Der langsame Weg funktioniert.</p>
+        <p>Eine 93-%-Zwölf-Monats-Kundenbindungsrate und eine Inbound-Pipeline, die fast vollständig aus Empfehlungen besteht. Der langsame Weg funktioniert. Sehen Sie unsere <a href="/de/cases/">Referenzen</a>.</p>
         <h2>Brauchen Sie dabei Unterstützung?</h2>
         <p>Falls Ihnen das oben Genannte bekannt vorkommt, <a href="/de/contact/?topic=agency-pricing-honest">schildern Sie uns kurz Ihre Situation</a> und wir melden uns innerhalb eines Werktages. Das erste Gespräch: 30 Minuten, auf unsere Rechnung.</p>
       </>),

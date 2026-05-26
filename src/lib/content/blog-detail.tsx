@@ -83,6 +83,7 @@ export const blogDetails: BlogDetail[] = [
         <p>Listing groups in PMax let you control which products get prioritised. We use them to push high-margin, low-stock, seasonal products at specific times &mdash; a small lever, big impact on profit when used well.</p>
         <h2>First-party audience signals</h2>
         <p>Upload your customer match list, your high-LTV cohort, your recent purchaser segment. PMax does not use these as targeting &mdash; but it uses them as a strong signal for the algorithm. The lift is real.</p>
+        <p>Related: <a href="/services/google-ads/">our Google Ads &amp; Performance Max service</a> &mdash; and how PMax fits into the wider <a href="/blog/google-ads-vs-meta-ads-vs-tiktok-ads-ecommerce-2026/">Google vs Meta vs TikTok channel mix</a>.</p>
         <NeedHelp topic="performance-max-2026" />
       </>
     ),
@@ -101,11 +102,12 @@ export const blogDetails: BlogDetail[] = [
         <h2>Consent Mode v2</h2>
         <p>If you operate in the EU and you have not implemented Consent Mode v2, your Google Ads data is materially worse than it needs to be. Consent Mode lets Google fill in modelled conversions for users who do not consent &mdash; recovering 30&ndash;50% of the data you are losing.</p>
         <h2>Enhanced conversions</h2>
-        <p>Pass hashed email addresses (with consent) to Google and Meta&rsquo;s conversion APIs. This single change typically improves measured conversion volume by 15&ndash;25% in iOS-heavy categories.</p>
+        <p>Pass hashed email addresses (with consent) to Google and Meta&rsquo;s <a href="/services/analytics/">conversion APIs</a>. This single change typically improves measured conversion volume by 15&ndash;25% in iOS-heavy categories.</p>
         <h2>Offline conversion imports</h2>
         <p>If you have a sales cycle longer than a week, you need offline conversion imports. Hook your CRM to Google Ads and Meta&rsquo;s offline events APIs and feed back actual closed-won revenue. The platforms will start optimising for the right humans.</p>
         <h2>Reconciliation</h2>
         <p>Once a month, compare your ad-platform reported revenue against your actual ledger. Aim for under 15% discrepancy. Anything more means something in the chain is broken.</p>
+        <p>Related: <a href="/blog/cookieless-tracking/">cookieless tracking in 2026</a> &mdash; and <a href="/blog/crm-conversion-imports/">using CRM data to feed better offline conversions</a>.</p>
         <NeedHelp topic="tracking-setup-guide" />
       </>
     ),
@@ -124,11 +126,12 @@ export const blogDetails: BlogDetail[] = [
         <h2>Hooks, hooks, hooks</h2>
         <p>The first three seconds of every video are the only ones that matter. We A/B test hooks more than anything else &mdash; same body, six different opening seconds. The winning hook is reused across the next week&rsquo;s creative.</p>
         <h2>UGC at scale</h2>
-        <p>Run a small, ongoing creator programme &mdash; 5&ndash;10 creators on retainer, briefed weekly. Cheaper than agency creative, faster than internal creative, and Meta&rsquo;s algorithm tends to prefer it. Quality control is the only hard part.</p>
+        <p>Run a small, ongoing <a href="/services/creative/">creator programme</a> &mdash; 5&ndash;10 creators on retainer, briefed weekly. Cheaper than agency creative, faster than internal creative, and Meta&rsquo;s algorithm tends to prefer it. Quality control is the only hard part.</p>
         <h2>Performance creative briefing</h2>
         <p>Briefs go from your media team to your creative team, not the other way around. The brief contains: which ad set this is for, what the hook should test, what the proof point is, what the CTA needs to drive. Brand input comes in after.</p>
         <h2>Cull weekly, scale monthly</h2>
         <p>Every Friday, kill anything below threshold performance. Once a month, identify the top three creative patterns and brief out next month&rsquo;s creative around them. Compound the learnings.</p>
+        <p>Related: <a href="/blog/creative-testing-framework/">how to structure creative tests so the learnings actually compound</a> &mdash; and our <a href="/services/paid-social/">paid social service</a>.</p>
         <NeedHelp topic="meta-creative-volume" />
       </>
     ),
@@ -150,6 +153,7 @@ export const blogDetails: BlogDetail[] = [
         <p>50% of Mallorca&rsquo;s commercial searches happen between April and September. Do not run flat bids year-round. Build day-parted, season-parted bidding strategies that match the actual demand curve.</p>
         <h2>Local-pack and Maps</h2>
         <p>If you are a service business, your Google Business Profile drives more revenue than your ads do. Optimise it properly: photos updated monthly, reviews requested every quarter, services properly categorised. The work compounds.</p>
+        <p>See our <a href="/services/google-ads/">Google Ads &amp; Performance Max service</a> &mdash; built for Mallorca&rsquo;s multilingual, seasonal demand.</p>
         <NeedHelp topic="google-ads-mallorca" />
       </>
     ),
@@ -177,6 +181,7 @@ export const blogDetails: BlogDetail[] = [
         <p>Add genuine editorial copy at the top of each collection page (300&ndash;500 words), and link from it to related collections. Most Shopify themes hide this &mdash; find the section, enable it, write real content.</p>
         <h2>Hreflang for multilingual stores</h2>
         <p>If you sell in multiple languages, get hreflang right. Shopify Markets handles this if configured correctly, but the defaults are usually wrong. Audit every market for proper hreflang tags.</p>
+        <p>Related: our <a href="/services/seo/">SEO service</a> &mdash; and <a href="/blog/how-to-get-mentioned-by-chatgpt/">how to get mentioned by ChatGPT and Perplexity</a> (the structured data work here compounds into AI citations).</p>
         <NeedHelp topic="shopify-seo-2026" />
       </>
     ),
@@ -195,9 +200,10 @@ export const blogDetails: BlogDetail[] = [
         <h2>The booking flow rebuild</h2>
         <p>Five steps became three. Mobile-first. A clear &ldquo;Best rate guaranteed &mdash; book direct and save &euro;X&rdquo; message, tied to live OTA rate scraping so the saving was always real. Conversion rate from booking-engine entry to confirmed booking went from 2.1% to 8.4%.</p>
         <h2>The paid media shift</h2>
-        <p>Meta and Google Hotel Ads. The Meta creative focused on the rooms and views the hotel was actually known for, not generic travel imagery. Google Hotel Ads were bid aggressively only on date ranges where the hotel had availability &mdash; saving budget the rest of the year.</p>
+        <p><a href="/services/paid-social/">Meta</a> and <a href="/services/google-ads/">Google Hotel Ads</a>. The Meta creative focused on the rooms and views the hotel was actually known for, not generic travel imagery. Google Hotel Ads were bid aggressively only on date ranges where the hotel had availability &mdash; saving budget the rest of the year.</p>
         <h2>The numbers</h2>
         <p>11 weeks in, direct bookings had grown 52% and total bookings had grown 11% (so the direct shift was new revenue, not stolen from OTAs). At ~&euro;350,000 in monthly direct revenue versus the previous run-rate, the annual OTA commission saved was about &euro;184,000.</p>
+        <p>We used <a href="/services/conversion-design/">conversion design (CRO)</a>, <a href="/services/google-ads/">Google Ads</a> and <a href="/services/paid-social/">Meta Ads</a> to get there. More <a href="/cases/">client cases</a>.</p>
         <NeedHelp topic="hotel-direct-bookings" />
       </>
     ),
@@ -223,6 +229,7 @@ export const blogDetails: BlogDetail[] = [
         <p>The biggest unlock. Wire LinkedIn&rsquo;s offline conversion API to your CRM. Pass back MQL, SQL, opportunity created, and closed-won events with their values. LinkedIn&rsquo;s algorithm starts optimising for actual revenue.</p>
         <h2>Lead scoring before the platform sees the lead</h2>
         <p>Use a tool like Clearbit / 6sense / your own enrichment to score leads before they fire as conversions in LinkedIn. Only fire &ldquo;qualified lead&rdquo; conversions for leads worth pursuing. The platform&rsquo;s algorithm gets dramatically more accurate.</p>
+        <p>Related: our <a href="/services/paid-social/">paid social service</a> (LinkedIn, Meta, TikTok) &mdash; and <a href="/blog/crm-conversion-imports/">using CRM offline conversions to make the algorithm smarter</a>.</p>
         <NeedHelp topic="b2b-linkedin-playbook" />
       </>
     ),
@@ -241,11 +248,12 @@ export const blogDetails: BlogDetail[] = [
         <h2>Consent Mode v2</h2>
         <p>Google&rsquo;s Consent Mode v2 lets you tell Google whether the user consented to ad and analytics cookies. If they did not, Google still receives &ldquo;consentless pings&rdquo; &mdash; anonymised signals it uses to model the conversion. Properly implemented, you recover 30&ndash;50% of the data you would otherwise lose.</p>
         <h2>Conversion APIs</h2>
-        <p>Meta CAPI, TikTok Events API, LinkedIn Conversions API, Google Enhanced Conversions. All of them let you send hashed first-party data from your server to the platform. All of them improve data quality. All of them are underused.</p>
+        <p>Meta CAPI, TikTok Events API, LinkedIn Conversions API, <a href="/services/analytics/">Google Enhanced Conversions</a>. All of them let you send hashed first-party data from your server to the platform. All of them improve data quality. All of them are underused.</p>
         <h2>First-party data strategy</h2>
         <p>If you do not have a first-party data strategy, build one. Email captures, account creation, loyalty programmes, gated content &mdash; whatever fits your business. First-party data is now the foundation everything else depends on.</p>
         <h2>Modelled conversions</h2>
         <p>Expect 20&ndash;40% of your conversion data in 2026 to be modelled (statistically estimated) rather than directly observed. This is normal, and not a problem if the model is well-fed. It is a problem if you are trying to do precise day-on-day attribution &mdash; accept that those days are gone.</p>
+        <p>Related: <a href="/blog/tracking-setup-guide/">setting up tracking that doesn&rsquo;t lie</a> &mdash; and our <a href="/services/analytics/">analytics &amp; tracking service</a>.</p>
         <NeedHelp topic="cookieless-tracking" />
       </>
     ),
@@ -269,6 +277,7 @@ export const blogDetails: BlogDetail[] = [
         <p>Use the form to pre-qualify: budget range, timeline to sell, current property type. The 30% drop in leads is worth it &mdash; the 70% that finish are dramatically more useful to your agents.</p>
         <h2>Mobile keyboard hygiene</h2>
         <p>Email fields should trigger email keyboards. Phone fields should trigger numeric keyboards. Do not make a mobile user switch keyboards three times to fill in your form.</p>
+        <p>This is core to our <a href="/services/conversion-design/">conversion design (CRO) service</a>.</p>
         <NeedHelp topic="real-estate-lead-gen" />
       </>
     ),
@@ -288,6 +297,7 @@ export const blogDetails: BlogDetail[] = [
         <p>Most brand-account creative on TikTok dies. Get creators making content for you, get them on usage rights, and run those creatives as Spark Ads. The lift over brand-account creative is usually 3&ndash;5x.</p>
         <h2>The compounding loop</h2>
         <p>Identify your top 3 organic videos every month. Spark Ad them. Use the learnings to brief next month&rsquo;s creator content. Repeat. The brands that crack TikTok compound this loop month after month.</p>
+        <p>Related: our <a href="/services/paid-social/">paid social service</a> and <a href="/services/creative/">creative production</a> &mdash; and <a href="/blog/meta-creative-volume/">how to build a creative pipeline for Meta</a> (the principles are identical on TikTok).</p>
         <NeedHelp topic="tiktok-organic-paid" />
       </>
     ),
@@ -309,6 +319,7 @@ export const blogDetails: BlogDetail[] = [
         <p>Within 2&ndash;3 weeks of implementing offline conversions properly, most B2B accounts see: 30&ndash;50% lower MQL volume, but 2&ndash;3x more SQLs and dramatically higher pipeline values. The same ad spend, dramatically better business outcome.</p>
         <h2>Common pitfalls</h2>
         <p>Make sure the values you are passing back are economically meaningful. A &ldquo;closed-won&rdquo; event should carry the actual contract value, not a fixed &euro;100 placeholder. The platform optimises against the values you give it &mdash; bad values means bad optimisation.</p>
+        <p>Related: <a href="/blog/tracking-setup-guide/">the full tracking setup guide</a> and our <a href="/services/analytics/">analytics &amp; tracking service</a>.</p>
         <NeedHelp topic="crm-conversion-imports" />
       </>
     ),
@@ -329,7 +340,7 @@ export const blogDetails: BlogDetail[] = [
         <h2>Long-cycle attribution</h2>
         <p>The average Spanish solar install takes 4&ndash;6 months from first ad click to signed contract. If you are optimising for first-touch attribution, you are optimising for the wrong customers. Wire CRM-fed offline conversions and let the algorithm learn from actual installs.</p>
         <h2>Google Ads is usually the higher-intent channel</h2>
-        <p>For solar, Google search captures higher-intent than Meta. Budget weighting most installers run (60% Meta, 40% Google) is usually backwards. Test the inverse.</p>
+        <p>For solar, <a href="/services/google-ads/">Google Ads</a> captures higher-intent than <a href="/services/paid-social/">Meta</a>. Budget weighting most installers run (60% Meta, 40% Google) is usually backwards. Test the inverse.</p>
         <NeedHelp topic="solar-marketing-spain" />
       </>
     ),
@@ -351,6 +362,7 @@ export const blogDetails: BlogDetail[] = [
         <p>Do not kill creative after a day. Do not scale winners after a day either. Wait for at least 200 conversions per variant before declaring a winner. Most creative tests are killed too early.</p>
         <h2>Cross-platform learnings</h2>
         <p>A hook that works on TikTok usually works on Meta. A visual that works on Meta usually works on Instagram. Test on the cheapest platform, deploy on the others.</p>
+        <p>See our <a href="/services/creative/">creative production service</a> for the weekly cadence that makes this possible &mdash; and <a href="/blog/meta-creative-volume/">how to build a sustainable Meta creative pipeline</a>.</p>
         <NeedHelp topic="creative-testing-framework" />
       </>
     ),
@@ -372,6 +384,7 @@ export const blogDetails: BlogDetail[] = [
         <p>AI shopping interfaces seem to heavily weight aggregate review scores and review counts. If your products do not have reviews, they do not rank in AI shopping. Get a review collection programme running.</p>
         <h2>Brand reputation matters</h2>
         <p>AI models cite brands their training data trusts. Building genuine brand recognition &mdash; through PR, content, social proof &mdash; pays back in AI shopping visibility, not just in classical brand metrics.</p>
+        <p>Related: our <a href="/services/ai-visibility/">AI search visibility service</a> &mdash; and <a href="/blog/how-to-get-mentioned-by-chatgpt/">how to get mentioned by ChatGPT and Perplexity</a>.</p>
         <NeedHelp topic="gpt-shopping" />
       </>
     ),
@@ -397,6 +410,7 @@ export const blogDetails: BlogDetail[] = [
         <p>Build remarketing audiences in GA4 for the cohorts that matter &mdash; cart abandoners, blog readers, lead form starters. These can be shared to Google Ads automatically.</p>
         <h2>Data retention</h2>
         <p>GA4 defaults to 2 months of event-level data retention. Change it to 14 months in admin. You will thank yourself in a year.</p>
+        <p>Related: our <a href="/services/analytics/">analytics &amp; tracking service</a> &mdash; and <a href="/blog/tracking-setup-guide/">the full tracking setup guide</a>.</p>
         <NeedHelp topic="ga4-mistakes" />
       </>
     ),
@@ -417,7 +431,7 @@ export const blogDetails: BlogDetail[] = [
         <h2>High-value lead handling</h2>
         <p>An inbound charter enquiry is worth &euro;38,000+ on average. The follow-up speed matters enormously. We typically wire booking systems (MMK, Booking Manager) directly into Slack so the sales team sees enquiries in seconds, not days.</p>
         <h2>Brand vs performance</h2>
-        <p>Most charter businesses overspend on Google search and underspend on brand-building Meta. Charter is a high-consideration purchase &mdash; the customer needs to know your brand exists months before they search. Budget should reflect that.</p>
+        <p>Most charter businesses overspend on <a href="/services/google-ads/">Google search</a> and underspend on brand-building <a href="/services/paid-social/">Meta</a>. Charter is a high-consideration purchase &mdash; the customer needs to know your brand exists months before they search. Budget should reflect that.</p>
         <NeedHelp topic="yachting-marketing" />
       </>
     ),
@@ -438,7 +452,7 @@ export const blogDetails: BlogDetail[] = [
         <h2>What this costs us</h2>
         <p>Flat fees mean a smaller agency cannot scale revenue as fast as a percentage-fee one. A percentage-fee agency that grows a client from &euro;100k to &euro;1m in monthly spend grows their own revenue 10x. We do not. We are fine with that.</p>
         <h2>What this gets us</h2>
-        <p>A 93% twelve-month client retention rate, and an inbound pipeline made almost entirely of referrals. The slow way works.</p>
+        <p>A 93% twelve-month client retention rate, and an inbound pipeline made almost entirely of referrals. The slow way works. See our <a href="/cases/">client cases</a>.</p>
         <NeedHelp topic="agency-pricing-honest" />
       </>
     ),
