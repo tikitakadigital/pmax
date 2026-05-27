@@ -645,6 +645,7 @@ export const blogDetails: BlogDetail[] = [
         <h2 id="closing">Closing &mdash; pick what fits the business, not what&rsquo;s loudest</h2>
         <p>Most ecommerce brands do not have a &ldquo;Meta problem&rdquo; or a &ldquo;TikTok problem&rdquo;. They have a <strong>creative-throughput problem</strong>, an <strong>attribution problem</strong>, or a <strong>catalogue problem</strong>, and they blame the platform. Fix the underlying constraint and the channel mix usually sorts itself out within a quarter.</p>
         <p>If you want a one-page diagnosis of where your media is leaking across Google, Meta and TikTok, we run a free 30-minute version of that call every week. <a href="/contact/?topic=channel-mix-audit">Book it here</a> &mdash; no deck, no sales pitch.</p>
+        <p>Related: our <a href="/services/google-ads/">Google Ads &amp; Performance Max service</a>, our <a href="/services/paid-social/">paid social service</a> (Meta &amp; TikTok), our <a href="/services/analytics/">analytics &amp; attribution setup</a> &mdash; and our <a href="/industries/ecommerce/">e-commerce marketing playbook</a>.</p>
         <p style={{ marginTop: 32, fontFamily: 'var(--font-mono)', fontSize: 11, letterSpacing: '1.5px', textTransform: 'uppercase', color: '#6a6a6a' }}>Last updated 26 May 2026 &middot; Reviewed monthly &middot; Based on &euro;2.1M of ecommerce spend Q1 2026</p>
       </>
     ),

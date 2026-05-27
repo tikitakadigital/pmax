@@ -1365,6 +1365,7 @@ export const de = {
         <h2 id="closing">Abschluss &mdash; wähle, was zum Geschäft passt, nicht was am lautesten ist</h2>
         <p>Die meisten E-Commerce-Marken haben kein &bdquo;Meta-Problem&ldquo; oder &bdquo;TikTok-Problem&ldquo;. Sie haben ein <strong>Creative-Throughput-Problem</strong>, ein <strong>Attributionsproblem</strong> oder ein <strong>Katalogproblem</strong> &mdash; und beschuldigen die Plattform. Fixe die zugrundeliegende Einschränkung, und der Channel-Mix ordnet sich meist innerhalb eines Quartals von selbst.</p>
         <p>Wenn du eine einseitige Diagnose willst, wo dein Media-Budget über Google, Meta und TikTok leckt: <a href="/de/contact/?topic=channel-mix-audit">30 Minuten kostenlos buchen</a>. Keine Folien, kein Sales-Pitch.</p>
+        <p>Verwandte Leistungen: unser <a href="/de/services/google-ads/">Google Ads &amp; Performance Max Service</a>, unser <a href="/de/services/paid-social/">Paid Social Service</a> (Meta &amp; TikTok), unser <a href="/de/services/analytics/">Analytics &amp; Attribution Setup</a> &mdash; und unser <a href="/de/industries/ecommerce/">E-Commerce Marketing Playbook</a>.</p>
         <p style={{ marginTop: 32, fontFamily: 'var(--font-mono)', fontSize: 11, letterSpacing: '1.5px', textTransform: 'uppercase', color: '#6a6a6a' }}>Zuletzt aktualisiert 26. Mai 2026 &middot; Monatlich geprüft &middot; Basis &euro;2,1 Mio. E-Com-Spend Q1 2026</p>
       </>),
     },

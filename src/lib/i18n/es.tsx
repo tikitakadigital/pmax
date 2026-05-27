@@ -1331,6 +1331,7 @@ export const es = {
         <h2 id="closing">Cierre &mdash; elige lo que encaja, no lo que grita más</h2>
         <p>La mayoría de marcas no tienen un &ldquo;problema con Meta&rdquo; ni un &ldquo;problema con TikTok&rdquo;. Tienen un <strong>problema de throughput creativo</strong>, un <strong>problema de atribución</strong> o un <strong>problema de catálogo</strong> &mdash; y culpan a la plataforma. Arregla la restricción real, y el mix de canales se ordena solo en un trimestre.</p>
         <p>Si quieres un diagnóstico de una página sobre dónde fuga tu inversión entre Google, Meta y TikTok, hacemos una llamada gratuita de 30 minutos cada semana. <a href="/es/contact/?topic=channel-mix-audit">Reserva aquí</a> &mdash; sin slides, sin venta.</p>
+        <p>Relacionado: nuestro <a href="/es/services/google-ads/">servicio de Google Ads &amp; Performance Max</a>, nuestro <a href="/es/services/paid-social/">servicio de paid social</a> (Meta &amp; TikTok), nuestra <a href="/es/services/analytics/">configuración de analítica y atribución</a> &mdash; y nuestro <a href="/es/industries/ecommerce/">playbook de marketing para ecommerce</a>.</p>
         <p style={{ marginTop: 32, fontFamily: 'var(--font-mono)', fontSize: 11, letterSpacing: '1.5px', textTransform: 'uppercase', color: '#6a6a6a' }}>Actualizado 26 mayo 2026 &middot; Revisión mensual &middot; Base &euro;2,1M Q1 2026</p>
       </>),
     },
