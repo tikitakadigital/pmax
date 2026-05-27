@@ -24,7 +24,6 @@ export const posts: Post[] = [
     deck: 'A brutally practical, side-by-side comparison of the three biggest paid channels for ecommerce in 2026 — based on €2.1M of pmax-managed spend in Q1.',
     variant: 'is-slate',
     featured: true,
-    external: true,
   },
   {
     slug: 'how-to-get-mentioned-by-chatgpt',

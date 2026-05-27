@@ -18,6 +18,5 @@ export default function robots(): MetadataRoute.Robots {
       },
     ],
     sitemap: 'https://pmax.online/sitemap.xml',
-    host: 'https://pmax.online',
   }
 }

@@ -1235,6 +1235,125 @@ export const de = {
         <p>Falls Ihnen das oben Genannte bekannt vorkommt, <a href="/de/contact/?topic=agency-pricing-honest">schildern Sie uns kurz Ihre Situation</a> und wir melden uns innerhalb eines Werktages. Das erste Gespräch: 30 Minuten, auf unsere Rechnung.</p>
       </>),
     },
+    'google-ads-vs-meta-ads-vs-tiktok-ads-ecommerce-2026': {
+      title: 'Google Ads vs. Meta Ads vs. TikTok Ads für E-Commerce 2026.',
+      deck: 'Kein Marketing-Lehrbuch. Keine Hersteller-Folien. Ein brutal praktischer Side-by-Side-Vergleich, wo jede Plattform 2026 wirklich Geld einbringt — und wo sie still und leise Budget verbrennt.',
+      toc: ['Kurzfassung', 'CPC & CPM', 'High vs. Low AOV', 'Attribution', 'Creative-Aufwand', 'Skalierung', 'Remarketing', 'Wann PMax gewinnt', 'Der ehrliche Mix', 'FAQs'],
+      prose: (<>
+        <p><strong>Wer 2026 online verkauft, fährt mindestens eines davon: Google Ads, Meta Ads, TikTok Ads.</strong> Die meisten E-Commerce-Marken fahren alle drei gleichzeitig &mdash; ohne ehrliches Framework, welcher Kanal den nächsten Euro verdient. Dieser Beitrag ist genau dieses Framework, auf Basis von rund &euro;2,1 Mio. pmax-gemanagtem E-Commerce-Spend in Q1 2026 über 14 aktive Retainer in EU und UK.</p>
+        <p>Meinungsstark. Wenig schmeichelhaft. Sprung zur Vergleichstabelle für die 30-Sekunden-Version.</p>
+
+        <h2 id="tldr">Kurzfassung &mdash; eine Zeile pro Plattform</h2>
+        <ul>
+          <li><strong>Google Ads</strong> ist der günstigste Ort, jemanden zu finden, der dein Produkt bereits will.</li>
+          <li><strong>Meta Ads</strong> ist der günstigste Ort, Nachfrage zu erzeugen &mdash; wenn du das Creative-Volumen liefern kannst.</li>
+          <li><strong>TikTok Ads</strong> hat den günstigsten CPM im Raum &mdash; und ist der einfachste Ort, Geld zu verlieren, wenn dein Creative-Tempo zu langsam ist.</li>
+        </ul>
+
+        <h2 id="cpc-cpm">CPC und CPM in der Realität &mdash; was wir 2026 wirklich zahlen</h2>
+        <p>Veröffentlichte Benchmarks sind nutzlos, weil die Streuung gigantisch ist. Was folgt, ist die Median-Range über unsere aktiven EU-E-Commerce-Accounts in Q1 2026 &mdash; nicht theoretisch, nicht offiziell, einfach was die Spend-Reports ausgespuckt haben.</p>
+
+        <div className="cmp-table-wrap">
+          <table className="cmp-table">
+            <thead><tr><th>Metrik (EU-Median, Q1 2026)</th><th>Google Ads</th><th>Meta Ads</th><th>TikTok Ads</th></tr></thead>
+            <tbody>
+              <tr><th>CPM (&euro;)</th><td>&euro;15&ndash;&euro;55 Shopping &middot; &euro;30&ndash;&euro;120 Brand</td><td>&euro;8&ndash;&euro;18 Prospecting &middot; &euro;18&ndash;&euro;35 Retargeting</td><td>&euro;3&ndash;&euro;8 Prospecting</td></tr>
+              <tr><th>CPC (&euro;)</th><td>&euro;0,40&ndash;&euro;2,20 Shopping &middot; &euro;1,20&ndash;&euro;6,50 Brand</td><td>&euro;0,35&ndash;&euro;1,10</td><td>&euro;0,18&ndash;&euro;0,55</td></tr>
+              <tr><th>CTR</th><td>3,5&ndash;9% Shopping</td><td>0,9&ndash;2,2%</td><td>0,6&ndash;1,5%</td></tr>
+              <tr><th>Median-Conversion-Rate (vom Klick)</th><td>2,4&ndash;5,8%</td><td>0,9&ndash;2,2%</td><td>0,4&ndash;1,4%</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p><strong>Was das wirklich heißt:</strong> Ein Google-Shopping-Klick ist 4&ndash;8&times; teurer als ein TikTok-Klick &mdash; aber auch 4&ndash;10&times; wahrscheinlicher, in einen Kauf umzuschlagen. CPM ist die falsche Einheit für E-Commerce. CPA (oder besser: CAC-Payback) ist die einzig ehrliche.</p>
+
+        <div className="cmp-takeaway">
+          <span className="k">Die Lektion</span>
+          <p><strong>Wer Channels nur nach CPM bewertet, gibt zu viel auf TikTok aus und zu wenig auf Google.</strong> Reichweite ist nicht das Ziel. Bezahlte Aufmerksamkeit von Menschen, die das Produkt wollen und sich leisten können, ist das Ziel.</p>
+        </div>
+
+        <h2 id="aov">High AOV vs. Low AOV &mdash; der unterschätzte Hebel</h2>
+        <p>Welche Plattform gewinnt, hängt fast genauso stark vom Average Order Value ab wie von der Kategorie.</p>
+
+        <div className="cmp-table-wrap">
+          <table className="cmp-table">
+            <thead><tr><th>Average Order Value</th><th>Google Ads</th><th>Meta Ads</th><th>TikTok Ads</th></tr></thead>
+            <tbody>
+              <tr><th>&euro;20&ndash;&euro;60 (Impuls)</th><td><span className="pill pill-mid">Mittel</span> Margen vom CPC aufgefressen</td><td><span className="pill pill-good">Gut</span> Sweet Spot für Advantage+</td><td><span className="pill pill-good">Gut</span> Native viraler Pfad</td></tr>
+              <tr><th>&euro;60&ndash;&euro;200 (überlegt)</th><td><span className="pill pill-good">Gut</span> Beste Gesamtpassung</td><td><span className="pill pill-good">Gut</span> Stark mit Creative</td><td><span className="pill pill-mid">Mittel</span> Hohe Iteration nötig</td></tr>
+              <tr><th>&euro;200&ndash;&euro;800 (bewusst)</th><td><span className="pill pill-good">Exzellent</span> Brand Search dominiert</td><td><span className="pill pill-mid">Mittel</span> Lange Entscheidung</td><td><span className="pill pill-bad">Schwach</span> Falsche Intent</td></tr>
+              <tr><th>&euro;800+ (Luxus / B2B-nah)</th><td><span className="pill pill-good">Exzellent</span> Microsoft Ads auch relevant</td><td><span className="pill pill-mid">Mittel</span> Lange Zyklen</td><td><span className="pill pill-bad">Schwach</span> Audience-Mismatch</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2 id="attribution">Attribution &mdash; was jede Plattform überbewertet</h2>
+        <p>Alle drei Plattformen schreiben sich Conversions zu, die nicht ihre sind. Sie unterscheiden sich darin, wie stark &mdash; und wie leicht man gegensteuern kann.</p>
+
+        <div className="cmp-table-wrap">
+          <table className="cmp-table">
+            <thead><tr><th>Attribution</th><th>Google Ads</th><th>Meta Ads</th><th>TikTok Ads</th></tr></thead>
+            <tbody>
+              <tr><th>Default-Klick-Fenster</th><td>30 Tage Klick, 1 Tag View</td><td>7 Tage Klick, 1 Tag View</td><td>7 Tage Klick, 1 Tag View</td></tr>
+              <tr><th>Server-Side-Fix</th><td>Enhanced Conversions + Offline-Import</td><td>CAPI + Offline Events</td><td>Events API (noch jung)</td></tr>
+              <tr><th>Über-Zuweisung (QoQ-Messung)</th><td>~15&ndash;25%</td><td>~25&ndash;40%</td><td>~35&ndash;55%</td></tr>
+              <tr><th>Ehrlichkeits-Score (subjektiv)</th><td>6/10</td><td>4/10</td><td>3/10</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p className="cmp-quote">&bdquo;2026 ist Attribution kein Reporting-Problem mehr. Sie ist die gesamte Performance-Lücke.&ldquo;</p>
+
+        <h2 id="creative">Creative-Anforderungen &mdash; was jede Plattform wirklich frisst</h2>
+
+        <div className="cmp-table-wrap">
+          <table className="cmp-table">
+            <thead><tr><th>Creative-Anforderung</th><th>Google Ads</th><th>Meta Ads</th><th>TikTok Ads</th></tr></thead>
+            <tbody>
+              <tr><th>Produktionsfrequenz für stabile Performance</th><td>1&ndash;3 neue Assets pro Quartal</td><td>10&ndash;20 frische Assets pro <em>Woche</em></td><td>15&ndash;30 native Assets pro <em>Woche</em></td></tr>
+              <tr><th>Best-Performing-Creative</th><td>Produkt-Feed + Responsive Text</td><td>UGC-Style-Video, gründergetrieben</td><td>Native UGC, hook-led</td></tr>
+              <tr><th>Creative-Fatigue-Fenster</th><td>3&ndash;6 Monate</td><td>2&ndash;4 Wochen</td><td>5&ndash;14 Tage</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div className="cmp-takeaway">
+          <span className="k">Die Lektion</span>
+          <p><strong>Wer keine 10 frischen Meta-Format-Assets pro Woche liefern kann, sollte Meta Ads nicht starten.</strong> Wer keine 15 nativen TikTok-Assets pro Woche liefern kann, ebenso nicht. Wir sagen das Kunden höflich; sie hören selten beim ersten Mal zu. Dann führen wir das Gespräch in Monat drei erneut.</p>
+        </div>
+
+        <h2 id="pmax">Wann Performance Max gewinnt &mdash; und wann es verliert</h2>
+        <h3>PMax gewinnt, wenn &hellip;</h3>
+        <ul>
+          <li>die Marke bereits <strong>starke organische und Brand-Search-Nachfrage</strong> hat;</li>
+          <li>der Katalog <strong>konsistente Marge</strong> über SKUs zeigt und der Feed sauber ist;</li>
+          <li>du <strong>tiefe Conversion-Daten</strong> hast &mdash; First-Party-Signale, Offline-Events, value-based Bidding;</li>
+          <li>du bereit bist, <strong>Brand Search auszuschließen</strong> und separat manuell zu fahren.</li>
+        </ul>
+        <h3>PMax verliert, wenn &hellip;</h3>
+        <ul>
+          <li>der Katalog <strong>stark unterschiedliche Margen</strong> enthält;</li>
+          <li>du <strong>chirurgische Keyword-Kontrolle</strong> brauchst &mdash; die liefert PMax nicht;</li>
+          <li>Brand Search <strong>absorbiert und doppelt gezählt</strong> wird;</li>
+          <li>die Conversion-Daten <strong>flach</strong> sind &mdash; nur Form-Fills, keine Offline-Events.</li>
+        </ul>
+
+        <p className="cmp-quote">&bdquo;PMax schlägt Meta meist dann, wenn bereits Brand-Search-Nachfrage existiert. Fehlt sie, gewinnt meist Meta &mdash; vorausgesetzt das Creative-Volumen stimmt.&ldquo;</p>
+
+        <h2 id="the-honest-mix">Der ehrliche Mix &mdash; unsere Standardempfehlung</h2>
+        <p>Wenn uns ein neuer E-Commerce-Kunde heute fragt, wie er &euro;30.000 Monatsbudget aufteilen soll, ohne weiteren Kontext:</p>
+        <ul>
+          <li><strong>~55% Google Ads</strong> &mdash; Performance Max + sauber strukturierte Search, Brand separat.</li>
+          <li><strong>~35% Meta Ads</strong> &mdash; Advantage+ Shopping fürs Prospecting, DPA fürs Retargeting, 10+ neue Creatives/Woche.</li>
+          <li><strong>~10% TikTok Ads</strong> &mdash; Spark Ads auf Creator-Content, nur mit funktionierender Creative-Pipeline.</li>
+        </ul>
+
+        <h2 id="closing">Abschluss &mdash; wähle, was zum Geschäft passt, nicht was am lautesten ist</h2>
+        <p>Die meisten E-Commerce-Marken haben kein &bdquo;Meta-Problem&ldquo; oder &bdquo;TikTok-Problem&ldquo;. Sie haben ein <strong>Creative-Throughput-Problem</strong>, ein <strong>Attributionsproblem</strong> oder ein <strong>Katalogproblem</strong> &mdash; und beschuldigen die Plattform. Fixe die zugrundeliegende Einschränkung, und der Channel-Mix ordnet sich meist innerhalb eines Quartals von selbst.</p>
+        <p>Wenn du eine einseitige Diagnose willst, wo dein Media-Budget über Google, Meta und TikTok leckt: <a href="/de/contact/?topic=channel-mix-audit">30 Minuten kostenlos buchen</a>. Keine Folien, kein Sales-Pitch.</p>
+        <p style={{ marginTop: 32, fontFamily: 'var(--font-mono)', fontSize: 11, letterSpacing: '1.5px', textTransform: 'uppercase', color: '#6a6a6a' }}>Zuletzt aktualisiert 26. Mai 2026 &middot; Monatlich geprüft &middot; Basis &euro;2,1 Mio. E-Com-Spend Q1 2026</p>
+      </>),
+    },
   } as Record<string, LocalizedBlogDetail>,
 }
 

@@ -559,6 +559,27 @@ select option { background: var(--color-canvas); }
 .blog-aside a:hover { color: var(--color-jelly-mint); }
 @media (max-width: 900px) { .blog-layout { grid-template-columns: 1fr; } .blog-aside { position: static; } }
 
+/* COMPARISON TABLES (google-ads-vs-meta post) */
+.cmp-table-wrap { overflow-x: auto; border: 1px solid #2d2d2d; border-radius: 12px; margin: 28px 0; background: #0a0a0a; }
+.cmp-table { width: 100%; border-collapse: collapse; font-family: var(--font-sans); font-size: 14px; min-width: 720px; }
+.cmp-table th, .cmp-table td { padding: 14px 18px; text-align: left; border-bottom: 1px solid #2d2d2d; vertical-align: top; line-height: 1.55; }
+.cmp-table thead th { background: #131313; font-family: var(--font-mono); font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--color-jelly-mint); }
+.cmp-table tbody th { font-weight: 700; color: #fff; width: 200px; }
+.cmp-table tbody td { color: #c2c2c2; }
+.cmp-table tr:last-child th, .cmp-table tr:last-child td { border-bottom: 0; }
+.cmp-table .pill { display: inline-block; font-family: var(--font-mono); font-size: 10px; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase; padding: 3px 8px; border-radius: 12px; }
+.pill-good { background: rgba(60,255,208,0.12); color: var(--color-jelly-mint); border: 1px solid rgba(60,255,208,0.35); }
+.pill-mid { background: rgba(255,216,77,0.10); color: #ffd84d; border: 1px solid rgba(255,216,77,0.30); }
+.pill-bad { background: rgba(255,144,128,0.10); color: #ff9080; border: 1px solid rgba(255,144,128,0.30); }
+.cmp-takeaway { background: #131313; border: 1px solid var(--color-jelly-mint); border-radius: 12px; padding: 22px 26px; margin: 28px 0; }
+.cmp-takeaway .k { font-family: var(--font-mono); font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--color-jelly-mint); display: block; margin-bottom: 8px; }
+.cmp-takeaway p { margin: 0; color: #f6f4ef; font-size: 16px; line-height: 1.55; }
+.cmp-quote { font-family: var(--font-serif); font-size: 22px; font-style: italic; line-height: 1.45; color: #fff; border-left: 3px solid var(--color-jelly-mint); padding: 6px 22px; margin: 28px 0; }
+.cmp-faq summary { cursor: pointer; padding: 16px 0; font-weight: 700; color: #fff; border-bottom: 1px solid #2d2d2d; list-style: none; position: relative; padding-right: 32px; }
+.cmp-faq summary::after { content: "+"; position: absolute; right: 6px; top: 50%; transform: translateY(-50%); color: var(--color-jelly-mint); font-family: var(--font-mono); font-size: 20px; font-weight: 400; }
+.cmp-faq[open] summary::after { content: "−"; }
+.cmp-faq p { padding: 12px 0 18px; color: #c2c2c2; margin: 0; }
+
 /* ABOUT LAYOUT */
 .about-layout { display: grid; grid-template-columns: 1.2fr 1fr; gap: 64px; align-items: flex-start; }
 .about-layout aside { position: sticky; top: 120px; }
