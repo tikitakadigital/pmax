@@ -1,4 +1,5 @@
 import type { ReactNode } from 'react'
+import Image from 'next/image'
 import type { ServiceDetail, IndustryDetail, LocalizedCaseDetail, LocalizedBlogDetail } from './de'
 export type { ServiceDetail, IndustryDetail, LocalizedCaseDetail, LocalizedBlogDetail }
 
@@ -1303,6 +1304,19 @@ export const es = {
           <li>brand search está siendo <strong>absorbido y contado dos veces</strong>;</li>
           <li>los datos de conversión son <strong>superficiales</strong> &mdash; sólo form fills.</li>
         </ul>
+
+        <figure className="cmp-screenshot">
+          <Image
+            src="/blog/google-ads-vs-meta-ads-vs-tiktok-ads-ecommerce-2026/pmax-branded-search-absorbed-attribution-2026.webp"
+            alt="Informe de términos de búsqueda en Google Ads mostrando cómo Performance Max absorbe búsquedas de marca y se atribuye las conversiones — causa frecuente de ROAS inflado en cuentas de ecommerce 2026"
+            title="Performance Max absorbiendo búsquedas de marca — informe de términos de búsqueda Google Ads Q1 2026"
+            width={1600}
+            height={900}
+            style={{ width: '100%', height: 'auto', display: 'block' }}
+            loading="lazy"
+          />
+          <figcaption>Fig. 1 — Cuenta real: búsquedas de marca absorbidas por Performance Max y acreditadas como conversiones PMax. El ROAS reportado parece sólido sobre el papel &mdash; la mayor parte es demanda de marca capturada, no nuevos clientes adquiridos a través de paid media.</figcaption>
+        </figure>
 
         <p className="cmp-quote">&ldquo;PMax suele superar a Meta cuando ya existe demanda de búsqueda de marca. Cuando no existe, normalmente gana Meta &mdash; siempre que el volumen creativo esté ahí.&rdquo;</p>
 

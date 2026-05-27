@@ -1,4 +1,5 @@
 import type { ReactNode } from 'react'
+import Image from 'next/image'
 
 export interface ServiceDetail {
   metaTitle: string
@@ -1337,6 +1338,19 @@ export const de = {
           <li>Brand Search <strong>absorbiert und doppelt gezählt</strong> wird;</li>
           <li>die Conversion-Daten <strong>flach</strong> sind &mdash; nur Form-Fills, keine Offline-Events.</li>
         </ul>
+
+        <figure className="cmp-screenshot">
+          <Image
+            src="/blog/google-ads-vs-meta-ads-vs-tiktok-ads-ecommerce-2026/pmax-branded-search-absorbed-attribution-2026.webp"
+            alt="Google Ads Suchanfragebericht: Performance-Max-Kampagne absorbiert Marken-Keywords und schreibt sich die Conversions gut — häufige Ursache für überhöhten ROAS in E-Commerce-Accounts 2026"
+            title="Performance Max absorbiert Brand-Search — Google Ads Suchanfragebericht Q1 2026"
+            width={1600}
+            height={900}
+            style={{ width: '100%', height: 'auto', display: 'block' }}
+            loading="lazy"
+          />
+          <figcaption>Abb. 1 — Echter Account: Marken-Suchanfragen, die von Performance Max absorbiert und als PMax-Conversions gewertet werden. Der ROAS sieht auf dem Papier stark aus &mdash; der Großteil davon ist eingefangene Brand-Nachfrage, keine durch Paid Media gewonnenen Neukunden.</figcaption>
+        </figure>
 
         <p className="cmp-quote">&bdquo;PMax schlägt Meta meist dann, wenn bereits Brand-Search-Nachfrage existiert. Fehlt sie, gewinnt meist Meta &mdash; vorausgesetzt das Creative-Volumen stimmt.&ldquo;</p>
 
