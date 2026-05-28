@@ -597,16 +597,18 @@ export const blogDetails: BlogDetail[] = [
         </ul>
 
         <figure className="cmp-screenshot">
-          <Image
-            src="/blog/google-ads-vs-meta-ads-vs-tiktok-ads-ecommerce-2026/pmax-branded-search-absorbed-attribution-2026.webp"
-            alt="Google Ads search terms report showing branded queries absorbed by a Performance Max campaign — brand keywords credited as PMax conversions, a common cause of inflated ROAS attribution in ecommerce accounts"
-            title="Performance Max absorbing brand search — Google Ads search terms report, Q1 2026"
-            width={1600}
-            height={900}
-            style={{ width: '100%', height: 'auto', display: 'block' }}
-            loading="lazy"
-          />
-          <figcaption>Fig. 1 — Real account: brand search terms absorbed by Performance Max and credited as PMax conversions. The campaign reports strong ROAS on paper — the majority is captured brand demand, not new customers acquired through paid media.</figcaption>
+          <a href="/blog/google-ads-vs-meta-ads-vs-tiktok-ads-ecommerce-2026/pmax-branded-search-absorbed-attribution-2026.webp" target="_blank" rel="noopener">
+            <Image
+              src="/blog/google-ads-vs-meta-ads-vs-tiktok-ads-ecommerce-2026/pmax-branded-search-absorbed-attribution-2026.webp"
+              alt="Google Ads search terms report showing branded queries absorbed by a Performance Max campaign — brand keywords credited as PMax conversions, a common cause of inflated ROAS attribution in ecommerce accounts"
+              title="Performance Max absorbing brand search — Google Ads search terms report, Q1 2026"
+              width={1600}
+              height={900}
+              style={{ width: '100%', height: 'auto', display: 'block' }}
+              loading="lazy"
+            />
+          </a>
+          <figcaption>Fig. 1 — Real account: brand search terms absorbed by Performance Max and credited as PMax conversions. The campaign reports strong ROAS on paper — the majority is captured brand demand, not new customers acquired through paid media. Tap to enlarge.</figcaption>
         </figure>
 
         <p className="cmp-quote">&ldquo;PMax usually outperforms Meta when branded search demand already exists. Where it does not, Meta usually wins &mdash; provided the creative volume is there.&rdquo;</p>
