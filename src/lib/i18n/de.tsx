@@ -74,8 +74,7 @@ export const de = {
     deckEyebrow: 'Was wir tun',
     deckText: (
       <>
-        Wir helfen Marken beim Online-Wachstum. Paid Ads, SEO und die neue Welt der{' '}
-        <em>KI-Suche</em> — aufeinander abgestimmt, sauber getrackt und auf Deutsch erklärt.
+        pmax ist eine Agentur für digitales Marketing in Calvià, Mallorca. Wir arbeiten mit deutsch- und englischsprachigen Unternehmern auf der Insel sowie mit Marken in ganz Europa.
       </>
     ),
     statSpend: 'verwaltetes Ad-Budget',
@@ -104,6 +103,30 @@ export const de = {
     journalAside: 'Notizen aus der Praxis — geschrieben für Menschen, die Marketing machen, nicht für Suchroboter.',
     journalCta: 'Alle Artikel →',
     journalRead: 'Artikel lesen',
+    faqKicker: '05 — FAQ',
+    faqTitle: 'Häufige Fragen.',
+    homeFaqs: [
+      {
+        q: 'Arbeiten Sie mit deutschsprachigen Unternehmen auf Mallorca?',
+        a: 'Ja. pmax arbeitet mit deutschsprachigen Unternehmern auf Mallorca — Kampagnen, Reporting und die laufende Kommunikation laufen auf Deutsch. Unser Team sitzt in Calvià und betreut Kunden auf der ganzen Insel.',
+      },
+      {
+        q: 'Können Sie Marketing auf Deutsch und Englisch umsetzen?',
+        a: 'Wir setzen Marketing standardmäßig auf Deutsch und Englisch um, bei Bedarf auch auf Spanisch. Anzeigen, Landingpages, SEO-Inhalte und Reporting entstehen in der Sprache, die Ihre Kunden tatsächlich sprechen.',
+      },
+      {
+        q: 'Wo auf Mallorca sind Sie ansässig?',
+        a: 'pmax ist in Calvià auf Mallorca ansässig und betreut Kunden auf der ganzen Insel und den übrigen Balearen sowie Marken in ganz Europa.',
+      },
+      {
+        q: 'Welche Unternehmen betreuen Sie typischerweise auf Mallorca?',
+        a: 'Typischerweise unterstützen wir inhabergeführte, deutsch- und englischsprachige Unternehmen auf Mallorca — in Immobilien, Hotellerie und Gastronomie, E-Commerce, Gesundheitswesen, Boote und Yachten sowie Dienstleistungen — beim Wachstum durch bezahlte Anzeigen, SEO und Sichtbarkeit in der KI-Suche.',
+      },
+      {
+        q: 'Wie rechnen Sie ab?',
+        a: 'pmax arbeitet mit einer festen monatlichen Pauschale, nicht mit einem Prozentsatz des Werbebudgets. Die Pauschale wird im Voraus vereinbart, sodass die Kosten planbar bleiben — unabhängig davon, wie viel Sie für Anzeigen ausgeben.',
+      },
+    ],
     promo: {
       eyebrow: 'Gespräch vereinbaren',
       headline: <>30 Minuten.<br />Kein Pitch. Kein Deck.</>,

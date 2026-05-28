@@ -40,8 +40,7 @@ export const es = {
     deckEyebrow: 'Qué hacemos',
     deckText: (
       <>
-        Ayudamos a marcas a crecer en internet. Publicidad de pago, SEO y el nuevo mundo de la{' '}
-        <em>búsqueda con IA</em> — conectados, bien medidos y explicados en castellano.
+        pmax es una agencia de marketing digital en Calvià, Mallorca. Trabajamos con empresas de toda la isla, locales e internacionales, y con marcas de toda Europa.
       </>
     ),
     statSpend: 'en inversión publicitaria gestionada',
@@ -70,6 +69,30 @@ export const es = {
     journalAside: 'Notas de trabajo, playbooks y opinión. Escrito por quienes hacen el trabajo, para quienes hacen el trabajo.',
     journalCta: 'Todos los artículos →',
     journalRead: 'Leer artículo',
+    faqKicker: '05 — FAQ',
+    faqTitle: 'Preguntas frecuentes.',
+    homeFaqs: [
+      {
+        q: '¿Con qué empresas trabajáis en Mallorca?',
+        a: 'pmax trabaja con empresas de toda Mallorca, tanto locales como internacionales, gestionando campañas, informes y comunicación en el idioma de cada cliente. Nuestro equipo está en Calvià y atiende a clientes de toda la isla.',
+      },
+      {
+        q: '¿En qué idiomas trabajáis?',
+        a: 'Trabajamos en español, alemán e inglés de forma habitual. Los anuncios, las landing pages, el contenido SEO y los informes se producen en el idioma que realmente usan vuestros clientes.',
+      },
+      {
+        q: '¿Dónde estáis ubicados en Mallorca?',
+        a: 'pmax está ubicada en Calvià, Mallorca, y trabaja con clientes de toda la isla y del resto de Baleares, además de con marcas de toda Europa.',
+      },
+      {
+        q: '¿Con qué tipo de empresas trabajáis normalmente en Mallorca?',
+        a: 'Normalmente trabajamos con empresas de gestión propia en Mallorca —en inmobiliaria, hostelería, e-commerce, sanidad, náutica y yates, y servicios profesionales— ayudándolas a crecer mediante anuncios de pago, SEO y visibilidad en la búsqueda con IA.',
+      },
+      {
+        q: '¿Cómo facturáis?',
+        a: 'pmax trabaja con una tarifa mensual fija, no con un porcentaje de la inversión publicitaria. La tarifa se acuerda por adelantado, de modo que el coste es previsible independientemente de cuánto invirtáis en anuncios.',
+      },
+    ],
     promo: {
       eyebrow: 'Hablemos',
       headline: <>30 minutos.<br />Sin pitch. Sin deck.</>,

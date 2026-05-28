@@ -8,7 +8,7 @@ import StatCounter from '@/components/StatCounter'
 import SectionHead from '@/components/SectionHead'
 import PromoBlock from '@/components/PromoBlock'
 import FaqList from '@/components/FaqList'
-import { org, website } from '@/lib/schema'
+import { org, website, faqPage } from '@/lib/schema'
 import { siteAlternates } from '@/lib/hreflang'
 import { services } from '@/lib/content/services'
 import { cases } from '@/lib/content/cases'
@@ -36,9 +36,33 @@ const industriesMarquee = [
   { label: 'Hospitality', alt: true },
 ]
 
+const homeFaqs = [
+  {
+    q: 'Do you work with German-speaking businesses in Mallorca?',
+    a: 'Yes. pmax works with German-speaking business owners based in Mallorca, running campaigns, reporting and day-to-day communication in German. Our team is based in Calvià and works across the island.',
+  },
+  {
+    q: 'Can you run marketing in both English and German?',
+    a: 'We run marketing in both English and German as standard, and in Spanish where it helps. Ads, landing pages, SEO content and reporting are produced in the language your customers actually use.',
+  },
+  {
+    q: 'Where in Mallorca are you based?',
+    a: 'pmax is based in Calvià, Mallorca, and works with clients across the island and the wider Balearics, as well as with brands across Europe.',
+  },
+  {
+    q: 'What kind of businesses do you typically help in Mallorca?',
+    a: 'We typically help owner-run, German- and English-speaking businesses in Mallorca — in real estate, hospitality, e-commerce, healthcare, boating and yachting, and professional services — grow through paid ads, SEO and AI search visibility.',
+  },
+  {
+    q: 'How do you charge?',
+    a: 'pmax charges a flat monthly fee, not a percentage of media spend. The fee is agreed up front so the cost is predictable regardless of how much you spend on ads.',
+  },
+]
+
 const jsonLd = [
   { '@context': 'https://schema.org', ...org },
   website,
+  { ...faqPage(homeFaqs), inLanguage: 'en' },
 ]
 
 export default function HomePage() {
@@ -79,7 +103,7 @@ export default function HomePage() {
               <div>
                 <span className="hero-deck-eyebrow">What we do</span>
                 <p className="hero-deck-text">
-                  We help brands grow online. Paid ads, SEO and the new world of <em>AI search</em> — joined up, properly tracked, and explained in plain English.
+                  pmax is a digital marketing agency in Calvià, Mallorca. We work with German- and English-speaking business owners based on the island, and with brands across Europe.
                 </p>
               </div>
               <aside className="hero-deck-side" aria-label="Quick facts">
@@ -252,6 +276,14 @@ export default function HomePage() {
                 </Link>
               ))}
             </div>
+          </div>
+        </section>
+
+        {/* FAQ */}
+        <section className="section" aria-labelledby="faq-title">
+          <div className="container">
+            <SectionHead kicker="05 — FAQ" title="Frequently asked questions." />
+            <FaqList items={homeFaqs} />
           </div>
         </section>
 

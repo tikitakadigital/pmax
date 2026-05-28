@@ -6,9 +6,10 @@ import Marquee from '@/components/Marquee'
 import StatCounter from '@/components/StatCounter'
 import SectionHead from '@/components/SectionHead'
 import PromoBlock from '@/components/PromoBlock'
+import FaqList from '@/components/FaqList'
 import { getT } from '@/lib/i18n'
 import { cases } from '@/lib/content/cases'
-import { org, website } from '@/lib/schema'
+import { org, website, faqPage } from '@/lib/schema'
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
   const { lang } = await params
@@ -23,15 +24,15 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   }
 }
 
-const jsonLd = [
-  { '@context': 'https://schema.org', ...org },
-  website,
-]
-
 export default async function LangHomePage({ params }: { params: Promise<{ lang: string }> }) {
   const { lang } = await params
   const t = getT(lang)
   const h = t.home
+  const jsonLd = [
+    { '@context': 'https://schema.org', ...org },
+    website,
+    { ...faqPage(h.homeFaqs), inLanguage: lang },
+  ]
   const p = `/${lang}`
 
   const marqueeServices = [
@@ -178,6 +179,14 @@ export default async function LangHomePage({ params }: { params: Promise<{ lang:
                 )
               })}
             </div>
+          </div>
+        </section>
+
+        {/* FAQ */}
+        <section className="section" aria-labelledby="faq-title">
+          <div className="container">
+            <SectionHead kicker={h.faqKicker} title={h.faqTitle} />
+            <FaqList items={h.homeFaqs} />
           </div>
         </section>
 
