@@ -608,6 +608,7 @@ export const es = {
     promoDeck: 'No gestionamos una lista de email — pero si hay un tema sobre el que quieras que escribamos, cuéntanoslo.',
     promoBtn: 'Sugerir un tema',
     posts: [
+      { slug: 'google-ads-vs-meta-ads-vs-tiktok-ads-ecommerce-2026', title: 'Google Ads vs. Meta Ads vs. TikTok Ads para ecommerce en 2026.', deck: 'Sin teoría de escuela de marketing. Sin slides de fabricante. Una comparación brutalmente práctica de dónde rinde cada plataforma en 2026 — y dónde quema presupuesto sin que nadie lo note.' },
       { slug: 'how-to-get-mentioned-by-chatgpt', title: 'Cómo conseguir que ChatGPT, Perplexity y Gemini mencionen tu negocio', deck: 'Una guía en castellano sobre visibilidad en búsqueda con IA en 2026 — qué es, por qué importa y cinco acciones para empezar este mes.' },
       { slug: 'performance-max-2026', title: 'Performance Max en 2026: qué ha cambiado y qué hacemos ahora', deck: 'Un recorrido práctico por los siete ajustes de Performance Max que cambiamos primero en cada nueva cuenta de cliente.' },
       { slug: 'tracking-setup-guide', title: 'Una guía sin jerga para configurar el tracking de marketing correctamente', deck: 'Por qué la mayoría de dashboards mienten un poco, de dónde viene la discrepancia y cómo hacer el tracking bien.' },

@@ -9,6 +9,7 @@ import PromoBlock from '@/components/PromoBlock'
 import FaqList from '@/components/FaqList'
 import { getT } from '@/lib/i18n'
 import { cases } from '@/lib/content/cases'
+import { posts as allPosts } from '@/lib/content/blog'
 import { org, website, faqPage } from '@/lib/schema'
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
@@ -167,13 +168,13 @@ export default async function LangHomePage({ params }: { params: Promise<{ lang:
           <div className="container">
             <SectionHead kicker={h.journalKicker} title={h.journalTitle} aside={h.journalAside} action={<Link href={`${p}/blog`} className="btn-tertiary">{h.journalCta}</Link>} />
             <div className="svc-grid reveal-stagger">
-              {t.blog.posts.slice(0, 3).map((post, i) => {
-                const variants = ['is-mint', 'is-slate', 'is-outlined']
+              {allPosts.filter(post => !post.external).slice(0, 3).map(post => {
+                const loc = t.blog.posts.find(bp => bp.slug === post.slug)
                 return (
-                  <Link key={post.slug} href={`${p}/blog/${post.slug}`} className={`svc-card ${variants[i] ?? 'is-outlined'}`}>
-                    <span className="svc-num">{lang === 'de' ? 'Journal' : 'Blog'}</span>
-                    <h3 className="svc-title">{post.title}</h3>
-                    <p className="svc-deck">{post.deck}</p>
+                  <Link key={post.slug} href={`${p}/blog/${post.slug}`} className={`svc-card ${post.variant}${post.featured ? ' featured' : ''}`}>
+                    <span className="svc-num">{post.date} · {post.readTime}</span>
+                    <h3 className="svc-title">{loc?.title ?? post.title}</h3>
+                    <p className="svc-deck">{loc?.deck ?? post.deck}</p>
                     <span className="svc-cta">{h.journalRead} <span className="arrow" aria-hidden="true">→</span></span>
                   </Link>
                 )
