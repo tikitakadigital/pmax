@@ -14,6 +14,18 @@ export interface Post {
 
 export const posts: Post[] = [
   {
+    slug: 'pinterest-ads-home-interiors-local-2026',
+    stamp: 'JUN 01',
+    date: 'Jun 1, 2026',
+    readTime: '11 min',
+    category: 'Paid social',
+    title: 'Pinterest Ads in 2026: who can actually run them — and who should.',
+    seoTitle: 'Pinterest Ads 2026: who can run them, and who should | pmax',
+    deck: 'Who Pinterest Ads work for, how retargeting really works, and why a local window-coverings showroom is closer to its sweet spot than most ecommerce.',
+    variant: 'is-pink',
+    featured: true,
+  },
+  {
     slug: 'google-ads-vs-meta-ads-vs-tiktok-ads-ecommerce-2026',
     stamp: 'MAY 26',
     date: 'May 26, 2026',

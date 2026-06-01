@@ -642,6 +642,7 @@ export const de = {
     promoDeck: 'Wir betreiben keine E-Mail-Liste — aber wenn Sie ein Thema haben, über das wir schreiben sollen, lassen Sie es uns wissen.',
     promoBtn: 'Thema einreichen',
     posts: [
+      { slug: 'pinterest-ads-home-interiors-local-2026', title: 'Pinterest Ads 2026: wer sie wirklich schalten kann — und wer sollte.', deck: 'Für welche Branchen Pinterest Ads funktionieren, wie Retargeting wirklich funktioniert und warum ein lokales Rollo-Studio dem Sweet Spot der Plattform näher ist als die meisten E-Commerce-Shops.' },
       { slug: 'google-ads-vs-meta-ads-vs-tiktok-ads-ecommerce-2026', title: 'Google Ads vs. Meta Ads vs. TikTok Ads für E-Commerce 2026.', deck: 'Kein Marketing-Lehrbuch. Keine Hersteller-Folien. Ein brutal praktischer Side-by-Side-Vergleich, wo jede Plattform 2026 wirklich Geld einbringt — und wo sie still und leise Budget verbrennt.' },
       { slug: 'how-to-get-mentioned-by-chatgpt', title: 'So wird Ihr Unternehmen von ChatGPT, Perplexity und Gemini empfohlen', deck: 'Ein verständlicher Leitfaden zur KI-Sichtbarkeit 2026 — was es ist, warum es wichtig ist und fünf Maßnahmen für diesen Monat.' },
       { slug: 'performance-max-2026', title: 'Performance Max 2026: Was sich geändert hat — und was wir jetzt tun', deck: 'Ein praktischer Überblick über die sieben Performance-Max-Einstellungen, die wir bei jedem neuen Kunden-Account zuerst ändern.' },
@@ -1393,6 +1394,135 @@ export const de = {
         <p>Wenn du eine einseitige Diagnose willst, wo dein Media-Budget über Google, Meta und TikTok leckt: <a href="/de/contact/?topic=channel-mix-audit">30 Minuten kostenlos buchen</a>. Keine Folien, kein Sales-Pitch.</p>
         <p>Verwandte Leistungen: unser <a href="/de/services/google-ads/">Google Ads &amp; Performance Max Service</a>, unser <a href="/de/services/paid-social/">Paid Social Service</a> (Meta &amp; TikTok), unser <a href="/de/services/analytics/">Analytics &amp; Attribution Setup</a> &mdash; und unser <a href="/de/industries/ecommerce/">E-Commerce Marketing Playbook</a>.</p>
         <p style={{ marginTop: 32, fontFamily: 'var(--font-mono)', fontSize: 11, letterSpacing: '1.5px', textTransform: 'uppercase', color: '#6a6a6a' }}>Zuletzt aktualisiert 26. Mai 2026 &middot; Monatlich geprüft &middot; Basis &euro;2,1 Mio. E-Com-Spend Q1 2026</p>
+      </>),
+    },
+    'pinterest-ads-home-interiors-local-2026': {
+      toc: ["Kann jeder Pinterest Ads schalten?", "Für wen es funktioniert", "Rollos &amp; Sonnenschutz", "Retargeting", "Cross-Platform-Strategie", "Creative-Regeln", "Kosten", "Fazit", "FAQs"],
+      prose: (<>
+        <p><strong>„Kann irgendjemand Pinterest Ads schalten?"</strong> ist die Frage, die wir bekommen. Die kurze Antwort: ja &mdash; und genau deshalb sollten die meisten, die sie schalten, es nicht tun. Die Plattform ist Self-Serve, das Media ist günstig, und die Einstiegshürde ist fast null. Das sagt nichts darüber aus, ob es für <em>Ihr</em> Unternehmen funktioniert. Dieser Beitrag beantwortet die eigentliche Frage: Für wen ist Pinterest wirklich gut &mdash; und wie betreibt man es, damit es sich rechnet?</p>
+
+        <h2 id="can-anyone">Kann jeder Pinterest Ads schalten? Technisch: fast.</h2>
+        <p>Drei Dinge trennen Sie von einer laufenden Pinterest-Kampagne &mdash; und nur eines davon ist eine echte Hürde.</p>
+        <ul>
+          <li><strong>Ein kostenloses Pinterest-Business-Konto.</strong> Fünf Minuten. Jeder kann eines erstellen.</li>
+          <li><strong>Eine verifizierte Website.</strong> Ein kleiner DNS- oder Meta-Tag-Schritt. Keine Hürde.</li>
+          <li><strong>Verfügbarkeit in Ihrem Land.</strong> Das ist die einzige echte Hürde. Pinterest Ads sind nicht in jeder Region aktiv &mdash; aber sie sind in den meisten europäischen Ländern verfügbar, darunter Spanien, Deutschland, Österreich, UK und die gesamte EU. Wenn Sie im Ads Manager eine Meldung „In Ihrer Region nicht verfügbar" sehen, haben Sie Ihren Blocker gefunden. Ansonsten sind Sie frei.</li>
+        </ul>
+        <p>Beachten Sie, was <em>nicht</em> auf dieser Liste steht: Mindestbudgets, Unternehmensgröße, eine Agentur. Ein Solo-Gründer mit &euro;300 im Monat und einer verifizierten Website kann heute Nachmittag eine Pinterest-Kampagne starten.</p>
+
+        <div className="cmp-takeaway">
+          <span className="k">Das Fazit</span>
+          <p><strong>„Kann ich Pinterest Ads schalten?" ist die falsche Frage.</strong> Jeder kann. Die richtige Frage ist, ob die Menschen, die das kaufen, was Sie verkaufen, Pinterest nutzen, um diesen Kauf zu planen. Bei manchen Kategorien lautet die Antwort ein klares Ja. Bei anderen geben Sie günstiges Geld für Aufmerksamkeit aus, die nie konvertiert.</p>
+        </div>
+
+        <h2 id="who-its-for">Für wen Pinterest wirklich funktioniert</h2>
+        <p>Pinterest ist eine visuelle Planungsmaschine. Menschen kommen hierher, um ein zukünftiges Projekt zu planen &mdash; eine Renovierung, eine Hochzeit, eine Garderobe, ein Abendessen, einen Urlaub &mdash; oft Wochen vor dem Kauf. Diese eine Verhaltenstatsache entscheidet, wer auf der Plattform gewinnt und wer Geld verschwendet.</p>
+
+        <div className="cmp-table-wrap">
+          <table className="cmp-table">
+            <thead><tr><th>Kategorie</th><th>Pinterest-Fit</th><th>Warum</th></tr></thead>
+            <tbody>
+              <tr><th>Wohnen &amp; Einrichten</th><td><span className="pill pill-good">Ausgezeichnet</span></td><td>Die native Pinterest-Kategorie. Sonnenschutz, Möbel, Beleuchtung, Farbe &mdash; alles visuell geplant, Wochen im Voraus.</td></tr>
+              <tr><th>Hochzeiten &amp; Events</th><td><span className="pill pill-good">Ausgezeichnet</span></td><td>Das längste Planungsfenster jedes Verbraucherkaufs. Pinterest ist das Standard-Moodboard.</td></tr>
+              <tr><th>Mode, Beauty &amp; Schmuck</th><td><span className="pill pill-good">Stark</span></td><td>Hochvisuell, aspirational, Speichern-und-zurückkehren-Verhalten.</td></tr>
+              <tr><th>Food, Rezepte &amp; DIY</th><td><span className="pill pill-good">Stark</span></td><td>Speichern-für-später-Intent; gut für content-getriebene Marken.</td></tr>
+              <tr><th>Reisen &amp; Hotellerie</th><td><span className="pill pill-mid">Gut</span></td><td>Stark für Inspiration, schwächer bei direkter Buchungsattribution.</td></tr>
+              <tr><th>B2B &amp; SaaS</th><td><span className="pill pill-mid">Nische</span></td><td>Geringeres Volumen, aber die B2B-Nutzer, die dort sind, zeigen echte Absicht. Selten primärer Kanal.</td></tr>
+              <tr><th>Impulskauf / Commodity / preisgetrieben</th><td><span className="pill pill-bad">Schwach</span></td><td>Falsche Denkweise. Pinterest-Nutzer planen &mdash; sie kaufen keine Impulse.</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>Wenn Sie etwas aus den oberen zwei Reihen verkaufen, verdient Pinterest ein Testbudget vor fast jedem anderen „sekundären" Kanal. Wenn Sie in der unteren Reihe sind, stecken Sie das Geld in Google und Meta.</p>
+
+        <h2 id="window-coverings">Warum ein Sonnenschutz-Showroom näher am Sweet Spot ist als die meisten E-Commerce-Shops</h2>
+        <p>Hier ist der Teil, den die meisten Guides übersehen. Pinterests stärkste Einzelkategorie &mdash; Inneneinrichtung &mdash; wird von genau der Art von durchdachtem, hochpreisigem, visuell geplantem Kauf dominiert, den ein Rollladen-, Markisen- oder Rollodepot verkauft. Jemand, der neue Beschattungslösungen plant, verbringt Wochen damit, Räume zu speichern, die ihm gefallen, bevor er je ein Fachgeschäft anruft.</p>
+        <p>Was den lokalen Showroom zu einem ungewöhnlich guten Fit macht: Der Käufer ist bereits auf Pinterest, bereits im Planungsmodus, bereits dabei, die Ästhetik zu speichern, die Sie verkaufen. Die Aufgabe ist nicht, Nachfrage zu schaffen &mdash; sondern lokal präsent zu sein, während er plant, und ihn zurückzuholen, sobald er Ihre Website oder Ihren Showroom besucht hat.</p>
+
+        <div className="cmp-quote">&bdquo;Für Inneneinrichtung und Sonnenschutz ist Pinterest kein Demand-Generation-Kanal. Es ist ein Demand-Capture-Kanal, der zufällig wie Inspiration aussieht.&ldquo;</div>
+
+        <h2 id="retargeting">Wie Pinterest Retargeting wirklich funktioniert</h2>
+        <p>Retargeting ist der Kern von Pinterest für durchdachte Kaufentscheidungen, weil das Planungsfenster so lang ist, dass ein einzelner Kontaktpunkt fast nie reicht. Es gibt fünf Mechanismen, und die meisten Marken nutzen einen und ignorieren den Rest.</p>
+
+        <div className="cmp-table-wrap">
+          <table className="cmp-table">
+            <thead><tr><th>Zielgruppentyp</th><th>Was es tut</th><th>Setup-Anforderung</th></tr></thead>
+            <tbody>
+              <tr><th>Website-Besucher-Retargeting</th><td>Erreicht erneut Personen, die Ihre Website oder bestimmte Seiten besucht haben.</td><td>Pinterest Tag (oder Conversions API) auf der gesamten Website installiert.</td></tr>
+              <tr><th>Kundenlisten-Targeting</th><td>Gehashte E-Mails oder Mobile-Ad-IDs hochladen, um bestehende Kunden zu targetieren oder auszuschließen.</td><td>CSV mit gehashten Kontakten; mindestens ~100 Matches zum Aktivieren.</td></tr>
+              <tr><th>Engagement-Zielgruppen</th><td>Erreicht Personen, die Ihre organischen Pins oder Ads gespeichert, angeklickt oder angesehen haben.</td><td>Bestätigte Domain und organische Pin-Aktivität.</td></tr>
+              <tr><th>Actalike-Zielgruppen</th><td>Pinterests Lookalike &mdash; neue Nutzer finden, die Ihren besten Kunden ähneln.</td><td>Eine Quellzielgruppe (Kunden, Website-Besucher oder Engager).</td></tr>
+              <tr><th>Dynamisches Retargeting</th><td>Zeigt Personen die genauen Produkte, die sie angesehen haben, live aus einem Catalog-Feed.</td><td>Catalog-Feed + Pinterest Tag mit Checkout-, AddToCart- und PageVisit-Events. Catalog Sales Ziel. Nicht im Search-Placement verfügbar.</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>Für ein Produktfeed-Unternehmen ist dynamisches Retargeting der ROI-stärkste der fünf &mdash; es zeigt Personen genau den Rollladen, das Sofa oder die Lampe, die sie sich bereits angesehen haben, mit Live-Preisen. Für einen lokalen Showroom ohne E-Commerce-Katalog übernehmen Website-Besucher-Retargeting plus Engagement-Zielgruppen die Hauptarbeit.</p>
+
+        <div className="cmp-takeaway">
+          <span className="k">Das Fazit</span>
+          <p><strong>Installieren Sie den Pinterest Tag, bevor Sie einen Euro ausgeben.</strong> Ohne ihn haben Sie keine Website-Besucher-Zielgruppen, kein dynamisches Retargeting, keine Conversion-Daten und keine Möglichkeit zu wissen, ob irgendetwas davon funktioniert hat. Die Marken, die bei Pinterest scheitern, haben diesen Schritt fast immer übersprungen.</p>
+        </div>
+
+        <h2 id="cross-platform">Die Cross-Platform-Retargeting-Strategie &mdash; Pinterest, YouTube und Display, gemeinsam</h2>
+        <p>Nehmen Sie einen lokalen Luxaflex-Händler mit einem Showroom. Er betreibt bereits statisches Display-Retargeting für Website-Besucher. Der nächste Schritt &mdash; ein guter &mdash; ist, <em>Video</em>-Retargeting auf YouTube mit neuem Showroom-Material hinzuzufügen, das die tatsächliche Adresse des Geschäfts trägt. Pinterest ist die dritte Schicht derselben Idee.</p>
+        <p>Die Logik ist einfach: Das Retargeting einer Plattform ist ein Anstoß. Drei koordinierte Plattformen sind eine Präsenz. Eine Person, die die Showroom-Website einmal besucht hat, sieht in den folgenden Wochen:</p>
+        <ul>
+          <li><strong>Auf YouTube</strong> &mdash; kurzes Showroom-Videomaterial, die Produkte in einem echten Raum, die Adresse des Geschäfts auf dem Bildschirm.</li>
+          <li><strong>Auf Pinterest</strong> &mdash; dieselben Räume als speicherbare, planungsfreundliche Pins, geo-targetiert auf das Einzugsgebiet des Showrooms.</li>
+          <li><strong>Im statischen Display</strong> &mdash; die Always-on-Erinnerung, die die Marke zwischen den größeren Touchpoints präsent hält.</li>
+        </ul>
+
+        <div className="cmp-takeaway">
+          <span className="k">Das lokale Detail, das zählt</span>
+          <p><strong>Geo-targetieren Sie alles auf das Einzugsgebiet des Showrooms.</strong> Pinterest ermöglicht es, die Auslieferung auf Städte, Postleitzahlen oder einen Radius um das Geschäft einzugrenzen. Es hat keinen Sinn, jemanden 400&nbsp;km entfernt mit Footage eines Showrooms zu retargetieren, den er nie besuchen wird.</p>
+        </div>
+
+        <h2 id="creative">Creative &mdash; was Pinterest belohnt, und was abgelehnt wird</h2>
+        <p>Pinterest ist die toleranteste Plattform nicht &mdash; wenn es um „werblich aussehende" Werbung geht. Es ist eine Discovery-Umgebung; Menschen sind dort zum Planen, nicht um verkauft zu werden.</p>
+        <ul>
+          <li><strong>Vertikal, 1000&times;1500px (2:3).</strong> Die Plattform ist dafür gebaut.</li>
+          <li><strong>Minimaler Text-Overlay.</strong> Pinterest bevorzugt saubere Bilder. Nur kurze Phrasen.</li>
+          <li><strong>Warmes, natürliches Licht; echte Räume.</strong> Lifestyle-Kontext schlägt Produkt-auf-weiß jedes Mal in Inneneinrichtung.</li>
+          <li><strong>Logo vorhanden, aber dezent.</strong> Markenidentität, aber nicht aufdringlich.</li>
+          <li><strong>Ideen-fokussiert, nicht aggressiv.</strong> „Hier ist ein Raum, den Sie haben könnten" übertrifft „50% Rabatt dieses Wochenende".</li>
+          <li><strong>Eine Landing Page, die zum Pin passt.</strong> Pinterest prüft die gesamte Customer Journey. Eine Abweichung zwischen Anzeige und Seite ist der häufigste Ablehnungsgrund.</li>
+        </ul>
+
+        <h2 id="what-it-costs">Was es kostet &mdash; und die Falle, die damit verbunden ist</h2>
+        <p>Pinterest ist günstig auf Media-Basis &mdash; CPC typischerweise etwa &euro;0,10&ndash;&euro;1,50, CPM etwa &euro;2&ndash;&euro;5. Das ist ein Bruchteil von Google Search und oft unter Meta.</p>
+        <p>Das günstige Media ist genau die Falle. Niedriger Preis macht es gefährlich einfach, Geld für Reichweite auszugeben, die sich produktiv anfühlt und nichts konvertiert. <strong>Kosten pro Akquisition &mdash; oder für einen Showroom, Kosten pro qualifiziertem Besuch oder Anfrage &mdash; ist die einzige Zahl, die entscheidet, ob Pinterest im Mix bleibt.</strong></p>
+
+        <h2 id="verdict">Das ehrliche Fazit</h2>
+        <p>Pinterest Ads sind 2026 wirklich gut für eine spezifische, identifizierbare Gruppe von Unternehmen: Wohnen und Einrichten, Hochzeiten, Mode, Food, DIY &mdash; alles, was durch visuelle Planung über ein langes Zeitfenster gekauft wird. Für diese ist es einer der günstigsten Kanäle im Paid Media, und die Retargeting-Tools sind besser als der Ruf der „Inspirationsplattform" vermuten lässt. Für einen lokalen Einrichtungs- oder Sonnenschutz-Showroom ist es kein langer Schuss &mdash; es ist nah am Kernnutzen der Plattform.</p>
+        <p>Für alle anderen &mdash; Commodity-E-Commerce, Impulskäufe, die meisten B2B-Fälle, alles Preisgetriebene &mdash; ist es ein „vielleicht später"-Kanal. Fahren Sie zuerst Google und Meta ordentlich.</p>
+
+        <h2 id="faqs">Häufige Fragen</h2>
+        <details className="cmp-faq" open>
+          <summary>Kann jeder Pinterest Ads schalten?</summary>
+          <p>Fast. Sie benötigen ein kostenloses Pinterest-Business-Konto und eine verifizierbare Website &mdash; Ads Manager ist Self-Serve, sodass ein Solo-Inhaber ohne Agentur starten kann. Die einzige echte Hürde ist die Geografie: Pinterest Ads sind nicht in jedem Land verfügbar, aber in den meisten europäischen Ländern, darunter Spanien, Deutschland, UK und die gesamte EU.</p>
+        </details>
+        <details className="cmp-faq">
+          <summary>Für wen funktionieren Pinterest Ads wirklich?</summary>
+          <p>Visuell geplante, durchdachte Käufe: Wohneinrichtung, Sonnenschutz und Möbel, Hochzeiten, Mode und Beauty, Food und DIY, Reisen. Der gemeinsame Nenner sind Menschen, die einen zukünftigen Kauf Wochen im Voraus planen. Impulskauf-, Commodity- und preisgetriebene Kategorien tendieren zur Underperformance.</p>
+        </details>
+        <details className="cmp-faq">
+          <summary>Wie funktioniert Pinterest Retargeting?</summary>
+          <p>Installieren Sie den Pinterest Tag (oder die Conversions API) und Sie können Website-Besucher retargetieren, eine gehashte Kundenliste hochladen (mindestens ~100 Matches), Personen retargetieren, die mit Ihren organischen Pins interagiert haben, Actalike-Zielgruppen erstellen und dynamisches Retargeting betreiben, das Personen die genauen Produkte zeigt, die sie aus einem Catalog-Feed angesehen haben.</p>
+        </details>
+        <details className="cmp-faq">
+          <summary>Kann ein lokales Unternehmen mit einem Showroom Pinterest Ads nutzen?</summary>
+          <p>Ja. Geo-targetieren Sie die Auslieferung auf die Stadt des Showrooms, Postleitzahlen oder einen Radius um das Geschäft, und verwenden Sie ortsspezifisches Creative &mdash; idealerweise mit der Geschäftsadresse darauf. Für einen lokalen Showroom funktioniert Pinterest am besten als eine Schicht einer Cross-Platform-Retargeting-Strategie neben YouTube-Video und statischem Display.</p>
+        </details>
+        <details className="cmp-faq">
+          <summary>Was kosten Pinterest Ads 2026?</summary>
+          <p>Günstig auf Media-Basis: CPC typischerweise &euro;0,10&ndash;&euro;1,50, CPM etwa &euro;2&ndash;&euro;5. Der niedrige Preis ist ein zweischneidiges Schwert &mdash; es ist einfach, Geld für Reichweite auszugeben, die nie konvertiert, also sind Kosten pro Akquisition (oder pro qualifiziertem Showroom-Besuch) die einzige Zahl, die zählt.</p>
+        </details>
+
+        <h2 id="closing">Möchten Sie wissen, ob Pinterest zu Ihrem Unternehmen passt?</h2>
+        <p>Wir betreiben Paid Media &mdash; Google, Meta, Microsoft, TikTok und Pinterest &mdash; für Marken in ganz Europa und sagen Ihnen ehrlich, ob Pinterest in Ihren Mix gehört oder ob das Budget besser anderswo eingesetzt wird. <a href="/de/contact/?topic=pinterest-ads">Kostenloses 30-Minuten-Gespräch buchen</a>. Keine Folien, kein Sales-Pitch.</p>
+        <p>Verwandte Lektüre: unser <a href="/de/blog/google-ads-vs-meta-ads-vs-tiktok-ads-ecommerce-2026/">Google Ads vs. Meta vs. TikTok Vergleich für E-Commerce</a> und unser <a href="/de/services/paid-social/">Paid Social Service</a>.</p>
+        <p style={{ marginTop: 32, fontFamily: 'var(--font-mono)', fontSize: 11, letterSpacing: '1.5px', textTransform: 'uppercase', color: '#6a6a6a' }}>Zuletzt aktualisiert 1. Juni 2026 &middot; Monatlich geprüft &middot; pmax &middot; Calvi&agrave;, Mallorca</p>
       </>),
     },
   } as Record<string, LocalizedBlogDetail>,

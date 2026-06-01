@@ -461,6 +461,139 @@ export const blogDetails: BlogDetail[] = [
     ),
   },
   {
+    slug: 'pinterest-ads-home-interiors-local-2026',
+    toc: ["Can anyone run them?", "Who it's for", "Window coverings fit", "Retargeting", "Cross-platform play", "Creative rules", "What it costs", "The verdict", "FAQs"],
+    prose: (
+      <>
+        <p><strong>&ldquo;Can anybody run Pinterest Ads?&rdquo;</strong> is the question we get. The short answer is yes &mdash; and that&rsquo;s exactly why most people who run them shouldn&rsquo;t. The platform is self-serve, the media is cheap, and the barrier to entry is almost nothing. None of which tells you whether it&rsquo;ll work for <em>your</em> business. This post answers the question people should actually be asking: who is Pinterest genuinely good for, and how do you run it so it pays back?</p>
+
+        <h2 id="can-anyone">Can anybody run Pinterest Ads? Technically, almost.</h2>
+        <p>Three things stand between you and a live Pinterest campaign, and only one of them is a real gate.</p>
+        <ul>
+          <li><strong>A free Pinterest business account.</strong> Five minutes. Anyone can create one.</li>
+          <li><strong>A verified website.</strong> A small DNS or meta-tag step. Not a barrier.</li>
+          <li><strong>Availability in your country.</strong> This is the only real gate. Pinterest Ads aren&rsquo;t live in every region &mdash; but they <em>are</em> available across most of Europe, including Spain, Germany, Austria, the UK and the wider EU. If you open Ads Manager and see a &ldquo;not available in your region&rdquo; message, that&rsquo;s your blocker. Otherwise, you&rsquo;re clear.</li>
+        </ul>
+        <p>Notice what&rsquo;s <em>not</em> on that list: budget minimums, business size, an agency. A solo founder with &euro;300 a month and a verified site can launch a Pinterest campaign this afternoon. The platform&rsquo;s algorithm rewards good creative and tight targeting over raw spend, which is genuinely refreshing.</p>
+
+        <div className="cmp-takeaway">
+          <span className="k">The take</span>
+          <p><strong>&ldquo;Can I run Pinterest Ads&rdquo; is the wrong question.</strong> Anyone can. The right question is whether the people who buy what you sell use Pinterest to plan that purchase. For some categories the answer is an emphatic yes. For others, you&rsquo;ll spend cheap money on attention that never converts.</p>
+        </div>
+
+        <h2 id="who-its-for">Who Pinterest actually works for</h2>
+        <p>Pinterest is a visual planning engine. People come to it to plan a future project &mdash; a renovation, a wedding, a wardrobe, a dinner, a holiday &mdash; usually weeks before they buy. That single behavioural fact decides who wins on the platform and who wastes money.</p>
+
+        <div className="cmp-table-wrap">
+          <table className="cmp-table">
+            <thead><tr><th>Category</th><th>Pinterest fit</th><th>Why</th></tr></thead>
+            <tbody>
+              <tr><th>Home decor &amp; interiors</th><td><span className="pill pill-good">Excellent</span></td><td>The native Pinterest category. Window coverings, furniture, lighting, paint &mdash; all planned visually, weeks ahead.</td></tr>
+              <tr><th>Weddings &amp; events</th><td><span className="pill pill-good">Excellent</span></td><td>The longest planning window of any consumer purchase. Pinterest is the default mood-board.</td></tr>
+              <tr><th>Fashion, beauty &amp; jewellery</th><td><span className="pill pill-good">Strong</span></td><td>Highly visual, aspirational, save-and-return behaviour.</td></tr>
+              <tr><th>Food, recipes &amp; DIY</th><td><span className="pill pill-good">Strong</span></td><td>Save-for-later intent; great for content-led brands.</td></tr>
+              <tr><th>Travel &amp; hospitality</th><td><span className="pill pill-mid">Good</span></td><td>Strong for inspiration, weaker on direct booking attribution.</td></tr>
+              <tr><th>B2B &amp; SaaS</th><td><span className="pill pill-mid">Niche</span></td><td>Lower volume, but the B2B users who are there show real intent. Rarely a primary channel.</td></tr>
+              <tr><th>Impulse / commodity / price-led</th><td><span className="pill pill-bad">Weak</span></td><td>Wrong mindset. Pinterest users are planning, not impulse-buying.</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>If you sell anything in the top two rows, Pinterest deserves a test budget before almost any other &ldquo;secondary&rdquo; channel. If you&rsquo;re in the bottom row, put the money into Google and Meta and come back to Pinterest later &mdash; or never.</p>
+
+        <h2 id="window-coverings">Why a window-coverings showroom is closer to the sweet spot than most ecommerce</h2>
+        <p>Here&rsquo;s the part most guides miss. Pinterest&rsquo;s single strongest category &mdash; interiors and home decor &mdash; is dominated by exactly the kind of considered, high-consideration, visually-planned purchase that a blinds, awnings or shutters business sells. Someone planning new window coverings will spend weeks saving rooms they like before they ever call a showroom. That&rsquo;s not an edge case for Pinterest; it&rsquo;s the core use of the platform.</p>
+        <p>Which makes the local showroom an unusually good fit. The buyer is already on Pinterest, already in planning mode, already saving the aesthetic you sell. The job isn&rsquo;t to create demand &mdash; it&rsquo;s to be present, locally, while they plan, and to bring them back once they&rsquo;ve visited your site or showroom.</p>
+
+        <div className="cmp-quote">&ldquo;For interiors and window coverings, Pinterest isn&rsquo;t a demand-generation channel. It&rsquo;s a demand-capture channel that happens to look like inspiration.&rdquo;</div>
+
+        <h2 id="retargeting">How Pinterest retargeting actually works</h2>
+        <p>Retargeting is where Pinterest earns its keep for considered purchases, because the planning window is so long that a single touch is almost never enough. There are five mechanisms, and most brands use one and ignore the rest.</p>
+
+        <div className="cmp-table-wrap">
+          <table className="cmp-table">
+            <thead><tr><th>Audience type</th><th>What it does</th><th>Setup requirement</th></tr></thead>
+            <tbody>
+              <tr><th>Site-visitor retargeting</th><td>Re-reach people who visited your website or specific product/landing pages.</td><td>Pinterest tag (or Conversions API) installed across the site.</td></tr>
+              <tr><th>Customer-list targeting</th><td>Upload hashed emails or mobile ad IDs to target &mdash; or exclude &mdash; existing customers.</td><td>CSV of hashed contacts; minimum ~100 matches to activate.</td></tr>
+              <tr><th>Engagement audiences</th><td>Reach people who saved, clicked or watched your organic Pins or ads.</td><td>A confirmed domain and organic Pin activity.</td></tr>
+              <tr><th>Actalike audiences</th><td>Pinterest&rsquo;s lookalike &mdash; find new users similar to your best existing customers.</td><td>A source audience (customers, site visitors or engagers).</td></tr>
+              <tr><th>Dynamic retargeting</th><td>Show people the exact products they viewed, pulled live from a catalog feed.</td><td>Catalog feed + Pinterest tag tracking Checkout, AddToCart and PageVisit events. Catalog Sales objective. Not available on Search placement.</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>For a product-feed business, dynamic retargeting is the highest-ROI of the five &mdash; it shows people the precise blind, sofa or lamp they already looked at, with live pricing. For a local showroom without an ecommerce catalog, site-visitor retargeting plus engagement audiences do the heavy lifting, with actalike audiences layered on once you have enough source data.</p>
+
+        <div className="cmp-takeaway">
+          <span className="k">The take</span>
+          <p><strong>Install the Pinterest tag before you spend a euro.</strong> Without it you have no site-visitor audiences, no dynamic retargeting, no conversion data, and no way to know whether any of this worked. The brands that fail on Pinterest almost always skipped this step and judged the platform on prospecting alone.</p>
+        </div>
+
+        <h2 id="cross-platform">The cross-platform retargeting play &mdash; Pinterest, YouTube and static, together</h2>
+        <p>This is where it gets genuinely useful for a local business. Take a local Luxaflex dealer with a showroom. They already run static display retargeting to people who visited the website. The instinct &mdash; a good one &mdash; is to add <em>video</em> retargeting on YouTube using new showroom footage and brand imagery that carries the store&rsquo;s actual address. Pinterest is the third layer of that same idea.</p>
+        <p>The logic is simple: one platform&rsquo;s retargeting is a poke. Three platforms, coordinated, is a presence. A person who visited the showroom site once will see, over the following weeks:</p>
+        <ul>
+          <li><strong>On YouTube</strong> &mdash; short showroom video footage, the products in a real room, the store&rsquo;s address on-screen. Video does what static can&rsquo;t: it shows the showroom as a place you&rsquo;d actually walk into.</li>
+          <li><strong>On Pinterest</strong> &mdash; the same rooms as saveable, planning-friendly pins, geo-targeted to the showroom&rsquo;s catchment, while the buyer is actively planning.</li>
+          <li><strong>On static display</strong> &mdash; the always-on reminder that keeps the brand present between the bigger touchpoints.</li>
+        </ul>
+        <p>The address on the creative is the quiet detail that makes this local. Putting the store address &mdash; and ideally a &ldquo;visit the showroom&rdquo; call to action &mdash; on the video and the pin turns a brand asset into a local one.</p>
+
+        <div className="cmp-takeaway">
+          <span className="k">The local detail that matters</span>
+          <p><strong>Geo-target everything to the showroom&rsquo;s catchment.</strong> Pinterest lets you narrow delivery to cities, postal codes or a radius around the store. There&rsquo;s no point retargeting someone 400&nbsp;km away with footage of a showroom they&rsquo;ll never visit. Tight geo-targeting plus address-on-creative is what turns a brand campaign into a footfall campaign.</p>
+        </div>
+
+        <h2 id="creative">Creative &mdash; what Pinterest rewards, and what gets rejected</h2>
+        <p>Pinterest is the least tolerant of the major platforms when it comes to &ldquo;ad-looking&rdquo; ads. It&rsquo;s a discovery environment; people are there to plan, not to be sold to. Creative that respects that gets approved fast and performs.</p>
+        <ul>
+          <li><strong>Vertical, 1000&times;1500px (2:3).</strong> The platform is built for it.</li>
+          <li><strong>Minimal text overlay.</strong> Pinterest prefers clean images. Short phrases only; a crowded, sales-heavy image hurts both approval and performance.</li>
+          <li><strong>Warm, natural lighting; real rooms.</strong> Lifestyle context beats product-on-white every time in interiors.</li>
+          <li><strong>Logo present but quiet.</strong> Branded, not branded-shouty.</li>
+          <li><strong>Idea-focused, not aggressive.</strong> &ldquo;Here&rsquo;s a room you could have&rdquo; outperforms &ldquo;50% off this weekend only&rdquo;.</li>
+          <li><strong>A landing page that matches the pin.</strong> Pinterest reviews the whole journey. A mismatch between ad and page is the most common rejection reason.</li>
+        </ul>
+
+        <h2 id="what-it-costs">What it costs, and the trap that comes with it</h2>
+        <p>Pinterest is cheap on a media basis &mdash; cost per click typically around &euro;0.10&ndash;&euro;1.50, CPM around &euro;2&ndash;&euro;5, depending on format, targeting and competition. That&rsquo;s a fraction of Google Search and often below Meta.</p>
+        <p>The cheap media is exactly the trap. Low cost makes it dangerously easy to spend on reach that feels productive and converts nothing. <strong>Cost per acquisition &mdash; or for a showroom, cost per qualified visit or enquiry &mdash; is the only number that decides whether Pinterest stays in the mix.</strong> Track it from day one, which means the tag goes on before the budget goes live.</p>
+
+        <h2 id="verdict">The honest verdict</h2>
+        <p>Pinterest Ads in 2026 are genuinely good for a specific, identifiable set of businesses: home and interiors, weddings, fashion, food, DIY &mdash; anything bought through visual planning over a long window. For those, it&rsquo;s one of the most underpriced channels in paid media, and the retargeting tools are better than its &ldquo;inspiration platform&rdquo; reputation suggests. For a local interiors or window-coverings showroom, it&rsquo;s not a long shot at all &mdash; it&rsquo;s close to the platform&rsquo;s core use, and it slots neatly into a cross-platform retargeting strategy alongside YouTube video and static display.</p>
+        <p>For everyone else &mdash; commodity ecommerce, impulse products, most B2B, anything price-led &mdash; it&rsquo;s a &ldquo;maybe later&rdquo; channel. Run Google and Meta properly first.</p>
+
+        <h2 id="faqs">Frequently asked questions</h2>
+        <details className="cmp-faq" open>
+          <summary>Can anyone run Pinterest Ads?</summary>
+          <p>Almost. You need a free Pinterest business account and a verifiable website, and Ads Manager is self-serve &mdash; so a solo owner can launch without an agency. The one real gate is geography: Pinterest Ads aren&rsquo;t available in every country, though they are across most of Europe including Spain, Germany, the UK and the wider EU.</p>
+        </details>
+        <details className="cmp-faq">
+          <summary>Who do Pinterest Ads actually work for?</summary>
+          <p>Visually-planned, considered purchases: home decor and interiors, window coverings and furniture, weddings, fashion and beauty, food and DIY, travel. The common thread is people planning a future purchase weeks in advance. Impulse, commodity and price-led categories tend to underperform.</p>
+        </details>
+        <details className="cmp-faq">
+          <summary>How does Pinterest retargeting work?</summary>
+          <p>Install the Pinterest tag (or Conversions API) and you can retarget site visitors, upload a hashed customer list (minimum ~100 matches), retarget people who engaged with your organic Pins, build actalike audiences, and run dynamic retargeting that shows people the exact products they viewed from a catalog feed.</p>
+        </details>
+        <details className="cmp-faq">
+          <summary>Can a local business with one showroom use Pinterest Ads?</summary>
+          <p>Yes. Geo-target delivery to the showroom&rsquo;s city, postal codes or a radius around the store, and use location-specific creative &mdash; ideally with the store address on it. For a local showroom, Pinterest works best as one layer of a cross-platform retargeting strategy alongside YouTube video and static display.</p>
+        </details>
+        <details className="cmp-faq">
+          <summary>How much do Pinterest Ads cost in 2026?</summary>
+          <p>Cheap on a media basis: CPC typically &euro;0.10&ndash;&euro;1.50, CPM around &euro;2&ndash;&euro;5. The low cost is a double-edged sword &mdash; it&rsquo;s easy to spend on reach that never converts, so cost per acquisition (or per qualified showroom visit) is the only number that matters.</p>
+        </details>
+
+        <h2 id="closing">Want help deciding if Pinterest fits your business?</h2>
+        <p>We run paid media &mdash; Google, Meta, Microsoft, TikTok and Pinterest &mdash; for brands across Europe, and we&rsquo;ll tell you honestly whether Pinterest belongs in your mix or whether the budget is better spent elsewhere. <a href="/contact/?topic=pinterest-ads">Book a free 30-minute call</a>. No deck, no sales pitch.</p>
+        <p>Related: our <a href="/blog/google-ads-vs-meta-ads-vs-tiktok-ads-ecommerce-2026/">Google Ads vs Meta vs TikTok comparison for ecommerce</a> and our <a href="/services/paid-social/">paid social service</a>.</p>
+        <p style={{ marginTop: 32, fontFamily: 'var(--font-mono)', fontSize: 11, letterSpacing: '1.5px', textTransform: 'uppercase', color: '#6a6a6a' }}>Last updated 1 June 2026 &middot; Reviewed monthly &middot; pmax &middot; Calvi&agrave;, Mallorca</p>
+      </>
+    ),
+  },
+  {
     slug: 'google-ads-vs-meta-ads-vs-tiktok-ads-ecommerce-2026',
     toc: ['TL;DR', 'CPC & CPM', 'High vs low AOV', 'Attribution', 'Creative load', 'Scaling difficulty', 'Remarketing', 'When PMax wins / loses', 'The honest mix', 'FAQs'],
     prose: (
