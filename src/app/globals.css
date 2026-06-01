@@ -587,7 +587,13 @@ select option { background: var(--color-canvas); }
 .cmp-screenshot { margin: 32px 0; border: 1px solid #2d2d2d; border-radius: 8px; overflow: hidden; background: #0a0a0a; }
 .cmp-screenshot figcaption { padding: 12px 18px; font-family: var(--font-mono); font-size: 10px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #6a6a6a; border-top: 1px solid #2d2d2d; }
 .cmp-screenshot a { display: block; }
-@media (max-width: 680px) { .cmp-table { font-size: 13px; min-width: 580px; } .cmp-table th, .cmp-table td { padding: 10px 12px; } .cmp-table tbody th { width: 150px; } }
+@media (max-width: 680px) {
+  .cmp-table-wrap { -webkit-overflow-scrolling: touch; }
+  .cmp-table { font-size: 13px; min-width: 620px; }
+  .cmp-table th, .cmp-table td { padding: 8px 10px; }
+  .cmp-table tbody th { width: 130px; position: static; box-shadow: none; }
+  .cmp-table thead th:first-child { position: static; }
+}
 
 /* ABOUT LAYOUT */
 .about-layout { display: grid; grid-template-columns: 1.2fr 1fr; gap: 64px; align-items: flex-start; }
