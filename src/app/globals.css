@@ -265,7 +265,7 @@ a:hover { color: var(--color-link-hover); }
 .btn-primary:hover { background: var(--color-hover-translucent); color: var(--color-absolute-black); box-shadow: 0 0 0 1px #c2c2c2; }
 .btn-tertiary { display: inline-flex; align-items: center; gap: 8px; background: transparent; color: var(--color-jelly-mint); font-family: var(--font-mono); font-size: 12px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; border: 1px solid var(--color-jelly-mint); border-radius: var(--radius-cta); padding: 10px 20px; cursor: pointer; text-decoration: none; transition: background var(--dur-fast) var(--ease-default), color var(--dur-fast) var(--ease-default); }
 .btn-tertiary:hover { background: var(--color-jelly-mint); color: var(--color-absolute-black); }
-.pill-tag { display: inline-block; background: var(--color-jelly-mint); color: var(--color-absolute-black); font-family: var(--font-mono); font-size: 11px; font-weight: 700; letter-spacing: 1.8px; text-transform: uppercase; border-radius: var(--radius-card); padding: 4px 10px; }
+.pill-tag { display: inline-block; background: var(--color-jelly-mint); color: var(--color-absolute-black); font-family: var(--font-mono); font-size: 11px; font-weight: 700; letter-spacing: 1.8px; text-transform: uppercase; border-radius: var(--radius-card); padding: 4px 10px; white-space: nowrap; }
 .arrow { display: inline-block; transition: transform 200ms var(--ease-default); }
 
 /* FAQ */
