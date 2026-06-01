@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
-import { breadcrumb } from '@/lib/schema'
+import { breadcrumb, faqPage } from '@/lib/schema'
 import { posts, getPost } from '@/lib/content/blog'
 import { getBlogDetail } from '@/lib/content/blog-detail'
 import { getT } from '@/lib/i18n'
@@ -61,11 +61,15 @@ export default async function BlogPostPage({ params }: { params: Promise<{ lang:
   const prose = loc?.prose ?? detail?.prose ?? <p>{post.deck}</p>
   const toc = loc?.toc ?? detail?.toc ?? []
 
-  const jsonLd = breadcrumb([
-    { name: 'Home', url: `https://pmax.online/${lang}/` },
-    { name: blogLabel, url: `https://pmax.online/${lang}/blog/` },
-    { name: localCategory, url: `https://pmax.online/${lang}/blog/${slug}/` },
-  ])
+  const localFaqs = loc?.faqs ?? detail?.faqs
+  const jsonLd = [
+    breadcrumb([
+      { name: 'Home', url: `https://pmax.online/${lang}/` },
+      { name: blogLabel, url: `https://pmax.online/${lang}/blog/` },
+      { name: localCategory, url: `https://pmax.online/${lang}/blog/${slug}/` },
+    ]),
+    ...(localFaqs?.length ? [{ ...faqPage(localFaqs), inLanguage: lang }] : []),
+  ]
 
   return (
     <>

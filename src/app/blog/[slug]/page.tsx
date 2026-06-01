@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
-import { breadcrumb, article as articleSchema } from '@/lib/schema'
+import { breadcrumb, article as articleSchema, faqPage } from '@/lib/schema'
 import { posts, getPost } from '@/lib/content/blog'
 import { getBlogDetail } from '@/lib/content/blog-detail'
 
@@ -82,6 +82,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
       datePublished: post.date,
       keywords: categoryKeywords[post.category],
     }),
+    ...(detail?.faqs?.length ? [{ ...faqPage(detail.faqs), inLanguage: 'en' }] : []),
   ]
 
   return (

@@ -35,6 +35,7 @@ export interface LocalizedBlogDetail {
   deck?: string
   prose?: ReactNode
   toc?: string[]
+  faqs?: { q: string; a: string }[]
 }
 
 export const de = {
@@ -1392,12 +1393,19 @@ export const de = {
         <h2 id="closing">Abschluss &mdash; wähle, was zum Geschäft passt, nicht was am lautesten ist</h2>
         <p>Die meisten E-Commerce-Marken haben kein &bdquo;Meta-Problem&ldquo; oder &bdquo;TikTok-Problem&ldquo;. Sie haben ein <strong>Creative-Throughput-Problem</strong>, ein <strong>Attributionsproblem</strong> oder ein <strong>Katalogproblem</strong> &mdash; und beschuldigen die Plattform. Fixe die zugrundeliegende Einschränkung, und der Channel-Mix ordnet sich meist innerhalb eines Quartals von selbst.</p>
         <p>Wenn du eine einseitige Diagnose willst, wo dein Media-Budget über Google, Meta und TikTok leckt: <a href="/de/contact/?topic=channel-mix-audit">30 Minuten kostenlos buchen</a>. Keine Folien, kein Sales-Pitch.</p>
-        <p>Verwandte Leistungen: unser <a href="/de/services/google-ads/">Google Ads &amp; Performance Max Service</a>, unser <a href="/de/services/paid-social/">Paid Social Service</a> (Meta &amp; TikTok), unser <a href="/de/services/analytics/">Analytics &amp; Attribution Setup</a> &mdash; und unser <a href="/de/industries/ecommerce/">E-Commerce Marketing Playbook</a>.</p>
+        <p>Verwandte Leistungen: unser <a href="/de/services/google-ads/">Google Ads &amp; Performance Max Service</a>, unser <a href="/de/services/paid-social/">Paid Social Service</a> (Meta &amp; TikTok), unser <a href="/de/services/analytics/">Analytics &amp; Attribution Setup</a>, unser <a href="/de/industries/ecommerce/">E-Commerce Marketing Playbook</a> &mdash; und <a href="/de/blog/pinterest-ads-home-interiors-local-2026/">für wen Pinterest Ads wirklich funktionieren</a>.</p>
         <p style={{ marginTop: 32, fontFamily: 'var(--font-mono)', fontSize: 11, letterSpacing: '1.5px', textTransform: 'uppercase', color: '#6a6a6a' }}>Zuletzt aktualisiert 26. Mai 2026 &middot; Monatlich geprüft &middot; Basis &euro;2,1 Mio. E-Com-Spend Q1 2026</p>
       </>),
     },
     'pinterest-ads-home-interiors-local-2026': {
       toc: ["Kann jeder Pinterest Ads schalten?", "Für wen es funktioniert", "Rollos &amp; Sonnenschutz", "Retargeting", "Cross-Platform-Strategie", "Creative-Regeln", "Kosten", "Fazit", "FAQs"],
+      faqs: [
+        { q: 'Kann jeder Pinterest Ads schalten?', a: 'Fast. Sie benötigen ein kostenloses Pinterest-Business-Konto und eine verifizierbare Website. Ads Manager ist Self-Serve, sodass ein Solo-Inhaber ohne Agentur starten kann. Die einzige echte Hürde ist geografisch: Pinterest Ads sind nicht in jedem Land verfügbar, aber in den meisten europäischen Ländern, darunter Spanien, Deutschland, UK und die gesamte EU.' },
+        { q: 'Für wen funktionieren Pinterest Ads wirklich?', a: 'Visuell geplante, durchdachte Käufe: Wohneinrichtung, Sonnenschutz und Möbel, Hochzeiten, Mode und Beauty, Food und DIY, Reisen. Der gemeinsame Nenner sind Menschen, die einen zukünftigen Kauf Wochen im Voraus planen. Impulskauf-, Commodity- und preisgetriebene Kategorien tendieren zur Underperformance.' },
+        { q: 'Wie funktioniert Pinterest Retargeting?', a: 'Installieren Sie den Pinterest Tag (oder die Conversions API) und Sie können Website-Besucher retargetieren, eine gehashte Kundenliste hochladen (mindestens ~100 Matches), Personen retargetieren, die mit Ihren organischen Pins interagiert haben, Actalike-Zielgruppen erstellen und dynamisches Retargeting betreiben, das Personen die genauen Produkte aus einem Catalog-Feed zeigt.' },
+        { q: 'Kann ein lokales Unternehmen mit einem Showroom Pinterest Ads nutzen?', a: 'Ja. Geo-targetieren Sie die Auslieferung auf die Stadt des Showrooms, Postleitzahlen oder einen Radius um das Geschäft, und verwenden Sie ortsspezifisches Creative — idealerweise mit der Geschäftsadresse. Für einen lokalen Showroom funktioniert Pinterest am besten als eine Schicht einer Cross-Platform-Retargeting-Strategie neben YouTube-Video und statischem Display.' },
+        { q: 'Was kosten Pinterest Ads 2026?', a: 'Günstig auf Media-Basis: CPC typischerweise €0,10–€1,50, CPM etwa €2–€5. Der niedrige Preis ist ein zweischneidiges Schwert — es ist einfach, Geld für Reichweite auszugeben, die nie konvertiert, also sind Kosten pro Akquisition (oder pro qualifiziertem Showroom-Besuch) die einzige Zahl, die zählt.' },
+      ],
       prose: (<>
         <p><strong>„Kann irgendjemand Pinterest Ads schalten?"</strong> ist die Frage, die wir bekommen. Die kurze Antwort: ja &mdash; und genau deshalb sollten die meisten, die sie schalten, es nicht tun. Die Plattform ist Self-Serve, das Media ist günstig, und die Einstiegshürde ist fast null. Das sagt nichts darüber aus, ob es für <em>Ihr</em> Unternehmen funktioniert. Dieser Beitrag beantwortet die eigentliche Frage: Für wen ist Pinterest wirklich gut &mdash; und wie betreibt man es, damit es sich rechnet?</p>
 

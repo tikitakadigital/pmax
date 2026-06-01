@@ -589,10 +589,10 @@ select option { background: var(--color-canvas); }
 .cmp-screenshot a { display: block; }
 @media (max-width: 680px) {
   .cmp-table-wrap { -webkit-overflow-scrolling: touch; }
+  .cmp-table-wrap::after { display: none; }
   .cmp-table { font-size: 13px; min-width: 620px; }
   .cmp-table th, .cmp-table td { padding: 8px 10px; }
-  .cmp-table tbody th { width: 130px; position: static; box-shadow: none; }
-  .cmp-table thead th:first-child { position: static; }
+  .cmp-table tbody th { width: 130px; }
 }
 
 /* ABOUT LAYOUT */

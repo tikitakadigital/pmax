@@ -5,6 +5,7 @@ export interface BlogDetail {
   slug: string
   toc: string[]
   prose: ReactNode
+  faqs?: { q: string; a: string }[]
 }
 
 const NeedHelp = ({ topic }: { topic: string }) => (
@@ -132,7 +133,7 @@ export const blogDetails: BlogDetail[] = [
         <p>Briefs go from your media team to your creative team, not the other way around. The brief contains: which ad set this is for, what the hook should test, what the proof point is, what the CTA needs to drive. Brand input comes in after.</p>
         <h2>Cull weekly, scale monthly</h2>
         <p>Every Friday, kill anything below threshold performance. Once a month, identify the top three creative patterns and brief out next month&rsquo;s creative around them. Compound the learnings.</p>
-        <p>Related: <a href="/blog/creative-testing-framework/">how to structure creative tests so the learnings actually compound</a> &mdash; and our <a href="/services/paid-social/">paid social service</a>.</p>
+        <p>Related: <a href="/blog/creative-testing-framework/">how to structure creative tests so the learnings actually compound</a>, our <a href="/services/paid-social/">paid social service</a> &mdash; and <a href="/blog/pinterest-ads-home-interiors-local-2026/">when Pinterest Ads are worth adding to the mix</a>.</p>
         <NeedHelp topic="meta-creative-volume" />
       </>
     ),
@@ -298,7 +299,7 @@ export const blogDetails: BlogDetail[] = [
         <p>Most brand-account creative on TikTok dies. Get creators making content for you, get them on usage rights, and run those creatives as Spark Ads. The lift over brand-account creative is usually 3&ndash;5x.</p>
         <h2>The compounding loop</h2>
         <p>Identify your top 3 organic videos every month. Spark Ad them. Use the learnings to brief next month&rsquo;s creator content. Repeat. The brands that crack TikTok compound this loop month after month.</p>
-        <p>Related: our <a href="/services/paid-social/">paid social service</a> and <a href="/services/creative/">creative production</a>, our <a href="/industries/ecommerce/">e-commerce marketing playbook</a> &mdash; and <a href="/blog/meta-creative-volume/">how to build a creative pipeline for Meta</a> (the principles are identical on TikTok).</p>
+        <p>Related: our <a href="/services/paid-social/">paid social service</a> and <a href="/services/creative/">creative production</a>, our <a href="/industries/ecommerce/">e-commerce marketing playbook</a>, <a href="/blog/meta-creative-volume/">how to build a creative pipeline for Meta</a> (the principles are identical on TikTok) &mdash; and <a href="/blog/pinterest-ads-home-interiors-local-2026/">who Pinterest Ads work for</a> if visual planning is in your mix.</p>
         <NeedHelp topic="tiktok-organic-paid" />
       </>
     ),
@@ -463,6 +464,13 @@ export const blogDetails: BlogDetail[] = [
   {
     slug: 'pinterest-ads-home-interiors-local-2026',
     toc: ["Can anyone run them?", "Who it's for", "Window coverings fit", "Retargeting", "Cross-platform play", "Creative rules", "What it costs", "The verdict", "FAQs"],
+    faqs: [
+      { q: 'Can anyone run Pinterest Ads?', a: 'Almost. You need a free Pinterest business account and a verifiable website, and Ads Manager is self-serve — so a solo owner can launch without an agency. The one real gate is geography: Pinterest Ads aren\'t available in every country, though they are across most of Europe including Spain, Germany, the UK and the wider EU.' },
+      { q: 'Who do Pinterest Ads actually work for?', a: 'Visually-planned, considered purchases: home decor and interiors, window coverings and furniture, weddings, fashion and beauty, food and DIY, travel. The common thread is people planning a future purchase weeks in advance. Impulse, commodity and price-led categories tend to underperform.' },
+      { q: 'How does Pinterest retargeting work?', a: 'Install the Pinterest tag (or Conversions API) and you can retarget site visitors, upload a hashed customer list (minimum ~100 matches), retarget people who engaged with your organic Pins, build actalike audiences, and run dynamic retargeting that shows people the exact products they viewed from a catalog feed.' },
+      { q: 'Can a local business with one showroom use Pinterest Ads?', a: 'Yes. Geo-target delivery to the showroom\'s city, postal codes or a radius around the store, and use location-specific creative — ideally with the store address on it. Pinterest works best as one layer of a cross-platform retargeting strategy alongside YouTube video and static display.' },
+      { q: 'How much do Pinterest Ads cost in 2026?', a: 'Cheap on a media basis: CPC typically €0.10–€1.50, CPM around €2–€5. The low cost is a double-edged sword — it\'s easy to spend on reach that never converts, so cost per acquisition (or per qualified showroom visit) is the only number that matters.' },
+    ],
     prose: (
       <>
         <p><strong>&ldquo;Can anybody run Pinterest Ads?&rdquo;</strong> is the question we get. The short answer is yes &mdash; and that&rsquo;s exactly why most people who run them shouldn&rsquo;t. The platform is self-serve, the media is cheap, and the barrier to entry is almost nothing. None of which tells you whether it&rsquo;ll work for <em>your</em> business. This post answers the question people should actually be asking: who is Pinterest genuinely good for, and how do you run it so it pays back?</p>
@@ -780,7 +788,7 @@ export const blogDetails: BlogDetail[] = [
         <h2 id="closing">Closing &mdash; pick what fits the business, not what&rsquo;s loudest</h2>
         <p>Most ecommerce brands do not have a &ldquo;Meta problem&rdquo; or a &ldquo;TikTok problem&rdquo;. They have a <strong>creative-throughput problem</strong>, an <strong>attribution problem</strong>, or a <strong>catalogue problem</strong>, and they blame the platform. Fix the underlying constraint and the channel mix usually sorts itself out within a quarter.</p>
         <p>If you want a one-page diagnosis of where your media is leaking across Google, Meta and TikTok, we run a free 30-minute version of that call every week. <a href="/contact/?topic=channel-mix-audit">Book it here</a> &mdash; no deck, no sales pitch.</p>
-        <p>Related: our <a href="/services/google-ads/">Google Ads &amp; Performance Max service</a>, our <a href="/services/paid-social/">paid social service</a> (Meta &amp; TikTok), our <a href="/services/analytics/">analytics &amp; attribution setup</a> &mdash; and our <a href="/industries/ecommerce/">e-commerce marketing playbook</a>.</p>
+        <p>Related: our <a href="/services/google-ads/">Google Ads &amp; Performance Max service</a>, our <a href="/services/paid-social/">paid social service</a> (Meta &amp; TikTok), our <a href="/services/analytics/">analytics &amp; attribution setup</a>, our <a href="/industries/ecommerce/">e-commerce marketing playbook</a> &mdash; and <a href="/blog/pinterest-ads-home-interiors-local-2026/">who Pinterest Ads actually work for</a>.</p>
         <p style={{ marginTop: 32, fontFamily: 'var(--font-mono)', fontSize: 11, letterSpacing: '1.5px', textTransform: 'uppercase', color: '#6a6a6a' }}>Last updated 26 May 2026 &middot; Reviewed monthly &middot; Based on &euro;2.1M of ecommerce spend Q1 2026</p>
       </>
     ),
