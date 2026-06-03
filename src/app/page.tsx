@@ -103,7 +103,9 @@ export default function HomePage() {
               <div>
                 <span className="hero-deck-eyebrow">What we do</span>
                 <p className="hero-deck-text">
-                  pmax is a digital marketing agency in Calvià, Mallorca. We work with German- and English-speaking business owners based on the island, and with brands across Europe.
+                  pmax is a digital marketing agency in Calvià, Mallorca. We work with German- and English-speaking business owners based on the island — including as an{' '}
+                  <Link href="/seo-company-mallorca" style={{ color: 'var(--color-jelly-mint)', borderBottom: '1px solid currentColor' }}>SEO company in Mallorca</Link>
+                  {' '}— and with brands across Europe.
                 </p>
               </div>
               <aside className="hero-deck-side" aria-label="Quick facts">

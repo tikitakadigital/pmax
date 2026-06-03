@@ -19,6 +19,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/blog/`, lastModified: '2026-04-04', changeFrequency: 'weekly', priority: 0.9 },
     { url: `${base}/about/`, lastModified: '2026-04-01', changeFrequency: 'yearly', priority: 0.8 },
     { url: `${base}/contact/`, lastModified: '2026-04-01', changeFrequency: 'yearly', priority: 0.8 },
+    { url: `${base}/seo-company-mallorca/`, lastModified: '2026-06-03', changeFrequency: 'monthly', priority: 0.9 },
     ...langs.map(lang => ({ url: `${base}/${lang}/`, lastModified: '2026-04-01', changeFrequency: 'monthly' as const, priority: 0.9 })),
     ...langs.map(lang => ({ url: `${base}/${lang}/services/`, lastModified: '2026-04-01', changeFrequency: 'monthly' as const, priority: 0.8 })),
     ...langs.map(lang => ({ url: `${base}/${lang}/industries/`, lastModified: '2026-04-01', changeFrequency: 'monthly' as const, priority: 0.8 })),

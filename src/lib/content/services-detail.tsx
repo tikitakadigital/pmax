@@ -219,7 +219,7 @@ export const serviceDetails: ServiceDetail[] = [
         <h3>3. EEAT and authority work</h3>
         <p>Author profiles. Schema. Real reviews. Genuine citations from third-party publications. The slow trust-building work that turns content into something Google and AI engines both trust.</p>
         <h3>4. Local and international</h3>
-        <p>For multi-location businesses: GBP optimisation, NAP consistency, local pack rankings. For international: proper hreflang, locale-specific content, multilingual creative — never auto-translated.</p>
+        <p>For multi-location businesses: GBP optimisation, NAP consistency, <a href="/seo-company-mallorca">local pack rankings</a>. For international: proper hreflang, locale-specific content, multilingual creative — never auto-translated.</p>
         <h2>What you get</h2>
         <ul>
           <li><strong>A senior SEO lead</strong> running your programme weekly</li>
