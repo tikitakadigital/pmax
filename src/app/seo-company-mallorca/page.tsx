@@ -15,6 +15,8 @@ export const metadata: Metadata = {
     canonical: 'https://pmax.online/seo-company-mallorca/',
     languages: {
       en: 'https://pmax.online/seo-company-mallorca/',
+      de: 'https://pmax.online/de/seo-agentur-mallorca/',
+      es: 'https://pmax.online/es/agencia-seo-mallorca/',
       'x-default': 'https://pmax.online/seo-company-mallorca/',
     },
   },
@@ -227,6 +229,13 @@ export default function SeoCompanyMallorcaPage() {
                   and keep you for five years.
                 </p>
               </div>
+
+              <p style={{ marginTop: 8 }}>
+                Read this page in{' '}
+                <Link href="/de/seo-agentur-mallorca/">German (SEO Agentur Mallorca)</Link>
+                {' '}or{' '}
+                <Link href="/es/agencia-seo-mallorca/">Spanish (Agencia SEO Mallorca)</Link>.
+              </p>
 
               <h2>Who we work with on the island</h2>
               <p>
