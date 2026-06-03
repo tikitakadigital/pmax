@@ -65,7 +65,7 @@ const faqs = [
 
 const localBusinessSchema = {
   '@context': 'https://schema.org',
-  '@type': 'ProfessionalService',
+  '@type': 'LocalBusiness',
   '@id': 'https://pmax.online/seo-company-mallorca/#localbusiness',
   name: 'pmax — SEO Company Mallorca',
   image: 'https://pmax.online/og-image.jpg',

@@ -1,7 +1,7 @@
 const mallorca = { '@type': 'Place', name: 'Mallorca', containedInPlace: { '@type': 'Country', name: 'Spain' } }
 
 export const org = {
-  '@type': ['Organization', 'AdvertisingAgency', 'ProfessionalService', 'LocalBusiness'],
+  '@type': ['Organization', 'AdvertisingAgency', 'LocalBusiness'],
   '@id': 'https://pmax.online/#org',
   name: 'pmax',
   legalName: 'PMax Online S.L.',
