@@ -75,7 +75,7 @@ export const de = {
     deckEyebrow: 'Was wir tun',
     deckText: (
       <>
-        pmax ist eine Agentur für digitales Marketing in Calvià, Mallorca. Wir arbeiten mit deutsch- und englischsprachigen Unternehmern auf der Insel sowie mit Marken in ganz Europa.
+        pmax ist eine Agentur für digitales Marketing in Calvià, Mallorca. Wir arbeiten mit deutsch- und englischsprachigen <a href="/de/seo-agentur-mallorca/" style={{ color: 'var(--color-jelly-mint)', borderBottom: '1px solid currentColor' }}>Unternehmern auf der Insel</a> sowie mit Marken in ganz Europa.
       </>
     ),
     statSpend: 'verwaltetes Ad-Budget',
@@ -359,7 +359,7 @@ export const de = {
         <>
           <h2>SEO, das tatsächlich Umsatz bringt</h2>
           <p>Die meisten SEO-Programme scheitern nicht an der Strategie — sie scheitern an der Ausführung. Technische Grundlagen, die nie wirklich behoben werden. Inhalte, die für Google geschrieben sind, nicht für Menschen. Linkbuilding aus Massenprogrammen, das mehr schadet als nutzt. Wir beginnen immer mit dem Technischen: Indexierung, Core Web Vitals, Crawl-Budget, strukturierte Daten. Dann Inhalte, die auf Kaufabsicht ausgerichtet sind — nicht weil Google es mag, sondern weil Ihre Kunden die Antworten suchen.</p>
-          <p>Für Mallorca-Unternehmen und DACH-Marken, die internationale Kunden ansprechen wollen, bauen wir mehrsprachige SEO-Strukturen, die auf Englisch, Deutsch und Spanisch ranken — mit korrektem hreflang-Setup, getrennten Sitemaps und inhaltlich eigenständigen Seiten pro Sprache.</p>
+          <p>Für <a href="/de/seo-agentur-mallorca/">Mallorca-Unternehmen</a> und DACH-Marken, die internationale Kunden ansprechen wollen, bauen wir mehrsprachige SEO-Strukturen, die auf Englisch, Deutsch und Spanisch ranken — mit korrektem hreflang-Setup, getrennten Sitemaps und inhaltlich eigenständigen Seiten pro Sprache.</p>
           <h2>SEO und KI-Suche</h2>
           <p>Dieselbe technische Arbeit, die Google-Rankings verbessert, verbessert auch Ihre Zitierbarkeit in ChatGPT und Perplexity. Saubere Strukturen, verifizierbare Fakten, klare Entity-Signale — das ist sowohl SEO als auch GEO. Wir betreiben beides als ein Programm.</p>
         </>

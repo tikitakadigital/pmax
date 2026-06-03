@@ -40,7 +40,7 @@ export const es = {
     deckEyebrow: 'Qué hacemos',
     deckText: (
       <>
-        pmax es una agencia de marketing digital en Calvià, Mallorca. Trabajamos con empresas de toda la isla, locales e internacionales, y con marcas de toda Europa.
+        pmax es una agencia de marketing digital en Calvià, Mallorca. Trabajamos con <a href="/es/agencia-seo-mallorca/" style={{ color: 'var(--color-jelly-mint)', borderBottom: '1px solid currentColor' }}>empresas de toda la isla</a>, locales e internacionales, y con marcas de toda Europa.
       </>
     ),
     statSpend: 'en inversión publicitaria gestionada',
@@ -324,7 +324,7 @@ export const es = {
         <>
           <h2>SEO que realmente genera ingresos</h2>
           <p>La mayoría de programas SEO no fallan por la estrategia — fallan en la ejecución. Fundamentos técnicos que nunca se corrigen de verdad. Contenido escrito para Google, no para personas. Link building de programas masivos que hace más daño que bien. Siempre empezamos por lo técnico: indexación, Core Web Vitals, crawl budget, datos estructurados. Luego contenido orientado a la intención de compra — no porque le guste a Google, sino porque tus clientes buscan las respuestas.</p>
-          <p>Para empresas en Mallorca y marcas que quieren captar clientes internacionales, construimos estructuras SEO multilingüe que posicionan en inglés, alemán y español — con hreflang correcto, sitemaps separados y páginas con contenido propio por idioma.</p>
+          <p>Para <a href="/es/agencia-seo-mallorca/">empresas en Mallorca</a> y marcas que quieren captar clientes internacionales, construimos estructuras SEO multilingüe que posicionan en inglés, alemán y español — con hreflang correcto, sitemaps separados y páginas con contenido propio por idioma.</p>
           <h2>SEO y búsqueda con IA</h2>
           <p>El mismo trabajo técnico que mejora el posicionamiento en Google también mejora tu capacidad de ser citado en ChatGPT y Perplexity. Estructuras limpias, datos verificables, señales de entidad claras — eso es SEO y GEO al mismo tiempo. Gestionamos ambos como un único programa.</p>
         </>
