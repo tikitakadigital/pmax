@@ -75,7 +75,7 @@ export const de = {
     deckEyebrow: 'Was wir tun',
     deckText: (
       <>
-        pmax ist eine Agentur für digitales Marketing in Calvià, Mallorca. Wir arbeiten mit deutsch- und englischsprachigen <a href="/de/seo-agentur-mallorca/" style={{ color: 'var(--color-jelly-mint)', borderBottom: '1px solid currentColor' }}>Unternehmern auf der Insel</a> sowie mit Marken in ganz Europa.
+        pmax ist eine Agentur für digitales Marketing in Calvià, Mallorca. Wir arbeiten mit deutsch- und englischsprachigen Unternehmern auf der Insel sowie mit Marken in ganz Europa.
       </>
     ),
     statSpend: 'verwaltetes Ad-Budget',

@@ -18,8 +18,16 @@ function detectLocale(pathname: string): Locale {
   return 'en'
 }
 
+const localeSlugs: Record<string, Record<Locale, string>> = {
+  '/seo-company-mallorca': { en: '/seo-company-mallorca', de: '/de/seo-agentur-mallorca', es: '/es/agencia-seo-mallorca' },
+  '/seo-agentur-mallorca': { en: '/seo-company-mallorca', de: '/de/seo-agentur-mallorca', es: '/es/agencia-seo-mallorca' },
+  '/agencia-seo-mallorca': { en: '/seo-company-mallorca', de: '/de/seo-agentur-mallorca', es: '/es/agencia-seo-mallorca' },
+}
+
 function switchedPath(pathname: string, target: Locale): string {
   const stripped = pathname.replace(/^\/(de|es)/, '') || '/'
+  const key = stripped.replace(/\/$/, '') || '/'
+  if (localeSlugs[key]) return localeSlugs[key][target]
   if (target === 'en') return stripped
   return `/${target}${stripped === '/' ? '/' : stripped}`
 }
