@@ -16,6 +16,14 @@ export default function robots(): MetadataRoute.Robots {
           '/es/contact/?topic=',
         ],
       },
+      // AI retrieval bots — explicit allow so citations are not blocked
+      { userAgent: 'OAI-SearchBot', allow: '/' },      // ChatGPT search results
+      { userAgent: 'Claude-SearchBot', allow: '/' },   // Claude search
+      { userAgent: 'PerplexityBot', allow: '/' },      // Perplexity real-time retrieval
+      // AI training crawlers — block (does not affect retrieval or citations)
+      { userAgent: 'GPTBot', disallow: '/' },
+      { userAgent: 'ClaudeBot', disallow: '/' },
+      { userAgent: 'Google-Extended', disallow: '/' },
     ],
     sitemap: 'https://pmax.online/sitemap.xml',
   }
