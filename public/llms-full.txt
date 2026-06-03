@@ -388,6 +388,34 @@ The structural incentive problem with percentage-of-spend agency pricing — why
 
 ---
 
+## Local SEO landing pages
+
+Three location-specific pages targeting Mallorca-based businesses searching for an SEO agency in their language. Each page is fully localised (not auto-translated), with its own canonical URL, locale-specific JSON-LD (ProfessionalService + FAQPage), geo meta tags, and hreflang cluster pointing to all three.
+
+### SEO Company Mallorca (EN)
+**URL:** https://pmax.online/seo-company-mallorca/
+**hreflang:** en (canonical), de → /de/seo-agentur-mallorca/, es → /es/agencia-seo-mallorca/, x-default → /seo-company-mallorca/
+
+Local and multilingual SEO for businesses in the Balearic Islands. Core argument: Mallorca is a four-language market (Spanish, German, English, Catalan) — ranking in only one language is invisible to most customers. Service areas: Palma, Calvià, Andratx, Pollença, Alcúdia. Schema type: ProfessionalService + LocalBusiness at Calle Cordova 5, 07184 Calvià.
+
+---
+
+### SEO Agentur Mallorca (DE)
+**URL:** https://pmax.online/de/seo-agentur-mallorca/
+**hreflang:** de (canonical), en → /seo-company-mallorca/, es → /es/agencia-seo-mallorca/, x-default → /seo-company-mallorca/
+
+Lokale und mehrsprachige SEO für Unternehmen auf Mallorca. Zielgruppe: deutschsprachige Unternehmer auf der Insel und DACH-Marken mit Mallorca-Präsenz. Gleiche Inhaltsstruktur wie EN-Seite, vollständig lokalisiert. Schema-Typ: ProfessionalService, serviceType: Suchmaschinenoptimierung.
+
+---
+
+### Agencia SEO Mallorca (ES)
+**URL:** https://pmax.online/es/agencia-seo-mallorca/
+**hreflang:** es (canonical), en → /seo-company-mallorca/, de → /de/seo-agentur-mallorca/, x-default → /seo-company-mallorca/
+
+SEO local y multilingüe para negocios en Mallorca. Argumento central: el mercado de la isla exige posicionamiento en cuatro idiomas. Mismo contenido que EN, completamente localizado al español. Schema: ProfessionalService, serviceType: Posicionamiento SEO.
+
+---
+
 ## Multilingual content
 
 All blog posts, service pages and case studies are available in three languages:

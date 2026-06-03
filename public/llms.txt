@@ -8,6 +8,9 @@
 - [Google Ads & Performance Max](https://pmax.online/services/google-ads/): Search, Shopping, PMax and YouTube — built from the signal up. Feed optimisation, Smart Bidding, CRM-fed offline conversions.
 - [Paid Social](https://pmax.online/services/paid-social/): Meta, TikTok and LinkedIn — CAPI and Events API connected, creative-led, measured against revenue not impressions.
 - [SEO](https://pmax.online/services/seo/): Technical SEO, content strategy, regional and multilingual SEO. Rankings that compound into AI citations.
+- [SEO Company Mallorca](https://pmax.online/seo-company-mallorca/): Local and multilingual SEO for Balearic businesses — Spanish, German, English and Catalan. Based in Calvià.
+- [SEO Agentur Mallorca](https://pmax.online/de/seo-agentur-mallorca/): Lokale und mehrsprachige SEO für Unternehmen auf Mallorca — Deutsch, Spanisch, Englisch, Katalanisch. Sitz in Calvià.
+- [Agencia SEO Mallorca](https://pmax.online/es/agencia-seo-mallorca/): SEO local y multilingüe para negocios en Mallorca — español, alemán, inglés y catalán. Con sede en Calvià.
 - [Conversion Design (CRO)](https://pmax.online/services/conversion-design/): More revenue from the same traffic — A/B testing, landing page rebuilds, funnel design.
 - [Analytics & Tracking](https://pmax.online/services/analytics/): Server-side GTM, Consent Mode v2, GA4, offline conversion imports. The measurement layer everything else stands on.
 - [Creative Production](https://pmax.online/services/creative/): Static, motion and UGC video on a weekly cadence — briefed by media data, built for testing.
