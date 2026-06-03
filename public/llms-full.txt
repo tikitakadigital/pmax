@@ -388,6 +388,15 @@ The structural incentive problem with percentage-of-spend agency pricing — why
 
 ---
 
+### Pinterest Ads in 2026: who can actually run them — and who should
+**URL:** https://pmax.online/blog/pinterest-ads-home-interiors-local-2026/
+**Published:** Jun 1, 2026
+**Also in:** DE · ES
+
+Who Pinterest Ads work for, how retargeting really works, and why a local window-coverings showroom is closer to its sweet spot than most ecommerce. Answers: Pinterest Ads eligibility, Pinterest retargeting, local service business advertising.
+
+---
+
 ## Local SEO landing pages
 
 Three location-specific pages targeting Mallorca-based businesses searching for an SEO agency in their language. Each page is fully localised (not auto-translated), with its own canonical URL, locale-specific JSON-LD (ProfessionalService + FAQPage), geo meta tags, and hreflang cluster pointing to all three.

@@ -40,6 +40,16 @@
 - [Meta says creative is 56% of performance — how to actually ship that much](https://pmax.online/blog/meta-creative-volume/): The creative production model that keeps a Meta account fed with fresh angles.
 - [Stop optimising for form fills — start optimising for revenue](https://pmax.online/blog/crm-conversion-imports/): How to import offline CRM data into Google and Meta so algorithms optimise for real customers.
 - [The seven GA4 setups we fix on every new client](https://pmax.online/blog/ga4-mistakes/): The most common GA4 configuration errors that cause bad data and worse decisions.
+- [How to win Google Ads when your customers live in Mallorca and your competitors live abroad](https://pmax.online/blog/google-ads-mallorca/): Geo-targeting, language signals, local conversion tracking and the small settings that make a big difference for Balearic businesses.
+- [Shopify SEO in 2026: the eight changes worth making this quarter](https://pmax.online/blog/shopify-seo-2026/): Most Shopify stores leak SEO value by default. The handful of theme and structure fixes that move organic traffic the most.
+- [How a Mallorca hotel grew direct bookings 52% in 11 weeks](https://pmax.online/blog/hotel-direct-bookings/): What Mar y Roca did to break their dependence on Booking.com, and how much it actually saved them.
+- [Real estate lead generation in 2026: why your form is the problem](https://pmax.online/blog/real-estate-lead-gen/): Most real estate websites lose 80% of motivated buyers at the form. Five fixes that work for Mallorca agencies.
+- [TikTok's organic-paid loop: what's actually working in 2026](https://pmax.online/blog/tiktok-organic-paid/): The three TikTok content patterns that earn impressions and the paid setup we layer on top to compound them into revenue.
+- [Solar marketing in Spain: the unsexy work that moves the needle](https://pmax.online/blog/solar-marketing-spain/): Why most solar installers lose money on Meta — and the funnel structure that turns a €40 click into a €6,000 install.
+- [A creative testing framework that actually compounds](https://pmax.online/blog/creative-testing-framework/): How to test ad creative so you build a library of winners — not just a graveyard of one-off launches.
+- [What "ChatGPT shopping" means for e-commerce brands in 2026](https://pmax.online/blog/gpt-shopping/): OpenAI is quietly building a shopping interface inside ChatGPT. Here's how to make sure your products show up.
+- [Marketing a yacht charter business: an eight-language, twelve-month problem](https://pmax.online/blog/yachting-marketing/): How we plan media for a seasonal business with a six-figure average booking value and customers in three time zones.
+- [Pinterest Ads in 2026: who can actually run them — and who should](https://pmax.online/blog/pinterest-ads-home-interiors-local-2026/): Who Pinterest Ads work for, how retargeting really works, and why a local showroom is closer to its sweet spot than most ecommerce.
 
 ## How we work
 
