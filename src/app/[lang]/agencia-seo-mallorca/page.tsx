@@ -8,6 +8,11 @@ import PromoBlock from '@/components/PromoBlock'
 import { breadcrumb, faqPage } from '@/lib/schema'
 import { cases } from '@/lib/content/cases'
 
+// Only build /es/agencia-seo-mallorca/ — not /de/agencia-seo-mallorca/
+export function generateStaticParams() {
+  return [{ lang: 'es' }]
+}
+
 export const metadata: Metadata = {
   title: 'Agencia SEO Mallorca | pmax — SEO local y multilingüe desde Calvià',
   description: 'pmax es una agencia SEO en Mallorca. Posicionamos negocios en cuatro idiomas — español, alemán, inglés y catalán — con SEO técnico, búsqueda local y visibilidad en IA. Con sede en Calvià.',
@@ -110,8 +115,6 @@ export default function AgenciaSeoMallorcaPage() {
 
   return (
     <>
-      {/* Patch html[lang] — root layout defaults to "en" */}
-      <script dangerouslySetInnerHTML={{ __html: `document.documentElement.lang='es'` }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <Nav />
       <main id="main">

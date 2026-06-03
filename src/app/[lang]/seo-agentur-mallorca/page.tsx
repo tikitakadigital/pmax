@@ -8,6 +8,11 @@ import PromoBlock from '@/components/PromoBlock'
 import { breadcrumb, faqPage } from '@/lib/schema'
 import { cases } from '@/lib/content/cases'
 
+// Only build /de/seo-agentur-mallorca/ — not /es/seo-agentur-mallorca/
+export function generateStaticParams() {
+  return [{ lang: 'de' }]
+}
+
 export const metadata: Metadata = {
   title: 'SEO Agentur Mallorca | pmax — Lokale & mehrsprachige SEO aus Calvià',
   description: 'pmax ist eine SEO Agentur auf Mallorca. Wir bringen Unternehmen in vier Sprachen nach oben — Deutsch, Spanisch, Englisch und Katalanisch — mit technischem SEO, lokaler Suche und KI-Sichtbarkeit. Sitz in Calvià.',
@@ -110,8 +115,6 @@ export default function SeoAgenturMallorcaPage() {
 
   return (
     <>
-      {/* Patch html[lang] — root layout defaults to "en" */}
-      <script dangerouslySetInnerHTML={{ __html: `document.documentElement.lang='de'` }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <Nav />
       <main id="main">
@@ -166,9 +169,9 @@ export default function SeoAgenturMallorcaPage() {
                 Aber die Kundschaft auf dieser Insel funktioniert nicht so.
               </p>
               <p>
-                Ein Klempner in Palma wird von Einheimischen als <em>&bdquo;fontanero Palma&ldquo;</em> gesucht,
-                von den deutschen Residenten, die einen riesigen Teil der Kaufkraft der Insel
-                ausmachen, als <em>&bdquo;Klempner Mallorca&ldquo;</em>, von britischen und
+                Ein Klempner in Palma wird von Einheimischen als <em>&bdquo;fontanero Palma&ldquo;</em>{' '}
+                gesucht, von den deutschen Residenten, die einen riesigen Teil der Kaufkraft der
+                Insel ausmachen, als <em>&bdquo;Klempner Mallorca&ldquo;</em>, von britischen und
                 skandinavischen Auswanderern als <em>&bdquo;plumber Mallorca&ldquo;</em> — und
                 gelegentlich auch auf Katalanisch. Vier Suchanfragen, vier Sprachen, vier Sätze
                 von Wettbewerbern, für dasselbe Unternehmen. Wer nur auf Spanisch rankt, ist für
