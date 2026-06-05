@@ -51,7 +51,7 @@ export default function ContactPage() {
               <span>Contact</span>
             </nav>
             <span className="page-intro-eyebrow">Talk to us</span>
-            <h1 className="page-intro-title">Let&apos;s <em>chat</em>.</h1>
+            <h1 className="page-intro-title">Let&apos;s <em>talk</em>.</h1>
             <p className="page-intro-deck">
               First conversation is 30 minutes, on us. Tell us a bit about what you&apos;re trying
               to grow and we&apos;ll come back within one working day.
