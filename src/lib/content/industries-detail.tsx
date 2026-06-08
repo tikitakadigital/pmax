@@ -86,6 +86,8 @@ export const industryDetails: IndustryDetail[] = [
         <p>The average residential sale takes 4–7 months from first valuation to signed mandate. We wire your CRM into the ad platforms so they learn from actual mandates signed, not just form fills.</p>
         <h2>4. Local + AI search</h2>
         <p>&ldquo;Real estate agent Mallorca&rdquo; is increasingly answered by ChatGPT and Google AI Overviews, not the traditional ten blue links. We do the schema, content and trust-signal work to be the agency that gets cited.</p>
+        <h2>5. Google Ads for Spanish real estate</h2>
+        <p>For estate agencies operating across Mallorca and mainland Spain, paid search is the fastest way to fill the pipeline between referrals. Regional CPC differences, Spanish-language buyer intent, and the right conversion events wired back to your CRM — see our dedicated <a href="/google-ads-agency-spain/">Google Ads agency in Spain</a> page for the full approach.</p>
       </>
     ),
     relatedCase: { slug: 'primundus', variant: 'is-violet', title: 'See similar work — PRIMUNDUS: regional SEO growing 4.2x in 9 months' },
@@ -143,7 +145,7 @@ export const industryDetails: IndustryDetail[] = [
         <h2>1. Buyer-journey-mapped content</h2>
         <p>A solar buyer asks fifteen different questions in the six months between &ldquo;we should look into this&rdquo; and &ldquo;sign the contract&rdquo;. We build content for every one of them — calculators, comparison tables, regulatory explainers — and route each piece to the right paid channel.</p>
         <h2>2. Region-specific Google Ads</h2>
-        <p>Solar incentives differ city by city, region by region. Generic national campaigns waste enormous amounts of money. We build geo-segmented account structures that match the actual policy landscape.</p>
+        <p>Solar incentives differ city by city, region by region. Generic national campaigns waste enormous amounts of money. We build geo-segmented account structures that match the actual policy landscape. For a full breakdown of how we run Google Ads in Spain, see our <a href="/google-ads-agency-spain/">Google Ads agency in Spain</a> page.</p>
         <h2>3. AI visibility for high-intent queries</h2>
         <p>&ldquo;Best solar installer in Spain&rdquo; is now an AI-answered question. We do the technical and content work to be the brand that ChatGPT, Perplexity and Gemini cite.</p>
         <h2>4. Long-cycle attribution</h2>

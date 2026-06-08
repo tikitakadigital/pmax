@@ -237,6 +237,14 @@ export default function AgenciaSeoMallorcaPage() {
                 </p>
               </div>
 
+              <p>
+                ¿Necesitas Google Ads además de SEO?{' '}
+                <Link href="/es/agencia-google-ads-espana/">Nuestra agencia de Google Ads en España</Link>
+                {' '}explica cómo gestionamos el paid search en Mallorca y el mercado español —
+                diferencias de CPC por región, estructura de campañas multilingüe y Performance
+                Max para el e-commerce español.
+              </p>
+
               <h2>Con quién trabajamos en la isla</h2>
               <p>
                 Hostelería y alquiler de villas, inmobiliarias, restaurantes, clínicas y consultas

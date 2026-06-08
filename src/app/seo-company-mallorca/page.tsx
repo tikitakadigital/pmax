@@ -234,6 +234,12 @@ export default function SeoCompanyMallorcaPage() {
                 {' '}or{' '}
                 <Link href="/es/agencia-seo-mallorca/">Spanish (Agencia SEO Mallorca)</Link>.
               </p>
+              <p>
+                Need Google Ads alongside SEO?{' '}
+                <Link href="/google-ads-agency-spain/">Our Google Ads agency in Spain page</Link>
+                {' '}covers paid search for Mallorca and the Spanish market — regional CPCs, multilingual
+                campaign structure and Performance Max for Spanish e-commerce.
+              </p>
 
               <h2>Who we work with on the island</h2>
               <p>

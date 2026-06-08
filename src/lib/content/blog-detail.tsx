@@ -155,7 +155,7 @@ export const blogDetails: BlogDetail[] = [
         <p>50% of Mallorca&rsquo;s commercial searches happen between April and September. Do not run flat bids year-round. Build day-parted, season-parted bidding strategies that match the actual demand curve.</p>
         <h2>Local-pack and Maps</h2>
         <p>If you are a service business, your Google Business Profile drives more revenue than your ads do. Optimise it properly: photos updated monthly, reviews requested every quarter, services properly categorised. The work compounds.</p>
-        <p>See our <a href="/services/google-ads/">Google Ads &amp; Performance Max service</a> &mdash; built for Mallorca&rsquo;s multilingual, seasonal demand.</p>
+        <p>See our <a href="/services/google-ads/">Google Ads &amp; Performance Max service</a> &mdash; built for Mallorca&rsquo;s multilingual, seasonal demand. Running campaigns across Spain more broadly? See our <a href="/google-ads-agency-spain/">Google Ads agency in Spain</a> page.</p>
         <NeedHelp topic="google-ads-mallorca" />
       </>
     ),
@@ -343,7 +343,7 @@ export const blogDetails: BlogDetail[] = [
         <p>The average Spanish solar install takes 4&ndash;6 months from first ad click to signed contract. If you are optimising for first-touch attribution, you are optimising for the wrong customers. Wire CRM-fed offline conversions and let the algorithm learn from actual installs.</p>
         <h2>Google Ads is usually the higher-intent channel</h2>
         <p>For solar, <a href="/services/google-ads/">Google Ads</a> captures higher-intent than <a href="/services/paid-social/">Meta</a>. Budget weighting most installers run (60% Meta, 40% Google) is usually backwards. Test the inverse.</p>
-        <p>More in our <a href="/industries/renewables/">renewables &amp; cleantech marketing playbook</a>.</p>
+        <p>More in our <a href="/industries/renewables/">renewables &amp; cleantech marketing playbook</a>. For Spain-specific paid search strategy, see our <a href="/google-ads-agency-spain/">Google Ads agency in Spain</a> page.</p>
         <NeedHelp topic="solar-marketing-spain" />
       </>
     ),
