@@ -96,8 +96,6 @@ const localBusinessSchema = {
     { '@type': 'Place', name: 'Balearische Inseln' },
   ],
   knowsLanguage: ['de', 'es', 'en', 'ca'],
-  serviceType: 'Suchmaschinenoptimierung',
-  provider: { '@type': 'Organization', '@id': 'https://pmax.online/#org', name: 'pmax' },
   sameAs: ['https://www.linkedin.com/company/pmax-online-s-l/'],
 }
 

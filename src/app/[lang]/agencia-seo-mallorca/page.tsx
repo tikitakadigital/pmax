@@ -96,8 +96,6 @@ const localBusinessSchema = {
     { '@type': 'Place', name: 'Islas Baleares' },
   ],
   knowsLanguage: ['es', 'de', 'en', 'ca'],
-  serviceType: 'Posicionamiento SEO',
-  provider: { '@type': 'Organization', '@id': 'https://pmax.online/#org', name: 'pmax' },
   sameAs: ['https://www.linkedin.com/company/pmax-online-s-l/'],
 }
 
