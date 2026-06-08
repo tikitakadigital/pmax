@@ -12,6 +12,7 @@ import { cases } from '@/lib/content/cases'
 export const metadata: Metadata = {
   title: 'Google Ads Agency Spain | pmax — Based in Spain, fluent in your market',
   description: 'pmax is a Google Ads agency based in Spain. We run Search, Shopping and Performance Max for businesses entering the Spanish market and brands already here — in Spanish, German, English and Catalan. Flat fees, no % of spend.',
+  robots: 'index,follow,max-image-preview:large',
   alternates: {
     canonical: 'https://pmax.online/google-ads-agency-spain/',
     languages: {
