@@ -138,8 +138,8 @@ export default function GoogleAdsAgencySpainPage() {
             <Image
               src="/palma-cathedral.webp"
               alt="Palma Cathedral, Mallorca — pmax is based in Spain"
-              width={1600}
-              height={1067}
+              width={1200}
+              height={800}
               style={{ width: '100%', height: 'auto', display: 'block' }}
               priority
             />
