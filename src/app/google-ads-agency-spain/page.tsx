@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import Link from 'next/link'
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
@@ -132,6 +133,19 @@ export default function GoogleAdsAgencySpainPage() {
           </div>
         </section>
 
+        <section className="container reveal" style={{ padding: '48px 0 0' }}>
+          <div className="card-outlined" style={{ padding: 0, overflow: 'hidden' }}>
+            <Image
+              src="/palma-cathedral.webp"
+              alt="Palma Cathedral, Mallorca — pmax is based in Spain"
+              width={1600}
+              height={1067}
+              style={{ width: '100%', height: 'auto', display: 'block' }}
+              priority
+            />
+          </div>
+        </section>
+
         <section className="container" style={{ padding: '48px 0' }}>
           <ul className="stats reveal-stagger" style={{ listStyle: 'none', padding: 0 }}>
             <li className="stat">
@@ -226,6 +240,20 @@ export default function GoogleAdsAgencySpainPage() {
                 settings, carrier-specific shipping rules, and product data quality fixes that
                 foreign sellers routinely miss.
               </p>
+              <figure style={{ margin: '32px 0' }}>
+                <div className="card-outlined" style={{ padding: 0, overflow: 'hidden' }}>
+                  <Image
+                    src="/google-ads-dashboard-spain.webp"
+                    alt="Google Ads dashboard showing Spanish-language search terms — pmax account management"
+                    width={1400}
+                    height={696}
+                    style={{ width: '100%', height: 'auto', display: 'block' }}
+                  />
+                </div>
+                <figcaption style={{ marginTop: 10, fontSize: 13, color: 'var(--color-muted)', fontFamily: 'var(--font-mono)' }}>
+                  Spanish-language search terms from a live pmax-managed Google Ads account.
+                </figcaption>
+              </figure>
 
               <h3>5. The foreign-market-entry brief</h3>
               <p>
