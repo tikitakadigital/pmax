@@ -16,6 +16,8 @@ export const metadata: Metadata = {
     canonical: 'https://pmax.online/google-ads-agency-spain/',
     languages: {
       en: 'https://pmax.online/google-ads-agency-spain/',
+      de: 'https://pmax.online/de/google-ads-agentur-spanien/',
+      es: 'https://pmax.online/es/agencia-google-ads-espana/',
       'x-default': 'https://pmax.online/google-ads-agency-spain/',
     },
   },
