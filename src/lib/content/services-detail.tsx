@@ -102,6 +102,7 @@ export const serviceDetails: ServiceDetail[] = [
     sectionKicker: 'the channel',
     prose: (
       <>
+        <p>Running Google Ads in Spain specifically? See our dedicated page on <a href="/google-ads-agency-spain/">Google Ads for the Spanish market</a> — covering multilingual campaign strategy, regional CPC differences, and Performance Max for Spanish e-commerce.</p>
         <h2>Why most Google Ads accounts underperform</h2>
         <p>Almost every account we audit has the same three problems. PMax is eating brand search and getting credit for revenue it did not generate. Asset groups are too broad, with high-margin and low-margin products competing for the same budget. Tracking is set up to optimise for form fills, not closed business — so the algorithm keeps finding the cheapest possible humans, not the most valuable ones.</p>
         <p>None of these are hard problems. They just require somebody to actually look at the account weekly and do the unglamorous work.</p>

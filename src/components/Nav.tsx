@@ -22,6 +22,9 @@ const localeSlugs: Record<string, Record<Locale, string>> = {
   '/seo-company-mallorca': { en: '/seo-company-mallorca', de: '/de/seo-agentur-mallorca', es: '/es/agencia-seo-mallorca' },
   '/seo-agentur-mallorca': { en: '/seo-company-mallorca', de: '/de/seo-agentur-mallorca', es: '/es/agencia-seo-mallorca' },
   '/agencia-seo-mallorca': { en: '/seo-company-mallorca', de: '/de/seo-agentur-mallorca', es: '/es/agencia-seo-mallorca' },
+  '/google-ads-agency-spain': { en: '/google-ads-agency-spain', de: '/de/google-ads-agentur-spanien', es: '/es/agencia-google-ads-espana' },
+  '/google-ads-agentur-spanien': { en: '/google-ads-agency-spain', de: '/de/google-ads-agentur-spanien', es: '/es/agencia-google-ads-espana' },
+  '/agencia-google-ads-espana': { en: '/google-ads-agency-spain', de: '/de/google-ads-agentur-spanien', es: '/es/agencia-google-ads-espana' },
 }
 
 function switchedPath(pathname: string, target: Locale): string {

@@ -22,6 +22,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/seo-company-mallorca/`, lastModified: '2026-06-03', changeFrequency: 'monthly', priority: 0.9 },
     { url: `${base}/de/seo-agentur-mallorca/`, lastModified: '2026-06-03', changeFrequency: 'monthly', priority: 0.9 },
     { url: `${base}/es/agencia-seo-mallorca/`, lastModified: '2026-06-03', changeFrequency: 'monthly', priority: 0.9 },
+    { url: `${base}/google-ads-agency-spain/`, lastModified: '2026-06-08', changeFrequency: 'monthly', priority: 0.9 },
     ...langs.map(lang => ({ url: `${base}/${lang}/`, lastModified: '2026-04-01', changeFrequency: 'monthly' as const, priority: 0.9 })),
     ...langs.map(lang => ({ url: `${base}/${lang}/services/`, lastModified: '2026-04-01', changeFrequency: 'monthly' as const, priority: 0.8 })),
     ...langs.map(lang => ({ url: `${base}/${lang}/industries/`, lastModified: '2026-04-01', changeFrequency: 'monthly' as const, priority: 0.8 })),
