@@ -103,6 +103,7 @@ export const serviceDetails: ServiceDetail[] = [
     prose: (
       <>
         <p>Running Google Ads in Spain specifically? See our dedicated page on <a href="/google-ads-agency-spain/">Google Ads for the Spanish market</a> — covering multilingual campaign strategy, regional CPC differences, and Performance Max for Spanish e-commerce.</p>
+        <p>Based in Mallorca and looking for a full-service approach? Our <a href="/marketing-agency-mallorca/">marketing agency in Mallorca</a> page covers how we run Google Ads alongside SEO, paid social and analytics under one flat retainer.</p>
         <h2>Why most Google Ads accounts underperform</h2>
         <p>Almost every account we audit has the same three problems. PMax is eating brand search and getting credit for revenue it did not generate. Asset groups are too broad, with high-margin and low-margin products competing for the same budget. Tracking is set up to optimise for form fills, not closed business — so the algorithm keeps finding the cheapest possible humans, not the most valuable ones.</p>
         <p>None of these are hard problems. They just require somebody to actually look at the account weekly and do the unglamorous work.</p>
@@ -221,6 +222,7 @@ export const serviceDetails: ServiceDetail[] = [
         <p>Author profiles. Schema. Real reviews. Genuine citations from third-party publications. The slow trust-building work that turns content into something Google and AI engines both trust.</p>
         <h3>4. Local and international</h3>
         <p>For multi-location businesses: GBP optimisation, NAP consistency, <a href="/seo-company-mallorca">local pack rankings</a>. For international: proper hreflang, locale-specific content, multilingual creative — never auto-translated.</p>
+        <p>Running a full-service marketing programme from Mallorca — paid and organic together? See our <a href="/marketing-agency-mallorca/">marketing agency Mallorca</a> overview.</p>
         <h2>What you get</h2>
         <ul>
           <li><strong>A senior SEO lead</strong> running your programme weekly</li>
