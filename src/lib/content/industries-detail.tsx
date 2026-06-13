@@ -87,7 +87,7 @@ export const industryDetails: IndustryDetail[] = [
         <h2>4. Local + AI search</h2>
         <p>&ldquo;Real estate agent Mallorca&rdquo; is increasingly answered by ChatGPT and Google AI Overviews, not the traditional ten blue links. We do the schema, content and trust-signal work to be the agency that gets cited.</p>
         <h2>5. Google Ads for Spanish real estate</h2>
-        <p>For estate agencies operating across Mallorca and mainland Spain, paid search is the fastest way to fill the pipeline between referrals. Regional CPC differences, Spanish-language buyer intent, and the right conversion events wired back to your CRM — see our dedicated <a href="/google-ads-agency-spain/">Google Ads agency in Spain</a> page for the full approach.</p>
+        <p>For estate agencies operating across Mallorca and mainland Spain, paid search is the fastest way to fill the pipeline between referrals. Regional CPC differences, Spanish-language buyer intent, and the right conversion events wired back to your CRM — see our dedicated <a href="/google-ads-agency-spain/">Google Ads agency in Spain</a> page for the full approach. For island-based agencies that want paid search, SEO and social under one roof, see our <a href="/marketing-agency-mallorca/">marketing agency in Mallorca</a> page.</p>
       </>
     ),
     relatedCase: { slug: 'primundus', variant: 'is-violet', title: 'See similar work — PRIMUNDUS: regional SEO growing 4.2x in 9 months' },

@@ -245,6 +245,11 @@ export default function SeoAgenturMallorcaPage() {
                 — regionale CPCs, mehrsprachige Kampagnenstruktur und Performance Max für
                 spanischen E-Commerce.
               </p>
+              <p>
+                SEO, Google Ads und Paid Social in einem Retainer?{' '}
+                <Link href="/de/marketing-agentur-mallorca/">Unsere Marketing Agentur Mallorca</Link>
+                {' '}erklärt, wie wir Full-Service-Programme von Calvià aus aufsetzen und berechnen.
+              </p>
 
               <h2>Mit wem wir auf der Insel arbeiten</h2>
               <p>

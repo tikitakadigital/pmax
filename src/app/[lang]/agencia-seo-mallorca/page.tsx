@@ -244,6 +244,11 @@ export default function AgenciaSeoMallorcaPage() {
                 diferencias de CPC por región, estructura de campañas multilingüe y Performance
                 Max para el e-commerce español.
               </p>
+              <p>
+                ¿SEO, Google Ads y paid social en un solo retainer?{' '}
+                <Link href="/es/agencia-de-marketing-mallorca/">Nuestra agencia de marketing en Mallorca</Link>
+                {' '}explica cómo estructuramos y presupuestamos programas full-service desde Calvià.
+              </p>
 
               <h2>Con quién trabajamos en la isla</h2>
               <p>

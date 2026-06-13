@@ -240,6 +240,12 @@ export default function SeoCompanyMallorcaPage() {
                 {' '}covers paid search for Mallorca and the Spanish market — regional CPCs, multilingual
                 campaign structure and Performance Max for Spanish e-commerce.
               </p>
+              <p>
+                Want SEO, Google Ads and paid social under one retainer?{' '}
+                <Link href="/marketing-agency-mallorca/">Our marketing agency in Mallorca page</Link>
+                {' '}covers the full-service approach — how we scope, price and run integrated
+                programmes from Calvià.
+              </p>
 
               <h2>Who we work with on the island</h2>
               <p>

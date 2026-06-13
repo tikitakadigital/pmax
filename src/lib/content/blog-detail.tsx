@@ -155,7 +155,7 @@ export const blogDetails: BlogDetail[] = [
         <p>50% of Mallorca&rsquo;s commercial searches happen between April and September. Do not run flat bids year-round. Build day-parted, season-parted bidding strategies that match the actual demand curve.</p>
         <h2>Local-pack and Maps</h2>
         <p>If you are a service business, your Google Business Profile drives more revenue than your ads do. Optimise it properly: photos updated monthly, reviews requested every quarter, services properly categorised. The work compounds.</p>
-        <p>See our <a href="/services/google-ads/">Google Ads &amp; Performance Max service</a> &mdash; built for Mallorca&rsquo;s multilingual, seasonal demand. Running campaigns across Spain more broadly? See our <a href="/google-ads-agency-spain/">Google Ads agency in Spain</a> page.</p>
+        <p>See our <a href="/services/google-ads/">Google Ads &amp; Performance Max service</a> &mdash; built for Mallorca&rsquo;s multilingual, seasonal demand. Running campaigns across Spain more broadly? See our <a href="/google-ads-agency-spain/">Google Ads agency in Spain</a> page. Want paid search, SEO and paid social under one retainer? See our <a href="/marketing-agency-mallorca/">marketing agency in Mallorca</a> overview.</p>
         <NeedHelp topic="google-ads-mallorca" />
       </>
     ),
@@ -205,7 +205,7 @@ export const blogDetails: BlogDetail[] = [
         <p><a href="/services/paid-social/">Meta</a> and <a href="/services/google-ads/">Google Hotel Ads</a>. The Meta creative focused on the rooms and views the hotel was actually known for, not generic travel imagery. Google Hotel Ads were bid aggressively only on date ranges where the hotel had availability &mdash; saving budget the rest of the year.</p>
         <h2>The numbers</h2>
         <p>11 weeks in, direct bookings had grown 52% and total bookings had grown 11% (so the direct shift was new revenue, not stolen from OTAs). At ~&euro;350,000 in monthly direct revenue versus the previous run-rate, the annual OTA commission saved was about &euro;184,000.</p>
-        <p>We used <a href="/services/conversion-design/">conversion design (CRO)</a>, <a href="/services/google-ads/">Google Ads</a> and <a href="/services/paid-social/">Meta Ads</a> to get there. More in our <a href="/industries/hospitality/">hospitality marketing playbook</a> and <a href="/cases/">client cases</a>.</p>
+        <p>We used <a href="/services/conversion-design/">conversion design (CRO)</a>, <a href="/services/google-ads/">Google Ads</a> and <a href="/services/paid-social/">Meta Ads</a> to get there. More in our <a href="/industries/hospitality/">hospitality marketing playbook</a> and <a href="/cases/">client cases</a>. Based in Mallorca and want the full package? See our <a href="/marketing-agency-mallorca/">marketing agency in Mallorca</a> page.</p>
         <NeedHelp topic="hotel-direct-bookings" />
       </>
     ),
@@ -435,7 +435,7 @@ export const blogDetails: BlogDetail[] = [
         <p>An inbound charter enquiry is worth &euro;38,000+ on average. The follow-up speed matters enormously. We typically wire booking systems (MMK, Booking Manager) directly into Slack so the sales team sees enquiries in seconds, not days.</p>
         <h2>Brand vs performance</h2>
         <p>Most charter businesses overspend on <a href="/services/google-ads/">Google search</a> and underspend on brand-building <a href="/services/paid-social/">Meta</a>. Charter is a high-consideration purchase &mdash; the customer needs to know your brand exists months before they search. Budget should reflect that.</p>
-        <p>More in our <a href="/industries/boating/">boating &amp; yachting marketing playbook</a>.</p>
+        <p>More in our <a href="/industries/boating/">boating &amp; yachting marketing playbook</a>. For charter businesses operating from Mallorca, see our <a href="/marketing-agency-mallorca/">marketing agency in Mallorca</a> page — multilingual campaigns across paid search, paid social and SEO from Calvià.</p>
         <NeedHelp topic="yachting-marketing" />
       </>
     ),
@@ -456,7 +456,7 @@ export const blogDetails: BlogDetail[] = [
         <h2>What this costs us</h2>
         <p>Flat fees mean a smaller agency cannot scale revenue as fast as a percentage-fee one. A percentage-fee agency that grows a client from &euro;100k to &euro;1m in monthly spend grows their own revenue 10x. We do not. We are fine with that.</p>
         <h2>What this gets us</h2>
-        <p>A 93% twelve-month client retention rate, and an inbound pipeline made almost entirely of referrals. The slow way works. See our <a href="/cases/">client cases</a>.</p>
+        <p>A 93% twelve-month client retention rate, and an inbound pipeline made almost entirely of referrals. The slow way works. See our <a href="/cases/">client cases</a>, or our <a href="/marketing-agency-mallorca/">marketing agency in Mallorca</a> page if you want to understand how we scope and price a full-service retainer.</p>
         <NeedHelp topic="agency-pricing-honest" />
       </>
     ),
