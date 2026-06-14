@@ -268,19 +268,23 @@ export default function MarketingAgenturMallorcaPage() {
           </div>
         </section>
 
-        <figure style={{ margin: '0 0 48px', padding: 0 }}>
-          <Image
-            src="/palma-cathedral.webp"
-            alt="Kathedrale von Palma, Mallorca — pmax sitzt in Calvià, 20 Minuten entfernt"
-            width={1200}
-            height={600}
-            style={{ width: '100%', height: 'auto', display: 'block' }}
-            loading="lazy"
-          />
-          <figcaption style={{ fontFamily: 'var(--font-mono)', fontSize: 11, letterSpacing: '1.5px', textTransform: 'uppercase', color: '#6a6a6a', padding: '10px 24px' }}>
-            Standort Calvià, Mallorca (PMax Online S.L. · USt-IdNr. ES B57948123) — 20 Minuten von der Kathedrale in Palma
-          </figcaption>
-        </figure>
+        <section className="container reveal" style={{ padding: '0 0 48px' }}>
+          <figure style={{ margin: 0 }}>
+            <div className="card-outlined" style={{ padding: 0, overflow: 'hidden' }}>
+              <Image
+                src="/palma-cathedral.webp"
+                alt="Kathedrale von Palma, Mallorca — pmax sitzt in Calvià, 20 Minuten entfernt"
+                width={1200}
+                height={600}
+                style={{ width: '100%', height: 'auto', display: 'block' }}
+                loading="lazy"
+              />
+            </div>
+            <figcaption style={{ marginTop: 10, fontSize: 13, color: 'var(--color-muted)', fontFamily: 'var(--font-mono)' }}>
+              Standort Calvià, Mallorca (PMax Online S.L. · USt-IdNr. ES B57948123) — 20 Minuten von der Kathedrale in Palma
+            </figcaption>
+          </figure>
+        </section>
 
         <section className="container" style={{ padding: '0 0 48px' }}>
           <SectionHead kicker="Echte Ergebnisse" title="Mit den Zahlen vorneweg." />

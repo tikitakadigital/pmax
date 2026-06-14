@@ -266,19 +266,23 @@ export default function MarketingAgencyMallorcaPage() {
           </div>
         </section>
 
-        <figure style={{ margin: '0 0 48px', padding: 0 }}>
-          <Image
-            src="/palma-cathedral.webp"
-            alt="Palma Cathedral, Mallorca — pmax is based in Calvià, 20 minutes away"
-            width={1200}
-            height={600}
-            style={{ width: '100%', height: 'auto', display: 'block' }}
-            loading="lazy"
-          />
-          <figcaption style={{ fontFamily: 'var(--font-mono)', fontSize: 11, letterSpacing: '1.5px', textTransform: 'uppercase', color: '#6a6a6a', padding: '10px 24px' }}>
-            Based in Calvià, Mallorca (PMax Online S.L. · VAT ES B57948123) — 20 minutes from Palma Cathedral
-          </figcaption>
-        </figure>
+        <section className="container reveal" style={{ padding: '0 0 48px' }}>
+          <figure style={{ margin: 0 }}>
+            <div className="card-outlined" style={{ padding: 0, overflow: 'hidden' }}>
+              <Image
+                src="/palma-cathedral.webp"
+                alt="Palma Cathedral, Mallorca — pmax is based in Calvià, 20 minutes away"
+                width={1200}
+                height={600}
+                style={{ width: '100%', height: 'auto', display: 'block' }}
+                loading="lazy"
+              />
+            </div>
+            <figcaption style={{ marginTop: 10, fontSize: 13, color: 'var(--color-muted)', fontFamily: 'var(--font-mono)' }}>
+              Based in Calvià, Mallorca (PMax Online S.L. · VAT ES B57948123) — 20 minutes from Palma Cathedral
+            </figcaption>
+          </figure>
+        </section>
 
         <section className="container" style={{ padding: '0 0 48px' }}>
           <SectionHead kicker="Real results" title="With the numbers in front." />
