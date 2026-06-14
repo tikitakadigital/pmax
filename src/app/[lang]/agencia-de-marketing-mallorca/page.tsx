@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import Link from 'next/link'
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
@@ -13,8 +14,8 @@ export function generateStaticParams() {
 }
 
 export const metadata: Metadata = {
-  title: 'Agencia de Marketing en Mallorca | pmax',
-  description: 'Agencia de marketing orientada a resultados en Calvià, Mallorca. Google Ads, Meta, SEO y búsqueda con IA para empresas de habla alemana e inglesa. Tarifa mensual fija, nunca un % de tu inversión.',
+  title: 'Agencia de Marketing en Mallorca | pmax — Orientada a resultados, tarifa fija, Calvià',
+  description: 'pmax (PMax Online S.L.) es una agencia de marketing en Calvià, Mallorca. Google Ads, Meta, SEO y búsqueda con IA para empresas de habla alemana e inglesa. Tarifa mensual fija, nunca un % de la inversión. 93 % de retención de clientes a doce meses.',
   robots: 'index,follow,max-image-preview:large',
   alternates: {
     canonical: 'https://pmax.online/es/agencia-de-marketing-mallorca/',
@@ -27,14 +28,14 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'Agencia de marketing en Mallorca — pmax',
-    description: 'Agencia de marketing orientada a resultados en Calvià, Mallorca. Google Ads, Meta, SEO y búsqueda con IA. Tarifa mensual fija.',
+    description: 'Agencia de marketing orientada a resultados en Calvià, Mallorca. Google Ads, Meta, SEO y búsqueda con IA. Tarifa fija, 93 % de retención.',
     url: 'https://pmax.online/es/agencia-de-marketing-mallorca/',
     images: [{ url: '/og-image.jpg', width: 1200, height: 630 }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Agencia de Marketing en Mallorca — pmax',
-    description: 'Agencia de marketing en Calvià, Mallorca. Google Ads, Meta, SEO y búsqueda con IA. Tarifa mensual fija.',
+    description: 'Agencia de marketing en Calvià, Mallorca. Tarifa mensual fija, nunca un % de la inversión publicitaria.',
     site: '@pmaxonline',
   },
   other: {
@@ -47,28 +48,28 @@ export const metadata: Metadata = {
 
 const faqs = [
   {
-    q: '¿pmax es una agencia de marketing full-service?',
-    a: 'Cubrimos todo el stack — paid ads, SEO, búsqueda con IA, CRO, analítica y creatividad — pero lo dirigimos con resultados primero, liderando con lo que genera ingresos.',
+    q: '¿Cuánto cobra una agencia de marketing en Mallorca?',
+    a: 'El rango es amplio — desde 500 €/mes para un freelance de un solo canal hasta más de 8.000 € para full-service. pmax trabaja con una tarifa mensual fija, normalmente 1.500–5.000 € según el alcance y el número de canales. Sin porcentaje de la inversión publicitaria — nuestro incentivo es hacer que el presupuesto funcione, no inflarlo.',
   },
   {
-    q: '¿Cuánto cuesta una agencia de marketing en Mallorca?',
-    a: 'Los retainers en la isla suelen ir de 500 a 3.000 € al mes según alcance. pmax trabaja con una tarifa mensual fija acordada por adelantado, nunca un porcentaje de la inversión.',
+    q: '¿Cuánto tarda el marketing en dar resultados?',
+    a: 'Los canales de pago se mueven en semanas — Google Ads y Meta pueden generar leads en días si la cuenta está bien configurada. El SEO se acumula desde el mes tres, con crecimiento orgánico visible hacia el mes seis. La visibilidad en búsqueda con IA (aparecer en ChatGPT, Perplexity, Gemini) se construye durante trimestres a medida que se acumulan señales de entidad y autoridad. El plazo honesto para tu categoría específica te lo decimos en la primera llamada.',
   },
   {
-    q: '¿Trabajáis con empresas de habla alemana en Mallorca?',
-    a: 'Sí — campañas, reporting y comunicación en alemán, desde nuestra base en Calvià.',
+    q: '¿En qué os diferenciáis de una agencia de la península?',
+    a: 'Estamos en la isla. Entendemos que la base de compradores de Mallorca busca en cuatro idiomas — español, alemán, inglés y catalán — y que un negocio de fontanería en Calvià y una marca de villas de lujo en Andratx son problemas de marketing completamente distintos. Llevamos campañas para negocios en Mallorca desde 2019 y conocemos las curvas de demanda estacional, las diferencias de CPC locales y qué canales convierten realmente en la isla.',
   },
   {
-    q: '¿Podéis hacer marketing también en inglés y español?',
-    a: 'Inglés y alemán de serie, español donde ayude a tus clientes.',
+    q: '¿Trabajáis en alemán — campañas, reporting y comunicación?',
+    a: 'Sí, completamente. Campañas, landing pages, reporting y comunicación diaria en alemán. La población compradora de habla alemana en Mallorca es el segmento de marketing más desatendido de la isla: alto poder adquisitivo, buscando activamente, ignorado casi por completo por las agencias locales que solo trabajan en español. Nosotros construimos para ese segmento desde el principio.',
   },
   {
-    q: '¿Dónde estáis en Mallorca?',
-    a: 'En Calvià, Mallorca — para la isla, las Baleares y marcas de toda Europa.',
+    q: '¿Podéis gestionar todos nuestros canales de marketing bajo un solo retainer?',
+    a: 'Sí. Gestionamos Google Ads, Meta, TikTok, LinkedIn, SEO, visibilidad en IA, diseño de conversión y analítica bajo un equipo integrado y una tarifa mensual fija. La mayoría de clientes empiezan con dos o tres canales y amplían cuando los datos de rendimiento muestran dónde invertir después.',
   },
   {
-    q: '¿Solo trabajáis con empresas de Mallorca?',
-    a: 'No. Con base en Mallorca, trabajamos con marcas de toda Europa.',
+    q: '¿Cómo empezamos?',
+    a: 'Una llamada de 30 minutos — sin presentación, sin discurso de ventas. Preguntamos sobre el negocio, dónde está atascado el crecimiento y qué se ha intentado. Te decimos con franqueza si somos la agencia adecuada para tu situación — y si no lo somos, también lo decimos. La mayoría de llamadas terminan con un siguiente paso claro.',
   },
 ]
 
@@ -77,12 +78,14 @@ const localBusinessSchema = {
   '@type': 'LocalBusiness',
   '@id': 'https://pmax.online/es/agencia-de-marketing-mallorca/#localbusiness',
   name: 'pmax — Agencia de Marketing Mallorca',
+  legalName: 'PMax Online S.L.',
   image: 'https://pmax.online/og-image.jpg',
   url: 'https://pmax.online/es/agencia-de-marketing-mallorca/',
   telephone: '+34871242160',
   email: 'hello@pmax.online',
   priceRange: '€€',
   vatID: 'ESB57948123',
+  foundingDate: '2019',
   address: {
     '@type': 'PostalAddress',
     streetAddress: 'Calle Cordova, 5',
@@ -97,6 +100,8 @@ const localBusinessSchema = {
     { '@type': 'Place', name: 'Palma de Mallorca' },
     { '@type': 'Place', name: 'Calvià' },
     { '@type': 'Place', name: 'Islas Baleares' },
+    { '@type': 'Place', name: 'España' },
+    { '@type': 'Place', name: 'Europa' },
   ],
   knowsLanguage: ['es', 'de', 'en', 'ca'],
   sameAs: [
@@ -131,13 +136,14 @@ export default function AgenciaDeMarketingMallorcaPage() {
               <Link href="/es">Inicio</Link><span className="sep">/</span>
               <span>Agencia de Marketing Mallorca</span>
             </nav>
-            <span className="page-intro-eyebrow">Agencia de marketing · Mallorca · Calvià</span>
+            <span className="page-intro-eyebrow">Agencia de marketing · Mallorca · Calvià · Desde 2019</span>
             <h1 className="page-intro-title">Agencia de marketing<br />en Mallorca.</h1>
             <p className="page-intro-deck">
-              pmax es una agencia de marketing en Calvià, Mallorca. Trabajamos con empresarios
-              de habla alemana e inglesa en la isla — y con marcas de toda Europa que quieren
-              su marketing en manos de gente que coge el teléfono. Tarifa mensual fija, acordada
-              por adelantado. Nunca un porcentaje de tu inversión publicitaria.
+              pmax (PMax Online S.L.) es una agencia de marketing en Calvià, Mallorca.
+              Gestionamos Google Ads, Meta, SEO y búsqueda con IA para empresas de habla
+              alemana e inglesa en la isla — y para marcas europeas que quieren su marketing
+              en manos de gente que coge el teléfono. Tarifa mensual fija, acordada por
+              adelantado. Nunca un porcentaje de tu inversión publicitaria.
             </p>
           </div>
         </section>
@@ -145,16 +151,16 @@ export default function AgenciaDeMarketingMallorcaPage() {
         <section className="container" style={{ padding: '48px 0' }}>
           <ul className="stats reveal-stagger" style={{ listStyle: 'none', padding: 0 }}>
             <li className="stat">
-              <span className="stat-num">7</span>
-              <span className="stat-label">servicios — un equipo integrado para todos ellos</span>
+              <span className="stat-num">93&nbsp;%</span>
+              <span className="stat-label">tasa de retención de clientes a doce meses</span>
             </li>
             <li className="stat">
-              <span className="stat-num">3</span>
-              <span className="stat-label">idiomas en los que hacemos campañas y reporting</span>
+              <span className="stat-num">8,4M&nbsp;€</span>
+              <span className="stat-label">inversión publicitaria gestionada anualmente en cuentas activas</span>
             </li>
             <li className="stat">
               <span className="stat-num">Calvià</span>
-              <span className="stat-label">nuestra base — 20 minutos de Palma, en la isla</span>
+              <span className="stat-label">nuestra base — 20 minutos de Palma, en la isla desde 2019</span>
             </li>
             <li className="stat">
               <span className="stat-num">0&nbsp;%</span>
@@ -166,52 +172,84 @@ export default function AgenciaDeMarketingMallorcaPage() {
         <section className="section">
           <div className="container">
             <SectionHead
-              kicker="el enfoque"
-              title={<>Lo que una agencia de marketing<br />en Mallorca debería hacer de verdad.</>}
+              kicker="el mercado de Mallorca"
+              title={<>El marketing en Mallorca es un problema<br />de siete servicios, cuatro idiomas y doce meses.</>}
             />
             <div className="prose reveal">
               <p>
-                La mayoría de las agencias de la isla te venden una presentación. Nosotros te
-                resolvemos el problema. Todo lo que hacemos responde a una pregunta —{' '}
-                <em>¿está creciendo el negocio de verdad?</em> Si no, lo dejamos. Sin métricas
-                de vanidad, sin informes llenos de impresiones que no puedes gastar. Trabajamos
-                orientados a resultados: los números que reportamos son los que llegan a tu cuenta.
+                Mallorca no es un mercado de marketing sencillo. Hay cuatro poblaciones de
+                compradores que se solapan — residentes españoles, expatriados alemanes y
+                propietarios, turistas y jubilados anglófonos, y una base local catalanohablante
+                — cada una busca de forma distinta, cada una responde a mensajes diferentes
+                y cada una está activa en estaciones distintas.
+              </p>
+              <p>
+                Una empresa de alquiler de villas en Andratx necesita Google Ads en alemán
+                en enero (early bookers), Meta en inglés en marzo (pico de decisión) y SEO
+                en español todo el año para la cuota de búsqueda local. Un restaurante en
+                Palma necesita visibilidad en Google Maps en cuatro idiomas y una presencia
+                en Meta que convierta durante los meses de turismo sin quemar presupuesto
+                en enero. Una empresa de charter náutico necesita ventanas de remarketing
+                de 60–90 días, no el estándar de Meta de 30.
+              </p>
+              <p>
+                La mayoría de agencias de la isla eligen un canal, un idioma y lo llaman
+                hecho. Los negocios que crecen aquí gestionan un programa integrado —
+                paid, orgánico y búsqueda con IA — y lo hacen en los idiomas que sus
+                clientes realmente usan.
               </p>
 
-              <h2>Siete servicios, una forma de trabajar</h2>
+              <h2>Siete servicios, un equipo integrado</h2>
               <ul>
-                <li><Link href="/es/services/google-ads">Google Ads y Performance Max</Link> — Search, Shopping, PMax y YouTube sobre una configuración de conversión limpia.</li>
-                <li><Link href="/es/services/paid-social">Paid social</Link> — Meta, TikTok y LinkedIn, conectados a tu CRM.</li>
-                <li><Link href="/es/services/seo">SEO</Link> — SEO técnico, de contenidos y local, que también suma en la búsqueda con IA.</li>
-                <li><Link href="/es/services/ai-visibility">Visibilidad en búsqueda con IA (GEO)</Link> — ser la marca que ChatGPT, Perplexity y Gemini recomiendan.</li>
-                <li><Link href="/es/services/conversion-design">Diseño de conversión (CRO)</Link> — más ingresos con el mismo tráfico.</li>
-                <li><Link href="/es/services/analytics">Analítica y medición</Link> — GTM server-side, Consent Mode v2, dashboards que no mienten.</li>
-                <li><Link href="/es/services/creative">Producción creativa</Link> — un flujo constante de anuncios, landings y vídeo, hechos para testear.</li>
+                <li><Link href="/es/services/google-ads">Google Ads y Performance Max</Link> — Search, Shopping, PMax y YouTube sobre una configuración de conversión limpia. Exclusiones de marca en PMax, importaciones de conversiones offline correctas, revisiones semanales de cuenta.</li>
+                <li><Link href="/es/services/paid-social">Paid social</Link> — Meta, TikTok y LinkedIn conectados a tu CRM. Orientado a creatividad y medido en ingresos, no en impresiones.</li>
+                <li><Link href="/es/services/seo">SEO</Link> — SEO técnico, de contenidos y local en cuatro idiomas. Rankings que se acumulan y se trasladan a la búsqueda con IA.</li>
+                <li><Link href="/es/services/ai-visibility">Visibilidad en búsqueda con IA (GEO)</Link> — ser la empresa que ChatGPT, Perplexity y las AI Overviews de Google citan cuando alguien pregunta por una agencia, villa, hotel o servicio en Mallorca.</li>
+                <li><Link href="/es/services/conversion-design">Diseño de conversión (CRO)</Link> — más ingresos con el mismo tráfico. Reconstrucción de landing pages, optimización del flujo de reservas, tests A/B.</li>
+                <li><Link href="/es/services/analytics">Analítica y tracking</Link> — GTM server-side, Consent Mode v2, GA4, conversiones offline alimentadas por CRM. La capa de medición de la que depende todo lo demás.</li>
+                <li><Link href="/es/services/creative">Producción creativa</Link> — anuncios, landing pages y vídeo a ritmo semanal, briefados por datos de medios y construidos para testear.</li>
               </ul>
 
-              <h2>Hecha para el mercado de Mallorca — en tres idiomas</h2>
-              <p>
-                El marketing en Mallorca es multilingüe por necesidad. Hacemos campañas, landing
-                pages, contenidos SEO y reporting en <strong>español, alemán e inglés</strong>.
-                Conocemos los canales locales y los sectores que mueven la isla: inmobiliaria,
-                hostelería, e-commerce, salud, náutica y servicios profesionales. Negocios
-                locales de gestión propia — y marcas europeas dirigidas desde la isla.
-              </p>
+              <h2>Con quién trabajamos en la isla</h2>
+              <ul>
+                <li><strong>Hostelería y alquiler de villas</strong> — hoteles, alquileres boutique y agencias de villas. Campañas multilingüe para un mercado que pica fuerte en verano y se silencia en enero.</li>
+                <li><strong>Inmobiliaria</strong> — agencias que atienden a compradores de habla alemana e inglesa que buscan propiedades en la isla en su propio idioma. Más en nuestro <Link href="/es/industries/real-estate/">playbook de marketing inmobiliario</Link>.</li>
+                <li><strong>Náutica y yachting</strong> — empresas de charter con ventanas de reserva largas y una base de clientes genuinamente global. Campañas en ocho idiomas, remarketing de 90 días.</li>
+                <li><strong>Salud y estética</strong> — clínicas en Palma y Calvià que atienden a pacientes internacionales que investigan en varios idiomas antes de contactar.</li>
+                <li><strong>Servicios profesionales</strong> — abogados, arquitectos, asesores fiscales y consultores para la comunidad expatriada de Mallorca en alemán e inglés.</li>
+                <li><strong>E-commerce</strong> — marcas mallorquinas que venden a Alemania, Reino Unido y el resto de Europa. SEO multilingüe, Shopping y Performance Max.</li>
+              </ul>
 
               <h2>Cómo cobramos</h2>
               <p>
-                Una tarifa mensual fija, acordada por adelantado — no un porcentaje de tu
-                inversión en medios. Previsible tanto si inviertes 2.000&nbsp;€ como
-                200.000&nbsp;€. Nuestro incentivo es que la inversión funcione, no inflarla.
+                Una tarifa mensual fija, acordada antes de empezar — no un porcentaje de
+                tu inversión en medios. Los retainers típicos van de 1.500 a 5.000 €/mes
+                según el número de canales y el alcance. El presupuesto de medios lo pagas
+                directamente a las plataformas; nosotros nunca lo gestionamos. Nuestro
+                incentivo es hacer que la inversión funcione, no inflarla — que es el
+                problema estructural de las agencias que cobran por porcentaje.
               </p>
 
-              <h2>Cómo trabajamos — cuatro pasos, sin sorpresas</h2>
+              <h2>Cómo trabajamos — cuatro pasos</h2>
               <ol>
-                <li><strong>Escuchar</strong> — primero el negocio, luego los datos, luego las plataformas.</li>
-                <li><strong>Arreglar</strong> — tracking, feeds, schema: la base sobre la que se sostiene todo.</li>
-                <li><strong>Crecer</strong> — las campañas escalan, la creatividad encuentra su ritmo.</li>
-                <li><strong>Defender</strong> — SEO, búsqueda con IA y protección de marca que compone durante años.</li>
+                <li><strong>Escuchar</strong> — primero el negocio, luego los datos, luego las plataformas. Dedicamos la primera semana a entender de dónde vienen realmente los ingresos antes de tocar una campaña.</li>
+                <li><strong>Arreglar</strong> — tracking, feeds, schema, Perfil de Empresa de Google: los cimientos sobre los que se sostiene todo lo demás. La mayoría de cuentas nuevas tienen al menos un problema significativo de medición.</li>
+                <li><strong>Crecer</strong> — las campañas escalan, la creatividad encuentra su ritmo, el SEO empieza a acumularse.</li>
+                <li><strong>Defender</strong> — SEO, búsqueda con IA y protección de marca que compone durante años, no trimestres.</li>
               </ol>
+
+              <div className="prose-callout">
+                <div className="prose-callout-kicker">La versión honesta</div>
+                <p>
+                  El marketing no funciona de la noche a la mañana, y cualquier agencia que
+                  diga lo contrario miente o te vende algo sin recorrido. Los canales de pago
+                  se mueven en semanas. El SEO se acumula desde el mes tres. La visibilidad
+                  en búsqueda con IA se construye durante trimestres. Los negocios con los que
+                  trabajamos tres o cuatro años obtienen resultados dramáticamente mejores que
+                  los que nos miden a los noventa días. Si ese plazo no te funciona, probablemente
+                  no somos el partner adecuado — y lo decimos en la primera llamada.
+                </p>
+              </div>
 
               <p style={{ marginTop: 8 }}>
                 Esta página también está disponible en{' '}
@@ -219,9 +257,29 @@ export default function AgenciaDeMarketingMallorcaPage() {
                 {' '}y en{' '}
                 <Link href="/de/marketing-agentur-mallorca/">alemán (Marketing Agentur Mallorca)</Link>.
               </p>
+              <p>
+                ¿Buscas Google Ads específicamente en toda España?{' '}
+                <Link href="/es/agencia-google-ads-espana/">Nuestra agencia de Google Ads en España</Link>
+                {' '}explica el paid search multilingüe en el mercado español — CPCs regionales,
+                estructura de campañas y Performance Max.
+              </p>
             </div>
           </div>
         </section>
+
+        <figure style={{ margin: '0 0 48px', padding: 0 }}>
+          <Image
+            src="/palma-cathedral.webp"
+            alt="Catedral de Palma, Mallorca — pmax tiene su sede en Calvià, a 20 minutos"
+            width={1200}
+            height={600}
+            style={{ width: '100%', height: 'auto', display: 'block' }}
+            loading="lazy"
+          />
+          <figcaption style={{ fontFamily: 'var(--font-mono)', fontSize: 11, letterSpacing: '1.5px', textTransform: 'uppercase', color: '#6a6a6a', padding: '10px 24px' }}>
+            Sede en Calvià, Mallorca (PMax Online S.L. · CIF ES B57948123) — a 20 minutos de la Catedral de Palma
+          </figcaption>
+        </figure>
 
         <section className="container" style={{ padding: '0 0 48px' }}>
           <SectionHead kicker="Resultados reales" title="Con los números por delante." />
