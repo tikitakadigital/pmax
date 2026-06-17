@@ -37,6 +37,8 @@
 ## Journal
 
 - [Performance Max bidding changes on August 17 — what to do before it lands](https://pmax.online/blog/performance-max-bidding-change-august-2026/): Google's automatic 17 August bidding change explained — what Bidding Target Optimization does, the 6 July tool, and the per-campaign action plan.
+- [Las pujas de Performance Max cambian el 17 de agosto (ES)](https://pmax.online/es/blog/performance-max-bidding-change-august-2026/): Qué es Bidding Target Optimization, la herramienta del 6 de julio y la lista de pasos por campaña antes del cambio automático.
+- [Performance-Max-Gebote ändern sich am 17. August (DE)](https://pmax.online/de/blog/performance-max-bidding-change-august-2026/): Was Bidding Target Optimization ist, das Tool vom 6. Juli und die Kampagnen-Checkliste vor der automatischen Änderung.
 - [Google Ads vs Meta Ads vs TikTok Ads for ecommerce in 2026](https://pmax.online/blog/google-ads-vs-meta-ads-vs-tiktok-ads-ecommerce-2026/): Which paid channel wins for ecommerce — CPC, CPM, attribution, AOV fit, creative load and when PMax beats Meta (and vice versa). Built from €2.1M of EU spend in Q1 2026.
 - [How to get your business mentioned by ChatGPT, Perplexity and Gemini](https://pmax.online/blog/how-to-get-mentioned-by-chatgpt/): What AI models need to cite a brand — entities, structured data, authority signals.
 - [Performance Max in 2026: what changed and what we actually do now](https://pmax.online/blog/performance-max-2026/): When PMax outperforms manual campaigns and when it destroys margin — with the account structure we use.

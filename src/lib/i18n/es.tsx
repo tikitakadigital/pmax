@@ -832,6 +832,73 @@ export const es = {
   } as Record<string, LocalizedCaseDetail>,
 
   blogPostDetail: {
+    'performance-max-bidding-change-august-2026': {
+      toc: ['El cambio: Bidding Target Optimization', 'Tu ventana de seis semanas', 'Las dos betas', 'Lo que hacemos antes del 17 de agosto', 'Preguntas frecuentes'],
+      faqs: [
+        { q: '¿Cuándo entra en vigor el cambio de pujas de Performance Max?', a: 'El 17 de agosto de 2026. La Bid Target Adjustment Tool llega el 6 de julio, con una ventana de unas seis semanas para fijar tus objetivos antes de que el cambio se aplique automáticamente.' },
+        { q: '¿Qué es Bidding Target Optimization?', a: 'Un cambio de pujas en el backend de Google. Las campañas limitadas por presupuesto que superaban su CPA objetivo o su ROAS objetivo se reconducen hacia el objetivo fijado.' },
+        { q: '¿A qué campañas afecta?', a: 'A campañas limitadas por presupuesto de Búsqueda, Shopping, Performance Max, Demand Gen, Viajes y Display. Apps, alcance de vídeo y vídeo view quedan fuera; Hotel y Display ya funcionan así.' },
+        { q: '¿Es opt-out o tengo que hacer algo?', a: 'No hay opt-out: se aplica automáticamente el 17 de agosto y Google no cambiará tus objetivos ni presupuestos por ti. No hacer nada suele significar un coste por conversión más alto.' },
+        { q: '¿Subirá mi coste por conversión?', a: 'En las campañas que superaban el objetivo, muy probablemente, salvo que bajes el objetivo antes del 17 de agosto. La herramienta del 6 de julio te deja mantener, igualar o personalizar el objetivo.' },
+      ],
+      prose: (
+        <>
+          <p>El 15 de junio Google anunció tres cambios en pujas y presupuestos en una sola publicación. Dos son betas opcionales. El tercero no es opcional, se aplica automáticamente el <strong>17 de agosto</strong> y, para muchas cuentas, significa un coste por conversión más alto. Si usas Performance Max, este es el que tienes que leer.</p>
+          <p>En resumen: las campañas que venían <em>superando</em> su CPA objetivo o su ROAS objetivo van a reconducirse hacia el objetivo que fijaste. Tienes una ventana de seis semanas para actuar a tu manera antes &mdash; y una herramienta que llega el <strong>6 de julio</strong> para ayudarte. Abajo: qué cambia, a quién afecta y la lista que estamos aplicando en las cuentas que gestionamos antes de la fecha límite.</p>
+
+          <h2>El cambio que importa: Bidding Target Optimization</h2>
+          <p>Ahora mismo, una campaña limitada por presupuesto puede entregar muy por debajo de su objetivo sin problema. El ejemplo que usa Google es una campaña con un CPA objetivo de 10&nbsp;$ que viene consiguiendo conversiones a unos 5&nbsp;$ &mdash; la mitad del objetivo. A partir del 17 de agosto, esa campaña intentará entregar más cerca de los 10&nbsp;$ que se fijaron, en lugar de seguir a 5&nbsp;$. (Esas cifras son la ilustración de Google, no un resultado medido &mdash; tus números reales saldrán de la herramienta.)</p>
+          <p>Misma lógica con el valor: una campaña con un ROAS objetivo del 300&nbsp;% que venía rindiendo cerca del 400&nbsp;% se reconducirá hacia el 300&nbsp;%.</p>
+          <p>Tres cosas que conviene tener claras, porque es donde las cuentas se llevan el susto:</p>
+          <ul>
+            <li><strong>Solo afecta a campañas limitadas por presupuesto</strong> &mdash; las que frena su presupuesto diario o total, no su objetivo. Si una campaña está limitada por el propio objetivo, no es el foco.</li>
+            <li><strong>Es automático. No es opt-out.</strong> Google ha dicho que no cambiará tus objetivos ni presupuestos por ti. Si no haces nada, el cambio se aplica igual: tus campañas que superan el objetivo se acercarán a objetivos desactualizados y, para la mayoría de cuentas, eso es un coste por conversión más alto. Aquí no actuar es una decisión, no un valor por defecto.</li>
+            <li><strong>Cubre casi todos los tipos de campaña</strong> &mdash; Performance Max, Búsqueda, Shopping, Demand Gen, Viajes y Display. Las campañas de Apps, de alcance de vídeo y de vídeo view quedan fuera. Hotel y Display ya funcionan así.</li>
+          </ul>
+          <p>Esto es lo de siempre, los fundamentos aburridos: el cambio premia a las cuentas con objetivos que reflejan la realidad y castiga a las que funcionan con números que nadie ha revisado en meses. Nuestra <a href="/es/blog/performance-max-2026/">guía de Performance Max 2026</a> explica la estructura que hace más fácil mantener los objetivos al día.</p>
+
+          <h2>Tu ventana de seis semanas &mdash; y la herramienta del 6 de julio</h2>
+          <p>Entre el <strong>6 de julio</strong> y el <strong>17 de agosto</strong> está el único tramo en el que decides tú, no el algoritmo.</p>
+          <p>El 6 de julio Google lanza una herramienta de ajuste de objetivos (<strong>Bid Target Adjustment Tool</strong>), que aparece mediante avisos en la cuenta para quienes hayan tenido campañas limitadas por presupuesto basadas en objetivos en los últimos 12 meses. Muestra tu rendimiento histórico y da tres opciones por campaña:</p>
+          <ol>
+            <li><strong>Mantener tu objetivo actual</strong> &mdash; y aceptar el ajuste hacia él el 17 de agosto.</li>
+            <li><strong>Igualar el objetivo al rendimiento reciente</strong> &mdash; formalizar el coste por conversión más bajo que ya venías consiguiendo.</li>
+            <li><strong>Fijar un objetivo personalizado</strong> propio.</li>
+          </ol>
+          <p>La decisión de fondo es lo que llamamos la <em>brecha de intención</em>: <strong>¿tus objetivos conservadores eran deliberados o simplemente estaban desactualizados?</strong></p>
+          <ul>
+            <li>Si pusiste un CPA objetivo alto (o un ROAS objetivo bajo) <em>a propósito</em> para que una campaña siguiera escalando con fuerza, esa palanca está a punto de debilitarse. Baja el objetivo antes del 17 de agosto para mantener el volumen.</li>
+            <li>Si los objetivos simplemente se quedaron atrás según mejoraba el rendimiento, puedes aceptar el cambio y vigilar &mdash; la cuenta se autocorrige hacia números que probablemente habrías fijado igualmente.</li>
+          </ul>
+          <p>Ninguna respuesta es incorrecta. No tener una respuesta por campaña, sí.</p>
+
+          <h2>Las dos betas que conviene conocer</h2>
+          <p><strong>Smart Bidding Exploration ya está activo para Performance Max.</strong> Disponible globalmente para campañas de Performance Max <em>sin</em> feed de productos. Para Shopping y Performance Max <em>con</em> feed, está en beta. La función permite al algoritmo pujar por búsquedas sin historial de conversiones probado, dentro de un rango de tolerancia de ROAS, para descubrir demanda nueva de verdad. Google reporta mejoras internas cercanas al 20&nbsp;%; trátalo como un dato del proveedor hasta que lo demuestres contra una base limpia en tu cuenta.</p>
+          <p><strong>Promotion Mode</strong> es una nueva beta solo para <strong>Búsqueda y Performance Max</strong> (no Shopping ni Display de momento). Programa una relajación temporal de tu tolerancia de ROAS más presupuesto diario extra durante una ventana concreta &mdash; una promoción flash, un pico estacional, un lanzamiento. No es lo mismo que los ajustes de estacionalidad; no los mezcles.</p>
+          <p>Un apunte de mantenimiento: Google también renombró en junio dos estrategias sin cambiar su comportamiento. &laquo;Maximizar conversiones con un CPA objetivo&raquo; pasa a llamarse simplemente <strong>CPA objetivo</strong>; &laquo;Maximizar el valor de conversión con un ROAS objetivo&raquo; pasa a <strong>ROAS objetivo</strong>. Solo cosmético &mdash; nada que hacer.</p>
+
+          <h2>Lo que hacemos antes del 17 de agosto</h2>
+          <p>Esta es la secuencia que estamos aplicando en las cuentas que gestionamos. Funciona igual de bien si llevas la tuya.</p>
+          <ol>
+            <li><strong>Antes del 6 de julio &mdash; fija una base.</strong> Saca 90 días de CPA/ROAS de cada campaña limitada por presupuesto y marca las que superan el objetivo de forma constante. Esas son las que toca el cambio de agosto.</li>
+            <li><strong>Separa intención de inercia.</strong> Para cada campaña marcada, escribe una línea: ¿palanca de escalado deliberada u objetivo desactualizado? Esa decisión manda sobre todo lo demás.</li>
+            <li><strong>Desde el 6 de julio &mdash; abre la Bid Target Adjustment Tool.</strong> Contrasta la visión de Google con la tuya. No aceptes la opción por defecto &mdash; elige mantener / igualar / personalizar a conciencia.</li>
+            <li><strong>Baja objetivos donde importe el volumen.</strong> En las campañas de palanca deliberada, reajusta el objetivo antes del 17 de agosto para que el algoritmo siga empujando volumen.</li>
+            <li><strong>Prueba Smart Bidding Exploration</strong> en una o dos campañas de Performance Max y mide las conversiones incrementales &mdash; no lo despliegues en toda la cuenta solo por una mejora reportada.</li>
+            <li><strong>Prepara con antelación tus ventanas de Promotion Mode</strong> para los picos conocidos (rebajas de verano, Q4) y no las configures con prisas.</li>
+            <li><strong>Apunta el 17 de agosto en la agenda.</strong> Vigila CPA/ROAS y gasto durante una o dos semanas después y corrige lo que se mueva en mala dirección.</li>
+          </ol>
+
+          <div className="prose-callout">
+            <div className="prose-callout-kicker">En resumen</div>
+            <p>Esto no es una función que actives. Es un cambio de comportamiento que llega solo el 17 de agosto y que, sin ruido, favorece a quien ha mantenido sus objetivos honestos. Entra con un plan por campaña y conservas eficiencia y volumen. Entra con objetivos que nadie ha mirado desde la primavera y probablemente verás subir tu coste por conversión hacia números que fijaste hace meses.</p>
+          </div>
+
+          <p>Si prefieres no auditar cada campaña a mano antes de la fecha límite, eso es justo lo que hacemos. Gestionamos <a href="/es/services/google-ads/">Google Ads y Performance Max</a> con una tarifa mensual fija &mdash; nunca un porcentaje de tu inversión &mdash; para no tener nunca el incentivo de recomendar más publicidad de la que la cuenta necesita. La primera llamada son 30 minutos, invita la casa: <a href="/es/contact/">cuéntanos qué quieres hacer crecer &rarr;</a></p>
+          <p>Relacionado: <a href="/es/blog/performance-max-2026/">Performance Max en 2026 &mdash; los ajustes que cambiamos primero</a> &middot; <a href="/es/blog/cookieless-tracking/">Cookieless tracking: qué cambió y qué hacer</a></p>
+        </>
+      ),
+    },
     'how-to-get-mentioned-by-chatgpt': {
       toc: ['Qué es la visibilidad en IA', 'Por qué importa ahora', '5 acciones para este mes', 'Cómo puede ayudar pmax', 'Lecturas recomendadas'],
       prose: (<>
@@ -889,7 +956,7 @@ export const es = {
         <p>Los grupos de listado en PMax te permiten controlar qué productos se priorizan. Los usamos para impulsar productos de alto margen, bajo stock y estacionales en momentos específicos — una palanca pequeña, gran impacto en el beneficio cuando se usa bien.</p>
         <h2>Señales de audiencia de primera parte</h2>
         <p>Sube tu lista de customer match, tu cohorte de alto LTV, tu segmento de compradores recientes. PMax no los usa como targeting — pero sí como una señal potente para el algoritmo. El incremento es real.</p>
-        <p>Lecturas relacionadas: nuestro <a href="/es/services/google-ads/">servicio de Google Ads &amp; Performance Max</a> — y cómo encaja PMax en el <a href="/es/blog/google-ads-vs-meta-ads-vs-tiktok-ads-ecommerce-2026/">mix de canales Google vs. Meta vs. TikTok</a>.</p>
+        <p>Lecturas relacionadas: nuestro <a href="/es/services/google-ads/">servicio de Google Ads &amp; Performance Max</a> &mdash; y cómo encaja PMax en el <a href="/es/blog/google-ads-vs-meta-ads-vs-tiktok-ads-ecommerce-2026/">mix de canales Google vs. Meta vs. TikTok</a>. También: <a href="/es/blog/performance-max-bidding-change-august-2026/">cambio de pujas del 17 de agosto</a> &mdash; qué hacer antes de la fecha límite.</p>
         <h2>¿Necesitas ayuda con esto?</h2>
         <p>Si algo de lo anterior te resulta familiar, <a href="/es/contact/?topic=performance-max-2026">cuéntanos brevemente tu situación</a> y te respondemos en un día laborable. Primera conversación: 30 minutos, sin coste.</p>
       </>),
