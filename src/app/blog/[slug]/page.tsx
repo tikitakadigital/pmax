@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import Image from 'next/image'
 import { notFound } from 'next/navigation'
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
@@ -48,16 +49,29 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params
   const post = getPost(slug)
   if (!post) return {}
+  const ogImage = post.ogImage ?? '/og-image.jpg'
   return {
     title: post.seoTitle,
     description: post.deck,
-    alternates: { canonical: `https://pmax.online/blog/${slug}/` },
+    alternates: {
+      canonical: `https://pmax.online/blog/${slug}/`,
+      ...(post.hasTranslations && { languages: {
+        en: `https://pmax.online/blog/${slug}/`,
+        de: `https://pmax.online/de/blog/${slug}/`,
+        es: `https://pmax.online/es/blog/${slug}/`,
+        'x-default': `https://pmax.online/blog/${slug}/`,
+      }}),
+    },
     openGraph: {
       title: post.title,
       description: post.deck,
       type: 'article',
       publishedTime: post.date,
-      images: [{ url: '/og-image.jpg', width: 1200, height: 630 }],
+      images: [{ url: `https://pmax.online${ogImage}`, width: 1200, height: 630, alt: post.title }],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      images: [`https://pmax.online${ogImage}`],
     },
   }
 }
@@ -81,6 +95,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
       url: `https://pmax.online/blog/${slug}/`,
       datePublished: post.date,
       keywords: categoryKeywords[post.category],
+      image: post.ogImage,
     }),
     ...(detail?.faqs?.length ? [{ ...faqPage(detail.faqs), inLanguage: 'en' }] : []),
   ]
@@ -115,6 +130,17 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
           <section className="section">
             <div className="container blog-layout">
               <div className="prose">
+                {detail?.image && (
+                  <Image
+                    src={detail.image}
+                    alt={detail.imageAlt ?? post.title}
+                    width={1200}
+                    height={630}
+                    priority
+                    sizes="(max-width: 768px) 100vw, 760px"
+                    style={{ width: '100%', height: 'auto', display: 'block', borderRadius: 4, marginBottom: 32 }}
+                  />
+                )}
                 {detail?.prose ?? (
                   <p>{post.deck}</p>
                 )}

@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import Image from 'next/image'
 import { notFound } from 'next/navigation'
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
@@ -21,6 +22,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   if (!post) return {}
 
   const isTranslated = !!loc?.prose
+  const ogImage = post.ogImage ?? '/og-image.jpg'
   return {
     title: loc?.title ? `${loc.title} | pmax` : locPost?.title ? `${locPost.title} | pmax` : post.seoTitle,
     description: loc?.deck ?? locPost?.deck ?? post.deck,
@@ -31,6 +33,16 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
     } : {
       canonical: `https://pmax.online/blog/${slug}/`,
       languages: { 'en': `https://pmax.online/blog/${slug}/`, 'x-default': `https://pmax.online/blog/${slug}/` },
+    },
+    openGraph: {
+      title: loc?.title ?? locPost?.title ?? post.title,
+      description: loc?.deck ?? locPost?.deck ?? post.deck,
+      type: 'article',
+      images: [{ url: `https://pmax.online${ogImage}`, width: 1200, height: 630 }],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      images: [`https://pmax.online${ogImage}`],
     },
   }
 }
@@ -107,6 +119,17 @@ export default async function BlogPostPage({ params }: { params: Promise<{ lang:
           <section className="section">
             <div className="container blog-layout">
               <div className="prose">
+                {detail?.image && (
+                  <Image
+                    src={detail.image}
+                    alt={detail.imageAlt ?? post.title}
+                    width={1200}
+                    height={630}
+                    priority
+                    sizes="(max-width: 768px) 100vw, 760px"
+                    style={{ width: '100%', height: 'auto', display: 'block', borderRadius: 4, marginBottom: 32 }}
+                  />
+                )}
                 {prose}
               </div>
               <aside className="blog-aside">

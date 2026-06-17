@@ -77,12 +77,13 @@ export const website = {
   inLanguage: ['en', 'de', 'es'],
 }
 
-export function article({ headline, description, url, datePublished, keywords }: {
+export function article({ headline, description, url, datePublished, keywords, image }: {
   headline: string
   description: string
   url: string
   datePublished: string
   keywords?: string[]
+  image?: string
 }) {
   return {
     '@context': 'https://schema.org',
@@ -102,6 +103,7 @@ export function article({ headline, description, url, datePublished, keywords }:
     mainEntityOfPage: { '@type': 'WebPage', '@id': url },
     inLanguage: 'en-GB',
     ...(keywords?.length && { keywords: keywords.join(', ') }),
+    ...(image && { image: `https://pmax.online${image}` }),
   }
 }
 

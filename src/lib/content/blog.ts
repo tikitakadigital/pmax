@@ -10,6 +10,8 @@ export interface Post {
   variant: string
   featured?: boolean
   external?: boolean
+  ogImage?: string
+  hasTranslations?: boolean
 }
 
 export const posts: Post[] = [
@@ -24,6 +26,8 @@ export const posts: Post[] = [
     deck: "Google's 17 August bidding change pulls over-performing Performance Max campaigns back toward target — automatically. Here's what to do before it lands.",
     variant: 'is-slate',
     featured: true,
+    ogImage: '/og/performance-max-bidding-change-august-2026.jpg',
+    hasTranslations: true,
   },
   {
     slug: 'pinterest-ads-home-interiors-local-2026',

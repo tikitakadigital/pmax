@@ -6,6 +6,8 @@ export interface BlogDetail {
   toc: string[]
   prose: ReactNode
   faqs?: { q: string; a: string }[]
+  image?: string
+  imageAlt?: string
 }
 
 const NeedHelp = ({ topic }: { topic: string }) => (
@@ -18,6 +20,8 @@ const NeedHelp = ({ topic }: { topic: string }) => (
 export const blogDetails: BlogDetail[] = [
   {
     slug: 'performance-max-bidding-change-august-2026',
+    image: '/og/performance-max-bidding-change-august-2026.webp',
+    imageAlt: 'Google Ads Bidding Target Optimization timeline — 6 July tool, 17 August change',
     toc: ['The change: Bidding Target Optimization', 'Your six-week window', 'The two betas', 'What we\'re doing before August', 'Common questions'],
     faqs: [
       {
