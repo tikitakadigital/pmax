@@ -14,6 +14,18 @@ export interface Post {
 
 export const posts: Post[] = [
   {
+    slug: 'performance-max-bidding-change-august-2026',
+    stamp: 'JUN 17',
+    date: 'Jun 17, 2026',
+    readTime: '8 min',
+    category: 'Google Ads',
+    title: 'Performance Max bidding changes on August 17. What to do before it lands.',
+    seoTitle: 'Performance Max Bidding Changes on 17 August: What to Do First | pmax',
+    deck: "Google's 17 August bidding change pulls over-performing Performance Max campaigns back toward target — automatically. Here's what to do before it lands.",
+    variant: 'is-slate',
+    featured: true,
+  },
+  {
     slug: 'pinterest-ads-home-interiors-local-2026',
     stamp: 'JUN 01',
     date: 'Jun 1, 2026',

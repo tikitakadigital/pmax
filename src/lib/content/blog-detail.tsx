@@ -17,6 +17,90 @@ const NeedHelp = ({ topic }: { topic: string }) => (
 
 export const blogDetails: BlogDetail[] = [
   {
+    slug: 'performance-max-bidding-change-august-2026',
+    toc: ['The change: Bidding Target Optimization', 'Your six-week window', 'The two betas', 'What we\'re doing before August', 'Common questions'],
+    faqs: [
+      {
+        q: 'When does the Performance Max bidding change take effect?',
+        a: '17 August 2026. The Bid Target Adjustment Tool arrives on 6 July, giving a roughly six-week window to set targets deliberately before the change applies automatically.',
+      },
+      {
+        q: 'What is Bidding Target Optimization?',
+        a: 'A backend bidding change from Google. Budget-limited campaigns that have been beating their Target CPA or Target ROAS get steered back toward the target you set.',
+      },
+      {
+        q: 'Which campaigns does it affect?',
+        a: 'Budget-limited Search, Shopping, Performance Max, Demand Gen, Travel and Display. App, Video reach and Video view are out of scope; Hotel and Display already run this way.',
+      },
+      {
+        q: 'Is it opt-out, or do I have to do anything?',
+        a: "No opt-out — it applies automatically on 17 August, and Google will not change your targets or budgets for you. Doing nothing usually means a higher cost per conversion.",
+      },
+      {
+        q: 'Will this increase my cost per conversion?',
+        a: 'For campaigns beating target, very likely — unless you lower the target before 17 August. The 6 July tool lets you keep, match, or set a custom target.',
+      },
+    ],
+    prose: (
+      <>
+        <p>On 15 June Google announced three bidding and budgeting changes in a single post. Two are opt-in betas. The third isn&rsquo;t optional, lands automatically on <strong>17 August</strong>, and for a lot of accounts it means a higher cost per conversion. If you run Performance Max, this is the one to read.</p>
+        <p>The short version: campaigns that have been <em>beating</em> their Target CPA or Target ROAS are about to be steered back toward the target you actually set. There&rsquo;s a six-week window to act on your own terms first &mdash; and a tool arriving on <strong>6 July</strong> to help you do it.</p>
+
+        <h2>The change: Bidding Target Optimization</h2>
+        <p>Right now, a budget-limited campaign can comfortably over-deliver. Google&rsquo;s own teaching example is a campaign set to a $10 Target CPA that&rsquo;s been bringing conversions in at around $5 &mdash; half the target. After 17 August, that campaign aims to deliver <em>closer to the $10 it was set to</em>, instead of carrying on at $5.</p>
+        <p>Same logic on the value side: a campaign set to 300% Target ROAS that&rsquo;s been running closer to 400% gets pulled back toward 300%.</p>
+        <p>Three things to be clear about, because this is where accounts get caught out:</p>
+        <ul>
+          <li><strong>It only touches budget-limited campaigns</strong> &mdash; the ones held back by their daily or total budget, not by their target. If a campaign is constrained by the target itself, it isn&rsquo;t the focus.</li>
+          <li><strong>It is automatic. It is not opt-out.</strong> Google has said it won&rsquo;t change your targets or budgets for you. Do nothing and the change still lands &mdash; your over-performing campaigns drift toward stale targets, and for most accounts that means a higher cost per conversion.</li>
+          <li><strong>It covers most campaign types</strong> &mdash; Performance Max, Search, Shopping, Demand Gen, Travel and Display. App, Video reach and Video view campaigns are out of scope. Hotel and Display already run this way.</li>
+        </ul>
+        <p>This is the boring-fundamentals stuff: the change rewards accounts whose targets reflect reality and punishes accounts running on numbers nobody has revisited in months. See our <a href="/blog/performance-max-2026/">Performance Max 2026 setup guide</a> for the structural changes that make targeting easier to maintain.</p>
+
+        <h2>Your six-week window &mdash; and the 6 July tool</h2>
+        <p>Between <strong>6 July</strong> and <strong>17 August</strong> is the only stretch where you, not the algorithm, decide what happens.</p>
+        <p>On 6 July, Google rolls out a <strong>Bid Target Adjustment Tool</strong>, surfaced through account notifications for anyone who has had budget-limited, target-based campaigns in the past 12 months. It shows your historical performance and gives three choices per campaign:</p>
+        <ol>
+          <li><strong>Keep your current target</strong> &mdash; and accept the pullback toward it on 17 August.</li>
+          <li><strong>Match the target to recent performance</strong> &mdash; formalise the lower cost-per-conversion you&rsquo;ve actually been hitting.</li>
+          <li><strong>Set a custom target</strong> of your own.</li>
+        </ol>
+        <p>The real decision underneath all of it is what we call the <em>intention gap</em>: were your conservative targets deliberate, or just out of date?</p>
+        <ul>
+          <li>If you set a high Target CPA (or a low Target ROAS) <em>on purpose</em> to keep a campaign scaling hard, that lever is about to weaken. Lower the target before 17 August to keep the volume.</li>
+          <li>If the targets simply drifted as performance quietly improved, you can accept the change and watch &mdash; the account self-corrects toward numbers you&rsquo;d probably have set anyway.</li>
+        </ul>
+        <p>Neither answer is wrong. Not having an answer per campaign is.</p>
+
+        <h2>The two betas worth knowing about</h2>
+        <p><strong>Smart Bidding Exploration is now live for Performance Max</strong> &mdash; globally, for PMax campaigns without a product feed. For Shopping and PMax with a feed, it&rsquo;s in beta. The feature lets the algorithm bid on queries with no proven conversion history, inside a ROAS-tolerance range, to surface genuinely new demand. Google reports internal lifts in the high teens; treat that as a vendor number until you&rsquo;ve proved it against a clean baseline in your own account.</p>
+        <p><strong>Promotion Mode</strong> is a new beta for Search and Performance Max only (not Shopping or Display at launch). It schedules a temporary loosening of your ROAS tolerance plus extra daily budget across a defined window &mdash; a flash sale, a seasonal spike, a launch. It is not the same thing as seasonality adjustments. Don&rsquo;t treat them as interchangeable.</p>
+        <p>One bit of housekeeping: Google also renamed two strategies in June with no change in behaviour. &ldquo;Maximize conversions with a Target CPA&rdquo; is now just <strong>Target CPA</strong>; &ldquo;Maximize conversion value with a Target ROAS&rdquo; is now <strong>Target ROAS</strong>. Cosmetic only &mdash; nothing to action.</p>
+
+        <h2>What we&rsquo;re doing before 17 August</h2>
+        <p>This is the sequence we&rsquo;re running on the accounts we manage.</p>
+        <ol>
+          <li><strong>Before 6 July &mdash; set a baseline.</strong> Pull 90 days of CPA/ROAS for every budget-limited campaign and flag the ones consistently beating target. Those are the campaigns the August change touches.</li>
+          <li><strong>Separate intention from drift.</strong> For each flagged campaign, write one line: deliberate scaling lever, or stale target? That single call drives everything else.</li>
+          <li><strong>From 6 July &mdash; open the Bid Target Adjustment Tool.</strong> Cross-check Google&rsquo;s view against your own. Don&rsquo;t accept the default &mdash; choose keep / match / custom on purpose.</li>
+          <li><strong>Lower targets where scale matters.</strong> For the deliberate-lever campaigns, reset the target before 17 August so the algorithm keeps pushing volume.</li>
+          <li><strong>Pilot Smart Bidding Exploration</strong> on one or two PMax campaigns and measure incremental conversions &mdash; don&rsquo;t roll it out account-wide on a reported lift alone.</li>
+          <li><strong>Pre-build Promotion Mode windows</strong> for known peaks (summer sale, Q4) so you&rsquo;re not configuring under pressure later.</li>
+          <li><strong>Diarise 17 August.</strong> Watch CPA/ROAS and spend for the following one to two weeks and correct anything that moved the wrong way.</li>
+        </ol>
+
+        <div className="prose-callout">
+          <div className="prose-callout-kicker">The bottom line</div>
+          <p>This isn&rsquo;t a feature you switch on. It&rsquo;s a behavioural change that arrives on its own on 17 August, and it quietly favours whoever has kept their targets honest. Walk in with a per-campaign plan and you keep both your efficiency and your scale. Walk in with targets nobody has looked at since spring and you&rsquo;ll likely watch your cost per conversion drift upward.</p>
+        </div>
+
+        <p>Related: <a href="/blog/performance-max-2026/">Performance Max in 2026 &mdash; the settings we change first</a> &middot; <a href="/blog/cookieless-tracking/">Cookieless tracking: what changed and what to do</a></p>
+        <NeedHelp topic="performance-max-bidding-change-august-2026" />
+      </>
+    ),
+  },
+
+  {
     slug: 'how-to-get-mentioned-by-chatgpt',
     toc: ['What is AI search visibility', 'Why it matters now', '5 things to do this month', 'How pmax can help', 'Further reading'],
     prose: (
@@ -85,7 +169,7 @@ export const blogDetails: BlogDetail[] = [
         <p>Listing groups in PMax let you control which products get prioritised. We use them to push high-margin, low-stock, seasonal products at specific times &mdash; a small lever, big impact on profit when used well.</p>
         <h2>First-party audience signals</h2>
         <p>Upload your customer match list, your high-LTV cohort, your recent purchaser segment. PMax does not use these as targeting &mdash; but it uses them as a strong signal for the algorithm. The lift is real.</p>
-        <p>Related: <a href="/services/google-ads/">our Google Ads &amp; Performance Max service</a> &mdash; and how PMax fits into the wider <a href="/blog/google-ads-vs-meta-ads-vs-tiktok-ads-ecommerce-2026/">Google vs Meta vs TikTok channel mix</a>.</p>
+        <p>Related: <a href="/services/google-ads/">our Google Ads &amp; Performance Max service</a> &mdash; and how PMax fits into the wider <a href="/blog/google-ads-vs-meta-ads-vs-tiktok-ads-ecommerce-2026/">Google vs Meta vs TikTok channel mix</a>. Also see the <a href="/blog/performance-max-bidding-change-august-2026/">August 2026 bidding change</a> &mdash; what to do before 17 August.</p>
         <NeedHelp topic="performance-max-2026" />
       </>
     ),
