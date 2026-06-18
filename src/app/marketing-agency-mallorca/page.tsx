@@ -10,7 +10,7 @@ import { breadcrumb, faqPage } from '@/lib/schema'
 import { cases } from '@/lib/content/cases'
 
 export const metadata: Metadata = {
-  title: 'Marketing Agency in Mallorca | pmax — Performance-led, flat fee, based in Calvià',
+  title: 'Marketing Agency in Mallorca — Flat Fee | pmax',
   description: 'pmax is a performance marketing agency in Calvià, Mallorca. Google Ads, Meta, SEO and AI search for German- and English-speaking businesses. Flat monthly fee, never a % of spend. 93% twelve-month client retention.',
   robots: 'index,follow,max-image-preview:large',
   alternates: {

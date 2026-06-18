@@ -14,7 +14,7 @@ export function generateStaticParams() {
 }
 
 export const metadata: Metadata = {
-  title: 'Agencia de Marketing en Mallorca | pmax — Orientada a resultados, tarifa fija, Calvià',
+  title: 'Agencia de Marketing en Mallorca — Tarifa fija | pmax',
   description: 'pmax (PMax Online S.L.) es una agencia de marketing en Calvià, Mallorca. Google Ads, Meta, SEO y búsqueda con IA para empresas de habla alemana e inglesa. Tarifa mensual fija, nunca un % de la inversión. 93 % de retención de clientes a doce meses.',
   robots: 'index,follow,max-image-preview:large',
   alternates: {

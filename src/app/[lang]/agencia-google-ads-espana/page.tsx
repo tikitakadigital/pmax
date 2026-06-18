@@ -14,7 +14,7 @@ export function generateStaticParams() {
 }
 
 export const metadata: Metadata = {
-  title: 'Agencia Google Ads España | pmax — Performance Max y multilingüe, sobre el terreno',
+  title: 'Agencia Google Ads España — Performance Max | pmax',
   description: 'pmax es una agencia de Google Ads en España — sobre el terreno en Mallorca, no en remoto. Search, Shopping y Performance Max en cuatro idiomas. Tarifa fija, nunca un porcentaje de tu inversión.',
   robots: 'index,follow,max-image-preview:large',
   alternates: {
