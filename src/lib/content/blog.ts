@@ -16,6 +16,18 @@ export interface Post {
 
 export const posts: Post[] = [
   {
+    slug: 'perplexity-visibility',
+    stamp: 'JUN 23',
+    date: 'Jun 23, 2026',
+    readTime: '8 min',
+    category: 'AI search',
+    title: 'How to Improve Your Perplexity Visibility (and Why It\'s Not ChatGPT)',
+    seoTitle: 'How to Improve Your Perplexity Visibility | pmax',
+    deck: "A plain-English guide to Perplexity visibility in 2026 — what it is, why it's different from ChatGPT, and five moves to get your business cited.",
+    variant: 'is-mint',
+    featured: true,
+  },
+  {
     slug: 'performance-max-bidding-change-august-2026',
     stamp: 'JUN 17',
     date: 'Jun 17, 2026',

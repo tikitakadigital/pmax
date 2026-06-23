@@ -70,6 +70,7 @@ export const serviceDetails: ServiceDetail[] = [
         </ul>
         <h2>Who this is for</h2>
         <p>AI visibility work pays off fastest for businesses where buyers do research before they purchase — B2B software, professional services, considered consumer purchases (real estate, solar, healthcare, hospitality, automotive). If you sell something people Google before they buy, they&apos;re now asking AI too.</p>
+        <p>Further reading: <a href="/blog/how-to-get-mentioned-by-chatgpt/">how to get cited by ChatGPT, Perplexity and Gemini</a> and <a href="/blog/perplexity-visibility/">how to improve your Perplexity visibility specifically</a> &mdash; Perplexity is retrieval-first and needs different tactics from ChatGPT.</p>
       </>
     ),
     faqs: [

@@ -933,6 +933,7 @@ export const es = {
         <h2>Lecturas recomendadas</h2>
         <ul>
           <li><a href="/es/services/ai-visibility/">Nuestra página de servicio de visibilidad en IA</a> — qué hay dentro de un programa</li>
+          <li><a href="/es/blog/perplexity-visibility/">Cómo mejorar tu visibilidad en Perplexity</a> — Perplexity es retrieval-first y necesita tácticas propias</li>
           <li><a href="/es/blog/gpt-shopping/">Qué significa «ChatGPT shopping» para el e-commerce en 2026</a></li>
           <li><a href="/es/blog/tracking-setup-guide/">Una guía sin jerga para configurar el tracking correctamente</a></li>
         </ul>

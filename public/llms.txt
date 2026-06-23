@@ -36,6 +36,7 @@
 
 ## Journal
 
+- [How to Improve Your Perplexity Visibility (and Why It's Not ChatGPT)](https://pmax.online/blog/perplexity-visibility/): Perplexity is retrieval-first and cites a different domain set from ChatGPT — five moves to get your business cited, with a separate baseline for each engine.
 - [Performance Max bidding changes on August 17 — what to do before it lands](https://pmax.online/blog/performance-max-bidding-change-august-2026/): Google's automatic 17 August bidding change explained — what Bidding Target Optimization does, the 6 July tool, and the per-campaign action plan.
 - [Las pujas de Performance Max cambian el 17 de agosto (ES)](https://pmax.online/es/blog/performance-max-bidding-change-august-2026/): Qué es Bidding Target Optimization, la herramienta del 6 de julio y la lista de pasos por campaña antes del cambio automático.
 - [Performance-Max-Gebote ändern sich am 17. August (DE)](https://pmax.online/de/blog/performance-max-bidding-change-august-2026/): Was Bidding Target Optimization ist, das Tool vom 6. Juli und die Kampagnen-Checkliste vor der automatischen Änderung.

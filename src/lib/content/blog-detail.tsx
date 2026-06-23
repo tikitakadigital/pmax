@@ -105,6 +105,84 @@ export const blogDetails: BlogDetail[] = [
   },
 
   {
+    slug: 'perplexity-visibility',
+    toc: ['What is Perplexity visibility?', 'Why Perplexity is its own problem', 'Five moves for this month', 'How pmax can help', 'Frequently asked questions'],
+    faqs: [
+      {
+        q: 'How do I get my business cited by Perplexity?',
+        a: 'Make sure PerplexityBot can crawl your site, publish answer-first content that\'s easy to quote, and earn mentions on the third-party sources Perplexity trusts — Wikipedia, established review sites, reputable publications and relevant Reddit threads. Then measure monthly and keep going.',
+      },
+      {
+        q: 'Why doesn\'t my company appear in Perplexity even though it ranks on Google?',
+        a: 'Because they\'re different systems. Perplexity favours pages it can fetch live and quote cleanly, and it leans on a narrow set of trusted domains for validation. A page can rank on Google yet still be hard to crawl, hard to quote, or unsupported by the third-party signals Perplexity looks for.',
+      },
+      {
+        q: 'Is Perplexity visibility the same as ChatGPT visibility?',
+        a: 'No. The domains each engine cites overlap surprisingly little, so the two need separate baselines and, often, separate tactics. Showing up in one doesn\'t carry over to the other.',
+      },
+      {
+        q: 'How long does Perplexity visibility take?',
+        a: 'Technical and structural fixes can show up within weeks because Perplexity re-crawls and re-answers continuously. Building the third-party trust that makes citations reliable typically takes around two to three months of steady work.',
+      },
+    ],
+    prose: (
+      <>
+        <p>A client said something to us recently that stuck: &ldquo;We finally show up in ChatGPT &mdash; but my co-founder uses Perplexity all day and we&rsquo;re nowhere.&rdquo; That gap is real, and it surprises people. Being recommended by one AI answer engine does almost nothing to guarantee you&rsquo;ll be recommended by the next one.</p>
+        <p>This is a short, practical guide &mdash; no jargon, no scaremongering. By the end you&rsquo;ll know what Perplexity visibility is, why it&rsquo;s a separate problem from ChatGPT, and the five things any business can start doing this month to get cited.</p>
+
+        <h2>What is Perplexity visibility?</h2>
+        <p>When someone asks Perplexity &ldquo;what&rsquo;s the best digital marketing agency in Mallorca?&rdquo; or &ldquo;compare three solar installers in Spain,&rdquo; it writes an answer and footnotes it with numbered citations &mdash; the specific web pages it pulled from. Perplexity visibility is the practice of making sure your business is one of those cited sources, and ideally one of the names in the answer itself.</p>
+        <p>It sits under the same umbrella as generative engine optimisation (GEO), but the mechanics are Perplexity&rsquo;s own. The classic SEO foundations still apply &mdash; they&rsquo;re the floor, not the ceiling.</p>
+
+        <h2>Why Perplexity is its own problem</h2>
+        <p>The temptation is to treat &ldquo;AI visibility&rdquo; as one job. It isn&rsquo;t. Perplexity differs from ChatGPT in three ways that change what you actually do:</p>
+        <ol>
+          <li><strong>It&rsquo;s retrieval-first.</strong> Perplexity runs a live web search for almost every question and builds its answer from what it finds right now, with visible citations. It leans less on what a model &ldquo;remembers&rdquo; and more on what&rsquo;s crawlable, current, and quotable today. Fresh, well-structured pages matter more here than almost anywhere else.</li>
+          <li><strong>The overlap with ChatGPT is small.</strong> In our own baselining, and in independent analyses comparing tens of thousands of prompts, the set of domains Perplexity cites barely overlaps with the set ChatGPT cites &mdash; often only around one in ten. You can dominate one and be invisible in the other. That&rsquo;s why &ldquo;we&rsquo;re in ChatGPT&rdquo; tells you nothing about Perplexity.</li>
+          <li><strong>Citations carry direct value.</strong> Because Perplexity shows its sources prominently and people click them, a citation isn&rsquo;t a vanity metric &mdash; it&rsquo;s a referral with measurable traffic attached.</li>
+        </ol>
+
+        <h2>Five moves for this month</h2>
+        <h3>1. Baseline in Perplexity specifically</h3>
+        <p>Spend an hour running 20 real buying questions through Perplexity itself &mdash; not ChatGPT, not Gemini. Use the questions a real customer would type: &ldquo;best X in Y for budget Z,&rdquo; &ldquo;compare A and B.&rdquo; Write down which competitors get named and which pages get cited. That list is your starting line, and it will look different from your ChatGPT baseline.</p>
+        <h3>2. Let PerplexityBot crawl you</h3>
+        <p>Because Perplexity is retrieval-first, a page it can&rsquo;t fetch is a page it can&rsquo;t cite. Check that your <code>robots.txt</code> doesn&rsquo;t block <code>PerplexityBot</code> or <code>Perplexity-User</code>, that key pages return clean 200s, and that your important content isn&rsquo;t locked behind scripts a crawler won&rsquo;t run. This is unglamorous and it&rsquo;s the single most common reason a good page never gets surfaced.</p>
+        <h3>3. Write answer-first, in chunks</h3>
+        <p>Perplexity lifts content in pieces, so structure for that. Put the direct answer in the first one or two sentences under each heading, before the context. Use short paragraphs, clear lists, and a comparison table where one fits. A page that opens with &ldquo;The three best options are&hellip;&rdquo; is far easier to quote than one that warms up for four paragraphs first.</p>
+        <h3>4. Get cited where Perplexity already trusts</h3>
+        <p>Perplexity weights a relatively small circle of sources heavily &mdash; Wikipedia and Wikidata for entity facts, established review platforms (G2, Capterra, Trustpilot), reputable industry publications, and notably Reddit, which is one of its most-cited domains. Earning honest mentions in that circle does more for your Perplexity visibility than another page on your own site. PR built on verifiable claims is what wins these.</p>
+        <h3>5. Measure monthly</h3>
+        <p>Re-run the same 20 prompts every month. Track which answers now name you and which still don&rsquo;t. Tools like Profound, AthenaHQ and Otterly can automate this across engines &mdash; or do it by hand in a spreadsheet. What you don&rsquo;t measure, you can&rsquo;t move.</p>
+
+        <div className="prose-callout">
+          <div className="prose-callout-kicker">The honest version</div>
+          <p>Perplexity visibility is earned, not hacked. Because the engine is retrieval-first, you sometimes see movement faster than with other platforms once the crawl and structure are fixed &mdash; but a durable presence still takes a couple of months of consistent work on content, structure and third-party trust. Anyone promising you instant citations is selling something.</p>
+        </div>
+
+        <h2>How pmax can help</h2>
+        <p>We run AI visibility programmes for businesses across Europe, and we treat Perplexity, ChatGPT and Google&rsquo;s AI Overviews as separate surfaces with separate scorecards &mdash; because they are. That means a per-engine audit, the technical groundwork, content and PR, and monthly measurement you can actually read. If you&rsquo;d like a free one-page Perplexity visibility snapshot for your brand, <a href="/contact/?topic=perplexity-audit">tell us a bit about your situation</a> and we&rsquo;ll send it back within a week.</p>
+
+        <h2>Frequently asked questions</h2>
+        <h3>How do I get my business cited by Perplexity?</h3>
+        <p>Make sure PerplexityBot can crawl your site, publish answer-first content that&rsquo;s easy to quote, and earn mentions on the third-party sources Perplexity trusts &mdash; Wikipedia, established review sites, reputable publications and relevant Reddit threads. Then measure monthly and keep going.</p>
+        <h3>Why doesn&rsquo;t my company appear in Perplexity even though it ranks on Google?</h3>
+        <p>Because they&rsquo;re different systems. Perplexity favours pages it can fetch live and quote cleanly, and it leans on a narrow set of trusted domains for validation. A page can rank on Google yet still be hard to crawl, hard to quote, or unsupported by the third-party signals Perplexity looks for.</p>
+        <h3>Is Perplexity visibility the same as ChatGPT visibility?</h3>
+        <p>No. The domains each engine cites overlap surprisingly little, so the two need separate baselines and, often, separate tactics. Showing up in one doesn&rsquo;t carry over to the other.</p>
+        <h3>How long does Perplexity visibility take?</h3>
+        <p>Technical and structural fixes can show up within weeks because Perplexity re-crawls and re-answers continuously. Building the third-party trust that makes citations reliable typically takes around two to three months of steady work.</p>
+
+        <h2>Further reading</h2>
+        <ul>
+          <li><a href="/services/ai-visibility/">Our AI visibility service</a> &mdash; what a full programme includes</li>
+          <li><a href="/blog/how-to-get-mentioned-by-chatgpt/">How to get your business recommended by ChatGPT</a> &mdash; the companion guide for the other big engine</li>
+          <li><a href="/blog/gpt-shopping/">What &ldquo;ChatGPT shopping&rdquo; means for e-commerce in 2026</a></li>
+        </ul>
+      </>
+    ),
+  },
+
+  {
     slug: 'how-to-get-mentioned-by-chatgpt',
     toc: ['What is AI search visibility', 'Why it matters now', '5 things to do this month', 'How pmax can help', 'Further reading'],
     prose: (
@@ -146,6 +224,7 @@ export const blogDetails: BlogDetail[] = [
         <h2>Further reading</h2>
         <ul>
           <li><a href="/services/ai-visibility/">Our AI visibility service page</a> &mdash; what&rsquo;s actually inside a programme</li>
+          <li><a href="/blog/perplexity-visibility/">How to improve your Perplexity visibility</a> &mdash; Perplexity is retrieval-first and needs its own tactics</li>
           <li><a href="/blog/gpt-shopping/">What &ldquo;ChatGPT shopping&rdquo; means for e-commerce in 2026</a></li>
           <li><a href="/blog/tracking-setup-guide/">A no-jargon guide to setting up tracking properly</a></li>
         </ul>

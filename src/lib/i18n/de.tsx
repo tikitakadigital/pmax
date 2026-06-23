@@ -971,6 +971,7 @@ export const de = {
         <h2>Weiterführende Links</h2>
         <ul>
           <li><a href="/de/services/ai-visibility/">Unsere KI-Sichtbarkeits-Leistungsseite</a> — was in einem Programm steckt</li>
+          <li><a href="/de/blog/perplexity-visibility/">Perplexity-Sichtbarkeit verbessern</a> — Perplexity ist retrieval-first und braucht eigene Taktiken</li>
           <li><a href="/de/blog/gpt-shopping/">Was „ChatGPT Shopping" für E-Commerce 2026 bedeutet</a></li>
           <li><a href="/de/blog/tracking-setup-guide/">Leitfaden zum richtigen Aufbau von Tracking</a></li>
         </ul>
