@@ -20,6 +20,7 @@ export default function robots(): MetadataRoute.Robots {
       { userAgent: 'OAI-SearchBot', allow: '/' },      // ChatGPT search results
       { userAgent: 'Claude-SearchBot', allow: '/' },   // Claude search
       { userAgent: 'PerplexityBot', allow: '/' },      // Perplexity real-time retrieval
+      { userAgent: 'Perplexity-User', allow: '/' },   // Perplexity user-triggered fetch
       // AI training crawlers — block (does not affect retrieval or citations)
       { userAgent: 'GPTBot', disallow: '/' },
       { userAgent: 'ClaudeBot', disallow: '/' },

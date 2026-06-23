@@ -978,7 +978,7 @@ export const de = {
           <p>Perplexity gewichtet einen relativ kleinen Kreis von Quellen stark &mdash; Wikipedia und Wikidata für Entitätsfakten, etablierte Bewertungsplattformen (G2, Capterra, Trustpilot), seriöse Fachpublikationen und insbesondere Reddit, eine seiner meistzitierten Domains. In diesem Kreis ehrliche Nennungen zu verdienen, bringt Ihrer Perplexity-Sichtbarkeit mehr als eine weitere Seite auf Ihrer eigenen Website. PR, die auf überprüfbaren Aussagen beruht, gewinnt diese Nennungen.</p>
 
           <h3>5. Monatlich messen</h3>
-          <p>Führen Sie dieselben 20 Prompts jeden Monat erneut aus. Verfolgen Sie, welche Antworten Sie nun nennen und welche noch nicht. <a href="https://crunchjunky.io/">CrunchJunky</a> automatisiert das über mehrere Maschinen hinweg &mdash; oder machen Sie es manuell in einer Tabelle. Was Sie nicht messen, können Sie nicht verbessern.</p>
+          <p>Führen Sie dieselben 20 Prompts jeden Monat erneut aus. Verfolgen Sie, welche Antworten Sie nun nennen und welche noch nicht. <a href="https://crunchjunky.io/" target="_blank" rel="noopener noreferrer">CrunchJunky</a> automatisiert das über mehrere Maschinen hinweg &mdash; oder machen Sie es manuell in einer Tabelle. Was Sie nicht messen, können Sie nicht verbessern.</p>
 
           <div className="prose-callout">
             <div className="prose-callout-kicker">Die ehrliche Version</div>
@@ -1034,7 +1034,7 @@ export const de = {
         <h3>4. An Orten zitiert werden, denen KI vertraut</h3>
         <p>Große Sprachmodelle vertrauen Quellen, denen ihre Trainingsdaten vertrauen: Wikipedia, Fachpublikationen, etablierte Bewertungsseiten (G2, Capterra, Trustpilot), hochkarätige Pressemeldungen. PR, die auf verifizierbaren Behauptungen basiert, gewinnt diese Nennungen.</p>
         <h3>5. Monatlich messen</h3>
-        <p>Führen Sie dieselben 20 Prompts jeden Monat erneut aus. <a href="https://crunchjunky.io/">CrunchJunky</a> kann das automatisieren — oder machen Sie es manuell. Was Sie nicht messen, können Sie nicht verbessern.</p>
+        <p>Führen Sie dieselben 20 Prompts jeden Monat erneut aus. <a href="https://crunchjunky.io/" target="_blank" rel="noopener noreferrer">CrunchJunky</a> kann das automatisieren — oder machen Sie es manuell. Was Sie nicht messen, können Sie nicht verbessern.</p>
         <div className="prose-callout">
           <div className="prose-callout-kicker">Die ehrliche Version</div>
           <p>KI-Sichtbarkeit ist kein Hack. Sie wird verdient. Die meisten Unternehmen sehen ihre ersten zuverlässigen Nennungen nach 8–12 Wochen disziplinierter Arbeit.</p>
