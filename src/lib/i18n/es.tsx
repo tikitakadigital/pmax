@@ -899,6 +899,79 @@ export const es = {
         </>
       ),
     },
+    'perplexity-visibility': {
+      title: 'Cómo mejorar tu visibilidad en Perplexity (y por qué no es ChatGPT)',
+      deck: 'Una guía clara sobre la visibilidad en Perplexity en 2026 — qué es, por qué se comporta distinto a ChatGPT y cinco acciones para este mes.',
+      toc: ['¿Qué es la visibilidad en Perplexity?', 'Por qué Perplexity es un problema aparte', 'Cinco acciones para este mes', 'Cómo puede ayudarte pmax', 'Preguntas frecuentes'],
+      faqs: [
+        { q: '¿Cómo consigo que Perplexity cite mi negocio?', a: 'Asegúrate de que PerplexityBot puede rastrear tu web, publica contenido orientado a la respuesta y fácil de citar, y gánate menciones en las fuentes en las que Perplexity confía: Wikipedia, sitios de reseñas consolidados, publicaciones serias y hilos de Reddit relevantes. Después mide cada mes y sé constante.' },
+        { q: '¿Por qué no aparece mi empresa en Perplexity aunque posiciona en Google?', a: 'Porque son sistemas distintos. Perplexity prioriza páginas que puede leer en vivo y citar con claridad, y se apoya en un círculo reducido de dominios de confianza para validar. Una página puede posicionar en Google y aun así ser difícil de rastrear, difícil de citar o carecer de las señales de terceros que Perplexity busca.' },
+        { q: '¿La visibilidad en Perplexity es lo mismo que en ChatGPT?', a: 'No. Los dominios que cita cada motor coinciden sorprendentemente poco, así que cada uno necesita su propia línea de partida y, a menudo, sus propias tácticas. Aparecer en uno no se traslada al otro.' },
+        { q: '¿Cuánto tarda en notarse la visibilidad en Perplexity?', a: 'Los arreglos técnicos y de estructura pueden notarse en semanas, porque Perplexity vuelve a rastrear y a responder de forma continua. Construir la confianza de terceros que hace fiables las citas suele llevar entre dos y tres meses de trabajo constante.' },
+      ],
+      prose: (
+        <>
+          <p>Hace poco un cliente nos dijo algo que se nos quedó grabado: «Por fin aparecemos en ChatGPT, pero mi socio usa Perplexity todo el día y ahí no estamos por ninguna parte». Esa brecha es real y sorprende a mucha gente. Que un motor de respuestas con IA te recomiende no garantiza casi nada en el siguiente.</p>
+          <p>Esta es una guía breve y práctica &mdash; sin jerga, sin alarmismo. Al terminar sabrás qué es la visibilidad en Perplexity, por qué es un problema distinto al de ChatGPT y las cinco cosas que cualquier negocio puede empezar este mes para que te citen.</p>
+
+          <h2>¿Qué es la visibilidad en Perplexity?</h2>
+          <p>Cuando alguien le pregunta a Perplexity «¿cuál es la mejor agencia de marketing digital en Mallorca?» o «compara tres instaladores de placas solares en España», redacta una respuesta y la acompaña de citas numeradas: las páginas web concretas de las que ha tomado la información. La visibilidad en Perplexity consiste en lograr que tu negocio sea una de esas fuentes citadas y, a ser posible, uno de los nombres dentro de la propia respuesta.</p>
+          <p>Forma parte de la misma familia que la optimización para motores generativos (GEO), pero la mecánica es propia de Perplexity. Las bases del SEO clásico siguen aplicando: son el suelo, no el techo.</p>
+
+          <h2>Por qué Perplexity es un problema aparte</h2>
+          <p>La tentación es tratar la «visibilidad en IA» como una sola tarea. No lo es. Perplexity se diferencia de ChatGPT en tres aspectos que cambian lo que haces en la práctica:</p>
+          <ol>
+            <li><strong>Funciona por recuperación.</strong> Perplexity hace una búsqueda web en vivo para casi cada pregunta y construye la respuesta con lo que encuentra en ese momento, con citas visibles. Se apoya menos en lo que un modelo «recuerda» y más en lo que es rastreable, actual y citable hoy. Las páginas frescas y bien estructuradas pesan aquí más que casi en cualquier otro sitio.</li>
+            <li><strong>El solapamiento con ChatGPT es pequeño.</strong> En nuestras propias mediciones de partida, y en análisis independientes que comparan decenas de miles de prompts, el conjunto de dominios que cita Perplexity apenas coincide con el que cita ChatGPT, muchas veces solo uno de cada diez. Puedes dominar uno y ser invisible en el otro. Por eso «estamos en ChatGPT» no te dice nada sobre Perplexity.</li>
+            <li><strong>Las citas tienen valor directo.</strong> Como Perplexity muestra sus fuentes de forma destacada y la gente hace clic en ellas, una cita no es una métrica de vanidad: es una recomendación con tráfico medible detrás.</li>
+          </ol>
+
+          <h2>Cinco acciones para este mes</h2>
+          <h3>1. Mide tu punto de partida en Perplexity</h3>
+          <p>Dedica una hora a lanzar 20 preguntas de compra reales en Perplexity en sí, no en ChatGPT ni en Gemini. Usa las preguntas que haría un cliente de verdad: «mejor X en Y para un presupuesto Z», «compara A y B». Anota qué competidores aparecen y qué páginas se citan. Esa lista es tu línea de salida, y será distinta de tu línea de partida en ChatGPT.</p>
+
+          <h3>2. Deja que PerplexityBot te rastree</h3>
+          <p>Como Perplexity funciona por recuperación, una página que no puede leer es una página que no puede citar. Comprueba que tu <code>robots.txt</code> no bloquea <code>PerplexityBot</code> ni <code>Perplexity-User</code>, que tus páginas clave responden con un 200 limpio y que tu contenido importante no queda oculto tras scripts que un rastreador no ejecuta. Es poco glamuroso y es el motivo más habitual por el que una buena página nunca llega a aparecer.</p>
+
+          <h3>3. Escribe la respuesta primero, en bloques</h3>
+          <p>Perplexity toma el contenido por trozos, así que estructura para eso. Pon la respuesta directa en las primeras una o dos frases bajo cada título, antes del contexto. Usa párrafos cortos, listas claras y una tabla comparativa donde encaje. Una página que abre con «las tres mejores opciones son…» se cita mucho más fácil que otra que calienta motores durante cuatro párrafos.</p>
+
+          <h3>4. Consigue que te citen donde Perplexity ya confía</h3>
+          <p>Perplexity da mucho peso a un círculo relativamente pequeño de fuentes: Wikipedia y Wikidata para los datos de entidad, plataformas de reseñas consolidadas (G2, Capterra, Trustpilot), publicaciones sectoriales serias y, en especial, Reddit, uno de sus dominios más citados. Ganarte menciones honestas en ese círculo hace más por tu visibilidad en Perplexity que otra página en tu propia web. El PR basado en afirmaciones verificables es lo que gana esas menciones.</p>
+
+          <h3>5. Mide cada mes</h3>
+          <p>Repite los mismos 20 prompts todos los meses. Controla qué respuestas ya te nombran y cuáles todavía no. Herramientas como Profound, AthenaHQ y Otterly automatizan esto entre motores, o hazlo a mano en una hoja de cálculo. Lo que no mides, no lo puedes mejorar.</p>
+
+          <div className="prose-callout">
+            <div className="prose-callout-kicker">La versión honesta</div>
+            <p>La visibilidad en Perplexity se gana, no se hackea. Como el motor funciona por recuperación, a veces ves movimiento más rápido que en otras plataformas una vez arreglado el rastreo y la estructura, pero una presencia duradera sigue exigiendo un par de meses de trabajo constante en contenido, estructura y confianza de terceros. Quien te prometa citas instantáneas te está vendiendo algo.</p>
+          </div>
+
+          <h2>Cómo puede ayudarte pmax</h2>
+          <p>Gestionamos programas de visibilidad en IA para empresas de toda Europa, y tratamos Perplexity, ChatGPT y los AI Overviews de Google como superficies distintas con marcadores distintos, porque lo son. Eso significa una auditoría por motor, las bases técnicas, contenido y PR, y una medición mensual que de verdad puedas leer. Si quieres una radiografía gratuita de una página sobre tu visibilidad en Perplexity, <a href="/es/contact/?topic=perplexity-audit">cuéntanos brevemente tu situación</a> y te la enviamos en una semana.</p>
+
+          <h2>Preguntas frecuentes</h2>
+          <h3>¿Cómo consigo que Perplexity cite mi negocio?</h3>
+          <p>Asegúrate de que PerplexityBot puede rastrear tu web, publica contenido orientado a la respuesta y fácil de citar, y gánate menciones en las fuentes en las que Perplexity confías: Wikipedia, sitios de reseñas consolidados, publicaciones serias y hilos de Reddit relevantes. Después mide cada mes y sé constante.</p>
+
+          <h3>¿Por qué no aparece mi empresa en Perplexity aunque posiciona en Google?</h3>
+          <p>Porque son sistemas distintos. Perplexity prioriza páginas que puede leer en vivo y citar con claridad, y se apoya en un círculo reducido de dominios de confianza para validar. Una página puede posicionar en Google y aun así ser difícil de rastrear, difícil de citar o carecer de las señales de terceros que Perplexity busca.</p>
+
+          <h3>¿La visibilidad en Perplexity es lo mismo que en ChatGPT?</h3>
+          <p>No. Los dominios que cita cada motor coinciden sorprendentemente poco, así que cada uno necesita su propia línea de partida y, a menudo, sus propias tácticas. Aparecer en uno no se traslada al otro.</p>
+
+          <h3>¿Cuánto tarda en notarse la visibilidad en Perplexity?</h3>
+          <p>Los arreglos técnicos y de estructura pueden notarse en semanas, porque Perplexity vuelve a rastrear y a responder de forma continua. Construir la confianza de terceros que hace fiables las citas suele llevar entre dos y tres meses de trabajo constante.</p>
+
+          <h2>Lecturas relacionadas</h2>
+          <ul>
+            <li><a href="/es/services/ai-visibility/">Nuestro servicio de visibilidad en IA</a> — qué incluye un programa completo</li>
+            <li><a href="/es/blog/how-to-get-mentioned-by-chatgpt/">Cómo conseguir que ChatGPT recomiende tu negocio</a> — la guía hermana para el otro gran motor</li>
+            <li><a href="/es/blog/gpt-shopping/">Qué significa «ChatGPT Shopping» para el e-commerce en 2026</a></li>
+          </ul>
+        </>
+      ),
+    },
     'how-to-get-mentioned-by-chatgpt': {
       toc: ['Qué es la visibilidad en IA', 'Por qué importa ahora', '5 acciones para este mes', 'Cómo puede ayudar pmax', 'Lecturas recomendadas'],
       prose: (<>

@@ -26,6 +26,7 @@ export const posts: Post[] = [
     deck: "A plain-English guide to Perplexity visibility in 2026 — what it is, why it's different from ChatGPT, and five moves to get your business cited.",
     variant: 'is-mint',
     featured: true,
+    hasTranslations: true,
   },
   {
     slug: 'performance-max-bidding-change-august-2026',
