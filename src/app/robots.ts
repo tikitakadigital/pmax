@@ -18,9 +18,11 @@ export default function robots(): MetadataRoute.Robots {
       },
       // AI retrieval bots — explicit allow so citations are not blocked
       { userAgent: 'OAI-SearchBot', allow: '/' },      // ChatGPT search results
+      { userAgent: 'ChatGPT-User', allow: '/' },       // ChatGPT user-triggered fetch
       { userAgent: 'Claude-SearchBot', allow: '/' },   // Claude search
+      { userAgent: 'Claude-User', allow: '/' },        // Claude user-triggered fetch
       { userAgent: 'PerplexityBot', allow: '/' },      // Perplexity real-time retrieval
-      { userAgent: 'Perplexity-User', allow: '/' },   // Perplexity user-triggered fetch
+      { userAgent: 'Perplexity-User', allow: '/' },    // Perplexity user-triggered fetch
       // AI training crawlers — block (does not affect retrieval or citations)
       { userAgent: 'GPTBot', disallow: '/' },
       { userAgent: 'ClaudeBot', disallow: '/' },
