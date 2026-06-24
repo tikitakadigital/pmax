@@ -51,6 +51,7 @@ export const org = {
     sameAs: 'https://www.linkedin.com/in/philipp-enders/',
   },
   sameAs: [
+    'https://www.wikidata.org/wiki/Q140329835',
     'https://www.linkedin.com/company/pmax-online-s-l/',
     'https://www.facebook.com/profile.php?viewas=100000686899395&id=61590296614624',
   ],
