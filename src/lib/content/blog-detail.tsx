@@ -152,7 +152,7 @@ export const blogDetails: BlogDetail[] = [
         <h3>4. Get cited where Perplexity already trusts</h3>
         <p>Perplexity weights a relatively small circle of sources heavily &mdash; Wikipedia and Wikidata for entity facts, established review platforms (G2, Capterra, Trustpilot), reputable industry publications, and notably Reddit, which is one of its most-cited domains. Earning honest mentions in that circle does more for your Perplexity visibility than another page on your own site. PR built on verifiable claims is what wins these.</p>
         <h3>5. Measure monthly</h3>
-        <p>Re-run the same 20 prompts every month. Track which answers now name you and which still don&rsquo;t. <a href="https://crunchjunky.io/" target="_blank" rel="noopener noreferrer">CrunchJunky</a> can automate this across engines &mdash; or do it by hand in a spreadsheet. What you don&rsquo;t measure, you can&rsquo;t move.</p>
+        <p>Re-run the same 20 prompts every month. Track which answers now name you and which still don&rsquo;t. <a href="https://crunchjunkie.io/" target="_blank" rel="noopener noreferrer">CrunchJunkie</a> can automate this across engines &mdash; or do it by hand in a spreadsheet. What you don&rsquo;t measure, you can&rsquo;t move.</p>
 
         <div className="prose-callout">
           <div className="prose-callout-kicker">The honest version</div>
@@ -214,7 +214,7 @@ export const blogDetails: BlogDetail[] = [
         <p>Large language models trust sources their training data trusts. That usually means: Wikipedia (if you&rsquo;re large enough to merit a page), trade publications, established review sites in your category (G2, Capterra, Trustpilot, Tripadvisor depending on your industry), and high-authority news mentions. PR built around verifiable claims and expert commentary tends to win those mentions.</p>
         <p>Beware: AI models penalise sources that read as promotional. The phrase &ldquo;sponsored content&rdquo; in your bylines does more harm than good.</p>
         <h3>5. Measure monthly</h3>
-        <p>Re-run those same 20 prompts every month. Track which mentions appear, in what context, with what sentiment. <a href="https://crunchjunky.io/" target="_blank" rel="noopener noreferrer">CrunchJunky</a> can automate this &mdash; or you can do it manually for a few hours a month. Either way: if you don&rsquo;t measure it, you can&rsquo;t improve it.</p>
+        <p>Re-run those same 20 prompts every month. Track which mentions appear, in what context, with what sentiment. <a href="https://crunchjunkie.io/" target="_blank" rel="noopener noreferrer">CrunchJunkie</a> can automate this &mdash; or you can do it manually for a few hours a month. Either way: if you don&rsquo;t measure it, you can&rsquo;t improve it.</p>
         <div className="prose-callout">
           <div className="prose-callout-kicker">The honest version</div>
           <p>AI search visibility isn&rsquo;t a hack. It&rsquo;s earned. Most businesses will see their first reliable citations in 8&ndash;12 weeks of disciplined work. Anyone promising you faster than that is selling you a story &mdash; or doing something that&rsquo;ll get you delisted later.</p>

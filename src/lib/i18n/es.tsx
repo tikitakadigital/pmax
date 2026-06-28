@@ -940,7 +940,7 @@ export const es = {
           <p>Perplexity da mucho peso a un círculo relativamente pequeño de fuentes: Wikipedia y Wikidata para los datos de entidad, plataformas de reseñas consolidadas (G2, Capterra, Trustpilot), publicaciones sectoriales serias y, en especial, Reddit, uno de sus dominios más citados. Ganarte menciones honestas en ese círculo hace más por tu visibilidad en Perplexity que otra página en tu propia web. El PR basado en afirmaciones verificables es lo que gana esas menciones.</p>
 
           <h3>5. Mide cada mes</h3>
-          <p>Repite los mismos 20 prompts todos los meses. Controla qué respuestas ya te nombran y cuáles todavía no. <a href="https://crunchjunky.io/" target="_blank" rel="noopener noreferrer">CrunchJunky</a> automatiza esto entre motores, o hazlo a mano en una hoja de cálculo. Lo que no mides, no lo puedes mejorar.</p>
+          <p>Repite los mismos 20 prompts todos los meses. Controla qué respuestas ya te nombran y cuáles todavía no. <a href="https://crunchjunkie.io/" target="_blank" rel="noopener noreferrer">CrunchJunkie</a> automatiza esto entre motores, o hazlo a mano en una hoja de cálculo. Lo que no mides, no lo puedes mejorar.</p>
 
           <div className="prose-callout">
             <div className="prose-callout-kicker">La versión honesta</div>
@@ -996,7 +996,7 @@ export const es = {
         <h3>4. Consigue que te citen en lugares en los que la IA confía</h3>
         <p>Los grandes modelos de lenguaje confían en fuentes en las que confían sus datos de entrenamiento: Wikipedia, publicaciones del sector, sitios de reseñas establecidos en tu categoría (G2, Capterra, Trustpilot, Tripadvisor según tu industria), y menciones en medios de alta autoridad. Las relaciones públicas basadas en afirmaciones verificables y comentarios de expertos tienden a ganar esas menciones.</p>
         <h3>5. Mide mensualmente</h3>
-        <p>Vuelve a ejecutar esas mismas 20 consultas cada mes. <a href="https://crunchjunky.io/" target="_blank" rel="noopener noreferrer">CrunchJunky</a> puede automatizarlo — o puedes hacerlo manualmente. De cualquier forma: si no lo mides, no puedes mejorarlo.</p>
+        <p>Vuelve a ejecutar esas mismas 20 consultas cada mes. <a href="https://crunchjunkie.io/" target="_blank" rel="noopener noreferrer">CrunchJunkie</a> puede automatizarlo — o puedes hacerlo manualmente. De cualquier forma: si no lo mides, no puedes mejorarlo.</p>
         <div className="prose-callout">
           <div className="prose-callout-kicker">La versión honesta</div>
           <p>La visibilidad en IA no es un truco. Se gana. La mayoría de los negocios ven sus primeras citas fiables en 8–12 semanas de trabajo disciplinado.</p>
