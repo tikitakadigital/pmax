@@ -8,7 +8,7 @@ import StatCounter from '@/components/StatCounter'
 import SectionHead from '@/components/SectionHead'
 import PromoBlock from '@/components/PromoBlock'
 import FaqList from '@/components/FaqList'
-import { org, website, faqPage } from '@/lib/schema'
+import { org, website, faqPage, breadcrumb } from '@/lib/schema'
 import { siteAlternates } from '@/lib/hreflang'
 import { services } from '@/lib/content/services'
 import { cases } from '@/lib/content/cases'
@@ -63,6 +63,7 @@ const jsonLd = [
   { '@context': 'https://schema.org', ...org },
   website,
   { ...faqPage(homeFaqs), inLanguage: 'en' },
+  breadcrumb([{ name: 'Home', url: 'https://pmax.online/' }]),
 ]
 
 export default function HomePage() {
