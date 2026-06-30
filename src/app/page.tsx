@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   title: 'Digital marketing agency in Mallorca | pmax',
   description: 'Google Ads, Meta, LinkedIn, SEO and AI search visibility — run from Mallorca for brands across Europe. Flat monthly fees, no percentage of media spend.',
   alternates: siteAlternates('/'),
-  openGraph: { title: 'pmax — Digital marketing agency in Mallorca', url: 'https://pmax.online/', images: [{ url: '/og-image.jpg', width: 1200, height: 630 }] },
+  openGraph: { type: 'website', siteName: 'pmax', title: 'pmax — Digital marketing agency in Mallorca', description: 'Google Ads, Meta, LinkedIn, SEO and AI search visibility — run from Mallorca for brands across Europe. Flat monthly fees, no percentage of media spend.', url: 'https://pmax.online/', images: [{ url: '/og-image.jpg', width: 1200, height: 630 }] },
 }
 
 const marqueeItems = [

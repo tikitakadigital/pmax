@@ -63,6 +63,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       }}),
     },
     openGraph: {
+      siteName: 'pmax',
       title: post.title,
       description: post.deck,
       type: 'article',

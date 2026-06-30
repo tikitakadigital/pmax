@@ -35,6 +35,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
       languages: { 'en': `https://pmax.online/blog/${slug}/`, 'x-default': `https://pmax.online/blog/${slug}/` },
     },
     openGraph: {
+      siteName: 'pmax',
       title: loc?.title ?? locPost?.title ?? post.title,
       description: loc?.deck ?? locPost?.deck ?? post.deck,
       type: 'article',

@@ -22,6 +22,13 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     title: detail?.metaTitle ?? `${service?.title} | pmax`,
     description: detail?.metaDesc ?? service?.deck,
     alternates: siteAlternates(`/services/${slug}/`),
+    openGraph: {
+      type: 'website',
+      siteName: 'pmax',
+      title: detail?.metaTitle ?? `${service?.title} | pmax`,
+      description: detail?.metaDesc ?? service?.deck,
+      url: `https://pmax.online/services/${slug}/`,
+    },
   }
 }
 
