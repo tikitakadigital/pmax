@@ -8,7 +8,7 @@ import StatCounter from '@/components/StatCounter'
 import SectionHead from '@/components/SectionHead'
 import PromoBlock from '@/components/PromoBlock'
 import FaqList from '@/components/FaqList'
-import { org, website, faqPage, breadcrumb } from '@/lib/schema'
+import { org, website, faqPage, breadcrumb, serviceSchema } from '@/lib/schema'
 import { siteAlternates } from '@/lib/hreflang'
 import { services } from '@/lib/content/services'
 import { cases } from '@/lib/content/cases'
@@ -64,6 +64,13 @@ const jsonLd = [
   website,
   { ...faqPage(homeFaqs), inLanguage: 'en' },
   breadcrumb([{ name: 'Home', url: 'https://pmax.online/' }]),
+  serviceSchema({ name: 'AI Search Visibility (GEO)', description: 'More and more people ask ChatGPT, Perplexity or Gemini before they ever open Google. We make sure your brand is the one they recommend — through clean technical foundations, structured data, and content AI models can actually read.', url: 'https://pmax.online/services/ai-visibility/', serviceType: 'AI Search Visibility' }),
+  serviceSchema({ name: 'Google Ads & Performance Max', description: 'Search, Shopping, Performance Max and YouTube — built around a clean conversion setup and a product feed that actually sells. No black boxes.', url: 'https://pmax.online/services/google-ads/', serviceType: 'Google Ads Management' }),
+  serviceSchema({ name: 'Paid Social', description: 'Meta, TikTok and LinkedIn — connected to your CRM, fed by a steady creative pipeline, measured against the metric that pays the bills.', url: 'https://pmax.online/services/paid-social/', serviceType: 'Paid Social Advertising' }),
+  serviceSchema({ name: 'SEO', description: 'Technical SEO, content and digital PR. We earn rankings the slow, honest way — and the same work compounds across AI search.', url: 'https://pmax.online/services/seo/', serviceType: 'Search Engine Optimisation' }),
+  serviceSchema({ name: 'Conversion Design (CRO)', description: 'More revenue from the same traffic. We design, test and ship the changes that move conversion rate — not the ones that win design awards.', url: 'https://pmax.online/services/conversion-design/', serviceType: 'Conversion Rate Optimisation' }),
+  serviceSchema({ name: 'Analytics & Tracking', description: "Server-side GTM, consent-mode v2, CRM conversion imports, dashboards that don't lie. The foundation everything else stands on.", url: 'https://pmax.online/services/analytics/', serviceType: 'Analytics and Tracking' }),
+  serviceSchema({ name: 'Creative Production', description: 'A steady flow of ads, landing pages and video — built for testing, not for awards. Because the creative is the campaign.', url: 'https://pmax.online/services/creative/', serviceType: 'Creative Production' }),
 ]
 
 export default function HomePage() {

@@ -47,7 +47,7 @@ export const blogDetails: BlogDetail[] = [
     ],
     prose: (
       <>
-        <p>On 15 June Google announced three bidding and budgeting changes in a single post. Two are opt-in betas. The third isn&rsquo;t optional, lands automatically on <strong>17 August</strong>, and for a lot of accounts it means a higher cost per conversion. If you run Performance Max, this is the one to read.</p>
+        <p>On 15 June <a href="https://support.google.com/google-ads/answer/17061251" target="_blank" rel="noopener noreferrer">Google announced three bidding and budgeting changes</a> in a single post. Two are opt-in betas. The third isn&rsquo;t optional, lands automatically on <strong>17 August</strong>, and for a lot of accounts it means a higher cost per conversion. If you run Performance Max, this is the one to read.</p>
         <p>The short version: campaigns that have been <em>beating</em> their Target CPA or Target ROAS are about to be steered back toward the target you actually set. There&rsquo;s a six-week window to act on your own terms first &mdash; and a tool arriving on <strong>6 July</strong> to help you do it.</p>
 
         <h2>The change: Bidding Target Optimization</h2>
@@ -287,7 +287,7 @@ export const blogDetails: BlogDetail[] = [
     toc: ['The volume problem', 'Template the brand, not the asset', 'Hooks, hooks, hooks', 'UGC at scale', 'Performance creative briefing', 'Cull weekly, scale monthly'],
     prose: (
       <>
-        <p>Meta&rsquo;s own research says creative is the single biggest driver of paid social performance. Most brands&rsquo; creative pipelines were built for a world where it was not. Here is how to build one that fits 2026.</p>
+        <p><a href="https://www.facebook.com/business/news/insights/high-quality-creative-increases-ad-roi" target="_blank" rel="noopener noreferrer">Meta&rsquo;s own research</a> says creative is the single biggest driver of paid social performance. Most brands&rsquo; creative pipelines were built for a world where it was not. Here is how to build one that fits 2026.</p>
         <h2>The volume problem</h2>
         <p>Meta&rsquo;s creative library now needs 10&ndash;20 fresh assets a week to keep performance stable. Most brands ship 2&ndash;3. The gap shows up as rising frequency, falling CTR, and a CPM that drifts up every quarter.</p>
         <h2>Template the brand, not the asset</h2>
