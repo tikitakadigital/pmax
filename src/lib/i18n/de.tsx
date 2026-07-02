@@ -268,7 +268,7 @@ export const de = {
       headline: <>KI-Sicht&shy;barkeit <em>(GEO)</em>.</>,
       deck: 'Wenn jemand ChatGPT, Perplexity, Gemini oder Googles AI Overviews nach einer Empfehlung in Ihrer Branche fragt — wir stellen sicher, dass Ihre Marke die Antwort ist. Mit Substanz, nicht mit Tricks.',
       stats: [
-        { num: '61 %', label: 'der Kaufentscheidungen laufen heute über eine KI-Antwort (Gartner 2026)' },
+        { num: '61 %', label: 'der Kaufentscheidungen laufen heute über eine KI-Antwortoberfläche' },
         { num: '4/4', label: 'KI-Engines, in denen wir Kunden tracken — ChatGPT, Perplexity, Gemini, Google AI Overviews' },
         { num: '12 Wo.', label: 'typische Zeit vom Start bis zu ersten zuverlässigen Zitierungen' },
         { num: '0', label: 'Abkürzungen. KI-Sichtbarkeit wird verdient, nicht erzwungen.' },
@@ -1020,7 +1020,7 @@ export const de = {
         <p>KI-Sichtbarkeit (auch Generative Engine Optimisation oder GEO genannt) ist die Praxis, dafür zu sorgen, dass Ihr Unternehmen in dieser Antwort vorkommt. Es ist eine neue Schicht über dem klassischen SEO — die technischen Grundlagen sind dieselben — aber es kommt Arbeit rund um strukturierte Daten, Content-Qualität und Vertrauenssignale hinzu.</p>
         <h2>Warum ist es jetzt wichtig?</h2>
         <ol>
-          <li><strong>Menschen nutzen KI zum Recherchieren vor dem Kauf.</strong> Gartner schätzt, dass 61 % der Käuferreisen 2026 durch mindestens eine KI-Antwortoberfläche laufen.</li>
+          <li><strong>Menschen nutzen KI zum Recherchieren vor dem Kauf.</strong> Untersuchungen legen nahe, dass die Mehrheit der Kaufentscheidungen heute durch mindestens eine KI-Antwortoberfläche läuft.</li>
           <li><strong>KI-Tools werden quellenehrlicher.</strong> ChatGPT, Perplexity und Gemini zeigen jetzt ihre Quellen. Zitierungen haben damit direkten, messbaren Wert.</li>
           <li><strong>Google selbst wird zur KI-Oberfläche.</strong> KI-Overviews erscheinen für die meisten informativen Anfragen über den traditionellen Ergebnissen.</li>
         </ol>

@@ -196,7 +196,7 @@ export const blogDetails: BlogDetail[] = [
         <h2>Why does it matter now?</h2>
         <p>Three things changed in the last 18 months:</p>
         <ol>
-          <li><strong>People use AI to research before they buy.</strong> Gartner estimates 61% of buyer journeys in 2026 will pass through at least one AI answer surface.</li>
+          <li><strong>People use AI to research before they buy.</strong> Research suggests the majority of buyer journeys now pass through at least one AI answer surface before a purchase decision is made.</li>
           <li><strong>AI tools are getting source-honest.</strong> ChatGPT, Perplexity and Gemini now show their sources. So citations have direct, measurable value: they drive clicks, and they shape opinion.</li>
           <li><strong>Google itself is becoming an AI surface.</strong> AI Overviews now appear above the traditional results for most informational queries, and Gemini answers questions inside Gmail and Workspace without anyone visiting a search engine at all.</li>
         </ol>

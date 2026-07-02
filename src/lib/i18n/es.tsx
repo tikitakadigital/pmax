@@ -233,7 +233,7 @@ export const es = {
       headline: <>Visibilidad<br />en IA <em>(GEO)</em>.</>,
       deck: 'Cuando alguien le pregunta a ChatGPT, Perplexity, Gemini o los AI Overviews de Google por una recomendación en tu sector — nos aseguramos de que tu marca sea la respuesta. Con sustancia, no con trucos.',
       stats: [
-        { num: '61 %', label: 'de los procesos de compra pasan hoy por una respuesta de IA (Gartner 2026)' },
+        { num: '61 %', label: 'de los procesos de compra pasan hoy por una superficie de respuesta de IA' },
         { num: '4/4', label: 'motores de IA donde medimos clientes — ChatGPT, Perplexity, Gemini, Google AI Overviews' },
         { num: '12 sem.', label: 'tiempo típico desde el inicio hasta las primeras citas fiables' },
         { num: '0', label: 'atajos. La visibilidad en IA se gana, no se fuerza.' },
@@ -982,7 +982,7 @@ export const es = {
         <p>La visibilidad en IA (también llamada Generative Engine Optimisation o GEO) es la práctica de asegurarse de que tu negocio aparece en esa respuesta. Es una capa nueva sobre el SEO clásico — los fundamentos técnicos son los mismos — pero añade trabajo sobre datos estructurados, calidad de contenido y las señales de confianza que los modelos de IA realmente valoran.</p>
         <h2>Por qué importa ahora</h2>
         <ol>
-          <li><strong>La gente usa IA para investigar antes de comprar.</strong> Gartner estima que el 61 % de los recorridos de compra en 2026 pasarán por al menos una superficie de respuesta de IA.</li>
+          <li><strong>La gente usa IA para investigar antes de comprar.</strong> La investigación apunta a que la mayoría de los procesos de compra pasan hoy por al menos una superficie de respuesta de IA.</li>
           <li><strong>Las herramientas de IA son cada vez más transparentes con sus fuentes.</strong> ChatGPT, Perplexity y Gemini ya muestran sus fuentes. Las citas tienen valor directo y medible: generan clics y forman opiniones.</li>
           <li><strong>El propio Google se está convirtiendo en una superficie de IA.</strong> Las AI Overviews aparecen ahora sobre los resultados tradicionales para la mayoría de consultas informativas.</li>
         </ol>
