@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 }
 
 const faqs = [
-  { q: 'What services does pmax offer?', a: 'pmax offers seven core services: AI search visibility (GEO), Google Ads (Search, Shopping, Performance Max, YouTube), paid social (Meta, TikTok, LinkedIn, Microsoft Ads), SEO (technical, content, digital PR, local), conversion design (CRO and A/B testing), analytics and tracking (GA4, server-side GTM, Consent Mode v2, CRM-fed offline conversions), and creative production (performance creative, landing pages, UGC video at scale).' },
+  { q: 'What services does pmax offer?', a: 'pmax offers eight services: Visibility Engineering (our flagship integrated GEO, SEO, digital PR and reputation programme), AI search visibility (GEO), Google Ads (Search, Shopping, Performance Max, YouTube), paid social (Meta, TikTok, LinkedIn, Microsoft Ads), SEO (technical, content, digital PR, local), conversion design (CRO and A/B testing), analytics and tracking (GA4, server-side GTM, Consent Mode v2, CRM-fed offline conversions), and creative production (performance creative, landing pages, UGC video at scale).' },
   { q: 'What size of business does pmax typically work with?', a: 'Every size. Some of our best work has been for small Mallorca businesses doing their first proper Google or Meta campaigns. We also run programmes for European brands spending six figures a month on media. What matters more than your budget is whether the work can actually move your business — we will tell you honestly on the first call.' },
   { q: 'Do you charge a percentage of media spend?', a: 'No. We charge flat monthly retainers. We believe percentage-of-spend creates the wrong incentives — agencies recommending higher budgets to grow their own revenue. A flat fee aligns us with what is genuinely right for your business, which sometimes means recommending you spend less, not more.' },
   { q: 'Where is pmax based and which markets do you serve?', a: 'We are based in Calvià, Mallorca, Spain, with the majority of our 14-person team in our Mallorca office. We work in English, German and Spanish, serving clients across the DACH region, Iberia, the UK, Benelux and the Nordics. About 60% of our clients are German-speaking, 25% English-speaking, 15% Spanish-speaking.' },
@@ -52,7 +52,7 @@ export default function ServicesPage() {
               Performance marketing,<br />built like <em>engineering</em>.
             </h1>
             <p className="page-intro-deck">
-              Seven services. One operating system. We don&apos;t sell channels in isolation — we run a system where Google Ads, Meta, SEO, AI search and analytics all work from the same data and the same goal: profitable growth you can actually measure.
+              Eight services. One operating system. We don&apos;t sell channels in isolation — we run a system where Google Ads, Meta, SEO, AI search and analytics all work from the same data and the same goal: profitable growth you can actually measure.
             </p>
           </div>
         </section>

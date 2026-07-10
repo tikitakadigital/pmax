@@ -92,6 +92,19 @@ export const services: Service[] = [
     metaTitle: 'Performance Creative Production | pmax',
     metaDesc: 'Static, motion and UGC video production built for paid media testing. Weekly creative cycles wired to your media performance data.',
   },
+  {
+    slug: 'visibility-engineering',
+    num: '08',
+    badge: 'Flagship',
+    title: 'Visibility Engineering',
+    deck: 'GEO, SEO, digital PR and reputation management — coordinated into one strategy. Because search engines and AI platforms judge brands holistically, not by isolated signals.',
+    longDeck: 'Visibility Engineering is our integrated approach to modern brand discoverability — combining Generative Engine Optimisation (GEO), SEO, digital PR and online reputation management so your brand is found, trusted and chosen across Google and AI search.',
+    tags: ['GEO', 'SEO', 'Digital PR', 'Reputation'],
+    variant: 'is-mint',
+    featured: true,
+    metaTitle: 'Generative Engine Optimisation Agency | Visibility Engineering',
+    metaDesc: 'Visibility Engineering by pmax: GEO, SEO, digital PR and reputation management. Get discovered, trusted and chosen across Google and AI search.',
+  },
 ]
 
 export function getService(slug: string) {

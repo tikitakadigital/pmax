@@ -41,6 +41,8 @@ export const org = {
   knowsAbout: [
     'Google Ads', 'Performance Max', 'Meta Ads', 'LinkedIn Ads', 'TikTok Ads',
     'SEO', 'AI Search Visibility', 'Generative Engine Optimisation', 'GEO',
+    'LLM Marketing', 'Entity Optimisation', 'Knowledge Graph Optimisation',
+    'AI Citation Analysis', 'Digital PR', 'Online Reputation Management',
     'Conversion Rate Optimisation', 'Analytics', 'Server-side Tracking', 'Creative Production',
   ],
   knowsLanguage: ['en', 'de', 'es'],
