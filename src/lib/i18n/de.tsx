@@ -185,7 +185,8 @@ export const de = {
         <a href="/de/services/ai-visibility/">KI-Sichtbarkeit</a>,{' '}
         <a href="/de/services/analytics/">Analytics</a>,{' '}
         <a href="/de/services/conversion-design/">Conversion Design</a> und{' '}
-        <a href="/de/services/creative/">Creative Production</a> — sieben Leistungen, ein System.{' '}
+        <a href="/de/services/creative/">Creative Production</a> und{' '}
+        <a href="/de/services/visibility-engineering/">Visibility Engineering</a> — acht Leistungen, ein System.{' '}
         <a href="/de/services/">Alle Leistungen ansehen →</a>
       </>
     ),
@@ -214,10 +215,10 @@ export const de = {
 
   services: {
     metaTitle: 'Performance-Marketing-Leistungen — Google Ads, SEO & KI | pmax',
-    metaDesc: 'Google Ads, Meta, LinkedIn, SEO, KI-Sichtbarkeit, Conversion Design und Analytics — sieben Leistungen für messbares, profitables Wachstum.',
+    metaDesc: 'Google Ads, Meta, LinkedIn, SEO, KI-Sichtbarkeit, Conversion Design und Analytics — acht Leistungen für messbares, profitables Wachstum.',
     eyebrow: '01 — Was wir tun',
     title: <>Performance Marketing,<br />gebaut wie <em>Engineering</em>.</>,
-    deck: 'Sieben Leistungen. Ein System. Wir verkaufen keine isolierten Kanäle — wir betreiben ein System, in dem Google Ads, Meta, SEO, KI-Suche und Analytics auf denselben Daten und dasselbe Ziel ausgerichtet sind: profitables Wachstum, das sich wirklich messen lässt.',
+    deck: 'Acht Leistungen. Ein System. Wir verkaufen keine isolierten Kanäle — wir betreiben ein System, in dem Google Ads, Meta, SEO, KI-Suche und Analytics auf denselben Daten und dasselbe Ziel ausgerichtet sind: profitables Wachstum, das sich wirklich messen lässt.',
     allKicker: 'Alle Leistungen',
     allTitle: 'Wo möchten Sie anfangen?',
     allAside: 'Die meisten Kunden starten mit ein oder zwei Leistungen und bauen das Programm aus, sobald die Zahlen stimmen. Das ist uns genauso recht.',
@@ -231,7 +232,7 @@ export const de = {
     faqs: [
       {
         q: 'Welche Leistungen bietet pmax an?',
-        a: 'pmax bietet sieben Kernleistungen: KI-Sichtbarkeit (GEO), Google Ads (Search, Shopping, Performance Max, YouTube), Paid Social (Meta, TikTok, LinkedIn, Microsoft Ads), SEO (technisch, inhaltlich, digital PR, lokal), Conversion Design (CRO und A/B-Tests), Analytics & Tracking (GA4, server-seitiges GTM, Consent Mode v2, CRM-basierte Offline-Conversions) und Creative Production (Performance-Creatives, Landingpages, UGC-Video in hoher Kadenz).',
+        a: 'pmax bietet acht Kernleistungen: Visibility Engineering (unser Flagship-Programm aus GEO, SEO, digitaler PR und Reputation), KI-Sichtbarkeit (GEO), Google Ads (Search, Shopping, Performance Max, YouTube), Paid Social (Meta, TikTok, LinkedIn, Microsoft Ads), SEO (technisch, inhaltlich, digital PR, lokal), Conversion Design (CRO und A/B-Tests), Analytics & Tracking (GA4, server-seitiges GTM, Consent Mode v2, CRM-basierte Offline-Conversions) und Creative Production (Performance-Creatives, Landingpages, UGC-Video in hoher Kadenz).',
       },
       {
         q: 'Mit welcher Unternehmensgröße arbeitet pmax?',
@@ -258,6 +259,7 @@ export const de = {
       { slug: 'conversion-design', num: '05', title: 'Conversion Design (CRO)', deck: 'Mehr Umsatz aus demselben Traffic. Wir entwickeln, testen und liefern die Änderungen, die die Conversion Rate bewegen — nicht die, die Design-Preise gewinnen.', tags: ['A/B-Tests', 'UX-Research', 'Funnel-Design'], variant: 'is-yellow' },
       { slug: 'analytics', num: '06', title: 'Analytics & Tracking', deck: 'Server-seitiges GTM, Consent Mode v2, CRM-Conversion-Imports, Dashboards ohne Lügen. Das Fundament, auf dem alles andere steht.', tags: ['GA4', 'Server-side', 'Consent Mode', 'BI-Dashboards'], variant: 'is-outlined' },
       { slug: 'creative', num: '07', title: 'Creative Production', deck: 'Ein stetiger Strom an Anzeigen, Landingpages und Videos — gebaut zum Testen, nicht für Awards. Denn das Creative ist die Kampagne.', tags: ['Static', 'Motion', 'UGC', 'Landers'], variant: 'is-pink' },
+      { slug: 'visibility-engineering', num: '08', badge: 'Flagship', title: 'Visibility Engineering', deck: 'GEO, SEO, digitale PR und Reputationsmanagement — koordiniert zu einer Strategie. Weil Suchmaschinen und KI-Plattformen Marken ganzheitlich beurteilen, nicht anhand isolierter Signale.', tags: ['GEO', 'SEO', 'Digitale PR', 'Reputation'], variant: 'is-mint', featured: true },
     ],
   },
 
@@ -446,6 +448,110 @@ export const de = {
         { q: 'Wie viel Creative brauche ich monatlich?', a: 'Das hängt vom Budget und der Plattform ab. Als Orientierung: Für Meta-Accounts mit €5.000–€20.000 monatlichem Budget empfehlen wir 10–20 neue Creative-Varianten pro Monat. Darunter hat der Algorithmus nicht genug zum Lernen. Darüber beginnt die Produktion Engpässe zu schaffen.' },
         { q: 'Arbeiten Sie mit unseren internen Designern zusammen?', a: 'Ja, gern. Wir können als Creative-Direktion und Brief-Ersteller fungieren, während Ihr Team die Produktion übernimmt. Oder wir liefern alles vollständig — Strategie, Brief, Produktion, Daten-Auswertung. Beides funktioniert; wir passen uns Ihrem Setup an.' },
         { q: 'Gibt es Mindestvolumen für Creative Production?', a: 'Nein. Aber unter einer bestimmten Schwelle macht ein laufendes Creative-Programm wirtschaftlich keinen Sinn. Für kleinere Accounts kann es sinnvoller sein, alle 4–6 Wochen einen Creative-Sprint zu machen statt wöchentlich zu produzieren.' },
+      ],
+    },
+    'visibility-engineering': {
+      metaTitle: 'Generative Engine Optimisation Agentur | Visibility Engineering',
+      metaDesc: 'Visibility Engineering von pmax: GEO, SEO, digitale PR und Reputationsmanagement. Entdeckt, vertraut und gewählt werden — in Google und KI-Suche.',
+      headline: <>Visibility<br />Engineering.</>,
+      deck: 'Wir helfen Ihnen, die Autorität aufzubauen, durch die Ihre Marke gefunden, vertraut und gewählt wird — in Google und auf allen relevanten KI-Suchplattformen.',
+      stats: [
+        { num: '51 %', label: 'der Verbraucher sagen, generative KI hat ihre Recherche-Gewohnheiten verändert' },
+        { num: '45 %', label: 'weniger minderwertige Inhalte in Google nach dem größten Qualitäts-Update seit Jahren' },
+        { num: '60+', label: 'Jahre kombinierte Erfahrung in SEO, digitaler PR und Marken-Reputation' },
+        { num: '4', label: 'Disziplinen in einer Strategie — GEO, SEO, digitale PR, Reputationsmanagement' },
+      ],
+      prose: (
+        <>
+          <p>
+            Digitale Markensichtbarkeit aufzubauen und zu halten wird immer komplexer. Kaum haben Sie Keywords gemeistert, verändern ChatGPT, Claude und Gemini die Spielregeln grundlegend.{' '}
+            <a href="https://www.gartner.com/en/newsroom/press-releases/gartner-survey-finds-only-one-third-of-consumers-say-genai-rivals-search-engines-marketers-must-optimize-for-both-ai-driven-and-traditional-search" target="_blank" rel="noopener noreferrer">Laut Gartner haben 51 % der Verbraucher ihre Recherche-Gewohnheiten wegen generativer KI geändert</a> — mehr als die Hälfte nutzt KI heute parallel zur klassischen Suche und erwartet fundierte, vertrauenswürdige Antworten.
+          </p>
+          <p>
+            Ihre Kunden bewegen sich nahtlos zwischen Suchmaschinen, KI-Assistenten, Medienberichten, Bewertungsportalen, Fachpublikationen und Weiterempfehlungen. Jeder Touchpoint beeinflusst, ob Ihre Marke gefunden, vertraut und letztendlich gewählt wird.
+          </p>
+          <p>
+            Die klassische Suche verschwindet nicht. Sie entwickelt sich zu KI-gestützter Entdeckung. Und genau das ist der entscheidende Punkt: Ihre Kunden werden Google weiterhin nutzen — die Frage ist, ob Ihre Marke präsent ist, wenn es darauf ankommt.
+          </p>
+          <h2>SEO ist nicht tot — SEO ist das Fundament von GEO</h2>
+          <p>
+            Entgegen mancher LinkedIn-Posts ist <a href="/de/services/seo/">SEO nicht tot</a>. Kunden nutzen weiterhin Google, und gutes SEO ist eine der tragenden Säulen der <a href="/de/services/ai-visibility/">Generative Engine Optimisation (GEO)</a> — beides lässt sich nicht isoliert betreiben, wenn man digital dominieren will.
+          </p>
+          <p>
+            Nach seinem größten Qualitäts-Update seit Jahren meldet Google, dass Nutzer 45 % weniger minderwertige, unoriginelle Inhalte sehen. Die Botschaft ist klar: Sichtbarkeit gehört Marken, die echte Expertise, Erfahrung, Autorität und Vertrauen nachweisen.
+          </p>
+          <div className="prose-callout">
+            <span className="prose-callout-kicker">Die neue Kernfrage</span>
+            <p>Die Frage lautet nicht mehr: <em>„Für wie viele Keywords ranken wir?"</em></p>
+            <p>Die bessere Frage ist: <strong>Warum sollte man Ihre Marke wählen?</strong></p>
+            <p>
+              Wenn ChatGPT Ihr Unternehmen mit fünf Wettbewerbern vergleicht, wenn Google entscheidet, wer verdient zu ranken, wenn ein Journalist eine Expertenmeinung sucht, wenn ein potenzieller Kunde seine Optionen recherchiert — leuchtet Ihre Expertise wirklich hervor? Stützt Ihr Ruf Ihre Aussagen? Bestätigen Bewertungen, Medienberichte und Online-Präsenz Ihre Glaubwürdigkeit?
+            </p>
+          </div>
+          <h2>Visibility Engineering — der pmax-Ansatz</h2>
+          <p>
+            Bei pmax sind wir überzeugt: Sichtbarkeit wird heute nicht mehr allein durch Optimierung verdient. Sie wird durch Autorität engineered. Visibility Engineering vereint alles, was beeinflusst, ob Ihre Marke gefunden, vertraut und empfohlen wird — nicht nur SEO, nicht nur GEO, nicht nur PR, nicht nur Reputation. Alles zusammen.
+          </p>
+          <p>
+            Denn Kunden — und zunehmend auch KI-Systeme — beurteilen Ihre Website nicht isoliert. Sie beurteilen Ihre Marke. Sie sehen sich Ihre Website an, Ihre Medienberichte, Ihre Bewertungen, Ihre Thought Leadership, Ihre Executive Profile, Ihre Social-Media-Präsenz, Erwähnungen durch Dritte und die Konsistenz Ihres digitalen Fußabdrucks.
+          </p>
+          <p>Diese Signale existieren nicht in Silos. Ihre Strategie sollte es auch nicht.</p>
+          <h2>Unsere Visibility Engineering Leistungen</h2>
+          <h3>KI-Suche &amp; Discovery-Optimierung</h3>
+          <p>
+            Als spezialisierte <a href="/de/services/ai-visibility/">Generative Engine Optimisation Agentur</a> helfen wir Marken, ihre Sichtbarkeit auf KI-gestützten Suchplattformen wie ChatGPT, Google AI Overviews, Gemini, Claude und Perplexity zu verbessern.
+            Unsere Guides: <a href="/de/blog/how-to-get-mentioned-by-chatgpt/">Wie Sie von ChatGPT, Perplexity und Gemini zitiert werden</a> und <a href="/de/blog/perplexity-visibility/">wie Sie Ihre Perplexity-Sichtbarkeit gezielt verbessern</a>.
+          </p>
+          <ul>
+            <li>Search Engine Optimisation (SEO)</li>
+            <li>Generative Engine Optimisation (GEO)</li>
+            <li>LLM-Marketing</li>
+            <li>Entity-Optimierung</li>
+            <li>Strukturierte Content-Strategie</li>
+            <li>Knowledge-Graph-Optimierung</li>
+            <li>KI-Zitatanalyse, -Tracking und Reporting durch <a href="https://crunchjunkie.io/" target="_blank" rel="noopener noreferrer">crunchjunkie</a></li>
+            <li>Search-Authority-Aufbau</li>
+          </ul>
+          <h3>Markenautorität &amp; Online-Reputationsmanagement</h3>
+          <p>KI-Systeme vertrauen zunehmend auf etablierte Quellen. Wir kombinieren technische Optimierung mit strategischer Kommunikation, um die Glaubwürdigkeit aufzubauen, die Journalisten, Kunden, Analysten und KI-Modelle gleichermaßen überzeugt.</p>
+          <ul>
+            <li>Digitale PR</li>
+            <li>Nachrichten- und Medienberichterstattung</li>
+            <li>Fachpublikationen</li>
+            <li>Executive Thought Leadership</li>
+            <li>Bewertungen und Reputationsmanagement</li>
+            <li>Markenerwähnungen</li>
+            <li>Aufbau digitaler Autorität</li>
+          </ul>
+          <h3>Suche, Autorität &amp; Entscheidung</h3>
+          <p>Unser Flagship-Retainer-Programm integriert alle Disziplinen in eine koordinierte Strategie — für mehr Auffindbarkeit, stärkere Reputation und bessere Geschäftsergebnisse.</p>
+          <ul>
+            <li>SEO</li>
+            <li>GEO-Marketing</li>
+            <li>LLM-Marketing</li>
+            <li>Digitale PR</li>
+            <li>Online-Reputationsmanagement</li>
+            <li>Executive Visibility</li>
+            <li>Authority Building</li>
+          </ul>
+          <h2>Warum pmax?</h2>
+          <p>
+            Die meisten Agenturen sind Spezialisten in einer Disziplin — SEO, PR, digitales Marketing oder Brand. Wir glauben nicht, dass die heutige Suchlandschaft in Silos gelöst werden kann. Mit mehr als 60 Jahren kombinierter Erfahrung in Suchmarketing, digitaler Strategie, Public Relations und Marken-Reputation helfen wir Unternehmen, nachhaltige Autorität aufzubauen — keine kurzfristigen Rankings.
+          </p>
+          <p>
+            Denn Sichtbarkeit bedeutet heute nicht mehr nur Ranking. Es geht darum, die Marke zu werden, der Google vertraut, die KI zitiert und die Kunden wählen.
+          </p>
+          <p>Das ist Visibility Engineering.</p>
+        </>
+      ),
+      faqs: [
+        { q: 'Ist pmax eine Generative Engine Optimisation Agentur?', a: 'Ja — GEO ist eine der Kerndisziplinen, die wir anbieten, eingebettet in unseren breiteren Visibility-Engineering-Ansatz gemeinsam mit SEO, digitaler PR und Reputationsmanagement. Wir betrachten KI-Sichtbarkeit als Teil einer umfassenderen Autoritätsstrategie, nicht als isolierte Leistung.' },
+        { q: 'Was ist der Unterschied zwischen SEO und Generative Engine Optimisation (GEO)?', a: 'SEO fokussiert auf das Ranking in klassischen Suchmaschinen wie Google. GEO fokussiert darauf, wie KI-Plattformen wie ChatGPT, Gemini und Perplexity Marken entdecken, zitieren und empfehlen. Beides sind keine Gegensätze — gutes SEO ist eine der Grundlagen von GEO, da KI-Modelle weiterhin stark auf gut optimierte, autoritative Web-Inhalte zurückgreifen.' },
+        { q: 'Brauche ich SEO noch, wenn ich in GEO investiere?', a: 'Ja. KI-Suchplattformen zitieren und fassen dieselbe Gruppe autoritativer, gut strukturierter Inhalte zusammen, die auch in der klassischen Suche ranken. Wer SEO zugunsten von GEO vernachlässigt, schwächt typischerweise beides.' },
+        { q: 'Wie messen Sie Erfolg in der Generative Engine Optimisation?', a: 'Wir nutzen crunchjunkie (crunchjunkie.io), um KI-Zitierungshäufigkeit, Share of Voice auf KI-Plattformen, Sentiment in KI-generierten Antworten und die Häufigkeit zu tracken, mit der eine Marke erscheint, wenn KI-Tools sie mit Wettbewerbern vergleichen. crunchjunkie ist auf KI-Sichtbarkeits-Tracking und -Reporting spezialisiert — Analysen, Daten und Insights sind im Rahmen jedes über pmax gebuchten Visibility-Engineering-Retainers kostenlos enthalten.' },
+        { q: 'Was ist Visibility Engineering?', a: 'Visibility Engineering ist der integrierte pmax-Ansatz für moderne Suchsichtbarkeit, der SEO, Generative Engine Optimisation (GEO), digitale PR und Online-Reputationsmanagement kombiniert. Anstatt diese als separate Leistungen zu behandeln, managen wir sie als eine koordinierte Strategie — denn Suchmaschinen und KI-Plattformen beurteilen Marken ganzheitlich, nicht anhand isolierter Signale.' },
+        { q: 'Kann ein Unternehmen ohne starkes SEO-Fundament in ChatGPT oder Google AI Overviews erscheinen?', a: 'Das ist unwahrscheinlich, zumindest nicht konsistent. KI-Plattformen bevorzugen Quellen, die bereits Expertise, Autorität und Trust-Signale im Web nachweisen — dieselben Signale, die traditionelles SEO und digitale PR aufzubauen anstreben.' },
+        { q: 'Wie lange dauert es, bis Generative Engine Optimisation Ergebnisse zeigt?', a: 'Die Zeiträume variieren je nach Branche und Ausgangspunkt. Da GEO auf denselben Trust- und Autoritätssignalen wie SEO und digitale PR basiert, sehen die meisten Marken spürbare Verbesserungen bei KI-Zitierungen über einen ähnlichen mehrmonatigen Zeitraum wie bei organischen SEO-Gewinnen — nicht über Nacht.' },
       ],
     },
   } as Record<string, ServiceDetail>,

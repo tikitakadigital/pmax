@@ -150,7 +150,8 @@ export const es = {
         <a href="/es/services/ai-visibility/">visibilidad en IA</a>,{' '}
         <a href="/es/services/analytics/">analítica</a>,{' '}
         <a href="/es/services/conversion-design/">diseño de conversión</a> y{' '}
-        <a href="/es/services/creative/">producción creativa</a> — siete servicios, un sistema.{' '}
+        <a href="/es/services/creative/">producción creativa</a> y{' '}
+        <a href="/es/services/visibility-engineering/">Visibility Engineering</a> — ocho servicios, un sistema.{' '}
         <a href="/es/services/">Ver todos los servicios →</a>
       </>
     ),
@@ -179,10 +180,10 @@ export const es = {
 
   services: {
     metaTitle: 'Servicios de marketing digital — Google Ads, SEO & IA | pmax',
-    metaDesc: 'Google Ads, Meta, LinkedIn, SEO, visibilidad en IA, diseño de conversión y analítica — siete servicios para un crecimiento medible y rentable.',
+    metaDesc: 'Google Ads, Meta, LinkedIn, SEO, visibilidad en IA, diseño de conversión y analítica — ocho servicios para un crecimiento medible y rentable.',
     eyebrow: '01 — Qué hacemos',
     title: <>Marketing de performance,<br />construido como <em>ingeniería</em>.</>,
-    deck: 'Siete servicios. Un sistema. No vendemos canales de forma aislada — gestionamos un sistema donde Google Ads, Meta, SEO, búsqueda con IA y analítica trabajan con los mismos datos y el mismo objetivo: crecimiento rentable que puedes medir.',
+    deck: 'Ocho servicios. Un sistema. No vendemos canales de forma aislada — gestionamos un sistema donde Google Ads, Meta, SEO, búsqueda con IA y analítica trabajan con los mismos datos y el mismo objetivo: crecimiento rentable que puedes medir.',
     allKicker: 'Todos los servicios',
     allTitle: '¿Por dónde quieres empezar?',
     allAside: 'La mayoría de clientes empiezan con uno o dos servicios y amplían el programa cuando llegan los números. Así está bien.',
@@ -196,7 +197,7 @@ export const es = {
     faqs: [
       {
         q: '¿Qué servicios ofrece pmax?',
-        a: 'pmax ofrece siete servicios principales: visibilidad en IA (GEO), Google Ads (Search, Shopping, Performance Max, YouTube), paid social (Meta, TikTok, LinkedIn, Microsoft Ads), SEO (técnico, contenido, digital PR, local), diseño de conversión (CRO y A/B testing), analítica y tracking (GA4, GTM server-side, Consent Mode v2, conversiones offline desde CRM) y producción creativa (creatividades de performance, landing pages, vídeo UGC a escala).',
+        a: 'pmax ofrece ocho servicios principales: Visibility Engineering (nuestro programa estrella de GEO, SEO, PR digital y reputación), visibilidad en IA (GEO), Google Ads (Search, Shopping, Performance Max, YouTube), paid social (Meta, TikTok, LinkedIn, Microsoft Ads), SEO (técnico, contenido, digital PR, local), diseño de conversión (CRO y A/B testing), analítica y tracking (GA4, GTM server-side, Consent Mode v2, conversiones offline desde CRM) y producción creativa (creatividades de performance, landing pages, vídeo UGC a escala).',
       },
       {
         q: '¿Con qué tamaño de empresa trabaja pmax?',
@@ -223,6 +224,7 @@ export const es = {
       { slug: 'conversion-design', num: '05', title: 'Diseño de conversión (CRO)', deck: 'Más ingresos del mismo tráfico. Diseñamos, probamos y publicamos los cambios que mueven la tasa de conversión — no los que ganan premios de diseño.', tags: ['A/B testing', 'UX research', 'Diseño de funnel'], variant: 'is-yellow' },
       { slug: 'analytics', num: '06', title: 'Analítica y tracking', deck: 'GTM server-side, Consent Mode v2, importación de conversiones desde CRM, dashboards que no mienten. La base sobre la que se apoya todo lo demás.', tags: ['GA4', 'Server-side', 'Consent Mode', 'Dashboards BI'], variant: 'is-outlined' },
       { slug: 'creative', num: '07', title: 'Producción creativa', deck: 'Un flujo constante de anuncios, landing pages y vídeo — construido para probar, no para ganar premios. Porque el creativo es la campaña.', tags: ['Estático', 'Motion', 'UGC', 'Landers'], variant: 'is-pink' },
+      { slug: 'visibility-engineering', num: '08', badge: 'Estrella', title: 'Visibility Engineering', deck: 'GEO, SEO, PR digital y gestión de reputación — coordinados en una sola estrategia. Porque los motores de búsqueda y las plataformas de IA juzgan las marcas de forma holística, no por señales aisladas.', tags: ['GEO', 'SEO', 'PR digital', 'Reputación'], variant: 'is-mint', featured: true },
     ],
   },
 
@@ -411,6 +413,110 @@ export const es = {
         { q: '¿Cuántos creativos necesito al mes?', a: 'Depende del presupuesto y la plataforma. Como referencia: para cuentas de Meta con €5.000-€20.000 de presupuesto mensual, recomendamos 10-20 variantes creativas nuevas al mes. Por debajo de eso, el algoritmo no tiene suficiente para aprender. Por encima, la producción empieza a crear cuellos de botella.' },
         { q: '¿Trabajáis con nuestros diseñadores internos?', a: 'Sí, con gusto. Podemos actuar como dirección creativa y creadores de briefing mientras tu equipo se encarga de la producción. O lo entregamos todo nosotros — estrategia, briefing, producción, análisis de datos. Ambas opciones funcionan; nos adaptamos a tu setup.' },
         { q: '¿Hay un volumen mínimo para la producción creativa?', a: 'No. Pero por debajo de cierto umbral, un programa de producción creativa continuo no tiene sentido económico. Para cuentas más pequeñas puede ser más sensato hacer un sprint creativo cada 4-6 semanas en lugar de producir semanalmente.' },
+      ],
+    },
+    'visibility-engineering': {
+      metaTitle: 'Agencia de optimización GEO | Visibility Engineering',
+      metaDesc: 'Visibility Engineering de pmax: GEO, SEO, PR digital y gestión de reputación. Sé descubierto, confiable y elegido en Google y en búsqueda con IA.',
+      headline: <>Visibility<br />Engineering.</>,
+      deck: 'Te ayudamos a construir la autoridad que hace que tu marca sea encontrada, confiable y elegida — en Google y en todas las plataformas de búsqueda con IA que importan.',
+      stats: [
+        { num: '51 %', label: 'de los consumidores dice que la IA generativa ha cambiado sus hábitos de búsqueda' },
+        { num: '45 %', label: 'menos contenido de baja calidad en Google tras la mayor actualización de calidad en años' },
+        { num: '60+', label: 'años de experiencia combinada en SEO, PR digital y reputación de marca' },
+        { num: '4', label: 'disciplinas en una sola estrategia — GEO, SEO, PR digital, gestión de reputación' },
+      ],
+      prose: (
+        <>
+          <p>
+            Crear y mantener la visibilidad digital de una marca es un reto cada vez más complejo. Apenas dominas las keywords, llegan ChatGPT, Claude y Gemini a cambiar las reglas.{' '}
+            <a href="https://www.gartner.com/en/newsroom/press-releases/gartner-survey-finds-only-one-third-of-consumers-say-genai-rivals-search-engines-marketers-must-optimize-for-both-ai-driven-and-traditional-search" target="_blank" rel="noopener noreferrer">Según Gartner, el 51 % de los consumidores afirma que la IA generativa ha cambiado sus hábitos de investigación</a> — más de la mitad ya usa la IA junto con la búsqueda tradicional, haciendo preguntas más largas y conversacionales y esperando respuestas autoritativas y de confianza.
+          </p>
+          <p>
+            Tus clientes se mueven sin fricción entre motores de búsqueda, asistentes de IA, cobertura en medios, portales de reseñas, publicaciones del sector y recomendaciones de confianza. Cada punto de contacto influye en si tu marca es descubierta, considerada y finalmente elegida.
+          </p>
+          <p>
+            La búsqueda tradicional no está desapareciendo. Está evolucionando hacia el descubrimiento asistido por IA. Y ahí está la clave: tus clientes seguirán usando Google — la pregunta es si tu marca está presente cuando importa.
+          </p>
+          <h2>El SEO no está muerto — es la base del GEO</h2>
+          <p>
+            Pese a lo que se lee en LinkedIn, <a href="/es/services/seo/">el SEO no está muerto</a>. Los clientes siguen usando Google, y un buen SEO es uno de los pilares fundamentales de la <a href="/es/services/ai-visibility/">Generative Engine Optimisation (GEO)</a> — no se puede hacer uno sin el otro y dominar digitalmente.
+          </p>
+          <p>
+            Tras su mayor actualización de calidad en años, Google informa de que los usuarios ven un 45 % menos de contenido de baja calidad y sin originalidad en los resultados. El mensaje es claro: la visibilidad pertenece a las marcas que demuestran experiencia, autoridad y confianza genuinas.
+          </p>
+          <div className="prose-callout">
+            <span className="prose-callout-kicker">El cambio en la búsqueda</span>
+            <p>La pregunta ya no es: <em>«¿Para cuántas keywords posicionamos?»</em></p>
+            <p>La mejor pregunta es: <strong>¿Por qué deberían elegir tu marca?</strong></p>
+            <p>
+              Si ChatGPT compara tu empresa con cinco competidores, si Google decide quién merece posicionar, si un periodista busca una opinión experta, si un cliente potencial investiga sus opciones — ¿tu expertise realmente destaca? ¿Tu reputación respalda tus afirmaciones? ¿Tus reseñas, cobertura mediática y presencia online refuerzan tu credibilidad?
+            </p>
+          </div>
+          <h2>Presentamos Visibility Engineering</h2>
+          <p>
+            En pmax creemos que la visibilidad ya no se gana solo a través de la optimización. Se construye a través de la autoridad. Visibility Engineering reúne todo lo que influye en si tu marca es encontrada, confiable y recomendada — no solo SEO, no solo GEO, no solo PR, no solo reputación. Todo.
+          </p>
+          <p>
+            Porque los clientes — y cada vez más los sistemas de IA — no juzgan tu web de forma aislada. Juzgan tu marca. Analizan tu web, tu cobertura mediática, tus reseñas, tu thought leadership, tus perfiles ejecutivos, tu presencia en redes sociales, las menciones de terceros y la consistencia de tu huella digital.
+          </p>
+          <p>Estas señales no existen en silos. Tu estrategia tampoco debería.</p>
+          <h2>Nuestros servicios de Visibility Engineering</h2>
+          <h3>Optimización de búsqueda y descubrimiento con IA</h3>
+          <p>
+            Como agencia especializada en <a href="/es/services/ai-visibility/">Generative Engine Optimisation</a>, ayudamos a las marcas a mejorar su visibilidad en plataformas de búsqueda con IA como ChatGPT, Google AI Overviews, Gemini, Claude y Perplexity.
+            Lee nuestras guías sobre <a href="/es/blog/how-to-get-mentioned-by-chatgpt/">cómo conseguir que ChatGPT, Perplexity y Gemini citen tu marca</a> y <a href="/es/blog/perplexity-visibility/">cómo mejorar tu visibilidad en Perplexity específicamente</a>.
+          </p>
+          <ul>
+            <li>Search Engine Optimisation (SEO)</li>
+            <li>Generative Engine Optimisation (GEO)</li>
+            <li>LLM marketing</li>
+            <li>Optimización de entidades</li>
+            <li>Estrategia de contenido estructurado</li>
+            <li>Optimización del Knowledge Graph</li>
+            <li>Análisis, tracking y reporting de citas de IA mediante <a href="https://crunchjunkie.io/" target="_blank" rel="noopener noreferrer">crunchjunkie</a></li>
+            <li>Desarrollo de autoridad en búsqueda</li>
+          </ul>
+          <h3>Autoridad de marca y gestión de reputación online</h3>
+          <p>Los sistemas de IA dependen cada vez más de fuentes de confianza. Combinamos la optimización técnica con las comunicaciones estratégicas para construir la credibilidad que influye en periodistas, clientes, analistas y modelos de IA por igual.</p>
+          <ul>
+            <li>PR digital</li>
+            <li>Cobertura en noticias y medios</li>
+            <li>Publicaciones del sector</li>
+            <li>Thought leadership ejecutivo</li>
+            <li>Reseñas y gestión de reputación</li>
+            <li>Menciones de marca</li>
+            <li>Construcción de autoridad digital</li>
+          </ul>
+          <h3>Búsqueda, autoridad y elección</h3>
+          <p>Nuestro programa estrella de retainer integra todas las disciplinas en una estrategia coordinada — aumentando la descubribilidad, fortaleciendo la reputación y mejorando el rendimiento comercial.</p>
+          <ul>
+            <li>SEO</li>
+            <li>GEO marketing</li>
+            <li>LLM marketing</li>
+            <li>PR digital</li>
+            <li>Gestión de reputación de marca online</li>
+            <li>Visibilidad ejecutiva</li>
+            <li>Construcción de autoridad</li>
+          </ul>
+          <h2>¿Por qué pmax?</h2>
+          <p>
+            La mayoría de las agencias se especializan en una sola disciplina — SEO, PR, marketing digital o marca. No creemos que el panorama actual de búsqueda pueda resolverse en silos. Con más de 60 años de experiencia combinada en marketing de búsqueda, estrategia digital, relaciones públicas y reputación de marca, ayudamos a las organizaciones a construir una autoridad duradera — no solo rankings temporales.
+          </p>
+          <p>
+            Porque la visibilidad ya no consiste únicamente en posicionar. Se trata de convertirse en la marca en la que Google confía, que la IA cita y que los clientes eligen.
+          </p>
+          <p>Eso es Visibility Engineering.</p>
+        </>
+      ),
+      faqs: [
+        { q: '¿Es pmax una agencia de Generative Engine Optimisation?', a: 'Sí — el GEO es una de las disciplinas principales que ofrecemos, dentro de nuestro enfoque más amplio de Visibility Engineering, junto con SEO, PR digital y gestión de reputación. Tratamos la visibilidad en IA como parte de una estrategia de autoridad más amplia, no como un servicio independiente.' },
+        { q: '¿Cuál es la diferencia entre SEO y Generative Engine Optimisation (GEO)?', a: 'El SEO se centra en posicionar en motores de búsqueda tradicionales como Google, mientras que el GEO se centra en cómo las plataformas de IA como ChatGPT, Gemini y Perplexity descubren, citan y recomiendan marcas. No son rivales — un SEO sólido es una de las bases sobre las que se construye el GEO, ya que los modelos de IA siguen dependiendo en gran medida de contenido web bien optimizado y autoritativo.' },
+        { q: '¿Sigo necesitando SEO si invierto en GEO?', a: 'Sí. Las plataformas de búsqueda con IA citan y resumen del mismo conjunto de contenido autoritativo y bien estructurado que posiciona bien en la búsqueda tradicional. Descuidar el SEO para centrarse únicamente en el GEO suele debilitar ambos.' },
+        { q: '¿Cómo medís el éxito en Generative Engine Optimisation?', a: 'Usamos crunchjunkie (crunchjunkie.io) para rastrear la frecuencia de citas de IA, el share of voice entre plataformas de IA, el sentimiento en las respuestas generadas por IA y la frecuencia con la que una marca aparece cuando las herramientas de IA la comparan con competidores. crunchjunkie se especializa en tracking y reporting de visibilidad en IA, y sus análisis, datos e insights se ofrecen gratis como parte de cualquier retainer de Visibility Engineering contratado a través de pmax.' },
+        { q: '¿Qué es Visibility Engineering?', a: 'Visibility Engineering es el enfoque integrado de pmax para la visibilidad en búsqueda moderna, que combina SEO, Generative Engine Optimisation (GEO), PR digital y gestión de reputación online. En lugar de tratar estos como servicios separados, los gestionamos como una estrategia coordinada, porque los motores de búsqueda y las plataformas de IA juzgan las marcas de forma holística, no por señales aisladas.' },
+        { q: '¿Puede una empresa aparecer en ChatGPT o Google AI Overviews sin una base sólida de SEO?', a: 'Es poco probable que ocurra de forma consistente. Las plataformas de IA tienden a recurrir a fuentes que ya demuestran experiencia, autoridad y señales de confianza online — las mismas señales que el SEO tradicional y el PR digital están diseñados para establecer.' },
+        { q: '¿Cuánto tiempo tarda el GEO en mostrar resultados?', a: 'Los plazos varían según el sector y el punto de partida, pero como el GEO se basa en las mismas señales de confianza y autoridad que el SEO y el PR digital, la mayoría de las marcas ven movimientos significativos en las citas y la visibilidad de IA en un plazo similar al de las ganancias orgánicas de SEO — en meses, no de la noche a la mañana.' },
       ],
     },
   } as Record<string, ServiceDetail>,
