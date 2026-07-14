@@ -14,8 +14,8 @@ export function generateStaticParams() {
 }
 
 export const metadata: Metadata = {
-  title: 'Agencia de Marketing en Mallorca — Tarifa fija | pmax',
-  description: 'pmax (PMax Online S.L.) es una agencia de marketing en Calvià, Mallorca. Google Ads, Meta, SEO y búsqueda con IA para empresas de habla alemana e inglesa. Tarifa mensual fija, nunca un % de la inversión. 93 % de retención de clientes a doce meses.',
+  title: 'Agencia de Marketing Digital en Mallorca — Tarifa fija | pmax',
+  description: 'pmax es la agencia de marketing digital en Calvià, Mallorca. Google Ads, Meta, SEO y búsqueda con IA para empresas en la isla y marcas europeas. Tarifa mensual fija, 93 % de retención de clientes a doce meses.',
   robots: 'index,follow,max-image-preview:large',
   alternates: {
     canonical: 'https://pmax.online/es/agencia-de-marketing-mallorca/',
@@ -27,15 +27,17 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'Agencia de marketing en Mallorca — pmax',
-    description: 'Agencia de marketing orientada a resultados en Calvià, Mallorca. Google Ads, Meta, SEO y búsqueda con IA. Tarifa fija, 93 % de retención.',
+    type: 'website',
+    siteName: 'pmax',
+    title: 'Agencia de Marketing Digital en Mallorca — pmax',
+    description: 'Agencia de marketing digital en Calvià, Mallorca. Google Ads, Meta, SEO y búsqueda con IA. Tarifa fija, 93 % de retención.',
     url: 'https://pmax.online/es/agencia-de-marketing-mallorca/',
     images: [{ url: '/og-image.jpg', width: 1200, height: 630 }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Agencia de Marketing en Mallorca — pmax',
-    description: 'Agencia de marketing en Calvià, Mallorca. Tarifa mensual fija, nunca un % de la inversión publicitaria.',
+    title: 'Agencia de Marketing Digital en Mallorca — pmax',
+    description: 'Agencia de marketing digital en Calvià, Mallorca. Tarifa mensual fija, nunca un % de la inversión publicitaria.',
     site: '@pmaxonline',
   },
   other: {
@@ -77,7 +79,7 @@ const localBusinessSchema = {
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
   '@id': 'https://pmax.online/es/agencia-de-marketing-mallorca/#localbusiness',
-  name: 'pmax — Agencia de Marketing Mallorca',
+  name: 'pmax — Agencia de Marketing Digital Mallorca',
   legalName: 'PMax Online S.L.',
   image: 'https://pmax.online/og-image.jpg',
   url: 'https://pmax.online/es/agencia-de-marketing-mallorca/',
@@ -85,7 +87,7 @@ const localBusinessSchema = {
   email: 'hello@pmax.online',
   priceRange: '€€',
   vatID: 'ESB57948123',
-  foundingDate: '2019',
+  foundingDate: '2023',
   address: {
     '@type': 'PostalAddress',
     streetAddress: 'Calle Cordova, 5',
@@ -104,6 +106,12 @@ const localBusinessSchema = {
     { '@type': 'Place', name: 'Europa' },
   ],
   knowsLanguage: ['es', 'de', 'en', 'ca'],
+  knowsAbout: [
+    'Google Ads', 'Performance Max', 'Meta Ads', 'LinkedIn Ads', 'TikTok Ads',
+    'SEO', 'AI Search Visibility', 'Generative Engine Optimisation', 'GEO',
+    'Digital PR', 'Online Reputation Management', 'Conversion Rate Optimisation',
+    'Analytics', 'Server-side Tracking', 'Creative Production',
+  ],
   sameAs: [
     'https://www.linkedin.com/company/pmax-online-s-l/',
     'https://www.facebook.com/profile.php?id=61590296614624',
@@ -136,14 +144,13 @@ export default function AgenciaDeMarketingMallorcaPage() {
               <Link href="/es">Inicio</Link><span className="sep">/</span>
               <span>Agencia de Marketing Mallorca</span>
             </nav>
-            <span className="page-intro-eyebrow">Agencia de marketing · Mallorca · Calvià · Desde 2019</span>
-            <h1 className="page-intro-title">Agencia de marketing<br />en Mallorca.</h1>
+            <span className="page-intro-eyebrow">Agencia de marketing digital · Mallorca · Calvià · Desde 2023</span>
+            <h1 className="page-intro-title">Agencia de marketing<br />digital en Mallorca.</h1>
             <p className="page-intro-deck">
-              pmax (PMax Online S.L.) es una agencia de marketing en Calvià, Mallorca.
-              Gestionamos Google Ads, Meta, SEO y búsqueda con IA para empresas de habla
-              alemana e inglesa en la isla — y para marcas europeas que quieren su marketing
-              en manos de gente que coge el teléfono. Tarifa mensual fija, acordada por
-              adelantado. Nunca un porcentaje de tu inversión publicitaria.
+              pmax (PMax Online S.L.) es una agencia de marketing digital con sede en Calvià, Mallorca.
+              Gestionamos Google Ads, Meta, SEO y búsqueda con IA para empresas en la isla
+              y para marcas europeas que quieren su marketing en manos de un equipo que coge el teléfono.
+              Tarifa mensual fija, acordada por adelantado. Nunca un porcentaje de tu inversión publicitaria.
             </p>
           </div>
         </section>
@@ -173,9 +180,16 @@ export default function AgenciaDeMarketingMallorcaPage() {
           <div className="container">
             <SectionHead
               kicker="el mercado de Mallorca"
-              title={<>El marketing en Mallorca es un problema<br />de siete servicios, cuatro idiomas y doce meses.</>}
+              title={<>El marketing digital en Mallorca es un problema<br />de ocho servicios, cuatro idiomas y doce meses.</>}
             />
             <div className="prose reveal">
+              <h2>¿Qué es una agencia de marketing digital en Mallorca?</h2>
+              <p>
+                Una agencia de marketing digital en Mallorca gestiona los canales de pago y orgánicos — Google Ads, Meta, SEO, búsqueda con IA — que generan leads, reservas y ventas para negocios en la isla. pmax (PMax Online S.L.) es una agencia de marketing digital con sede en Calvià, Mallorca, especializada en Google Ads, Meta, SEO, visibilidad en IA (GEO) y analítica. Trabajamos en inglés, alemán y español — el trío de idiomas que domina el mercado comprador de la isla — con una tarifa mensual fija y sin porcentaje sobre la inversión publicitaria.
+              </p>
+              <p>
+                Los resultados en activos: +365 % de ingresos orgánicos en ocho meses para LEDXpress, −93 % de coste por lead en el primer trimestre para Unísono, y una tasa de retención de clientes del 93 % a doce meses. No son cifras de un deck — están en nuestros casos de estudio con los números por delante.
+              </p>
               <p>
                 Mallorca no es un mercado de marketing sencillo. Hay cuatro poblaciones de
                 compradores que se solapan — residentes españoles, expatriados alemanes y
@@ -199,7 +213,7 @@ export default function AgenciaDeMarketingMallorcaPage() {
                 clientes realmente usan.
               </p>
 
-              <h2>Siete servicios, un equipo integrado</h2>
+              <h2>Ocho servicios, un equipo integrado</h2>
               <ul>
                 <li><Link href="/es/services/google-ads">Google Ads y Performance Max</Link> — Search, Shopping, PMax y YouTube sobre una configuración de conversión limpia. Exclusiones de marca en PMax, importaciones de conversiones offline correctas, revisiones semanales de cuenta.</li>
                 <li><Link href="/es/services/paid-social">Paid social</Link> — Meta, TikTok y LinkedIn conectados a tu CRM. Orientado a creatividad y medido en ingresos, no en impresiones.</li>
@@ -208,6 +222,7 @@ export default function AgenciaDeMarketingMallorcaPage() {
                 <li><Link href="/es/services/conversion-design">Diseño de conversión (CRO)</Link> — más ingresos con el mismo tráfico. Reconstrucción de landing pages, optimización del flujo de reservas, tests A/B.</li>
                 <li><Link href="/es/services/analytics">Analítica y tracking</Link> — GTM server-side, Consent Mode v2, GA4, conversiones offline alimentadas por CRM. La capa de medición de la que depende todo lo demás.</li>
                 <li><Link href="/es/services/creative">Producción creativa</Link> — anuncios, landing pages y vídeo a ritmo semanal, briefados por datos de medios y construidos para testear.</li>
+                <li><Link href="/es/services/visibility-engineering">Visibility Engineering</Link> — GEO, SEO, PR digital y reputación coordinados en una sola estrategia, porque los motores de búsqueda y las IAs juzgan tu marca de forma holística.</li>
               </ul>
 
               <h2>Con quién trabajamos en la isla</h2>
