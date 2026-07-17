@@ -34,7 +34,7 @@ export default function AboutPage() {
             </nav>
             <span className="page-intro-eyebrow">About pmax</span>
             <h1 className="page-intro-title">
-              A small team.<br />An <em>opinionated</em> method.
+              Small team.<br /><em>Big agency</em> results.
             </h1>
             <p className="page-intro-deck">
               A small team of marketers, analysts and creatives based in Calvià, Mallorca — running
