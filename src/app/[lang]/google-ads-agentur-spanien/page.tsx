@@ -27,6 +27,8 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
+    type: 'website',
+    siteName: 'pmax',
     title: 'Google Ads Agentur Spanien | pmax — vor Ort, mehrsprachig, Festpreis',
     description: 'Google Ads Agentur in Spanien — vor Ort auf Mallorca. Search, Shopping und Performance Max in vier Sprachen. Festpreis statt Prozent vom Mediabudget.',
     url: 'https://pmax.online/de/google-ads-agentur-spanien/',
@@ -34,9 +36,10 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
+    site: '@pmaxonline',
     title: 'Google Ads Agentur Spanien | pmax',
     description: 'Google Ads Agentur in Spanien — vor Ort auf Mallorca, vier Sprachen, Festpreis statt Prozent vom Mediabudget.',
-    site: '@pmaxonline',
+    images: ['/og-image.jpg'],
   },
   other: {
     'geo.region': 'ES-PM',

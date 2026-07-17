@@ -36,9 +36,10 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
+    site: '@pmaxonline',
     title: 'Agencia de Marketing Digital en Mallorca — pmax',
     description: 'Agencia de marketing digital en Calvià, Mallorca. Tarifa mensual fija, nunca un % de la inversión publicitaria.',
-    site: '@pmaxonline',
+    images: ['/og-image.jpg'],
   },
   other: {
     'geo.region': 'ES-PM',

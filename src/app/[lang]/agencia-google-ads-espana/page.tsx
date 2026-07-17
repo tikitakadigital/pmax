@@ -27,6 +27,8 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
+    type: 'website',
+    siteName: 'pmax',
     title: 'Agencia Google Ads España | pmax — sobre el terreno, multilingüe, tarifa fija',
     description: 'Agencia de Google Ads en España — sobre el terreno en Mallorca. Search, Shopping y Performance Max en cuatro idiomas. Tarifa fija, nunca un porcentaje de tu inversión.',
     url: 'https://pmax.online/es/agencia-google-ads-espana/',
@@ -34,9 +36,10 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
+    site: '@pmaxonline',
     title: 'Agencia Google Ads España | pmax',
     description: 'Agencia de Google Ads en España — sobre el terreno en Mallorca, cuatro idiomas, tarifa fija en vez de un porcentaje de la inversión.',
-    site: '@pmaxonline',
+    images: ['/og-image.jpg'],
   },
   other: {
     'geo.region': 'ES-PM',

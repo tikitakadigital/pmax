@@ -27,6 +27,8 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
+    type: 'website',
+    siteName: 'pmax',
     title: 'Marketing Agentur auf Mallorca — pmax',
     description: 'Performance-Marketing-Agentur in Calvià, Mallorca. Google Ads, Meta, SEO und KI-Suche. Festpreis, 93 % Kundenbindungsrate.',
     url: 'https://pmax.online/de/marketing-agentur-mallorca/',
@@ -34,9 +36,10 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
+    site: '@pmaxonline',
     title: 'Marketing Agentur Mallorca — pmax',
     description: 'Performance-Marketing-Agentur in Calvià, Mallorca. Festpreis, nie Prozent vom Mediabudget.',
-    site: '@pmaxonline',
+    images: ['/og-image.jpg'],
   },
   other: {
     'geo.region': 'ES-PM',

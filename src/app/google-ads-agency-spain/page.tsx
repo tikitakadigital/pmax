@@ -23,6 +23,8 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
+    type: 'website',
+    siteName: 'pmax',
     title: 'Google Ads Agency Spain | pmax — Based in Spain, fluent in your market',
     description: 'pmax is a Google Ads agency based in Spain. Search, Shopping and Performance Max for businesses entering the Spanish market — in Spanish, German, English and Catalan.',
     url: 'https://pmax.online/google-ads-agency-spain/',
@@ -30,9 +32,10 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
+    site: '@pmaxonline',
     title: 'Google Ads Agency Spain | pmax — Based in Spain, fluent in your market',
     description: 'pmax is a Google Ads agency based in Spain. Search, Shopping and Performance Max in Spanish, German, English and Catalan.',
-    site: '@pmaxonline',
+    images: ['/og-image.jpg'],
   },
   other: {
     'geo.region': 'ES-PM',

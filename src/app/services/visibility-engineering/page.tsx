@@ -16,6 +16,14 @@ export const metadata: Metadata = {
     title: 'Generative Engine Optimisation Agency | Visibility Engineering',
     description: 'Visibility Engineering by pmax: GEO, SEO, digital PR and reputation management. Get discovered, trusted and chosen across Google and AI search.',
     url: 'https://pmax.online/services/visibility-engineering/',
+    images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'pmax — Visibility Engineering' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    site: '@pmaxonline',
+    title: 'Generative Engine Optimisation Agency | Visibility Engineering',
+    description: 'Visibility Engineering by pmax: GEO, SEO, digital PR and reputation management. Get discovered, trusted and chosen across Google and AI search.',
+    images: ['/og-image.jpg'],
   },
 }
 

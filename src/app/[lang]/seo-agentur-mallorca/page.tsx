@@ -26,6 +26,8 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
+    type: 'website',
+    siteName: 'pmax',
     title: 'SEO Agentur Mallorca | pmax — Lokale & mehrsprachige SEO aus Calvià',
     description: 'pmax ist eine SEO Agentur auf Mallorca. Wir bringen Unternehmen in vier Sprachen nach oben — Deutsch, Spanisch, Englisch und Katalanisch. Sitz in Calvià.',
     url: 'https://pmax.online/de/seo-agentur-mallorca/',
@@ -33,9 +35,10 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
+    site: '@pmaxonline',
     title: 'SEO Agentur Mallorca | pmax — Lokale & mehrsprachige SEO aus Calvià',
     description: 'pmax ist eine SEO Agentur auf Mallorca. Wir bringen Unternehmen in vier Sprachen nach oben — mit technischem SEO, lokaler Suche und KI-Sichtbarkeit.',
-    site: '@pmaxonline',
+    images: ['/og-image.jpg'],
   },
   other: {
     'geo.region': 'ES-PM',

@@ -21,6 +21,8 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
+    type: 'website',
+    siteName: 'pmax',
     title: 'SEO Company Mallorca | pmax — Local & multilingual SEO from Calvià',
     description: 'pmax is an SEO company in Mallorca. We rank Balearic businesses in four languages — Spanish, German, English and Catalan — with technical SEO, local search and AI visibility.',
     url: 'https://pmax.online/seo-company-mallorca/',
@@ -28,9 +30,10 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
+    site: '@pmaxonline',
     title: 'SEO Company Mallorca | pmax — Local & multilingual SEO from Calvià',
     description: 'pmax is an SEO company in Mallorca. We rank Balearic businesses in four languages — Spanish, German, English and Catalan — with technical SEO, local search and AI visibility.',
-    site: '@pmaxonline',
+    images: ['/og-image.jpg'],
   },
   other: {
     'geo.region': 'ES-PM',

@@ -23,6 +23,8 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
+    type: 'website',
+    siteName: 'pmax',
     title: 'Marketing agency in Mallorca — pmax',
     description: 'Performance-led marketing agency in Calvià, Mallorca. Google Ads, Meta, SEO and AI search. Flat monthly fee, 93% client retention.',
     url: 'https://pmax.online/marketing-agency-mallorca/',
@@ -30,9 +32,10 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
+    site: '@pmaxonline',
     title: 'Marketing agency in Mallorca — pmax',
     description: 'Performance-led marketing agency in Calvià, Mallorca. Flat monthly fee, never a % of spend.',
-    site: '@pmaxonline',
+    images: ['/og-image.jpg'],
   },
   other: {
     'geo.region': 'ES-PM',

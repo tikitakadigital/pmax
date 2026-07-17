@@ -25,6 +25,21 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
       canonical: `https://pmax.online/${lang}/services/${slug}/`,
       languages: { 'en': `https://pmax.online/services/${slug}/`, 'de': `https://pmax.online/de/services/${slug}/`, 'es': `https://pmax.online/es/services/${slug}/`, 'x-default': `https://pmax.online/services/${slug}/` },
     },
+    openGraph: {
+      type: 'website',
+      siteName: 'pmax',
+      title: detail.metaTitle,
+      description: detail.metaDesc,
+      url: `https://pmax.online/${lang}/services/${slug}/`,
+      images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'pmax — Performance marketing from Mallorca' }],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      site: '@pmaxonline',
+      title: detail.metaTitle,
+      description: detail.metaDesc,
+      images: ['/og-image.jpg'],
+    },
   }
 }
 
