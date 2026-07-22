@@ -7,6 +7,7 @@ import Footer from '@/components/Footer'
 import { breadcrumb, article as articleSchema, faqPage } from '@/lib/schema'
 import { posts, getPost } from '@/lib/content/blog'
 import { getBlogDetail } from '@/lib/content/blog-detail'
+import { getT } from '@/lib/i18n'
 
 const categoryKeywords: Record<string, string[]> = {
   'AI search':   ['AI search visibility', 'GEO', 'generative engine optimisation', 'ChatGPT citations', 'Perplexity'],
@@ -55,7 +56,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     description: post.deck,
     alternates: {
       canonical: `https://pmax.online/blog/${slug}/`,
-      ...(post.hasTranslations && { languages: {
+      ...(!!getT('de').blogPostDetail[slug]?.prose && { languages: {
         en: `https://pmax.online/blog/${slug}/`,
         de: `https://pmax.online/de/blog/${slug}/`,
         es: `https://pmax.online/es/blog/${slug}/`,
