@@ -7,7 +7,7 @@ import Footer from '@/components/Footer'
 import { breadcrumb, article as articleSchema, faqPage } from '@/lib/schema'
 import { posts, getPost } from '@/lib/content/blog'
 import { getBlogDetail } from '@/lib/content/blog-detail'
-import { getT } from '@/lib/i18n'
+import { getT, blogAlternates } from '@/lib/i18n'
 
 const categoryKeywords: Record<string, string[]> = {
   'AI search':   ['AI search visibility', 'GEO', 'generative engine optimisation', 'ChatGPT citations', 'Perplexity'],
@@ -51,17 +51,17 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const post = getPost(slug)
   if (!post) return {}
   const ogImage = post.ogImage ?? '/og-image.jpg'
+  // Only the locales actually translated. This used to test German prose and
+  // then advertise Spanish as well, which holds only while the two stay in
+  // lockstep — the first German-only translation would have pointed hreflang at
+  // a noindex Spanish page.
+  const languages = blogAlternates(slug)
   return {
     title: post.seoTitle,
     description: post.deck,
     alternates: {
       canonical: `https://pmax.online/blog/${slug}/`,
-      ...(!!getT('de').blogPostDetail[slug]?.prose && { languages: {
-        en: `https://pmax.online/blog/${slug}/`,
-        de: `https://pmax.online/de/blog/${slug}/`,
-        es: `https://pmax.online/es/blog/${slug}/`,
-        'x-default': `https://pmax.online/blog/${slug}/`,
-      }}),
+      ...(languages && { languages }),
     },
     openGraph: {
       siteName: 'pmax',

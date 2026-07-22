@@ -26,6 +26,13 @@ jobs:
       - name: Build
         run: npm run build
 
+      # Blocks the deploy on broken hreflang. These errors are invisible in a
+      # browser and usually only show up in Search Console weeks later, so the
+      # export is checked as a whole — reciprocity cannot be verified one page
+      # at a time.
+      - name: Check hreflang
+        run: npm run check:hreflang
+
       - name: Inject deploy secret into webhook script
         env:
           DEPLOY_SECRET: ${{ secrets.DEPLOY_SECRET }}

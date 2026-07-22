@@ -11,7 +11,6 @@ export interface Post {
   featured?: boolean
   external?: boolean
   ogImage?: string
-  hasTranslations?: boolean
 }
 
 export const posts: Post[] = [
@@ -26,7 +25,6 @@ export const posts: Post[] = [
     deck: "A plain-English guide to Perplexity visibility in 2026 — what it is, why it's different from ChatGPT, and five moves to get your business cited.",
     variant: 'is-mint',
     featured: true,
-    hasTranslations: true,
   },
   {
     slug: 'performance-max-bidding-change-august-2026',
@@ -40,7 +38,6 @@ export const posts: Post[] = [
     variant: 'is-slate',
     featured: true,
     ogImage: '/og/performance-max-bidding-change-august-2026.jpg',
-    hasTranslations: true,
   },
   {
     slug: 'pinterest-ads-home-interiors-local-2026',

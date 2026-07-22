@@ -4,6 +4,7 @@ export const dynamic = 'force-static'
 import { services } from '@/lib/content/services'
 import { cases } from '@/lib/content/cases'
 import { posts } from '@/lib/content/blog'
+import { translatedLocales } from '@/lib/i18n'
 import { industryDetails } from '@/lib/content/industries-detail'
 
 const base = 'https://pmax.online'
@@ -52,9 +53,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...langs.flatMap(lang => cases.map(c => ({ url: `${base}/${lang}/cases/${c.slug}/`, lastModified: '2026-04-01', changeFrequency: 'yearly' as const, priority: 0.6 }))),
   ]
 
+  // Localised post URLs are listed ONLY where a translation actually exists.
+  // An untranslated /de or /es post page is noindex and canonicals to English,
+  // so submitting it asks Google to crawl a page we have told it to ignore.
+  // Same predicate as the two blog routes — see translatedLocales().
   const blogPages: MetadataRoute.Sitemap = [
     ...posts.map(p => ({ url: `${base}/blog/${p.slug}/`, lastModified: new Date(p.date), changeFrequency: 'monthly' as const, priority: 0.7 })),
-    ...langs.flatMap(lang => posts.map(p => ({ url: `${base}/${lang}/blog/${p.slug}/`, lastModified: new Date(p.date), changeFrequency: 'monthly' as const, priority: 0.6 }))),
+    ...posts.flatMap(p => translatedLocales(p.slug).map(lang => ({ url: `${base}/${lang}/blog/${p.slug}/`, lastModified: new Date(p.date), changeFrequency: 'monthly' as const, priority: 0.6 }))),
   ]
 
   const legalPages: MetadataRoute.Sitemap = [

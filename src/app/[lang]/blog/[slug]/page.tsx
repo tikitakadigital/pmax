@@ -7,7 +7,7 @@ import Footer from '@/components/Footer'
 import { breadcrumb, faqPage } from '@/lib/schema'
 import { posts, getPost } from '@/lib/content/blog'
 import { getBlogDetail } from '@/lib/content/blog-detail'
-import { getT } from '@/lib/i18n'
+import { getT, isPostTranslated, blogAlternates } from '@/lib/i18n'
 
 export function generateStaticParams() {
   return ['de','es'].flatMap(lang => posts.filter(p => !p.external).map(p => ({ lang, slug: p.slug })))
@@ -21,7 +21,11 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   const locPost = t.blog.posts.find(bp => bp.slug === slug)
   if (!post) return {}
 
-  const isTranslated = !!loc?.prose
+  // Same predicate the English page and the sitemap use, so all three agree on
+  // which locales exist. The cluster itself is built centrally too: reciprocity
+  // is matched on exact URLs, so the two sides disagreeing about a trailing
+  // slash would break it as surely as a missing tag.
+  const isTranslated = isPostTranslated(slug, lang)
   const ogImage = post.ogImage ?? '/og-image.jpg'
   return {
     title: loc?.title ? `${loc.title} | pmax` : locPost?.title ? `${locPost.title} | pmax` : post.seoTitle,
@@ -29,10 +33,13 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
     ...(isTranslated ? {} : { robots: { index: false } }),
     alternates: isTranslated ? {
       canonical: `https://pmax.online/${lang}/blog/${slug}/`,
-      languages: { 'en': `https://pmax.online/blog/${slug}/`, 'de': `https://pmax.online/de/blog/${slug}/`, 'es': `https://pmax.online/es/blog/${slug}/`, 'x-default': `https://pmax.online/blog/${slug}/` },
+      languages: blogAlternates(slug),
     } : {
+      // Untranslated: this page consolidates into the English one, so it carries
+      // NO hreflang. Google discards hreflang on a page whose canonical points
+      // elsewhere, so the old en + x-default pair here was never read — it only
+      // made the page look like part of a cluster it had deliberately left.
       canonical: `https://pmax.online/blog/${slug}/`,
-      languages: { 'en': `https://pmax.online/blog/${slug}/`, 'x-default': `https://pmax.online/blog/${slug}/` },
     },
     openGraph: {
       siteName: 'pmax',
