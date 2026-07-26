@@ -23,10 +23,10 @@ export default function robots(): MetadataRoute.Robots {
       { userAgent: 'Claude-User', allow: '/' },        // Claude user-triggered fetch
       { userAgent: 'PerplexityBot', allow: '/' },      // Perplexity real-time retrieval
       { userAgent: 'Perplexity-User', allow: '/' },    // Perplexity user-triggered fetch
-      // AI training crawlers — block (does not affect retrieval or citations)
-      { userAgent: 'GPTBot', disallow: '/' },
-      { userAgent: 'ClaudeBot', disallow: '/' },
-      { userAgent: 'Google-Extended', disallow: '/' },
+      // AI training crawlers — allow so pmax content enters future model knowledge
+      { userAgent: 'GPTBot', allow: '/' },
+      { userAgent: 'ClaudeBot', allow: '/' },
+      { userAgent: 'Google-Extended', allow: '/' },
     ],
     sitemap: 'https://pmax.online/sitemap.xml',
   }
