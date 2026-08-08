@@ -16,14 +16,14 @@ export const metadata: Metadata = {
     title: 'GEO Audit Services | pmax',
     description: 'Find out what ChatGPT, Perplexity and Gemini say about your brand — and whether any of it is accurate. Free initial GEO audit from pmax.',
     url: 'https://pmax.online/services/geo-audit/',
-    images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'pmax — GEO Audit Services' }],
+    images: [{ url: '/og/geo-audit.webp', width: 1200, height: 630, alt: 'pmax GEO Audit — crunchjunkie AI visibility report showing score 93 for pmax.online across crawler access, content accessibility, structured data and technical SEO' }],
   },
   twitter: {
     card: 'summary_large_image',
     site: '@pmaxonline',
     title: 'GEO Audit Services | pmax',
     description: 'Find out what ChatGPT, Perplexity and Gemini say about your brand — and whether any of it is accurate.',
-    images: ['/og-image.jpg'],
+    images: ['/og/geo-audit.webp'],
   },
 }
 
@@ -66,12 +66,34 @@ const jsonLd = [
     { name: 'Services', url: 'https://pmax.online/services/' },
     { name: 'GEO Audit', url: pageUrl },
   ]),
-  serviceSchema({
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    '@id': `${pageUrl}#service`,
     name: 'GEO Audit',
     description: 'pmax GEO audits reveal how AI platforms represent your brand — what ChatGPT, Perplexity, Claude and Gemini say about you, which sources they draw on, and where competitors are beating you in AI-generated responses.',
     url: pageUrl,
     serviceType: 'Generative Engine Optimisation Audit',
-  }),
+    provider: { '@id': 'https://pmax.online/#org' },
+    image: 'https://pmax.online/og/geo-audit.webp',
+    areaServed: [
+      { '@type': 'Place', name: 'Mallorca' },
+      { '@type': 'Country', name: 'Spain' },
+      { '@type': 'AdministrativeArea', name: 'European Union' },
+    ],
+    availableChannel: {
+      '@type': 'ServiceChannel',
+      serviceUrl: 'https://pmax.online/contact/?topic=geo-audit',
+      servicePhone: '+34871242160',
+    },
+    offers: {
+      '@type': 'Offer',
+      name: 'Free initial GEO audit',
+      price: '0',
+      priceCurrency: 'EUR',
+      description: 'Free initial GEO visibility snapshot using crunchjunkie — AI citation rate, source analysis and gap findings. No obligation.',
+    },
+  },
   faqPage(faqs),
 ]
 

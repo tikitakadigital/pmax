@@ -20,6 +20,8 @@ const NeedHelp = ({ topic }: { topic: string }) => (
 export const blogDetails: BlogDetail[] = [
   {
     slug: 'what-is-a-geo-audit',
+    image: '/og/geo-audit.webp',
+    imageAlt: 'crunchjunkie GEO Audit report for pmax.online — AI readiness score 93, showing AI crawler access 100/100, content accessibility 92/100, structured data 76/100 and technical SEO 100/100',
     toc: ['Not an SEO audit', 'What a GEO audit covers', 'The GEO audit checklist', 'Tools', 'How often to run one', 'Frequently asked questions'],
     faqs: [
       { q: 'What is a GEO audit?', a: 'A GEO audit is a structured review of how AI platforms represent your brand — what they say when asked about you, how accurately they describe you, which sources they draw on, and where your brand appears or fails to appear in AI-generated responses.' },

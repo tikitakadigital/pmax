@@ -25,6 +25,7 @@ export const posts: Post[] = [
     deck: "A GEO audit tells you what ChatGPT, Perplexity and Gemini say about your brand — and where they're getting it wrong. Here's how to run one.",
     variant: 'is-mint',
     featured: true,
+    ogImage: '/og/geo-audit.webp',
   },
   {
     slug: 'perplexity-visibility',
