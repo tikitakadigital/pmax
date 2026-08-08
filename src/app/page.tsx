@@ -72,6 +72,7 @@ const jsonLd = [
   serviceSchema({ name: 'Analytics & Tracking', description: "Server-side GTM, consent-mode v2, CRM conversion imports, dashboards that don't lie. The foundation everything else stands on.", url: 'https://pmax.online/services/analytics/', serviceType: 'Analytics and Tracking' }),
   serviceSchema({ name: 'Creative Production', description: 'A steady flow of ads, landing pages and video — built for testing, not for awards. Because the creative is the campaign.', url: 'https://pmax.online/services/creative/', serviceType: 'Creative Production' }),
   serviceSchema({ name: 'Visibility Engineering', description: 'GEO, SEO, digital PR and reputation management — coordinated into one strategy. Visibility Engineering is our integrated approach to getting brands found, trusted and chosen across Google and AI search.', url: 'https://pmax.online/services/visibility-engineering/', serviceType: 'Visibility Engineering' }),
+  serviceSchema({ name: 'GEO Audit', description: 'A structured review of what ChatGPT, Perplexity and Gemini say about your brand — and a prioritised list of what to fix first. Free initial audit available.', url: 'https://pmax.online/services/geo-audit/', serviceType: 'Generative Engine Optimisation Audit' }),
 ]
 
 export default function HomePage() {
@@ -131,7 +132,7 @@ export default function HomePage() {
           <div className="container">
             <SectionHead
               kicker="01 — What we do"
-              title={<>Eight services.<br />One way of working.</>}
+              title={<>Nine services.<br />One way of working.</>}
               aside={<>Everything we do answers to the same question: <em>is it actually growing the business?</em> If not, we stop doing it.</>}
             />
             <div className="svc-grid reveal-stagger">

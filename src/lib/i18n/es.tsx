@@ -151,7 +151,7 @@ export const es = {
         <a href="/es/services/analytics/">analítica</a>,{' '}
         <a href="/es/services/conversion-design/">diseño de conversión</a> y{' '}
         <a href="/es/services/creative/">producción creativa</a> y{' '}
-        <a href="/es/services/visibility-engineering/">Visibility Engineering</a> — ocho servicios, un sistema.{' '}
+        <a href="/es/services/visibility-engineering/">Visibility Engineering</a> — nueve servicios, un sistema.{' '}
         <a href="/es/services/">Ver todos los servicios →</a>
       </>
     ),
@@ -180,7 +180,7 @@ export const es = {
 
   services: {
     metaTitle: 'Servicios de marketing digital — Google Ads, SEO & IA | pmax',
-    metaDesc: 'Google Ads, Meta, LinkedIn, SEO, visibilidad en IA, diseño de conversión y analítica — ocho servicios para un crecimiento medible y rentable.',
+    metaDesc: 'Google Ads, Meta, LinkedIn, SEO, visibilidad en IA, diseño de conversión, analítica y auditoría GEO — nueve servicios para un crecimiento medible y rentable.',
     eyebrow: '01 — Qué hacemos',
     title: <>Marketing de performance,<br />construido como <em>ingeniería</em>.</>,
     deck: 'Ocho servicios. Un sistema. No vendemos canales de forma aislada — gestionamos un sistema donde Google Ads, Meta, SEO, búsqueda con IA y analítica trabajan con los mismos datos y el mismo objetivo: crecimiento rentable que puedes medir.',
@@ -197,7 +197,7 @@ export const es = {
     faqs: [
       {
         q: '¿Qué servicios ofrece pmax?',
-        a: 'pmax ofrece ocho servicios principales: Visibility Engineering (nuestro programa estrella de GEO, SEO, PR digital y reputación), visibilidad en IA (GEO), Google Ads (Search, Shopping, Performance Max, YouTube), paid social (Meta, TikTok, LinkedIn, Microsoft Ads), SEO (técnico, contenido, digital PR, local), diseño de conversión (CRO y A/B testing), analítica y tracking (GA4, GTM server-side, Consent Mode v2, conversiones offline desde CRM) y producción creativa (creatividades de performance, landing pages, vídeo UGC a escala).',
+        a: 'pmax ofrece nueve servicios principales: Visibility Engineering (nuestro programa estrella de GEO, SEO, PR digital y reputación), auditoría GEO (análisis gratuito de qué dicen ChatGPT, Perplexity y Gemini sobre tu marca), visibilidad en IA (GEO), Google Ads (Search, Shopping, Performance Max, YouTube), paid social (Meta, TikTok, LinkedIn, Microsoft Ads), SEO (técnico, contenido, digital PR, local), diseño de conversión (CRO y A/B testing), analítica y tracking (GA4, GTM server-side, Consent Mode v2, conversiones offline desde CRM) y producción creativa (creatividades de performance, landing pages, vídeo UGC a escala).',
       },
       {
         q: '¿Con qué tamaño de empresa trabaja pmax?',

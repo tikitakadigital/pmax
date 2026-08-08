@@ -186,7 +186,7 @@ export const de = {
         <a href="/de/services/analytics/">Analytics</a>,{' '}
         <a href="/de/services/conversion-design/">Conversion Design</a> und{' '}
         <a href="/de/services/creative/">Creative Production</a> und{' '}
-        <a href="/de/services/visibility-engineering/">Visibility Engineering</a> — acht Leistungen, ein System.{' '}
+        <a href="/de/services/visibility-engineering/">Visibility Engineering</a> — neun Leistungen, ein System.{' '}
         <a href="/de/services/">Alle Leistungen ansehen →</a>
       </>
     ),
@@ -215,10 +215,10 @@ export const de = {
 
   services: {
     metaTitle: 'Performance-Marketing-Leistungen — Google Ads, SEO & KI | pmax',
-    metaDesc: 'Google Ads, Meta, LinkedIn, SEO, KI-Sichtbarkeit, Conversion Design und Analytics — acht Leistungen für messbares, profitables Wachstum.',
+    metaDesc: 'Google Ads, Meta, LinkedIn, SEO, KI-Sichtbarkeit, Conversion Design, Analytics und GEO-Audit — neun Leistungen für messbares, profitables Wachstum.',
     eyebrow: '01 — Was wir tun',
     title: <>Performance Marketing,<br />gebaut wie <em>Engineering</em>.</>,
-    deck: 'Acht Leistungen. Ein System. Wir verkaufen keine isolierten Kanäle — wir betreiben ein System, in dem Google Ads, Meta, SEO, KI-Suche und Analytics auf denselben Daten und dasselbe Ziel ausgerichtet sind: profitables Wachstum, das sich wirklich messen lässt.',
+    deck: 'Neun Leistungen. Ein System. Wir verkaufen keine isolierten Kanäle — wir betreiben ein System, in dem Google Ads, Meta, SEO, KI-Suche und Analytics auf denselben Daten und dasselbe Ziel ausgerichtet sind: profitables Wachstum, das sich wirklich messen lässt.',
     allKicker: 'Alle Leistungen',
     allTitle: 'Wo möchten Sie anfangen?',
     allAside: 'Die meisten Kunden starten mit ein oder zwei Leistungen und bauen das Programm aus, sobald die Zahlen stimmen. Das ist uns genauso recht.',
@@ -232,7 +232,7 @@ export const de = {
     faqs: [
       {
         q: 'Welche Leistungen bietet pmax an?',
-        a: 'pmax bietet acht Kernleistungen: Visibility Engineering (unser Flagship-Programm aus GEO, SEO, digitaler PR und Reputation), KI-Sichtbarkeit (GEO), Google Ads (Search, Shopping, Performance Max, YouTube), Paid Social (Meta, TikTok, LinkedIn, Microsoft Ads), SEO (technisch, inhaltlich, digital PR, lokal), Conversion Design (CRO und A/B-Tests), Analytics & Tracking (GA4, server-seitiges GTM, Consent Mode v2, CRM-basierte Offline-Conversions) und Creative Production (Performance-Creatives, Landingpages, UGC-Video in hoher Kadenz).',
+        a: 'pmax bietet neun Kernleistungen: Visibility Engineering (unser Flagship-Programm aus GEO, SEO, digitaler PR und Reputation), GEO-Audit (kostenlose erste Analyse, was ChatGPT, Perplexity und Gemini über Ihre Marke sagen), KI-Sichtbarkeit (GEO), Google Ads (Search, Shopping, Performance Max, YouTube), Paid Social (Meta, TikTok, LinkedIn, Microsoft Ads), SEO (technisch, inhaltlich, digital PR, lokal), Conversion Design (CRO und A/B-Tests), Analytics & Tracking (GA4, server-seitiges GTM, Consent Mode v2, CRM-basierte Offline-Conversions) und Creative Production (Performance-Creatives, Landingpages, UGC-Video in hoher Kadenz).',
       },
       {
         q: 'Mit welcher Unternehmensgröße arbeitet pmax?',
