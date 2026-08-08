@@ -34,6 +34,7 @@ export const blogDetails: BlogDetail[] = [
       <>
         <p>Most brands we talk to have no idea what ChatGPT says about them. Some have never asked. Some have asked once, got a vague answer and moved on. Very few have asked systematically &mdash; across multiple platforms, on multiple days, with different query types &mdash; and documented what they found.</p>
         <p>That systematic process is a GEO audit. It&rsquo;s not a technical checklist. It&rsquo;s a structured investigation into how AI platforms represent your brand and what you can actually do about it.</p>
+        <p>We run them at pmax, across sectors including hospitality, real estate, professional services and B2B software. What we find is almost always a surprise &mdash; and rarely reassuring.</p>
 
         <h2>Not an SEO audit &mdash; a different question</h2>
         <p>SEO audits answer: <em>can search engines find and rank your pages?</em> They cover crawlability, page speed, canonical tags, internal linking. That foundation still matters for GEO &mdash; a page that can&rsquo;t be crawled won&rsquo;t be cited &mdash; but it&rsquo;s a floor, not a ceiling.</p>
@@ -65,6 +66,7 @@ export const blogDetails: BlogDetail[] = [
         </ul>
         <p>Document everything: whether you appear, how you&rsquo;re described, what facts are cited, where the information comes from, whether competitors appear where you don&rsquo;t. This is your baseline. You&rsquo;ll run it again in three months to measure movement.</p>
         <p>Common findings: wrong founding date; a confused description that mixes your brand with a different company; a competitor appearing in every response where you should appear; or simply no mention at all, on any platform, in any context.</p>
+        <p>We&rsquo;ve seen a hotel described as under different ownership. A B2B software company attributed capabilities it doesn&rsquo;t have, sourced from a competitor&rsquo;s press release. A well-known local brand with zero AI presence &mdash; not a single mention across four platforms &mdash; despite ten years in business. The consistency of these findings across categories is what makes a structured audit worthwhile rather than a one-off prompt.</p>
 
         <h3>5. Competitive positioning</h3>
         <p>Where do competitors appear in responses where you don&rsquo;t? Which sources does the AI draw on when describing your category? Which brands does it compare to you, and how does it characterise the difference?</p>

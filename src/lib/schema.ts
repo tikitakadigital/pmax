@@ -40,7 +40,7 @@ export const org = {
   ],
   knowsAbout: [
     'Google Ads', 'Performance Max', 'Meta Ads', 'LinkedIn Ads', 'TikTok Ads',
-    'SEO', 'AI Search Visibility', 'Generative Engine Optimisation', 'GEO',
+    'SEO', 'AI Search Visibility', 'Generative Engine Optimisation', 'GEO', 'GEO Audit',
     'LLM Marketing', 'Entity Optimisation', 'Knowledge Graph Optimisation',
     'AI Citation Analysis', 'Digital PR', 'Online Reputation Management',
     'Conversion Rate Optimisation', 'Analytics', 'Server-side Tracking', 'Creative Production',
@@ -98,9 +98,16 @@ export function article({ headline, description, url, datePublished, keywords, i
     dateModified: datePublished,
     author: {
       '@type': 'Person',
+      '@id': 'https://pmax.online/#philipp-enders',
       name: 'Philipp Enders',
-      jobTitle: 'Founder & CEO, pmax',
-      sameAs: 'https://www.linkedin.com/in/philipp-enders/',
+      url: 'https://pmax.online/about/',
+      jobTitle: 'Founder & Director',
+      worksFor: { '@id': 'https://pmax.online/#org' },
+      knowsAbout: [
+        'Generative Engine Optimisation', 'GEO Audit', 'AI Search Visibility',
+        'SEO', 'Google Ads', 'Performance Max', 'Meta Ads', 'Digital Marketing Strategy',
+      ],
+      sameAs: ['https://www.linkedin.com/in/philipp-enders/'],
     },
     publisher: { '@id': 'https://pmax.online/#org' },
     mainEntityOfPage: { '@type': 'WebPage', '@id': url },

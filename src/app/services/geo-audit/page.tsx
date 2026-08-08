@@ -138,6 +138,9 @@ export default function GeoAuditPage() {
                 Unlike an SEO audit, which checks whether search engines can find and rank your pages, a GEO audit checks whether AI platforms have an accurate, coherent picture of who you are, what you do and why you matter. A technically perfect website can still produce wrong, incomplete or missing AI answers if the underlying authority signals aren&rsquo;t there.
               </p>
               <p>
+                We run GEO audits for brands in hospitality, real estate, professional services and B2B software &mdash; ranging from local Mallorcan businesses to European brands operating in multiple markets. The finding that surprises people most is usually not that AI gets something wrong, but that it says nothing at all.
+              </p>
+              <p>
                 The output is specific: a written report covering what the AI says about you, which sources it draws on, where it gets things wrong, and a prioritised list of fixes. We also include where competitors appear where you don&rsquo;t &mdash; which is usually the finding that lands hardest.
               </p>
 

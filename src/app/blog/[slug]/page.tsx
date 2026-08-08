@@ -178,6 +178,23 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
             </div>
           </section>
 
+          {/* AUTHOR BIO */}
+          <section style={{ borderTop: '1px solid #2d2d2d', marginTop: 0 }}>
+            <div className="container" style={{ padding: '40px 0 56px' }}>
+              <div style={{ display: 'flex', gap: 20, alignItems: 'flex-start', maxWidth: 760 }}>
+                <div style={{ flexShrink: 0, width: 48, height: 48, borderRadius: '50%', background: '#131313', border: '1px solid #2d2d2d', display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: 'var(--font-mono)', fontWeight: 700, fontSize: 15, color: '#3cffd0', letterSpacing: 0 }}>PE</div>
+                <div>
+                  <div style={{ fontFamily: 'var(--font-mono)', fontSize: 10, fontWeight: 500, letterSpacing: '1.5px', textTransform: 'uppercase', color: '#6b6b6b', marginBottom: 6 }}>About the author</div>
+                  <div style={{ fontWeight: 600, fontSize: 15, marginBottom: 8 }}>Philipp Enders</div>
+                  <p style={{ fontSize: 13, lineHeight: 1.65, color: '#b4b4b4', margin: '0 0 10px' }}>
+                    Philipp is the Founder and Director of pmax, a performance marketing and AI visibility agency in Calvi&agrave;, Mallorca. He is also the co-founder of <a href="https://crunchjunkie.io/" target="_blank" rel="noopener noreferrer" style={{ color: '#f6f4ef' }}>crunchjunkie</a>, an AI visibility tracking platform for monitoring brand citation across ChatGPT, Perplexity, Claude and Gemini.
+                  </p>
+                  <a href="https://www.linkedin.com/in/philipp-enders/" target="_blank" rel="noopener noreferrer" style={{ fontFamily: 'var(--font-mono)', fontSize: 10, fontWeight: 500, letterSpacing: '1.5px', textTransform: 'uppercase', color: '#949494' }}>LinkedIn →</a>
+                </div>
+              </div>
+            </div>
+          </section>
+
         </article>
       </main>
       <Footer />
