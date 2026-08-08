@@ -105,6 +105,18 @@ export const services: Service[] = [
     metaTitle: 'Generative Engine Optimisation Agency | Visibility Engineering',
     metaDesc: 'Visibility Engineering by pmax: GEO, SEO, digital PR and reputation management. Get discovered, trusted and chosen across Google and AI search.',
   },
+  {
+    slug: 'geo-audit',
+    num: '09',
+    badge: 'Free audit',
+    title: 'GEO Audit',
+    deck: 'A structured review of what ChatGPT, Perplexity and Gemini say about your brand — and a prioritised list of what to fix first.',
+    longDeck: 'A GEO audit reveals how AI platforms represent your brand: what they say about you, which sources they draw on, where competitors beat you, and what to fix in order of impact. The initial audit is free.',
+    tags: ['GEO', 'AI search', 'Audit'],
+    variant: 'is-mint',
+    metaTitle: 'GEO Audit Services | AI Search Visibility Audit | pmax',
+    metaDesc: 'pmax runs GEO audits to show you exactly how AI platforms represent your brand — and what to fix first. Free initial audit available. Based in Mallorca, working worldwide.',
+  },
 ]
 
 export function getService(slug: string) {
