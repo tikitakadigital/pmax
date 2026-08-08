@@ -7,7 +7,7 @@ import FaqList from '@/components/FaqList'
 import { breadcrumb, serviceSchema, faqPage } from '@/lib/schema'
 import { getT } from '@/lib/i18n'
 
-const SLUGS = ['ai-visibility','google-ads','paid-social','seo','conversion-design','analytics','creative','visibility-engineering']
+const SLUGS = ['ai-visibility','google-ads','paid-social','seo','conversion-design','analytics','creative','visibility-engineering','geo-audit']
 
 export function generateStaticParams() {
   return ['de','es'].flatMap(lang => SLUGS.map(slug => ({ lang, slug })))

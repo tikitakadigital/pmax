@@ -15,6 +15,18 @@ export interface Post {
 
 export const posts: Post[] = [
   {
+    slug: 'what-is-a-geo-audit',
+    stamp: 'AUG 8',
+    date: 'Aug 8, 2026',
+    readTime: '10 min',
+    category: 'AI search',
+    title: 'What Is a GEO Audit — And How to Run One',
+    seoTitle: 'What Is a GEO Audit? A Practical Guide | pmax',
+    deck: "A GEO audit tells you what ChatGPT, Perplexity and Gemini say about your brand — and where they're getting it wrong. Here's how to run one.",
+    variant: 'is-mint',
+    featured: true,
+  },
+  {
     slug: 'perplexity-visibility',
     stamp: 'JUN 23',
     date: 'Jun 23, 2026',

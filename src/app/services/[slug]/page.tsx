@@ -10,7 +10,7 @@ import { services } from '@/lib/content/services'
 import { serviceDetails, getServiceDetail } from '@/lib/content/services-detail'
 
 export function generateStaticParams() {
-  return services.filter(s => s.slug !== 'visibility-engineering').map(s => ({ slug: s.slug }))
+  return services.filter(s => s.slug !== 'visibility-engineering' && s.slug !== 'geo-audit').map(s => ({ slug: s.slug }))
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {

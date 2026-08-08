@@ -501,6 +501,7 @@ export const de = {
           <p>
             Als spezialisierte <a href="/de/services/ai-visibility/">Generative Engine Optimisation Agentur</a> helfen wir Marken, ihre Sichtbarkeit auf KI-gestützten Suchplattformen wie ChatGPT, Google AI Overviews, Gemini, Claude und Perplexity zu verbessern.
             Unsere Guides: <a href="/de/blog/how-to-get-mentioned-by-chatgpt/">Wie Sie von ChatGPT, Perplexity und Gemini zitiert werden</a> und <a href="/de/blog/perplexity-visibility/">wie Sie Ihre Perplexity-Sichtbarkeit gezielt verbessern</a>.
+            Wir führen für jede Marke, die eine Zusammenarbeit erwägt, einen <a href="/de/services/geo-audit/">kostenlosen ersten GEO-Audit</a> durch.
           </p>
           <ul>
             <li>Search Engine Optimisation (SEO)</li>
@@ -552,6 +553,79 @@ export const de = {
         { q: 'Was ist Visibility Engineering?', a: 'Visibility Engineering ist der integrierte pmax-Ansatz für moderne Suchsichtbarkeit, der SEO, Generative Engine Optimisation (GEO), digitale PR und Online-Reputationsmanagement kombiniert. Anstatt diese als separate Leistungen zu behandeln, managen wir sie als eine koordinierte Strategie — denn Suchmaschinen und KI-Plattformen beurteilen Marken ganzheitlich, nicht anhand isolierter Signale.' },
         { q: 'Kann ein Unternehmen ohne starkes SEO-Fundament in ChatGPT oder Google AI Overviews erscheinen?', a: 'Das ist unwahrscheinlich, zumindest nicht konsistent. KI-Plattformen bevorzugen Quellen, die bereits Expertise, Autorität und Trust-Signale im Web nachweisen — dieselben Signale, die traditionelles SEO und digitale PR aufzubauen anstreben.' },
         { q: 'Wie lange dauert es, bis Generative Engine Optimisation Ergebnisse zeigt?', a: 'Die Zeiträume variieren je nach Branche und Ausgangspunkt. Da GEO auf denselben Trust- und Autoritätssignalen wie SEO und digitale PR basiert, sehen die meisten Marken spürbare Verbesserungen bei KI-Zitierungen über einen ähnlichen mehrmonatigen Zeitraum wie bei organischen SEO-Gewinnen — nicht über Nacht.' },
+      ],
+    },
+    'geo-audit': {
+      metaTitle: 'GEO-Audit — KI-Sichtbarkeit Ihrer Marke prüfen | pmax',
+      metaDesc: 'pmax führt GEO-Audits durch: Wir zeigen Ihnen, was ChatGPT, Perplexity und Gemini über Ihre Marke sagen — und was Sie zuerst verbessern sollten. Erster Audit kostenlos.',
+      headline: <>GEO&#8209;Audit.</>,
+      deck: 'Finden Sie heraus, was ChatGPT, Perplexity und Gemini über Ihre Marke wissen — und ob davon irgendetwas stimmt.',
+      stats: [
+        { num: '51 %', label: 'der Verbraucher haben ihr Rechercheverhalten wegen generativer KI verändert — Gartner' },
+        { num: '4', label: 'KI-Plattformen, die wir prüfen: ChatGPT, Perplexity, Claude, Gemini' },
+        { num: '23+', label: 'KI-Assistenten und Suchtools, in denen Markenpräsenz heute zählt' },
+        { num: '0', label: 'Marken, die wissen, was KI über sie sagt — bevor sie es fragen' },
+      ],
+      prose: (
+        <>
+          <h2>Was ein GEO-Audit ist</h2>
+          <p>
+            Ein GEO-Audit ist eine strukturierte Analyse der Art und Weise, wie KI-Plattformen Ihre Marke darstellen. Nicht was Ihre Website über Sie sagt &mdash; sondern was <em>ChatGPT, Perplexity, Claude und Gemini</em> über Sie sagen, wenn jemand danach fragt. Das ist nicht dasselbe, und die Lücke dazwischen ist oft größer, als Marken erwarten.
+          </p>
+          <p>
+            Im Unterschied zu einem SEO-Audit, der prüft, ob Suchmaschinen Ihre Seiten finden und ranken können, untersucht ein GEO-Audit, ob KI-Plattformen ein genaues, kohärentes Bild davon haben, wer Sie sind, was Sie tun und warum Sie relevant sind. Eine technisch einwandfreie Website kann trotzdem zu falschen, unvollständigen oder fehlenden KI-Antworten führen, wenn die zugrundeliegenden Autoritätssignale fehlen.
+          </p>
+          <p>
+            Das Ergebnis ist konkret: ein schriftlicher Bericht mit dem, was die KI über Sie sagt, welche Quellen sie heranzieht, wo sie Fehler macht, und eine priorisierte Liste der Maßnahmen. Wir zeigen auch, wo Mitbewerber erscheinen, wo Sie es nicht tun &mdash; das ist meistens der Befund, der am stärksten wirkt.
+          </p>
+
+          <h2>Was wir prüfen</h2>
+
+          <h3>KI-Crawlbarkeit</h3>
+          <p>
+            Können KI-Bots Ihre Inhalte überhaupt abrufen? Wir prüfen <code>robots.txt</code> auf Sperren für die Retrieval-Bots, die Live-KI-Zitate ermöglichen &mdash; <code>OAI-SearchBot</code>, <code>PerplexityBot</code>, <code>Claude-SearchBot</code> &mdash; sowie für Training-Crawler wie <code>GPTBot</code> und <code>Google-Extended</code>. Jede dieser Sperren ist in der Regel ein Fehler, und sie kommt häufiger vor als man denkt.
+          </p>
+
+          <h3>Content-Struktur und Zitierbarkeit</h3>
+          <p>
+            KI-Modelle zitieren, was sich zitieren lässt. Vage Markentexte finden nicht den Weg in KI-Antworten; spezifische, faktische, gut strukturierte Inhalte schon. Wir prüfen Ihre Website auf Definitionsparagraphen, konsistente Markenfakten, FAQ-Inhalte und kritischen Content, der JavaScript-abhängig gerendert wird &mdash; und damit für die meisten KI-Crawler unsichtbar ist.
+          </p>
+
+          <h3>Entity-Abdeckung</h3>
+          <p>
+            Wir prüfen schema.org-Markup (Organisation, Service, FAQPage, Person), NAP-Konsistenz in Verzeichnissen und Drittquellen-Erwähnungen in Quellen, denen KI-Plattformen vertrauen. Widersprüchliche Informationen über verschiedene Kanäle erhöhen das Halluzinationsrisiko. Wir finden, wo sie auftreten.
+          </p>
+
+          <h3>KI-Repräsentation</h3>
+          <p>
+            Wir führen einen strukturierten Prompt-Satz über ChatGPT, Perplexity, Claude und Gemini aus: direkte Markenanfragen, Kategorie-Anfragen, Wettbewerbsvergleiche und problemorientierte Fragen, die Ihre Kunden tatsächlich stellen. Wir dokumentieren, was die KI sagt, wie genau sie Sie beschreibt und welche Quellen sie zitiert. Das ist Ihre Ausgangslinie.
+          </p>
+
+          <h3>Wettbewerbspositionierung</h3>
+          <p>
+            Wo erscheinen Ihre Mitbewerber in KI-Antworten, wo Sie es nicht tun? Welche Drittquellen haben das meiste Gewicht in Ihrer Branche? Wir kartieren die Lücke zwischen Ihrem aktuellen Stand und dem, wo Sie sein sollten, und identifizieren die Maßnahmen mit dem höchsten Hebel.
+          </p>
+
+          <h2>crunchjunkie &mdash; das Tool, das wir nutzen</h2>
+          <p>
+            Wir verwenden <a href="https://crunchjunkie.io/" target="_blank" rel="noopener noreferrer">crunchjunkie</a> für das KI-Sichtbarkeits-Tracking. Es überwacht die Zitierungshäufigkeit auf KI-Plattformen, verfolgt den Share of Voice gegenüber Wettbewerbern und misst das Brand-Sentiment in KI-generierten Antworten. Es ist das Nächste, was es derzeit zu Search Console für KI-Suche gibt &mdash; vor wenigen Wochen öffentlich verfügbar geworden, und wir setzen es seitdem in der Kundenarbeit ein.
+          </p>
+          <p>
+            Beim kostenlosen ersten Audit führen wir Ihre Domain durch crunchjunkie, bevor wir irgendetwas anderes tun. Das gibt uns einen Sichtbarkeits-Snapshot, der den Rest des Audits auf eine belastbare Grundlage stellt statt auf Eindrücke.
+          </p>
+          <p>
+            Für Kunden, die in ein laufendes Programm wechseln, ist crunchjunkie-Tracking inklusive. Monatliche Berichte zeigen, ob die Maßnahmen wirken, welche Plattformen zuerst reagieren und wo neue Lücken entstehen, wenn KI-Modelle aktualisiert werden.
+          </p>
+        </>
+      ),
+      faqs: [
+        { q: 'Was ist in einem GEO-Audit von pmax enthalten?', a: 'Ein GEO-Audit von pmax umfasst fünf Ebenen: KI-Crawlbarkeit (robots.txt, Bot-Zugang), Content-Zitierbarkeit (strukturierte, zitierfähige Inhalte und Schema-Markup), Entity-Abdeckung (konsistente Markenpräsenz in Verzeichnissen und Drittquellen), KI-Repräsentation (was ChatGPT, Perplexity, Claude und Gemini über Sie sagen) und Wettbewerbspositionierung (wo Mitbewerber erscheinen, wo Sie es nicht tun). Der erste Audit umfasst einen schriftlichen Bericht und ein 30-minütiges Gespräch zur Erläuterung der Befunde.' },
+        { q: 'Wie lange dauert ein GEO-Audit?', a: 'Der erste Audit dauert fünf bis sieben Werktage ab dem Zeitpunkt, an dem wir Zugang zu Ihrer Domain und den nötigen Informationen haben. Schriftlicher Bericht und Auswertungsgespräch folgen innerhalb derselben Woche.' },
+        { q: 'Ist der erste Audit wirklich kostenlos?', a: 'Ja. Für jede Marke, die eine Zusammenarbeit mit pmax erwägt, führen wir einen kostenlosen ersten GEO-Sichtbarkeits-Snapshot durch — mit crunchjunkie, unserem eigenen KI-Tracking-Tool. Er zeigt Ihre aktuelle Zitierrate auf den wichtigsten KI-Plattformen, welche Quellen KI über Sie heranzieht und wo die größten Lücken sind. Kein Auftrag, kein Sales-Pitch.' },
+        { q: 'Was benötigen Sie von uns für den Audit?', a: 'Ihren Domainnamen und die fünf bis zehn Suchanfragen, die Ihre Kunden Ihrer Meinung nach stellen, bevor sie kaufen. Den Rest recherchieren wir selbst.' },
+        { q: 'Was passiert nach dem Audit?', a: 'Sie erhalten einen schriftlichen Bericht mit konkreten Befunden für jede Ebene, eine priorisierte Liste der wichtigsten Maßnahmen und eine ehrliche Einschätzung, wie lange eine Verbesserung angesichts Ihrer aktuellen Autoritätsbasis realistischerweise dauert. Falls Sie die Umsetzung gemeinsam angehen möchten, besprechen wir das gerne. Falls Sie die Befunde intern weiterverarbeiten möchten, ist das ebenfalls in Ordnung.' },
+        { q: 'Brauche ich eine laufende Zusammenarbeit, oder reicht ein einmaliger Audit?', a: 'Ein einmaliger Audit ist möglich. Die meisten Kunden, die beim Audit erhebliche Lücken finden, entscheiden sich für ein laufendes Programm — weil der Audit das Problem diagnostiziert und das Retainer es behebt. Eine Verpflichtung entsteht durch den kostenlosen ersten Audit nicht.' },
+        { q: 'Ist ein GEO-Audit für eine junge Marke sinnvoll?', a: 'Das kommt darauf an. Wenn Sie noch kaum Web-Präsenz haben, wird der Audit das bestätigen — und die Priorität liegt dann beim Aufbau dieser Präsenz, nicht bei der KI-Repräsentation. Haben Sie bereits eine etablierte Online-Präsenz und wissen noch nicht, wie KI Sie beschreibt, ist der Audit meist aufschlussreich. Wir sagen Ihnen ehrlich vorab, ob es der richtige Schritt ist.' },
       ],
     },
   } as Record<string, ServiceDetail>,
@@ -976,6 +1050,112 @@ export const de = {
   } as Record<string, LocalizedCaseDetail>,
 
   blogPostDetail: {
+    'what-is-a-geo-audit': {
+      toc: ['Nicht einfach ein SEO-Audit', 'Was ein GEO-Audit umfasst', 'Die GEO-Audit-Checkliste', 'Tools', 'Wie oft ist sinnvoll?', 'Häufige Fragen'],
+      faqs: [
+        { q: 'Was ist ein GEO-Audit?', a: 'Ein GEO-Audit ist eine strukturierte Analyse der Art und Weise, wie KI-Plattformen Ihre Marke darstellen — was sie sagen, wenn man nach Ihnen fragt, wie genau sie Sie beschreiben, welche Quellen sie verwenden und wo Ihre Marke in KI-generierten Antworten erscheint oder eben nicht erscheint.' },
+        { q: 'Was ist der Unterschied zwischen einem GEO-Audit und einem SEO-Audit?', a: 'Ein SEO-Audit prüft, ob Suchmaschinen Ihre Seiten finden, verstehen und ranken können. Ein GEO-Audit prüft, was KI-Plattformen über Ihre Marke glauben und wie genau sie sie darstellen. SEO-Audits sind primär technisch; GEO-Audits drehen sich primär um Autorität und Repräsentation.' },
+        { q: 'Wie führe ich einen GEO-Audit durch?', a: 'Über fünf Ebenen: Crawlbarkeit (können KI-Bots Ihre Website erreichen), Content-Struktur (sind Ihre wichtigsten Fakten zitierbar), Entity-Abdeckung (sind Sie eine konsistente Entität im gesamten Web), KI-Repräsentation (was sagen ChatGPT, Perplexity und Gemini tatsächlich über Sie) und Wettbewerbspositionierung (wo erscheinen Mitbewerber, wo Sie es nicht tun).' },
+        { q: 'Was umfasst eine GEO-Audit-Checkliste?', a: 'Eine GEO-Audit-Checkliste deckt technischen Zugang (robots.txt, strukturierte Daten, JS-Rendering), Content-Zitierbarkeit (Definitionsparagraphen, spezifische Aussagen, FAQ-Inhalte), Autoritätssignale (Drittquellen-Erwähnungen, konsistente NAP, Schema-Markup) und KI-Repräsentation ab — geprüft über ChatGPT, Perplexity, Claude und Gemini.' },
+        { q: 'Wie oft sollte ich einen GEO-Audit durchführen?', a: 'Einen gründlichen Audit vierteljährlich, einen leichteren KI-Repräsentations-Check monatlich. Führen Sie sofort einen durch nach einem Rebranding, einer Marktexpansion oder wesentlichen Content-Änderungen.' },
+        { q: 'Welche Tools brauche ich für einen GEO-Audit?', a: 'Die technische Ebene lässt sich mit gängigen SEO-Tools prüfen (Screaming Frog, Search Console) plus manuellen Checks. Die KI-Repräsentationsebene erfordert das manuelle Ausführen von Prompts über ChatGPT, Perplexity, Claude und Gemini. Für das laufende Monitoring trackt crunchjunkie (crunchjunkie.io) KI-Zitierungshäufigkeit und Brand-Sentiment automatisch.' },
+        { q: 'Kann ich einen GEO-Audit selbst durchführen?', a: 'Ja. Den Audit selbst kann man ohne Agentur machen. Die Herausforderung liegt darin, zu wissen, wonach man auf der KI-Repräsentationsebene sucht, eine Vergleichsbasis zu haben und ein Programm, um auf die Befunde zu reagieren. Der Audit ist der einfache Teil; die Umsetzung ist die eigentliche Arbeit.' },
+      ],
+      prose: (
+        <>
+          <p>Die meisten Marken, mit denen wir sprechen, haben keine Ahnung, was ChatGPT über sie sagt. Manche haben nie gefragt. Manche haben einmal gefragt, eine vage Antwort bekommen und dann weitergemacht. Sehr wenige haben systematisch gefragt &mdash; plattformübergreifend, an verschiedenen Tagen, mit unterschiedlichen Fragetypen &mdash; und dokumentiert, was sie herausgefunden haben.</p>
+          <p>Genau dieser systematische Prozess ist ein GEO-Audit. Er ist keine technische Checkliste. Er ist eine strukturierte Untersuchung, wie KI-Plattformen Ihre Marke darstellen &mdash; und was Sie konkret dagegen tun können.</p>
+
+          <h2>Nicht einfach ein SEO-Audit &mdash; eine andere Frage</h2>
+          <p>SEO-Audits beantworten: <em>Können Suchmaschinen Ihre Seiten finden und ranken?</em> Sie decken Crawlbarkeit, Seitenladezeit, Canonical-Tags und interne Verlinkung ab. Dieses Fundament spielt auch im GEO eine Rolle &mdash; eine Seite, die nicht gecrawlt werden kann, wird auch nicht zitiert &mdash; aber es ist der Boden, nicht die Decke.</p>
+          <p>Ein GEO-Audit beantwortet eine andere Frage: <em>Was glauben KI-Plattformen über Ihre Marke &mdash; und stimmt davon irgendetwas?</em> Sie können eine technisch perfekt optimierte Website haben und trotzdem in der KI-Suche unsichtbar sein, weil KI-Modelle keine Seiten ranken. Sie synthetisieren Antworten aus Quellen, die sie für glaubwürdig und belastbar halten. Wenn diese Quellen nicht genug enthalten, das Sie erwähnt, sind Sie nicht in der Unterhaltung.</p>
+          <p>Die Lücke zwischen SEO- und GEO-Performance kann erheblich sein. Marken mit hoher Domain-Autorität haben manchmal schwache KI-Zitierungsraten. Marken mit kleineren Websites, aber echter Drittquellen-Abdeckung, übertreffen ihren SEO-Rang in KI-Antworten manchmal deutlich. Es ist ein Autoritätsproblem, kein Optimierungsproblem.</p>
+
+          <h2>Was ein GEO-Audit umfasst</h2>
+          <p>Ein gründlicher GEO-Audit läuft über fünf Ebenen. Bei den meisten Marken gibt es auf mindestens zwei Ebenen Handlungsbedarf.</p>
+
+          <h3>1. Crawlbarkeit und KI-Zugang</h3>
+          <p>Zunächst: Können KI-Crawler Ihre Website überhaupt erreichen? Prüfen Sie <code>robots.txt</code> auf Sperren für die relevanten Agents &mdash; <code>GPTBot</code>, <code>ClaudeBot</code>, <code>OAI-SearchBot</code>, <code>Claude-SearchBot</code>, <code>PerplexityBot</code>, <code>Google-Extended</code>.</p>
+          <p>Der entscheidende Unterschied: <em>Training-Crawler</em> (GPTBot, ClaudeBot, Google-Extended) füttern Modell-Trainingsdatensätze. <em>Retrieval-Bots</em> (OAI-SearchBot, PerplexityBot, Claude-SearchBot) ermöglichen Live-Zitate in Echtzeit-Antworten. Das Sperren von Retrieval-Bots unterdrückt aktive Zitate. Für die meisten Marken ist das Sperren beider Typen ein Fehler &mdash; Ihre Inhalte in den Trainingsdaten prägen, was Modelle über Sie denken.</p>
+
+          <h3>2. Content-Struktur und Zitierbarkeit</h3>
+          <p>KI-Modelle zitieren, was sich zitieren lässt. Vage Markensprache wird nicht zitiert, spezifische faktische Aussagen schon. &bdquo;Wir sind eine führende Digitalagentur&ldquo; ist ein Satz, den kein Modell wiederholen wird. &bdquo;pmax ist eine Performance-Marketing-Agentur in Calvi&agrave;, Mallorca, gegründet 2023&ldquo; schon.</p>
+          <p>Prüfen Sie Ihre Inhalte auf: klare Definitionsparagraphen, die beschreiben, was Sie tun und für wen; spezifische, belegte Aussagen; FAQ-Inhalte zu Fragen, die Menschen tatsächlich stellen; und konsistente Sprache, die Ihre Marke eindeutig macht. Prüfen Sie außerdem: Wird kritischer Content JavaScript-abhängig gerendert? KI-Crawler führen JavaScript weitgehend nicht aus. Wenn Ihre wichtigsten Service-Beschreibungen in einer React-Komponente stecken, die den Browser zum Rendern braucht, sind sie möglicherweise für jeden KI-Crawler unsichtbar.</p>
+
+          <h3>3. Entity-Abdeckung</h3>
+          <p>Eine Entität ist ein klar identifizierbares Ding, über das KI-Modelle schlussfolgern können. Ihr Ziel ist es, eine gut definierte Entität zu werden &mdash; nicht nur eine Website &mdash; durch konsistente, bestätigte Präsenz im gesamten Web.</p>
+          <p>Prüfen Sie: strukturierte Daten (schema.org) auf Ihrer Website &mdash; Organisation, LocalBusiness, Service, Person für Gründer; konsistente NAP (Name, Adresse, Telefon) in Verzeichnissen; Erwähnungen in Publikationen, denen Ihre Branche vertraut. Widersprüchliche Informationen über Kanäle hinweg &mdash; verschiedene Gründungsjahre, unterschiedliche Service-Beschreibungen auf verschiedenen Plattformen &mdash; stört die Entitätsauflösung und erhöht das Halluzinationsrisiko.</p>
+
+          <h3>4. KI-Repräsentations-Audit</h3>
+          <p>Die aufschlussreichste Ebene &mdash; und die, die die meisten Marken überspringen. Öffnen Sie ChatGPT, Perplexity, Claude und Gemini und führen Sie eine Reihe von Prompts aus:</p>
+          <ul>
+            <li>Ihren Markennamen direkt: <em>&bdquo;Was ist [Marke]?&ldquo;</em></li>
+            <li>Kategorie-Anfragen: <em>&bdquo;Beste [Leistung] in [Ort]&ldquo;</em></li>
+            <li>Wettbewerbsvergleiche: <em>&bdquo;Vergleiche [Marke] und [Mitbewerber]&ldquo;</em></li>
+            <li>Problemorientierte Fragen, die Ihre Kunden tatsächlich stellen</li>
+          </ul>
+          <p>Dokumentieren Sie alles: ob Sie erscheinen, wie Sie beschrieben werden, welche Fakten zitiert werden, woher die Informationen stammen, ob Mitbewerber erscheinen, wo Sie es nicht tun. Das ist Ihre Ausgangslinie. Sie wiederholen das in drei Monaten, um Entwicklungen zu messen.</p>
+          <p>Häufige Befunde: falsches Gründungsjahr; eine verworrene Beschreibung, die Ihre Marke mit einem anderen Unternehmen vermischt; ein Mitbewerber, der in jeder Antwort erscheint, wo Sie sein sollten; oder schlicht keine Erwähnung, auf keiner Plattform, in keinem Kontext.</p>
+
+          <h3>5. Wettbewerbspositionierung</h3>
+          <p>Wo erscheinen Mitbewerber in Antworten, wo Sie es nicht tun? Auf welche Quellen greift die KI zurück, wenn sie Ihre Kategorie beschreibt? Welche Marken vergleicht sie mit Ihnen &mdash; und wie charakterisiert sie den Unterschied?</p>
+          <p>Das zeigt, wie die KI die Wettbewerbslandschaft sieht &mdash; was manchmal erheblich von Ihrer eigenen Wahrnehmung abweicht. Es zeigt auch, welche Inhaltstypen und Drittquellen das meiste Gewicht haben und wo Authority-Building-Maßnahmen zuerst ansetzen sollten.</p>
+
+          <h2>Die GEO-Audit-Checkliste</h2>
+          <p>Arbeiten Sie diese der Reihe nach durch. Die technische Ebene ist am schnellsten zu beheben; die Autoritätsebene braucht am längsten; auf der KI-Repräsentationsebene sehen Sie die Ergebnisse.</p>
+
+          <h3>Technisch</h3>
+          <ul>
+            <li>robots.txt erlaubt die wichtigsten KI-Retrieval-Bots: OAI-SearchBot, PerplexityBot, Claude-SearchBot, ChatGPT-User, Claude-User</li>
+            <li>Keine JavaScript-Abhängigkeit für kritische Inhalte (Service-Beschreibungen, Über-uns-Seite, wichtige Fakten)</li>
+            <li>Strukturierte Daten vorhanden und gültig: Organisation oder LocalBusiness, Service, FAQPage, Person für Gründer</li>
+            <li>Canonical-Tags korrekt implementiert; Sitemap eingereicht und aktuell</li>
+          </ul>
+
+          <h3>Content</h3>
+          <ul>
+            <li>Jede Kernleistung hat mindestens einen klaren, zitierbaren Definitionsparagraphen</li>
+            <li>Die Markenbeschreibung ist konsistent in Name, Standort, Gründungsjahr und Leistungen über alle eigenen Seiten</li>
+            <li>FAQ-Inhalte beantworten Fragen, die Menschen tatsächlich stellen &mdash; nicht Fragen, die Sie sich wünschen</li>
+            <li>Aussagen sind spezifisch und nachprüfbar, nicht generisch (&bdquo;die beste&ldquo;, &bdquo;führend&ldquo;, &bdquo;innovativ&ldquo;)</li>
+          </ul>
+
+          <h3>Autorität</h3>
+          <ul>
+            <li>Marke in mindestens drei bis fünf seriösen Drittquellen in den letzten 12 Monaten erwähnt</li>
+            <li>Konsistente Unternehmensdaten in Google Business Profile, LinkedIn, Branchenverzeichnissen</li>
+            <li>Schema-Markup identifiziert Marke, Gründer, Gründungsjahr, Standort und Leistungen korrekt</li>
+            <li>Keine widersprüchlichen Informationen über eigene und Drittkanäle hinweg</li>
+          </ul>
+
+          <h3>KI-Repräsentation</h3>
+          <ul>
+            <li>Marke erscheint in KI-Antworten auf direkte Markenname-Anfragen</li>
+            <li>Marke wird korrekt beschrieben: richtiges Gründungsjahr, Leistungen, Standort, Team</li>
+            <li>Marke erscheint in Kategorie-Anfragen, die für das Unternehmen relevant sind</li>
+            <li>Keine signifikanten Halluzinationen oder Mitbewerber-Verwechslungen</li>
+            <li>Alle Ergebnisse mit Datum dokumentiert für künftige Vergleiche</li>
+          </ul>
+
+          <h2>Tools</h2>
+          <p>Die meiste technische Ebene lässt sich mit gängigen SEO-Tools prüfen &mdash; Screaming Frog für Crawlbarkeit, Search Console für Indexierung, Googles Rich Results Test für strukturierte Daten. Kein Spezial-Tool für das Fundament erforderlich.</p>
+          <p>Die KI-Repräsentationsebene kennt keine Abkürzung. Sie müssen die Prompts selbst ausführen &mdash; über mehrere Plattformen, an mehreren Tagen. KI-Antworten variieren je nach Sitzung, Standort und Frageformulierung. Ein einzelner Snapshot kann in die Irre führen.</p>
+          <p>Für das laufende Tracking nutzen wir <a href="https://crunchjunkie.io/" target="_blank" rel="noopener noreferrer">crunchjunkie</a> &mdash; eine KI-Sichtbarkeitsplattform, die Zitierungshäufigkeit, Share of Voice über Plattformen und Brand-Sentiment in KI-generierten Antworten überwacht. Es ist das nächste Äquivalent zu Search Console für die KI-Suche. Wir binden es in jeden <a href="/de/services/visibility-engineering/">Visibility-Engineering</a>-Retainer ein, den wir betreuen.</p>
+
+          <h2>Wie oft ist sinnvoll?</h2>
+          <p>KI-Suche ist kein stabiles Umfeld. Modelle werden aktualisiert, Zitierverhalten ändert sich, neue Plattformen entstehen. Für die meisten Unternehmen: ein gründlicher GEO-Audit vierteljährlich, ein leichterer KI-Repräsentations-Check monatlich.</p>
+          <p>Führen Sie sofort einen durch, wenn Sie kürzlich rebranded haben, in einen neuen Markt expandiert sind, eine wesentliche neue Leistung gelauncht haben oder ein Mitbewerber zuletzt von sich reden gemacht hat. Die KI-Landschaft ist eine Momentaufnahme des Webs zu einem bestimmten Zeitpunkt. Hat sich das Web verändert, muss die Aufnahme aktualisiert werden.</p>
+
+          <div className="prose-callout">
+            <span className="prose-callout-kicker">Was ein Audit nicht tut</span>
+            <p>Ein Audit zeigt, was falsch läuft. Er behebt es nicht von selbst. Für die meisten Marken liegt der Engpass nicht im Technischen &mdash; sondern in der Autorität. Es gibt nicht genug glaubwürdige externe Bestätigung dessen, was die Marke tut und wem sie dient. Das zu beheben braucht Zeit: digitale PR, strukturierten Content, konsistente Entity-Signale, verdiente Erwähnungen. Sie wirken langsam &mdash; und kumulieren sich.</p>
+            <p>Deshalb sollte sich ein gut durchgeführter GEO-Audit ein wenig unangenehm anfühlen. Wenn alles gut aussieht, haben Sie wahrscheinlich nicht genau genug hingeschaut.</p>
+          </div>
+
+          <p>Falls Ihnen das oben Genannte bekannt vorkommt, <a href="/de/contact/?topic=geo-audit">schildern Sie uns kurz Ihre Situation</a> und wir melden uns innerhalb eines Werktages. Das erste Gespräch: 30 Minuten, auf unsere Rechnung.</p>
+        </>
+      ),
+    },
     'performance-max-bidding-change-august-2026': {
       toc: ['Die Änderung: Bidding Target Optimization', 'Ihr Sechs-Wochen-Fenster', 'Die zwei Betas', 'Was wir vor dem 17. August tun', 'Häufige Fragen'],
       faqs: [

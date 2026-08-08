@@ -204,6 +204,7 @@ export default function VisibilityEngineeringPage() {
               <p>
                 As a specialist <a href="/services/ai-visibility/">generative engine optimisation agency</a>, we help brands improve visibility across AI-powered search platforms including ChatGPT, Google AI Overviews, Gemini, Claude and Perplexity.
                 Read our guides on <a href="/blog/how-to-get-mentioned-by-chatgpt/">how to get cited by ChatGPT, Perplexity and Gemini</a> and <a href="/blog/perplexity-visibility/">how to improve your Perplexity visibility specifically</a>.
+                We run a <a href="/services/geo-audit/">free initial GEO audit</a> for every brand considering working with us.
               </p>
               <ul>
                 <li>Search Engine Optimisation (SEO)</li>

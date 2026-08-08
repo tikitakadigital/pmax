@@ -19,6 +19,114 @@ const NeedHelp = ({ topic }: { topic: string }) => (
 
 export const blogDetails: BlogDetail[] = [
   {
+    slug: 'what-is-a-geo-audit',
+    toc: ['Not an SEO audit', 'What a GEO audit covers', 'The GEO audit checklist', 'Tools', 'How often to run one', 'Frequently asked questions'],
+    faqs: [
+      { q: 'What is a GEO audit?', a: 'A GEO audit is a structured review of how AI platforms represent your brand — what they say when asked about you, how accurately they describe you, which sources they draw on, and where your brand appears or fails to appear in AI-generated responses.' },
+      { q: "What's the difference between a GEO audit and an SEO audit?", a: 'An SEO audit checks whether search engines can find, understand and rank your pages. A GEO audit checks what AI platforms believe about your brand and how accurately they represent it. SEO audits are primarily technical; GEO audits are primarily about authority and representation.' },
+      { q: 'How do I conduct a GEO audit?', a: "Run it across five layers: crawlability (can AI bots access your site), content structure (are your key facts quotable), entity coverage (are you a consistent entity across the web), AI representation (what do ChatGPT, Perplexity and Gemini actually say about you), and competitive positioning (where do competitors appear where you don't)." },
+      { q: 'What does a GEO audit checklist include?', a: 'A GEO audit checklist covers technical access (robots.txt, structured data, JS-rendering), content citability (definitional paragraphs, specific claims, FAQ content), authority signals (third-party mentions, consistent NAP, schema markup), and AI representation checked across ChatGPT, Perplexity, Claude and Gemini.' },
+      { q: 'How often should I run a GEO audit?', a: 'A thorough audit quarterly, a lighter AI representation spot-check monthly. Run one immediately after a rebrand, market expansion or significant content change.' },
+      { q: 'What tools do I need for a GEO audit?', a: 'The technical layer can be audited with standard SEO tools (Screaming Frog, Search Console) plus manual checks. The AI representation layer requires running prompts across ChatGPT, Perplexity, Claude and Gemini. For ongoing monitoring, crunchjunkie (crunchjunkie.io) tracks AI citation frequency and brand sentiment automatically.' },
+      { q: 'Can I run a GEO audit myself?', a: "Yes. The audit itself can be done without an agency. The challenge is knowing what to look for in the AI representation layer, having a baseline to compare against, and having a programme to act on what you find. The audit is the easy part; the remediation is the work." },
+    ],
+    prose: (
+      <>
+        <p>Most brands we talk to have no idea what ChatGPT says about them. Some have never asked. Some have asked once, got a vague answer and moved on. Very few have asked systematically &mdash; across multiple platforms, on multiple days, with different query types &mdash; and documented what they found.</p>
+        <p>That systematic process is a GEO audit. It&rsquo;s not a technical checklist. It&rsquo;s a structured investigation into how AI platforms represent your brand and what you can actually do about it.</p>
+
+        <h2>Not an SEO audit &mdash; a different question</h2>
+        <p>SEO audits answer: <em>can search engines find and rank your pages?</em> They cover crawlability, page speed, canonical tags, internal linking. That foundation still matters for GEO &mdash; a page that can&rsquo;t be crawled won&rsquo;t be cited &mdash; but it&rsquo;s a floor, not a ceiling.</p>
+        <p>A GEO audit answers a different question: <em>what do AI platforms believe about your brand, and is any of it accurate?</em> You can have a perfectly optimised website and still be invisible in AI search, because AI models don&rsquo;t rank pages. They synthesise responses from sources they judge to be credible and corroborated. If those sources don&rsquo;t include enough that mentions you, you&rsquo;re not in the conversation.</p>
+        <p>The gap between SEO and GEO performance can be significant. Brands with strong domain authority sometimes have weak AI citation rates. Brands with smaller websites but genuine third-party coverage sometimes punch well above their SEO weight in AI responses. It&rsquo;s an authority problem, not an optimisation problem.</p>
+
+        <h2>What a GEO audit covers</h2>
+        <p>A thorough GEO audit runs across five layers. Most brands have issues in at least two.</p>
+
+        <h3>1. Crawlability and AI access</h3>
+        <p>Before anything else: can AI crawlers reach your site? Check <code>robots.txt</code> for blocks on the agents that matter &mdash; <code>GPTBot</code>, <code>ClaudeBot</code>, <code>OAI-SearchBot</code>, <code>Claude-SearchBot</code>, <code>PerplexityBot</code>, <code>Google-Extended</code>.</p>
+        <p>The distinction to get right: <em>training crawlers</em> (GPTBot, ClaudeBot, Google-Extended) feed model training datasets. <em>Retrieval bots</em> (OAI-SearchBot, PerplexityBot, Claude-SearchBot) power live citations in real-time answers. Blocking retrieval bots suppresses active citations. For most brands, blocking either type is a mistake &mdash; your content in the training data is how models develop an opinion about you.</p>
+
+        <h3>2. Content structure and citability</h3>
+        <p>AI models quote things that are quotable. Vague brand language doesn&rsquo;t get cited, specific factual statements do. &ldquo;We&rsquo;re a leading digital agency&rdquo; is not a sentence any model will repeat. &ldquo;pmax is a performance marketing agency in Calvi&agrave;, Mallorca, founded in 2023&rdquo; is.</p>
+        <p>Audit your content for: clear definitional paragraphs describing exactly what you do and for whom; specific claims backed by evidence; FAQ content addressing questions people actually ask; and consistent language that disambiguates your brand. Also check: is critical content JS-rendered? AI crawlers largely don&rsquo;t execute JavaScript. If your key service descriptions live in a React component that needs the browser to render, they may be invisible to every AI crawler.</p>
+
+        <h3>3. Entity coverage</h3>
+        <p>An entity is a distinct, identifiable thing that AI models can reason about. Your goal is to become a well-defined entity &mdash; not just a website &mdash; through consistent, corroborated presence across the web.</p>
+        <p>Check: structured data (schema.org) on your site &mdash; Organisation, LocalBusiness, Service, Person for founders; consistent NAP (name, address, phone) across directories; mentions in publications your sector trusts. Contradictory information across channels &mdash; different founding years, different service descriptions on different platforms &mdash; confuses entity resolution and introduces hallucination risk.</p>
+
+        <h3>4. AI representation audit</h3>
+        <p>The most revealing layer, and the one most brands skip. Open ChatGPT, Perplexity, Claude and Gemini and run a range of prompts:</p>
+        <ul>
+          <li>Your brand name directly: <em>&ldquo;What is [Brand]?&rdquo;</em></li>
+          <li>Category queries: <em>&ldquo;Best [service] in [location]&rdquo;</em></li>
+          <li>Competitive comparisons: <em>&ldquo;Compare [Brand] and [Competitor]&rdquo;</em></li>
+          <li>Problem-first questions your customers actually ask</li>
+        </ul>
+        <p>Document everything: whether you appear, how you&rsquo;re described, what facts are cited, where the information comes from, whether competitors appear where you don&rsquo;t. This is your baseline. You&rsquo;ll run it again in three months to measure movement.</p>
+        <p>Common findings: wrong founding date; a confused description that mixes your brand with a different company; a competitor appearing in every response where you should appear; or simply no mention at all, on any platform, in any context.</p>
+
+        <h3>5. Competitive positioning</h3>
+        <p>Where do competitors appear in responses where you don&rsquo;t? Which sources does the AI draw on when describing your category? Which brands does it compare to you, and how does it characterise the difference?</p>
+        <p>This tells you what the AI believes the competitive landscape looks like &mdash; which is sometimes quite different from your own view. It also tells you which content types and third-party sources carry the most weight, and where to direct authority-building effort first.</p>
+
+        <h2>The GEO audit checklist</h2>
+        <p>Work through these in order. The technical layer is fastest to fix; the authority layer takes longest; the AI representation layer is where you see results.</p>
+
+        <h3>Technical</h3>
+        <ul>
+          <li>robots.txt allows key AI retrieval bots: OAI-SearchBot, PerplexityBot, Claude-SearchBot, ChatGPT-User, Claude-User</li>
+          <li>No JavaScript dependency for critical content (service descriptions, about page, key facts)</li>
+          <li>Structured data present and valid: Organisation or LocalBusiness, Service, FAQPage, Person for founders</li>
+          <li>Canonical tags implemented correctly; sitemap submitted and current</li>
+        </ul>
+
+        <h3>Content</h3>
+        <ul>
+          <li>Each core service has at least one clear, quotable definitional paragraph</li>
+          <li>Brand description is consistent in name, location, founding year and services across all owned pages</li>
+          <li>FAQ content addresses questions people actually ask &mdash; not questions you wish they asked</li>
+          <li>Claims are specific and verifiable, not generic (&ldquo;the best&rdquo;, &ldquo;leading&rdquo;, &ldquo;innovative&rdquo;)</li>
+        </ul>
+
+        <h3>Authority</h3>
+        <ul>
+          <li>Brand mentioned in at least three to five reputable third-party sources in the past 12 months</li>
+          <li>Consistent business information across Google Business Profile, LinkedIn, industry directories</li>
+          <li>Schema markup accurately identifies brand, founder, founding date, location, services</li>
+          <li>No contradictory information across owned and third-party channels</li>
+        </ul>
+
+        <h3>AI representation</h3>
+        <ul>
+          <li>Brand appears in AI responses for direct brand name queries</li>
+          <li>Brand described accurately: correct founding date, services, location, team</li>
+          <li>Brand appears in category queries relevant to the business</li>
+          <li>No significant hallucinations or competitor misattributions</li>
+          <li>All results documented with date for future comparison</li>
+        </ul>
+
+        <h2>Tools</h2>
+        <p>Most of the technical layer can be audited with standard SEO tools &mdash; Screaming Frog for crawlability, Search Console for indexing, Google&rsquo;s Rich Results Test for structured data. No specialist tool required for the foundation.</p>
+        <p>The AI representation layer has no shortcut. You need to run the prompts yourself, across multiple platforms, on multiple days. AI responses vary by session, location and query phrasing. A single snapshot can mislead.</p>
+        <p>For ongoing tracking, we use <a href="https://crunchjunkie.io/" target="_blank" rel="noopener noreferrer">crunchjunkie</a> &mdash; an AI visibility platform that monitors citation frequency, share of voice across platforms, and brand sentiment in AI-generated responses. It&rsquo;s the closest equivalent to Search Console for AI search. We include it in every <a href="/services/visibility-engineering/">Visibility Engineering</a> retainer we run.</p>
+
+        <h2>How often to run one</h2>
+        <p>AI search is not a stable environment. Models update, citation behaviour shifts, new platforms emerge. For most businesses: a thorough GEO audit quarterly, a lighter AI representation spot-check monthly.</p>
+        <p>Run one immediately if you&rsquo;ve recently rebranded, expanded into a new market, launched a significant new service, or a competitor has recently made noise. The AI landscape is a snapshot of the web at a point in time. If the web has changed, the snapshot needs updating.</p>
+
+        <div className="prose-callout">
+          <span className="prose-callout-kicker">The one thing an audit doesn&rsquo;t do</span>
+          <p>An audit tells you what&rsquo;s wrong. It doesn&rsquo;t fix anything by itself. For most brands the bottleneck isn&rsquo;t technical &mdash; it&rsquo;s authority. There isn&rsquo;t enough credible external corroboration of what the brand does and who it serves. Fixing that takes time: digital PR, structured content, consistent entity signals, earned mentions. They compound slowly.</p>
+          <p>Which is why a well-run GEO audit should feel slightly uncomfortable. If everything looks fine, you probably haven&rsquo;t looked hard enough.</p>
+        </div>
+
+        <NeedHelp topic="geo-audit" />
+      </>
+    ),
+  },
+
+  {
     slug: 'performance-max-bidding-change-august-2026',
     image: '/og/performance-max-bidding-change-august-2026.webp',
     imageAlt: 'Google Ads Bidding Target Optimization timeline — 6 July tool, 17 August change',

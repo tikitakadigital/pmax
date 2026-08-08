@@ -519,6 +519,79 @@ export const es = {
         { q: '¿Cuánto tiempo tarda el GEO en mostrar resultados?', a: 'Los plazos varían según el sector y el punto de partida, pero como el GEO se basa en las mismas señales de confianza y autoridad que el SEO y el PR digital, la mayoría de las marcas ven movimientos significativos en las citas y la visibilidad de IA en un plazo similar al de las ganancias orgánicas de SEO — en meses, no de la noche a la mañana.' },
       ],
     },
+    'geo-audit': {
+      metaTitle: 'Auditoría GEO — Visibilidad de tu marca en IA | pmax',
+      metaDesc: 'pmax realiza auditorías GEO: te decimos qué dicen ChatGPT, Perplexity y Gemini sobre tu marca — y qué mejorar primero. Primera auditoría gratuita.',
+      headline: <>Auditoría GEO.</>,
+      deck: 'Descubre qué saben ChatGPT, Perplexity y Gemini sobre tu marca — y si algo de lo que dicen es correcto.',
+      stats: [
+        { num: '51 %', label: 'de los consumidores han cambiado sus hábitos de investigación por la IA generativa — Gartner' },
+        { num: '4', label: 'plataformas de IA que auditamos: ChatGPT, Perplexity, Claude, Gemini' },
+        { num: '23+', label: 'asistentes de IA y herramientas de búsqueda donde la presencia de marca importa hoy' },
+        { num: '0', label: 'marcas que saben exactamente qué dice la IA sobre ellas — antes de preguntar' },
+      ],
+      prose: (
+        <>
+          <h2>Qué es una auditoría GEO</h2>
+          <p>
+            Una auditoría GEO es un análisis estructurado de cómo las plataformas de IA representan tu marca. No lo que tu web dice sobre ti &mdash; lo que <em>ChatGPT, Perplexity, Claude y Gemini</em> dicen sobre ti cuando alguien pregunta. No siempre es lo mismo, y la brecha entre ambos suele ser mayor de lo que las marcas esperan.
+          </p>
+          <p>
+            A diferencia de una auditoría SEO, que comprueba si los motores de búsqueda pueden encontrar y posicionar tus páginas, una auditoría GEO comprueba si las plataformas de IA tienen una imagen precisa y coherente de quién eres, qué haces y por qué importas. Una web técnicamente perfecta puede seguir generando respuestas de IA erróneas, incompletas o inexistentes si las señales de autoridad subyacentes no están ahí.
+          </p>
+          <p>
+            El resultado es concreto: un informe escrito con lo que dice la IA sobre ti, qué fuentes utiliza, dónde se equivoca, y una lista priorizada de mejoras. También incluimos dónde aparecen tus competidores donde tú no apareces &mdash; que suele ser el hallazgo que más impacta.
+          </p>
+
+          <h2>Qué analizamos</h2>
+
+          <h3>Crawlabilidad de IA</h3>
+          <p>
+            ¿Pueden los bots de IA acceder realmente a tu contenido? Revisamos <code>robots.txt</code> para detectar bloqueos a los bots de recuperación que potencian las citas en vivo &mdash; <code>OAI-SearchBot</code>, <code>PerplexityBot</code>, <code>Claude-SearchBot</code> &mdash; y también a los crawlers de entrenamiento como <code>GPTBot</code> y <code>Google-Extended</code>. Bloquear cualquiera de estos suele ser un error, y es más habitual de lo que parece.
+          </p>
+
+          <h3>Estructura del contenido y citabilidad</h3>
+          <p>
+            Los modelos de IA citan lo que es citable. El copy de marca vago no llega a las respuestas de IA; el contenido específico, factual y bien estructurado, sí. Auditamos tu web en busca de párrafos de definición, datos de marca consistentes, contenido FAQ, y contenido crítico que se renderiza con JavaScript &mdash; y que por tanto es invisible para la mayoría de los crawlers de IA.
+          </p>
+
+          <h3>Cobertura de entidad</h3>
+          <p>
+            Revisamos el markup de schema.org (Organisation, Service, FAQPage, Person), la consistencia del NAP en directorios, y las menciones en fuentes de terceros en las que confían las plataformas de IA. La información contradictoria entre canales aumenta el riesgo de alucinaciones. Localizamos dónde ocurre.
+          </p>
+
+          <h3>Representación en IA</h3>
+          <p>
+            Ejecutamos un conjunto estructurado de prompts en ChatGPT, Perplexity, Claude y Gemini: consultas directas de marca, consultas de categoría, comparaciones con competidores y preguntas orientadas al problema que tus clientes hacen de verdad. Documentamos qué dice la IA, con qué precisión te describe y qué fuentes cita. Eso es tu línea base.
+          </p>
+
+          <h3>Posicionamiento competitivo</h3>
+          <p>
+            ¿Dónde aparecen tus competidores en las respuestas de IA donde tú no apareces? ¿Qué fuentes de terceros tienen más peso en tu sector? Mapeamos la brecha entre dónde estás y dónde deberías estar, e identificamos las acciones con mayor palanca para cerrarla.
+          </p>
+
+          <h2>crunchjunkie &mdash; la herramienta que usamos</h2>
+          <p>
+            Usamos <a href="https://crunchjunkie.io/" target="_blank" rel="noopener noreferrer">crunchjunkie</a> para el seguimiento de visibilidad en IA. Monitoriza la frecuencia de citas en plataformas de IA, rastrea el share of voice frente a competidores y mide el sentimiento de marca en las respuestas generadas por IA. Es lo más parecido a Search Console que existe para la búsqueda con IA &mdash; está disponible públicamente desde hace pocas semanas y lo usamos en el trabajo con clientes desde que se lanzó.
+          </p>
+          <p>
+            En la auditoría inicial gratuita, pasamos tu dominio por crunchjunkie antes de hacer nada más. Eso nos da un snapshot de visibilidad que convierte el resto de la auditoría en algo basado en datos, no en impresiones.
+          </p>
+          <p>
+            Para los clientes que pasan a un programa continuo, el tracking con crunchjunkie está incluido. Los informes mensuales muestran si las acciones están moviendo la aguja, qué plataformas responden primero y dónde aparecen nuevas brechas cuando los modelos de IA se actualizan.
+          </p>
+        </>
+      ),
+      faqs: [
+        { q: '¿Qué incluye una auditoría GEO de pmax?', a: "Una auditoría GEO de pmax cubre cinco capas: crawlabilidad de IA (robots.txt, acceso de bots), citabilidad del contenido (contenido estructurado y citable, markup de schema), cobertura de entidad (presencia de marca consistente en directorios y fuentes de terceros), representación en IA (qué dicen ChatGPT, Perplexity, Claude y Gemini sobre ti) y posicionamiento competitivo (dónde aparecen los competidores donde tú no apareces). La auditoría inicial incluye un informe escrito y una llamada de 30 minutos para revisar los hallazgos." },
+        { q: '¿Cuánto tiempo lleva una auditoría GEO?', a: 'La auditoría inicial tarda entre cinco y siete días laborables desde que tenemos acceso a tu dominio y los materiales necesarios. El informe escrito y la llamada se entregan dentro de la misma semana.' },
+        { q: '¿La auditoría inicial es realmente gratuita?', a: 'Sí. Para cualquier marca que esté considerando trabajar con pmax, realizamos un snapshot inicial gratuito de visibilidad GEO usando crunchjunkie — nuestra herramienta de seguimiento de visibilidad en IA. Muestra tu tasa de cita actual en las principales plataformas de IA, qué fuentes usa la IA cuando te describe, y dónde están las mayores brechas. Sin compromiso, sin pitch de ventas.' },
+        { q: '¿Qué necesitáis de nosotros para hacer la auditoría?', a: 'Tu nombre de dominio y las cinco a diez consultas que crees que hacen tus clientes antes de comprar. Todo lo demás lo buscamos nosotros.' },
+        { q: '¿Qué pasa después de la auditoría?', a: 'Recibes un informe escrito con hallazgos específicos para cada capa, una lista priorizada de mejoras y una valoración honesta de cuánto tiempo llevará la mejora dado tu nivel actual de autoridad. Si quieres trabajar juntos en la remediación, lo hablamos. Si prefieres llevar los hallazgos internamente, también está bien.' },
+        { q: '¿Necesito un retainer continuo o puedo hacer solo una auditoría?', a: 'Una auditoría puntual es posible. La mayoría de los clientes que encuentran problemas significativos pasan a un programa continuo — porque la auditoría diagnostica el problema y el retainer lo soluciona — pero no hay ninguna obligación asociada a la auditoría inicial gratuita.' },
+        { q: '¿Es adecuada una auditoría GEO para una marca en etapa temprana?', a: "Depende. Si tienes muy poca presencia web, la auditoría lo confirmará — y la prioridad es construir esa presencia antes de preocuparte por la representación en IA. Si tienes una presencia web establecida pero no has comprobado tu visibilidad en IA, la auditoría suele ser reveladora. Te diremos con honestidad desde el principio si es el paso adecuado." },
+      ],
+    },
   } as Record<string, ServiceDetail>,
 
   industries: {
@@ -938,6 +1011,112 @@ export const es = {
   } as Record<string, LocalizedCaseDetail>,
 
   blogPostDetail: {
+    'what-is-a-geo-audit': {
+      toc: ['No es una auditoría SEO', 'Qué cubre una auditoría GEO', 'La checklist de auditoría GEO', 'Herramientas', 'Con qué frecuencia hacerla', 'Preguntas frecuentes'],
+      faqs: [
+        { q: '¿Qué es una auditoría GEO?', a: 'Una auditoría GEO es un análisis estructurado de cómo las plataformas de IA representan tu marca — qué dicen cuando les preguntan por ti, con qué precisión te describen, en qué fuentes se basan, y dónde aparece tu marca o deja de aparecer en las respuestas generadas por IA.' },
+        { q: '¿Cuál es la diferencia entre una auditoría GEO y una auditoría SEO?', a: 'Una auditoría SEO comprueba si los motores de búsqueda pueden encontrar, entender y posicionar tus páginas. Una auditoría GEO comprueba qué creen las plataformas de IA sobre tu marca y con qué precisión la representan. Las auditorías SEO son principalmente técnicas; las GEO se centran principalmente en autoridad y representación.' },
+        { q: '¿Cómo hago una auditoría GEO?', a: 'A través de cinco capas: crawlabilidad (¿pueden los bots de IA acceder a tu web?), estructura de contenido (¿son citables tus datos clave?), cobertura de entidad (¿eres una entidad consistente en todo el web?), representación en IA (¿qué dicen ChatGPT, Perplexity y Gemini sobre ti?), y posicionamiento competitivo (¿dónde aparecen los competidores donde tú no apareces?).' },
+        { q: '¿Qué incluye una checklist de auditoría GEO?', a: 'Una checklist de auditoría GEO cubre acceso técnico (robots.txt, datos estructurados, renderizado JS), citabilidad del contenido (párrafos de definición, afirmaciones específicas, contenido FAQ), señales de autoridad (menciones en terceros, NAP consistente, markup de schema), y representación en IA comprobada en ChatGPT, Perplexity, Claude y Gemini.' },
+        { q: '¿Con qué frecuencia debería hacer una auditoría GEO?', a: 'Una auditoría completa cada trimestre, un check más ligero de representación en IA mensualmente. Haz una de inmediato si has hecho un rebranding, te has expandido a un nuevo mercado o has hecho un cambio significativo de contenido.' },
+        { q: '¿Qué herramientas necesito para una auditoría GEO?', a: 'La capa técnica se puede auditar con herramientas SEO estándar (Screaming Frog, Search Console) más checks manuales. La capa de representación en IA requiere ejecutar prompts en ChatGPT, Perplexity, Claude y Gemini. Para el seguimiento continuo, crunchjunkie (crunchjunkie.io) rastrea la frecuencia de citas de IA y el sentimiento de marca automáticamente.' },
+        { q: '¿Puedo hacer una auditoría GEO por mi cuenta?', a: 'Sí. La auditoría en sí se puede hacer sin agencia. El reto está en saber qué buscar en la capa de representación en IA, tener una base con la que comparar, y tener un programa para actuar sobre lo que encuentres. La auditoría es la parte fácil; la remediación es el trabajo.' },
+      ],
+      prose: (
+        <>
+          <p>La mayoría de las marcas con las que hablamos no tienen ni idea de lo que dice ChatGPT sobre ellas. Algunas nunca han preguntado. Otras preguntaron una vez, recibieron una respuesta vaga y siguieron adelante. Muy pocas han preguntado de forma sistemática &mdash; en varias plataformas, en varios días, con distintos tipos de consulta &mdash; y han documentado lo que encontraron.</p>
+          <p>Ese proceso sistemático es una auditoría GEO. No es una checklist técnica. Es una investigación estructurada sobre cómo representan tu marca las plataformas de IA &mdash; y qué puedes hacer realmente al respecto.</p>
+
+          <h2>No es una auditoría SEO &mdash; es una pregunta diferente</h2>
+          <p>Las auditorías SEO responden: <em>¿pueden los motores de búsqueda encontrar y posicionar tus páginas?</em> Cubren crawlabilidad, velocidad de carga, canonical tags, enlazado interno. Esa base sigue importando en GEO &mdash; una página que no se puede crawlear no se puede citar &mdash; pero es el suelo, no el techo.</p>
+          <p>Una auditoría GEO responde una pregunta diferente: <em>¿qué creen las plataformas de IA sobre tu marca, y es algo de eso correcto?</em> Puedes tener una web perfectamente optimizada y seguir siendo invisible en la búsqueda con IA, porque los modelos de IA no posicionan páginas. Sintetizan respuestas a partir de fuentes que consideran creíbles y respaldadas. Si esas fuentes no incluyen suficiente sobre ti, no estás en la conversación.</p>
+          <p>La brecha entre rendimiento SEO y GEO puede ser significativa. Marcas con alta autoridad de dominio a veces tienen tasas de cita en IA bajas. Marcas con webs más pequeñas pero con cobertura genuina en terceros a veces superan con creces su peso SEO en las respuestas de IA. Es un problema de autoridad, no de optimización.</p>
+
+          <h2>Qué cubre una auditoría GEO</h2>
+          <p>Una auditoría GEO completa corre por cinco capas. La mayoría de las marcas tienen problemas en al menos dos de ellas.</p>
+
+          <h3>1. Crawlabilidad y acceso de IA</h3>
+          <p>Antes de nada: ¿pueden los crawlers de IA llegar a tu web? Revisa <code>robots.txt</code> para detectar bloqueos a los agentes que importan &mdash; <code>GPTBot</code>, <code>ClaudeBot</code>, <code>OAI-SearchBot</code>, <code>Claude-SearchBot</code>, <code>PerplexityBot</code>, <code>Google-Extended</code>.</p>
+          <p>La distinción clave: los <em>crawlers de entrenamiento</em> (GPTBot, ClaudeBot, Google-Extended) alimentan los datasets de entrenamiento de los modelos. Los <em>bots de recuperación</em> (OAI-SearchBot, PerplexityBot, Claude-SearchBot) potencian las citas en vivo en respuestas en tiempo real. Bloquear los bots de recuperación suprime las citas activas. Para la mayoría de las marcas, bloquear cualquier tipo es un error &mdash; tu contenido en los datos de entrenamiento es como los modelos desarrollan una opinión sobre ti.</p>
+
+          <h3>2. Estructura del contenido y citabilidad</h3>
+          <p>Los modelos de IA citan lo que es citable. El lenguaje de marca vago no se cita; las afirmaciones factuales específicas, sí. &laquo;Somos una agencia digital líder&raquo; no es una frase que ningún modelo repetirá. &laquo;pmax es una agencia de marketing de resultados en Calvi&agrave;, Mallorca, fundada en 2023&raquo; sí.</p>
+          <p>Audita tu contenido en busca de: párrafos de definición claros que describan exactamente qué haces y para quién; afirmaciones específicas respaldadas por evidencia; contenido FAQ que aborde las preguntas que la gente realmente hace; y lenguaje consistente que diferencie tu marca. Comprueba también: ¿está el contenido crítico renderizado con JS? Los crawlers de IA en su mayor parte no ejecutan JavaScript. Si tus descripciones de servicio clave viven en un componente React que necesita el navegador para renderizarse, pueden ser invisibles para todos los crawlers de IA.</p>
+
+          <h3>3. Cobertura de entidad</h3>
+          <p>Una entidad es algo distinto e identificable sobre lo que los modelos de IA pueden razonar. Tu objetivo es convertirte en una entidad bien definida &mdash; no solo una web &mdash; mediante una presencia consistente y corroborada en todo el web.</p>
+          <p>Comprueba: datos estructurados (schema.org) en tu web &mdash; Organisation, LocalBusiness, Service, Person para fundadores; NAP (nombre, dirección, teléfono) consistente en directorios; menciones en publicaciones en las que confía tu sector. La información contradictoria entre canales &mdash; distintos años de fundación, distintas descripciones de servicios en diferentes plataformas &mdash; confunde la resolución de entidades e introduce riesgo de alucinaciones.</p>
+
+          <h3>4. Auditoría de representación en IA</h3>
+          <p>La capa más reveladora, y la que la mayoría de las marcas omiten. Abre ChatGPT, Perplexity, Claude y Gemini y ejecuta una serie de prompts:</p>
+          <ul>
+            <li>Tu nombre de marca directamente: <em>&laquo;¿Qué es [Marca]?&raquo;</em></li>
+            <li>Consultas de categoría: <em>&laquo;Mejor [servicio] en [ubicación]&raquo;</em></li>
+            <li>Comparaciones competitivas: <em>&laquo;Compara [Marca] y [Competidor]&raquo;</em></li>
+            <li>Preguntas orientadas al problema que tus clientes hacen de verdad</li>
+          </ul>
+          <p>Documenta todo: si apareces, cómo te describen, qué datos citan, de dónde viene la información, si los competidores aparecen donde tú no. Esta es tu línea base. La repites en tres meses para medir el movimiento.</p>
+          <p>Hallazgos habituales: fecha de fundación incorrecta; una descripción confusa que mezcla tu marca con otra empresa; un competidor que aparece en todas las respuestas donde deberías aparecer tú; o simplemente ninguna mención, en ninguna plataforma, en ningún contexto.</p>
+
+          <h3>5. Posicionamiento competitivo</h3>
+          <p>¿Dónde aparecen los competidores en respuestas donde tú no apareces? ¿En qué fuentes se apoya la IA cuando describe tu categoría? ¿Qué marcas te compara y cómo caracteriza la diferencia?</p>
+          <p>Esto te dice cómo cree la IA que es el panorama competitivo &mdash; que a veces es bastante diferente de tu propia visión. También te dice qué tipos de contenido y fuentes de terceros tienen más peso, y hacia dónde dirigir primero el esfuerzo de construcción de autoridad.</p>
+
+          <h2>La checklist de auditoría GEO</h2>
+          <p>Trabaja en este orden. La capa técnica es la más rápida de corregir; la de autoridad tarda más; la de representación en IA es donde ves los resultados.</p>
+
+          <h3>Técnico</h3>
+          <ul>
+            <li>robots.txt permite los bots de recuperación clave de IA: OAI-SearchBot, PerplexityBot, Claude-SearchBot, ChatGPT-User, Claude-User</li>
+            <li>Sin dependencia de JavaScript para contenido crítico (descripciones de servicios, página sobre nosotros, datos clave)</li>
+            <li>Datos estructurados presentes y válidos: Organisation o LocalBusiness, Service, FAQPage, Person para fundadores</li>
+            <li>Canonical tags implementados correctamente; sitemap enviado y actualizado</li>
+          </ul>
+
+          <h3>Contenido</h3>
+          <ul>
+            <li>Cada servicio principal tiene al menos un párrafo de definición claro y citable</li>
+            <li>La descripción de marca es consistente en nombre, ubicación, año de fundación y servicios en todas las páginas propias</li>
+            <li>El contenido FAQ responde las preguntas que la gente realmente hace &mdash; no las que desearías que hicieran</li>
+            <li>Las afirmaciones son específicas y verificables, no genéricas (&laquo;el mejor&raquo;, &laquo;líder&raquo;, &laquo;innovador&raquo;)</li>
+          </ul>
+
+          <h3>Autoridad</h3>
+          <ul>
+            <li>Marca mencionada en al menos tres a cinco fuentes de terceros reputadas en los últimos 12 meses</li>
+            <li>Información de negocio consistente en Google Business Profile, LinkedIn, directorios del sector</li>
+            <li>El markup de schema identifica correctamente marca, fundador, fecha de fundación, ubicación y servicios</li>
+            <li>Sin información contradictoria entre canales propios y de terceros</li>
+          </ul>
+
+          <h3>Representación en IA</h3>
+          <ul>
+            <li>La marca aparece en respuestas de IA para consultas directas del nombre de marca</li>
+            <li>La marca se describe con precisión: fecha de fundación, servicios, ubicación y equipo correctos</li>
+            <li>La marca aparece en consultas de categoría relevantes para el negocio</li>
+            <li>Sin alucinaciones significativas ni atribuciones erróneas a competidores</li>
+            <li>Todos los resultados documentados con fecha para comparación futura</li>
+          </ul>
+
+          <h2>Herramientas</h2>
+          <p>La mayor parte de la capa técnica se puede auditar con herramientas SEO estándar &mdash; Screaming Frog para crawlabilidad, Search Console para indexación, el Rich Results Test de Google para datos estructurados. No se necesita ninguna herramienta especializada para la base.</p>
+          <p>La capa de representación en IA no tiene atajos. Necesitas ejecutar los prompts tú mismo, en varias plataformas, en varios días. Las respuestas de IA varían según la sesión, la ubicación y la formulación de la consulta. Una sola instantánea puede engañar.</p>
+          <p>Para el seguimiento continuo, usamos <a href="https://crunchjunkie.io/" target="_blank" rel="noopener noreferrer">crunchjunkie</a> &mdash; una plataforma de visibilidad en IA que monitoriza la frecuencia de citas, el share of voice entre plataformas y el sentimiento de marca en las respuestas generadas por IA. Es lo más parecido a Search Console para la búsqueda con IA. Lo incluimos en cada retainer de <a href="/es/services/visibility-engineering/">Visibility Engineering</a> que gestionamos.</p>
+
+          <h2>Con qué frecuencia hacerla</h2>
+          <p>La búsqueda con IA no es un entorno estable. Los modelos se actualizan, el comportamiento de cita cambia, surgen nuevas plataformas. Para la mayoría de los negocios: una auditoría GEO completa cada trimestre, un check más ligero de representación en IA mensualmente.</p>
+          <p>Haz una de inmediato si has hecho un rebranding recientemente, te has expandido a un nuevo mercado, has lanzado un servicio nuevo significativo, o un competidor ha hecho ruido recientemente. El panorama de IA es una instantánea del web en un momento del tiempo. Si el web ha cambiado, la instantánea necesita actualizarse.</p>
+
+          <div className="prose-callout">
+            <span className="prose-callout-kicker">Lo que una auditoría no hace</span>
+            <p>Una auditoría te dice qué está mal. No lo arregla por sí sola. Para la mayoría de las marcas el cuello de botella no es técnico &mdash; es de autoridad. No hay suficiente corroboración externa creíble de lo que hace la marca y a quién sirve. Arreglarlo lleva tiempo: PR digital, contenido estructurado, señales de entidad consistentes, menciones ganadas. Se acumulan despacio.</p>
+            <p>Por eso una auditoría GEO bien hecha debería resultar un poco incómoda. Si todo parece estar bien, probablemente no has mirado con suficiente profundidad.</p>
+          </div>
+
+          <p>Si algo de lo anterior te resulta familiar, <a href="/es/contact/?topic=geo-audit">cuéntanos un poco tu situación</a> y te respondemos en un día laborable. La primera conversación son 30 minutos, invita la casa.</p>
+        </>
+      ),
+    },
     'performance-max-bidding-change-august-2026': {
       toc: ['El cambio: Bidding Target Optimization', 'Tu ventana de seis semanas', 'Las dos betas', 'Lo que hacemos antes del 17 de agosto', 'Preguntas frecuentes'],
       faqs: [
