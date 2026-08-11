@@ -1,0 +1,89 @@
+name: Setup crunchjunkie log cron on cPanel
+
+# Run this ONCE manually from the Actions tab.
+# It installs a daily cron job directly on the cPanel server.
+# After that, GitHub is out of the loop — the server uploads logs itself.
+on:
+  workflow_dispatch:
+
+jobs:
+  setup:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - name: Find log file and install cPanel cron
+        env:
+          CPANEL_API_TOKEN: ${{ secrets.CPANEL_API_TOKEN }}
+          CJ_LOG_URL: ${{ secrets.CRUNCHJUNKIE_LOG_URL }}
+        run: |
+          CPANEL="https://rs00011.dp.smartservers.com.au:2083"
+          AUTH="cpanel pmax:${CPANEL_API_TOKEN}"
+
+          # ── 1. Find the SSL access log in /home/pmax/logs ──
+          FILES=$(curl -sf --max-time 30 \
+            -H "Authorization: ${AUTH}" \
+            "${CPANEL}/execute/Fileman/list_files?dir=%2Fhome%2Fpmax%2Flogs")
+
+          LOG_PATH=$(echo "$FILES" | python3 -c "
+          import json, sys
+          data = json.loads(sys.stdin.read())
+          for f in data.get('data', []):
+              name = f.get('file', '')
+              full = f.get('fullpath', '/home/pmax/logs/' + name)
+              if 'ssl_log' in name and not name.endswith('.gz') and not name[-1].isdigit():
+                  print(full)
+                  break
+          ")
+
+          if [ -z "$LOG_PATH" ]; then
+            echo "::error::Could not find SSL log — check /home/pmax/logs manually"
+            echo "Files found:"
+            echo "$FILES" | python3 -c "import json,sys; [print(' ', f.get('file')) for f in json.loads(sys.stdin.read()).get('data',[])]"
+            exit 1
+          fi
+
+          echo "Log path: ${LOG_PATH}"
+
+          # ── 2. Build the cron command ──
+          # Gzip the log and POST it directly to crunchjunkie from the server.
+          # Runs at 3:30am server time daily.
+          CRON_CMD="gzip -c ${LOG_PATH} | curl -s -X POST ${CJ_LOG_URL} -F 'file=@-;filename=access.log.gz;type=application/gzip' > /dev/null 2>&1"
+
+          echo "Cron command: ${CRON_CMD}"
+
+          # ── 3. Install cron job via cPanel CronJobs API ──
+          RESULT=$(curl -sf --max-time 30 \
+            -H "Authorization: ${AUTH}" \
+            -G \
+            --data-urlencode "command=${CRON_CMD}" \
+            --data-urlencode "minute=30" \
+            --data-urlencode "hour=3" \
+            --data-urlencode "day=*" \
+            --data-urlencode "month=*" \
+            --data-urlencode "weekday=*" \
+            "${CPANEL}/execute/CronJobs/add_line")
+
+          echo "CronJobs API response: ${RESULT}"
+
+          # Verify
+          STATUS=$(echo "$RESULT" | python3 -c "import json,sys; d=json.loads(sys.stdin.read()); print(d.get('status', 0))")
+          if [ "$STATUS" != "1" ]; then
+            echo "::error::Cron install may have failed — check response above"
+            exit 1
+          fi
+
+          echo "✓ Cron job installed. The server will upload logs to crunchjunkie daily at 3:30am."
+
+          # ── 4. Confirm it's listed ──
+          echo ""
+          echo "Current cron jobs on server:"
+          curl -sf --max-time 30 \
+            -H "Authorization: ${AUTH}" \
+            "${CPANEL}/execute/CronJobs/list_lines" | \
+            python3 -c "
+          import json, sys
+          data = json.loads(sys.stdin.read())
+          for job in data.get('data', {}).get('lines', []):
+              print(f\"  {job.get('minute')} {job.get('hour')} {job.get('day')} {job.get('month')} {job.get('weekday')}  {job.get('command')}\")
+          "
