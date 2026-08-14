@@ -4,7 +4,7 @@ import Link from 'next/link'
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
 import { siteAlternates } from '@/lib/hreflang'
-import { breadcrumb, org } from '@/lib/schema'
+import { breadcrumb } from '@/lib/schema'
 
 const person = {
   '@context': 'https://schema.org',
@@ -42,7 +42,6 @@ export const metadata: Metadata = {
 const jsonLd = [
   breadcrumb([{ name: 'Home', url: 'https://pmax.online/' }, { name: 'About', url: 'https://pmax.online/about/' }]),
   { '@context': 'https://schema.org', '@type': 'AboutPage', url: 'https://pmax.online/about/', name: 'About pmax', about: { '@id': 'https://pmax.online/#org' } },
-  { '@context': 'https://schema.org', ...org },
   person,
 ]
 

@@ -10,7 +10,7 @@ import FaqList from '@/components/FaqList'
 import { getT } from '@/lib/i18n'
 import { cases } from '@/lib/content/cases'
 import { posts as allPosts } from '@/lib/content/blog'
-import { org, website, faqPage } from '@/lib/schema'
+import { faqPage } from '@/lib/schema'
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
   const { lang } = await params
@@ -30,8 +30,6 @@ export default async function LangHomePage({ params }: { params: Promise<{ lang:
   const t = getT(lang)
   const h = t.home
   const jsonLd = [
-    { '@context': 'https://schema.org', ...org },
-    website,
     { ...faqPage(h.homeFaqs), inLanguage: lang },
   ]
   const p = `/${lang}`

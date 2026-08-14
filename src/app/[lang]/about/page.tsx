@@ -3,7 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
-import { breadcrumb, org } from '@/lib/schema'
+import { breadcrumb } from '@/lib/schema'
 import { getT } from '@/lib/i18n'
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
@@ -28,7 +28,6 @@ export default async function AboutPage({ params }: { params: Promise<{ lang: st
   const jsonLd = [
     breadcrumb([{ name: 'Home', url: `https://pmax.online/${lang}/` }, { name: a.eyebrow, url: `https://pmax.online/${lang}/about/` }]),
     { '@context': 'https://schema.org', '@type': 'AboutPage', url: `https://pmax.online/${lang}/about/`, about: { '@id': 'https://pmax.online/#org' } },
-    { '@context': 'https://schema.org', ...org },
   ]
 
   return (

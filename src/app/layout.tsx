@@ -3,7 +3,10 @@ import { Space_Grotesk, Space_Mono, Newsreader, Anton } from 'next/font/google'
 import Script from 'next/script'
 import RevealObserver from '@/components/RevealObserver'
 import CursorDot from '@/components/CursorDot'
+import { org, website } from '@/lib/schema'
 import './globals.css'
+
+const globalJsonLd = [{ '@context': 'https://schema.org', ...org }, website]
 
 const anton = Anton({
   subsets: ['latin'],
@@ -86,6 +89,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             style={{ display: 'none', visibility: 'hidden' }}
           />
         </noscript>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(globalJsonLd) }} />
         <RevealObserver />
         <CursorDot />
         {children}

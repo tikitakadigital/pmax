@@ -8,7 +8,7 @@ import StatCounter from '@/components/StatCounter'
 import SectionHead from '@/components/SectionHead'
 import PromoBlock from '@/components/PromoBlock'
 import FaqList from '@/components/FaqList'
-import { org, website, faqPage, breadcrumb, serviceSchema } from '@/lib/schema'
+import { faqPage, breadcrumb, serviceSchema } from '@/lib/schema'
 import { siteAlternates } from '@/lib/hreflang'
 import { services } from '@/lib/content/services'
 import { cases } from '@/lib/content/cases'
@@ -60,8 +60,6 @@ const homeFaqs = [
 ]
 
 const jsonLd = [
-  { '@context': 'https://schema.org', ...org },
-  website,
   { ...faqPage(homeFaqs), inLanguage: 'en' },
   breadcrumb([{ name: 'Home', url: 'https://pmax.online/' }]),
   serviceSchema({ name: 'AI Search Visibility (GEO)', description: 'More and more people ask ChatGPT, Perplexity or Gemini before they ever open Google. We make sure your brand is the one they recommend — through clean technical foundations, structured data, and content AI models can actually read.', url: 'https://pmax.online/services/ai-visibility/', serviceType: 'AI Search Visibility' }),
