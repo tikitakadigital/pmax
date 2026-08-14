@@ -96,6 +96,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
       description: post.deck,
       url: `https://pmax.online/blog/${slug}/`,
       datePublished: post.date,
+      dateModified: post.dateModified,
       keywords: categoryKeywords[post.category],
       image: post.ogImage,
     }),
@@ -189,7 +190,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                   <p style={{ fontSize: 13, lineHeight: 1.65, color: '#b4b4b4', margin: '0 0 10px' }}>
                     Philipp is the Founder and Director of pmax, a performance marketing and AI visibility agency in Calvi&agrave;, Mallorca. He is also the co-founder of <a href="https://crunchjunkie.io/" target="_blank" rel="noopener noreferrer" style={{ color: '#f6f4ef' }}>crunchjunkie</a>, an AI visibility tracking platform for monitoring brand citation across ChatGPT, Perplexity, Claude and Gemini.
                   </p>
-                  <a href="https://www.linkedin.com/in/philipp-enders/" target="_blank" rel="noopener noreferrer" style={{ fontFamily: 'var(--font-mono)', fontSize: 10, fontWeight: 500, letterSpacing: '1.5px', textTransform: 'uppercase', color: '#949494' }}>LinkedIn →</a>
+                  <a href="https://www.linkedin.com/in/philippenders/" target="_blank" rel="noopener noreferrer" style={{ fontFamily: 'var(--font-mono)', fontSize: 10, fontWeight: 500, letterSpacing: '1.5px', textTransform: 'uppercase', color: '#949494' }}>LinkedIn →</a>
                 </div>
               </div>
             </div>

@@ -111,6 +111,12 @@ const localBusinessSchema = {
     'https://www.linkedin.com/company/pmax-online-s-l/',
     'https://www.facebook.com/profile.php?id=61590296614624',
   ],
+  aggregateRating: {
+    '@type': 'AggregateRating',
+    ratingValue: '4.9',
+    reviewCount: '14',
+    bestRating: '5',
+  },
 }
 
 const jsonLd = [

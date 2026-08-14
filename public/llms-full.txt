@@ -102,6 +102,32 @@ Tags: GA4, Server-side GTM, Consent Mode v2, CRM integration, Attribution, BI da
 
 ---
 
+### Visibility Engineering
+**URL:** https://pmax.online/services/visibility-engineering/
+
+Flagship integrated programme combining Generative Engine Optimisation (GEO), SEO, digital PR and online reputation management — coordinated into one strategy. Because AI platforms and search engines judge brands holistically, not by isolated signals.
+
+What we do: entity graph audit and build-out, Schema.org structured data, citation-worthy content creation, digital PR for third-party authority signals, reputation monitoring and response, AI mention tracking via crunchjunkie. Where GEO, SEO and PR intersect is where the largest gains live — we run them as one programme rather than three separate disciplines.
+
+Relevant for: established brands that need coordinated, long-term visibility across both Google and AI search. Minimum 6-month engagement.
+
+Tags: GEO, SEO, Digital PR, Reputation, AI Search, Entity Optimisation
+
+---
+
+### GEO Audit
+**URL:** https://pmax.online/services/geo-audit/
+
+A structured review of how AI platforms represent your brand. Not what your website says about you — what ChatGPT, Perplexity, Claude and Gemini say about you when someone asks. The initial audit is free.
+
+What we cover (five layers): AI crawlability (robots.txt, bot access for OAI-SearchBot, PerplexityBot, Claude-SearchBot, GPTBot, Google-Extended), content citability (definitional paragraphs, FAQ content, structured data, JavaScript rendering issues), entity coverage (Schema.org markup, NAP consistency, third-party directory presence), AI representation (structured prompt testing across four platforms, documenting what AI says and which sources it draws on), competitive positioning (where competitors appear in AI responses where you don't, and highest-leverage moves to close the gap).
+
+Output: written report with specific findings across all five layers, prioritised list of fixes, baseline AI visibility snapshot via crunchjunkie, 30-minute results call. No obligation attached to the free initial audit.
+
+Tags: GEO, AI Search, Audit, AI Citation, Brand Visibility
+
+---
+
 ### Creative Production
 **URL:** https://pmax.online/services/creative/
 
@@ -216,6 +242,15 @@ Meta + Instagram brand campaign for a major European auto manufacturer with a fo
 ---
 
 ## Blog posts (all articles)
+
+### What Is a GEO Audit — And How to Run One
+**URL:** https://pmax.online/blog/what-is-a-geo-audit/
+**Published:** Aug 8, 2026
+**Also in:** DE · ES
+
+What a GEO audit is, why it differs from an SEO audit, and a full five-layer framework for running one: AI crawlability (robots.txt rules for OAI-SearchBot, PerplexityBot, Claude-SearchBot, GPTBot, Google-Extended), content citability (definitional paragraphs, FAQ content, schema markup, JavaScript rendering), entity coverage (Schema.org, NAP consistency, third-party directory presence), AI representation (prompt testing across ChatGPT, Perplexity, Claude, Gemini), competitive positioning (where competitors appear where you don't). Includes a full audit checklist, tool section featuring crunchjunkie, and guidance on audit frequency. Written from direct client experience across hospitality, real estate, professional services and B2B software. Answers: what is a GEO audit, how to run a GEO audit, GEO audit checklist, AI visibility audit.
+
+---
 
 ### Google Ads vs Meta Ads vs TikTok Ads for ecommerce in 2026
 **URL:** https://pmax.online/blog/google-ads-vs-meta-ads-vs-tiktok-ads-ecommerce-2026/

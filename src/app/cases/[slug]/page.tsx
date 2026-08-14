@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
-import { breadcrumb } from '@/lib/schema'
+import { breadcrumb, orgRef } from '@/lib/schema'
 import { siteAlternates } from '@/lib/hreflang'
 import { caseDetails, getCaseDetail } from '@/lib/content/cases-detail'
 
@@ -27,11 +27,27 @@ export default async function CasePage({ params }: { params: Promise<{ slug: str
   const detail = getCaseDetail(slug)
   if (!detail) notFound()
 
-  const jsonLd = breadcrumb([
-    { name: 'Home', url: 'https://pmax.online/' },
-    { name: 'Work', url: 'https://pmax.online/cases/' },
-    { name: detail.breadcrumbLabel, url: `https://pmax.online/cases/${slug}/` },
-  ])
+  const pageUrl = `https://pmax.online/cases/${slug}/`
+  const jsonLd = [
+    breadcrumb([
+      { name: 'Home', url: 'https://pmax.online/' },
+      { name: 'Work', url: 'https://pmax.online/cases/' },
+      { name: detail.breadcrumbLabel, url: pageUrl },
+    ]),
+    {
+      '@context': 'https://schema.org',
+      '@type': 'Article',
+      '@id': `${pageUrl}#article`,
+      headline: detail.metaTitle,
+      description: detail.metaDesc,
+      url: pageUrl,
+      author: { '@id': 'https://pmax.online/#org' },
+      publisher: { '@id': 'https://pmax.online/#org' },
+      mainEntityOfPage: { '@type': 'WebPage', '@id': pageUrl },
+      inLanguage: 'en',
+    },
+    orgRef,
+  ]
 
   return (
     <>

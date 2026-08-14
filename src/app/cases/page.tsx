@@ -3,7 +3,7 @@ import Link from 'next/link'
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
 import { siteAlternates } from '@/lib/hreflang'
-import { breadcrumb } from '@/lib/schema'
+import { breadcrumb, orgRef } from '@/lib/schema'
 import { cases } from '@/lib/content/cases'
 
 export const metadata: Metadata = {
@@ -12,10 +12,23 @@ export const metadata: Metadata = {
   alternates: siteAlternates('/cases/'),
 }
 
-const jsonLd = breadcrumb([
-  { name: 'Home', url: 'https://pmax.online/' },
-  { name: 'Work', url: 'https://pmax.online/cases/' },
-])
+const jsonLd = [
+  breadcrumb([
+    { name: 'Home', url: 'https://pmax.online/' },
+    { name: 'Work', url: 'https://pmax.online/cases/' },
+  ]),
+  {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    '@id': 'https://pmax.online/cases/#collection',
+    name: 'Work — Client Case Studies | pmax',
+    description: '10 digital marketing case studies: Google Ads, SEO, paid social and AI visibility results from real clients across e-commerce, real estate, SaaS, retail and more.',
+    url: 'https://pmax.online/cases/',
+    publisher: { '@id': 'https://pmax.online/#org' },
+    inLanguage: 'en',
+  },
+  orgRef,
+]
 
 export default function CasesPage() {
   return (

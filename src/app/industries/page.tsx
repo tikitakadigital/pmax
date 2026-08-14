@@ -3,7 +3,7 @@ import Link from 'next/link'
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
 import { siteAlternates } from '@/lib/hreflang'
-import { breadcrumb } from '@/lib/schema'
+import { breadcrumb, orgRef } from '@/lib/schema'
 
 export const metadata: Metadata = {
   title: 'Industries we serve — 10 digital marketing playbooks | pmax',
@@ -88,10 +88,23 @@ const industries = [
   },
 ]
 
-const jsonLd = breadcrumb([
-  { name: 'Home', url: 'https://pmax.online/' },
-  { name: 'Industries', url: 'https://pmax.online/industries/' },
-])
+const jsonLd = [
+  breadcrumb([
+    { name: 'Home', url: 'https://pmax.online/' },
+    { name: 'Industries', url: 'https://pmax.online/industries/' },
+  ]),
+  {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    '@id': 'https://pmax.online/industries/#collection',
+    name: 'Industries we serve — 10 digital marketing playbooks | pmax',
+    description: 'Tailored digital marketing for 10 sectors: e-commerce, real estate, healthcare, hospitality, renewables, boating, HR, retail, automotive and energy.',
+    url: 'https://pmax.online/industries/',
+    publisher: { '@id': 'https://pmax.online/#org' },
+    inLanguage: 'en',
+  },
+  orgRef,
+]
 
 export default function IndustriesPage() {
   return (

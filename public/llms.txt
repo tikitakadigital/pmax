@@ -20,6 +20,8 @@
 - [Conversion Design (CRO)](https://pmax.online/services/conversion-design/): More revenue from the same traffic — A/B testing, landing page rebuilds, funnel design.
 - [Analytics & Tracking](https://pmax.online/services/analytics/): Server-side GTM, Consent Mode v2, GA4, offline conversion imports. The measurement layer everything else stands on.
 - [Creative Production](https://pmax.online/services/creative/): Static, motion and UGC video on a weekly cadence — briefed by media data, built for testing.
+- [Visibility Engineering](https://pmax.online/services/visibility-engineering/): Flagship integrated programme combining GEO, SEO, digital PR and reputation management — because AI platforms and search engines judge brands holistically.
+- [GEO Audit](https://pmax.online/services/geo-audit/): A structured review of what ChatGPT, Perplexity, Claude and Gemini say about your brand — and a prioritised list of what to fix first. Free initial audit available.
 
 ## Case studies
 
@@ -36,6 +38,7 @@
 
 ## Journal
 
+- [What Is a GEO Audit — And How to Run One](https://pmax.online/blog/what-is-a-geo-audit/): A GEO audit tells you what ChatGPT, Perplexity and Gemini say about your brand — what they get wrong, which sources they draw on, and a five-layer framework for fixing it.
 - [How to Improve Your Perplexity Visibility (and Why It's Not ChatGPT)](https://pmax.online/blog/perplexity-visibility/): Perplexity is retrieval-first and cites a different domain set from ChatGPT — five moves to get your business cited, with a separate baseline for each engine.
 - [Performance Max bidding changes on August 17 — what to do before it lands](https://pmax.online/blog/performance-max-bidding-change-august-2026/): Google's automatic 17 August bidding change explained — what Bidding Target Optimization does, the 6 July tool, and the per-campaign action plan.
 - [Las pujas de Performance Max cambian el 17 de agosto (ES)](https://pmax.online/es/blog/performance-max-bidding-change-august-2026/): Qué es Bidding Target Optimization, la herramienta del 6 de julio y la lista de pasos por campaña antes del cambio automático.

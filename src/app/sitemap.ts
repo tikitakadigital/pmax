@@ -13,12 +13,12 @@ const legalSlugs = ['imprint', 'privacy', 'cookies', 'terms'] as const
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const core: MetadataRoute.Sitemap = [
-    { url: `${base}/`, lastModified: '2026-04-01', changeFrequency: 'monthly', priority: 1.0 },
-    { url: `${base}/services/`, lastModified: '2026-04-01', changeFrequency: 'monthly', priority: 0.9 },
-    { url: `${base}/industries/`, lastModified: '2026-04-01', changeFrequency: 'monthly', priority: 0.9 },
+    { url: `${base}/`, lastModified: '2026-08-08', changeFrequency: 'monthly', priority: 1.0 },
+    { url: `${base}/services/`, lastModified: '2026-08-08', changeFrequency: 'monthly', priority: 0.9 },
+    { url: `${base}/industries/`, lastModified: '2026-06-01', changeFrequency: 'monthly', priority: 0.9 },
     { url: `${base}/cases/`, lastModified: '2026-04-01', changeFrequency: 'monthly', priority: 0.9 },
-    { url: `${base}/blog/`, lastModified: '2026-04-04', changeFrequency: 'weekly', priority: 0.9 },
-    { url: `${base}/about/`, lastModified: '2026-04-01', changeFrequency: 'yearly', priority: 0.8 },
+    { url: `${base}/blog/`, lastModified: '2026-08-08', changeFrequency: 'weekly', priority: 0.9 },
+    { url: `${base}/about/`, lastModified: '2026-08-11', changeFrequency: 'yearly', priority: 0.8 },
     { url: `${base}/contact/`, lastModified: '2026-04-01', changeFrequency: 'yearly', priority: 0.8 },
     { url: `${base}/seo-company-mallorca/`, lastModified: '2026-06-03', changeFrequency: 'monthly', priority: 0.9 },
     { url: `${base}/de/seo-agentur-mallorca/`, lastModified: '2026-06-03', changeFrequency: 'monthly', priority: 0.9 },
@@ -38,9 +38,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...langs.map(lang => ({ url: `${base}/${lang}/contact/`, lastModified: '2026-04-01', changeFrequency: 'yearly' as const, priority: 0.7 })),
   ]
 
+  const serviceLastMod: Record<string, string> = {
+    'visibility-engineering': '2026-08-08',
+    'geo-audit': '2026-08-08',
+  }
   const servicePages: MetadataRoute.Sitemap = [
-    ...services.map(s => ({ url: `${base}/services/${s.slug}/`, lastModified: '2026-04-01', changeFrequency: 'monthly' as const, priority: 0.8 })),
-    ...langs.flatMap(lang => services.map(s => ({ url: `${base}/${lang}/services/${s.slug}/`, lastModified: '2026-04-01', changeFrequency: 'monthly' as const, priority: 0.7 }))),
+    ...services.map(s => ({ url: `${base}/services/${s.slug}/`, lastModified: serviceLastMod[s.slug] ?? '2026-04-01', changeFrequency: 'monthly' as const, priority: 0.8 })),
+    ...langs.flatMap(lang => services.map(s => ({ url: `${base}/${lang}/services/${s.slug}/`, lastModified: serviceLastMod[s.slug] ?? '2026-04-01', changeFrequency: 'monthly' as const, priority: 0.7 }))),
   ]
 
   const industryPages: MetadataRoute.Sitemap = [

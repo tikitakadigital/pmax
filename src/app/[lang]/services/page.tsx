@@ -3,7 +3,7 @@ import Link from 'next/link'
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
 import FaqList from '@/components/FaqList'
-import { breadcrumb } from '@/lib/schema'
+import { breadcrumb, orgRef } from '@/lib/schema'
 import { getT } from '@/lib/i18n'
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
@@ -28,6 +28,7 @@ export default async function ServicesPage({ params }: { params: Promise<{ lang:
   const crumbLabel = lang === 'de' ? 'Leistungen' : lang === 'es' ? 'Servicios' : 'Services'
   const jsonLd = [
     breadcrumb([{ name: 'Home', url: `https://pmax.online/${lang}/` }, { name: crumbLabel, url: `https://pmax.online/${lang}/services/` }]),
+    orgRef,
     { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: s.faqs.map(({ q, a }) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } })) },
   ]
 

@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
-import { breadcrumb } from '@/lib/schema'
+import { breadcrumb, orgRef } from '@/lib/schema'
 import { posts } from '@/lib/content/blog'
 import { getT } from '@/lib/i18n'
 
@@ -26,7 +26,22 @@ export default async function BlogPage({ params }: { params: Promise<{ lang: str
   const p = `/${lang}`
 
   const blogLabel = lang === 'de' ? 'Journal' : 'Blog'
-  const jsonLd = breadcrumb([{ name: 'Home', url: `https://pmax.online/${lang}/` }, { name: blogLabel, url: `https://pmax.online/${lang}/blog/` }])
+  const jsonLd = [
+    breadcrumb([{ name: 'Home', url: `https://pmax.online/${lang}/` }, { name: blogLabel, url: `https://pmax.online/${lang}/blog/` }]),
+    {
+      '@context': 'https://schema.org',
+      '@type': 'ItemList',
+      name: `pmax ${blogLabel}`,
+      url: `https://pmax.online/${lang}/blog/`,
+      publisher: { '@id': 'https://pmax.online/#org' },
+      numberOfItems: posts.filter(p => !p.external).length,
+      itemListElement: posts.filter(p => !p.external).map((post, i) => {
+        const locPost = b.posts.find(lp => lp.slug === post.slug)
+        return { '@type': 'ListItem', position: i + 1, url: `https://pmax.online/${lang}/blog/${post.slug}/`, name: locPost?.title ?? post.title }
+      }),
+    },
+    orgRef,
+  ]
 
   return (
     <>

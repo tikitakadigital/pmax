@@ -4,7 +4,7 @@ import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
 import FaqList from '@/components/FaqList'
 import { siteAlternates } from '@/lib/hreflang'
-import { breadcrumb } from '@/lib/schema'
+import { breadcrumb, orgRef } from '@/lib/schema'
 import { services } from '@/lib/content/services'
 
 export const metadata: Metadata = {
@@ -23,6 +23,7 @@ const faqs = [
 
 const jsonLd = [
   breadcrumb([{ name: 'Home', url: 'https://pmax.online/' }, { name: 'Services', url: 'https://pmax.online/services/' }]),
+  orgRef,
   {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',

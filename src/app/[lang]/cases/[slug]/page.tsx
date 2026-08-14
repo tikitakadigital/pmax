@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
-import { breadcrumb } from '@/lib/schema'
+import { breadcrumb, orgRef } from '@/lib/schema'
 import { cases } from '@/lib/content/cases'
 import { getCaseDetail } from '@/lib/content/cases-detail'
 import { getT } from '@/lib/i18n'
@@ -44,11 +44,27 @@ export default async function CasePage({ params }: { params: Promise<{ lang: str
   const prose = loc?.prose ?? detail.prose
   const isTranslated = !!loc?.prose
 
-  const jsonLd = breadcrumb([
-    { name: 'Home', url: `https://pmax.online/${lang}/` },
-    { name: casesLabel, url: `https://pmax.online/${lang}/cases/` },
-    { name: locItem?.title ?? detail.breadcrumbLabel, url: `https://pmax.online/${lang}/cases/${slug}/` },
-  ])
+  const caseUrl = `https://pmax.online/${lang}/cases/${slug}/`
+  const jsonLd = [
+    breadcrumb([
+      { name: 'Home', url: `https://pmax.online/${lang}/` },
+      { name: casesLabel, url: `https://pmax.online/${lang}/cases/` },
+      { name: locItem?.title ?? detail.breadcrumbLabel, url: caseUrl },
+    ]),
+    {
+      '@context': 'https://schema.org',
+      '@type': 'Article',
+      '@id': `${caseUrl}#article`,
+      headline: loc?.metaTitle ?? detail.metaTitle,
+      description: loc?.metaDesc ?? detail.metaDesc,
+      url: caseUrl,
+      author: { '@id': 'https://pmax.online/#org' },
+      publisher: { '@id': 'https://pmax.online/#org' },
+      mainEntityOfPage: { '@type': 'WebPage', '@id': caseUrl },
+      inLanguage: lang,
+    },
+    orgRef,
+  ]
 
   return (
     <>

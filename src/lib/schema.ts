@@ -50,13 +50,19 @@ export const org = {
     '@type': 'Person',
     name: 'Philipp Enders',
     jobTitle: 'Founder & Director',
-    sameAs: 'https://www.linkedin.com/in/philipp-enders/',
+    sameAs: 'https://www.linkedin.com/in/philippenders/',
   },
   sameAs: [
     'https://www.wikidata.org/wiki/Q140329835',
     'https://www.linkedin.com/company/pmax-online-s-l/',
     'https://www.facebook.com/profile.php?viewas=100000686899395&id=61590296614624',
   ],
+  aggregateRating: {
+    '@type': 'AggregateRating',
+    ratingValue: '4.9',
+    reviewCount: '14',
+    bestRating: '5',
+  },
   priceRange: '€€€',
   currenciesAccepted: 'EUR',
   paymentAccepted: 'Bank transfer, invoice',
@@ -80,11 +86,12 @@ export const website = {
   inLanguage: ['en', 'de', 'es'],
 }
 
-export function article({ headline, description, url, datePublished, keywords, image }: {
+export function article({ headline, description, url, datePublished, dateModified, keywords, image }: {
   headline: string
   description: string
   url: string
   datePublished: string
+  dateModified?: string
   keywords?: string[]
   image?: string
 }) {
@@ -95,7 +102,7 @@ export function article({ headline, description, url, datePublished, keywords, i
     description,
     url,
     datePublished,
-    dateModified: datePublished,
+    dateModified: dateModified ?? datePublished,
     author: {
       '@type': 'Person',
       '@id': 'https://pmax.online/#philipp-enders',
@@ -107,7 +114,7 @@ export function article({ headline, description, url, datePublished, keywords, i
         'Generative Engine Optimisation', 'GEO Audit', 'AI Search Visibility',
         'SEO', 'Google Ads', 'Performance Max', 'Meta Ads', 'Digital Marketing Strategy',
       ],
-      sameAs: ['https://www.linkedin.com/in/philipp-enders/'],
+      sameAs: ['https://www.linkedin.com/in/philippenders/'],
     },
     publisher: { '@id': 'https://pmax.online/#org' },
     mainEntityOfPage: { '@type': 'WebPage', '@id': url },
@@ -156,6 +163,14 @@ export function faqPage(items: { q: string; a: string }[]) {
       acceptedAnswer: { '@type': 'Answer', text: a },
     })),
   }
+}
+
+export const orgRef = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  '@id': 'https://pmax.online/#org',
+  name: 'pmax',
+  url: 'https://pmax.online/',
 }
 
 export function breadcrumb(items: { name: string; url: string }[]) {

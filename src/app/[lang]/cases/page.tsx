@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
-import { breadcrumb } from '@/lib/schema'
+import { breadcrumb, orgRef } from '@/lib/schema'
 import { getT } from '@/lib/i18n'
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
@@ -25,7 +25,20 @@ export default async function CasesPage({ params }: { params: Promise<{ lang: st
   const p = `/${lang}`
 
   const crumbLabel = lang === 'de' ? 'Referenzen' : lang === 'es' ? 'Trabajo' : 'Work'
-  const jsonLd = breadcrumb([{ name: 'Home', url: `https://pmax.online/${lang}/` }, { name: crumbLabel, url: `https://pmax.online/${lang}/cases/` }])
+  const jsonLd = [
+    breadcrumb([{ name: 'Home', url: `https://pmax.online/${lang}/` }, { name: crumbLabel, url: `https://pmax.online/${lang}/cases/` }]),
+    {
+      '@context': 'https://schema.org',
+      '@type': 'CollectionPage',
+      '@id': `https://pmax.online/${lang}/cases/#collection`,
+      name: c.metaTitle,
+      description: c.metaDesc,
+      url: `https://pmax.online/${lang}/cases/`,
+      publisher: { '@id': 'https://pmax.online/#org' },
+      inLanguage: lang,
+    },
+    orgRef,
+  ]
 
   return (
     <>

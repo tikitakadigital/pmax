@@ -11,6 +11,7 @@ export interface Post {
   featured?: boolean
   external?: boolean
   ogImage?: string
+  dateModified?: string
 }
 
 export const posts: Post[] = [

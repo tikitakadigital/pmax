@@ -3,7 +3,7 @@ import Link from 'next/link'
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
 import { siteAlternates } from '@/lib/hreflang'
-import { breadcrumb } from '@/lib/schema'
+import { breadcrumb, orgRef } from '@/lib/schema'
 import { posts } from '@/lib/content/blog'
 
 export const metadata: Metadata = {
@@ -12,12 +12,29 @@ export const metadata: Metadata = {
   alternates: siteAlternates('/blog/'),
 }
 
-const jsonLd = breadcrumb([
-  { name: 'Home', url: 'https://pmax.online/' },
-  { name: 'Journal', url: 'https://pmax.online/blog/' },
-])
-
 export default function BlogPage() {
+  const jsonLd = [
+    breadcrumb([
+      { name: 'Home', url: 'https://pmax.online/' },
+      { name: 'Journal', url: 'https://pmax.online/blog/' },
+    ]),
+    {
+      '@context': 'https://schema.org',
+      '@type': 'ItemList',
+      name: 'pmax Journal',
+      description: 'Practical guides on Google Ads, Meta, SEO, analytics and AI search visibility — written by the people running the campaigns.',
+      url: 'https://pmax.online/blog/',
+      publisher: { '@id': 'https://pmax.online/#org' },
+      numberOfItems: posts.filter(p => !p.external).length,
+      itemListElement: posts.filter(p => !p.external).map((post, i) => ({
+        '@type': 'ListItem',
+        position: i + 1,
+        url: `https://pmax.online/blog/${post.slug}/`,
+        name: post.title,
+      })),
+    },
+    orgRef,
+  ]
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />

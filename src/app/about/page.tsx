@@ -6,6 +6,33 @@ import Footer from '@/components/Footer'
 import { siteAlternates } from '@/lib/hreflang'
 import { breadcrumb, org } from '@/lib/schema'
 
+const person = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  '@id': 'https://pmax.online/#philipp-enders',
+  name: 'Philipp Enders',
+  url: 'https://pmax.online/about/',
+  jobTitle: 'Founder & Director',
+  worksFor: { '@id': 'https://pmax.online/#org' },
+  image: {
+    '@type': 'ImageObject',
+    url: 'https://pmax.online/philipp-enders.webp',
+    width: 720,
+    height: 844,
+    caption: 'Philipp Enders, Founder & Director of pmax',
+  },
+  knowsAbout: [
+    'Generative Engine Optimisation', 'GEO Audit', 'AI Search Visibility',
+    'SEO', 'Google Ads', 'Performance Max', 'Meta Ads', 'Paid Social',
+    'Server-side Tracking', 'Digital Marketing Strategy',
+  ],
+  sameAs: [
+    'https://www.linkedin.com/in/philippenders/',
+    'https://crunchjunkie.io/',
+  ],
+  description: 'Founder and Director of pmax, a performance marketing and AI visibility agency in Calvià, Mallorca. Co-founder of crunchjunkie, an AI citation tracking platform. 20+ years in digital marketing.',
+}
+
 export const metadata: Metadata = {
   title: 'About pmax — performance marketing from Mallorca | pmax',
   description: 'Senior digital marketing team in Calvià, Mallorca. Google Ads, SEO and AI search visibility for brands across Europe. Flat fees, no agency bloat.',
@@ -16,6 +43,7 @@ const jsonLd = [
   breadcrumb([{ name: 'Home', url: 'https://pmax.online/' }, { name: 'About', url: 'https://pmax.online/about/' }]),
   { '@context': 'https://schema.org', '@type': 'AboutPage', url: 'https://pmax.online/about/', name: 'About pmax', about: { '@id': 'https://pmax.online/#org' } },
   { '@context': 'https://schema.org', ...org },
+  person,
 ]
 
 export default function AboutPage() {

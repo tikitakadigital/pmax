@@ -104,6 +104,12 @@ const localBusinessSchema = {
   ],
   knowsLanguage: ['de', 'es', 'en', 'ca'],
   sameAs: ['https://www.linkedin.com/company/pmax-online-s-l/'],
+  aggregateRating: {
+    '@type': 'AggregateRating',
+    ratingValue: '4.9',
+    reviewCount: '14',
+    bestRating: '5',
+  },
 }
 
 const jsonLd = [

@@ -1,4 +1,4 @@
-Options -Indexes
+Options -Indexes -MultiViews
 
 # 404 page
 ErrorDocument 404 /404.html
@@ -50,6 +50,13 @@ ErrorDocument 404 /404.html
   RewriteRule ^cookie-policy/?$ /legal/cookies/ [R=301,L]
   RewriteRule ^legal-notice/?$ /legal/imprint/ [R=301,L]
   RewriteRule ^privacy-policy/?$ /legal/privacy/ [R=301,L]
+
+  # Old WordPress site URLs — redirect to nearest current equivalent
+  RewriteRule ^google-ads-vs-meta-ads/?$ /blog/google-ads-vs-meta-ads-vs-tiktok-ads-ecommerce-2026/ [R=301,L]
+  RewriteRule ^services/digital-strategy/?$ /services/ [R=301,L]
+  RewriteRule ^services/seo/on-page-seo/?$ /services/seo/ [R=301,L]
+  RewriteRule ^industries-we-serve/mallorca-industries/?$ /industries/ [R=301,L]
+  RewriteRule ^digital-compass/?$ /services/ [R=301,L]
 
   # Redirect www to non-www (canonical domain)
   RewriteCond %{HTTP_HOST} ^www\.pmax\.online [NC]
