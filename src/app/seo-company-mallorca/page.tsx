@@ -97,8 +97,8 @@ const localBusinessSchema = {
   sameAs: ['https://www.linkedin.com/company/pmax-online-s-l/'],
   aggregateRating: {
     '@type': 'AggregateRating',
-    ratingValue: '4.9',
-    reviewCount: '14',
+    ratingValue: '5.0',
+    reviewCount: '2',
     bestRating: '5',
   },
 }

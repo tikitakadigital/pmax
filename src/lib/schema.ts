@@ -59,8 +59,8 @@ export const org = {
   ],
   aggregateRating: {
     '@type': 'AggregateRating',
-    ratingValue: '4.9',
-    reviewCount: '14',
+    ratingValue: '5.0',
+    reviewCount: '2',
     bestRating: '5',
   },
   priceRange: '€€€',
