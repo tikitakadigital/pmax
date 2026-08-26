@@ -38,6 +38,7 @@
 
 ## Journal
 
+- [Google's AI Label Is on Your Ads. You Probably Didn't Decide That.](https://pmax.online/blog/google-ads-ai-disclosure-label/): Google's AI disclosure label is live on European SERPs from July 2026. Most advertisers who have it didn't consciously opt in — Performance Max's automatic asset generation triggered it. Covers the three routes to the label, the CTR question (no data yet), and what PMax accounts should check now.
 - [What Is a GEO Audit — And How to Run One](https://pmax.online/blog/what-is-a-geo-audit/): A GEO audit tells you what ChatGPT, Perplexity and Gemini say about your brand — what they get wrong, which sources they draw on, and a five-layer framework for fixing it.
 - [How to Improve Your Perplexity Visibility (and Why It's Not ChatGPT)](https://pmax.online/blog/perplexity-visibility/): Perplexity is retrieval-first and cites a different domain set from ChatGPT — five moves to get your business cited, with a separate baseline for each engine.
 - [Performance Max bidding changes on August 17 — what to do before it lands](https://pmax.online/blog/performance-max-bidding-change-august-2026/): Google's automatic 17 August bidding change explained — what Bidding Target Optimization does, the 6 July tool, and the per-campaign action plan.

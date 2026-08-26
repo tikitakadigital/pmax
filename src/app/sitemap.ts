@@ -17,7 +17,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/services/`, lastModified: '2026-08-08', changeFrequency: 'monthly', priority: 0.9 },
     { url: `${base}/industries/`, lastModified: '2026-06-01', changeFrequency: 'monthly', priority: 0.9 },
     { url: `${base}/cases/`, lastModified: '2026-04-01', changeFrequency: 'monthly', priority: 0.9 },
-    { url: `${base}/blog/`, lastModified: '2026-08-08', changeFrequency: 'weekly', priority: 0.9 },
+    { url: `${base}/blog/`, lastModified: '2026-08-26', changeFrequency: 'weekly', priority: 0.9 },
     { url: `${base}/about/`, lastModified: '2026-08-11', changeFrequency: 'yearly', priority: 0.8 },
     { url: `${base}/contact/`, lastModified: '2026-04-01', changeFrequency: 'yearly', priority: 0.8 },
     { url: `${base}/seo-company-mallorca/`, lastModified: '2026-06-03', changeFrequency: 'monthly', priority: 0.9 },

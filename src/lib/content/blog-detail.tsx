@@ -19,6 +19,84 @@ const NeedHelp = ({ topic }: { topic: string }) => (
 
 export const blogDetails: BlogDetail[] = [
   {
+    slug: 'google-ads-ai-disclosure-label',
+    toc: [
+      'The label in the wild',
+      'How Performance Max triggered it',
+      'Three routes to the label',
+      'The CTR question',
+      'What to do in your account now',
+      'Common questions',
+    ],
+    faqs: [
+      {
+        q: 'What is the Google Ads "AI disclosure: Ad created or edited with AI" label?',
+        a: "A disclosure Google adds to ads where AI was involved in creating or editing the content. Rolled out from 9 July 2026, it appears under the ad description in Google Search, YouTube and Discover — visible without clicking anything. The rollout follows EU AI Act Article 50 transparency obligations which came into force on 2 August 2026.",
+      },
+      {
+        q: 'Does Performance Max automatically trigger the AI disclosure label?',
+        a: "Yes, in most standard configurations. If 'Automatically created assets' is enabled, or if you use AI Max for Search, Google's own AI generates ad variations that trigger the label automatically. You cannot disable the label itself — only the asset generation that causes it.",
+      },
+      {
+        q: 'Can I opt out of the Google Ads AI disclosure label?',
+        a: "Not directly. Turning off automatically created assets and avoiding AI tools for ad content removes the mechanism that triggers the label — but there is no setting that suppresses the label while keeping AI-generated content in place. Removing the AI content is the only functional opt-out.",
+      },
+      {
+        q: 'Does the AI disclosure label affect click-through rate?',
+        a: "There is no statistically meaningful data yet. The prominent placement appears to be in test phase and the label is too new to draw conclusions from. The concern most worth monitoring is in high-trust categories — healthcare, finance, legal services — where 'AI-created' may function as a friction signal. The practical step is segmenting CTR by campaign type and time period from the date the label appeared on your SERPs.",
+      },
+      {
+        q: "What's the difference between automatic and self-declared AI disclosure in Google Ads?",
+        a: "Automatic disclosure is applied by Google when its own AI tools — auto-created assets, Performance Max asset generation, AI Max for Search — touched your content. Self-declared disclosure is a new account-level setting for advertisers who use external AI tools (ChatGPT, Claude, image generators) and upload the results to Google Ads. Google has stated it will not independently verify self-declarations.",
+      },
+    ],
+    prose: (
+      <>
+        <p>A search for <em>rezept online einl&ouml;sen</em> &mdash; &ldquo;redeem prescription online&rdquo; in German &mdash; last week. Two sponsored results. Both online pharmacies. Both carrying a line that didn&rsquo;t exist a month ago: <strong>&ldquo;AI disclosure: Ad created or edited with AI.&rdquo;</strong> Not behind the three-dot menu. Sitting between the ad description and the star rating, visible to everyone searching for somewhere to fill their prescription.</p>
+        <p>DoktorABC. Shop Apotheke. Between them: over 1.2 million reviews, both rated above 4.7 stars. And both now publicly labeled as AI-created &mdash; in a category where every trust signal an advertiser has built over years sits next to a four-word line about how the copy was written.</p>
+        <p>This is interesting not because those pharmacies are doing something unusual. It&rsquo;s interesting because they almost certainly aren&rsquo;t. They&rsquo;re doing what Google has recommended for the past two years: run Performance Max, enable asset generation, let the algorithm find what works. They didn&rsquo;t decide to label their ads as AI-created. Performance Max did it for them.</p>
+
+        <h2>The label in the wild</h2>
+        <p>Google officially launched the AI disclosure label on 9 July 2026, rolling it out across Search, YouTube and Discover. The initial framing was fairly modest: a new entry in the ad details panel, visible when someone taps the three-dot menu, showing whether AI was involved in creating the ad.</p>
+        <p>What the pharmacy screenshot above shows is something more visible: the label appearing directly in the ad listing without any user interaction. That&rsquo;s a step beyond what Google announced in July. It&rsquo;s also consistent with how Google runs placement experiments &mdash; test a more prominent version, measure the response, decide how far to take it. Consider this a likely preview of where the label ends up by default.</p>
+        <p>The regulatory timing is direct. Article 50 of the EU AI Act &mdash; requiring transparency for AI-generated content &mdash; came into force on 2 August 2026. Three weeks later, visible AI labels appear on European SERPs. Google tends to make compliance-adjacent moves ahead of formal enforcement rather than after it.</p>
+
+        <h2>How Performance Max triggered it</h2>
+        <p>Most coverage of this frames the AI disclosure as something advertisers opted into by choosing AI tools. For the majority of large Google Ads accounts, the more accurate framing is: they opted into Performance Max, and Performance Max opted into AI.</p>
+        <p>The asset generation chain works like this. You provide headlines, descriptions, images and a URL. Google uses them to build ad combinations. What many advertisers haven&rsquo;t fully noticed is that Google also generates <em>additional</em> assets &mdash; new headline variants, different description phrasing &mdash; based on your landing page content, tests them, and serves them without showing them to you for approval first. This feature is called &ldquo;Automatically created assets.&rdquo; It&rsquo;s a separate toggle, on by default in many configurations, that Google describes as generating assets to complement your existing ones.</p>
+        <p>If those auto-generated assets ran on your campaigns, the label applies. You provided the inputs. Google wrote the copy. Google is now being transparent about that.</p>
+        <p>AI Max for Search goes further: it rewrites the final URL to match search intent, generates keyword combinations beyond your submitted list, and creates ad variations you didn&rsquo;t author. It produces real performance gains in the right accounts. It is also, structurally, AI-created advertising.</p>
+
+        <h2>Three routes to the label</h2>
+        <p>Not all disclosed ads got there the same way, and the distinction matters for how you respond.</p>
+        <p><strong>Route 1 &mdash; Google&rsquo;s own AI tools.</strong> Auto-created assets, Performance Max asset generation, AI Max for Search. The label is applied automatically. No action required from the advertiser. This is the primary mechanism for most accounts carrying the disclosure &mdash; and the one most advertisers didn&rsquo;t consciously choose.</p>
+        <p><strong>Route 2 &mdash; External AI, self-declared.</strong> If you used ChatGPT, Claude, Midjourney or another external AI tool to draft or edit ad copy and then uploaded it to Google Ads, you&rsquo;re supposed to declare this via a new account-level setting. Google has stated explicitly it will not independently verify declarations. This is compliance by trust.</p>
+        <p><strong>Route 3 &mdash; Entirely human-written.</strong> Every headline and description written without AI assistance, auto-created assets disabled. No label applies. On large accounts running Performance Max at scale, this position is increasingly uncommon.</p>
+        <p>There&rsquo;s an undeclared fourth category &mdash; advertisers who used AI informally, ran copy through a grammar tool, asked an AI for rough ideas they then rewrote, or used AI image tools for a resize &mdash; and have no clear guidance on whether that counts. Google hasn&rsquo;t drawn that line yet.</p>
+
+        <h2>The CTR question</h2>
+        <p>Honest answer: there is no meaningful data yet. The visible placement appears to be in test phase, the label is too new, and normal CTR variance makes early signals uninterpretable. Any claim about what the AI disclosure label does to click-through rates right now is inference, not measurement.</p>
+        <p>Two outcomes are genuinely plausible &mdash; and both probably true in different contexts. The first: the label blends into visual noise, the way &ldquo;Sponsored&rdquo; has. Once a disclosure becomes universal, it stops being informative. Highly relevant AI-labeled ads will still out-click irrelevant unlabeled ones. When the label is everywhere, no one carries a relative disadvantage from it.</p>
+        <p>The second: in categories where trust drives the purchase decision &mdash; healthcare, legal advice, financial services &mdash; &ldquo;AI-created&rdquo; introduces friction at exactly the wrong moment. The pharmacy case is the clearest illustration. Someone deciding where to fill a prescription is making a health decision. &ldquo;AI disclosure: Ad created or edited with AI&rdquo; does something different in that context than it would under an ad for running shoes. Not wrong, necessarily &mdash; but doing work.</p>
+        <p>The competitive scenario worth watching is asymmetry. If every competitor on your SERP carries the label, you&rsquo;re all even. If you&rsquo;re the only one who does &mdash; or the only one who doesn&rsquo;t &mdash; that becomes a visible differentiator on a page where users are actively comparing. Monitor your own key queries. General industry data won&rsquo;t tell you what&rsquo;s happening in your specific account.</p>
+
+        <h2>What to do in your account now</h2>
+        <p><strong>Find out what you&rsquo;re actually serving.</strong> In Google Ads, go to Assets, then All assets, and filter the Source column. Assets marked &ldquo;Auto-created&rdquo; are the ones Google generated. If those have been running for months without review, this is a reasonable moment to look at them &mdash; not only because of the label, but because running ad copy you&rsquo;ve never approved is its own governance question.</p>
+        <p><strong>Check the toggle.</strong> At campaign level, under Settings, you can turn off Automatically created assets. That stops new AI asset generation for that campaign. Existing auto-created assets may continue serving until you review and manage them individually. There is no bulk-remove option.</p>
+        <p><strong>Set a CTR baseline now.</strong> Pull the two weeks before the label appeared on your SERPs into your reporting tool. Segment by campaign type, and within Search by query theme &mdash; brand terms, competitor terms, generic intent. When you have four weeks of post-label data, compare. That segmentation is the earliest real signal you&rsquo;ll have on whether your specific account, in your specific category, is seeing any movement worth responding to.</p>
+        <p><strong>Don&rsquo;t dismantle proven structure based on unproven risk.</strong> The performance case for AI asset generation is established: more combinations tested, more query intent matched, typically higher reach at the same budget. The performance case against the label has not been made yet. Rebuilding campaign structure under announcement pressure &mdash; without your own data to guide it &mdash; tends to produce worse outcomes than waiting for a signal. If you&rsquo;re in a category with genuine trust concerns, that calculus may shift. Let your CTR data make that call, not the announcement.</p>
+
+        <div className="prose-callout">
+          <div className="prose-callout-kicker">The bottom line</div>
+          <p>The label is real and it&rsquo;s here. Its commercial effect on your specific accounts isn&rsquo;t established yet. The right response is clean measurement: know exactly which assets are AI-generated and which aren&rsquo;t, build a CTR baseline this week, and make structural changes only when your own data gives you something to act on.</p>
+        </div>
+
+        <p>Related: <a href="/blog/performance-max-2026/">Performance Max in 2026 &mdash; the settings we change first</a> &middot; <a href="/blog/performance-max-bidding-change-august-2026/">The August 2026 bidding change &mdash; what to do before it lands</a> &middot; <a href="/services/google-ads/">Our Google Ads management service</a></p>
+        <NeedHelp topic="google-ads-ai-label" />
+      </>
+    ),
+  },
+  {
     slug: 'what-is-a-geo-audit',
     image: '/og/geo-audit.webp',
     imageAlt: 'crunchjunkie GEO Audit report for pmax.online — AI readiness score 93, showing AI crawler access 100/100, content accessibility 92/100, structured data 76/100 and technical SEO 100/100',

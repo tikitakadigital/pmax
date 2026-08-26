@@ -16,6 +16,18 @@ export interface Post {
 
 export const posts: Post[] = [
   {
+    slug: 'google-ads-ai-disclosure-label',
+    stamp: 'AUG 26',
+    date: 'Aug 26, 2026',
+    readTime: '7 min',
+    category: 'Google Ads',
+    title: "Google's AI label is on your ads. You probably didn't decide that.",
+    seoTitle: "Google Ads AI Disclosure Label — What PMax Advertisers Need to Know | pmax",
+    deck: "Google now labels ads 'created or edited with AI' on European SERPs. Most advertisers who have it didn't consciously opt in — Performance Max did it for them.",
+    variant: 'is-slate',
+    featured: true,
+  },
+  {
     slug: 'what-is-a-geo-audit',
     stamp: 'AUG 8',
     date: 'Aug 8, 2026',
