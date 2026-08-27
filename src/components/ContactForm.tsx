@@ -266,6 +266,17 @@ export default function ContactForm({ locale = 'en' }: { locale?: Locale }) {
       </div></body></html>`
 
     try {
+      // Fire-and-forget to CRM — doesn't block or affect email flow
+      const adminApi = process.env.NEXT_PUBLIC_ADMIN_API_URL
+      if (adminApi) {
+        fetch(`${adminApi}/api/leads`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ ref, name, email, company, phone, topic, message, locale, sourcePage: window.location.pathname }),
+          keepalive: true,
+        }).catch(() => {})
+      }
+
       const res = await fetch('https://pmax-mailer.long-math-4fe4.workers.dev', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },

@@ -3,8 +3,33 @@ import { Space_Grotesk, Space_Mono, Newsreader, Anton } from 'next/font/google'
 import Script from 'next/script'
 import RevealObserver from '@/components/RevealObserver'
 import CursorDot from '@/components/CursorDot'
+import CookieBanner from '@/components/CookieBanner'
 import { org, website } from '@/lib/schema'
 import './globals.css'
+
+// Runs synchronously in <head> before GTM — sets Consent Mode v2 defaults to denied,
+// then upgrades immediately if the visitor has already consented.
+const consentInitScript = `
+(function(){
+  window.dataLayer=window.dataLayer||[];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('consent','default',{
+    analytics_storage:'denied',
+    ad_storage:'denied',
+    ad_user_data:'denied',
+    ad_personalization:'denied',
+    wait_for_update:500,
+    region:['AT','BE','BG','CY','CZ','DE','DK','EE','ES','FI','FR','GR','HR','HU','IE','IT','LT','LU','LV','MT','NL','PL','PT','RO','SE','SI','SK','GB']
+  });
+  try{
+    var c=document.cookie.split('; ').find(function(r){return r.startsWith('pmax_consent=')});
+    if(c){var s=JSON.parse(decodeURIComponent(c.split('=')[1]));
+      if(s.analytics)gtag('consent','update',{analytics_storage:'granted'});
+      if(s.marketing)gtag('consent','update',{ad_storage:'granted',ad_user_data:'granted',ad_personalization:'granted'});
+    }
+  }catch(e){}
+})();
+`
 
 const globalJsonLd = [{ '@context': 'https://schema.org', ...org }, website]
 
@@ -81,6 +106,10 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" suppressHydrationWarning className={`${anton.variable} ${spaceGrotesk.variable} ${spaceMono.variable} ${newsreader.variable}`}>
+      <head>
+        {/* Consent Mode v2 defaults — must run before GTM */}
+        <script dangerouslySetInnerHTML={{ __html: consentInitScript }} />
+      </head>
       <body>
         <noscript>
           <iframe
@@ -92,6 +121,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(globalJsonLd) }} />
         <RevealObserver />
         <CursorDot />
+        <CookieBanner />
         {children}
       </body>
       <Script
