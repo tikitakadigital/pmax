@@ -4,6 +4,7 @@ import Script from 'next/script'
 import RevealObserver from '@/components/RevealObserver'
 import CursorDot from '@/components/CursorDot'
 import CookieBanner from '@/components/CookieBanner'
+import ScrollDepth from '@/components/ScrollDepth'
 import { org, website } from '@/lib/schema'
 import './globals.css'
 
@@ -122,6 +123,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <RevealObserver />
         <CursorDot />
         <CookieBanner />
+        <ScrollDepth />
         {children}
       </body>
       <Script

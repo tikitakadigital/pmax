@@ -2,6 +2,7 @@
 
 import { useState, useRef, useEffect } from 'react'
 import Link from 'next/link'
+import { gtm } from '@/lib/gtm'
 
 declare global { interface Window { dataLayer: Record<string, unknown>[] } }
 
@@ -166,7 +167,14 @@ export default function ContactForm({ locale = 'en' }: { locale?: Locale }) {
   const [state, setState] = useState<State>('form')
   const [enquiryRef, setEnquiryRef] = useState('')
   const [loadedAt, setLoadedAt] = useState('')
+  const [started, setStarted] = useState(false)
   const formRef = useRef<HTMLFormElement>(null)
+
+  function handleFirstFocus() {
+    if (started) return
+    setStarted(true)
+    gtm.formStart(locale)
+  }
 
   useEffect(() => { setLoadedAt(String(Date.now())) }, [])
   const t = strings[locale] ?? strings.en
@@ -178,6 +186,7 @@ export default function ContactForm({ locale = 'en' }: { locale?: Locale }) {
     if (!e.currentTarget.checkValidity()) { e.currentTarget.reportValidity(); return }
     setState('sending')
     const ref = makeRef('A')
+    gtm.formSubmit(locale, String(Object.fromEntries(new FormData(e.currentTarget)).topic ?? ''))
     const d = Object.fromEntries(new FormData(e.currentTarget))
     const name = String(d.name ?? '')
     const company = String(d.company ?? '')
@@ -300,13 +309,7 @@ export default function ContactForm({ locale = 'en' }: { locale?: Locale }) {
       if (json.data) {
         setEnquiryRef(ref)
         setState('success')
-        window.dataLayer = window.dataLayer || []
-        window.dataLayer.push({
-          event: 'generate_lead',
-          form_locale: locale.toUpperCase(),
-          form_topic: topic || 'not_selected',
-          page_path: window.location.pathname,
-        })
+        gtm.lead(locale, topic || 'not_selected', ref)
       } else {
         setState('error')
       }
@@ -326,7 +329,7 @@ export default function ContactForm({ locale = 'en' }: { locale?: Locale }) {
   const sending = state === 'sending'
 
   return (
-    <form ref={formRef} className="reveal" style={{ display: 'flex', flexDirection: 'column', gap: 18 }} noValidate aria-label="Contact form" onSubmit={handleSubmit}>
+    <form ref={formRef} className="reveal" style={{ display: 'flex', flexDirection: 'column', gap: 18 }} noValidate aria-label="Contact form" onSubmit={handleSubmit} onFocus={handleFirstFocus}>
       <label style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
         <span className="cf-label">{t.name}</span>
         <input name="name" required type="text" autoComplete="name" />
