@@ -59,9 +59,9 @@ export async function POST(req: NextRequest) {
   }
 
   // Update last login
-  await db.from('admin_users').update({ last_login_at: new Date().toISOString() }).eq('id', user.id)
+  await db.from('admin_users').update({ last_login_at: new Date().toISOString() }).eq('id', user!.id)
 
-  const token = await createSession({ userId: user.id, email: user.email })
+  const token = await createSession({ userId: user!.id, email: user!.email })
   const res = NextResponse.json({ ok: true })
   res.cookies.set(sessionCookieOptions(token))
   return res
