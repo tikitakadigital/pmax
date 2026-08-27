@@ -26,6 +26,7 @@ export const posts: Post[] = [
     deck: "Google now labels ads 'created or edited with AI' on European SERPs. Most advertisers who have it didn't consciously opt in — Performance Max did it for them.",
     variant: 'is-slate',
     featured: true,
+    ogImage: '/og/google-ads-ai-disclosure-serp.jpg',
   },
   {
     slug: 'what-is-a-geo-audit',

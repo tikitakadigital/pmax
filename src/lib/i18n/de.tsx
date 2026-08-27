@@ -823,6 +823,7 @@ export const de = {
     promoDeck: 'Wir betreiben keine E-Mail-Liste — aber wenn Sie ein Thema haben, über das wir schreiben sollen, lassen Sie es uns wissen.',
     promoBtn: 'Thema einreichen',
     posts: [
+      { slug: 'google-ads-ai-disclosure-label', title: 'Googles KI-Label steht auf Ihren Anzeigen. Sie haben das wahrscheinlich nicht entschieden.', deck: 'Seit Juli 2026 erscheint auf europäischen SERPs: „KI-Offenlegung: Anzeige wurde mit KI erstellt oder bearbeitet." Die meisten Werbetreibenden, die das Label tragen, haben es nicht bewusst gewählt — Performance Max hat es für sie gesetzt.' },
       { slug: 'pinterest-ads-home-interiors-local-2026', title: 'Pinterest Ads 2026: wer sie wirklich schalten kann — und wer sollte.', deck: 'Für welche Branchen Pinterest Ads funktionieren, wie Retargeting wirklich funktioniert und warum ein lokales Rollo-Studio dem Sweet Spot der Plattform näher ist als die meisten E-Commerce-Shops.' },
       { slug: 'google-ads-vs-meta-ads-vs-tiktok-ads-ecommerce-2026', title: 'Google Ads vs. Meta Ads vs. TikTok Ads für E-Commerce 2026.', deck: 'Kein Marketing-Lehrbuch. Keine Hersteller-Folien. Ein brutal praktischer Side-by-Side-Vergleich, wo jede Plattform 2026 wirklich Geld einbringt — und wo sie still und leise Budget verbrennt.' },
       { slug: 'how-to-get-mentioned-by-chatgpt', title: 'So wird Ihr Unternehmen von ChatGPT, Perplexity und Gemini empfohlen', deck: 'Ein verständlicher Leitfaden zur KI-Sichtbarkeit 2026 — was es ist, warum es wichtig ist und fünf Maßnahmen für diesen Monat.' },
@@ -1050,6 +1051,76 @@ export const de = {
   } as Record<string, LocalizedCaseDetail>,
 
   blogPostDetail: {
+    'google-ads-ai-disclosure-label': {
+      toc: ['Das Label in der Praxis', 'Wie Performance Max es ausgelöst hat', 'Drei Wege zum Label', 'Die CTR-Frage', 'Was jetzt im Konto zu tun ist', 'Häufige Fragen'],
+      faqs: [
+        {
+          q: 'Was ist das Google-Ads-Label „KI-Offenlegung: Anzeige wurde mit KI erstellt oder bearbeitet"?',
+          a: 'Eine Offenlegung, die Google zu Anzeigen hinzufügt, bei denen KI an der Erstellung oder Bearbeitung beteiligt war. Seit dem 9. Juli 2026 erscheint es unter der Anzeigenbeschreibung in Google Suche, YouTube und Discover — sichtbar ohne jede Interaktion. Der Rollout folgt auf Artikel 50 der EU-KI-Verordnung zu Transparenzpflichten bei KI-generierten Inhalten, der am 2. August 2026 in Kraft getreten ist.',
+        },
+        {
+          q: 'Löst Performance Max das KI-Offenlegungslabel automatisch aus?',
+          a: 'Ja, in den meisten Standardkonfigurationen. Wenn „Automatisch erstellte Assets" aktiviert ist oder Sie AI Max for Search nutzen, generiert Googles eigene KI Anzeigenvarianten, die das Label automatisch auslösen. Das Label selbst lässt sich nicht deaktivieren — nur die Asset-Generierung, die es verursacht.',
+        },
+        {
+          q: 'Kann ich das KI-Offenlegungslabel in Google Ads deaktivieren?',
+          a: 'Nicht direkt. Automatisch erstellte Assets zu deaktivieren und KI-Tools für Anzeigeninhalte zu meiden, beseitigt den Mechanismus, der das Label auslöst — aber es gibt keine Einstellung, die das Label unterdrückt, während KI-generierte Inhalte weiterhin geschaltet werden. Den KI-Inhalt zu entfernen ist der einzig wirksame Weg.',
+        },
+        {
+          q: 'Wirkt sich das KI-Offenlegungslabel auf die Klickrate aus?',
+          a: 'Es gibt noch keine statistisch belastbaren Daten. Die prominente Platzierung befindet sich scheinbar in einer Testphase, und das Label ist zu neu, um Schlüsse daraus zu ziehen. Der Bereich, den es am ehesten zu beobachten gilt, sind Branchen mit hohem Vertrauensbedarf — Gesundheit, Finanzen, Rechtsberatung — wo „KI-erstellt" als Reibungssignal wirken könnte. Die praktische Maßnahme: CTR nach Kampagnentyp und Zeitraum ab dem Erscheinen des Labels auf Ihren SERPs segmentieren.',
+        },
+        {
+          q: 'Was ist der Unterschied zwischen automatischer und selbst deklarierter KI-Offenlegung in Google Ads?',
+          a: 'Die automatische Offenlegung wird von Google vergeben, wenn eigene KI-Tools — automatisch erstellte Assets, Performance-Max-Asset-Generierung, AI Max for Search — Ihren Inhalt bearbeitet haben. Die selbst deklarierte Offenlegung ist eine neue Kontoeinstellung für Werbetreibende, die externe KI-Tools (ChatGPT, Claude, Bildgeneratoren) eingesetzt und die Ergebnisse in Google Ads hochgeladen haben. Google hat erklärt, Selbstdeklarationen nicht unabhängig zu überprüfen.',
+        },
+      ],
+      prose: (
+        <>
+          <p>Eine Suche nach <em>Rezept online einlösen</em> &mdash; letzte Woche. Zwei gesponserte Ergebnisse. Beides Online-Apotheken. Beide mit einer Zeile, die vor einem Monat noch nicht dort stand: <strong>„KI-Offenlegung: Anzeige wurde mit KI erstellt oder bearbeitet."</strong> Nicht hinter dem Drei-Punkte-Menü. Direkt zwischen Anzeigentext und Sternebewertung &mdash; sichtbar für alle, die gerade entscheiden, wo sie ihr Rezept einlösen.</p>
+          <p>DoktorABC. Shop Apotheke. Zusammen über 1,2 Millionen Bewertungen, beide über 4,7 Sterne. Und beide jetzt öffentlich als KI-erstellt gekennzeichnet &mdash; ausgerechnet in einer Branche, in der jedes Vertrauenssignal, das ein Werbetreibender über Jahre aufgebaut hat, neben einem kurzen Hinweis auf die Entstehung seiner Anzeigentexte steht.</p>
+          <p>Das Interessante daran ist nicht, dass diese Apotheken etwas Ungewöhnliches getan haben. Es ist interessant, weil sie es höchstwahrscheinlich gar nicht getan haben &mdash; jedenfalls nicht bewusst. Sie machen das, was Google seit zwei Jahren empfiehlt: Performance Max laufen lassen, Asset-Generierung aktivieren, den Algorithmus optimieren lassen. Nicht sie haben entschieden, ihre Anzeigen mit dem KI-Label zu versehen. Performance Max hat das für sie getan.</p>
+
+          <h2>Das Label in der Praxis</h2>
+          <p>Google hat das KI-Offenlegungslabel am 9. Juli 2026 offiziell eingeführt &mdash; für Suchanzeigen, YouTube und Discover. Die Ankündigung klang zunächst unspektakulär: ein neuer Eintrag im Anzeigendetailbereich, sichtbar für Nutzer, die auf das Drei-Punkte-Menü tippen.</p>
+          <p>Was der Screenshot oben zeigt, geht einen Schritt weiter: das Label erscheint direkt in der Anzeigenlistung, ohne jede Nutzerinteraktion. Das ist prominenter als das im Juli Angekündigte &mdash; und entspricht exakt dem Testmuster, das Google üblicherweise vor einer breiteren Einführung fährt. Wer das Label heute so sieht, weiß, wo das endet.</p>
+          <p>Der regulatorische Hintergrund ist eindeutig. Artikel 50 der EU-KI-Verordnung &mdash; mit Transparenzpflichten für KI-generierte Inhalte &mdash; trat am 2. August 2026 in Kraft. Drei Wochen später erscheinen gut sichtbare KI-Labels auf europäischen SERPs. Google bewegt sich in Richtung EU-Compliance erfahrungsgemäß vor der formalen Durchsetzung, nicht danach.</p>
+
+          <h2>Wie Performance Max es ausgelöst hat</h2>
+          <p>Die meisten Kommentare zu diesem Thema behandeln die KI-Offenlegung so, als ob Werbetreibende aktiv entschieden hätten, KI-Tools zu nutzen. Für die Mehrzahl größerer Google-Ads-Konten ist die genauere Beschreibung: Sie haben sich für Performance Max entschieden &mdash; und Performance Max hat sich für KI entschieden.</p>
+          <p>Die Asset-Generierungskette funktioniert so: Sie liefern Headlines, Beschreibungen, Bilder und eine URL. Google nutzt sie, um Anzeigenkombinationen zu bauen. Was viele dabei nicht bemerkt haben: Google generiert darüber hinaus <em>zusätzliche</em> Assets &mdash; neue Headline-Varianten, andere Beschreibungsformulierungen &mdash; auf Basis Ihrer Landingpage, testet sie und schaltet sie, ohne Ihre ausdrückliche Freigabe. Diese Funktion heißt „Automatisch erstellte Assets": ein separater Schalter, in vielen Konfigurationen standardmäßig aktiviert.</p>
+          <p>Haben diese automatisch erstellten Assets auf Ihren Kampagnen gelaufen, gilt das Label. Sie haben die Vorgaben geliefert. Google hat die Texte geschrieben. Google legt das jetzt offen.</p>
+          <p>AI Max for Search geht noch weiter: Es schreibt die Ziel-URL passend zur Suchabsicht um, generiert Keyword-Kombinationen über Ihre eingereichte Liste hinaus und erstellt Anzeigenvarianten, die Sie nicht verfasst haben. In den richtigen Konten bringt es echte Performance-Vorteile. Strukturell ist es KI-erstellte Werbung.</p>
+
+          <h2>Drei Wege zum Label</h2>
+          <p>Nicht alle Anzeigen mit dem Label haben es auf demselben Weg bekommen &mdash; das macht einen Unterschied für die Reaktion.</p>
+          <p><strong>Weg 1 &mdash; Googles eigene KI-Tools.</strong> Automatisch erstellte Assets, Performance-Max-Asset-Generierung, AI Max for Search. Das Label wird automatisch vergeben, ohne Zutun des Werbetreibenden. Das ist der Hauptweg für die meisten Konten &mdash; und der, den die meisten nicht bewusst gewählt haben.</p>
+          <p><strong>Weg 2 &mdash; Externe KI, selbst deklariert.</strong> Wer Anzeigentexte mit ChatGPT, Claude, Midjourney oder anderen externen Tools erstellt und dann in Google Ads hochgeladen hat, soll das über eine neue Kontoeinstellung selbst melden. Google hat ausdrücklich angekündigt, Selbstdeklarationen nicht zu überprüfen. Das ist Compliance auf Vertrauensbasis.</p>
+          <p><strong>Weg 3 &mdash; Vollständig manuell verfasst.</strong> Jede Headline, jede Beschreibung ohne KI-Unterstützung geschrieben, automatisch erstellte Assets deaktiviert. Kein Label. Auf großen Konten, die Performance Max im Maßstab betreiben, ist das eine zunehmend seltene Position.</p>
+          <p>Es gibt eine vierte Kategorie, für die noch keine klare Linie gezogen ist: Werbetreibende, die KI informell eingesetzt haben &mdash; Texte durch ein Grammatik-Tool laufen lassen, um erste Ideen gebeten und dann umgeschrieben, oder KI-Bildtools für eine Größenanpassung genutzt. Google hat diese Grenze noch nicht definiert.</p>
+
+          <h2>Die CTR-Frage</h2>
+          <p>Ehrliche Antwort: Es gibt noch keine belastbaren Daten. Die prominente Platzierung ist ein laufender Test, das Label ist zu neu, und die normale CTR-Varianz macht frühe Signale unlesbar. Was immer jetzt behauptet zu wissen, was das KI-Label mit der Klickrate macht, ist Spekulation &mdash; keine Messung.</p>
+          <p>Zwei Szenarien sind gleichermaßen plausibel &mdash; und wahrscheinlich beide in unterschiedlichen Kontexten wahr. Das erste: Das Label verschwindet im visuellen Rauschen, so wie „Gesponsert" es getan hat. Wenn eine Kennzeichnung universell wird, hört sie auf, informativ zu sein. Relevante, KI-gekennzeichnete Anzeigen werden weiter besser klicken als irrelevante ohne Label. Wenn alle es tragen, hat niemand einen relativen Nachteil.</p>
+          <p>Das zweite: In Branchen, in denen Vertrauen die Kaufentscheidung treibt &mdash; Gesundheit, Rechtsberatung, Finanzdienstleistungen &mdash; erzeugt „KI-erstellt" genau im falschen Moment eine Reibung. Die Apotheken-Screenshots illustrieren das am deutlichsten. Wer entscheidet, wo er sein Rezept einlöst, trifft eine Gesundheitsentscheidung. „KI-Offenlegung: Anzeige wurde mit KI erstellt oder bearbeitet" wirkt dort anders als unter einer Anzeige für Sportschuhe.</p>
+          <p>Der wettbewerbsrelevante Aspekt: Wenn alle Mitbewerber auf einem SERP das Label tragen, stehen alle gleich. Wenn nur einer es hat &mdash; oder nur einer es nicht hat &mdash; wird das auf einer Seite sichtbar, auf der Nutzer aktiv vergleichen. Beobachten Sie Ihre konkreten SERPs auf Ihren wichtigsten Suchanfragen. Allgemeine Branchendaten sagen Ihnen nicht, was in Ihrem Konto passiert.</p>
+
+          <h2>Was jetzt im Konto zu tun ist</h2>
+          <p><strong>Herausfinden, was wirklich geschaltet wird.</strong> In Google Ads unter Assets &rarr; Alle Assets die Spalte „Quelle" filtern. Assets, die als „Automatisch erstellt" markiert sind, hat Google generiert. Wenn die seit Monaten laufen, ohne dass jemand sie angeschaut hat, ist das ein guter Moment &mdash; nicht nur wegen des Labels, sondern weil Anzeigentexte zu schalten, die man nie geprüft hat, eine eigene Content-Frage ist.</p>
+          <p><strong>Den Schalter prüfen.</strong> Auf Kampagnenebene unter Einstellungen lassen sich automatisch erstellte Assets deaktivieren. Das stoppt die Generierung neuer KI-Assets für diese Kampagne. Bereits erstellte automatische Assets können weiter ausgeliefert werden, bis sie einzeln geprüft und verwaltet werden. Eine Massenentfernungs-Funktion gibt es nicht.</p>
+          <p><strong>Jetzt eine CTR-Baseline aufbauen.</strong> Die zwei Wochen vor dem ersten Erscheinen des Labels auf Ihren SERPs in Ihrem Reporting-Tool festhalten. Nach Kampagnentyp segmentieren und innerhalb von Suche nach Anfragetyp &mdash; Markenbegriffe, Mitbewerberbegriffe, generische Suche. Nach vier Wochen Post-Label-Daten vergleichen. Das ist das früheste belastbare Signal, das verfügbar sein wird.</p>
+          <p><strong>Keine bewährte Struktur auf Basis unbewiesener Risiken abbauen.</strong> Der Performance-Fall für KI-Asset-Generierung ist etabliert: mehr Kombinationen getestet, mehr Suchabsichten abgedeckt, in der Regel mehr Reichweite bei gleichem Budget. Der Performance-Schaden durch das Label ist es nicht. Kampagnenstruktur unter Ankündigungsdruck umzubauen, ohne eigene Daten als Grundlage, führt in der Regel zu schlechteren Ergebnissen als abzuwarten. Wenn Sie in einer Branche mit echten Vertrauensbedenken tätig sind, kann sich das verschieben &mdash; aber es sollte sich verschieben, wenn Ihre CTR-Daten das nahelegen, nicht wenn ein Artikel das tut.</p>
+
+          <div className="prose-callout">
+            <div className="prose-callout-kicker">Fazit</div>
+            <p>Das Label ist real und da. Seine kommerzielle Wirkung auf Ihr konkretes Konto ist noch nicht belegt. Die richtige Reaktion ist saubere Messung: wissen, welche Assets KI-generiert sind, diese Woche eine CTR-Baseline aufbauen und strukturelle Kampagnenentscheidungen erst treffen, wenn die eigenen Daten eine Grundlage liefern.</p>
+          </div>
+
+          <p>Wenn Sie nicht sicher sind, welche Ihrer Kampagnen das Label trägt oder was in Ihrem Konto gerade passiert, <a href="/de/contact/?topic=google-ads-ai-label">schildern Sie uns kurz Ihre Situation</a> und wir melden uns innerhalb eines Werktages. Das erste Gespräch: 30 Minuten, auf unsere Rechnung.</p>
+          <p>Weiterlesen: <a href="/de/blog/performance-max-2026/">Performance Max 2026 &mdash; die Einstellungen, die wir zuerst ändern</a> &middot; <a href="/de/blog/performance-max-bidding-change-august-2026/">Die Gebotsänderung vom 17. August &mdash; was jetzt zu tun ist</a></p>
+        </>
+      ),
+    },
     'what-is-a-geo-audit': {
       toc: ['Nicht einfach ein SEO-Audit', 'Was ein GEO-Audit umfasst', 'Die GEO-Audit-Checkliste', 'Tools', 'Wie oft ist sinnvoll?', 'Häufige Fragen'],
       faqs: [

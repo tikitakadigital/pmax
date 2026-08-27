@@ -20,6 +20,8 @@ const NeedHelp = ({ topic }: { topic: string }) => (
 export const blogDetails: BlogDetail[] = [
   {
     slug: 'google-ads-ai-disclosure-label',
+    image: '/og/google-ads-ai-disclosure-serp.jpg',
+    imageAlt: 'Google search results for "rezept online einlösen" showing the AI disclosure label on two pharmacy ads — DoktorABC and Shop Apotheke — reading "AI disclosure: Ad created or edited with AI"',
     toc: [
       'The label in the wild',
       'How Performance Max triggered it',

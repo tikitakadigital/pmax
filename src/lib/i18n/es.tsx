@@ -787,6 +787,7 @@ export const es = {
     promoDeck: 'No gestionamos una lista de email — pero si hay un tema sobre el que quieras que escribamos, cuéntanoslo.',
     promoBtn: 'Sugerir un tema',
     posts: [
+      { slug: 'google-ads-ai-disclosure-label', title: 'El aviso de IA de Google está en tus anuncios. Probablemente no lo has decidido tú.', deck: 'Desde julio de 2026, las SERPs europeas muestran: "Divulgación de IA: anuncio creado o editado con IA". La mayoría de los anunciantes que lo llevan no lo eligieron — lo activó Performance Max.' },
       { slug: 'pinterest-ads-home-interiors-local-2026', title: 'Pinterest Ads 2026: para quién funcionan de verdad', deck: 'Para qué negocios funciona Pinterest Ads, cómo funciona el retargeting de verdad y por qué una tienda local de estores está más cerca de su punto óptimo que la mayoría del ecommerce.' },
       { slug: 'google-ads-vs-meta-ads-vs-tiktok-ads-ecommerce-2026', title: 'Google Ads vs. Meta Ads vs. TikTok Ads para ecommerce en 2026.', deck: 'Sin teoría de escuela de marketing. Sin slides de fabricante. Una comparación brutalmente práctica de dónde rinde cada plataforma en 2026 — y dónde quema presupuesto sin que nadie lo note.' },
       { slug: 'how-to-get-mentioned-by-chatgpt', title: 'Cómo conseguir que ChatGPT, Perplexity y Gemini mencionen tu negocio', deck: 'Una guía en castellano sobre visibilidad en búsqueda con IA en 2026 — qué es, por qué importa y cinco acciones para empezar este mes.' },
@@ -1011,6 +1012,76 @@ export const es = {
   } as Record<string, LocalizedCaseDetail>,
 
   blogPostDetail: {
+    'google-ads-ai-disclosure-label': {
+      toc: ['El aviso en la práctica', 'Cómo lo desencadenó Performance Max', 'Tres rutas hacia el aviso', 'La pregunta del CTR', 'Qué hacer en tu cuenta ahora', 'Preguntas frecuentes'],
+      faqs: [
+        {
+          q: '¿Qué es el aviso "Divulgación de IA: anuncio creado o editado con IA" de Google Ads?',
+          a: 'Una divulgación que Google añade a los anuncios donde la IA participó en la creación o edición del contenido. Desde el 9 de julio de 2026 aparece bajo la descripción del anuncio en Google Búsqueda, YouTube y Discover, visible sin ninguna interacción. El lanzamiento sigue al Artículo 50 del Reglamento de IA de la UE sobre transparencia en contenidos generados por IA, en vigor desde el 2 de agosto de 2026.',
+        },
+        {
+          q: '¿Performance Max activa el aviso de divulgación de IA automáticamente?',
+          a: 'Sí, en la mayoría de configuraciones estándar. Si tienes activados los "activos creados automáticamente" o usas AI Max for Search, la propia IA de Google genera variantes de anuncios que activan el aviso sin que hagas nada. El aviso en sí no se puede desactivar — solo el mecanismo de generación de activos que lo causa.',
+        },
+        {
+          q: '¿Puedo desactivar el aviso de IA de Google Ads?',
+          a: 'No directamente. Desactivar los activos creados automáticamente y evitar el uso de herramientas de IA para el contenido de los anuncios elimina el mecanismo que desencadena el aviso — pero no existe ningún ajuste que suprima el aviso mientras se siguen sirviendo contenidos generados por IA. Eliminar el contenido de IA es la única salida real.',
+        },
+        {
+          q: '¿Afecta el aviso de IA al porcentaje de clics?',
+          a: 'Todavía no hay datos estadísticamente significativos. La colocación visible parece estar en fase de prueba y el aviso es demasiado reciente para sacar conclusiones. El área más importante a vigilar son los sectores con alta necesidad de confianza — salud, finanzas, asesoría legal — donde "creado con IA" podría funcionar como señal de fricción. El paso práctico: segmentar el CTR por tipo de campaña y periodo desde la fecha en que el aviso apareció en tus SERPs.',
+        },
+        {
+          q: '¿Cuál es la diferencia entre la divulgación automática y la autodeclarada en Google Ads?',
+          a: 'La divulgación automática la aplica Google cuando sus propias herramientas de IA — activos creados automáticamente, generación de activos de Performance Max, AI Max for Search — han intervenido en tu contenido. La autodeclarada es un nuevo ajuste de cuenta para anunciantes que han usado herramientas de IA externas (ChatGPT, Claude, generadores de imagen) y subido los resultados a Google Ads. Google ha declarado que no verificará las autodeclaraciones.',
+        },
+      ],
+      prose: (
+        <>
+          <p>Una búsqueda de <em>rezept online einlösen</em> &mdash; &ldquo;canjear receta por internet&rdquo; en alemán &mdash; la semana pasada. Dos resultados patrocinados. Dos farmacias online. Las dos con una línea que no existía hace un mes: <strong>&ldquo;Divulgación de IA: anuncio creado o editado con IA.&rdquo;</strong> No detrás del menú de tres puntos. Entre la descripción del anuncio y la valoración de estrellas, a la vista de cualquiera que esté decidiendo dónde canjear su receta.</p>
+          <p>DoktorABC. Shop Apotheke. Entre las dos: más de 1,2 millones de valoraciones, ambas por encima de 4,7 estrellas. Y las dos con el sello público de &ldquo;creado con IA&rdquo; &mdash; precisamente en un sector donde cada señal de confianza que un anunciante ha construido durante años convive ahora con una frase sobre cómo se escribió el anuncio.</p>
+          <p>Lo interesante no es que esas farmacias hayan hecho algo inusual. Lo interesante es que casi con toda seguridad no lo han hecho &mdash; al menos, no conscientemente. Están haciendo lo que Google lleva dos años recomendando: activar Performance Max, habilitar la generación de activos y dejar que el algoritmo optimice. No decidieron poner el aviso de IA en sus anuncios. Lo hizo Performance Max.</p>
+
+          <h2>El aviso en la práctica</h2>
+          <p>Google lanzó oficialmente el aviso de IA el 9 de julio de 2026, en Búsqueda, YouTube y Discover. El anuncio inicial sonaba bastante discreto: una nueva entrada en el panel de detalles del anuncio, visible para los usuarios que tocan el menú de tres puntos.</p>
+          <p>Lo que muestra la captura de arriba va un paso más lejos: el aviso aparece directamente en el anuncio, sin ninguna interacción. Es más visible que lo anunciado en julio &mdash; y encaja exactamente con el tipo de experimento de posicionamiento que Google suele hacer antes de una implantación más amplia. Quien lo ve así hoy sabe a dónde va esto.</p>
+          <p>El contexto regulatorio es directo. El Artículo 50 del Reglamento de IA de la UE &mdash; que exige transparencia en los contenidos generados por IA &mdash; entró en vigor el 2 de agosto de 2026. Tres semanas después aparecen avisos de IA bien visibles en las SERPs europeas. Google no suele esperar a la ejecución formal para moverse en materia de cumplimiento con la UE.</p>
+
+          <h2>Cómo lo desencadenó Performance Max</h2>
+          <p>La mayoría de los comentarios sobre este tema tratan la divulgación de IA como algo que los anunciantes eligieron al decidirse por herramientas de IA. Para la mayoría de las cuentas grandes de Google Ads, la descripción más precisa es: eligieron Performance Max, y Performance Max eligió la IA.</p>
+          <p>La cadena de generación de activos funciona así: entregas titulares, descripciones, imágenes y una URL. Google los usa para construir combinaciones de anuncios. Lo que muchos no han notado es que Google también genera <em>activos adicionales</em> &mdash; variantes de titulares, formulaciones distintas de descripción &mdash; basándose en tu landing page, los prueba y los sirve sin pedirte aprobación explícita. Esa función se llama &ldquo;activos creados automáticamente&rdquo;: un interruptor separado, activado por defecto en muchas configuraciones.</p>
+          <p>Si esos activos creados automáticamente han corrido en tus campañas, el aviso se aplica. Tú pusiste los ingredientes. Google escribió el anuncio. Google lo está haciendo transparente ahora.</p>
+          <p>AI Max for Search va todavía más lejos: reescribe la URL final para que coincida con la intención de búsqueda, genera combinaciones de palabras clave más allá de tu lista enviada y crea variantes de anuncios que no has redactado tú. Puede dar ventajas reales de rendimiento en las cuentas correctas. Estructuralmente, es publicidad creada con IA.</p>
+
+          <h2>Tres rutas hacia el aviso</h2>
+          <p>No todos los anuncios con el aviso han llegado ahí por el mismo camino, y eso importa para saber cómo responder.</p>
+          <p><strong>Ruta 1 &mdash; Las herramientas de IA propias de Google.</strong> Activos creados automáticamente, generación de activos de Performance Max, AI Max for Search. El aviso se aplica automáticamente, sin que el anunciante haga nada. Es la ruta principal para la mayoría de las cuentas que llevan el aviso &mdash; y la que la mayoría no eligió conscientemente.</p>
+          <p><strong>Ruta 2 &mdash; IA externa, declaración propia.</strong> Si has usado ChatGPT, Claude, Midjourney u otras herramientas externas para redactar o editar textos de anuncios y luego los has subido a Google Ads, se supone que debes declararlo a través de un nuevo ajuste de cuenta. Google ha afirmado que no verificará las autodeclaraciones. Es cumplimiento por confianza.</p>
+          <p><strong>Ruta 3 &mdash; Escrito íntegramente a mano.</strong> Cada titular y descripción redactado sin IA, activos creados automáticamente desactivados. Sin aviso. En cuentas grandes que trabajan Performance Max a escala, esta posición es cada vez más infrecuente.</p>
+          <p>Hay una cuarta categoría sin línea clara todavía: anunciantes que han usado IA de forma informal &mdash; pasar textos por una herramienta gramatical, pedir ideas a una IA que luego han reescrito, o usar herramientas de imagen con IA para un redimensionado. Google no ha trazado esa línea aún.</p>
+
+          <h2>La pregunta del CTR</h2>
+          <p>Respuesta honesta: todavía no hay datos fiables. La colocación visible parece estar en fase de prueba, el aviso es demasiado reciente y la varianza normal del CTR hace que los primeros indicios sean difíciles de leer. Lo que afirme saber qué hace el aviso de IA al porcentaje de clics ahora mismo es especulación, no medición.</p>
+          <p>Dos escenarios son igualmente plausibles &mdash; y probablemente los dos verdaderos en contextos distintos. El primero: el aviso se funde con el ruido visual, como ha hecho &ldquo;Patrocinado&rdquo;. Cuando una etiqueta se vuelve universal, deja de ser informativa. Los anuncios con IA muy relevantes seguirán teniendo más clics que los irrelevantes sin ella. Cuando el aviso está en todas partes, nadie tiene desventaja relativa.</p>
+          <p>El segundo: en sectores donde la confianza guía la decisión de compra &mdash; salud, asesoría legal, servicios financieros &mdash; &ldquo;creado con IA&rdquo; introduce fricción justo en el momento equivocado. El caso de las farmacias es el ejemplo más claro. Quien decide dónde canjear una receta está tomando una decisión de salud. &ldquo;Divulgación de IA: anuncio creado o editado con IA&rdquo; hace algo distinto ahí que bajo un anuncio de zapatillas deportivas.</p>
+          <p>El escenario competitivo que más importa es la asimetría. Si todos los competidores en tu SERP llevan el aviso, estáis todos igual. Si solo tú lo tienes &mdash; o el único que no lo tiene eres tú &mdash; eso se convierte en una señal visible en una página donde los usuarios están comparando activamente. Observa tus SERPs concretas en tus búsquedas clave. Los datos generales del sector no te dicen qué está pasando en tu cuenta específica.</p>
+
+          <h2>Qué hacer en tu cuenta ahora</h2>
+          <p><strong>Saber qué estás sirviendo realmente.</strong> En Google Ads, ve a Activos &rarr; Todos los activos y filtra la columna &ldquo;Fuente&rdquo;. Los activos marcados como &ldquo;Creados automáticamente&rdquo; son los que generó Google. Si llevan meses corriendo sin que nadie los haya revisado, este es un buen momento &mdash; no solo por el aviso, sino porque servir textos de anuncios que nunca has leído es en sí una cuestión de gobernanza de contenido.</p>
+          <p><strong>Revisar el interruptor.</strong> A nivel de campaña, en Configuración, puedes desactivar los activos creados automáticamente. Eso detiene la generación de nuevos activos de IA para esa campaña. Los activos automáticos existentes pueden seguir sirviéndose hasta que los revises y gestiones uno a uno. No hay opción de eliminarlos en masa.</p>
+          <p><strong>Crear una base de CTR ahora.</strong> Guarda las dos semanas anteriores a la aparición del aviso en tus SERPs en tu herramienta de informes. Segmenta por tipo de campaña y, dentro de Búsqueda, por tipo de consulta: términos de marca, términos de competidores, búsqueda genérica. Cuando tengas cuatro semanas de datos post-aviso, compara. Esa segmentación es la primera señal real que tendrás disponible.</p>
+          <p><strong>No desmontes una estructura probada basándote en un riesgo no demostrado.</strong> El caso de rendimiento de la generación de activos con IA está establecido: más combinaciones probadas, más intención de búsqueda cubierta, habitualmente más alcance con el mismo presupuesto. El coste de rendimiento del aviso no lo está. Reconstruir la estructura de campaña bajo presión de un anuncio &mdash; sin datos propios que lo justifiquen &mdash; suele dar peores resultados que esperar. Si estás en un sector con preocupaciones reales de confianza, el cálculo puede cambiar &mdash; pero debería cambiar cuando tus datos de CTR te digan que actúes, no cuando lo haga un artículo.</p>
+
+          <div className="prose-callout">
+            <div className="prose-callout-kicker">En resumen</div>
+            <p>El aviso es real y está aquí. Su efecto comercial en tus cuentas concretas no está demostrado aún. La respuesta correcta es una medición limpia: saber exactamente qué activos son de IA y cuáles no, crear una base de CTR esta semana y tomar decisiones estructurales de campaña solo cuando tus propios datos te den algo con qué actuar.</p>
+          </div>
+
+          <p>Si no estás seguro de si tus campañas llevan el aviso o qué está pasando en tu cuenta, <a href="/es/contact/?topic=google-ads-ai-label">cuéntanos brevemente tu situación</a> y te respondemos en un día laborable. La primera conversación: 30 minutos, sin coste.</p>
+          <p>Más sobre esto: <a href="/es/blog/performance-max-2026/">Performance Max en 2026 &mdash; los ajustes que cambiamos primero</a> &middot; <a href="/es/blog/performance-max-bidding-change-august-2026/">El cambio de pujas de agosto &mdash; qué hacer antes</a></p>
+        </>
+      ),
+    },
     'what-is-a-geo-audit': {
       toc: ['No es una auditoría SEO', 'Qué cubre una auditoría GEO', 'La checklist de auditoría GEO', 'Herramientas', 'Con qué frecuencia hacerla', 'Preguntas frecuentes'],
       faqs: [
