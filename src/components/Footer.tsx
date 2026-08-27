@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import CookieSettingsLink from './CookieSettingsLink'
 
 const content = {
   en: {
@@ -98,6 +99,7 @@ export default function Footer({ locale = 'en' }: { locale?: string }) {
             <a href="https://www.linkedin.com/company/pmax-online-s-l/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
             <a href="https://www.facebook.com/profile.php?viewas=100000686899395&amp;id=61590296614624" target="_blank" rel="noopener noreferrer">Facebook</a>
             {legalLinks.map(l => <Link key={l.href} href={l.href}>{l.label}</Link>)}
+            <CookieSettingsLink locale={locale} />
           </div>
         </div>
       </div>
