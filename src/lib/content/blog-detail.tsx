@@ -77,30 +77,42 @@ export const blogDetails: BlogDetail[] = [
             <thead>
               <tr style={{ borderBottom: '1px solid #2d2d2d' }}>
                 <th style={{ textAlign: 'left', padding: '8px 16px 8px 0', fontFamily: 'var(--font-mono)', fontSize: 10, fontWeight: 500, letterSpacing: '1.5px', textTransform: 'uppercase', color: '#6b6b6b', whiteSpace: 'nowrap' }}>Tool</th>
-                <th style={{ textAlign: 'right', padding: '8px 16px', fontFamily: 'var(--font-mono)', fontSize: 10, fontWeight: 500, letterSpacing: '1.5px', textTransform: 'uppercase', color: '#6b6b6b', whiteSpace: 'nowrap' }}>1 brand / year</th>
-                <th style={{ textAlign: 'right', padding: '8px 16px', fontFamily: 'var(--font-mono)', fontSize: 10, fontWeight: 500, letterSpacing: '1.5px', textTransform: 'uppercase', color: '#6b6b6b', whiteSpace: 'nowrap' }}>5 brands / year</th>
-                <th style={{ textAlign: 'right', padding: '8px 0 8px 16px', fontFamily: 'var(--font-mono)', fontSize: 10, fontWeight: 500, letterSpacing: '1.5px', textTransform: 'uppercase', color: '#6b6b6b', whiteSpace: 'nowrap' }}>10 brands / year</th>
+                <th style={{ textAlign: 'left', padding: '8px 16px', fontFamily: 'var(--font-mono)', fontSize: 10, fontWeight: 500, letterSpacing: '1.5px', textTransform: 'uppercase', color: '#6b6b6b', whiteSpace: 'nowrap' }}>Metered by</th>
+                <th style={{ textAlign: 'right', padding: '8px 16px', fontFamily: 'var(--font-mono)', fontSize: 10, fontWeight: 500, letterSpacing: '1.5px', textTransform: 'uppercase', color: '#6b6b6b', whiteSpace: 'nowrap' }}>1 brand / yr</th>
+                <th style={{ textAlign: 'right', padding: '8px 16px', fontFamily: 'var(--font-mono)', fontSize: 10, fontWeight: 500, letterSpacing: '1.5px', textTransform: 'uppercase', color: '#6b6b6b', whiteSpace: 'nowrap' }}>5 brands / yr</th>
+                <th style={{ textAlign: 'right', padding: '8px 0 8px 16px', fontFamily: 'var(--font-mono)', fontSize: 10, fontWeight: 500, letterSpacing: '1.5px', textTransform: 'uppercase', color: '#6b6b6b', whiteSpace: 'nowrap' }}>10 brands / yr</th>
               </tr>
             </thead>
             <tbody>
               {[
-                { tool: 'CrunchJunkie', one: '$601', five: '$2,873', ten: '$6,105', highlight: true },
-                { tool: 'LLM Pulse', one: '$529', five: '$3,229', ten: '$7,763', highlight: false },
-                { tool: 'OtterlyAI', one: '$2,508', five: '$4,884', ten: '$7,260', highlight: false },
-                { tool: 'Peec AI', one: '$1,932', five: '$9,636', ten: 'contact sales', highlight: false },
-                { tool: 'Semrush', one: '$1,908 +sub', five: '$9,540 +sub', ten: '$19,080 +sub', highlight: false },
-              ].map(({ tool, one, five, ten, highlight }) => (
+                { tool: 'CrunchJunkie', meter: 'brands only', one: '$601', five: '$2,873', ten: '$6,105', highlight: true },
+                { tool: 'LLM Pulse', meter: 'prompts + project', one: '$529', five: '$3,229', ten: '$7,763', highlight: false },
+                { tool: 'Peec AI', meter: 'prompts + engine', one: '$1,932', five: '$9,636', ten: '—', highlight: false },
+                { tool: 'Semrush', meter: 'domain', one: '$1,908 +sub', five: '$9,540 +sub', ten: '$19,080 +sub', highlight: false },
+                { tool: 'OtterlyAI', meter: 'prompts + engine', one: '$2,508', five: '$4,884', ten: '$7,260', highlight: false },
+                { tool: 'Scrunch *', meter: 'brand workspace', one: '~$3,000', five: '—', ten: '—', highlight: false },
+                { tool: 'Evertune', meter: 'flat (prompt vol.)', one: '$9,600', five: '$9,600', ten: '$9,600', highlight: false },
+                { tool: 'Ahrefs †', meter: 'base + add-on', one: '$9,936 +sub', five: '$9,936 +sub', ten: '$9,936 +sub', highlight: false },
+                { tool: 'GEOly ‡', meter: 'tier + engine gate', one: '$11,988', five: '$11,988', ten: '—', highlight: false },
+              ].map(({ tool, meter, one, five, ten, highlight }) => (
                 <tr key={tool} style={{ borderBottom: '1px solid #1e1e1e' }}>
-                  <td style={{ padding: '10px 16px 10px 0', fontWeight: highlight ? 600 : 400, color: highlight ? '#f6f4ef' : '#b4b4b4' }}>{tool}</td>
-                  <td style={{ textAlign: 'right', padding: '10px 16px', fontFamily: 'var(--font-mono)', fontSize: 12, color: highlight ? '#3cffd0' : '#b4b4b4' }}>{one}</td>
-                  <td style={{ textAlign: 'right', padding: '10px 16px', fontFamily: 'var(--font-mono)', fontSize: 12, color: highlight ? '#3cffd0' : '#b4b4b4' }}>{five}</td>
-                  <td style={{ textAlign: 'right', padding: '10px 0 10px 16px', fontFamily: 'var(--font-mono)', fontSize: 12, color: highlight ? '#3cffd0' : '#b4b4b4' }}>{ten}</td>
+                  <td style={{ padding: '10px 16px 10px 0', fontWeight: highlight ? 600 : 400, color: highlight ? '#f6f4ef' : '#b4b4b4', whiteSpace: 'nowrap' }}>{tool}</td>
+                  <td style={{ padding: '10px 16px', fontSize: 12, color: '#6a6a6a', whiteSpace: 'nowrap' }}>{meter}</td>
+                  <td style={{ textAlign: 'right', padding: '10px 16px', fontFamily: 'var(--font-mono)', fontSize: 12, color: highlight ? '#3cffd0' : '#b4b4b4', whiteSpace: 'nowrap' }}>{one}</td>
+                  <td style={{ textAlign: 'right', padding: '10px 16px', fontFamily: 'var(--font-mono)', fontSize: 12, color: highlight ? '#3cffd0' : '#b4b4b4', whiteSpace: 'nowrap' }}>{five}</td>
+                  <td style={{ textAlign: 'right', padding: '10px 0 10px 16px', fontFamily: 'var(--font-mono)', fontSize: 12, color: highlight ? '#3cffd0' : '#b4b4b4', whiteSpace: 'nowrap' }}>{ten}</td>
                 </tr>
               ))}
             </tbody>
           </table>
         </div>
-        <p style={{ fontSize: 11, color: '#6a6a6a', fontFamily: 'var(--font-mono)', letterSpacing: '0.5px', marginBottom: 24 }}>Config: 50 prompts per brand &middot; 5 engines &middot; weekly &middot; annual billing. CrunchJunkie = platform fee + BYOK API cost at conservative rates. Verified August 2026 &mdash; re-verify before committing, prices in this category change frequently.</p>
+        <p style={{ fontSize: 11, color: '#6a6a6a', fontFamily: 'var(--font-mono)', letterSpacing: '0.5px', lineHeight: 1.8, marginBottom: 24 }}>
+          Config: 50 prompts per brand &middot; 5 engines &middot; weekly &middot; annual billing. CrunchJunkie = platform fee + BYOK API cost (conservative estimate; real cost is typically lower). &mdash; = no self-serve pricing available at this configuration.<br />
+          * Scrunch pricing changes frequently; the figure above is from August 2026 &mdash; verify at scrunch.com before citing.<br />
+          &dagger; Ahrefs: base plan ($129/mo) plus the all-engines Brand Radar add-on ($699/mo). The &ldquo;included&rdquo; Brand Radar prompt allowance is 5&ndash;20 prompts only &mdash; the add-on is required to track 50+.<br />
+          &Dagger; GEOly: 5-engine coverage requires the $999/mo tier. The same annual cost applies across 1&ndash;5 brands (plan maximum); 10 brands is not available on self-serve plans.<br />
+          Competitor prices verified from public pricing pages where accessible; secondary sources otherwise.
+        </p>
 
         <p>One honest caveat that this table shouldn&rsquo;t hide: <strong>LLM Pulse is cheaper at one brand</strong> (&sim;$529/year vs CrunchJunkie&rsquo;s &sim;$601). If you&rsquo;re tracking a single brand on a tight budget, it&rsquo;s worth evaluating. LLM Pulse does enforce prompt caps and treats Copilot and Claude as paid add-ons &mdash; but at one brand with limited prompts and a few engines, those constraints may not bite you.</p>
         <p>The calculus flips at five brands. At ten brands, Peec AI can&rsquo;t even quote the configuration without a custom enterprise call. Semrush is running at $19,000+ per year before you add the required base subscription.</p>
