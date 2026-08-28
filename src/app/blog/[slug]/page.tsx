@@ -191,6 +191,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                     <p style={{ fontSize: 13, lineHeight: 1.65, color: '#b4b4b4', margin: '0 0 10px' }}>
                       Claire is a digital marketing strategist at pmax, a performance marketing and AI visibility agency in Calvi&agrave;, Mallorca. She leads content strategy and AI search optimisation for pmax clients, and contributes research on GEO and AI brand visibility. She also works on <a href="https://crunchjunkie.io/" target="_blank" rel="noopener noreferrer" style={{ color: '#f6f4ef' }}>CrunchJunkie</a>, an AI visibility tracking platform for monitoring brand citation across ChatGPT, Perplexity, Claude, Gemini and six other engines.
                     </p>
+                    <a href="https://www.linkedin.com/in/clairelouenders/" target="_blank" rel="noopener noreferrer" style={{ fontFamily: 'var(--font-mono)', fontSize: 10, fontWeight: 500, letterSpacing: '1.5px', textTransform: 'uppercase', color: '#949494' }}>LinkedIn →</a>
                   </div>
                 </div>
               ) : (
