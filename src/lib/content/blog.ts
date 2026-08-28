@@ -12,9 +12,23 @@ export interface Post {
   external?: boolean
   ogImage?: string
   dateModified?: string
+  author?: string
 }
 
 export const posts: Post[] = [
+  {
+    slug: 'ai-visibility-tracking-tools-2026',
+    stamp: 'AUG 27',
+    date: 'Aug 27, 2026',
+    readTime: '12 min',
+    category: 'AI search',
+    title: 'AI Visibility Tracking in 2026: What to Check Before You Sign Up',
+    seoTitle: 'AI Visibility Tracking Tools 2026 — A Buyer\'s Guide | pmax',
+    deck: 'How most AI visibility tools quietly limit what you can track — and what to ask before you pay for one. A buyer\'s guide with verified pricing.',
+    variant: 'is-mint',
+    featured: true,
+    author: 'Claire Enders',
+  },
   {
     slug: 'google-ads-ai-disclosure-label',
     stamp: 'AUG 26',

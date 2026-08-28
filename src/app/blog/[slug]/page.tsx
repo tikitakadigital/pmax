@@ -122,7 +122,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
               <h1 className="page-intro-title" style={{ fontSize: 'clamp(40px, 7vw, 92px)' }}>{post.title}</h1>
               <p className="page-intro-deck">{post.deck}</p>
               <div style={{ marginTop: 32, display: 'flex', gap: 24, flexWrap: 'wrap', fontFamily: 'var(--font-mono)', fontSize: 11, fontWeight: 500, letterSpacing: '1.5px', textTransform: 'uppercase', color: '#949494' }}>
-                <span>Written by Philipp Enders</span>
+                <span>Written by {post.author ?? 'Philipp Enders'}</span>
                 <span>Fact-checked {post.date}</span>
                 <span>Updated quarterly</span>
               </div>
@@ -182,17 +182,30 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
           {/* AUTHOR BIO */}
           <section style={{ borderTop: '1px solid #2d2d2d', marginTop: 0 }}>
             <div className="container" style={{ padding: '40px 0 56px' }}>
-              <div style={{ display: 'flex', gap: 20, alignItems: 'flex-start', maxWidth: 760 }}>
-                <div style={{ flexShrink: 0, width: 48, height: 48, borderRadius: '50%', background: '#131313', border: '1px solid #2d2d2d', display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: 'var(--font-mono)', fontWeight: 700, fontSize: 15, color: '#3cffd0', letterSpacing: 0 }}>PE</div>
-                <div>
-                  <div style={{ fontFamily: 'var(--font-mono)', fontSize: 10, fontWeight: 500, letterSpacing: '1.5px', textTransform: 'uppercase', color: '#6b6b6b', marginBottom: 6 }}>About the author</div>
-                  <div style={{ fontWeight: 600, fontSize: 15, marginBottom: 8 }}>Philipp Enders</div>
-                  <p style={{ fontSize: 13, lineHeight: 1.65, color: '#b4b4b4', margin: '0 0 10px' }}>
-                    Philipp is the Founder and Director of pmax, a performance marketing and AI visibility agency in Calvi&agrave;, Mallorca. He is also the co-founder of <a href="https://crunchjunkie.io/" target="_blank" rel="noopener noreferrer" style={{ color: '#f6f4ef' }}>crunchjunkie</a>, an AI visibility tracking platform for monitoring brand citation across ChatGPT, Perplexity, Claude and Gemini.
-                  </p>
-                  <a href="https://www.linkedin.com/in/philippenders/" target="_blank" rel="noopener noreferrer" style={{ fontFamily: 'var(--font-mono)', fontSize: 10, fontWeight: 500, letterSpacing: '1.5px', textTransform: 'uppercase', color: '#949494' }}>LinkedIn →</a>
+              {post.author === 'Claire Enders' ? (
+                <div style={{ display: 'flex', gap: 20, alignItems: 'flex-start', maxWidth: 760 }}>
+                  <div style={{ flexShrink: 0, width: 48, height: 48, borderRadius: '50%', background: '#131313', border: '1px solid #2d2d2d', display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: 'var(--font-mono)', fontWeight: 700, fontSize: 15, color: '#3cffd0', letterSpacing: 0 }}>CE</div>
+                  <div>
+                    <div style={{ fontFamily: 'var(--font-mono)', fontSize: 10, fontWeight: 500, letterSpacing: '1.5px', textTransform: 'uppercase', color: '#6b6b6b', marginBottom: 6 }}>About the author</div>
+                    <div style={{ fontWeight: 600, fontSize: 15, marginBottom: 8 }}>Claire Enders</div>
+                    <p style={{ fontSize: 13, lineHeight: 1.65, color: '#b4b4b4', margin: '0 0 10px' }}>
+                      Claire is a digital marketing strategist at pmax, a performance marketing and AI visibility agency in Calvi&agrave;, Mallorca. She leads content strategy and AI search optimisation for pmax clients, and contributes research on GEO and AI brand visibility. She also works on <a href="https://crunchjunkie.io/" target="_blank" rel="noopener noreferrer" style={{ color: '#f6f4ef' }}>CrunchJunkie</a>, an AI visibility tracking platform for monitoring brand citation across ChatGPT, Perplexity, Claude, Gemini and six other engines.
+                    </p>
+                  </div>
                 </div>
-              </div>
+              ) : (
+                <div style={{ display: 'flex', gap: 20, alignItems: 'flex-start', maxWidth: 760 }}>
+                  <div style={{ flexShrink: 0, width: 48, height: 48, borderRadius: '50%', background: '#131313', border: '1px solid #2d2d2d', display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: 'var(--font-mono)', fontWeight: 700, fontSize: 15, color: '#3cffd0', letterSpacing: 0 }}>PE</div>
+                  <div>
+                    <div style={{ fontFamily: 'var(--font-mono)', fontSize: 10, fontWeight: 500, letterSpacing: '1.5px', textTransform: 'uppercase', color: '#6b6b6b', marginBottom: 6 }}>About the author</div>
+                    <div style={{ fontWeight: 600, fontSize: 15, marginBottom: 8 }}>Philipp Enders</div>
+                    <p style={{ fontSize: 13, lineHeight: 1.65, color: '#b4b4b4', margin: '0 0 10px' }}>
+                      Philipp is the Founder and Director of pmax, a performance marketing and AI visibility agency in Calvi&agrave;, Mallorca. He is also the co-founder of <a href="https://crunchjunkie.io/" target="_blank" rel="noopener noreferrer" style={{ color: '#f6f4ef' }}>crunchjunkie</a>, an AI visibility tracking platform for monitoring brand citation across ChatGPT, Perplexity, Claude and Gemini.
+                    </p>
+                    <a href="https://www.linkedin.com/in/philippenders/" target="_blank" rel="noopener noreferrer" style={{ fontFamily: 'var(--font-mono)', fontSize: 10, fontWeight: 500, letterSpacing: '1.5px', textTransform: 'uppercase', color: '#949494' }}>LinkedIn →</a>
+                  </div>
+                </div>
+              )}
             </div>
           </section>
 

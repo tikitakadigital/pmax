@@ -19,6 +19,153 @@ const NeedHelp = ({ topic }: { topic: string }) => (
 
 export const blogDetails: BlogDetail[] = [
   {
+    slug: 'ai-visibility-tracking-tools-2026',
+    toc: [
+      'The metering problem nobody puts in the brochure',
+      'What BYOK actually changes',
+      'Why visibility percentages lie without sample sizes',
+      'A metric nobody else tracks: Follow-up Survival',
+      'GEO audits: why the evidence basis matters',
+      'Owned off-site citations',
+      'Where CrunchJunkie isn\'t the right call',
+      'The honest summary',
+    ],
+    faqs: [
+      {
+        q: 'What is BYOK in AI visibility tracking?',
+        a: 'BYOK stands for Bring Your Own Key. Instead of a tool wrapping API calls inside a prompt quota and charging a marked-up flat fee, a BYOK model lets you connect your own API keys directly to the model providers (OpenAI, Google, Anthropic, etc.). You pay the providers at cost; the platform charges a subscription based on something else — in CrunchJunkie\'s case, how many brands you track. The practical consequence is no prompt cap and transparent costs.',
+      },
+      {
+        q: 'What is Follow-up Survival in AI search?',
+        a: 'Follow-up Survival is a multi-turn AI visibility metric that measures whether a brand recommendation holds up when a buyer narrows their query in the same conversation. Standard AI visibility tracking records whether a brand appeared in response to a broad discovery prompt (turn 1). Follow-up Survival sends a configured narrower follow-up question in the same conversation (turn 2) and measures which brands survive the refinement. A brand can be visible in the broad query and disappear the moment a real constraint is applied. CrunchJunkie is the only AI visibility tool that productizes this metric.',
+      },
+      {
+        q: 'How many AI engines does CrunchJunkie track?',
+        a: 'CrunchJunkie tracks ten AI engines: ChatGPT, Gemini, Perplexity, Claude, Google AI Overviews, Google AI Mode, Microsoft Copilot, Grok, Meta AI, and DeepSeek. All ten are included on every plan — there are no per-engine add-ons or tiered engine access.',
+      },
+      {
+        q: 'What does a GEO audit check?',
+        a: 'A GEO audit evaluates how ready a website is to be crawled and cited by AI search engines. CrunchJunkie\'s audit covers five categories: crawler access (whether AI bots can reach your pages), content accessibility (whether content is server-rendered and structured for extraction), structured data (JSON-LD quality and breadth), technical SEO hygiene (canonical, sitemap, title/description lengths), and llms.txt (the emerging file format for AI crawler guidance). Each check is assigned an evidence basis — research, documented, convention, or heuristic — that determines how much it weighs in the composite 0–100 score.',
+      },
+      {
+        q: 'What AI visibility tools are cheapest for tracking multiple brands?',
+        a: 'At a configuration of 50 prompts per brand, 5 engines, and weekly scanning, CrunchJunkie is the cheapest option that scales across multiple brands. At 5 brands the annual cost is approximately $2,873 (platform fee plus BYOK API costs) versus $3,229 for LLM Pulse, $4,884 for OtterlyAI, and $9,636 for Peec AI. LLM Pulse is cheaper at a single brand (~$529/year vs CrunchJunkie\'s ~$601), but imposes prompt caps and treats several engines as paid add-ons. Pricing verified August 2026.',
+      },
+    ],
+    prose: (
+      <>
+        <p>The AI visibility tool market has a specific kind of problem: it&rsquo;s moving fast enough that most buyers don&rsquo;t yet know what questions to ask. Vendors know this, and some of them are exploiting it.</p>
+        <p>I&rsquo;ve spent the last several months testing these platforms &mdash; not watching demos, but actually running them on client accounts, checking whether the numbers add up, and asking the questions that don&rsquo;t come up in sales calls. This is what I found.</p>
+
+        <h2>The metering problem nobody puts in the brochure</h2>
+        <p>Before you compare features, understand how each tool charges you. The pricing model determines what you can actually afford to track &mdash; and that shapes what you actually know about your AI search presence.</p>
+        <p>Three models dominate the market right now.</p>
+        <p><strong>Prompt-based metering.</strong> You buy a pool of prompts. 50 at entry level, maybe 150 on the next tier, 350 if you&rsquo;re willing to pay for it. Every query you want to monitor uses a prompt. Want to track more purchase-journey questions? More prompts. Want to refresh your list as AI search behaviour shifts? You&rsquo;re spending from the same pool.</p>
+        <p>The practical consequence is that you start rationing your own tracking. You pick 50 prompts and hope those are the right ones. You skip the long-tail queries. You don&rsquo;t update the list when something changes in the market. You end up with a tidy dashboard that reflects what you could afford to track, not what&rsquo;s actually happening.</p>
+        <p><strong>Engine-based metering.</strong> Many tools include 3&ndash;4 AI engines at base and charge for the rest. Claude often costs extra. Gemini might be gated. Copilot is sometimes not available at all on standard plans.</p>
+        <p>OtterlyAI charges an additional $29&ndash;$439 per month for Claude tracking, depending on your plan. Peec AI gives you any three of their six supported engines per plan, with each additional engine running $30&ndash;$140 extra per month on top. So when you see a headline price, you need to do the engine math before accepting it.</p>
+        <p><strong>Per-domain or per-brand metering.</strong> Semrush&rsquo;s AI Visibility Toolkit charges $99 per domain per month. Transparent and predictable at one brand; brutal when you multiply it across an agency client list.</p>
+
+        <h2>What BYOK actually changes</h2>
+        <p>CrunchJunkie takes a different approach to the whole pricing question. Instead of wrapping API calls inside a prompt quota and charging a marked-up flat fee, it lets you connect your own API keys. Your queries go directly to OpenAI, Google, Anthropic, and the other providers &mdash; you pay them at cost. The platform charges a subscription based on how many brands you track, not how many prompts you run.</p>
+        <p>The result: no prompt cap. All ten engines &mdash; ChatGPT, Gemini, Perplexity, Claude, Google AI Overviews, Google AI Mode, Microsoft Copilot, Grok, Meta AI, and DeepSeek &mdash; are included on every plan from the lowest tier upward. No per-engine add-ons.</p>
+        <p>That changes the incentive structure in a concrete way. With a prompt cap, you have a reason to track fewer queries than you should. With BYOK and no cap, you track what&rsquo;s actually useful.</p>
+        <p>Here&rsquo;s what the annual cost looks like at a consistent configuration &mdash; 50 prompts per brand, 5 engines, weekly scanning, annual billing &mdash; across the tools where pricing is publicly available:</p>
+
+        <div style={{ overflowX: 'auto', margin: '24px 0 8px' }}>
+          <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: 13, lineHeight: 1.5 }}>
+            <thead>
+              <tr style={{ borderBottom: '1px solid #2d2d2d' }}>
+                <th style={{ textAlign: 'left', padding: '8px 16px 8px 0', fontFamily: 'var(--font-mono)', fontSize: 10, fontWeight: 500, letterSpacing: '1.5px', textTransform: 'uppercase', color: '#6b6b6b', whiteSpace: 'nowrap' }}>Tool</th>
+                <th style={{ textAlign: 'right', padding: '8px 16px', fontFamily: 'var(--font-mono)', fontSize: 10, fontWeight: 500, letterSpacing: '1.5px', textTransform: 'uppercase', color: '#6b6b6b', whiteSpace: 'nowrap' }}>1 brand / year</th>
+                <th style={{ textAlign: 'right', padding: '8px 16px', fontFamily: 'var(--font-mono)', fontSize: 10, fontWeight: 500, letterSpacing: '1.5px', textTransform: 'uppercase', color: '#6b6b6b', whiteSpace: 'nowrap' }}>5 brands / year</th>
+                <th style={{ textAlign: 'right', padding: '8px 0 8px 16px', fontFamily: 'var(--font-mono)', fontSize: 10, fontWeight: 500, letterSpacing: '1.5px', textTransform: 'uppercase', color: '#6b6b6b', whiteSpace: 'nowrap' }}>10 brands / year</th>
+              </tr>
+            </thead>
+            <tbody>
+              {[
+                { tool: 'CrunchJunkie', one: '$601', five: '$2,873', ten: '$6,105', highlight: true },
+                { tool: 'LLM Pulse', one: '$529', five: '$3,229', ten: '$7,763', highlight: false },
+                { tool: 'OtterlyAI', one: '$2,508', five: '$4,884', ten: '$7,260', highlight: false },
+                { tool: 'Peec AI', one: '$1,932', five: '$9,636', ten: 'contact sales', highlight: false },
+                { tool: 'Semrush', one: '$1,908 +sub', five: '$9,540 +sub', ten: '$19,080 +sub', highlight: false },
+              ].map(({ tool, one, five, ten, highlight }) => (
+                <tr key={tool} style={{ borderBottom: '1px solid #1e1e1e' }}>
+                  <td style={{ padding: '10px 16px 10px 0', fontWeight: highlight ? 600 : 400, color: highlight ? '#f6f4ef' : '#b4b4b4' }}>{tool}</td>
+                  <td style={{ textAlign: 'right', padding: '10px 16px', fontFamily: 'var(--font-mono)', fontSize: 12, color: highlight ? '#3cffd0' : '#b4b4b4' }}>{one}</td>
+                  <td style={{ textAlign: 'right', padding: '10px 16px', fontFamily: 'var(--font-mono)', fontSize: 12, color: highlight ? '#3cffd0' : '#b4b4b4' }}>{five}</td>
+                  <td style={{ textAlign: 'right', padding: '10px 0 10px 16px', fontFamily: 'var(--font-mono)', fontSize: 12, color: highlight ? '#3cffd0' : '#b4b4b4' }}>{ten}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <p style={{ fontSize: 11, color: '#6a6a6a', fontFamily: 'var(--font-mono)', letterSpacing: '0.5px', marginBottom: 24 }}>Config: 50 prompts per brand &middot; 5 engines &middot; weekly &middot; annual billing. CrunchJunkie = platform fee + BYOK API cost at conservative rates. Verified August 2026 &mdash; re-verify before committing, prices in this category change frequently.</p>
+
+        <p>One honest caveat that this table shouldn&rsquo;t hide: <strong>LLM Pulse is cheaper at one brand</strong> (&sim;$529/year vs CrunchJunkie&rsquo;s &sim;$601). If you&rsquo;re tracking a single brand on a tight budget, it&rsquo;s worth evaluating. LLM Pulse does enforce prompt caps and treats Copilot and Claude as paid add-ons &mdash; but at one brand with limited prompts and a few engines, those constraints may not bite you.</p>
+        <p>The calculus flips at five brands. At ten brands, Peec AI can&rsquo;t even quote the configuration without a custom enterprise call. Semrush is running at $19,000+ per year before you add the required base subscription.</p>
+        <p>CrunchJunkie plans (EUR, annual billing): <strong>Solo &euro;9/month</strong> (1 brand) &middot; <strong>Starter &euro;39/month</strong> (5 brands) &middot; <strong>Pro &euro;99/month</strong> (20 brands) &middot; <strong>Agency &euro;149/month</strong> (40 brands), plus your BYOK API costs.</p>
+
+        <h2>Why visibility percentages lie without sample sizes</h2>
+        <p>Here&rsquo;s the thing about AI answer engines that most visibility dashboards quietly paper over: they&rsquo;re non-deterministic.</p>
+        <p>Run the same prompt twice on ChatGPT, with the same account, five minutes apart. You can get different brands in the answer, different framing, different citation lists. A SparkToro study found less than 1% overlap between ChatGPT and Google AI giving the same list of brands in two separate answers to the same query.</p>
+        <p>This isn&rsquo;t an edge case. It&rsquo;s how these systems work &mdash; they sample from probability distributions, they update continuously, they personalise based on context. Every AI visibility number you see is based on a sample of responses, not an exhaustive census.</p>
+        <p>So when a tool shows you &ldquo;34% visibility,&rdquo; what does that actually mean? Did they run the prompt once? Three times? Twenty times? Is 34% a stable reading with a narrow margin of error, or a single data point that could have come out anywhere from 10% to 60%?</p>
+        <p>Most tools don&rsquo;t tell you. They show the number.</p>
+        <p>CrunchJunkie runs each prompt multiple times and reports the sample size and margin of error alongside every visibility figure. The product&rsquo;s position on this is explicit: a single AI answer is a sample, not a trend. Every metric change gets evaluated against its margin of error before it registers as a movement worth acting on.</p>
+        <p>This matters most for agencies. When you report AI visibility to a client and the number drops by four points, you need to know whether that&rsquo;s a real signal or noise. Without sample size and error bounds, you&rsquo;re showing a client a chart that might mean nothing. With them, you can say with confidence whether something actually moved.</p>
+
+        <h2>A metric nobody else tracks: Follow-up Survival</h2>
+        <p>Consider how people actually use AI for commercial decisions.</p>
+        <p>Someone asks ChatGPT: <em>&ldquo;What are the best project management tools for distributed teams?&rdquo;</em> Your brand appears. Visibility: recorded. Win.</p>
+        <p>But the conversation continues. They follow up: <em>&ldquo;Which of those is best for a team under fifteen people that doesn&rsquo;t want to pay per seat?&rdquo;</em></p>
+        <p>Your brand disappears.</p>
+        <p>You won the broad discovery query and lost the moment a real constraint was applied. The standard visibility dashboard never caught this &mdash; it measured turn one and stopped.</p>
+        <p>CrunchJunkie calls this <strong>Follow-up Survival</strong>: a multi-turn metric that measures whether a recommendation holds up when a buyer narrows their question within the same conversation. The platform runs the discovery prompt, records which brands appear (turn&nbsp;1), sends a configured follow-up question in the same conversation (turn&nbsp;2), and measures which brands survive the refinement.</p>
+        <p>No other tool in the category productizes this. It&rsquo;s available as an opt-in pilot feature on paid plans and costs approximately twice as much per prompt to run &mdash; because it requires two conversation turns instead of one.</p>
+        <p>One design detail that matters: the follow-up question is configured per prompt, not applied generically. A narrower that makes sense after &ldquo;best project management tools for distributed teams?&rdquo; is nonsense after &ldquo;best espresso machines under &euro;200.&rdquo; CrunchJunkie requires a per-prompt follow-up question, offers an AI-drafted suggestion you can review and edit, and records the exact text used on every run as evidence &mdash; so you know exactly what was asked, and you can compare results across time because the question stays consistent.</p>
+        <p>If your buyers research using multi-turn AI conversations &mdash; and B2B buyers increasingly do &mdash; survival in turn&nbsp;2 is more commercially predictive than visibility in turn&nbsp;1.</p>
+
+        <h2>GEO audits: why the evidence basis matters</h2>
+        <p>Every AI visibility tool includes something called a GEO audit &mdash; a diagnostic of how ready your site is to be crawled and cited by AI engines. The quality of these audits varies enormously, for a reason that isn&rsquo;t obvious until you dig in.</p>
+        <p>The honest truth about AI search optimisation is that we don&rsquo;t yet have decades of controlled evidence. We have some peer-reviewed research, published documentation from crawler vendors, and a lot of &ldquo;this seems like it might help&rdquo; logic that nobody has actually measured. The good audit tools are explicit about which category each of their checks falls into. The bad ones aren&rsquo;t.</p>
+        <p>CrunchJunkie structures its audit around a formal evidence ladder:</p>
+        <ul>
+          <li><strong>Research</strong> &mdash; backed by peer-reviewed measurement of citation-rate effects</li>
+          <li><strong>Documented</strong> &mdash; published platform behaviour from the crawler vendors themselves</li>
+          <li><strong>Convention</strong> &mdash; emerging practice, not yet proven to be consumed by AI engines</li>
+          <li><strong>Heuristic</strong> &mdash; sensible proxy, no direct evidence</li>
+        </ul>
+        <p>Each check&rsquo;s weight in the composite score scales with its evidence level. Heuristics can&rsquo;t dominate a category. Convention-basis checks carry lower weight by design.</p>
+        <p>One concrete example: llms.txt. It&rsquo;s been heavily hyped. CrunchJunkie gives it a weight of 5 out of 100 in the composite audit score &mdash; deliberately low. Their quarterly research review found that approximately 97% of published llms.txt files receive zero crawler requests, and Claude Code is the only confirmed real reader of the standard at scale. Google&rsquo;s own guidance, updated in August 2026, explicitly states that Google Search ignores llms.txt.</p>
+        <p>An audit tool that scores llms.txt at 15 or 20 points is telling you it matters more than the evidence supports. That inflates your score for doing something that probably doesn&rsquo;t help you yet, and it buries the checks that actually do.</p>
+        <p>On the content side, the checks that carry real weight are backed by the KDD&nbsp;2024 &ldquo;GEO: Generative Engine Optimization&rdquo; study (Aggarwal et al., Princeton/IIT Delhi), which measured actual citation-rate effects. Quotations in content improved citation rates by 27.8%. Cited statistics: +25.9%. Authoritative external citations: +24.9%.</p>
+        <p>The audit covers five categories &mdash; crawler access (weight 30), content accessibility (30), structured data (20), technical SEO hygiene (15), and llms.txt (5) &mdash; and produces a 0&ndash;100 composite. Diagnostic, not a guarantee, and honest about what it doesn&rsquo;t know.</p>
+
+        <h2>Owned off-site citations</h2>
+        <p>When an AI engine cites your brand, it often pulls from content that lives off your main domain: a YouTube channel, a LinkedIn company page, a Substack post, a Reddit thread you participate in.</p>
+        <p>&ldquo;Brand radar&rdquo; tools from traditional SEO handle this via web index matching &mdash; they crawl the open web and look for your brand name. That&rsquo;s broad coverage but noisy: it credits you for mentions you don&rsquo;t control, content other people wrote about you, and brand-name mismatches.</p>
+        <p>CrunchJunkie&rsquo;s off-site citation tracking works the opposite way. You declare your owned channels &mdash; <code>youtube.com/@yourbrand</code>, <code>linkedin.com/company/yourbrand</code>, your Substack, your Medium handle. The platform only attributes a citation to your brand if it&rsquo;s on a URL that matches a channel you declared, with handle-precise matching. A YouTube video from a different creator with your brand name in the title doesn&rsquo;t count.</p>
+        <p>The consequence is a much more actionable view. You see exactly which of your owned channels AI engines are pulling from, for which topics, and where you have gaps. That maps directly to content investment decisions: not &ldquo;build a LinkedIn presence&rdquo; (you might already have one and it&rsquo;s working) but &ldquo;reinforce your YouTube coverage on this specific topic cluster.&rdquo;</p>
+
+        <h2>Where CrunchJunkie isn&rsquo;t the right call</h2>
+        <p>A tool guide that doesn&rsquo;t say this is a sales pitch.</p>
+        <p><strong>At one brand on a tight budget:</strong> LLM Pulse undercuts CrunchJunkie at the single-brand level. If you&rsquo;re running a small program, don&rsquo;t need multi-engine coverage, and are comfortable with a prompt cap, it&rsquo;s worth a look alongside CrunchJunkie.</p>
+        <p><strong>If you need SEO and AI visibility in one platform:</strong> Semrush&rsquo;s AI Visibility Toolkit sits inside a full SEO suite &mdash; keyword research, backlink analysis, rank tracking, site audits. If your team already lives in Semrush and you want AI visibility without managing a separate tool, that integration has real value even at the higher per-domain price. CrunchJunkie doesn&rsquo;t do traditional rank tracking. It&rsquo;s purpose-built for AI visibility.</p>
+        <p><strong>If you want everything fully managed:</strong> The BYOK model requires setting up API keys with individual providers. For teams that want a completely managed option, CrunchJunkie offers that too, but the pricing advantage is sharpest on BYOK.</p>
+
+        <h2>The honest summary</h2>
+        <p>Most AI visibility tools in 2026 were built for the single-brand case and are awkwardly retrofitting their pricing and architecture for multi-brand use. Engine gating and prompt caps are how they manage the cost they can&rsquo;t transparently pass through to you.</p>
+        <p>CrunchJunkie was built with multi-brand tracking as a first-class case. BYOK means your costs scale linearly and transparently with actual usage. No prompt rationing, no engine add-ons, no contact-sales wall at five clients.</p>
+        <p>The things that differentiate it in practice are less about feature lists and more about intellectual honesty: Follow-up Survival because recommendation stickiness under refinement matters more than headline visibility; sample sizes and error bounds because AI answers are volatile; an evidence-based audit because not everything vendors call a &ldquo;GEO signal&rdquo; has actually been measured.</p>
+        <p>Those are the things that determine whether you can build a reporting practice on it &mdash; and whether what you show clients means something.</p>
+        <p style={{ marginTop: 32, fontFamily: 'var(--font-mono)', fontSize: 11, letterSpacing: '1.5px', textTransform: 'uppercase', color: '#6a6a6a' }}>Pricing verified August 2026 from public pricing pages and, for CrunchJunkie, directly from the production codebase. Competitor prices verified against public pricing pages where accessible; secondary sources otherwise. Prices in this category change frequently &mdash; verify before committing.</p>
+
+        <NeedHelp topic="geo-audit" />
+      </>
+    ),
+  },
+  {
     slug: 'google-ads-ai-disclosure-label',
     image: '/og/google-ads-ai-disclosure-serp.jpg',
     imageAlt: 'Google search results for "rezept online einlösen" showing the AI disclosure label on two pharmacy ads — DoktorABC and Shop Apotheke — reading "AI disclosure: Ad created or edited with AI"',
