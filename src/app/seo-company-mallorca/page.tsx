@@ -303,7 +303,7 @@ export default function SeoCompanyMallorcaPage() {
           deck="Share read access and tell us the languages your customers search in — we will send back a one-page diagnosis with three concrete things to fix this quarter. No sales pressure, no deck."
           ctaHref="/contact"
           ctaLabel="Request audit"
-          secondaryHref="/seo-company-mallorca"
+          secondaryHref="/services"
           secondaryLabel="Our full SEO service →"
         />
 

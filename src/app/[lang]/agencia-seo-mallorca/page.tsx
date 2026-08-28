@@ -306,7 +306,7 @@ export default function AgenciaSeoMallorcaPage() {
           deck="Danos acceso de lectura y dinos en qué idiomas buscan tus clientes — te enviaremos un diagnóstico de una página con tres cosas concretas que arreglar este trimestre. Sin presión comercial, sin presentación."
           ctaHref="/contact"
           ctaLabel="Solicitar auditoría"
-          secondaryHref="/es/agencia-seo-mallorca"
+          secondaryHref="/es/services/seo"
           secondaryLabel="Nuestro servicio SEO →"
         />
 

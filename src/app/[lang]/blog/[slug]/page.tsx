@@ -82,6 +82,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ lang:
   const deck = loc?.deck ?? locPost?.deck ?? post.deck
   const prose = loc?.prose ?? detail?.prose ?? <p>{post.deck}</p>
   const toc = loc?.toc ?? detail?.toc ?? []
+  const tocIds = detail?.tocIds
 
   const localFaqs = loc?.faqs ?? detail?.faqs
   const jsonLd = [
@@ -144,7 +145,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ lang:
               </div>
               <aside className="blog-aside">
                 <div className="blog-aside-label">{lang === 'de' ? 'Auf dieser Seite' : 'En esta página'}</div>
-                {toc.map(item => <a key={item} href="#">{item}</a>)}
+                {toc.map((item, i) => <a key={item} href={tocIds?.[i] ? `#${tocIds[i]}` : '#'}>{item}</a>)}
                 <div style={{ marginTop: 24, borderTop: '1px solid #2d2d2d', paddingTop: 20, display: 'flex', flexDirection: 'column', gap: 10 }}>
                   <div className="blog-aside-label">{lang === 'de' ? 'Mehr von pmax' : 'Más de pmax'}</div>
                   <Link href={`${p}/services`}>{lang === 'de' ? 'Alle Leistungen →' : 'Todos los servicios →'}</Link>
