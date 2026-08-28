@@ -64,8 +64,20 @@ export const blogDetails: BlogDetail[] = [
         <p>Three models dominate the market right now.</p>
         <p><strong>Prompt-based metering.</strong> You buy a pool of prompts. 50 at entry level, maybe 150 on the next tier, 350 if you&rsquo;re willing to pay for it. Every query you want to monitor uses a prompt. Want to track more purchase-journey questions? More prompts. Want to refresh your list as AI search behaviour shifts? You&rsquo;re spending from the same pool.</p>
         <p>The practical consequence is that you start rationing your own tracking. You pick 50 prompts and hope those are the right ones. You skip the long-tail queries. You don&rsquo;t update the list when something changes in the market. You end up with a tidy dashboard that reflects what you could afford to track, not what&rsquo;s actually happening.</p>
+        <figure style={{ margin: '24px 0' }}>
+          <Image src="/blog/peec-ai-pricing-plans.jpg" alt="Peec AI pricing page showing Starter at €70/month with 50 prompts and 3 models, Pro at €180/month with 150 prompts and 3 models, Advanced at €360/month with 350 prompts and 3 models" width={1520} height={1108} style={{ width: '100%', height: 'auto', borderRadius: 4, border: '1px solid #e8e8e8' }} />
+          <figcaption style={{ fontSize: 11, color: '#6a6a6a', fontFamily: 'var(--font-mono)', letterSpacing: '0.5px', marginTop: 8 }}>Peec AI: 50 prompts at &euro;70/month, 150 at &euro;180, 350 at &euro;360. The prompt pool is baked into the plan tier. Running out means upgrading &mdash; or tracking less.</figcaption>
+        </figure>
         <p><strong>Engine-based metering.</strong> Many tools include 3&ndash;4 AI engines at base and charge for the rest. Claude often costs extra. Gemini might be gated. Copilot is sometimes not available at all on standard plans.</p>
         <p>OtterlyAI charges an additional $29&ndash;$439 per month for Claude tracking, depending on your plan. Peec AI gives you any three of their six supported engines per plan, with each additional engine running $30&ndash;$140 extra per month on top. So when you see a headline price, you need to do the engine math before accepting it.</p>
+        <figure style={{ margin: '24px 0' }}>
+          <Image src="/blog/otterly-ai-engine-addons-pricing.jpg" alt="OtterlyAI Add-Ons pricing table showing Claude tracking costs €29/month on Lite, €109/month on Standard, and €439/month on Premium — paid on top of the base plan price" width={1520} height={976} style={{ width: '100%', height: 'auto', borderRadius: 4, border: '1px solid #e8e8e8' }} />
+          <figcaption style={{ fontSize: 11, color: '#6a6a6a', fontFamily: 'var(--font-mono)', letterSpacing: '0.5px', marginTop: 8 }}>OtterlyAI engine add-ons. Claude: &euro;29/month (Lite), &euro;109 (Standard), &euro;439 (Premium) &mdash; on top of the base subscription. Google Gemini and AI Mode follow the same structure.</figcaption>
+        </figure>
+        <figure style={{ margin: '24px 0' }}>
+          <Image src="/blog/peec-ai-engine-coverage.jpg" alt="Peec AI feature comparison table showing Starter, Pro and Advanced plans each include only 3 AI models from the list, while Enterprise gets unlimited. Available engines listed include ChatGPT, AI Mode, AI Overviews, Microsoft Copilot, Perplexity, Gemini, Claude Sonnet 4, GPT-5 Search, DeepSeek, Qwen and Mistral." width={1520} height={1688} style={{ width: '100%', height: 'auto', borderRadius: 4, border: '1px solid #e8e8e8' }} />
+          <figcaption style={{ fontSize: 11, color: '#6a6a6a', fontFamily: 'var(--font-mono)', letterSpacing: '0.5px', marginTop: 8 }}>Peec AI engine coverage grid. Non-Enterprise plans include exactly 3 models. Claude Sonnet 4, GPT-5 Search, and the newer engines are Enterprise-only.</figcaption>
+        </figure>
         <p><strong>Per-domain or per-brand metering.</strong> Semrush&rsquo;s AI Visibility Toolkit charges $99 per domain per month. Transparent and predictable at one brand; brutal when you multiply it across an agency client list.</p>
 
         <h2>What BYOK actually changes</h2>
@@ -119,6 +131,10 @@ export const blogDetails: BlogDetail[] = [
         <p>One honest caveat that this table shouldn&rsquo;t hide: <strong>LLM Pulse is cheaper at one brand</strong> (&sim;$529/year vs CrunchJunkie&rsquo;s &sim;$601). If you&rsquo;re tracking a single brand on a tight budget, it&rsquo;s worth evaluating. LLM Pulse does enforce prompt caps and treats Copilot and Claude as paid add-ons &mdash; but at one brand with limited prompts and a few engines, those constraints may not bite you.</p>
         <p>The calculus flips at five brands. At ten brands, Peec AI can&rsquo;t even quote the configuration without a custom enterprise call. Semrush is running at $19,000+ per year before you add the required base subscription.</p>
         <p>CrunchJunkie plans (EUR, annual billing): <strong>Solo &euro;9/month</strong> (1 brand) &middot; <strong>Starter &euro;39/month</strong> (5 brands) &middot; <strong>Pro &euro;99/month</strong> (20 brands) &middot; <strong>Agency &euro;149/month</strong> (40 brands), plus your BYOK API costs.</p>
+        <figure style={{ margin: '24px 0' }}>
+          <Image src="/blog/crunchjunkie-pricing-plans.jpg" alt="CrunchJunkie pricing page showing Solo at €12/month for 1 brand, Starter at €49/month for 5 brands, Pro at €124/month for 20 brands, and Agency at €186/month for 40 brands — all plans include all 10 AI engines with no per-engine fees and no prompt limits" width={1520} height={1213} style={{ width: '100%', height: 'auto', borderRadius: 4, border: '1px solid #2d2d2d' }} />
+          <figcaption style={{ fontSize: 11, color: '#6a6a6a', fontFamily: 'var(--font-mono)', letterSpacing: '0.5px', marginTop: 8 }}>CrunchJunkie plans are metered by brand, not by prompt or engine. All 10 AI engines are included on every plan. The variable cost is your BYOK API usage, paid directly to the providers at cost &mdash; no markup.</figcaption>
+        </figure>
 
         <h2>Why visibility percentages lie without sample sizes</h2>
         <p>Here&rsquo;s the thing about AI answer engines that most visibility dashboards quietly paper over: they&rsquo;re non-deterministic.</p>
