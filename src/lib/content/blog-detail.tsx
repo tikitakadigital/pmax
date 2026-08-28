@@ -120,13 +120,16 @@ export const blogDetails: BlogDetail[] = [
             </tbody>
           </table>
         </div>
-        <p style={{ fontSize: 11, color: '#6a6a6a', fontFamily: 'var(--font-mono)', letterSpacing: '0.5px', lineHeight: 1.8, marginBottom: 24 }}>
-          Config: 50 prompts per brand &middot; 5 engines &middot; weekly &middot; annual billing. CrunchJunkie = platform fee + BYOK API cost (conservative estimate; real cost is typically lower). &mdash; = no self-serve pricing available at this configuration.<br />
-          * Scrunch pricing changes frequently; the figure above is from August 2026 &mdash; verify at scrunch.com before citing.<br />
-          &dagger; Ahrefs: base plan ($129/mo) plus the all-engines Brand Radar add-on ($699/mo). The &ldquo;included&rdquo; Brand Radar prompt allowance is 5&ndash;20 prompts only &mdash; the add-on is required to track 50+.<br />
-          &Dagger; GEOly: 5-engine coverage requires the $999/mo tier. The same annual cost applies across 1&ndash;5 brands (plan maximum); 10 brands is not available on self-serve plans.<br />
-          Competitor prices verified from public pricing pages where accessible; secondary sources otherwise.
-        </p>
+        <div style={{ fontSize: 12, color: '#949494', lineHeight: 1.75, marginBottom: 24, borderTop: '1px solid #2d2d2d', paddingTop: 16 }}>
+          <p style={{ margin: '0 0 8px', color: '#b4b4b4', fontWeight: 500 }}>How to read this table</p>
+          <p style={{ margin: '0 0 6px' }}>Every tool is priced at the same configuration so the numbers are directly comparable: <strong style={{ color: '#f6f4ef' }}>50 prompts per brand, 5 AI engines, weekly scanning, annual billing</strong>. Only the plan cost at that exact setup is shown &mdash; no cherry-picking a cheaper tier that wouldn&rsquo;t cover the workload.</p>
+          <p style={{ margin: '0 0 6px' }}>CrunchJunkie&rsquo;s figure is the platform subscription <em>plus</em> estimated BYOK API costs (what you pay OpenAI, Google, Anthropic etc. directly). The estimate is conservative &mdash; real API cost at 50 prompts/week is typically lower, and you can see exactly what you&rsquo;re spending because you pay the providers directly at cost, with no markup.</p>
+          <p style={{ margin: '0 0 12px' }}>A dash (&mdash;) means no self-serve plan covers that configuration &mdash; you&rsquo;d need a custom enterprise quote.</p>
+          <p style={{ margin: '0 0 4px', fontFamily: 'var(--font-mono)', fontSize: 11, letterSpacing: '0.5px' }}>* Scrunch pricing changes frequently; figure is from August 2026 &mdash; verify at scrunch.com before citing.</p>
+          <p style={{ margin: '0 0 4px', fontFamily: 'var(--font-mono)', fontSize: 11, letterSpacing: '0.5px' }}>&dagger; Ahrefs: base plan ($129/mo) + all-engines Brand Radar add-on ($699/mo). The &ldquo;included&rdquo; Brand Radar prompt allowance is 5&ndash;20 prompts only &mdash; the add-on is required to track 50+.</p>
+          <p style={{ margin: '0 0 4px', fontFamily: 'var(--font-mono)', fontSize: 11, letterSpacing: '0.5px' }}>&Dagger; GEOly: 5-engine coverage requires the $999/mo tier; max 5 brands. 10-brand configuration not available on self-serve plans.</p>
+          <p style={{ margin: 0, fontFamily: 'var(--font-mono)', fontSize: 11, letterSpacing: '0.5px' }}>Competitor prices verified from public pricing pages where accessible; secondary sources otherwise. Prices change frequently &mdash; verify before committing.</p>
+        </div>
 
         <p>One honest caveat that this table shouldn&rsquo;t hide: <strong>LLM Pulse is cheaper at one brand</strong> (&sim;$529/year vs CrunchJunkie&rsquo;s &sim;$601). If you&rsquo;re tracking a single brand on a tight budget, it&rsquo;s worth evaluating. LLM Pulse does enforce prompt caps and treats Copilot and Claude as paid add-ons &mdash; but at one brand with limited prompts and a few engines, those constraints may not bite you.</p>
         <p>The calculus flips at five brands. At ten brands, Peec AI can&rsquo;t even quote the configuration without a custom enterprise call. Semrush is running at $19,000+ per year before you add the required base subscription.</p>
