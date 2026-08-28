@@ -28,6 +28,7 @@ export const posts: Post[] = [
     variant: 'is-mint',
     featured: true,
     author: 'Claire Enders',
+    ogImage: '/og/crunchjunkie-dashboard.jpg',
   },
   {
     slug: 'google-ads-ai-disclosure-label',

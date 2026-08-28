@@ -20,6 +20,8 @@ const NeedHelp = ({ topic }: { topic: string }) => (
 export const blogDetails: BlogDetail[] = [
   {
     slug: 'ai-visibility-tracking-tools-2026',
+    image: '/blog/crunchjunkie-dashboard-visibility-sample-size.jpg',
+    imageAlt: 'CrunchJunkie AI Visibility dashboard showing Visibility 34.5% ± 3.3% based on 2,591 runs, Average Position 1.7, Sentiment 69/100, and Share of Voice 47.7% — every metric shown with its sample size and margin of error',
     toc: [
       'The metering problem nobody puts in the brochure',
       'What BYOK actually changes',
@@ -125,6 +127,10 @@ export const blogDetails: BlogDetail[] = [
         <p>So when a tool shows you &ldquo;34% visibility,&rdquo; what does that actually mean? Did they run the prompt once? Three times? Twenty times? Is 34% a stable reading with a narrow margin of error, or a single data point that could have come out anywhere from 10% to 60%?</p>
         <p>Most tools don&rsquo;t tell you. They show the number.</p>
         <p>CrunchJunkie runs each prompt multiple times and reports the sample size and margin of error alongside every visibility figure. The product&rsquo;s position on this is explicit: a single AI answer is a sample, not a trend. Every metric change gets evaluated against its margin of error before it registers as a movement worth acting on.</p>
+        <figure style={{ margin: '24px 0' }}>
+          <Image src="/blog/crunchjunkie-dashboard-visibility-sample-size.jpg" alt="CrunchJunkie dashboard showing Visibility 34.5% ± 3.3% with the note 'Based on n = 2,591 runs over the last 30 days'" width={1520} height={957} style={{ width: '100%', height: 'auto', borderRadius: 4, border: '1px solid #2d2d2d' }} />
+          <figcaption style={{ fontSize: 11, color: '#6a6a6a', fontFamily: 'var(--font-mono)', letterSpacing: '0.5px', marginTop: 8 }}>Every metric ships with its sample size and margin of error. &ldquo;34.5% &plusmn;&thinsp;3.3% based on 2,591 runs&rdquo; is a measurement. &ldquo;34.5%&rdquo; alone is a number.</figcaption>
+        </figure>
         <p>This matters most for agencies. When you report AI visibility to a client and the number drops by four points, you need to know whether that&rsquo;s a real signal or noise. Without sample size and error bounds, you&rsquo;re showing a client a chart that might mean nothing. With them, you can say with confidence whether something actually moved.</p>
 
         <h2>A metric nobody else tracks: Follow-up Survival</h2>
