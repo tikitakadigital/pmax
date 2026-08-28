@@ -10,7 +10,9 @@ import { getBlogDetail } from '@/lib/content/blog-detail'
 import { getT, isPostTranslated, blogAlternates } from '@/lib/i18n'
 
 export function generateStaticParams() {
-  return ['de','es'].flatMap(lang => posts.filter(p => !p.external).map(p => ({ lang, slug: p.slug })))
+  return ['de','es'].flatMap(lang =>
+    posts.filter(p => !p.external && isPostTranslated(p.slug, lang)).map(p => ({ lang, slug: p.slug }))
+  )
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string; slug: string }> }): Promise<Metadata> {
@@ -58,7 +60,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
 export default async function BlogPostPage({ params }: { params: Promise<{ lang: string; slug: string }> }) {
   const { lang, slug } = await params
   const post = getPost(slug)
-  if (!post) notFound()
+  if (!post || !isPostTranslated(slug, lang)) notFound()
 
   const t = getT(lang)
   const b = t.blog

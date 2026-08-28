@@ -4,7 +4,7 @@ import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
 import { breadcrumb, orgRef } from '@/lib/schema'
 import { posts } from '@/lib/content/blog'
-import { getT } from '@/lib/i18n'
+import { getT, isPostTranslated } from '@/lib/i18n'
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
   const { lang } = await params
@@ -37,7 +37,10 @@ export default async function BlogPage({ params }: { params: Promise<{ lang: str
       numberOfItems: posts.filter(p => !p.external).length,
       itemListElement: posts.filter(p => !p.external).map((post, i) => {
         const locPost = b.posts.find(lp => lp.slug === post.slug)
-        return { '@type': 'ListItem', position: i + 1, url: `https://pmax.online/${lang}/blog/${post.slug}/`, name: locPost?.title ?? post.title }
+        const url = isPostTranslated(post.slug, lang)
+          ? `https://pmax.online/${lang}/blog/${post.slug}/`
+          : `https://pmax.online/blog/${post.slug}/`
+        return { '@type': 'ListItem', position: i + 1, url, name: locPost?.title ?? post.title }
       }),
     },
     orgRef,
@@ -66,10 +69,11 @@ export default async function BlogPage({ params }: { params: Promise<{ lang: str
             <ol className="stream reveal" style={{ listStyle: 'none' }}>
               {posts.map(post => {
                 const locPost = b.posts.find(lp => lp.slug === post.slug)
+                const postHref = isPostTranslated(post.slug, lang) ? `${p}/blog/${post.slug}` : `/blog/${post.slug}`
                 return (
                   <li key={post.slug} className="stream-item">
                     <span className="stream-stamp">{post.stamp}</span>
-                    <Link href={`${p}/blog/${post.slug}`} className={`stream-card ${post.variant}`}>
+                    <Link href={postHref} className={`stream-card ${post.variant}`}>
                       <div>
                         <span className="stream-kicker">{post.category} · {post.readTime}</span>
                         <h2 className="stream-head">{locPost?.title ?? post.title}</h2>
