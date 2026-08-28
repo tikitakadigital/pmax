@@ -308,7 +308,7 @@ export default function SeoAgenturMallorcaPage() {
           deck="Geben Sie uns Lesezugriff und sagen Sie uns, in welchen Sprachen Ihre Kunden suchen — wir senden Ihnen eine einseitige Diagnose mit drei konkreten Dingen, die Sie dieses Quartal beheben sollten. Kein Verkaufsdruck, keine Präsentation."
           ctaHref="/contact"
           ctaLabel="Audit anfragen"
-          secondaryHref="/de/services/seo"
+          secondaryHref="/de/seo-agentur-mallorca"
           secondaryLabel="Unser SEO-Angebot →"
         />
 

@@ -175,7 +175,7 @@ export default function VisibilityEngineeringPage() {
 
               <h2>SEO isn&apos;t dead — it&apos;s the foundation of GEO</h2>
               <p>
-                Despite what you may read on LinkedIn, <a href="/services/seo/">SEO is not dead</a>. Customers still use Google, and good SEO is one of the core foundations of <a href="/services/ai-visibility/">Generative Engine Optimisation (GEO)</a> — you cannot do one without the other and expect to dominate digitally.
+                Despite what you may read on LinkedIn, <a href="/seo-company-mallorca/">SEO is not dead</a>. Customers still use Google, and good SEO is one of the core foundations of <a href="/services/ai-visibility/">Generative Engine Optimisation (GEO)</a> — you cannot do one without the other and expect to dominate digitally.
               </p>
               <p>
                 Following its largest quality update in years, Google says search users now see 45% less low-quality, unoriginal content in results. The message is clear: visibility belongs to brands that demonstrate genuine expertise, experience, authority and trust.

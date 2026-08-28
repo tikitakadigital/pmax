@@ -33,11 +33,11 @@ const categoryLinks: Record<string, { label: string; href: string }[]> = {
   'Paid social':  [{ label: 'Paid social', href: '/services/paid-social' }],
   'LinkedIn':     [{ label: 'Paid social (LinkedIn)', href: '/services/paid-social' }],
   'Privacy':      [{ label: 'Analytics & tracking', href: '/services/analytics' }],
-  'SEO':          [{ label: 'SEO', href: '/services/seo' }],
-  'Local SEO':    [{ label: 'SEO', href: '/services/seo' }, { label: 'Google Ads', href: '/services/google-ads' }],
+  'SEO':          [{ label: 'SEO', href: '/seo-company-mallorca' }],
+  'Local SEO':    [{ label: 'SEO', href: '/seo-company-mallorca' }, { label: 'Google Ads', href: '/services/google-ads' }],
   'Creative':     [{ label: 'Creative production', href: '/services/creative' }],
   'Hospitality':  [{ label: 'Hospitality marketing', href: '/industries/hospitality' }, { label: 'Google Ads', href: '/services/google-ads' }],
-  'Real estate':  [{ label: 'Real estate marketing', href: '/industries/real-estate' }, { label: 'SEO', href: '/services/seo' }],
+  'Real estate':  [{ label: 'Real estate marketing', href: '/industries/real-estate' }, { label: 'SEO', href: '/seo-company-mallorca' }],
   'Renewables':   [{ label: 'Renewables marketing', href: '/industries/renewables' }, { label: 'Google Ads', href: '/services/google-ads' }],
   'Boating':      [{ label: 'Boating & yachting marketing', href: '/industries/boating' }, { label: 'Paid social', href: '/services/paid-social' }],
 }
@@ -99,6 +99,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
       dateModified: post.dateModified,
       keywords: categoryKeywords[post.category],
       image: post.ogImage,
+      author: post.author,
     }),
     ...(detail?.faqs?.length ? [{ ...faqPage(detail.faqs), inLanguage: 'en' }] : []),
   ]
@@ -166,8 +167,8 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
               </div>
               <aside className="blog-aside">
                 <div className="blog-aside-label">On this page</div>
-                {(detail?.toc ?? []).map((item) => (
-                  <a key={item} href="#">{item}</a>
+                {(detail?.toc ?? []).map((item, i) => (
+                  <a key={item} href={detail?.tocIds?.[i] ? `#${detail.tocIds[i]}` : '#'}>{item}</a>
                 ))}
                 <div style={{ marginTop: 24, borderTop: '1px solid #2d2d2d', paddingTop: 20, display: 'flex', flexDirection: 'column', gap: 10 }}>
                   <div className="blog-aside-label">More from pmax</div>

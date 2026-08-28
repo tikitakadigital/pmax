@@ -86,7 +86,34 @@ export const website = {
   inLanguage: ['en', 'de', 'es'],
 }
 
-export function article({ headline, description, url, datePublished, dateModified, keywords, image }: {
+const articleAuthors: Record<string, object> = {
+  'Philipp Enders': {
+    '@type': 'Person',
+    '@id': 'https://pmax.online/#philipp-enders',
+    name: 'Philipp Enders',
+    url: 'https://pmax.online/about/',
+    jobTitle: 'Founder & Director',
+    worksFor: { '@id': 'https://pmax.online/#org' },
+    knowsAbout: [
+      'Generative Engine Optimisation', 'GEO Audit', 'AI Search Visibility',
+      'SEO', 'Google Ads', 'Performance Max', 'Meta Ads', 'Digital Marketing Strategy',
+    ],
+    sameAs: ['https://www.linkedin.com/in/philippenders/'],
+  },
+  'Claire Enders': {
+    '@type': 'Person',
+    '@id': 'https://pmax.online/#claire-enders',
+    name: 'Claire Enders',
+    jobTitle: 'Digital Marketing Strategist',
+    worksFor: { '@id': 'https://pmax.online/#org' },
+    knowsAbout: [
+      'Generative Engine Optimisation', 'GEO Audit', 'AI Search Visibility', 'Content Strategy',
+    ],
+    sameAs: ['https://www.linkedin.com/in/clairelouenders/'],
+  },
+}
+
+export function article({ headline, description, url, datePublished, dateModified, keywords, image, author }: {
   headline: string
   description: string
   url: string
@@ -94,6 +121,7 @@ export function article({ headline, description, url, datePublished, dateModifie
   dateModified?: string
   keywords?: string[]
   image?: string
+  author?: string
 }) {
   return {
     '@context': 'https://schema.org',
@@ -103,19 +131,7 @@ export function article({ headline, description, url, datePublished, dateModifie
     url,
     datePublished,
     dateModified: dateModified ?? datePublished,
-    author: {
-      '@type': 'Person',
-      '@id': 'https://pmax.online/#philipp-enders',
-      name: 'Philipp Enders',
-      url: 'https://pmax.online/about/',
-      jobTitle: 'Founder & Director',
-      worksFor: { '@id': 'https://pmax.online/#org' },
-      knowsAbout: [
-        'Generative Engine Optimisation', 'GEO Audit', 'AI Search Visibility',
-        'SEO', 'Google Ads', 'Performance Max', 'Meta Ads', 'Digital Marketing Strategy',
-      ],
-      sameAs: ['https://www.linkedin.com/in/philippenders/'],
-    },
+    author: articleAuthors[author ?? 'Philipp Enders'] ?? articleAuthors['Philipp Enders'],
     publisher: { '@id': 'https://pmax.online/#org' },
     mainEntityOfPage: { '@type': 'WebPage', '@id': url },
     inLanguage: 'en-GB',

@@ -181,7 +181,7 @@ export const de = {
       <>
         Wir betreiben{' '}<a href="/de/services/google-ads/">Google Ads</a>,{' '}
         <a href="/de/services/paid-social/">Paid Social</a>,{' '}
-        <a href="/de/services/seo/">SEO</a>,{' '}
+        <a href="/de/seo-agentur-mallorca/">SEO</a>,{' '}
         <a href="/de/services/ai-visibility/">KI-Sichtbarkeit</a>,{' '}
         <a href="/de/services/analytics/">Analytics</a>,{' '}
         <a href="/de/services/conversion-design/">Conversion Design</a> und{' '}
@@ -475,7 +475,7 @@ export const de = {
           </p>
           <h2>SEO ist nicht tot — SEO ist das Fundament von GEO</h2>
           <p>
-            Entgegen mancher LinkedIn-Posts ist <a href="/de/services/seo/">SEO nicht tot</a>. Kunden nutzen weiterhin Google, und gutes SEO ist eine der tragenden Säulen der <a href="/de/services/ai-visibility/">Generative Engine Optimisation (GEO)</a> — beides lässt sich nicht isoliert betreiben, wenn man digital dominieren will.
+            Entgegen mancher LinkedIn-Posts ist <a href="/de/seo-agentur-mallorca/">SEO nicht tot</a>. Kunden nutzen weiterhin Google, und gutes SEO ist eine der tragenden Säulen der <a href="/de/services/ai-visibility/">Generative Engine Optimisation (GEO)</a> — beides lässt sich nicht isoliert betreiben, wenn man digital dominieren will.
           </p>
           <p>
             Nach seinem größten Qualitäts-Update seit Jahren meldet Google, dass Nutzer 45 % weniger minderwertige, unoriginelle Inhalte sehen. Die Botschaft ist klar: Sichtbarkeit gehört Marken, die echte Expertise, Erfahrung, Autorität und Vertrauen nachweisen.
@@ -1513,7 +1513,7 @@ export const de = {
         <p>Fügen Sie echten Redaktionstext am Anfang jeder Collection-Seite hinzu (300–500 Wörter) und verlinken Sie auf verwandte Collections. Die meisten Shopify-Themes verstecken das — finden Sie den Bereich, aktivieren Sie ihn, schreiben Sie echten Content.</p>
         <h2>Hreflang für mehrsprachige Shops</h2>
         <p>Wenn Sie in mehreren Sprachen verkaufen, richten Sie Hreflang richtig ein. Shopify Markets handhabt das, wenn korrekt konfiguriert, aber die Standardeinstellungen sind normalerweise falsch. Auditieren Sie jeden Markt auf korrekte Hreflang-Tags.</p>
-        <p>Weiterführende Links: unsere <a href="/de/services/seo/">SEO-Leistung</a>, unser <a href="/de/industries/ecommerce/">E-Commerce-Marketing-Playbook</a> — und <a href="/de/blog/how-to-get-mentioned-by-chatgpt/">wie strukturierte Daten auch ChatGPT-Nennungen erzeugen</a>.</p>
+        <p>Weiterführende Links: unsere <a href="/de/seo-agentur-mallorca/">SEO-Leistung</a>, unser <a href="/de/industries/ecommerce/">E-Commerce-Marketing-Playbook</a> — und <a href="/de/blog/how-to-get-mentioned-by-chatgpt/">wie strukturierte Daten auch ChatGPT-Nennungen erzeugen</a>.</p>
         <h2>Brauchen Sie dabei Unterstützung?</h2>
         <p>Falls Ihnen das oben Genannte bekannt vorkommt, <a href="/de/contact/?topic=shopify-seo-2026">schildern Sie uns kurz Ihre Situation</a> und wir melden uns innerhalb eines Werktages. Das erste Gespräch: 30 Minuten, auf unsere Rechnung.</p>
       </>),

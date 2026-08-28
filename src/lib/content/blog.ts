@@ -20,6 +20,7 @@ export const posts: Post[] = [
     slug: 'ai-visibility-tracking-tools-2026',
     stamp: 'AUG 27',
     date: 'Aug 27, 2026',
+    dateModified: 'Aug 28, 2026',
     readTime: '12 min',
     category: 'AI search',
     title: 'AI Visibility Tracking in 2026: What to Check Before You Sign Up',

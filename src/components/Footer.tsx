@@ -30,7 +30,7 @@ export default function Footer({ locale = 'en' }: { locale?: string }) {
     { href: `${p}/services/ai-visibility`, label: locale === 'de' ? 'KI-Sichtbarkeit' : locale === 'es' ? 'Visibilidad en IA' : 'AI search visibility' },
     { href: `${p}/services/google-ads`, label: 'Google Ads' },
     { href: `${p}/services/paid-social`, label: 'Paid social' },
-    { href: `${p}/services/seo`, label: 'SEO' },
+    { href: locale === 'de' ? '/de/seo-agentur-mallorca' : locale === 'es' ? '/es/agencia-seo-mallorca' : '/seo-company-mallorca', label: 'SEO' },
     { href: `${p}/services/conversion-design`, label: locale === 'de' ? 'Conversion Design' : locale === 'es' ? 'Diseño de conversión' : 'Conversion design' },
     { href: `${p}/services/analytics`, label: locale === 'de' ? 'Analytics & Tracking' : locale === 'es' ? 'Analítica y tracking' : 'Analytics & tracking' },
     { href: `${p}/services/creative`, label: locale === 'de' ? 'Creative Production' : locale === 'es' ? 'Producción creativa' : 'Creative production' },

@@ -224,7 +224,7 @@ export default function AgenciaDeMarketingMallorcaPage() {
               <ul>
                 <li><Link href="/es/services/google-ads">Google Ads y Performance Max</Link> — Search, Shopping, PMax y YouTube sobre una configuración de conversión limpia. Exclusiones de marca en PMax, importaciones de conversiones offline correctas, revisiones semanales de cuenta.</li>
                 <li><Link href="/es/services/paid-social">Paid social</Link> — Meta, TikTok y LinkedIn conectados a tu CRM. Orientado a creatividad y medido en ingresos, no en impresiones.</li>
-                <li><Link href="/es/services/seo">SEO</Link> — SEO técnico, de contenidos y local en cuatro idiomas. Rankings que se acumulan y se trasladan a la búsqueda con IA.</li>
+                <li><Link href="/es/agencia-seo-mallorca">SEO</Link> — SEO técnico, de contenidos y local en cuatro idiomas. Rankings que se acumulan y se trasladan a la búsqueda con IA.</li>
                 <li><Link href="/es/services/ai-visibility">Visibilidad en búsqueda con IA (GEO)</Link> — ser la empresa que ChatGPT, Perplexity y las AI Overviews de Google citan cuando alguien pregunta por una agencia, villa, hotel o servicio en Mallorca.</li>
                 <li><Link href="/es/services/conversion-design">Diseño de conversión (CRO)</Link> — más ingresos con el mismo tráfico. Reconstrucción de landing pages, optimización del flujo de reservas, tests A/B.</li>
                 <li><Link href="/es/services/analytics">Analítica y tracking</Link> — GTM server-side, Consent Mode v2, GA4, conversiones offline alimentadas por CRM. La capa de medición de la que depende todo lo demás.</li>
