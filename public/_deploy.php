@@ -21,7 +21,7 @@ if (!$zip_file || !preg_match('/^deploy_[0-9]+\.zip$/', $zip_file)) {
 $zip_path = '/home1/pmax/' . $zip_file;
 if (!file_exists($zip_path)) {
     http_response_code(404);
-    exit('Deploy file not found: ' . $zip_path);
+    exit('Deploy file not found');
 }
 
 $zip = new ZipArchive();

@@ -823,6 +823,7 @@ export const de = {
     promoDeck: 'Wir betreiben keine E-Mail-Liste — aber wenn Sie ein Thema haben, über das wir schreiben sollen, lassen Sie es uns wissen.',
     promoBtn: 'Thema einreichen',
     posts: [
+      { slug: 'ai-visibility-tracking-tools-2026', title: 'KI-Sichtbarkeits-Tools 2026: Was Sie prüfen sollten, bevor Sie zahlen', deck: 'Wie die meisten KI-Sichtbarkeits-Tools still einschränken, was Sie tracken können — und was Sie vor dem Kauf fragen sollten. Ein Käuferführer mit verifizierten Preisen.' },
       { slug: 'google-ads-ai-disclosure-label', title: 'Googles KI-Label steht auf Ihren Anzeigen. Sie haben das wahrscheinlich nicht entschieden.', deck: 'Seit Juli 2026 erscheint auf europäischen SERPs: „KI-Offenlegung: Anzeige wurde mit KI erstellt oder bearbeitet." Die meisten Werbetreibenden, die das Label tragen, haben es nicht bewusst gewählt — Performance Max hat es für sie gesetzt.' },
       { slug: 'pinterest-ads-home-interiors-local-2026', title: 'Pinterest Ads 2026: wer sie wirklich schalten kann — und wer sollte.', deck: 'Für welche Branchen Pinterest Ads funktionieren, wie Retargeting wirklich funktioniert und warum ein lokales Rollo-Studio dem Sweet Spot der Plattform näher ist als die meisten E-Commerce-Shops.' },
       { slug: 'google-ads-vs-meta-ads-vs-tiktok-ads-ecommerce-2026', title: 'Google Ads vs. Meta Ads vs. TikTok Ads für E-Commerce 2026.', deck: 'Kein Marketing-Lehrbuch. Keine Hersteller-Folien. Ein brutal praktischer Side-by-Side-Vergleich, wo jede Plattform 2026 wirklich Geld einbringt — und wo sie still und leise Budget verbrennt.' },
@@ -1051,7 +1052,169 @@ export const de = {
   } as Record<string, LocalizedCaseDetail>,
 
   blogPostDetail: {
+    'ai-visibility-tracking-tools-2026': {
+      toc: [
+        'Das Abrechnungsproblem, das kein Anbieter bewirbt',
+        'Was BYOK wirklich ändert',
+        'Warum Sichtbarkeits-Prozentsätze ohne Stichprobengrößen lügen',
+        'Eine Metrik, die kein anderes Tool erfasst: Follow-up Survival',
+        'GEO-Audits: warum die Evidenzbasis zählt',
+        'Eigene Off-Site-Zitationen',
+        'Wann CrunchJunkie nicht die richtige Wahl ist',
+        'Das ehrliche Fazit',
+      ],
+      faqs: [
+        {
+          q: 'Was ist BYOK beim KI-Sichtbarkeits-Tracking?',
+          a: 'BYOK steht für Bring Your Own Key. Anstatt API-Aufrufe in ein Prompt-Kontingent zu verpacken und pauschal mit Aufschlag zu berechnen, lässt ein BYOK-Modell Sie Ihre eigenen API-Keys direkt mit den Modell-Anbietern verbinden (OpenAI, Google, Anthropic usw.). Sie zahlen die Anbieter zu Einkaufspreisen; die Plattform berechnet ein Abonnement auf anderer Basis — bei CrunchJunkie: die Anzahl der getrackten Marken. Die praktische Konsequenz: kein Prompt-Limit und transparente Kosten.',
+        },
+        {
+          q: 'Was ist Follow-up Survival in der KI-Suche?',
+          a: 'Follow-up Survival ist eine Multi-Turn-KI-Sichtbarkeitsmetrik, die misst, ob eine Markenempfehlung standhält, wenn ein Käufer seine Anfrage in derselben Unterhaltung eingrenzt. Standard-KI-Sichtbarkeits-Tracking erfasst, ob eine Marke als Reaktion auf einen breiten Discovery-Prompt erschien (Turn 1). Follow-up Survival sendet eine konfigurierte, engere Folgefrage in derselben Unterhaltung (Turn 2) und misst, welche Marken die Verfeinerung überstehen. Eine Marke kann in der breiten Anfrage sichtbar sein und in dem Moment verschwinden, wenn eine reale Einschränkung angewendet wird. CrunchJunkie ist das einzige KI-Sichtbarkeits-Tool, das diese Metrik produktisiert.',
+        },
+        {
+          q: 'Wie viele KI-Engines trackt CrunchJunkie?',
+          a: 'CrunchJunkie trackt zehn KI-Engines: ChatGPT, Gemini, Perplexity, Claude, Google AI Overviews, Google AI Mode, Microsoft Copilot, Grok, Meta AI und DeepSeek. Alle zehn sind in jedem Plan enthalten — es gibt keine Engine-Add-ons oder gestufte Engine-Zugänge.',
+        },
+        {
+          q: 'Was prüft ein GEO-Audit?',
+          a: 'Ein GEO-Audit bewertet, wie bereit eine Website ist, von KI-Suchmaschinen gecrawlt und zitiert zu werden. CrunchJunkies Audit umfasst fünf Kategorien: Crawler-Zugang (ob KI-Bots Ihre Seiten erreichen können), Content-Zugänglichkeit (ob Content server-gerendert und für die Extraktion strukturiert ist), strukturierte Daten (JSON-LD-Qualität und -breite), technische SEO-Hygiene (Canonical, Sitemap, Title/Description-Längen) und llms.txt (das entstehende Dateiformat für KI-Crawler-Anleitungen). Jedem Check wird eine Evidenzbasis zugewiesen — Research, Documented, Convention oder Heuristic — die bestimmt, wie er im Gesamtscore von 0–100 gewichtet wird.',
+        },
+        {
+          q: 'Welches KI-Sichtbarkeits-Tool ist am günstigsten für das Tracking mehrerer Marken?',
+          a: 'Bei einer Konfiguration von 50 Prompts pro Marke, 5 Engines und wöchentlichem Scannen ist CrunchJunkie die günstigste Option, die über mehrere Marken skaliert. Bei 5 Marken betragen die Jahreskosten etwa $2.873 (Plattformgebühr plus BYOK-API-Kosten) gegenüber $3.229 für LLM Pulse, $4.884 für OtterlyAI und $9.636 für Peec AI. LLM Pulse ist bei einer einzelnen Marke günstiger (~$529/Jahr vs. CrunchJunkies ~$601), setzt aber Prompt-Limits und behandelt mehrere Engines als kostenpflichtige Add-ons. Preise verifiziert August 2026.',
+        },
+      ],
+      prose: (
+        <>
+          <p>Der Markt für KI-Sichtbarkeits-Tools hat ein spezifisches Problem: Er entwickelt sich schnell genug, dass die meisten Käufer noch nicht wissen, welche Fragen sie stellen sollen. Anbieter wissen das, und manche nutzen es aus.</p>
+          <p>Ich habe die letzten Monate damit verbracht, diese Plattformen zu testen &mdash; nicht Demo-Calls anzuschauen, sondern sie tatsächlich auf Kundenkonten laufen zu lassen, zu prüfen, ob die Zahlen stimmen, und Fragen zu stellen, die in Verkaufsgesprächen nicht auftauchen. Das sind meine Erkenntnisse.</p>
+
+          <h2 id="metering-problem">Das Abrechnungsproblem, das kein Anbieter bewirbt</h2>
+          <p>Bevor Sie Features vergleichen, verstehen Sie, wie jedes Tool abrechnet. Das Preismodell bestimmt, was Sie sich leisten können zu tracken &mdash; und das bestimmt, was Sie tatsächlich über Ihre KI-Suchpräsenz wissen.</p>
+          <p>Drei Modelle dominieren den Markt.</p>
+          <p><strong>Prompt-basierte Abrechnung.</strong> Sie kaufen ein Prompt-Kontingent. 50 auf Einsteigerniveau, vielleicht 150 im nächsten Tier, 350 wenn Sie bereit sind, dafür zu zahlen. Jede Anfrage, die Sie monitoren möchten, verbraucht einen Prompt. Wollen Sie mehr kaufreisebezogene Fragen tracken? Mehr Prompts. Wollen Sie die Liste aktualisieren, wenn sich das KI-Suchverhalten ändert? Sie schöpfen aus demselben Kontingent.</p>
+          <p>Die praktische Konsequenz: Sie beginnen, Ihr eigenes Tracking zu rationieren. Sie wählen 50 Prompts und hoffen, dass es die richtigen sind. Sie lassen die Long-Tail-Anfragen weg. Sie aktualisieren die Liste nicht, wenn sich etwas am Markt verändert. Am Ende haben Sie ein ordentliches Dashboard, das widerspiegelt, was Sie sich leisten konnten zu tracken &mdash; nicht das, was tatsächlich passiert.</p>
+          <p><strong>Engine-basierte Abrechnung.</strong> Viele Tools inkludieren 3&ndash;4 KI-Engines im Basispaket und berechnen den Rest extra. Claude kostet oft Aufpreis. Gemini ist möglicherweise gesperrt. Copilot ist manchmal in Standard-Plänen gar nicht verfügbar.</p>
+          <p>OtterlyAI berechnet je nach Plan $29&ndash;$439 extra pro Monat für Claude-Tracking. Peec AI gibt Ihnen drei der sechs unterstützten Engines pro Plan &mdash; jede weitere Engine kostet $30&ndash;$140 extra pro Monat on top. Wenn Sie einen Listenpreis sehen, müssen Sie erst die Engine-Rechnung aufmachen, bevor Sie ihn akzeptieren.</p>
+          <p><strong>Abrechnung pro Domain oder Marke.</strong> Semrush&rsquo;s AI Visibility Toolkit berechnet $99 pro Domain und Monat. Transparent und planbar bei einer Marke; brutal, wenn Sie das über eine Agentur-Kundenliste multiplizieren.</p>
+
+          <h2 id="byok">Was BYOK wirklich ändert</h2>
+          <p>CrunchJunkie geht die ganze Preisfrage anders an. Statt API-Aufrufe in ein Prompt-Kontingent zu verpacken und mit Aufschlag pauschal zu berechnen, lässt es Sie eigene API-Keys verbinden. Ihre Anfragen gehen direkt an OpenAI, Google, Anthropic und die anderen Anbieter &mdash; Sie zahlen diese zu Einkaufspreisen. Die Plattform berechnet ein Abonnement auf Basis der Anzahl getrackter Marken, nicht der Prompt-Menge.</p>
+          <p>Das Ergebnis: kein Prompt-Limit. Alle zehn Engines &mdash; ChatGPT, Gemini, <a href="/de/blog/perplexity-visibility/">Perplexity</a>, Claude, Google AI Overviews, Google AI Mode, Microsoft Copilot, Grok, Meta AI und DeepSeek &mdash; sind in jedem Plan ab der untersten Stufe enthalten. Keine Engine-Add-ons.</p>
+          <p>Das verändert die Anreizstruktur konkret. Mit einem Prompt-Limit haben Sie einen Grund, weniger Anfragen zu tracken als Sie sollten. Mit BYOK ohne Limit tracken Sie, was tatsächlich sinnvoll ist.</p>
+          <p>So sehen die Jahreskosten bei einer konsistenten Konfiguration &mdash; 50 Prompts pro Marke, 5 Engines, wöchentliches Scannen, Jahresabrechnung &mdash; für Tools mit öffentlichen Preisangaben aus:</p>
+
+          <div style={{ overflowX: 'auto', margin: '24px 0 8px' }}>
+            <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: 13, lineHeight: 1.5 }}>
+              <thead>
+                <tr style={{ borderBottom: '1px solid #2d2d2d' }}>
+                  <th style={{ textAlign: 'left', padding: '8px 16px 8px 0', fontFamily: 'var(--font-mono)', fontSize: 10, fontWeight: 500, letterSpacing: '1.5px', textTransform: 'uppercase', color: '#6b6b6b', whiteSpace: 'nowrap' }}>Tool</th>
+                  <th style={{ textAlign: 'left', padding: '8px 16px', fontFamily: 'var(--font-mono)', fontSize: 10, fontWeight: 500, letterSpacing: '1.5px', textTransform: 'uppercase', color: '#6b6b6b', whiteSpace: 'nowrap' }}>Abrechnung</th>
+                  <th style={{ textAlign: 'right', padding: '8px 16px', fontFamily: 'var(--font-mono)', fontSize: 10, fontWeight: 500, letterSpacing: '1.5px', textTransform: 'uppercase', color: '#6b6b6b', whiteSpace: 'nowrap' }}>1 Marke / J.</th>
+                  <th style={{ textAlign: 'right', padding: '8px 16px', fontFamily: 'var(--font-mono)', fontSize: 10, fontWeight: 500, letterSpacing: '1.5px', textTransform: 'uppercase', color: '#6b6b6b', whiteSpace: 'nowrap' }}>5 Marken / J.</th>
+                  <th style={{ textAlign: 'right', padding: '8px 0 8px 16px', fontFamily: 'var(--font-mono)', fontSize: 10, fontWeight: 500, letterSpacing: '1.5px', textTransform: 'uppercase', color: '#6b6b6b', whiteSpace: 'nowrap' }}>10 Marken / J.</th>
+                </tr>
+              </thead>
+              <tbody>
+                {[
+                  { tool: 'CrunchJunkie', href: 'https://crunchjunkie.io/pricing', meter: 'nur Marken', one: '$601', five: '$2,873', ten: '$6,105', highlight: true },
+                  { tool: 'LLM Pulse', href: 'https://llmpulse.ai/pricing', meter: 'Prompts + Projekt', one: '$529', five: '$3,229', ten: '$7,763', highlight: false },
+                  { tool: 'Peec AI', href: 'https://peec.ai/pricing', meter: 'Prompts + Engine', one: '$1,932', five: '$9,636', ten: '—', highlight: false },
+                  { tool: 'Semrush', href: 'https://www.semrush.com/prices/', meter: 'Domain', one: '$1,908 +Abo', five: '$9,540 +Abo', ten: '$19,080 +Abo', highlight: false },
+                  { tool: 'OtterlyAI', href: 'https://otterly.ai/pricing', meter: 'Prompts + Engine', one: '$2,508', five: '$4,884', ten: '$7,260', highlight: false },
+                  { tool: 'Scrunch *', href: 'https://scrunch.com', meter: 'Marken-Workspace', one: '~$3,000', five: '—', ten: '—', highlight: false },
+                  { tool: 'Evertune', href: 'https://www.evertune.ai', meter: 'Flatrate (Prompt-Vol.)', one: '$9,600', five: '$9,600', ten: '$9,600', highlight: false },
+                  { tool: 'Ahrefs †', href: 'https://ahrefs.com/pricing', meter: 'Basis + Add-on', one: '$9,936 +Abo', five: '$9,936 +Abo', ten: '$9,936 +Abo', highlight: false },
+                  { tool: 'GEOly ‡', href: 'https://www.geoly.ai', meter: 'Tier + Engine-Gate', one: '$11,988', five: '$11,988', ten: '—', highlight: false },
+                ].map(({ tool, href, meter, one, five, ten, highlight }) => (
+                  <tr key={tool} style={{ borderBottom: '1px solid #1e1e1e' }}>
+                    <td style={{ padding: '10px 16px 10px 0', fontWeight: highlight ? 600 : 400, color: highlight ? '#f6f4ef' : '#b4b4b4', whiteSpace: 'nowrap' }}><a href={href} target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'none' }}>{tool}</a></td>
+                    <td style={{ padding: '10px 16px', fontSize: 12, color: '#6a6a6a', whiteSpace: 'nowrap' }}>{meter}</td>
+                    <td style={{ textAlign: 'right', padding: '10px 16px', fontFamily: 'var(--font-mono)', fontSize: 12, color: highlight ? '#3cffd0' : '#b4b4b4', whiteSpace: 'nowrap' }}>{one}</td>
+                    <td style={{ textAlign: 'right', padding: '10px 16px', fontFamily: 'var(--font-mono)', fontSize: 12, color: highlight ? '#3cffd0' : '#b4b4b4', whiteSpace: 'nowrap' }}>{five}</td>
+                    <td style={{ textAlign: 'right', padding: '10px 0 10px 16px', fontFamily: 'var(--font-mono)', fontSize: 12, color: highlight ? '#3cffd0' : '#b4b4b4', whiteSpace: 'nowrap' }}>{ten}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <div style={{ fontSize: 12, color: '#949494', lineHeight: 1.75, marginBottom: 24, borderTop: '1px solid #2d2d2d', paddingTop: 16 }}>
+            <p style={{ margin: '0 0 8px', color: '#b4b4b4', fontWeight: 500 }}>So lesen Sie diese Tabelle</p>
+            <p style={{ margin: '0 0 6px' }}>Jedes Tool ist bei identischer Konfiguration bewertet, damit die Zahlen direkt vergleichbar sind: <strong style={{ color: '#f6f4ef' }}>50 Prompts pro Marke, 5 KI-Engines, wöchentliches Scannen, Jahresabrechnung</strong>. Nur die Plankosten bei dieser genauen Konfiguration werden gezeigt &mdash; kein Rosinenpicken bei günstigeren Tiers, die die Anforderungen nicht erfüllen würden.</p>
+            <p style={{ margin: '0 0 6px' }}>CrunchJunkies Zahl ist das Plattform-Abonnement <em>plus</em> geschätzte BYOK-API-Kosten (was Sie OpenAI, Google, Anthropic usw. direkt zahlen). Die Schätzung ist konservativ &mdash; die tatsächlichen API-Kosten bei 50 Prompts/Woche sind typischerweise niedriger, und Sie sehen genau, was Sie ausgeben, weil Sie die Anbieter direkt zu Einkaufspreisen ohne Aufschlag zahlen.</p>
+            <p style={{ margin: '0 0 12px' }}>Ein Strich (&mdash;) bedeutet, dass kein Self-Serve-Plan diese Konfiguration abdeckt &mdash; Sie bräuchten ein Custom-Enterprise-Angebot.</p>
+            <p style={{ margin: '0 0 4px', fontFamily: 'var(--font-mono)', fontSize: 11, letterSpacing: '0.5px' }}>* Scrunch-Preise ändern sich häufig; Angabe vom August 2026 &mdash; vor dem Zitieren auf scrunch.com prüfen.</p>
+            <p style={{ margin: '0 0 4px', fontFamily: 'var(--font-mono)', fontSize: 11, letterSpacing: '0.5px' }}>&dagger; Ahrefs: Basisplan ($129/Mo.) + Brand-Radar-Add-on mit allen Engines ($699/Mo.). Das enthaltene Brand-Radar-Prompt-Kontingent umfasst nur 5&ndash;20 Prompts &mdash; das Add-on ist erforderlich, um 50+ zu tracken.</p>
+            <p style={{ margin: '0 0 4px', fontFamily: 'var(--font-mono)', fontSize: 11, letterSpacing: '0.5px' }}>&Dagger; GEOly: 5-Engine-Abdeckung erfordert den $999/Mo.-Tier; max. 5 Marken. 10-Marken-Konfiguration nicht im Self-Serve-Plan verfügbar.</p>
+            <p style={{ margin: 0, fontFamily: 'var(--font-mono)', fontSize: 11, letterSpacing: '0.5px' }}>Mitbewerberpreise von öffentlichen Preisseiten verifiziert, wo zugänglich; andernfalls aus sekundären Quellen. Preise ändern sich häufig &mdash; vor dem Abschluss prüfen.</p>
+          </div>
+
+          <p>Ein ehrlicher Vorbehalt, den diese Tabelle nicht verstecken sollte: <strong>LLM Pulse ist bei einer Marke günstiger</strong> (&sim;$529/Jahr vs. CrunchJunkies &sim;$601). Wenn Sie ein kleines Programm betreiben, keine Multi-Engine-Abdeckung brauchen und mit einem Prompt-Limit leben können, ist es neben CrunchJunkie einen Blick wert. LLM Pulse setzt Prompt-Limits und behandelt Copilot und Claude als kostenpflichtige Add-ons &mdash; bei einer Marke mit begrenzten Prompts und wenigen Engines beißen diese Einschränkungen möglicherweise nicht.</p>
+          <p>Ab fünf Marken dreht sich die Rechnung um. Ab zehn Marken kann Peec AI die Konfiguration nicht einmal ohne Custom-Enterprise-Gespräch anbieten. Semrush läuft bei $19.000+ pro Jahr, bevor das erforderliche Basis-Abonnement hinzukommt.</p>
+          <p>CrunchJunkie-Pläne (EUR, Jahresabrechnung): <strong>Solo &euro;9/Monat</strong> (1 Marke) &middot; <strong>Starter &euro;39/Monat</strong> (5 Marken) &middot; <strong>Pro &euro;99/Monat</strong> (20 Marken) &middot; <strong>Agency &euro;149/Monat</strong> (40 Marken), plus Ihre BYOK-API-Kosten.</p>
+
+          <h2 id="sample-sizes">Warum Sichtbarkeits-Prozentsätze ohne Stichprobengrößen lügen</h2>
+          <p>Das Problem mit KI-Antwortsystemen, das die meisten Sichtbarkeits-Dashboards still übergehen: Sie sind nicht-deterministisch.</p>
+          <p>Führen Sie denselben Prompt zweimal in ChatGPT aus, mit demselben Account, fünf Minuten auseinander. Sie können unterschiedliche Marken in der Antwort, unterschiedliches Framing, unterschiedliche Quellenlisten erhalten. <a href="https://sparktoro.com/blog/new-research-ais-are-highly-inconsistent-when-recommending-brands-or-products-marketers-should-take-care-when-tracking-ai-visibility/" target="_blank" rel="noopener noreferrer">Eine SparkToro-Studie</a> fand weniger als 1&thinsp;% Überschneidung zwischen ChatGPT und Google AI, die in zwei separaten Antworten auf dieselbe Anfrage dieselbe Markenliste nannten.</p>
+          <p>Das ist kein Randfall. So funktionieren diese Systeme &mdash; sie samplen aus Wahrscheinlichkeitsverteilungen, aktualisieren sich kontinuierlich, personalisieren basierend auf Kontext. Jede KI-Sichtbarkeitszahl, die Sie sehen, basiert auf einer Stichprobe von Antworten, nicht einer vollständigen Erhebung.</p>
+          <p>Wenn ein Tool Ihnen &bdquo;34&thinsp;% Sichtbarkeit&ldquo; zeigt &mdash; was bedeutet das genau? Haben sie den Prompt einmal ausgeführt? Dreimal? Zwanzig Mal? Ist 34&thinsp;% eine stabile Messung mit schmalem Fehlerbereich, oder ein einzelner Datenpunkt, der überall zwischen 10&thinsp;% und 60&thinsp;% hätte landen können?</p>
+          <p>Die meisten Tools sagen es Ihnen nicht. Sie zeigen die Zahl.</p>
+          <p>CrunchJunkie führt jeden Prompt mehrfach aus und zeigt Stichprobengröße und Fehlerbereich neben jeder Sichtbarkeitszahl. Die Produktphilosophie ist explizit: Eine einzelne KI-Antwort ist eine Stichprobe, kein Trend. Jede Metrikänderung wird gegen ihren Fehlerbereich abgewogen, bevor sie als handlungsrelevante Bewegung gilt.</p>
+          <p>Das spielt für Agenturen die größte Rolle. Wenn Sie einem Kunden KI-Sichtbarkeit berichten und die Zahl um vier Punkte fällt, müssen Sie wissen, ob das ein echtes Signal ist oder Rauschen. Ohne Stichprobengröße und Fehlerbereiche zeigen Sie einem Kunden ein Diagramm, das möglicherweise nichts bedeutet. Mit ihnen können Sie mit Gewissheit sagen, ob sich wirklich etwas bewegt hat.</p>
+
+          <h2 id="follow-up-survival">Eine Metrik, die kein anderes Tool erfasst: Follow-up Survival</h2>
+          <p>Überlegen Sie, wie Menschen KI tatsächlich für kommerzielle Entscheidungen nutzen.</p>
+          <p>Jemand fragt ChatGPT: <em>&bdquo;Was sind die besten Projektmanagement-Tools für verteilte Teams?&ldquo;</em> Ihre Marke erscheint. Sichtbarkeit: erfasst. Gewonnen.</p>
+          <p>Aber die Unterhaltung geht weiter. Die Nachfrage: <em>&bdquo;Welches davon eignet sich am besten für ein Team unter fünfzehn Personen, das nicht pro Nutzer zahlen möchte?&ldquo;</em></p>
+          <p>Ihre Marke verschwindet.</p>
+          <p>Sie haben die breite Discovery-Anfrage gewonnen und verloren, sobald eine echte Einschränkung angewendet wurde. Das Standard-Sichtbarkeits-Dashboard hat das nie erfasst &mdash; es hat Turn&nbsp;1 gemessen und aufgehört.</p>
+          <p>CrunchJunkie nennt das <strong>Follow-up Survival</strong>: eine Multi-Turn-Metrik, die misst, ob eine Empfehlung standhält, wenn ein Käufer seine Frage in derselben Unterhaltung eingrenzt. Die Plattform führt den Discovery-Prompt aus, erfasst, welche Marken erscheinen (Turn&nbsp;1), sendet eine konfigurierte Folgefrage in derselben Unterhaltung (Turn&nbsp;2) und misst, welche Marken die Verfeinerung überstehen.</p>
+          <p>Kein anderes Tool in der Kategorie produktisiert das. Es ist als Opt-in-Pilotfeature auf bezahlten Plänen verfügbar und kostet ungefähr doppelt so viel pro Prompt &mdash; weil es zwei Konversations-Turns statt eines benötigt.</p>
+          <p>Ein Design-Detail, das wichtig ist: Die Folgefrage wird pro Prompt konfiguriert, nicht generisch angewendet. Ein Narrower, der nach &bdquo;beste Projektmanagement-Tools für verteilte Teams?&ldquo; Sinn ergibt, ist nach &bdquo;beste Espressomaschinen unter &euro;200&ldquo; sinnlos. CrunchJunkie erfordert eine per-Prompt-Folgefrage, bietet einen KI-entworfenen Vorschlag zum Überprüfen und Bearbeiten an, und erfasst den genauen verwendeten Text bei jedem Run als Nachweis &mdash; damit Sie genau wissen, was gefragt wurde, und Ergebnisse über Zeit vergleichen können, weil die Frage konsistent bleibt.</p>
+          <p>Wenn Ihre Käufer Multi-Turn-KI-Unterhaltungen zur Recherche nutzen &mdash; und B2B-Käufer tun das zunehmend &mdash; ist das Überleben in Turn&nbsp;2 kommerziell aussagekräftiger als Sichtbarkeit in Turn&nbsp;1.</p>
+
+          <h2 id="geo-audits">GEO-Audits: warum die Evidenzbasis zählt</h2>
+          <p>Jedes KI-Sichtbarkeits-Tool enthält etwas, das sich <a href="/de/blog/what-is-a-geo-audit/">GEO-Audit</a> nennt &mdash; eine Diagnose, wie bereit Ihre Website ist, von KI-Engines gecrawlt und zitiert zu werden. Die Qualität dieser Audits variiert enorm, aus einem Grund, der erst offensichtlich wird, wenn man genauer hinsieht.</p>
+          <p>Die ehrliche Wahrheit zur KI-Suchoptimierung: Wir haben noch keine jahrzehntelange kontrollierte Evidenzbasis. Wir haben einige Peer-Review-Forschungen, veröffentlichte Dokumentationen von Crawler-Anbietern und viel &bdquo;das könnte helfen&ldquo;-Logik, die niemand tatsächlich gemessen hat. Die guten Audit-Tools sind explizit darüber, in welche Kategorie jeder ihrer Checks fällt. Die schlechten nicht.</p>
+          <p>CrunchJunkie strukturiert seinen Audit um eine formale Evidenzleiter:</p>
+          <ul>
+            <li><strong>Research</strong> &mdash; durch Peer-Review-Messung von Zitatraten-Effekten belegt</li>
+            <li><strong>Documented</strong> &mdash; veröffentlichtes Plattformverhalten der Crawler-Anbieter selbst</li>
+            <li><strong>Convention</strong> &mdash; entstehende Praxis, noch nicht belegt als von KI-Engines konsumiert</li>
+            <li><strong>Heuristic</strong> &mdash; sinnvoller Proxy, kein direkter Nachweis</li>
+          </ul>
+          <p>Die Gewichtung jedes Checks im Gesamtscore skaliert mit seinem Evidenzlevel. Heuristiken können eine Kategorie nicht dominieren. Convention-basierte Checks tragen bewusst geringere Gewichtung.</p>
+          <p>Ein konkretes Beispiel: llms.txt. Das war ein stark gehyptes Thema. CrunchJunkie gibt ihm eine Gewichtung von 5 von 100 im Gesamtscore &mdash; bewusst niedrig. Die quartalsweise Forschungsüberprüfung ergab, dass etwa 97&thinsp;% der veröffentlichten llms.txt-Dateien null Crawler-Anfragen erhalten, und Claude Code ist der einzige bestätigte reale Leser des Standards im Maßstab. <a href="https://developers.google.com/search/docs/fundamentals/ai-optimization-guide" target="_blank" rel="noopener noreferrer">Googles eigene Leitlinien</a>, aktualisiert im August 2026, stellen explizit fest, dass Google Search llms.txt ignoriert.</p>
+          <p>Ein Audit-Tool, das llms.txt mit 15 oder 20 Punkten bewertet, sagt Ihnen, dass es mehr bedeutet als die Evidenz stützt. Das bläht Ihren Score auf für etwas, das Ihnen wahrscheinlich noch nicht hilft, und begräbt die Checks, die tatsächlich relevant sind.</p>
+          <p>Auf der Inhaltsseite werden die Checks mit echtem Gewicht durch die <a href="https://arxiv.org/abs/2311.09735" target="_blank" rel="noopener noreferrer">KDD-2024-Studie &bdquo;GEO: Generative Engine Optimization&ldquo;</a> (Aggarwal et al., Princeton/IIT Delhi) gestützt, die tatsächliche Zitatraten-Effekte gemessen hat. Zitate im Content verbesserten Zitatraten um 27,8&thinsp;%. Belegte Statistiken: +25,9&thinsp;%. Autoritative externe Zitate: +24,9&thinsp;%.</p>
+          <p>Der Audit umfasst fünf Kategorien &mdash; Crawler-Zugang (Gewichtung 30), Content-Zugänglichkeit (30), strukturierte Daten (20), technische SEO-Hygiene (15) und llms.txt (5) &mdash; und erzeugt einen 0&ndash;100-Gesamtscore. Diagnostisch, keine Garantie, und ehrlich darüber, was er nicht weiß.</p>
+
+          <h2 id="off-site-citations">Eigene Off-Site-Zitationen</h2>
+          <p>Wenn eine KI-Engine Ihre Marke zitiert, zieht sie oft aus Inhalten, die außerhalb Ihrer Hauptdomain leben: einem YouTube-Kanal, einer LinkedIn-Unternehmensseite, einem Substack-Beitrag, einem Reddit-Thread, an dem Sie teilnehmen.</p>
+          <p>&bdquo;Brand Radar&ldquo;-Tools aus dem traditionellen SEO lösen das per Web-Index-Matching &mdash; sie crawlen das offene Web und suchen nach Ihrem Markennamen. Das ist breite Abdeckung, aber rauschig: Sie krediten Ihnen Erwähnungen, die Sie nicht kontrollieren, Inhalte, die andere über Sie geschrieben haben, und Markennamen-Verwechslungen.</p>
+          <p>CrunchJunkies Off-Site-Zitations-Tracking funktioniert umgekehrt. Sie deklarieren Ihre eigenen Kanäle &mdash; <code>youtube.com/@ihreMarke</code>, <code>linkedin.com/company/ihreMarke</code>, Ihr Substack, Ihr Medium-Handle. Die Plattform schreibt Ihnen eine Zitation nur zu, wenn sie auf einer URL liegt, die einem deklarierten Kanal entspricht, mit handle-präzisem Matching. Ein YouTube-Video eines anderen Erstellers mit Ihrem Markennamen im Titel zählt nicht.</p>
+          <p>Die Konsequenz ist eine wesentlich handlungsrelevantere Ansicht. Sie sehen exakt, welche Ihrer eigenen Kanäle KI-Engines für welche Themen verwenden, und wo Sie Lücken haben. Das lässt sich direkt in Content-Investitionsentscheidungen übersetzen: nicht &bdquo;bauen Sie eine LinkedIn-Präsenz auf&ldquo; (die haben Sie vielleicht schon und sie funktioniert), sondern &bdquo;stärken Sie Ihre YouTube-Abdeckung für diesen spezifischen Themencluster&ldquo;.</p>
+
+          <h2 id="cj-limits">Wann CrunchJunkie nicht die richtige Wahl ist</h2>
+          <p>Ein Tool-Leitfaden, der das nicht sagt, ist ein Verkaufspitch.</p>
+          <p><strong>Bei einer Marke mit knappem Budget:</strong> LLM Pulse unterbietet CrunchJunkie auf Einzelmarken-Niveau. Wenn Sie ein kleines Programm betreiben, keine Multi-Engine-Abdeckung brauchen und mit einem Prompt-Limit leben können, ist es neben CrunchJunkie einen Blick wert.</p>
+          <p><strong>Wenn Sie SEO und KI-Sichtbarkeit in einer Plattform benötigen:</strong> Semrush&rsquo;s AI Visibility Toolkit sitzt in einer vollständigen SEO-Suite &mdash; Keyword-Recherche, Backlink-Analyse, Rank-Tracking, Site-Audits. Wenn Ihr Team bereits in Semrush arbeitet und KI-Sichtbarkeit ohne ein separates Tool möchte, hat diese Integration echten Wert, auch zum höheren Per-Domain-Preis. CrunchJunkie macht kein traditionelles Rank-Tracking. Es ist zweckgebaut für KI-Sichtbarkeit.</p>
+          <p><strong>Wenn Sie alles vollständig verwaltet möchten:</strong> Das BYOK-Modell erfordert das Einrichten von API-Keys bei einzelnen Anbietern. Für Teams, die eine vollständig verwaltete Option bevorzugen, bietet CrunchJunkie das ebenfalls an &mdash; der Preisvorteil ist aber am größten bei BYOK.</p>
+
+          <h2 id="summary">Das ehrliche Fazit</h2>
+          <p>Die meisten KI-Sichtbarkeits-Tools 2026 wurden für den Einzelmarken-Fall entwickelt und passen ihre Preise und Architektur unbeholfen für Multi-Marken-Nutzung an. Engine-Gating und Prompt-Limits sind die Art, wie sie Kosten verwalten, die sie nicht transparent an Sie weitergeben können.</p>
+          <p>CrunchJunkie wurde mit Multi-Marken-Tracking als First-Class-Case gebaut. BYOK bedeutet, Ihre Kosten skalieren linear und transparent mit der tatsächlichen Nutzung. Kein Prompt-Rationieren, keine Engine-Add-ons, keine Kontakt-Sales-Mauer ab fünf Kunden.</p>
+          <p>Was es in der Praxis unterscheidet, hat weniger mit Feature-Listen zu tun und mehr mit intellektueller Ehrlichkeit: Follow-up Survival, weil Empfehlungsbeständigkeit unter Verfeinerung kommerziell wichtiger ist als Headline-Sichtbarkeit; Stichprobengrößen und Fehlerbereiche, weil KI-Antworten volatil sind; ein evidenzbasierter Audit, weil nicht alles, was Anbieter als &bdquo;GEO-Signal&ldquo; bezeichnen, tatsächlich gemessen wurde.</p>
+          <p>Das sind die Dinge, die bestimmen, ob Sie darauf eine Reporting-Praxis aufbauen können &mdash; und ob das, was Sie Kunden zeigen, etwas bedeutet.</p>
+          <p style={{ marginTop: 32, fontFamily: 'var(--font-mono)', fontSize: 11, letterSpacing: '1.5px', textTransform: 'uppercase', color: '#6a6a6a' }}>Preise verifiziert August 2026 von öffentlichen Preisseiten und für CrunchJunkie direkt aus dem Produktionscode. Mitbewerberpreise gegen öffentliche Preisseiten verifiziert, wo zugänglich; andernfalls aus sekundären Quellen. Preise in dieser Kategorie ändern sich häufig &mdash; vor dem Abschluss prüfen.</p>
+          <p>Möchten Sie wissen, wie Ihre Marke in der KI-Suche abschneidet? <a href="/de/contact/?topic=geo-audit">Schildern Sie uns kurz Ihre Situation</a> &mdash; wir melden uns innerhalb eines Werktages. Das erste Gespräch: 30 Minuten, auf unsere Rechnung.</p>
+          <p>Weiterlesen: <a href="/de/blog/what-is-a-geo-audit/">Was ist ein GEO-Audit?</a> &middot; <a href="/de/blog/perplexity-visibility/">Perplexity-Sichtbarkeit</a> &middot; <a href="/de/services/ai-visibility/">Unser KI-Sichtbarkeits-Service</a></p>
+        </>
+      ),
+    },
     'google-ads-ai-disclosure-label': {
+      title: 'Google Ads KI-Label — Ursachen, Risiken und Reaktion',
       toc: ['Das Label in der Praxis', 'Wie Performance Max es ausgelöst hat', 'Drei Wege zum Label', 'Die CTR-Frage', 'Was jetzt im Konto zu tun ist', 'Häufige Fragen'],
       faqs: [
         {
@@ -1295,7 +1458,7 @@ export const de = {
       ),
     },
     'perplexity-visibility': {
-      title: 'So verbessern Sie Ihre Perplexity-Sichtbarkeit (und warum das nicht ChatGPT ist)',
+      title: 'Perplexity-Sichtbarkeit verbessern — ein Praxisleitfaden',
       deck: 'Ein verständlicher Leitfaden zur Perplexity-Sichtbarkeit 2026 — was sie ist, warum sie sich anders verhält als ChatGPT und fünf Maßnahmen, die Sie diesen Monat starten können.',
       toc: ['Was ist Perplexity-Sichtbarkeit?', 'Warum Perplexity ein eigenes Thema ist', 'Fünf Maßnahmen für diesen Monat', 'Wie pmax helfen kann', 'Häufige Fragen'],
       faqs: [

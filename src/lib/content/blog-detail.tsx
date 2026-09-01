@@ -112,7 +112,7 @@ export const blogDetails: BlogDetail[] = [
               {[
                 { tool: 'CrunchJunkie', href: 'https://crunchjunkie.io/pricing', meter: 'brands only', one: '$601', five: '$2,873', ten: '$6,105', highlight: true },
                 { tool: 'LLM Pulse', href: 'https://llmpulse.ai/pricing', meter: 'prompts + project', one: '$529', five: '$3,229', ten: '$7,763', highlight: false },
-                { tool: 'Peec AI', href: 'https://peec-ai.com/pricing', meter: 'prompts + engine', one: '$1,932', five: '$9,636', ten: '—', highlight: false },
+                { tool: 'Peec AI', href: 'https://peec.ai/pricing', meter: 'prompts + engine', one: '$1,932', five: '$9,636', ten: '—', highlight: false },
                 { tool: 'Semrush', href: 'https://www.semrush.com/prices/', meter: 'domain', one: '$1,908 +sub', five: '$9,540 +sub', ten: '$19,080 +sub', highlight: false },
                 { tool: 'OtterlyAI', href: 'https://otterly.ai/pricing', meter: 'prompts + engine', one: '$2,508', five: '$4,884', ten: '$7,260', highlight: false },
                 { tool: 'Scrunch *', href: 'https://scrunch.com', meter: 'brand workspace', one: '~$3,000', five: '—', ten: '—', highlight: false },

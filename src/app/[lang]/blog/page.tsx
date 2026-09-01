@@ -33,7 +33,6 @@ export default async function BlogPage({ params }: { params: Promise<{ lang: str
       '@type': 'ItemList',
       name: `pmax ${blogLabel}`,
       url: `https://pmax.online/${lang}/blog/`,
-      publisher: { '@id': 'https://pmax.online/#org' },
       numberOfItems: posts.filter(p => !p.external).length,
       itemListElement: posts.filter(p => !p.external).map((post, i) => {
         const locPost = b.posts.find(lp => lp.slug === post.slug)

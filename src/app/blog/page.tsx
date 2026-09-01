@@ -24,7 +24,6 @@ export default function BlogPage() {
       name: 'pmax Journal',
       description: 'Practical guides on Google Ads, Meta, SEO, analytics and AI search visibility — written by the people running the campaigns.',
       url: 'https://pmax.online/blog/',
-      publisher: { '@id': 'https://pmax.online/#org' },
       numberOfItems: posts.filter(p => !p.external).length,
       itemListElement: posts.filter(p => !p.external).map((post, i) => ({
         '@type': 'ListItem',

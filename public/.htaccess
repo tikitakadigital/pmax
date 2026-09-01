@@ -13,6 +13,7 @@ ErrorDocument 404 /404.html
   Header always set X-XSS-Protection "0"
   Header always set Cross-Origin-Opener-Policy "same-origin"
   Header always set Cross-Origin-Resource-Policy "cross-origin"
+  Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self' data:; connect-src 'self' https://admin.pmax.online https://pmax-mailer.long-math-4fe4.workers.dev; frame-ancestors 'none'; base-uri 'self'; form-action 'self'"
   Header unset X-Powered-By
 </IfModule>
 
@@ -51,6 +52,8 @@ ErrorDocument 404 /404.html
   RewriteRule ^legal-notice/?$ /legal/imprint/ [R=301,L]
   RewriteRule ^privacy-policy/?$ /legal/privacy/ [R=301,L]
 
+  RewriteRule ^kontakt/?$ /de/contact/ [R=301,L]
+
   # Old WordPress site URLs — redirect to nearest current equivalent
   RewriteRule ^google-ads-vs-meta-ads/?$ /blog/google-ads-vs-meta-ads-vs-tiktok-ads-ecommerce-2026/ [R=301,L]
   RewriteRule ^services/digital-strategy/?$ /services/ [R=301,L]
@@ -65,6 +68,9 @@ ErrorDocument 404 /404.html
   # Redirect /index.html → / and /path/index.html → /path/
   RewriteRule ^index\.html$ / [R=301,L]
   RewriteRule ^(.+)/index\.html$ /$1/ [R=301,L]
+
+  # Proposal pages — serve /proposal/index.html for any /proposal/[code]/ URL
+  RewriteRule ^proposal/[A-Za-z0-9_-]+/?$ /proposal/ [L]
 
   # Serve existing files and directories directly
   RewriteCond %{REQUEST_FILENAME} -f [OR]
