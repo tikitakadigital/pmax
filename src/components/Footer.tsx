@@ -103,6 +103,9 @@ export default function Footer({ locale = 'en' }: { locale?: string }) {
               <a href="mailto:hello@pmax.online">hello@pmax.online</a><br />
               <a href="tel:+34871242160">+34 871 242 160</a>
             </p>
+            <div style={{ marginTop: 20 }}>
+              <CrunchJunkieBadge />
+            </div>
           </div>
         </div>
 
@@ -115,9 +118,7 @@ export default function Footer({ locale = 'en' }: { locale?: string }) {
             <CookieSettingsLink locale={locale} />
           </div>
         </div>
-        <div style={{ textAlign: 'center', paddingTop: 24 }}>
-          <CrunchJunkieBadge />
-        </div>
+
       </div>
     </footer>
   )
