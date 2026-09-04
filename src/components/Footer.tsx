@@ -7,7 +7,7 @@ function CrunchJunkieBadge() {
       href="https://crunchjunkie.io/?ref=ZV6XQX7E"
       target="_blank"
       rel="noopener"
-      style={{ display:'inline-flex', alignItems:'center', textDecoration:'none', boxSizing:'border-box', gap:9, padding:'7px 14px 7px 8px', borderRadius:999, fontWeight:600, fontSize:13.5, lineHeight:1, fontFamily:'-apple-system,system-ui,sans-serif', background:'#fff', border:'1px solid #e6e6e9', boxShadow:'0 1px 3px rgba(0,0,0,.12)', color:'#1d1d1f', flexShrink:0 }}
+      style={{ display:'inline-flex', alignItems:'center', textDecoration:'none', boxSizing:'border-box', gap:9, padding:'7px 14px 7px 8px', borderRadius:999, fontWeight:600, fontSize:13.5, lineHeight:1, fontFamily:'-apple-system,system-ui,sans-serif', background:'#fff', border:'1px solid #e6e6e9', boxShadow:'0 1px 3px rgba(0,0,0,.12)', color:'#1d1d1f', flexShrink:0, textTransform:'none', letterSpacing:0 }}
     >
       <span style={{ display:'inline-flex' }}>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 230" width="26" height="30" style={{ display:'block' }}>
