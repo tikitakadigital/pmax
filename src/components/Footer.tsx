@@ -9,7 +9,7 @@ function CrunchJunkieBadge() {
       rel="noopener"
       style={{ display:'inline-flex', alignItems:'center', textDecoration:'none', gap:6, padding:'6px 14px', borderRadius:999, fontWeight:600, fontSize:12, lineHeight:1, fontFamily:'-apple-system,system-ui,sans-serif', background:'#fff', border:'1px solid #e6e6e9', boxShadow:'0 1px 3px rgba(0,0,0,.12)', color:'#1d1d1f', textTransform:'none', letterSpacing:0 }}
     >
-      AI visibility by CrunchJunkie
+      AI visibility tracking by CrunchJunkie
     </a>
   )
 }
