@@ -144,16 +144,16 @@ export default function Footer({ locale = 'en' }: { locale?: string }) {
         </div>
 
         <div className="footer-base">
-          <div style={{ display: 'flex', alignItems: 'center', gap: 16, flexWrap: 'wrap' }}>
-            <div>{t.copyright}</div>
-            <CrunchJunkieBadge />
-          </div>
+          <div>{t.copyright}</div>
           <div className="footer-socials">
             <a href="https://www.linkedin.com/company/pmax-online-s-l/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
             <a href="https://www.facebook.com/profile.php?viewas=100000686899395&amp;id=61590296614624" target="_blank" rel="noopener noreferrer">Facebook</a>
             {legalLinks.map(l => <Link key={l.href} href={l.href}>{l.label}</Link>)}
             <CookieSettingsLink locale={locale} />
           </div>
+        </div>
+        <div style={{ textAlign: 'center', paddingTop: 24 }}>
+          <CrunchJunkieBadge />
         </div>
       </div>
     </footer>
