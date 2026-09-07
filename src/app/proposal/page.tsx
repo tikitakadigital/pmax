@@ -136,15 +136,15 @@ export default function ProposalPage() {
       {/* ── Actions bar (screen only) ── */}
       <div className={s.actions}>
         <div className={s.actionsInner}>
-          <button className={s.btn} onClick={() => window.print()}>PDF speichern</button>
+          <button className={s.btn} onClick={() => window.print()}>Save as PDF</button>
           {canAccept && (
             <button className={`${s.btn} ${s.btnPrimary}`} onClick={handleAccept}>
-              Angebot annehmen
+              Accept proposal
             </button>
           )}
-          {isAccepted && <span className={s.pill} data-type="accepted">✓ Angenommen</span>}
-          {isExpired && !isAccepted && <span className={s.pill} data-type="expired">Abgelaufen am {fmtDate(offer.valid_until)}</span>}
-          {isDraft && <span className={s.pill} data-type="draft">Entwurf</span>}
+          {isAccepted && <span className={s.pill} data-type="accepted">✓ Accepted</span>}
+          {isExpired && !isAccepted && <span className={s.pill} data-type="expired">Expired on {fmtDate(offer.valid_until)}</span>}
+          {isDraft && <span className={s.pill} data-type="draft">Draft</span>}
         </div>
       </div>
 
@@ -156,7 +156,7 @@ export default function ProposalPage() {
             <div className={s.logo}>
               <span>pmax</span><span className={s.logoDot} aria-hidden="true" />
             </div>
-            <p className={s.badge}>ANGEBOT · VERTRAULICH</p>
+            <p className={s.badge}>PROPOSAL · CONFIDENTIAL</p>
             <h1 className={s.docTitle}>{offer.title}</h1>
           </div>
           <address className={s.headerAddr}>
@@ -171,7 +171,7 @@ export default function ProposalPage() {
         <table className={s.metaTable}>
           <tbody>
             <tr>
-              <td className={s.metaKey}>FÜR</td>
+              <td className={s.metaKey}>FOR</td>
               <td>
                 {offer.client_name}
                 {offer.client_website && <> · {offer.client_website}</>}
@@ -179,65 +179,65 @@ export default function ProposalPage() {
                 {offer.client_phone && <> · {offer.client_phone}</>}
               </td>
             </tr>
-            <tr><td className={s.metaKey}>VON</td><td>PMAX Online SL, Palmanova</td></tr>
-            <tr><td className={s.metaKey}>DATUM</td><td>{fmtDate(offer.date)}</td></tr>
-            <tr><td className={s.metaKey}>GÜLTIG BIS</td><td>{fmtDate(offer.valid_until)}</td></tr>
-            <tr><td className={s.metaKey}>KONTAKT</td><td>{offer.contact_person}</td></tr>
+            <tr><td className={s.metaKey}>FROM</td><td>PMAX Online SL, Palmanova</td></tr>
+            <tr><td className={s.metaKey}>DATE</td><td>{fmtDate(offer.date)}</td></tr>
+            <tr><td className={s.metaKey}>VALID UNTIL</td><td>{fmtDate(offer.valid_until)}</td></tr>
+            <tr><td className={s.metaKey}>CONTACT</td><td>{offer.contact_person}</td></tr>
           </tbody>
         </table>
 
         <hr className={s.rule} />
 
-        {/* ── 01 Kurz vorab ── */}
+        {/* ── 01 Opening ── */}
         <section className={s.sec}>
-          <h2 className={s.sh}><span className={s.n}>01</span>Kurz vorab</h2>
+          <h2 className={s.sh}><span className={s.n}>01</span>Opening</h2>
           <p className={s.p}>{offer.intro}</p>
         </section>
 
-        {/* ── 02 Ausgangslage ── */}
+        {/* ── 02 Situation ── */}
         <section className={s.sec}>
-          <h2 className={s.sh}><span className={s.n}>02</span>Ausgangslage</h2>
-          <p className={s.p}><strong>Was gut ist:</strong> {offer.situation_strengths}</p>
-          <p className={s.label}>Was fehlt:</p>
+          <h2 className={s.sh}><span className={s.n}>02</span>Situation</h2>
+          <p className={s.p}><strong>Strengths:</strong> {offer.situation_strengths}</p>
+          <p className={s.label}>Gaps:</p>
           <ol className={s.ol}>
             {offer.situation_gaps.map((g, i) => <li key={i}>{g}</li>)}
           </ol>
         </section>
 
-        {/* ── 03 Positionierung ── */}
+        {/* ── 03 Positioning ── */}
         <section className={s.sec}>
-          <h2 className={s.sh}><span className={s.n}>03</span>Deine Positionierung — kurz festgehalten</h2>
-          <p className={s.p}>Wir entwickeln nichts Neues. Wir schreiben auf, was schon da ist, damit alle Texte, Anzeigen und Inhalte in dieselbe Richtung laufen.</p>
-          <p className={s.subLabel}>Kernaussage</p>
+          <h2 className={s.sh}><span className={s.n}>03</span>Your Positioning — a brief note</h2>
+          <p className={s.p}>We are not inventing anything new. We are writing down what is already there, so that all content, ads and copy pull in the same direction.</p>
+          <p className={s.subLabel}>Core message</p>
           <div className={s.coreMsg}>{offer.positioning_core}</div>
-          <p className={s.subLabel}>Drei Belegsäulen</p>
+          <p className={s.subLabel}>Three pillars</p>
           <table className={s.tbl}>
-            <thead><tr><th>SÄULE</th><th>WAS DAHINTER STECKT</th><th>MÖGLICHE BOTSCHAFT</th></tr></thead>
+            <thead><tr><th>PILLAR</th><th>WHAT IS BEHIND IT</th><th>MESSAGE</th></tr></thead>
             <tbody>
               {offer.positioning_pillars.map((p, i) => (
                 <tr key={i}>
                   <td><strong>{p.pillar}</strong></td>
                   <td>{p.what}</td>
-                  <td>„{p.message}"</td>
+                  <td>"{p.message}"</td>
                 </tr>
               ))}
             </tbody>
           </table>
-          <p className={s.subLabel}>Der wichtigste strategische Punkt</p>
+          <p className={s.subLabel}>The key strategic point</p>
           <p className={s.p}>{offer.positioning_strategy}</p>
           {offer.positioning_note && (
             <div className={s.hint}>
-              <span className={s.hintLabel}>HINWEIS</span>
+              <span className={s.hintLabel}>NOTE</span>
               <p>{offer.positioning_note}</p>
             </div>
           )}
         </section>
 
-        {/* ── 04 Kanäle ── */}
+        {/* ── 04 Channels ── */}
         <section className={s.sec}>
-          <h2 className={s.sh}><span className={s.n}>04</span>Die Kanäle und warum</h2>
+          <h2 className={s.sh}><span className={s.n}>04</span>The Channels and Why</h2>
           <table className={s.tbl}>
-            <thead><tr><th>KANAL</th><th>WAS ES BRINGT</th><th>WIE SCHNELL</th></tr></thead>
+            <thead><tr><th>CHANNEL</th><th>WHAT IT DELIVERS</th><th>HOW SOON</th></tr></thead>
             <tbody>
               {offer.channels.map((c, i) => (
                 <tr key={i}>
@@ -250,7 +250,7 @@ export default function ProposalPage() {
           </table>
           {offer.channels_glossary && offer.channels_glossary.length > 0 && (
             <>
-              <p className={s.subLabel} style={{ marginTop: '1.5rem' }}>Kurz erklärt:</p>
+              <p className={s.subLabel} style={{ marginTop: '1.5rem' }}>In brief:</p>
               <ul className={s.ul}>
                 {offer.channels_glossary.map((g, i) => <li key={i}><strong>{g.term}:</strong> {g.short}</li>)}
               </ul>
@@ -260,27 +260,27 @@ export default function ProposalPage() {
 
         {/* ── 05 Retainer ── */}
         <section className={s.sec}>
-          <h2 className={s.sh}><span className={s.n}>05</span>Der monatliche Retainer</h2>
-          <p className={s.p}>Ein Retainer ist ein festes monatliches Zeitkontingent. Der Vorteil gegenüber Einzelprojekten: Wir setzen die Zeit dort ein, wo sie im jeweiligen Monat den größten Effekt hat. Ohne Nachverhandlung.</p>
+          <h2 className={s.sh}><span className={s.n}>05</span>The Monthly Retainer</h2>
+          <p className={s.p}>A retainer is a fixed monthly time budget. The advantage over project-by-project work: we allocate the time where it has the most impact that month. No renegotiation.</p>
 
-          <p className={s.subLabel}>Start-Sprint (einmalig, {offer.sprint_days} Tage — {fmtPrice(offer.sprint_price)} netto)</p>
-          <p className={s.p}>Bevor laufende Arbeit sinnvoll ist, muss die Basis stehen:</p>
+          <p className={s.subLabel}>Launch Sprint (one-off, {offer.sprint_days} days — {fmtPrice(offer.sprint_price)} net)</p>
+          <p className={s.p}>Before ongoing work makes sense, the foundation has to be in place:</p>
           <ul className={s.ul}>
             {offer.sprint_includes.map((item, i) => <li key={i}>{item}</li>)}
           </ul>
           {offer.sprint_flex_note && (
             <div className={s.hint}>
-              <span className={s.hintLabel}>FLEXIBLER EINSTIEG</span>
+              <span className={s.hintLabel}>FLEXIBLE START</span>
               <p>{offer.sprint_flex_note}</p>
             </div>
           )}
 
-          <p className={s.subLabel} style={{ marginTop: '1.75rem' }}>Laufender Retainer — {offer.retainer_variants.length} Varianten</p>
-          <p className={s.label}>Immer fest enthalten:</p>
+          <p className={s.subLabel} style={{ marginTop: '1.75rem' }}>Monthly Retainer — {offer.retainer_variants.length} options</p>
+          <p className={s.label}>Always included:</p>
           <ul className={s.ul}>
             {offer.retainer_fixed.map((item, i) => <li key={i}>{item}</li>)}
           </ul>
-          <p className={s.label}>Variabel, nach Wirkung eingesetzt:</p>
+          <p className={s.label}>Variable, allocated by impact:</p>
           <ul className={s.ul}>
             {offer.retainer_variable.map((item, i) => <li key={i}>{item}</li>)}
           </ul>
@@ -289,24 +289,24 @@ export default function ProposalPage() {
             <thead>
               <tr>
                 <th></th>
-                {offer.retainer_variants.map(v => <th key={v.label}>{v.label} — {v.days} TAGE/MONAT</th>)}
+                {offer.retainer_variants.map(v => <th key={v.label}>{v.label} — {v.days} DAYS/MONTH</th>)}
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td><strong>Zeit</strong></td>
-                {offer.retainer_variants.map(v => <td key={v.label}>ca. {v.days * 8} Stunden</td>)}
+                <td><strong>Time</strong></td>
+                {offer.retainer_variants.map(v => <td key={v.label}>ca. {v.days * 8} hours</td>)}
               </tr>
               <tr>
-                <td><strong>Honorar</strong></td>
-                {offer.retainer_variants.map(v => <td key={v.label}><strong>{fmtPrice(v.price)} netto / Monat</strong></td>)}
+                <td><strong>Fee</strong></td>
+                {offer.retainer_variants.map(v => <td key={v.label}><strong>{fmtPrice(v.price)} net / month</strong></td>)}
               </tr>
               <tr>
-                <td><strong>Schwerpunkt</strong></td>
+                <td><strong>Focus</strong></td>
                 {offer.retainer_variants.map(v => <td key={v.label}>{v.focus}</td>)}
               </tr>
               <tr>
-                <td><strong>Passt, wenn</strong></td>
+                <td><strong>Best when</strong></td>
                 {offer.retainer_variants.map(v => <td key={v.label}>{v.fits_when}</td>)}
               </tr>
             </tbody>
@@ -314,17 +314,17 @@ export default function ProposalPage() {
           <p className={s.p} style={{ marginTop: '1rem' }}>{offer.retainer_note}</p>
         </section>
 
-        {/* ── 06 Wie du wählst ── */}
+        {/* ── 06 How to choose ── */}
         <section className={s.sec}>
-          <h2 className={s.sh}><span className={s.n}>06</span>Wie du wählst</h2>
+          <h2 className={s.sh}><span className={s.n}>06</span>How to Choose</h2>
           <p className={s.p}>{offer.decision_text}</p>
         </section>
 
-        {/* ── 07 Zeitplan ── */}
+        {/* ── 07 Timeline ── */}
         <section className={s.sec}>
-          <h2 className={s.sh}><span className={s.n}>07</span>Zeitplan (Empfehlung, ab Freigabe)</h2>
+          <h2 className={s.sh}><span className={s.n}>07</span>Timeline (recommendation, from approval)</h2>
           <table className={s.tbl}>
-            <thead><tr><th>ZEITRAUM</th><th>WAS PASSIERT</th></tr></thead>
+            <thead><tr><th>PERIOD</th><th>WHAT HAPPENS</th></tr></thead>
             <tbody>
               {offer.timeline.map((row, i) => (
                 <tr key={i}>
@@ -336,25 +336,25 @@ export default function ProposalPage() {
           </table>
         </section>
 
-        {/* ── 08 Was wir messen ── */}
+        {/* ── 08 What we measure ── */}
         <section className={s.sec}>
-          <h2 className={s.sh}><span className={s.n}>08</span>Was wir messen — und was realistisch ist</h2>
-          <p className={s.label}>Kennzahlen:</p>
+          <h2 className={s.sh}><span className={s.n}>08</span>What We Measure — and what is realistic</h2>
+          <p className={s.label}>KPIs:</p>
           <ul className={s.ul}>
             {offer.kpis.map((kpi, i) => <li key={i}>{kpi}</li>)}
           </ul>
-          <p className={s.label}>Realistische Erwartung — wichtig:</p>
+          <p className={s.label}>Realistic expectations — important:</p>
           <ul className={s.ul}>
             {offer.expectations.map((e, i) => <li key={i}>{e}</li>)}
           </ul>
         </section>
 
-        {/* ── 09 Kosten außerhalb ── */}
+        {/* ── 09 External costs ── */}
         <section className={s.sec}>
-          <h2 className={s.sh}><span className={s.n}>09</span>Kosten außerhalb des Honorars</h2>
+          <h2 className={s.sh}><span className={s.n}>09</span>External Costs</h2>
           <p className={s.p}>{offer.external_costs_note}</p>
           <table className={s.tbl}>
-            <thead><tr><th>POSTEN</th><th>EMPFEHLUNG START</th></tr></thead>
+            <thead><tr><th>ITEM</th><th>RECOMMENDATION</th></tr></thead>
             <tbody>
               {offer.external_costs.map((row, i) => (
                 <tr key={i}>
@@ -364,49 +364,49 @@ export default function ProposalPage() {
               ))}
             </tbody>
           </table>
-          <p className={s.p} style={{ marginTop: '1rem' }}>Alle Werbekonten laufen auf deinen Namen. Du behältst jederzeit vollen Zugriff und Eigentum — auch wenn wir irgendwann nicht mehr zusammenarbeiten.</p>
+          <p className={s.p} style={{ marginTop: '1rem' }}>All advertising accounts run in your name. You retain full access and ownership at all times — even if we stop working together.</p>
         </section>
 
-        {/* ── 10 Konditionen ── */}
+        {/* ── 10 Terms ── */}
         <section className={s.sec}>
-          <h2 className={s.sh}><span className={s.n}>10</span>Konditionen</h2>
+          <h2 className={s.sh}><span className={s.n}>10</span>Terms</h2>
           <ul className={s.ul}>
             {offer.conditions.map((c, i) => <li key={i}>{c}</li>)}
           </ul>
-          <p className={s.subLabel} style={{ marginTop: '2rem' }}>Übersicht</p>
+          <p className={s.subLabel} style={{ marginTop: '2rem' }}>Overview</p>
           <div className={s.pricingGrid}>
             {sprintTotal3m.map(v => (
               <div key={v.label} className={s.pricingBox}>
-                <div className={s.pricingLabel}>{v.label} · SPRINT + {v.days} TAGE/MONAT</div>
-                <div className={s.pricingAmount}>{fmtPrice(v.price)} <span>/Monat</span></div>
-                <div className={s.pricingNote}>+ {fmtPrice(offer.sprint_price)} Sprint einmalig · erste 3 Monate gesamt: {fmtPrice(v.total)}</div>
+                <div className={s.pricingLabel}>{v.label} · SPRINT + {v.days} DAYS/MONTH</div>
+                <div className={s.pricingAmount}>{fmtPrice(v.price)} <span>/month</span></div>
+                <div className={s.pricingNote}>+ {fmtPrice(offer.sprint_price)} Sprint one-off · first 3 months total: {fmtPrice(v.total)}</div>
               </div>
             ))}
           </div>
-          <p className={s.footnote}>Zzgl. Mediabudget. Alle Beträge netto.</p>
+          <p className={s.footnote}>Media budget not included. All amounts net.</p>
         </section>
 
-        {/* ── 11 Nächster Schritt ── */}
+        {/* ── 11 Next step ── */}
         <section className={s.sec}>
-          <h2 className={s.sh}><span className={s.n}>11</span>Nächster Schritt</h2>
-          <p className={s.p}>Sag mir, welche Variante für dich passt. Danach brauchen wir für den Start:</p>
+          <h2 className={s.sh}><span className={s.n}>11</span>Next Step</h2>
+          <p className={s.p}>Tell us which option works for you. For the start we will need:</p>
           <ol className={s.ol}>
             {offer.next_steps.map((step, i) => <li key={i}>{step}</li>)}
           </ol>
-          <p className={s.p}>Wenn du vorher noch etwas durchsprechen willst — melde dich einfach.</p>
+          <p className={s.p}>If you want to discuss anything before deciding — just reach out.</p>
         </section>
 
         {/* ── Accept CTA (screen only) ── */}
         {canAccept && (
           <div className={`${s.acceptBox} ${s.noPrint}`}>
-            <button className={s.acceptBtn} onClick={handleAccept}>Angebot annehmen</button>
-            <p>Damit bestätigst du dein Einverständnis. Wir melden uns für das Kickoff.</p>
+            <button className={s.acceptBtn} onClick={handleAccept}>Accept Proposal</button>
+            <p>By clicking you confirm your agreement. We will be in touch to arrange the kickoff.</p>
           </div>
         )}
         {isAccepted && (
           <div className={`${s.acceptedBox} ${s.noPrint}`}>
             <span>✓</span>
-            <p>Du hast das Angebot angenommen. Wir freuen uns auf die Zusammenarbeit.</p>
+            <p>You have accepted the proposal. We look forward to working together.</p>
           </div>
         )}
 
@@ -419,7 +419,7 @@ export default function ProposalPage() {
         {/* ── Glossary ── */}
         {offer.glossary && offer.glossary.length > 0 && (
           <section className={s.glossary}>
-            <p className={s.label}>Glossar</p>
+            <p className={s.label}>Glossary</p>
             <table className={s.glossaryTbl}>
               <tbody>
                 {offer.glossary.map((g, i) => (
@@ -436,7 +436,7 @@ export default function ProposalPage() {
         {/* ── Footer ── */}
         <footer className={s.footer}>
           PMAX ONLINE SL · CALLE CORDOVA 5 · 07184 CALVIÀ · MALLORCA · CIF ES B57948123 · PMAX.ONLINE
-          {' — '}ANGEBOT {offer.code} · VERTRAULICH · GÜLTIG BIS {fmtDate(offer.valid_until)}
+          {' — '}PROPOSAL {offer.code} · CONFIDENTIAL · VALID UNTIL {fmtDate(offer.valid_until)}
         </footer>
 
       </div>
