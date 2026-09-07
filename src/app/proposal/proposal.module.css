@@ -13,6 +13,7 @@
   max-width: 820px;
   margin: 0 auto;
   background: #fff;
+  color: #333;
   box-shadow: 0 4px 48px rgba(0, 0, 0, 0.09);
   padding: 3.5rem 4rem;
 }
@@ -46,6 +47,7 @@
   padding: .45rem 1.1rem;
   border: 1.5px solid #222;
   background: transparent;
+  color: #111;
   border-radius: 3px;
   font-size: .8125rem;
   font-weight: 600;
@@ -90,14 +92,24 @@
 .headerMeta { flex: 1 1 auto; }
 
 .logo {
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  gap: .4rem;
   margin-bottom: .875rem;
-  font-weight: 700;
-  font-size: 1.15rem;
-  letter-spacing: -.02em;
+  font-weight: 900;
+  font-size: 1.25rem;
+  letter-spacing: .04em;
   color: #111;
+}
+
+.logoDot {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #3cffd0;
+  margin-left: 3px;
+  align-self: center;
+  flex-shrink: 0;
 }
 
 .badge {

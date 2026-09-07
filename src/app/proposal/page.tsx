@@ -154,11 +154,7 @@ export default function ProposalPage() {
         <header className={s.header}>
           <div className={s.headerMeta}>
             <div className={s.logo}>
-              <svg width="20" height="20" viewBox="0 0 100 100" fill="none" aria-hidden="true">
-                <rect x="0" y="0" width="42" height="100" rx="8" fill="#3cffd0"/>
-                <rect x="58" y="0" width="42" height="62" rx="8" fill="#3cffd0"/>
-              </svg>
-              <span>pmax</span>
+              <span>pmax</span><span className={s.logoDot} aria-hidden="true" />
             </div>
             <p className={s.badge}>ANGEBOT · VERTRAULICH</p>
             <h1 className={s.docTitle}>{offer.title}</h1>
