@@ -57,7 +57,7 @@ export default async function OfferDetailPage({ params }: { params: Promise<{ id
     ...contentToForm(offer.content),
   }
 
-  const proposalUrl = `https://pmax.online/proposal/${offer.code}`
+  const proposalUrl = `https://pmax.online/proposal/${offer.code}?t=${offer.access_token ?? ''}`
 
   return (
     <div style={{ display: 'flex' }}>

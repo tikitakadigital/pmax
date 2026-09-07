@@ -26,7 +26,7 @@ export default async function OffersPage() {
 
   const { data: offers } = await db
     .from('offers')
-    .select('id, code, status, date, valid_until, viewed_at, accepted_at, client_name, client_email, title')
+    .select('id, code, status, date, valid_until, viewed_at, accepted_at, client_name, client_email, title, access_token')
     .order('created_at', { ascending: false })
     .limit(200)
 
@@ -82,7 +82,7 @@ export default async function OffersPage() {
                   <td style={{ fontSize: 12, color: 'var(--muted)' }}>{o.accepted_at ? fmtDatetime(o.accepted_at) : '—'}</td>
                   <td>
                     <a
-                      href={`https://pmax.online/proposal/${o.code}`}
+                      href={`https://pmax.online/proposal/${o.code}?t=${o.access_token ?? ''}`}
                       target="_blank"
                       rel="noopener noreferrer"
                       style={{ fontSize: 11, color: 'var(--muted)' }}

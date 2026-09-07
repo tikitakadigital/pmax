@@ -92,7 +92,8 @@ export default function ProposalPage() {
   useEffect(() => {
     if (!code || code === 'proposal') { setPageState('not_found'); return }
 
-    fetch(`https://admin.pmax.online/api/proposals/${code}`)
+    const token = new URLSearchParams(window.location.search).get('t') ?? ''
+    fetch(`https://admin.pmax.online/api/proposals/${code}?t=${encodeURIComponent(token)}`)
       .then(r => {
         if (r.status === 404) { setPageState('not_found'); return null }
         if (!r.ok) { setPageState('error'); return null }
@@ -156,7 +157,6 @@ export default function ProposalPage() {
             <div className={s.logo}>
               <span>pmax</span><span className={s.logoDot} aria-hidden="true" />
             </div>
-            <p className={s.badge}>PROPOSAL · CONFIDENTIAL</p>
             <h1 className={s.docTitle}>{offer.title}</h1>
           </div>
           <address className={s.headerAddr}>

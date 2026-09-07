@@ -15,10 +15,11 @@ export async function OPTIONS() {
 }
 
 export async function GET(
-  _req: NextRequest,
+  req: NextRequest,
   { params }: { params: Promise<{ code: string }> },
 ) {
   const { code } = await params
+  const token = req.nextUrl.searchParams.get('t') ?? ''
 
   const { data, error } = await db
     .from('offers')
@@ -26,11 +27,12 @@ export async function GET(
     .eq('code', code.toUpperCase())
     .single()
 
-  if (error || !data) {
+  if (error || !data || data.access_token !== token) {
     return cors(NextResponse.json({ error: 'Not found' }, { status: 404 }))
   }
 
   // Merge metadata columns + content jsonb into the shape the frontend expects
+  // access_token is intentionally excluded from the response
   const offer = {
     code: data.code,
     status: data.status,
