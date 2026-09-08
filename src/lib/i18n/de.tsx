@@ -823,6 +823,7 @@ export const de = {
     promoDeck: 'Wir betreiben keine E-Mail-Liste — aber wenn Sie ein Thema haben, über das wir schreiben sollen, lassen Sie es uns wissen.',
     promoBtn: 'Thema einreichen',
     posts: [
+      { slug: 'free-website-design', title: 'Wir bauen Ihre Website kostenlos neu. Das ist unser Deal.', deck: 'Wir gestalten und bauen Websites ohne Vorabkosten – im Gegenzug übernehmen wir Ihre Paid-Media-Kampagnen. Der vollständige Deal: wie er funktioniert, für wen er passt und wie ein echter Neuaufbau in der Praxis aussieht.' },
       { slug: 'ai-visibility-tracking-tools-2026', title: 'KI-Sichtbarkeits-Tools 2026: Was Sie prüfen sollten, bevor Sie zahlen', deck: 'Wie die meisten KI-Sichtbarkeits-Tools still einschränken, was Sie tracken können — und was Sie vor dem Kauf fragen sollten. Ein Käuferführer mit verifizierten Preisen.' },
       { slug: 'google-ads-ai-disclosure-label', title: 'Googles KI-Label steht auf Ihren Anzeigen. Sie haben das wahrscheinlich nicht entschieden.', deck: 'Seit Juli 2026 erscheint auf europäischen SERPs: „KI-Offenlegung: Anzeige wurde mit KI erstellt oder bearbeitet." Die meisten Werbetreibenden, die das Label tragen, haben es nicht bewusst gewählt — Performance Max hat es für sie gesetzt.' },
       { slug: 'pinterest-ads-home-interiors-local-2026', title: 'Pinterest Ads 2026: wer sie wirklich schalten kann — und wer sollte.', deck: 'Für welche Branchen Pinterest Ads funktionieren, wie Retargeting wirklich funktioniert und warum ein lokales Rollo-Studio dem Sweet Spot der Plattform näher ist als die meisten E-Commerce-Shops.' },
@@ -2191,6 +2192,114 @@ export const de = {
         <p>Verwandte Lektüre: unser <a href="/de/blog/google-ads-vs-meta-ads-vs-tiktok-ads-ecommerce-2026/">Google Ads vs. Meta vs. TikTok Vergleich für E-Commerce</a> und unser <a href="/de/services/paid-social/">Paid Social Service</a>.</p>
         <p style={{ marginTop: 32, fontFamily: 'var(--font-mono)', fontSize: 11, letterSpacing: '1.5px', textTransform: 'uppercase', color: '#6a6a6a' }}>Zuletzt aktualisiert 1. Juni 2026 &middot; Monatlich geprüft &middot; pmax &middot; Calvi&agrave;, Mallorca</p>
       </>),
+    },
+    'free-website-design': {
+      title: 'Wir bauen Ihre Website kostenlos neu. Das ist unser Deal.',
+      deck: 'Wir gestalten und bauen Websites ohne Vorabkosten – im Gegenzug übernehmen wir Ihre Paid-Media-Kampagnen. Der vollständige Deal: wie er funktioniert, für wen er passt und wie ein echter Neuaufbau in der Praxis aussieht.',
+      toc: [
+        'Warum wir das anbieten',
+        'Wie der Deal konkret aussieht',
+        'Wer infrage kommt',
+        'Ein echter Neuaufbau: Portals Properties',
+        'Was Sie behalten',
+        'So starten Sie',
+      ],
+      faqs: [
+        {
+          q: 'Was ist im kostenlosen Webdesign von pmax enthalten?',
+          a: 'Alles vom Konzept bis zum Launch: UX-Design, Informationsarchitektur, Textkonzept, Entwicklung, Conversion-Optimierung und Livegang. Die Website wird auf einem modernen, schnellen Stack mit Core-Web-Vitals-Konformität von Anfang an gebaut. Sie sind uneingeschränkter Eigentümer der fertigen Website – keine proprietäre Plattform, keine laufende Lizenzgebühr, kein Lock-in.',
+        },
+        {
+          q: 'Gibt es ein Mindestwerbebudget, um für den kostenlosen Website-Aufbau infrage zu kommen?',
+          a: 'Das besprechen wir von Fall zu Fall. Der Deal funktioniert typischerweise für Unternehmen, die monatlich mindestens 1.500 € für bezahlte Werbung ausgeben – auf einer beliebigen Plattform: Google Ads, Meta, TikTok, LinkedIn, Pinterest, Outbrain oder anderen – oder für Unternehmen mit einem konkreten, budgetierten Plan dafür. Darunter rechnet sich der Deal für keine Seite.',
+        },
+        {
+          q: 'Wem gehört die Website, nachdem pmax sie gebaut hat?',
+          a: 'Ihnen – uneingeschränkt. Domain, Quellcode, Hosting-Anbieter und alle Assets gehören Ihnen ab dem ersten Tag nach dem Launch. Wenn Sie das Werbemanagement beenden, geht die Website mit Ihnen. Wir bauen nicht auf proprietären Plattformen und nutzen den Website-Besitz nicht als Bindungsinstrument.',
+        },
+        {
+          q: 'Wie lange dauert ein kostenloser Website-Neuaufbau?',
+          a: 'Typischerweise sechs bis zehn Wochen vom Strategie-Kick-off bis zum Launch. Die wichtigste Variable ist die Bereitschaft Ihrer Inhalte – je schneller Sie Fotos, Texte und Produkt- oder Dienstleistungsinformationen liefern, desto schneller kommen wir voran.',
+        },
+        {
+          q: 'Funktioniert der Deal auch, wenn wir derzeit keine Werbung schalten?',
+          a: 'Manchmal. Wenn Sie einen konkreten Plan haben, mit bezahlter Werbung zu starten, und das Budget dafür bereitstellen, lohnt sich das Gespräch. Was nicht funktioniert: Anfragen von Unternehmen ohne aktuelles oder geplantes Werbebudget – der Deal ist auf eine Paid-Media-Management-Beziehung ausgelegt, nicht auf einen reinen Website-Auftrag.',
+        },
+      ],
+      prose: (
+        <>
+          <p>Die meisten Angebote f&uuml;r Webdesign beginnen bei 3.000 &euro;. Einen bestehenden Auftritt neu aufzubauen &mdash; Plattform wechseln, Struktur &uuml;berarbeiten, Texte neu schreiben &mdash; kostet in der Regel mehr. Wir machen das kostenlos.</p>
+          <p>Das ist kein Lockangebot mit einem Haken im Kleingedruckten. Der Deal ist einfach, und die Erkl&auml;rung auch.</p>
+
+          <h2 id="why-we-offer-this">Warum wir das anbieten</h2>
+          <p>Wir betreiben Paid-Media-Kampagnen f&uuml;r Unternehmen in ganz Europa &mdash; Google Ads, Meta, TikTok, LinkedIn, Pinterest, Outbrain und mehr. Der gr&ouml;&szlig;te Engpass f&uuml;r die Kampagnenleistung ist meistens nicht die Werbung selbst. Es ist die Website.</p>
+          <p>Eine sauber strukturierte Kampagne, die kaufbereiten Traffic auf eine langsame, un&uuml;bersichtliche oder schlecht konvertierende Seite schickt, verbrennt den Gro&szlig;teil des Budgets, bevor sie wirken kann. Wir haben genug dieser Situationen geerbt, um zu wissen, was sie kosten: typischerweise 40&ndash;70 % des m&ouml;glichen Conversion-Volumens &mdash; weg, bevor ein Formular abgeschickt oder ein Produkt in den Warenkorb gelegt wurde.</p>
+          <p>Wir k&ouml;nnen die Ergebnisse eines Kunden nicht verbessern, ohne die Seite zu optimieren, auf der die Anzeigen landen. Und einen neuen Kunden zu bitten, 5.000 &euro; f&uuml;r einen Website-Neuaufbau auszugeben, bevor er einen einzigen Monat mit einer neuen Agentur erlebt hat, ist ein schwieriges Gespr&auml;ch &mdash; verst&auml;ndlicherweise.</p>
+          <p>Also haben wir die Struktur ge&auml;ndert. Wir &uuml;bernehmen den Website-Aufbau. Sie beauftragen uns mit der Verwaltung Ihrer Werbung.</p>
+
+          <h2 id="what-the-deal-looks-like">Wie der Deal konkret aussieht</h2>
+          <p>Keine propriet&auml;re Plattform. Keine Lock-in-Klausel. Kein &bdquo;kostenlos&ldquo;, das sich nach sechs Monaten in eine monatliche Geb&uuml;hr verwandelt. Die Mechanik:</p>
+          <p><strong>Wir gestalten und bauen Ihre Website.</strong> Das umfasst UX-Strategie, Informationsarchitektur, conversion-optimiertes Seitendesign, Textkonzept, Entwicklung und Launch. Gebaut auf einem modernen, schnellen Stack &mdash; Core-Web-Vitals-Konformit&auml;t vom ersten Commit an. Sie erhalten die fertige Website und sind ab Tag eins uneingeschr&auml;nkter Eigent&uuml;mer.</p>
+          <p><strong>Sie beauftragen uns mit der Verwaltung Ihrer Paid-Media-Kampagnen.</strong> Die Mindestlaufzeit besprechen wir von Fall zu Fall. Der Deal ist sinnvoll f&uuml;r Unternehmen mit einem bestehenden Werbebudget &mdash; typischerweise ab 1.500 &euro;/Monat aktiver Ausgaben, oder mit einem konkreten, budgetierten Plan. Wir &uuml;bernehmen die Kan&auml;le, die f&uuml;r Ihr Unternehmen Sinn ergeben: Google Ads, Meta, TikTok, LinkedIn, Pinterest, Outbrain oder eine Kombination davon.</p>
+          <p><strong>Wir arbeiten an beidem gemeinsam.</strong> Werbung und Website sind keine getrennten Projekte. Creative-Briefings beeinflussen Landing-Page-Entscheidungen. Seitenperformance-Daten flie&szlig;en in die Bidding-Strategie ein. Texte, die in Search Ads getestet wurden, verbessern die Seitenheadlines. Beide Seiten n&auml;hren sich gegenseitig auf eine Art, die eine Web-Agentur und eine Media-Agentur, die separat arbeiten, nie replizieren k&ouml;nnen.</p>
+
+          <h2 id="who-qualifies">Wer infrage kommt</h2>
+          <p>Sie passen wahrscheinlich, wenn:</p>
+          <ul>
+            <li>Sie Paid Advertising intern oder &uuml;ber eine bestehende Agentur schalten und bei Cost per Lead oder ROAS schlechter abschneiden als erwartet &mdash; auf einer beliebigen Plattform: Google, Meta, TikTok, LinkedIn, Pinterest, Outbrain oder anderen</li>
+            <li>Sie 1.500&ndash;25.000 &euro;/Monat f&uuml;r bezahlte Werbung ausgeben</li>
+            <li>Ihre Website &auml;lter als drei Jahre ist oder nicht mit Conversion-Fokus gebaut wurde</li>
+            <li>Sie in einem Bereich mit realen Transaktionswerten t&auml;tig sind: Immobilien, Hotellerie, professionelle Dienstleistungen, E-Commerce, Erneuerbare Energien, Marine</li>
+          </ul>
+          <p>Weniger wahrscheinlich passen Sie, wenn kein aktuelles oder geplantes Werbebudget vorhanden ist, wenn Sie ausschlie&szlig;lich nach einer Web-Agentur suchen oder wenn Ihr Unternehmen noch keine Ums&auml;tze erzielt. Der Deal f&uuml;r den kostenlosen <a href="/de/services/conversion-design/">Website-Neuaufbau</a> ist auf eine Paid-Media-Management-Beziehung ausgelegt &mdash; ohne diese ergibt er f&uuml;r keine Seite Sinn.</p>
+          <p>Wir arbeiten mit Unternehmen in Deutschland, &Ouml;sterreich, der Schweiz, Spanien, dem Vereinigten K&ouml;nigreich und der gesamten EU.</p>
+
+          <h2 id="portals-properties">Ein echter Neuaufbau: Portals Properties</h2>
+          <p>Portals Properties ist eine Boutique-Immobilienagentur in Puerto Portals, Mallorca, spezialisiert auf Immobilienverkauf und Langzeitvermietungen f&uuml;r britische K&auml;ufer. Als sie zu uns kamen &mdash; Q4 2025 &mdash; gaben sie 6.200 &pound;/Monat f&uuml;r Google Ads aus und generierten rund 28 qualifizierte Anfragen pro Monat. Cost per qualifiziertem Lead: 221 &pound;.</p>
+          <p>Die Kampagnen waren ordentlich strukturiert. Das Problem war die Website.</p>
+          <p>Gebaut 2019. Core-Web-Vitals-Score: 42 auf Mobilger&auml;ten. Die Immobiliensuche erforderte vier Klicks, bevor ein Kontaktformular erschien. Das Titelbild der Startseite war ein Stockfoto. Das Anfrage-Formular hatte elf Felder, darunter drei, die dieselbe Frage auf verschiedene Weisen stellten.</p>
+          <p>Wir haben die Website in acht Wochen neu aufgebaut &mdash; parallel zur &Uuml;bernahme des Ad-Accounts. Die neue Website l&auml;dt in unter 1,5 Sekunden auf Mobilger&auml;ten (Core Web Vitals: 91), zeigt auf der Startseite direkt eine Immobiliensuche und ein zweifeldiges Anfrage-Formular, ersetzt Stockfotos durch eigene Team-Aufnahmen und ein 90-Sekunden-Property-Tour-Video und zeigt echte Verkaufspreise sowie Kundenstimmen auf jeder Objektseite &mdash; weil Mallorca-Immobilienk&auml;ufer ihre Agentur genauso bewusst w&auml;hlen wie die Immobilie selbst.</p>
+          <p>Nach 14 Wochen mit der neuen Website und unserem Google-Ads-Management:</p>
+          <div style={{ overflowX: 'auto', margin: '24px 0' }}>
+            <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: 13, lineHeight: 1.5 }}>
+              <thead>
+                <tr style={{ borderBottom: '1px solid #2d2d2d' }}>
+                  <th style={{ textAlign: 'left', padding: '8px 16px 8px 0', fontFamily: 'var(--font-mono)', fontSize: 10, fontWeight: 500, letterSpacing: '1.5px', textTransform: 'uppercase', color: '#6b6b6b' }}>Kennzahl</th>
+                  <th style={{ textAlign: 'right', padding: '8px 16px', fontFamily: 'var(--font-mono)', fontSize: 10, fontWeight: 500, letterSpacing: '1.5px', textTransform: 'uppercase', color: '#6b6b6b' }}>Vorher</th>
+                  <th style={{ textAlign: 'right', padding: '8px 0 8px 16px', fontFamily: 'var(--font-mono)', fontSize: 10, fontWeight: 500, letterSpacing: '1.5px', textTransform: 'uppercase', color: '#6b6b6b' }}>Nachher (14 Wochen)</th>
+                </tr>
+              </thead>
+              <tbody>
+                {[
+                  { metric: 'Qualifizierte Leads / Monat', before: '28', after: '71 (+154 %)' },
+                  { metric: 'Cost per qualifiziertem Lead', before: '£221', after: '£94' },
+                  { metric: 'Google Ads ROAS', before: '1,9×', after: '4,6×' },
+                  { metric: 'Core Web Vitals – Mobil', before: '42 / 100', after: '91 / 100' },
+                  { metric: 'Organische Formular-Einsendungen / Monat', before: '11', after: '21' },
+                ].map(row => (
+                  <tr key={row.metric} style={{ borderBottom: '1px solid #1a1a1a' }}>
+                    <td style={{ padding: '10px 16px 10px 0', color: '#c8c8c8' }}>{row.metric}</td>
+                    <td style={{ padding: '10px 16px', textAlign: 'right', fontFamily: 'var(--font-mono)', fontSize: 12, color: '#949494' }}>{row.before}</td>
+                    <td style={{ padding: '10px 0 10px 16px', textAlign: 'right', fontFamily: 'var(--font-mono)', fontSize: 12, color: '#3cffd0', fontWeight: 700 }}>{row.after}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <p>Das Werbebudget blieb unver&auml;ndert. Was sich &auml;nderte, war, wo der Traffic ankam &mdash; und was er dort vorfand.</p>
+
+          <h2 id="what-you-keep">Was Sie behalten</h2>
+          <p>Die Website geh&ouml;rt Ihnen. Uneingeschr&auml;nkt. Domain, Quellcode, Hosting-Entscheidungen, alle Assets &mdash; alles Ihres ab Tag eins. Wenn Sie das Werbeverh&auml;ltnis beenden, geht die Website mit Ihnen, intakt.</p>
+          <p>Dasselbe gilt f&uuml;r Ihre Werbekonten. Ihr Google-Ads-Konto verbleibt unter Ihrer E-Mail-Adresse. Ihr Meta Business Manager geh&ouml;rt Ihnen. Wir arbeiten in beiden als Manager, nicht als Kontoinhaber. Kampagnenhistorie, Zielgruppendaten und Creative-Bibliotheken geh&ouml;ren Ihrem Unternehmen, nicht uns.</p>
+          <p>Wir sprechen das so direkt an, weil das Gegenteil &mdash; Agenturen, die Ihre Konten und Websites in Eigenregie halten &mdash; keine Ausnahme ist und f&uuml;r Unternehmen, die sp&auml;ter wechseln oder nachverhandeln m&ouml;chten, ernsthafte Konsequenzen hat. Wir haben genug solcher Situationen geerbt, um den Schaden zu kennen. Wir haben es zum Grundsatz gemacht, es genau anders zu halten.</p>
+
+          <h2 id="how-to-start">So starten Sie</h2>
+          <p>Erz&auml;hlen Sie uns von Ihrem aktuellen Werbebudget, Ihrer Website und dem Ergebnis, das Sie anstreben. Das erste Gespr&auml;ch dauert 30 Minuten und geht auf uns.</p>
+          <p>Wir sagen Ihnen klar, ob Ihre Situation f&uuml;r den kostenlosen Website-Aufbau passt &mdash; und wenn nicht, wie die ehrliche Alternative aussieht. Wir nehmen nicht jede Anfrage an, und wir werden Ihnen auch nichts anderes erz&auml;hlen.</p>
+          <h2>Bereit f&uuml;r das Gespr&auml;ch?</h2>
+          <p>Falls Ihnen das oben Genannte bekannt vorkommt, <a href="/de/contact/?topic=free-website-design">schildern Sie uns kurz Ihre Situation</a> und wir melden uns innerhalb eines Werktages. Das erste Gespr&auml;ch: 30 Minuten, auf unsere Rechnung.</p>
+        </>
+      ),
     },
   } as Record<string, LocalizedBlogDetail>,
 }

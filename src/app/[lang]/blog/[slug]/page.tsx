@@ -73,8 +73,8 @@ export default async function BlogPostPage({ params }: { params: Promise<{ lang:
   const isTranslated = !!loc?.prose
 
   const categoryTranslations: Record<string, Record<string, string>> = {
-    de: { 'AI search': 'KI-Suche', 'Privacy': 'Datenschutz', 'Hospitality': 'Hotellerie', 'Real estate': 'Immobilien', 'Renewables': 'Energie', 'Boating': 'Yachting', 'Op-ed': 'Meinung' },
-    es: { 'AI search': 'IA & búsqueda', 'Privacy': 'Privacidad', 'Hospitality': 'Hostelería', 'Real estate': 'Inmobiliaria', 'Renewables': 'Energía solar', 'Boating': 'Náutica', 'Op-ed': 'Opinión' },
+    de: { 'AI search': 'KI-Suche', 'Privacy': 'Datenschutz', 'Hospitality': 'Hotellerie', 'Real estate': 'Immobilien', 'Renewables': 'Energie', 'Boating': 'Yachting', 'Op-ed': 'Meinung', 'Web design': 'Web-Design' },
+    es: { 'AI search': 'IA & búsqueda', 'Privacy': 'Privacidad', 'Hospitality': 'Hostelería', 'Real estate': 'Inmobiliaria', 'Renewables': 'Energía solar', 'Boating': 'Náutica', 'Op-ed': 'Opinión', 'Web design': 'Diseño web' },
   }
   const localCategory = categoryTranslations[lang]?.[post.category] ?? post.category
 

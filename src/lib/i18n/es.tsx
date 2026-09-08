@@ -787,6 +787,7 @@ export const es = {
     promoDeck: 'No gestionamos una lista de email — pero si hay un tema sobre el que quieras que escribamos, cuéntanoslo.',
     promoBtn: 'Sugerir un tema',
     posts: [
+      { slug: 'free-website-design', title: 'Rediseñamos tu web gratis. Esto es lo que recibimos a cambio.', deck: 'Diseñamos y construimos webs sin coste inicial. A cambio, gestionamos tu publicidad de pago. El trato completo: cómo funciona, a quién va dirigido y qué implica una reconstrucción real.' },
       { slug: 'ai-visibility-tracking-tools-2026', title: 'Herramientas de visibilidad en IA en 2026: qué revisar antes de suscribirte', deck: 'Cómo la mayoría de herramientas de visibilidad en IA limitan silenciosamente lo que puedes rastrear — y qué preguntar antes de pagar. Guía de compra con precios verificados.' },
       { slug: 'google-ads-ai-disclosure-label', title: 'El aviso de IA de Google está en tus anuncios. Probablemente no lo has decidido tú.', deck: 'Desde julio de 2026, las SERPs europeas muestran: "Divulgación de IA: anuncio creado o editado con IA". La mayoría de los anunciantes que lo llevan no lo eligieron — lo activó Performance Max.' },
       { slug: 'pinterest-ads-home-interiors-local-2026', title: 'Pinterest Ads 2026: para quién funcionan de verdad', deck: 'Para qué negocios funciona Pinterest Ads, cómo funciona el retargeting de verdad y por qué una tienda local de estores está más cerca de su punto óptimo que la mayoría del ecommerce.' },
@@ -2155,6 +2156,114 @@ export const es = {
         <p>Lectura relacionada: nuestra <a href="/es/blog/google-ads-vs-meta-ads-vs-tiktok-ads-ecommerce-2026/">comparativa Google Ads vs. Meta vs. TikTok para ecommerce</a> y nuestro <a href="/es/services/paid-social/">servicio de paid social</a>.</p>
         <p style={{ marginTop: 32, fontFamily: 'var(--font-mono)', fontSize: 11, letterSpacing: '1.5px', textTransform: 'uppercase', color: '#6a6a6a' }}>Actualizado 1 junio 2026 &middot; Revisión mensual &middot; pmax &middot; Calvi&agrave;, Mallorca</p>
       </>),
+    },
+    'free-website-design': {
+      title: 'Rediseñamos tu web gratis. Esto es lo que recibimos a cambio.',
+      deck: 'Diseñamos y construimos webs sin coste inicial. A cambio, gestionamos tu publicidad de pago. El trato completo: cómo funciona, a quién va dirigido y qué implica una reconstrucción real.',
+      toc: [
+        'Por qué lo ofrecemos',
+        'Cómo funciona el trato exactamente',
+        'Quién cumple los requisitos',
+        'Una reconstrucción real: Portals Properties',
+        'Qué conservas tú',
+        'Cómo empezar',
+      ],
+      faqs: [
+        {
+          q: '¿Qué incluye el diseño web gratuito de pmax?',
+          a: 'Todo, desde la estrategia hasta el lanzamiento: diseño UX, arquitectura de la información, dirección de contenidos, desarrollo, optimización de conversión y puesta en marcha. La web se construye sobre una tecnología moderna y rápida, con las Core Web Vitals desde el primer commit. Eres el propietario del sitio sin condiciones — sin plataformas propietarias, sin licencias mensuales, sin ataduras.',
+        },
+        {
+          q: '¿Hay una inversión mínima en publicidad para acceder al diseño web gratuito?',
+          a: 'Lo hablamos caso por caso, pero el trato funciona habitualmente para empresas que invierten 1.500 €/mes o más en publicidad de pago — en cualquier plataforma: Google Ads, Meta, TikTok, LinkedIn, Pinterest, Outbrain u otras — o para empresas con un plan firme y presupuestado para empezar. Por debajo de ese nivel, los números no cuadran para ninguna de las dos partes.',
+        },
+        {
+          q: '¿De quién es la web después de que pmax la construya?',
+          a: 'Tuya, sin condiciones. El dominio, el código fuente, el proveedor de hosting y todos los activos son tuyos desde el día del lanzamiento. Si en algún momento terminas el acuerdo de gestión publicitaria, la web se queda contigo. No construimos en plataformas propietarias ni usamos la titularidad del sitio como mecanismo de retención.',
+        },
+        {
+          q: '¿Cuánto tiempo tarda una reconstrucción web gratuita?',
+          a: 'Normalmente entre seis y diez semanas desde el inicio de la estrategia hasta el lanzamiento. La variable principal es la disponibilidad de contenido por tu parte — cuanto antes puedas proporcionar fotografías, textos e información sobre productos o servicios, más rápido avanzamos.',
+        },
+        {
+          q: '¿Funciona el trato si actualmente no hago publicidad?',
+          a: 'A veces. Si tienes un plan firme para empezar con publicidad de pago y el presupuesto para comprometerte, merece la pena hablar. Lo que no funciona son las consultas de empresas sin inversión publicitaria actual o prevista — el trato está diseñado en torno a una relación de gestión de medios de pago, no a un encargo de diseño web independiente.',
+        },
+      ],
+      prose: (
+        <>
+          <p>La mayor&iacute;a de presupuestos de dise&ntilde;o web arrancan en 3.000 &euro;. Reconstruir una web establecida &mdash;cambiar de plataforma, reorganizar la estructura, reescribir los textos&mdash; suele costar bastante m&aacute;s. Nosotros lo hacemos gratis.</p>
+          <p>No es una oferta se&ntilde;uelo con trampa en la letra peque&ntilde;a. El trato es sencillo, y la explicaci&oacute;n tambi&eacute;n.</p>
+
+          <h2 id="why-we-offer-this">Por qu&eacute; lo ofrecemos</h2>
+          <p>Gestionamos publicidad de pago para empresas de toda Europa &mdash;Google Ads, Meta, TikTok, LinkedIn, Pinterest, Outbrain y m&aacute;s. El principal obst&aacute;culo para el rendimiento de las campa&ntilde;as casi nunca son los propios anuncios. Es la web.</p>
+          <p>Una campa&ntilde;a bien estructurada que env&iacute;a tr&aacute;fico de alta intenci&oacute;n a un sitio lento, confuso o que convierte mal quema la mayor parte del presupuesto antes de poder funcionar. Hemos heredado suficientes situaciones as&iacute; como para saber exactamente cu&aacute;nto cuestan: normalmente entre el 40 % y el 70 % del volumen de conversi&oacute;n potencial, perdido antes de que se env&iacute;e un formulario o se a&ntilde;ada un producto al carrito.</p>
+          <p>No podemos mejorar los resultados de un cliente sin arreglar la p&aacute;gina donde aterrizan los anuncios. Y pedirle a un nuevo cliente que gaste 5.000 &euro; en una reconstrucci&oacute;n web antes de haber visto un solo mes de resultados con una nueva agencia es una conversaci&oacute;n dif&iacute;cil &mdash;con raz&oacute;n.</p>
+          <p>As&iacute; que cambiamos la estructura. Nosotros asumimos la construcci&oacute;n de la web. T&uacute; nos contratas para gestionar tu publicidad.</p>
+
+          <h2 id="what-the-deal-looks-like">C&oacute;mo funciona el trato exactamente</h2>
+          <p>Sin plataformas propietarias. Sin cl&aacute;usulas de permanencia. Sin &laquo;gratuito&raquo; que se convierte en una cuota mensual a los seis meses. La mec&aacute;nica:</p>
+          <p><strong>Dise&ntilde;amos y construimos tu web.</strong> Esto incluye estrategia UX, arquitectura de la informaci&oacute;n, dise&ntilde;o de p&aacute;ginas orientado a la conversi&oacute;n, direcci&oacute;n de contenidos, desarrollo y lanzamiento. El sitio se construye sobre una tecnolog&iacute;a moderna y r&aacute;pida &mdash;Core Web Vitals desde el primer commit. Recibes el sitio terminado y eres el propietario absoluto desde el primer d&iacute;a.</p>
+          <p><strong>Nos contratas para gestionar tu publicidad de pago.</strong> El compromiso m&iacute;nimo lo discutimos caso por caso. El trato tiene sentido para empresas con un presupuesto publicitario existente &mdash;habitualmente 1.500 &euro;/mes o m&aacute;s en inversi&oacute;n activa, o con un plan firme y presupuestado para empezar. Gestionamos los canales que tengan sentido para tu negocio: Google Ads, Meta, TikTok, LinkedIn, Pinterest, Outbrain o cualquier combinaci&oacute;n.</p>
+          <p><strong>Trabajamos en las dos cosas juntos.</strong> Los anuncios y la web no son proyectos separados. Los briefings creativos influyen en las decisiones de las landing pages. Los datos de rendimiento del sitio informan la estrategia de pujas. Los textos probados en anuncios de b&uacute;squeda mejoran los titulares de las p&aacute;ginas. Ambos se retroalimentan de una manera que una agencia de dise&ntilde;o web y una de medios trabajando por separado nunca consiguen replicar.</p>
+
+          <h2 id="who-qualifies">Qui&eacute;n cumple los requisitos</h2>
+          <p>Probablemente encajas si:</p>
+          <ul>
+            <li>Haces publicidad de pago de forma interna o con una agencia actual y no est&aacute;s obteniendo el resultado esperado en coste por lead o ROAS &mdash;en cualquier plataforma: Google, Meta, TikTok, LinkedIn, Pinterest, Outbrain u otras</li>
+            <li>Inviertes entre 1.500 &euro; y 25.000 &euro;/mes en publicidad de pago</li>
+            <li>Tu web tiene m&aacute;s de tres a&ntilde;os o no se construy&oacute; pensando en la conversi&oacute;n</li>
+            <li>Operas en un sector con transacciones de valor real: inmobiliaria, hosteler&iacute;a, servicios profesionales, e-commerce, energ&iacute;as renovables, n&aacute;utica</li>
+          </ul>
+          <p>Es menos probable que encajes si no tienes presupuesto publicitario actual ni planificado, si solo buscas una agencia de dise&ntilde;o web, o si tu negocio todav&iacute;a no genera ingresos. El trato de <a href="/es/services/conversion-design/">redise&ntilde;o web</a> gratuito est&aacute; dise&ntilde;ado en torno a una relaci&oacute;n de gesti&oacute;n de medios de pago &mdash;sin eso, no tiene sentido para ninguna de las partes.</p>
+          <p>Trabajamos con empresas en Espa&ntilde;a, Alemania, el Reino Unido y la UE en general.</p>
+
+          <h2 id="portals-properties">Una reconstrucci&oacute;n real: Portals Properties</h2>
+          <p>Portals Properties es una agencia inmobiliaria boutique ubicada en Puerto Portals, Mallorca, especializada en la venta de propiedades y alquileres de larga duraci&oacute;n para compradores brit&aacute;nicos. Cuando llegaron a nosotros en el cuarto trimestre de 2025, invert&iacute;an 6.200 &pound;/mes en Google Ads y generaban unas 28 consultas cualificadas al mes &mdash;un coste por lead cualificado de 221 &pound;.</p>
+          <p>Las campa&ntilde;as estaban razonablemente bien estructuradas. El problema era la web.</p>
+          <p>Construida en 2019. Core Web Vitals: 42 en m&oacute;vil. El buscador de propiedades requer&iacute;a cuatro clics antes de que apareciera un formulario de contacto. La imagen principal era un stock. El formulario de consulta ten&iacute;a once campos, incluyendo tres que preguntaban lo mismo de formas distintas.</p>
+          <p>Reconstruimos el sitio en ocho semanas, en paralelo a la transici&oacute;n de las cuentas publicitarias. La nueva web carga en menos de 1,5 segundos en m&oacute;vil (Core Web Vitals: 91), muestra un buscador de propiedades y un formulario de dos campos en la home, sustituye las fotos de stock por im&aacute;genes del propio equipo y un v&iacute;deo de tour de 90 segundos, y muestra precios de venta reales y testimonios de clientes en cada ficha &mdash;porque los compradores de inmuebles en Mallorca eligen a su agente tanto como eligen la propiedad.</p>
+          <p>Tras 14 semanas con el sitio reconstruido y nuestra gesti&oacute;n de Google Ads funcionando juntos:</p>
+          <div style={{ overflowX: 'auto', margin: '24px 0' }}>
+            <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: 13, lineHeight: 1.5 }}>
+              <thead>
+                <tr style={{ borderBottom: '1px solid #2d2d2d' }}>
+                  <th style={{ textAlign: 'left', padding: '8px 16px 8px 0', fontFamily: 'var(--font-mono)', fontSize: 10, fontWeight: 500, letterSpacing: '1.5px', textTransform: 'uppercase', color: '#6b6b6b' }}>M&eacute;trica</th>
+                  <th style={{ textAlign: 'right', padding: '8px 16px', fontFamily: 'var(--font-mono)', fontSize: 10, fontWeight: 500, letterSpacing: '1.5px', textTransform: 'uppercase', color: '#6b6b6b' }}>Antes</th>
+                  <th style={{ textAlign: 'right', padding: '8px 0 8px 16px', fontFamily: 'var(--font-mono)', fontSize: 10, fontWeight: 500, letterSpacing: '1.5px', textTransform: 'uppercase', color: '#6b6b6b' }}>Despu&eacute;s (14 semanas)</th>
+                </tr>
+              </thead>
+              <tbody>
+                {[
+                  { metric: 'Leads cualificados / mes', before: '28', after: '71 (+154 %)' },
+                  { metric: 'Coste por lead cualificado', before: '£221', after: '£94' },
+                  { metric: 'ROAS Google Ads', before: '1,9×', after: '4,6×' },
+                  { metric: 'Core Web Vitals — móvil', before: '42 / 100', after: '91 / 100' },
+                  { metric: 'Formularios org&aacute;nicos / mes', before: '11', after: '21' },
+                ].map(row => (
+                  <tr key={row.metric} style={{ borderBottom: '1px solid #1a1a1a' }}>
+                    <td style={{ padding: '10px 16px 10px 0', color: '#c8c8c8' }}>{row.metric}</td>
+                    <td style={{ padding: '10px 16px', textAlign: 'right', fontFamily: 'var(--font-mono)', fontSize: 12, color: '#949494' }}>{row.before}</td>
+                    <td style={{ padding: '10px 0 10px 16px', textAlign: 'right', fontFamily: 'var(--font-mono)', fontSize: 12, color: '#3cffd0', fontWeight: 700 }}>{row.after}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <p>El presupuesto publicitario no cambi&oacute;. Lo que cambi&oacute; fue ad&oacute;nde llegaba el tr&aacute;fico &mdash;y qu&eacute; encontraba al llegar.</p>
+
+          <h2 id="what-you-keep">Qu&eacute; conservas t&uacute;</h2>
+          <p>La web es tuya. Sin condiciones. Dominio, c&oacute;digo fuente, decisiones de hosting, todos los activos &mdash;todo tuyo desde el primer d&iacute;a. Si terminas el acuerdo publicitario, la web se va contigo, intacta.</p>
+          <p>Lo mismo aplica a tus cuentas publicitarias. Tu cuenta de Google Ads permanece bajo tu correo electr&oacute;nico. Tu Meta Business Manager es tuyo. Nosotros operamos dentro de ambas como gestores, no como propietarios. El historial de campa&ntilde;as, los datos de audiencia y las bibliotecas de creatividades pertenecen a tu empresa, no a la nuestra.</p>
+          <p>Somos directos sobre esto porque lo contrario &mdash;agencias que se quedan con la propiedad de tus cuentas y tu web&mdash; no es ninguna rareza, y genera problemas serios para las empresas que quieren cambiar o renegociar m&aacute;s adelante. Hemos heredado suficientes de esas situaciones como para saber lo que cuestan. Lo hemos convertido en un principio fundamental hacer exactamente lo contrario.</p>
+
+          <h2 id="how-to-start">C&oacute;mo empezar</h2>
+          <p>Cu&eacute;ntanos tu inversi&oacute;n publicitaria actual, tu web y el resultado que buscas. La primera llamada es de 30 minutos y corre por nuestra cuenta.</p>
+          <p>Te diremos con claridad si tu situaci&oacute;n encaja con el trato de dise&ntilde;o web gratuito y, si no, c&oacute;mo es la alternativa honesta. No aceptamos todos los proyectos &mdash;y no te diremos lo contrario.</p>
+          <h2>&iquest;Listo para hablar?</h2>
+          <p>Si algo de lo anterior te resulta familiar, <a href="/es/contact/?topic=free-website-design">cu&eacute;ntanos brevemente tu situaci&oacute;n</a> y te respondemos en un d&iacute;a laborable. Primera conversaci&oacute;n: 30 minutos, sin coste.</p>
+        </>
+      ),
     },
   } as Record<string, LocalizedBlogDetail>,
 }
