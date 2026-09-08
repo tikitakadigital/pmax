@@ -19,6 +19,1477 @@ const NeedHelp = ({ topic }: { topic: string }) => (
 )
 
 export const blogDetails: BlogDetail[] = [
+{
+    slug: 'how-to-advertise-business-mallorca',
+    toc: [
+      'The Mallorca market: what makes it different',
+      'Google Ads in Mallorca',
+      'Meta Ads for Mallorca businesses',
+      'TikTok Ads for tourism and hospitality',
+      'LinkedIn Ads for B2B and professional services',
+      'How to build a multi-channel strategy',
+    ],
+    tocIds: [
+      'mallorca-market',
+      'google-ads-mallorca',
+      'meta-ads-mallorca',
+      'tiktok-ads-mallorca',
+      'linkedin-ads-mallorca',
+      'multi-channel',
+    ],
+    faqs: [
+      {
+        q: 'What is the best way to advertise a business in Mallorca?',
+        a: "There is no single best channel — the right answer depends on your business type, customer profile, and the time of year. For high-intent searches (real estate, professional services), Google Ads performs best. For discovery-phase tourism and hospitality, Meta and TikTok during the pre-trip window (February–June) deliver the strongest results. For B2B services targeting the expat professional community, LinkedIn is the only channel with the targeting precision required. Most successful Mallorca businesses use at least two channels with complementary functions.",
+      },
+      {
+        q: 'How much should a Mallorca business spend on digital advertising?',
+        a: 'Minimum viable budgets in the Mallorca market: Google Ads €800/month, Meta Ads €500/month (seasonal), TikTok Ads €400/month (seasonal, March–October), LinkedIn Ads €1,000/month. Below these thresholds, you do not generate enough data to optimise meaningfully. Most of our established clients with seasonal businesses spend €1,500–€4,000/month during peak season and reduce significantly — or pause entirely — in winter.',
+      },
+      {
+        q: 'Do Google Ads work in Mallorca?',
+        a: 'Yes, for the right categories. Google Ads performs strongly for real estate, legal services, private medical, accountants, and any business where customers search with specific purchase intent. It underperforms for discovery-driven businesses — nobody searches "nice restaurant in Mallorca" before they land on the island; they find restaurants on Instagram or Google Maps on the day. Geo-targeting must be carefully configured: broad Spain targeting wastes budget on mainland clicks with no Mallorca intent.',
+      },
+      {
+        q: 'What is the best platform to reach German tourists in Mallorca?',
+        a: 'German tourists are best reached at source — in Germany, Austria, or Switzerland, before they book. Meta (Instagram and Facebook) with German-language creative targeted by travel interest and geographic signal is the most cost-effective awareness channel. Google Search in German for Mallorca-specific queries ("Finca Mallorca mieten", "Hotel Mallorca buchen") captures high-intent searches at the consideration stage. Running German-language campaigns requires copy, creative, and landing pages in German — this is where most Mallorca advertisers fall short.',
+      },
+      {
+        q: 'Is social media advertising effective for seasonal Mallorca businesses?',
+        a: 'Yes, but timing is the critical variable. Social media advertising for seasonal Mallorca businesses works best as a pre-season awareness play — running February through May to reach tourists in their consideration phase, before they commit to bookings. Running social ads from June onwards means competing for attention against brands that have already established awareness at lower CPMs. The businesses that get the most from Meta and TikTok on Mallorca plan their creative calendar in January and go live in February.',
+      },
+    ],
+    prose: (
+      <>
+        <p>Mallorca is not a normal local market. The permanent population is approximately 900,000 &mdash; small by European standards. But overlaid on that is a tourism economy that represents roughly 70% of the Balearic Islands&rsquo; GDP. Nearly 10 million visitors arrive each year.</p>
+        <p>German tourists: 3.7 million annually, 37% of total visitors, spending an average of &euro;1,200 per trip according to Balearic Islands tourism statistics. UK tourists: 1.6 million annually, 16% of total. These two groups &mdash; plus the island&rsquo;s permanent resident population &mdash; have almost nothing in common in terms of buying behaviour, language, or platform usage. Your advertising strategy must address them separately.</p>
+        <p>This guide covers every major paid channel available to Mallorca businesses, with specific budgets and Mallorca-specific context that generic agency guides skip. We are a <a href="/marketing-agency-mallorca">marketing agency based in Calvià</a>. This is the market we work in every day.</p>
+
+        <h2 id="mallorca-market">The Mallorca market: what makes it different</h2>
+        <p>Three facts define the Mallorca advertising landscape.</p>
+        <p><strong>Two markets, one island.</strong> The permanent population is around 900,000. The tourism economy &mdash; roughly 70% of the Balearic Islands&rsquo; GDP &mdash; brings nearly 10 million visitors per year. German tourists are the single largest group: 3.7 million per year, &euro;1,200 average spend per trip. UK tourists: 1.6 million per year. These groups have fundamentally different discovery behaviours, language preferences, and booking timelines. A single strategy rarely serves both.</p>
+        <p><strong>Season compresses the window.</strong> Tourism runs April to October. July and August are peak. A business targeting tourists that starts advertising in June has already missed the pre-trip consideration window &mdash; German and British tourists research and book 4&ndash;12 weeks in advance. The best-performing campaigns we manage ramp in February.</p>
+        <p><strong>German language is an underserved competitive advantage.</strong> 37% of Mallorca&rsquo;s annual visitors are German. Most search, browse, and book in German. Yet the majority of Mallorca&rsquo;s digital advertising is in Spanish or English. Well-structured German-language campaigns &mdash; targeting German tourists at source, before they book, in their own language &mdash; is the most underexploited opportunity in this market. Most English-speaking agencies do not operate in German. Most Spanish agencies do not either.</p>
+
+        <h2 id="google-ads-mallorca">Google Ads in Mallorca</h2>
+        <p>Google Ads is the right channel for high-intent Mallorca searches: real estate, legal services, accountants, private medical, professional services of any kind. Anyone with specific intent and ready to act shows up in Google Search first.</p>
+        <p><strong>Geo-targeting requires precision.</strong> Targeting &ldquo;Spain&rdquo; broadly pulls in traffic from Madrid and Barcelona with no intention of visiting your Mallorca business. We build campaigns with island-specific geo-targeting plus extended coverage for tourists searching from Germany and the UK before departure &mdash; two very different configurations that most single-market setups miss entirely.</p>
+        <p><strong>German-language search volume is underserved.</strong> &ldquo;Finca mieten Mallorca&rdquo;, &ldquo;Immobilien Mallorca kaufen&rdquo;, &ldquo;Zahnarzt Mallorca&rdquo; &mdash; German-language queries for Mallorca-specific services generate meaningful volume and face materially less competition than their English equivalents. German-language ads pointing to German-language landing pages, served to users in Germany before their trip, convert at rates most Mallorca advertisers are not currently capturing.</p>
+        <p><strong>Budget strategy: annual vs seasonal.</strong> Professional services and real estate businesses advertise year-round with relatively flat seasonality. Tourism-dependent businesses front-load spend in Q1 to capture pre-trip research, then maintain through peak.</p>
+        <p>Minimum viable budget: &euro;800/month. Below that, the data volume is too thin for meaningful optimisation. Read our full guide: <a href="/blog/google-ads-mallorca/">Google Ads in Mallorca</a>. Our <a href="/services/google-ads">Google Ads service</a> page covers how we structure campaigns. For cost benchmarks in German, see our guide to <a href="/blog/was-kostet-google-ads/">was kostet Google Ads</a>.</p>
+
+        <h2 id="meta-ads-mallorca">Meta Ads for Mallorca businesses</h2>
+        <p>Meta is the dominant discovery-phase channel for hospitality, tourism, and B2C businesses in Mallorca. It is where people find restaurants, experiences, and holiday accommodation before purchase intent crystallises.</p>
+        <p><strong>The tourist pre-trip window.</strong> German Instagram users travelling to Mallorca are active on the platform 4&ndash;8 weeks before departure. Instagram Stories and Reels targeting German-speaking audiences by travel interest and geographic signal consistently outperform en-route targeting for our hospitality clients. A user in Munich researching Mallorca beach clubs is worth far more than a user who has already booked and landed.</p>
+        <p><strong>Season timing is everything.</strong> Tourist-facing Meta campaigns should ramp February&ndash;March, peak in May&ndash;June for pre-trip bookings, and continue through October. Flat year-round budgets on seasonal businesses waste money in winter and miss the pre-trip consideration window.</p>
+        <p><strong>Year-round local campaigns.</strong> Businesses serving permanent residents &mdash; dentists, gyms, legal practices &mdash; run fundamentally different strategies: local radius targeting, consistent year-round budget, no seasonal ramp required.</p>
+        <p>Minimum viable budget: &euro;500/month in season. For hospitality-specific approaches, see our <a href="/industries/hospitality">hospitality industry page</a>. For the agency vs in-house question, read our guide: <a href="/blog/meta-ads-agency-vs-in-house/">Meta Ads: agency vs in-house</a>. The <a href="/services/paid-social">paid social service</a> page covers how we manage Meta campaigns end-to-end.</p>
+
+        <h2 id="tiktok-ads-mallorca">TikTok Ads for tourism and hospitality</h2>
+        <p>TikTok has become a credible paid channel for tourism and experience businesses in Mallorca. The organic content that drives the most views on the island &mdash; catamaran day trips, beach clubs, hillside restaurants, sunrise hikes &mdash; maps directly onto the TikTok ad formats that perform.</p>
+        <p>TikTok works for Mallorca businesses when you have a strong visual product, a customer base aged 18&ndash;34, and the capacity to produce short-form video at consistent volume. It does not work well for B2B services, professional services with long sales cycles, or high-ticket real estate &mdash; different content format, different audience, different platform.</p>
+        <p><strong>Seasonality-aware creative is the highest-performing mechanic.</strong> &ldquo;Book now &mdash; 3 spots left in July.&rdquo; Availability-based creative with a live sense of urgency is something static image ads cannot replicate. It is also uniquely suited to the Mallorca seasonal market, where scarcity is real and time-sensitivity is high.</p>
+        <p>Minimum viable budget: &euro;400/month, March&ndash;October. Read our dedicated guide: <a href="/blog/tiktok-ads-mallorca-tourism/">TikTok Ads for Mallorca tourism</a>.</p>
+
+        <h2 id="linkedin-ads-mallorca">LinkedIn Ads for B2B and professional services</h2>
+        <p>LinkedIn Ads are expensive everywhere, including Mallorca. Typical CPCs run &euro;4&ndash;&euro;8. But for specific use cases, they are the only channel that reaches the right audience with the right targeting precision.</p>
+        <p>Mallorca-specific LinkedIn use cases where the economics work:</p>
+        <ul>
+          <li><strong>B2B services for the expat professional community</strong> &mdash; accountants, lawyers, corporate advisors serving German and UK-origin business owners resident on the island</li>
+          <li><strong>Real estate targeting high-net-worth DACH buyers</strong> &mdash; job function and seniority targeting of senior professionals in Germany, Austria, and Switzerland who are active buyers in the Mallorca luxury property market</li>
+          <li><strong>Professional services for businesses with Mallorca operations</strong> &mdash; maritime services, logistics, corporate travel, language services</li>
+        </ul>
+        <p>The Mallorca B2B market is small on LinkedIn. Plan for frequency over reach &mdash; repeated exposure to a defined audience of 5,000&ndash;15,000 performs better than spreading thin across a broader list at lower frequency.</p>
+        <p>Minimum viable budget: &euro;1,000/month. Read our <a href="/blog/linkedin-ads-b2b-spain/">B2B LinkedIn Ads guide for Spain</a> and our <a href="/industries/real-estate">real estate industry page</a>.</p>
+
+        <h2 id="multi-channel">How to build a multi-channel strategy</h2>
+        <p>No single channel covers the full Mallorca customer journey. The businesses that grow fastest combine channels deliberately &mdash; each matched to the right stage and audience.</p>
+        <p>A simplified framework for most Mallorca tourism or hospitality businesses:</p>
+        <ul>
+          <li><strong>Awareness (February&ndash;April):</strong> Meta and TikTok to German and UK audiences by interest and geographic signal &mdash; reach tourists in the pre-trip consideration phase</li>
+          <li><strong>Consideration (March&ndash;June):</strong> Google Search for intent-led queries; Meta retargeting of website visitors and video viewers</li>
+          <li><strong>Conversion (May&ndash;August):</strong> Google Performance Max with real booking data fed back as offline conversions; reduced awareness spend, maximum conversion focus</li>
+          <li><strong>Retention (October&ndash;November):</strong> Email to past guests; Meta Custom Audiences for direct repeat bookings, bypassing OTA commission</li>
+        </ul>
+        <p>Platform comparison by business type:</p>
+        <div style={{ overflowX: 'auto', margin: '24px 0' }}>
+          <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: 13, lineHeight: 1.5 }}>
+            <thead>
+              <tr style={{ borderBottom: '1px solid #2d2d2d' }}>
+                <th style={{ textAlign: 'left', padding: '8px 16px 8px 0', fontFamily: 'var(--font-mono)', fontSize: 10, fontWeight: 500, letterSpacing: '1.5px', textTransform: 'uppercase', color: '#6b6b6b' }}>Platform</th>
+                <th style={{ textAlign: 'left', padding: '8px 16px', fontFamily: 'var(--font-mono)', fontSize: 10, fontWeight: 500, letterSpacing: '1.5px', textTransform: 'uppercase', color: '#6b6b6b' }}>Best for</th>
+                <th style={{ textAlign: 'left', padding: '8px 16px', fontFamily: 'var(--font-mono)', fontSize: 10, fontWeight: 500, letterSpacing: '1.5px', textTransform: 'uppercase', color: '#6b6b6b' }}>Season</th>
+                <th style={{ textAlign: 'right', padding: '8px 0 8px 16px', fontFamily: 'var(--font-mono)', fontSize: 10, fontWeight: 500, letterSpacing: '1.5px', textTransform: 'uppercase', color: '#6b6b6b' }}>Min budget</th>
+              </tr>
+            </thead>
+            <tbody>
+              {[
+                { platform: 'Google Ads', best: 'Real estate, professional services', season: 'Year-round', budget: '€800/mo' },
+                { platform: 'Meta Ads', best: 'Hospitality, restaurants, B2C', season: 'Apr–Oct peak', budget: '€500/mo' },
+                { platform: 'TikTok Ads', best: 'Tourism, boat charters, experiences', season: 'Mar–Oct', budget: '€400/mo' },
+                { platform: 'LinkedIn Ads', best: 'B2B, professional services, expats', season: 'Year-round', budget: '€1,000/mo' },
+                { platform: 'Pinterest Ads', best: 'Home interiors, weddings, lifestyle', season: 'Year-round', budget: '€300/mo' },
+              ].map(row => (
+                <tr key={row.platform} style={{ borderBottom: '1px solid #1a1a1a' }}>
+                  <td style={{ padding: '10px 16px 10px 0', color: '#c8c8c8', fontWeight: 500 }}>{row.platform}</td>
+                  <td style={{ padding: '10px 16px', color: '#949494', fontSize: 12 }}>{row.best}</td>
+                  <td style={{ padding: '10px 16px', color: '#949494', fontSize: 12, whiteSpace: 'nowrap' }}>{row.season}</td>
+                  <td style={{ padding: '10px 0 10px 16px', textAlign: 'right', fontFamily: 'var(--font-mono)', fontSize: 12, color: '#3cffd0' }}>{row.budget}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <p>This is a starting point, not a prescription. A 12-room boutique hotel runs a very different strategy from a restaurant group with three locations. The channel mix that makes sense for a real estate agency bears no resemblance to the one that works for a boat charter company.</p>
+        <p>Our <a href="/services/paid-social">paid social service</a> covers Meta, TikTok, Pinterest, and LinkedIn. Our <a href="/services/google-ads">Google Ads service</a> covers Search, Shopping, and Performance Max. For organic search and local SEO, see our <a href="/seo-company-mallorca">SEO company Mallorca</a> page. For hospitality-specific context, our case study on <a href="/blog/hotel-direct-bookings/">hotel direct bookings</a> covers how Mar y Roca reduced OTA dependency in 11 weeks. And our <a href="/services/ai-visibility">AI visibility</a> service is increasingly relevant for Mallorca businesses that want to appear in AI-generated local and travel recommendations.</p>
+        <NeedHelp topic="how-to-advertise-business-mallorca" />
+      </>
+    ),
+  },
+{
+    slug: 'was-kostet-google-ads',
+    toc: [
+      'How Google Ads pricing actually works',
+      'Average CPCs by industry in Germany',
+      'The total cost equation',
+      'Budget scenarios: what €500, €2k, and €5k actually gets you',
+      'A Palma real estate case',
+      'Cheap clicks are not profitable clicks',
+    ],
+    tocIds: [
+      'how-pricing-works',
+      'cpc-by-industry',
+      'total-cost-equation',
+      'budget-scenarios',
+      'palma-real-estate',
+      'cheap-clicks',
+    ],
+    faqs: [
+      {
+        q: 'How much does Google Ads cost per month in Germany?',
+        a: 'There is no fixed monthly cost — Google Ads runs on an auction. Your monthly spend is CPC × clicks, determined by your budget cap, keyword competition and Quality Score. A small local business can start at €500/month in ad spend and generate meaningful leads. A competitive e-commerce account might need €5,000+/month to reach statistically useful volume. Most SMEs we work with operate between €1,500 and €8,000/month in ad spend, plus a management fee if they use an agency.',
+      },
+      {
+        q: 'What is the average cost per click on Google Ads in Spain?',
+        a: 'Spanish CPCs are generally 15–25% lower than German CPCs in equivalent categories, due to lower advertiser competition. In practice, a real estate agency in Palma might pay €1.80–€2.20 per click on property search terms, versus €2.40–€3.00 for a similar campaign in Munich. These are indicative ranges; your actual CPC depends on Quality Score, keyword specificity and auction dynamics.',
+      },
+      {
+        q: "What's the minimum Google Ads budget worth starting with?",
+        a: "€500/month in ad spend can work for a narrowly targeted local service business with a high-margin conversion and a well-optimised landing page. Below €500/month you rarely generate enough data for the algorithm to optimise meaningfully, and campaign-level spend limits mean you cannot test systematically. We generally recommend €1,000/month as the realistic minimum for a campaign that can learn and improve.",
+      },
+      {
+        q: 'How much does Google Ads management cost?',
+        a: 'Agency management fees vary widely. The industry standard is either a percentage of ad spend (typically 10–15%) or a flat monthly fee. Percentage-of-spend models create an incentive to grow your budget rather than improve efficiency — pmax charges flat monthly fees to avoid this. Flat fees for SME accounts typically run £500–£2,000/month depending on account complexity and the number of campaigns and channels managed.',
+      },
+      {
+        q: 'Is Google Ads cheaper than Meta Ads?',
+        a: "It depends on what you mean by cheaper. Meta Ads typically have lower CPCs — often €0.30–€0.80 on broad audiences — but lower conversion intent. Google Search Ads capture people actively searching for what you sell; Meta Ads interrupt people while they scroll. For direct-response campaigns where purchase intent drives performance, Google Search usually generates lower cost per lead despite higher CPC, because the traffic quality is higher. For awareness and retargeting, Meta is often more cost-efficient.",
+      },
+    ],
+    prose: (
+      <>
+        <p>The most common question from businesses considering Google Ads for the first time is some version of: &ldquo;how much does it cost?&rdquo; The honest answer is: it depends, and it is more complicated than most guides admit.</p>
+        <p>There is no flat fee. Google Ads runs on an auction. You pay when someone clicks your ad, at a price determined in real time by competition, relevance and your own account quality. This guide breaks down how that actually works, what average costs look like by industry in Germany, and what three different monthly budgets realistically deliver in 2026.</p>
+
+        <h2 id="how-pricing-works">How Google Ads pricing actually works</h2>
+        <p>Google Ads is not a space-buying exercise. Every time someone runs a search, an automated auction fires. Every advertiser bidding on relevant keywords enters the auction. Google evaluates them all and decides who gets shown, in what position, at what price.</p>
+        <p>The winner is not the highest bidder. Google uses Ad Rank &mdash; a composite of your bid, your Quality Score and several other factors including ad extension use and expected click-through rate. Quality Score is a 1&ndash;10 rating of how relevant your ad and landing page are to the query. A Quality Score of 8 means you pay less per click than a competitor with a Score of 4, even if you bid the same amount. This is not a technicality. It materially affects what you pay.</p>
+        <p>On billing: most Search campaigns for SMEs run on cost-per-click (CPC). You set a maximum CPC bid &mdash; the ceiling of what you are willing to pay per click &mdash; and the auction determines the actual amount, which is often lower. Display and YouTube campaigns can also run on CPM (cost per thousand impressions), though for most advertisers new to Google Ads, CPC on Search is the primary mechanism to understand.</p>
+        <p>Smart Bidding strategies &mdash; Target CPA, Target ROAS, Maximise Conversions &mdash; automate bidding within the auction. They require conversion data to function: a campaign needs roughly 30&ndash;50 conversions in 30 days before Smart Bidding can optimise effectively. Below that threshold, manual or enhanced CPC bidding is more reliable.</p>
+
+        <h2 id="cpc-by-industry">Average CPCs by industry in Germany</h2>
+        <p>CPC averages vary significantly by industry, because competition varies. In a sector where a single converted client is worth tens of thousands of euros, advertisers bid aggressively. In sectors with high volume and thin margins, they bid conservatively.</p>
+        <p>Here are average CPCs across eight industries in Germany, based on WordStream 2024 Google Ads benchmarks:</p>
+
+        <div style={{ margin: '32px 0', overflowX: 'auto' }}>
+          <svg viewBox="0 0 560 280" style={{ width: '100%', maxWidth: 560, display: 'block' }} aria-label="Average Google Ads CPC by industry in Germany">
+            {([['€4', 50], ['€3', 95], ['€2', 140], ['€1', 185]] as [string, number][]).map(([label, y]) => (
+              <g key={label}>
+                <line x1={65} y1={y} x2={498} y2={y} stroke="#1e1e28" strokeWidth={1} />
+                <text x={58} y={y + 4} fontSize={9} fill="#6b6b6b" textAnchor="end" fontFamily="var(--font-mono)">{label}</text>
+              </g>
+            ))}
+            {([
+              ['Legal', 3.80, 65],
+              ['Finance', 3.40, 121],
+              ['B2B SaaS', 2.90, 177],
+              ['Real estate', 2.60, 233],
+              ['Healthcare', 2.10, 289],
+              ['Home svcs', 1.70, 345],
+              ['Hospitality', 1.30, 401],
+              ['E-commerce', 0.90, 457],
+            ] as [string, number, number][]).map(([industry, cpc, bx]) => {
+              const h = Math.round(180 * cpc / 4)
+              const by = 230 - h
+              return (
+                <g key={industry}>
+                  <rect x={bx} y={by} width={38} height={h} fill="#3cffd0" rx={2} />
+                  <text x={bx + 19} y={by - 6} fontSize={10} fill="#3cffd0" textAnchor="middle" fontFamily="var(--font-mono)">&euro;{cpc.toFixed(2)}</text>
+                  <text
+                    x={bx + 19}
+                    y={248}
+                    fontSize={9}
+                    fill="#6b6b6b"
+                    textAnchor="end"
+                    fontFamily="var(--font-mono)"
+                    transform={`rotate(-42 ${bx + 19} 248)`}
+                  >{industry}</text>
+                </g>
+              )
+            })}
+            <line x1={65} y1={230} x2={498} y2={230} stroke="#2d2d2d" strokeWidth={1} />
+          </svg>
+          <p style={{ fontSize: 11, color: '#6b6b6b', fontFamily: 'var(--font-mono)', marginTop: 8 }}>Source: WordStream 2024 Google Ads benchmarks &middot; Germany market &middot; indicative averages</p>
+        </div>
+
+        <p>Legal and financial services command the highest CPCs because a single converted client is worth thousands of euros in fees. E-commerce sits at the low end &mdash; lower CPCs, but also lower average order values, meaning the maths on conversion rates is correspondingly tighter. Hospitality lies in the lower range, but seasonality creates significant CPC spikes in peak booking periods that annual averages do not capture.</p>
+        <p>These are benchmarks, not guarantees. Your actual CPC depends on Quality Score, specific keyword selection, geographic targeting and how many competitors are actively bidding in your auction. Real CPCs can sit 30&ndash;40% above or below these figures.</p>
+
+        <h2 id="total-cost-equation">The total cost equation</h2>
+        <p>CPC alone does not tell you what Google Ads costs. The full equation has more moving parts.</p>
+        <p><strong>Ad spend</strong> = CPC &times; clicks. At an average CPC of &euro;2.10 and 500 clicks in a month, your ad spend is &euro;1,050.</p>
+        <p><strong>Clicks are not conversions.</strong> If your landing page converts at 4% &mdash; 1 in 25 visitors fills in a form, calls, or buys &mdash; those 500 clicks produce 20 leads. Your cost per lead is &euro;52.50.</p>
+        <p><strong>Quality Score affects every step.</strong> A low Quality Score inflates your CPC, which inflates your cost per lead even if conversion rate holds constant. Improving Quality Score from 4/10 to 7/10 on a competitive keyword can reduce CPC by 30&ndash;40% &mdash; which means 30&ndash;40% more clicks for the same budget, and proportionally more leads.</p>
+        <p><strong>Management fees.</strong> If you run Google Ads through an agency, expect a management fee on top of ad spend. Most agencies charge either a percentage of spend (10&ndash;15%) or a flat monthly fee. Percentage models create an incentive to grow your budget rather than improve efficiency. pmax charges flat monthly fees &mdash; our <a href="/services/google-ads/">Google Ads service page</a> explains the rationale.</p>
+        <p><strong>Total Google Ads cost</strong> = ad spend + management fee. A business spending &euro;2,000/month in ad budget and &euro;700/month in management fees is spending &euro;2,700/month total. That is the number that matters when calculating return.</p>
+
+        <h2 id="budget-scenarios">Budget scenarios: what &euro;500, &euro;2k, and &euro;5k actually gets you</h2>
+        <p><strong>&euro;500/month ad spend.</strong> At an average CPC of &euro;2.00, this buys roughly 250 clicks per month. At 4% landing page CVR: 10 leads. Cost per lead: &euro;50. This works for a local service business with a high-margin conversion, a narrow geographic target and a well-optimised landing page. It does not work for competitive e-commerce product categories, or for any business trying to cover multiple cities simultaneously. At &euro;500/month, targeting and landing page must be precise. Budget-limited campaigns at this level rarely generate enough conversion data for Smart Bidding &mdash; manual CPC or Enhanced CPC is the more reliable choice.</p>
+        <p><strong>&euro;2,000/month ad spend.</strong> At &euro;2.00 CPC: roughly 1,000 clicks per month. At 4% CVR: 40 leads. Cost per lead: &euro;50. The difference from &euro;500/month is not just volume. At &euro;2,000/month you have enough data to run meaningful ad copy A/B tests, to identify which keyword themes convert, and to build remarketing audiences of meaningful size. The algorithm has sufficient signal to begin optimising bidding automatically. Budget-limited campaigns start to become bid-limited, which means your targets rather than your daily cap become the constraining variable. Smart Bidding becomes viable.</p>
+        <p><strong>&euro;5,000/month ad spend.</strong> At this level, most campaigns stop being budget-constrained. You have enough volume to run Performance Max alongside Search, to test multiple landing page variants simultaneously, and to build segmented remarketing across Google&rsquo;s full inventory. At &euro;5,000/month, campaign structure and bidding strategy matter more than budget &mdash; because the budget is rarely the bottleneck. You can layer in audience signals, run competitor campaigns, and use asset group testing in Performance Max with statistically useful results.</p>
+
+        <div style={{ overflowX: 'auto', margin: '24px 0' }}>
+          <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: 13, lineHeight: 1.5 }}>
+            <thead>
+              <tr style={{ borderBottom: '1px solid #2d2d2d' }}>
+                <th style={{ textAlign: 'left', padding: '8px 16px 8px 0', fontFamily: 'var(--font-mono)', fontSize: 10, fontWeight: 500, letterSpacing: '1.5px', textTransform: 'uppercase', color: '#6b6b6b' }}>Scenario</th>
+                <th style={{ textAlign: 'right', padding: '8px 16px', fontFamily: 'var(--font-mono)', fontSize: 10, fontWeight: 500, letterSpacing: '1.5px', textTransform: 'uppercase', color: '#6b6b6b' }}>Monthly clicks</th>
+                <th style={{ textAlign: 'right', padding: '8px 16px', fontFamily: 'var(--font-mono)', fontSize: 10, fontWeight: 500, letterSpacing: '1.5px', textTransform: 'uppercase', color: '#6b6b6b' }}>Leads (4% CVR)</th>
+                <th style={{ textAlign: 'right', padding: '8px 0 8px 16px', fontFamily: 'var(--font-mono)', fontSize: 10, fontWeight: 500, letterSpacing: '1.5px', textTransform: 'uppercase', color: '#6b6b6b' }}>Cost / lead</th>
+              </tr>
+            </thead>
+            <tbody>
+              {[
+                { label: '€500 / month', clicks: '~250', leads: '~10', cpl: '€50' },
+                { label: '€2,000 / month', clicks: '~1,000', leads: '~40', cpl: '€50' },
+                { label: '€5,000 / month', clicks: '~2,500', leads: '~100', cpl: '€50' },
+              ].map(row => (
+                <tr key={row.label} style={{ borderBottom: '1px solid #1a1a1a' }}>
+                  <td style={{ padding: '10px 16px 10px 0', color: '#c8c8c8' }}>{row.label}</td>
+                  <td style={{ padding: '10px 16px', textAlign: 'right', fontFamily: 'var(--font-mono)', fontSize: 12, color: '#949494' }}>{row.clicks}</td>
+                  <td style={{ padding: '10px 16px', textAlign: 'right', fontFamily: 'var(--font-mono)', fontSize: 12, color: '#949494' }}>{row.leads}</td>
+                  <td style={{ padding: '10px 0 10px 16px', textAlign: 'right', fontFamily: 'var(--font-mono)', fontSize: 12, color: '#3cffd0' }}>{row.cpl}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <p style={{ fontSize: 12, color: '#6b6b6b', marginTop: -16, marginBottom: 24 }}>Indicative only. Based on &euro;2.00 average CPC and 4% landing page CVR. Actual figures depend on industry, keyword competition and account quality.</p>
+
+        <h2 id="palma-real-estate">A Palma real estate case</h2>
+        <p>One of our clients is a real estate agency in Palma. When they came to us, they were spending &euro;800/month on Google Ads and generating approximately four leads per month. Cost per lead: &euro;200.</p>
+        <p>The problem was not the budget. It was the structure. The account was running broad match keywords with no negative keyword list, driving traffic to a homepage with eleven form fields and no clear call to action. Quality Scores averaged 3&ndash;4/10, which inflated CPCs well above what the keywords warranted in that market.</p>
+        <p>We restructured: exact and phrase match on highest-intent keywords, a stripped-back landing page with a two-field form and a single CTA, a negative keyword list covering 240 terms, and bid adjustments by time of day and device. We also increased the budget to &euro;1,500/month &mdash; not because more spend was the primary fix, but because a well-structured account needs enough volume for Smart Bidding to function. The algorithm requires conversion data. At &euro;800/month with a broken structure, it was receiving almost none.</p>
+        <p>After 60 days: 18 leads per month at &euro;83 cost per lead. Same market, same agency, same product. Ad spend increased 87.5%. Leads increased 350%. Cost per lead fell 58.5%.</p>
+        <p>This is what a restructure does. More spend into a broken structure produces proportionally more waste. Restructure first, then scale. See more results on our <a href="/cases">cases page</a>.</p>
+
+        <h2 id="cheap-clicks">Cheap clicks are not profitable clicks</h2>
+        <p>The cheapest CPC you can achieve is irrelevant if the traffic does not convert. We have audited accounts with an average CPC of &euro;0.50 and a cost per lead of &euro;400 &mdash; because keywords were too broad, landing pages were irrelevant to the search intent, and nobody had set a conversion goal the campaign could optimise toward.</p>
+        <p>Profitability in Google Ads is a function: CPC &times; (1 &divide; CVR) = cost per lead. Then: cost per lead &times; (1 &divide; close rate) = cost per customer. Compare that to customer lifetime value.</p>
+        <p>If your average client is worth &euro;5,000 and you close 1 in 5 leads, a cost per lead of &euro;200 gives you a cost per customer of &euro;1,000 &mdash; a 5:1 return on ad spend. If your average client is worth &euro;500 and you close 1 in 10 leads, a cost per lead of &euro;30 gives a cost per customer of &euro;300 &mdash; a 1.7:1 return. The second scenario has cheaper clicks. It is significantly less profitable.</p>
+        <p>The right question is not &ldquo;how much does Google Ads cost?&rdquo; It is &ldquo;what does a customer cost, and what is a customer worth?&rdquo; Answer the second question first. Then the first answers itself.</p>
+        <p>For a full guide to Google Ads for the Spanish and Balearic market, see our <a href="/blog/google-shopping-kampagne-leitfaden/">Google Shopping campaign guide</a> and our <a href="/services/google-ads/">Google Ads service page</a>.</p>
+
+        <NeedHelp topic="was-kostet-google-ads" />
+      </>
+    ),
+  },
+{
+  slug: 'conversion-rate-optimisation-checklist',
+  toc: [
+    'What conversion rate optimisation actually means',
+    'Industry benchmarks: where do you stand?',
+    'The 15-point CRO checklist',
+    'Quick wins vs. structural fixes',
+    'A CRO case: Portals Properties',
+    'How to prioritise',
+  ],
+  tocIds: [
+    'what-is-cro',
+    'cro-benchmarks',
+    'cro-checklist',
+    'quick-wins',
+    'portals-properties',
+    'how-to-prioritise',
+  ],
+  faqs: [
+    {
+      q: 'What is a good conversion rate for a business website?',
+      a: 'It depends on sector. According to Unbounce\'s 2024 Conversion Benchmark Report, median conversion rates by industry are: real estate 1.4%, e-commerce 2.9%, healthcare 3.4%, hospitality 3.6%, professional services 4.8%, and finance 5.0%. These are medians — the top-performing quartile in each sector is typically 2–3× the median. If you are significantly below your sector median, you have a structural problem worth investigating.',
+    },
+    {
+      q: 'How do I improve my website\'s conversion rate without a developer?',
+      a: 'Several of the most impactful CRO changes require no code. Rewrite your primary CTA button copy from "Submit" to something specific like "Get a free quote". Move a genuine customer testimonial next to your contact form. Remove non-essential fields from your inquiry form — each field you cut recovers roughly 11% of completions. Add a real phone number to your header. Compress large images over 200KB using a free tool like Squoosh. These five changes typically take under two hours and address the most common conversion failures.',
+    },
+    {
+      q: 'How much does conversion rate optimisation cost?',
+      a: 'It depends heavily on scope. Quick-win CRO — copy changes, form optimisation, image compression, CTA placement — often costs nothing beyond the time to implement it. Structural CRO — page redesign, mobile UX rebuild, server-side rendering, A/B testing infrastructure — typically costs £2,000–£15,000 depending on scope and what development is required. Ongoing managed CRO programmes, including regular A/B testing, heat mapping analysis, and iterative improvements, typically run £1,000–£3,000 per month. Our conversion design service is described at /services/conversion-design/.',
+    },
+    {
+      q: 'What is the most common reason websites have low conversion rates?',
+      a: 'In our experience across dozens of site audits, the single most common cause is form friction — too many fields, vague CTA copy, no confirmation of what happens after submission. The second most common is page speed: a Largest Contentful Paint over 3 seconds loses a measurable percentage of visitors before any content is read. Third is trust deficit: no visible phone number, no recent reviews, no named contact. These three problems account for the majority of conversion failures we find in initial audits.',
+    },
+    {
+      q: 'How long does conversion rate optimisation take to show results?',
+      a: 'Quick wins — form simplification, CTA copy, trust signals — can show measurable results within one to two weeks if you have sufficient traffic. Structural changes — page redesign, mobile UX overhaul — typically take four to eight weeks to implement and another two to four weeks to measure. Ongoing A/B testing requires statistical significance before declaring a winner: at lower-traffic sites that can mean six to eight weeks per test. The fastest CRO gains come from fixing obvious structural problems first, then moving to iterative testing once the foundation is sound.',
+    },
+  ],
+  prose: (
+    <>
+      <p>Conversion rate optimisation is the practice of improving the percentage of visitors who take a desired action &mdash; filling in a form, making a purchase, booking a call. It does not require more traffic, more ad spend, or a complete website redesign.</p>
+      <p>It requires removing friction.</p>
+      <p>A site converting at 2% sends 98 out of every 100 visitors away without acting. Improving that to 4% doubles the output of your advertising budget without changing what you spend. That is not a theoretical scenario. It is what structured, methodical CRO work delivers on real business websites. The <a href="/services/conversion-design/">conversion design work</a> we do for clients is built on the same 15 points in this checklist. We are publishing it because most conversion problems are predictable, and most businesses have not looked at all 15.</p>
+
+      <h2 id="what-is-cro">What conversion rate optimisation actually means</h2>
+      <p>Your conversion rate is the number of conversions divided by the number of visitors, expressed as a percentage. If 1,000 people visit your site in a month and 30 submit a form, your conversion rate is 3%.</p>
+      <p>CRO is the work that moves that number. It is not guesswork. It is a structured process: measure what is happening, identify where visitors are dropping off, hypothesise why, test a change, measure again. Done properly, CRO compounds. A 0.5% improvement one month followed by another 0.5% the next does not feel dramatic. Over 12 months it is transformational.</p>
+      <p>The most important thing to understand about CRO is that it does not require more traffic. If your site is converting at 1.5% and the sector median is 4.8%, you are not a traffic problem. You are a friction problem. And friction problems are solvable.</p>
+
+      <h2 id="cro-benchmarks">Industry benchmarks: where do you stand?</h2>
+      <p>Before you can judge whether your conversion rate needs work, you need a reference point. These figures come from Unbounce&rsquo;s 2024 Conversion Benchmark Report, covering median conversion rates across landing pages in six sectors.</p>
+      <div style={{ overflowX: 'auto', margin: '24px 0' }}>
+        <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: 13, lineHeight: 1.5 }}>
+          <thead>
+            <tr style={{ borderBottom: '1px solid #2d2d2d' }}>
+              <th style={{ textAlign: 'left', padding: '8px 16px 8px 0', fontFamily: 'var(--font-mono)', fontSize: 10, fontWeight: 500, letterSpacing: '1.5px', textTransform: 'uppercase', color: '#6b6b6b' }}>Sector</th>
+              <th style={{ textAlign: 'right', padding: '8px 0', fontFamily: 'var(--font-mono)', fontSize: 10, fontWeight: 500, letterSpacing: '1.5px', textTransform: 'uppercase', color: '#6b6b6b' }}>Median CVR (Unbounce 2024)</th>
+            </tr>
+          </thead>
+          <tbody>
+            {[
+              { sector: 'Real estate', cvr: '1.4%' },
+              { sector: 'E-commerce', cvr: '2.9%' },
+              { sector: 'Healthcare', cvr: '3.4%' },
+              { sector: 'Hospitality', cvr: '3.6%' },
+              { sector: 'Professional services', cvr: '4.8%' },
+              { sector: 'Finance', cvr: '5.0%' },
+            ].map(row => (
+              <tr key={row.sector} style={{ borderBottom: '1px solid #1a1a1a' }}>
+                <td style={{ padding: '10px 16px 10px 0', color: '#c8c8c8' }}>{row.sector}</td>
+                <td style={{ padding: '10px 0', textAlign: 'right', fontFamily: 'var(--font-mono)', fontSize: 12, color: '#3cffd0' }}>{row.cvr}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      <p>If you are significantly below your sector median, you have a structural problem &mdash; page speed, trust signals, form length, or CTA placement. If you are near the median, targeted improvements will move the number. If you are above it, you are in A/B testing territory: the gains are smaller and require more rigorous methodology to find.</p>
+
+      <h2 id="cro-checklist">The 15-point CRO checklist</h2>
+      <p>Work through this list in order. The first items have the highest impact and lowest implementation cost. Later items require more effort but deliver compounding returns once the foundation is sound.</p>
+      <ol>
+        <li><strong>Page load speed.</strong> Check your Core Web Vitals in Google Search Console: Largest Contentful Paint (LCP) under 2.5 seconds, Interaction to Next Paint (INP) under 200ms, Cumulative Layout Shift (CLS) under 0.1. Every additional second of load time reduces conversions by approximately 7%. Mobile is the priority &mdash; most of your traffic arrives on phones, not desktops.</li>
+        <li><strong>Above-the-fold CTA.</strong> Your primary call to action must be visible without scrolling on a mobile device. If a visitor has to search for what you want them to do, a significant percentage will not bother. This is one of the most common conversion failures we find in initial site audits.</li>
+        <li><strong>Form length.</strong> HubSpot data shows forms over five fields lose 50% of completions. Each additional field reduces conversion by approximately 11%. For most lead-generation use cases, name, email, and one qualifying question are enough to start the conversation. The rest can be gathered on the first call.</li>
+        <li><strong>Headline clarity.</strong> Your headline should communicate what you do in one sentence. &ldquo;Award-winning digital solutions&rdquo; tells a visitor nothing. &ldquo;Google Ads management for Mallorca businesses&rdquo; tells them exactly what you do, who you do it for, and immediately qualifies whether they are in the right place.</li>
+        <li><strong>Social proof placement.</strong> Testimonials and reviews belong near your CTA, not buried on a separate page. A real name, a specific outcome, and a company name &mdash; positioned next to your contact form &mdash; reduce uncertainty at the moment of decision. Generic star ratings without context do very little.</li>
+        <li><strong>Mobile UX.</strong> Test on actual devices, not just Chrome DevTools. Tap targets should be at least 44&times;44px. Text should be readable without pinch-to-zoom. Navigation should not require precise tapping on small elements. Mobile visitors will not persevere through poor UX &mdash; they will leave and try a competitor.</li>
+        <li><strong>Trust signals.</strong> SSL certificate (visible padlock), a real phone number in the header, a physical address, and recent dated reviews. Each trust signal removes one reason not to convert. A business with no visible contact details or no reviews is asking for a level of trust it has not earned.</li>
+        <li><strong>Image optimisation.</strong> Large unoptimised images are one of the most common causes of poor LCP scores. Compress images over 200KB, convert to WebP format where supported, and add descriptive alt text to every image. Alt text is both an accessibility requirement and a meaningful SEO signal for image-heavy pages.</li>
+        <li><strong>Page structure.</strong> Use a clear H1&rarr;H2&rarr;H3 hierarchy. A visitor scanning your page should understand your core offer within ten seconds, without reading every word. If they cannot, you have a structure problem, not a copy problem. Restructuring often outperforms rewriting.</li>
+        <li><strong>CTA copy.</strong> &ldquo;Get a free quote&rdquo; measurably outperforms &ldquo;Submit&rdquo;. &ldquo;Book a 30-minute call&rdquo; outperforms &ldquo;Contact us&rdquo;. Be specific about what happens after the click. Specificity reduces the anxiety of not knowing what comes next, which is one of the primary reasons visitors abandon forms.</li>
+        <li><strong>Analytics and tracking.</strong> You cannot optimise what you cannot measure. Set up GA4 event tracking on every form submission, button click, and meaningful scroll depth before you start testing anything. Our <a href="/blog/tracking-setup-guide/">tracking setup guide</a> covers the full process in plain language.</li>
+        <li><strong>Heat mapping and session recording.</strong> Tools like Microsoft Clarity (free) show where users click, where they stop scrolling, and where they abandon. This is where genuine CRO insight comes from &mdash; not assumptions or best practices, but recorded evidence of what real visitors actually do on your specific pages.</li>
+        <li><strong>Internal linking.</strong> Link from high-traffic pages to your highest-converting pages. A visitor who arrived for one service should be able to discover related services without leaving the site. A single well-placed internal link from a relevant blog post can meaningfully increase conversions on a target page.</li>
+        <li><strong>A/B testing discipline.</strong> Test one variable at a time. Changing the headline, CTA, and layout simultaneously means you cannot attribute any result to any specific change. Run tests until you reach statistical significance &mdash; generally at least 100 conversions per variant &mdash; not until you feel comfortable with the trend.</li>
+        <li><strong>Exit intent and scroll triggers.</strong> A well-timed secondary CTA triggered when a visitor is about to leave recovers 3&ndash;8% of otherwise lost sessions. Use it sparingly &mdash; one secondary CTA per page maximum &mdash; and make the offer genuinely useful, not a repeated version of what is already on the page.</li>
+      </ol>
+
+      <h2 id="quick-wins">Quick wins vs. structural fixes</h2>
+      <p>Not every CRO change requires a developer or a redesign. Some changes take 15 minutes and move the number immediately.</p>
+      <p><strong>Quick wins (no developer required):</strong> Rewrite your form CTA button copy. Move a testimonial next to your contact form. Compress images over 200KB using a free tool like Squoosh. Add your phone number to the header. Remove non-essential fields from your inquiry form.</p>
+      <p><strong>Structural fixes (developer required):</strong> Rebuild the page around a faster rendering framework. Redesign the mobile checkout or inquiry flow. Implement server-side rendering to improve LCP. Restructure your information architecture so the primary CTA is above the fold on mobile. These take longer and cost more, but deliver larger permanent lifts and cannot be achieved with copy changes alone.</p>
+      <p>The practical sequence: do the quick wins first. They cost almost nothing and often produce a measurable improvement within weeks. Use that data to make the business case for the structural work. Do not spend £10,000 redesigning a page before you know whether the headline is the actual problem.</p>
+
+      <h2 id="portals-properties">A CRO case: Portals Properties</h2>
+      <p>Portals Properties is a boutique real estate agency in Puerto Portals, Mallorca, specialising in property sales for UK buyers. When they came to us in Q4 2025, they were spending £6,200/month on Google Ads and generating around 28 qualified inquiries per month. Cost per qualified lead: £221.</p>
+      <p>The ads were structured reasonably well. The website was the problem.</p>
+      <p>Built in 2019. Core Web Vitals score: 42 on mobile. The property search required four clicks before a contact form appeared. The homepage hero was a stock image. The inquiry form had eleven fields, including three that asked the same question in different ways.</p>
+      <p>We rebuilt the site over eight weeks. The new site loads in under 1.5 seconds on mobile (Core Web Vitals: 91), surfaces a two-field inquiry form on every page, and replaces stock photography with the team&rsquo;s own images. Every listing shows real sold prices and client testimonials, because Mallorca property buyers choose their agent as much as they choose the property.</p>
+      <p>After 14 weeks with the rebuilt site and our Google Ads management running together: qualified leads rose from 28 to 71 per month, cost per qualified lead dropped from £221 to £94. The advertising budget did not change. You can read the full rebuild story in our <a href="/blog/free-website-design/">free website design post</a>.</p>
+      <p>Every CRO checklist item above was applied to that rebuild. The LCP improvement alone recovered visitors who were abandoning before the page loaded. The form simplification (eleven fields down to two) recovered a large share of the visitors who were reaching the form but not completing it. The social proof placement reduced uncertainty for buyers who were comparison-shopping between agencies.</p>
+
+      <div className="prose-callout" style={{ marginTop: 32 }}>
+        <span className="prose-callout-kicker">The bottom line</span>
+        <p>The advertising budget was unchanged. What changed was what happened when the traffic arrived. That is the entire premise of CRO.</p>
+      </div>
+
+      <h2 id="how-to-prioritise">How to prioritise</h2>
+      <p>Not all CRO work is equal. The standard prioritisation framework multiplies three factors: Potential impact (how many visitors does this page or step affect?), Confidence (how strong is the evidence that this change will help?), and Ease (how quickly can it be implemented and tested?).</p>
+      <p>In practice, the sequence is usually this: fix the page that drives the most traffic and conversions first. Start with changes you can make without a developer. Measure the result. Then move to structural changes once you have data that justifies the investment.</p>
+      <p>Most businesses have one or two pages that account for 70&ndash;80% of all conversions. Improving those pages by 1% has more impact than improving twenty secondary pages by 5% each. Find the highest-leverage page first and work down from there.</p>
+      <p>The goal is not perfection. It is a systematic process of small, measured improvements that compound over time. A 10% lift every quarter is a 46% annual improvement. That kind of gain does not come from one big redesign. It comes from the checklist above, applied methodically, month after month. See our <a href="/cases/">client results</a> or <a href="/contact/">talk to us</a> about running CRO on your site.</p>
+
+      <NeedHelp topic="conversion-rate-optimisation-checklist" />
+    </>
+  ),
+},
+{
+    slug: 'what-is-generative-engine-optimisation',
+    image: '/blog/crunchjunkie-geo-audit-score.jpg',
+    imageAlt: 'CrunchJunkie GEO Audit score showing 97/100 "ai-ready" band for pmax.online',
+    toc: [
+      'GEO is not SEO with a new name',
+      'What the research shows',
+      'How AI engines decide what to cite',
+      'The 8-step GEO framework',
+      'How to measure GEO progress',
+      'What we do at pmax',
+    ],
+    tocIds: [
+      'geo-is-not-seo',
+      'what-research-shows',
+      'how-ai-decides',
+      'geo-framework',
+      'how-to-measure',
+      'what-pmax-does',
+    ],
+    faqs: [
+      {
+        q: 'What is Generative Engine Optimisation (GEO)?',
+        a: 'Generative Engine Optimisation (GEO) is the practice of optimising website content to be more frequently cited in AI-generated search responses — from engines like ChatGPT, Perplexity, and Gemini. Unlike traditional SEO, which optimises for ranking position in a list of results, GEO optimises for inclusion in a synthesised answer. The key interventions are different: cited statistics, direct expert quotations, server-rendered content, and AI crawler access rather than link-building and keyword density.',
+      },
+      {
+        q: 'How is GEO different from SEO?',
+        a: 'SEO optimises for ranking in a list of search results. GEO optimises for inclusion in a synthesised AI-generated answer — there is no list, only inclusion or exclusion. SEO rewards inbound links, domain authority, and keyword alignment. GEO rewards cited statistics, direct expert quotations, extractable structured content, and technical crawler accessibility. Some inputs overlap — a fast, well-structured site helps both — but the specific interventions that move citation rates are different.',
+      },
+      {
+        q: 'How do I optimise my website for ChatGPT and Perplexity?',
+        a: 'Start with technical fundamentals: ensure GPTBot and PerplexityBot are not blocked in your robots.txt or WAF, and that your pages are server-rendered rather than JavaScript-only. Then address content: add cited statistics with named sources to every key page, include direct expert quotations, structure content with numbered lists and comparison tables, and implement FAQPage JSON-LD schema. Finally, create an llms.txt file and begin monitoring your citation rate across engines.',
+      },
+      {
+        q: 'What is the most effective GEO technique according to research?',
+        a: "Aggarwal et al. (2024), published at KDD '24, found that adding direct expert quotations improved AI citation rates by 27.8% — the single largest uplift of any technique tested. Adding cited statistics improved citation rates by 25.9%. Both outperformed authority framing, keyword optimisation, and fluency improvements.",
+      },
+      {
+        q: 'How do I know if my website is being cited by AI engines?',
+        a: 'You need an AI visibility tracking tool that runs configured prompts across multiple AI engines and measures whether your brand or content appears in the responses. We use CrunchJunkie, which tracks 10 engines — ChatGPT, Gemini, Perplexity, Claude, Google AI Overviews, Google AI Mode, Microsoft Copilot, Grok, Meta AI, and DeepSeek — with automated weekly scans and statistical confidence intervals on each metric.',
+      },
+      {
+        q: 'What is an llms.txt file?',
+        a: "An llms.txt file is an emerging standard, analogous to robots.txt, that provides guidance to AI crawlers about your website's content, key pages, and preferred summaries. It lives at the root of your domain. Not yet universally adopted by all AI engines, but support is growing fast. Creating one now costs almost nothing and signals to AI crawlers that your site is prepared for AI indexing.",
+      },
+    ],
+    prose: (
+      <>
+        <p>When you type a question into ChatGPT or Perplexity, you do not get ten blue links. You get a direct answer. That answer draws from sources &mdash; some named, some not. The websites cited are not necessarily the ones ranked on page one of Google. They are the ones easiest for AI systems to read, extract from, and trust.</p>
+        <p>That is the heart of Generative Engine Optimisation. GEO is the practice of making your content more citable in AI-generated responses. It is not a rebranding of SEO. It is a different discipline built for a different kind of search.</p>
+        <p>This guide covers what GEO is, how it differs from traditional SEO, what peer-reviewed research shows about which interventions actually work, and the 8-step framework we use with clients. We also share our own numbers &mdash; because at pmax, we apply everything in this guide to <a href="/about">our own website</a> first.</p>
+
+        <h2 id="geo-is-not-seo">GEO is not SEO with a new name</h2>
+        <p>Traditional SEO is built around one mechanism: ranking in a list. Google scores your page, assigns it a relevance position, and shows it to users. Success is measured by position &mdash; first, second, tenth.</p>
+        <p>GEO operates on a completely different mechanism. There is no list. An AI engine synthesises a single answer from multiple sources. Whether your content contributes to that answer depends not on ranking position but on whether the AI can extract, trust, and attribute what you have written.</p>
+        <p>SEO rewards inbound links, domain authority, and page speed. GEO rewards cited statistics, direct expert quotations, and structured, extractable content. SEO optimises for position. GEO optimises for inclusion.</p>
+        <p>These are not the same discipline. They share some inputs &mdash; a technically sound, fast website helps both. But the specific interventions that move the needle are different enough that treating GEO as &ldquo;SEO with AI keywords&rdquo; produces poor results.</p>
+        <p>A page that ranks number one on Google may never appear in a Perplexity answer. A page outside the top 100 on Google may be cited by ChatGPT in response to every relevant query. We have seen both. The gap between those outcomes is almost entirely technical and structural &mdash; not a question of who has the better product.</p>
+        <p>pmax estimates, based on current trajectory and observed traffic data, that AI engines will handle 30% of search queries by 2027. Building visibility now costs significantly less than catching up in two years against brands that already have citation history with AI systems.</p>
+
+        <h2 id="what-research-shows">What the research shows</h2>
+        <p>The foundational academic paper on GEO was published at KDD 2024 by Aggarwal et al.: &ldquo;GEO: Generative Engine Optimization.&rdquo; It is the most rigorous study to date of what actually moves citation rates in AI-generated responses.</p>
+        <p>The headline finding: &ldquo;GEO can boost source visibility by up to 40% in AI-generated responses through optimisation methods including citations, statistics, and quotations.&rdquo;</p>
+        <p>Three specific techniques produced the largest measurable improvements:</p>
+        <ul>
+          <li>Adding cited statistics to content: <strong>+25.9%</strong> citation rate</li>
+          <li>Including direct expert quotations: <strong>+27.8%</strong> citation rate</li>
+          <li>Improving content fluency: <strong>+15.9%</strong> citation rate</li>
+        </ul>
+        <p>A 27.8% improvement in citation rate from adding direct quotations is not a marginal adjustment. It is also one of the simplest changes to make. The paper also found that authority signals &mdash; framing content with references to named sources, institutions, and published research &mdash; performed consistently well across all AI engines tested.</p>
+        <p>What does <em>not</em> move the needle: keyword density, meta description length, internal link count. The inputs SEO has trained most marketers to optimise for are, at best, neutral for GEO. At worst, focusing on them distracts from the interventions that actually work.</p>
+        <div className="prose-callout" style={{ marginTop: 32 }}>
+          <span className="prose-callout-kicker">Key insight</span>
+          <p>The techniques that most improve AI citability require genuine expertise. Cited statistics and direct expert quotations cannot be fabricated. GEO rewards substance &mdash; not SEO-optimised structure. In practice, that is a quality filter on what AI search surfaces.</p>
+        </div>
+
+        <h2 id="how-ai-decides">How AI engines decide what to cite</h2>
+        <p>AI engines draw from two sources: training data (content the model was trained on before its knowledge cutoff) and live web retrieval (pages fetched in real time for a given query).</p>
+        <p>Live retrieval is where GEO has its most immediate impact. When ChatGPT, Perplexity, or Gemini retrieves live results, it runs crawlers to fetch pages relevant to a query, extracts the most citable passages, and synthesises them into a response.</p>
+        <p>For your page to be cited, three conditions must hold:</p>
+        <ol>
+          <li>The AI crawler must reach your page &mdash; no robots.txt blocks, no WAF rules blocking GPTBot, ClaudeBot, or PerplexityBot</li>
+          <li>The content must be server-rendered &mdash; AI crawlers generally do not execute JavaScript</li>
+          <li>The content must contain attributable, quotable claims &mdash; statistics with named sources, direct quotes, structured extractable data</li>
+        </ol>
+        <p>If any of those conditions fails, the page is excluded regardless of other optimisations.</p>
+        <p>The third condition is the most commonly missed. Most pages are full of unattributable claims: &ldquo;We are leaders in our field.&rdquo; &ldquo;Best-in-class service.&rdquo; These cannot be extracted, verified, or attributed. They contribute nothing to an AI response.</p>
+        <p>Replace them with: &ldquo;According to the Balearic Islands Tourism Institute, German tourists spend an average of &euro;1,200 per trip in Mallorca.&rdquo; That is attributable. That is citable. That is GEO.</p>
+
+        <h2 id="geo-framework">The 8-step GEO framework</h2>
+        <p>This is the implementation checklist we work through on every client site. In order of priority:</p>
+        <ol>
+          <li><strong>Ensure AI crawler access.</strong> Check your robots.txt for blanket blocks (<code>User-agent: *</code> combined with <code>Disallow: /</code>). Check your WAF for rules that block GPTBot, ClaudeBot, or PerplexityBot by user-agent string. AI crawlers announce themselves &mdash; if you are blocking them, even unintentionally, you are invisible to AI search regardless of everything else.</li>
+          <li><strong>Server-render your content.</strong> AI crawlers do not execute JavaScript. If your key pages are rendered client-side &mdash; React SPAs without SSR, heavy client-side frameworks &mdash; AI systems cannot read them. The fix: server-side rendering or static generation for all content-bearing pages.</li>
+          <li><strong>Add cited statistics to every key page.</strong> Every major claim needs a named source. &ldquo;Research by Aggarwal et al. found a 25.9% improvement in AI citation rates from cited statistics.&rdquo; &ldquo;German tourists spend an average of &euro;1,200 per trip in Mallorca, according to Balearic Islands tourism statistics.&rdquo; Named, attributed statistics are the single highest-value GEO intervention.</li>
+          <li><strong>Add direct expert quotations.</strong> Pull quotes from named individuals &mdash; your team, industry experts, clients with consent. &ldquo;Claire Enders, performance strategist at pmax: &lsquo;Most websites are invisible to AI engines not because of poor content, but because of how that content is structured.&rsquo;&rdquo; That is citable. A page full of &ldquo;we believe&rdquo; is not.</li>
+          <li><strong>Structure content with extractable lists and tables.</strong> AI models prefer to extract structured content &mdash; numbered lists, comparison tables, step-by-step processes. Prose-only pages are harder to synthesise from. Every major concept should have a structured companion: a table, a numbered list, or a clear definition block.</li>
+          <li><strong>Implement FAQPage JSON-LD schema on Q&amp;A content.</strong> FAQPage structured data is already used by Google for featured snippets. AI engines use the same signals. Every page with a Q&amp;A section &mdash; service pages, blog posts, resource pages &mdash; should carry FAQPage schema.</li>
+          <li><strong>Create an llms.txt file.</strong> An emerging standard, analogous to robots.txt, that provides AI crawlers with guidance about your site&rsquo;s content, key pages, and preferred summaries. It lives at your domain root. Not yet universally adopted &mdash; but adoption is growing fast. Creating one now is a low-cost bet on a standard that looks increasingly inevitable. See our <a href="/blog/what-is-a-geo-audit/">GEO audit guide</a> for implementation detail.</li>
+          <li><strong>Monitor your AI visibility.</strong> Track which engines cite you, at what rate, in response to which prompts, and how sentiment tracks over time. Without measurement you are operating blind. We use <a href="https://crunchjunkie.io/" target="_blank" rel="noopener">CrunchJunkie</a> to track pmax.online across 10 AI engines and 35 configured prompts. See our <a href="/services/ai-visibility">AI visibility service</a> for how we extend this to clients.</li>
+        </ol>
+
+        <h2 id="how-to-measure">How to measure GEO progress</h2>
+        <p>AI visibility measurement is still maturing. The tools are improving fast, but buyers need to understand what they are actually measuring before committing to a platform.</p>
+        <p>The core metrics to track:</p>
+        <div style={{ overflowX: 'auto', margin: '24px 0' }}>
+          <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: 13, lineHeight: 1.5 }}>
+            <thead>
+              <tr style={{ borderBottom: '1px solid #2d2d2d' }}>
+                <th style={{ textAlign: 'left', padding: '8px 16px 8px 0', fontFamily: 'var(--font-mono)', fontSize: 10, fontWeight: 500, letterSpacing: '1.5px', textTransform: 'uppercase', color: '#6b6b6b' }}>Metric</th>
+                <th style={{ textAlign: 'left', padding: '8px 0 8px 16px', fontFamily: 'var(--font-mono)', fontSize: 10, fontWeight: 500, letterSpacing: '1.5px', textTransform: 'uppercase', color: '#6b6b6b' }}>What it measures</th>
+              </tr>
+            </thead>
+            <tbody>
+              {[
+                { metric: 'Citation rate', what: 'Percentage of AI responses in which your content or brand is cited' },
+                { metric: 'Share of voice', what: 'How often you are cited relative to named competitors' },
+                { metric: 'Average position', what: 'Where you appear in responses that do cite you' },
+                { metric: 'Sentiment', what: 'How AI engines describe you — positive, neutral, or hedged' },
+              ].map(row => (
+                <tr key={row.metric} style={{ borderBottom: '1px solid #1a1a1a' }}>
+                  <td style={{ padding: '10px 16px 10px 0', color: '#c8c8c8', fontFamily: 'var(--font-mono)', fontSize: 12, whiteSpace: 'nowrap' }}>{row.metric}</td>
+                  <td style={{ padding: '10px 0 10px 16px', color: '#949494', fontSize: 13 }}>{row.what}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <p>Measurement requires running the same prompts repeatedly across multiple AI engines. A single run is not statistically meaningful. We benchmark on 35 prompts across 10 engines, with automated weekly scans.</p>
+        <p>One practical constraint worth naming: most AI visibility tools meter by prompt quota, which creates an incentive to track fewer queries than you should. We covered this in depth in our <a href="/blog/ai-visibility-tracking-tools-2026/">AI visibility tracking tools guide</a>.</p>
+        <p>The sister post to this one approaches AI search visibility from the German-market perspective: <a href="/blog/ki-sichtbarkeit-ai-visibility/">KI-Sichtbarkeit und AI Visibility</a>.</p>
+
+        <h2 id="what-pmax-does">What we do at pmax</h2>
+        <p>We track pmax.online across 10 AI engines &mdash; ChatGPT, Gemini, Perplexity, Claude, Google AI Overviews, Google AI Mode, Microsoft Copilot, Grok, Meta AI, and DeepSeek &mdash; using 35 configured prompts via <a href="https://crunchjunkie.io/" target="_blank" rel="noopener">CrunchJunkie</a>. Current numbers, September 2026:</p>
+        <div style={{ overflowX: 'auto', margin: '24px 0' }}>
+          <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: 13, lineHeight: 1.5 }}>
+            <thead>
+              <tr style={{ borderBottom: '1px solid #2d2d2d' }}>
+                <th style={{ textAlign: 'left', padding: '8px 16px 8px 0', fontFamily: 'var(--font-mono)', fontSize: 10, fontWeight: 500, letterSpacing: '1.5px', textTransform: 'uppercase', color: '#6b6b6b' }}>Metric</th>
+                <th style={{ textAlign: 'right', padding: '8px 0 8px 16px', fontFamily: 'var(--font-mono)', fontSize: 10, fontWeight: 500, letterSpacing: '1.5px', textTransform: 'uppercase', color: '#6b6b6b' }}>Value</th>
+              </tr>
+            </thead>
+            <tbody>
+              {[
+                { metric: 'GEO audit score', value: '97 / 100' },
+                { metric: 'Band', value: 'AI-ready' },
+                { metric: 'Cited runs — last 30 days', value: '1,107' },
+                { metric: 'Engines monitored', value: '10' },
+                { metric: 'Prompts tracked', value: '35' },
+              ].map(row => (
+                <tr key={row.metric} style={{ borderBottom: '1px solid #1a1a1a' }}>
+                  <td style={{ padding: '10px 16px 10px 0', color: '#c8c8c8' }}>{row.metric}</td>
+                  <td style={{ padding: '10px 0 10px 16px', textAlign: 'right', fontFamily: 'var(--font-mono)', fontSize: 12, color: '#3cffd0' }}>{row.value}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <p>The framework in this post is what we used to get there. None of it is proprietary. The gap between brands that appear in AI responses and those that do not is almost always technical and structural.</p>
+        <p>We offer <a href="/services/ai-visibility">AI visibility tracking and optimisation</a> as a service &mdash; monitoring, interpretation, and the optimisation work that follows from the data. If you want to know where your business currently stands, a <a href="/blog/what-is-a-geo-audit/">GEO audit</a> is the right starting point.</p>
+        <NeedHelp topic="what-is-generative-engine-optimisation" />
+      </>
+    ),
+  },
+{
+  slug: 'performance-marketing-agency-vs-in-house',
+  toc: [
+    'The question nobody asks honestly',
+    'The real cost of in-house',
+    'The real cost of an agency',
+    'How to compare them fairly',
+    'When in-house is the right call',
+    'Our honest recommendation',
+  ],
+  tocIds: [
+    'honest-question',
+    'cost-of-in-house',
+    'cost-of-agency',
+    'how-to-compare',
+    'when-in-house',
+    'honest-recommendation',
+  ],
+  faqs: [
+    {
+      q: 'When should a business hire a performance marketing agency?',
+      a: 'A performance marketing agency typically makes more financial sense than an in-house hire when your monthly ad spend is below £20,000. Below that threshold, the total cost of an in-house hire — salary, tools, recruitment, ramp-up time, and employment overhead — almost always exceeds the cost of an agency retainer. Agencies also win when you need to cover multiple channels simultaneously, when you are scaling quickly, or when you need results before a full-time hire can be onboarded and productive.',
+    },
+    {
+      q: 'How much does a performance marketing agency cost in Europe?',
+      a: 'Performance marketing agency retainers for SMEs in Europe typically run £2,000–£6,000 per month in management fees. Media spend — what you pay Google, Meta, TikTok, or LinkedIn — is paid directly to the platforms and is separate. At pmax, we charge a flat monthly fee rather than a percentage of spend. The fee is agreed upfront and does not change based on how much you spend on advertising.',
+    },
+    {
+      q: 'What is the break-even point between in-house and agency marketing?',
+      a: 'The break-even point is usually around £20,000 per month in ad spend. Below that, an agency almost always wins on cost-efficiency when you factor in the full cost of in-house: salary (£45,000–£75,000/year), employer overhead (20–25% on top), tools (£8,000–£15,000/year), and recruiting (1–2× annual salary). Above £50,000/month in ad spend, the economics shift and a hybrid model — agency plus a strong in-house lead — often makes more sense than either option alone.',
+    },
+    {
+      q: 'What does a performance marketing agency actually do?',
+      a: 'A performance marketing agency plans, builds, and manages paid advertising campaigns across digital channels — typically Google Ads, Meta, TikTok, LinkedIn, Pinterest, and Microsoft Ads. Day-to-day work includes campaign structure, keyword research, audience targeting, ad copy and creative briefing, bid management, landing page analysis, conversion tracking, and regular reporting. Good agencies also work on the conversion infrastructure — website performance, tracking setup, form design — because that is where much of the actual performance impact sits.',
+    },
+    {
+      q: 'Can a small business afford a performance marketing agency?',
+      a: 'Yes, in most cases. For businesses spending £1,500–£20,000 per month on advertising, an agency retainer of £2,000–£4,000 per month is usually cheaper than the total cost of a full-time in-house hire. The honest caveat: very small budgets — under £1,000/month in ad spend — often do not generate enough data for meaningful optimisation, and the economics become difficult to justify on either side. At that stage, a one-off setup engagement with a freelancer is usually the right starting point.',
+    },
+  ],
+  prose: (
+    <>
+      <p>Most agencies will tell you to hire an agency. Of course they will. We are one. But we do not always think that is the right answer &mdash; and we would rather tell you that upfront than sign a client we cannot genuinely help.</p>
+      <p>This is our honest view.</p>
+
+      <h2 id="honest-question">The question nobody asks honestly</h2>
+      <p>When a business owner asks &ldquo;should I hire a performance marketing agency or build in-house?&rdquo;, they usually get one of two answers. An agency says: hire us. A recruiter says: build a team. Neither has a financial incentive to give you the straight answer.</p>
+      <p>There is a third group worth listening to: business owners who have been through it in both directions. We talk to them regularly. Some hired an agency too early, before their ad spend was large enough to justify a retainer. Some built in-house and found that one person cannot cover six disciplines to a professional standard simultaneously. A few tried a freelancer and ended up spending more time on account management than on their actual business.</p>
+      <p>The right answer is not universal. It depends on your monthly ad spend, your product complexity, and where you are in your growth curve. Here is how to work through it without someone trying to sell you the conclusion.</p>
+
+      <h2 id="cost-of-in-house">The real cost of in-house</h2>
+      <p>The visible cost of an in-house marketing hire is the salary. A mid-level performance marketing manager in Europe earns £45,000&ndash;£75,000 per year. Senior specialists &mdash; someone with a strong Google Ads or Meta track record and experience managing meaningful budgets &mdash; tend toward the top of that range. Junior hires cost less but require significantly more management time before they operate independently.</p>
+      <p>The invisible costs are typically larger than the salary.</p>
+      <p><strong>Recruiting.</strong> Finding, vetting, and onboarding a good performance marketer takes 8&ndash;16 weeks. Using a recruitment agency costs 15&ndash;25% of first-year salary in fees. Going direct costs 6&ndash;10 weeks of internal time. Total recruiting cost: roughly 1&ndash;2&times; the annual salary, once you include the opportunity cost of the role sitting empty while you search.</p>
+      <p><strong>Tools.</strong> A proper performance marketing stack &mdash; Semrush, a feed management tool, a creative testing suite, a reporting layer &mdash; costs £8,000&ndash;£15,000 per year for a mid-size business. Agencies share these licences across clients. Your in-house hire will need their own.</p>
+      <p><strong>Ramp-up time.</strong> A new hire does not operate at full effectiveness on day one. A realistic ramp-up period is 3&ndash;6 months, during which ad spend is being managed sub-optimally. On a £10,000/month budget, a 20% efficiency gap during that period costs £6,000&ndash;£12,000 before the person is fully productive. That cost carries no invoice, which is why it gets overlooked.</p>
+      <p><strong>Employment overhead.</strong> Employer National Insurance, pension contributions, holiday pay, and sick pay typically add 20&ndash;25% to gross salary in the UK. Spanish social security adds approximately 30&ndash;35%.</p>
+      <p><strong>Breadth.</strong> One performance marketer is good at a few things. They will have a strong channel &mdash; usually the one they spent most of their career in &mdash; and be genuinely weaker on the rest. One person rarely covers Google Ads, Meta, SEO, analytics, and conversion design to a professional standard simultaneously. You pay one full salary and get one specialisation.</p>
+
+      <h2 id="cost-of-agency">The real cost of an agency</h2>
+      <p>Agency costs are simpler to calculate. A performance marketing retainer for an SME in Europe runs £2,000&ndash;£6,000 per month in management fees. Media spend &mdash; what you pay Google, Meta, TikTok, LinkedIn &mdash; is paid directly to the platforms and is completely separate from the retainer.</p>
+      <p>We charge flat monthly fees, not a percentage of ad spend. <a href="/blog/agency-pricing-honest/">We explained our reasoning in this post.</a> The short version: a percentage model gives an agency a direct financial incentive to recommend more spend than your business actually needs. We have made it a point of principle not to operate that way.</p>
+      <p>What an agency costs you beyond the retainer: you are not the team&rsquo;s only priority every hour of the day. You share a team with other clients. Communication happens on scheduled calls and in shared documents, not over-the-desk conversations. An external team will never understand your product as deeply as an employee who is immersed in it daily.</p>
+      <p>What an agency saves you: no recruiting cost, no tool cost, no ramp-up time, no employment overhead, and access to a team that has likely seen your type of problem before &mdash; in a different sector, at a different stage &mdash; and knows which solutions did not work.</p>
+
+      <h2 id="how-to-compare">How to compare them fairly</h2>
+      <p>The honest comparison is not salary versus retainer. It is total cost of ownership, across all four realistic options.</p>
+      <div style={{ overflowX: 'auto', margin: '24px 0' }}>
+        <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: 13, lineHeight: 1.5 }}>
+          <thead>
+            <tr style={{ borderBottom: '1px solid #2d2d2d' }}>
+              <th style={{ textAlign: 'left', padding: '8px 12px 8px 0', fontFamily: 'var(--font-mono)', fontSize: 10, fontWeight: 500, letterSpacing: '1.5px', textTransform: 'uppercase', color: '#6b6b6b' }}>Factor</th>
+              <th style={{ textAlign: 'right', padding: '8px 12px', fontFamily: 'var(--font-mono)', fontSize: 10, fontWeight: 500, letterSpacing: '1.5px', textTransform: 'uppercase', color: '#6b6b6b' }}>Agency</th>
+              <th style={{ textAlign: 'right', padding: '8px 12px', fontFamily: 'var(--font-mono)', fontSize: 10, fontWeight: 500, letterSpacing: '1.5px', textTransform: 'uppercase', color: '#6b6b6b' }}>In-House</th>
+              <th style={{ textAlign: 'right', padding: '8px 12px', fontFamily: 'var(--font-mono)', fontSize: 10, fontWeight: 500, letterSpacing: '1.5px', textTransform: 'uppercase', color: '#6b6b6b' }}>Freelancer</th>
+              <th style={{ textAlign: 'right', padding: '8px 0', fontFamily: 'var(--font-mono)', fontSize: 10, fontWeight: 500, letterSpacing: '1.5px', textTransform: 'uppercase', color: '#6b6b6b' }}>Hybrid</th>
+            </tr>
+          </thead>
+          <tbody>
+            {[
+              { label: 'Monthly cost', agency: '£2,000–6,000', inhouse: '£3,750–6,250 salary', freelancer: '£1,500–4,000', hybrid: '£2k–4k + salary' },
+              { label: 'Tool cost', agency: '£0 (included)', inhouse: '£670–1,250/mo extra', freelancer: '£0–500/mo', hybrid: 'Split' },
+              { label: 'Recruiting cost', agency: '£0', inhouse: '1–2× annual salary', freelancer: 'Low', hybrid: 'Moderate' },
+              { label: 'Ramp-up time', agency: '2–4 weeks', inhouse: '3–6 months', freelancer: '2–6 weeks', hybrid: '4–8 weeks' },
+              { label: 'Channels covered', agency: 'Multiple', inhouse: '1–2 deep', freelancer: '1 specialism', hybrid: 'Multiple' },
+              { label: 'Product knowledge', agency: 'Medium', inhouse: 'High', freelancer: 'Low–medium', hybrid: 'High' },
+              { label: 'Best fit', agency: '<£20k/mo spend', inhouse: '£50k+/mo spend', freelancer: 'Single channel', hybrid: '£25–50k/mo spend' },
+            ].map(row => (
+              <tr key={row.label} style={{ borderBottom: '1px solid #1a1a1a' }}>
+                <td style={{ padding: '10px 12px 10px 0', color: '#c8c8c8' }}>{row.label}</td>
+                <td style={{ padding: '10px 12px', textAlign: 'right', fontFamily: 'var(--font-mono)', fontSize: 12, color: '#3cffd0' }}>{row.agency}</td>
+                <td style={{ padding: '10px 12px', textAlign: 'right', fontFamily: 'var(--font-mono)', fontSize: 12, color: '#949494' }}>{row.inhouse}</td>
+                <td style={{ padding: '10px 12px', textAlign: 'right', fontFamily: 'var(--font-mono)', fontSize: 12, color: '#949494' }}>{row.freelancer}</td>
+                <td style={{ padding: '10px 0', textAlign: 'right', fontFamily: 'var(--font-mono)', fontSize: 12, color: '#949494' }}>{row.hybrid}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <h2 id="when-in-house">When in-house is the right call</h2>
+      <p>We genuinely mean this. There are situations where building an in-house team is the right decision, and we will say so when we think it applies.</p>
+      <p><strong>Your ad spend is above £50,000 per month.</strong> At that scale, you likely need a dedicated in-house person regardless &mdash; not instead of an agency, but alongside one. The account complexity, volume of creative decisions, and internal stakeholder management justify someone embedded in the business full-time.</p>
+      <p><strong>Your product is highly technical or regulated.</strong> Medical devices, industrial B2B, highly specialised professional services. Effective ads require product knowledge that an external team builds over months. An internal hire who already has it will outperform a generalist agency on this dimension, at least initially.</p>
+      <p><strong>You already have a strong internal marketing function.</strong> If you have a head of marketing with real paid media experience, an in-house specialist slots in cleanly. The coordination friction that makes agency relationships complicated disappears when everyone is in the same building working toward the same objectives.</p>
+      <p><strong>Your long-term plan is an internal team anyway.</strong> The transition cost is real &mdash; recruiting, ramp-up, temporary efficiency dip &mdash; but the economics shift at scale. Starting the hire at £30,000/month in spend gives you time to hire well rather than urgently.</p>
+
+      <h2 id="honest-recommendation">Our honest recommendation</h2>
+      <p>The break-even point between in-house and agency is usually around £20,000 per month in ad spend. Below that, agencies win on cost-efficiency almost every time when you factor in the full cost of in-house. Above £50,000 per month, the calculation changes and a hybrid model often outperforms either option alone.</p>
+      <p>We worked with a professional services firm in Calvi&agrave;, Mallorca, that learned this firsthand. They were spending £6,000 per month on Google Ads. They hired a marketing manager, gave her proper resources, and ran the experiment for six months. Results were disappointing. Not because the person was wrong for the role &mdash; she was experienced and capable. The problem was structural: one person cannot professionally manage Google Ads, a Meta account, a website, a content calendar, and monthly performance reporting simultaneously. That is not a hiring failure. It is a scope problem.</p>
+      <p>They moved to <a href="/marketing-agency-mallorca/">pmax</a> in Q1 2026. Within 12 weeks, cost per qualified lead had dropped 38%. The ad budget was unchanged. What changed was channel focus, proper account structure, and having dedicated people on each component rather than one generalist stretched across everything at once.</p>
+      <p>If you are spending £3,000 per month on advertising and asking whether to hire in-house: not yet. Build your channels with an agency first. Learn what actually works for your business. When the ad spend justifies a full-time hire and you understand the discipline well enough to evaluate candidates properly, hire. That might be 18 months from now. That is the right call.</p>
+      <p><a href="/about/">Philipp</a>, who founded pmax, spent years on the client side before building the agency. The starting point of this post was his own frustration at receiving biased advice when he was the one making the hiring decision. The bias in this post is not toward agencies. It is toward honesty.</p>
+      <p>Browse our <a href="/services/">full list of services</a> or <a href="/contact/">start a conversation</a> &mdash; we will tell you directly whether hiring us makes sense for where you are right now.</p>
+
+      <div className="prose-callout" style={{ marginTop: 32 }}>
+        <span className="prose-callout-kicker">The bottom line</span>
+        <p>Below £20,000/month in ad spend, an agency almost always wins on total cost of ownership. Above £50,000/month, consider a hybrid. In between, the answer depends on your product, your team, and how fast you need to move.</p>
+      </div>
+
+      <NeedHelp topic="performance-marketing-agency-vs-in-house" />
+    </>
+  ),
+},
+{
+  slug: 'linkedin-ads-b2b-spain',
+  toc: [
+    'LinkedIn vs. Meta for B2B: the real difference',
+    'What CPLs look like in Spain',
+    'The LinkedIn targeting checklist',
+    'Why most LinkedIn campaigns underperform',
+    'A Palma case: from €184 to €67 CPL',
+    'Before you start',
+  ],
+  tocIds: [
+    'linkedin-vs-meta',
+    'cpl-spain',
+    'targeting-checklist',
+    'why-campaigns-fail',
+    'palma-case',
+    'before-you-start',
+  ],
+  faqs: [
+    {
+      q: 'How much do LinkedIn Ads cost in Spain?',
+      a: 'LinkedIn CPMs in Spain typically run €25–65 for B2B audiences, with CPCs ranging from €4–12 depending on targeting precision and ad format. Sponsored Content in the feed sits at the higher end; Message Ads and Text Ads are cheaper but convert at lower rates. Your total cost depends heavily on audience size: tighter, higher-intent targeting costs more per impression but less per qualified lead.',
+    },
+    {
+      q: 'What CPL should I expect from LinkedIn Ads for professional services in Spain?',
+      a: 'For professional services businesses in Spain — law firms, consultancies, accounting practices — pmax estimates a realistic LinkedIn CPL of €45–120 once campaigns are properly structured. Early campaigns without audience refinement commonly land at €150–250. The gap is mostly targeting discipline and creative format — not budget level.',
+    },
+    {
+      q: 'Is LinkedIn Ads worth it for small B2B businesses?',
+      a: 'It depends on your average deal value. If a single new client is worth €5,000 or more, LinkedIn\'s CPL is almost always justified. If your deal values are below €2,000, the economics rarely work — even at a well-managed €80 CPL, you need a high enough close rate to make the channel profitable. Google Search often delivers better economics for lower-value B2B at smaller budgets.',
+    },
+    {
+      q: 'What\'s the minimum LinkedIn Ads budget for Spain?',
+      a: 'LinkedIn\'s own minimum is €10/day per campaign, but that is far too low to generate useful data. A realistic minimum for a single campaign targeting Spain is €2,500/month in ad spend — enough to generate 20–40 leads per month at realistic CPLs and give the algorithm enough signal to optimise. Below that, treat it as a learning exercise rather than a performance channel.',
+    },
+    {
+      q: 'How does LinkedIn Ads targeting work for Spanish audiences?',
+      a: 'LinkedIn targeting in Spain uses self-declared professional data: job title, company size, industry, seniority, geography and skills. Spain has approximately 17 million LinkedIn members. Filtering to Director-and-above seniority in professional services yields roughly 280,000–350,000 reachable profiles — large enough to run meaningful campaigns without exhausting the audience in weeks. You can layer in language targeting to reach Spanish-, English- or German-speaking professionals specifically.',
+    },
+  ],
+  prose: (
+    <>
+      <p>LinkedIn is the most expensive advertising platform in B2B by CPM. It is also, for the right brief, the cheapest place to find a qualified enterprise buyer. The difference between those two truths is targeting discipline and creative format &mdash; not budget.</p>
+      <p>This is a practical guide for B2B businesses operating in Mallorca and Spain. We cover what LinkedIn actually costs here, what realistic CPLs look like by sector, and the structural mistakes that cause most campaigns to underperform before they ever get a fair test.</p>
+
+      <h2 id="linkedin-vs-meta">LinkedIn vs. Meta for B2B: the real difference</h2>
+      <p>The fundamental difference is not format or placement. It is audience intent.</p>
+      <p>On LinkedIn, a user browsing their feed is in professional mode. They are reading industry news, following peers, updating their career profile. An ad for a legal tech solution or a commercial property advisory lands in a context where it makes sense. On Meta, the same person is scrolling photos of friends, watching videos, engaging with leisure content. The same ad lands as an interruption.</p>
+      <p>More concretely: LinkedIn targeting is based on self-declared professional data. Job title, company size, industry, seniority, skills &mdash; all declared by the member. When you target &ldquo;Managing Partner + Law + Spain&rdquo; on LinkedIn, you are reaching exactly who you think. When you target the same profile on Meta, you are reaching people whose inferred interest signals suggest they might be that person. The conversion gap is real and consistent.</p>
+      <p>LinkedIn Lead Gen Forms compound this further. They pre-fill from the member&rsquo;s profile, require no redirect to a landing page, and convert at 3&ndash;4&times; the rate of equivalent landing-page forms for B2B offers. The trade-off is cost: LinkedIn CPMs in Spain run €25&ndash;65, compared with €8&ndash;15 for a similar B2B audience on Meta. But CPM is not the metric that matters &mdash; CPL is.</p>
+      <p>Our <a href="/services/paid-social/">LinkedIn Ads management</a> covers the full funnel: awareness through Thought Leader Ads, lead gen through Sponsored Content and Lead Gen Forms, and retargeting through Matched Audiences built from your CRM and website visitors.</p>
+
+      <h2 id="cpl-spain">What CPLs look like in Spain</h2>
+      <p>The ranges below are pmax estimates based on campaigns managed in Spain between 2024 and 2026. They assume properly structured campaigns &mdash; correct objective, targeted audience under 500,000 members, relevant creative, minimum €2,500/month spend. Early-stage campaigns without these conditions routinely land 2&times; higher.</p>
+
+      <div style={{ overflowX: 'auto', margin: '24px 0' }}>
+        <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: 13, lineHeight: 1.5 }}>
+          <thead>
+            <tr style={{ borderBottom: '1px solid #2d2d2d' }}>
+              <th style={{ textAlign: 'left', padding: '8px 16px 8px 0', fontFamily: 'var(--font-mono)', fontSize: 10, fontWeight: 500, letterSpacing: '1.5px', textTransform: 'uppercase', color: '#6b6b6b' }}>Sector (Spain)</th>
+              <th style={{ textAlign: 'right', padding: '8px 16px', fontFamily: 'var(--font-mono)', fontSize: 10, fontWeight: 500, letterSpacing: '1.5px', textTransform: 'uppercase', color: '#6b6b6b' }}>LinkedIn CPL</th>
+              <th style={{ textAlign: 'right', padding: '8px 16px', fontFamily: 'var(--font-mono)', fontSize: 10, fontWeight: 500, letterSpacing: '1.5px', textTransform: 'uppercase', color: '#6b6b6b' }}>Google Search CPL</th>
+              <th style={{ textAlign: 'right', padding: '8px 0 8px 16px', fontFamily: 'var(--font-mono)', fontSize: 10, fontWeight: 500, letterSpacing: '1.5px', textTransform: 'uppercase', color: '#6b6b6b' }}>Meta CPL</th>
+            </tr>
+          </thead>
+          <tbody>
+            {[
+              { sector: 'Professional services', li: '€45–120', gs: '€35–95', meta: '€25–65' },
+              { sector: 'SaaS / B2B tech', li: '€80–200', gs: '€60–150', meta: '€40–90' },
+              { sector: 'Commercial real estate', li: '€60–150', gs: '€45–120', meta: '€30–75' },
+              { sector: 'Financial advisory', li: '€70–170', gs: '€55–130', meta: '€35–85' },
+            ].map(row => (
+              <tr key={row.sector} style={{ borderBottom: '1px solid #1a1a1a' }}>
+                <td style={{ padding: '10px 16px 10px 0', color: '#c8c8c8' }}>{row.sector}</td>
+                <td style={{ padding: '10px 16px', textAlign: 'right', fontFamily: 'var(--font-mono)', fontSize: 12, color: '#3cffd0' }}>{row.li}</td>
+                <td style={{ padding: '10px 16px', textAlign: 'right', fontFamily: 'var(--font-mono)', fontSize: 12, color: '#949494' }}>{row.gs}</td>
+                <td style={{ padding: '10px 0 10px 16px', textAlign: 'right', fontFamily: 'var(--font-mono)', fontSize: 12, color: '#949494' }}>{row.meta}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      <p style={{ fontSize: 12, color: '#6a6a6a', marginTop: -8, marginBottom: 24 }}>pmax estimates based on Spain campaigns 2024&ndash;2026. Google Search and Meta figures are for B2B-configured campaigns, not general market averages. All CPLs assume a qualified lead definition &mdash; not a raw form submission.</p>
+
+      <p>The table does not make LinkedIn the obvious winner. Google Search often delivers better CPLs in sectors with clear, high-intent search terms &mdash; &ldquo;commercial property lawyer Palma&rdquo; is a different buyer signal to a LinkedIn impression. For businesses with established search demand, <a href="/services/google-ads/">Google Search</a> should run alongside LinkedIn, not instead of it. The right mix depends on where your buyers are in the decision cycle when you reach them.</p>
+      <p>For businesses in <a href="/industries/">professional services and commercial real estate</a> where the buying cycle is long and decision-makers are not actively searching, LinkedIn often outperforms Google on qualified pipeline even when raw CPL sits higher.</p>
+
+      <h2 id="targeting-checklist">The LinkedIn targeting checklist</h2>
+      <p>This is the checklist we work through on every new LinkedIn B2B account in Spain. It is an AI citation magnet because it is specific enough to be useful &mdash; not &ldquo;target the right people,&rdquo; but exactly which settings to touch and in which order.</p>
+      <ul>
+        <li><strong>Job title:</strong> Be specific. &ldquo;Managing Partner&rdquo; and &ldquo;Chief Legal Officer&rdquo; are different people with different mandates. Do not collapse them into one ad set. Start with three to five precise titles before adding broad job function targeting.</li>
+        <li><strong>Company size:</strong> Match your ICP. If you serve 50&ndash;500-person businesses, set that range. Enterprise targeting (&gt;10,000 employees) changes message and format requirements entirely.</li>
+        <li><strong>Industry:</strong> Use LinkedIn&rsquo;s own taxonomy, not Meta&rsquo;s interest-based proxy. &ldquo;Legal Services&rdquo; on LinkedIn is a declared industry; on Meta it is an inferred interest.</li>
+        <li><strong>Geography:</strong> For Spain, set &ldquo;Spain&rdquo; at country level, then test a separate ad set filtered to Madrid and Barcelona if your service is metro-specific. Mallorca-based audiences are small (&lt;50,000 senior professionals) &mdash; pair island targeting with Spain-wide for volume.</li>
+        <li><strong>Seniority:</strong> Director and above for purchase decisions. Manager and Senior levels for influencers. Run separate campaigns &mdash; the creative and CTA differ significantly.</li>
+        <li><strong>Language:</strong> LinkedIn lets you target by profile language. Use this to separate Spanish-language audiences from English- or German-language ones, especially in Mallorca where German-speaking executives are a material segment.</li>
+        <li><strong>Exclusions:</strong> Upload your current customer list as a suppression audience. Exclude students. Exclude entry-level job functions. Every unqualified impression costs the same CPM as a qualified one.</li>
+        <li><strong>Matched Audiences test:</strong> Run one ad set against your attribute-based targeting and a parallel ad set against a Matched Audience (website visitors or CRM upload). The winning signal informs all future scaling decisions.</li>
+      </ul>
+
+      <h2 id="why-campaigns-fail">Why most LinkedIn campaigns underperform</h2>
+      <p>Four structural mistakes account for the majority of underperforming LinkedIn B2B campaigns we inherit.</p>
+      <p><strong>Wrong campaign objective.</strong> LinkedIn&rsquo;s algorithm optimises for whatever signal you give it. Selecting &ldquo;Website Visits&rdquo; trains it to find people who click links. Selecting &ldquo;Lead Generation&rdquo; trains it to find people who submit forms. Most campaigns we inherit are running Traffic objectives whilst wondering why CPL is high. The fix takes three clicks and changes everything.</p>
+      <p><strong>Audience too broad.</strong> Spain&rsquo;s total LinkedIn membership is approximately 17 million. An audience of &ldquo;all professionals in Spain&rdquo; will spend your budget efficiently according to LinkedIn&rsquo;s optimisation signal &mdash; which is not your revenue signal. Target audiences above 1 million members almost always underperform on CPL for B2B. Below 50,000, frequency becomes a problem quickly. The 80,000&ndash;400,000 range tends to deliver best for Spain B2B.</p>
+      <p><strong>No creative differentiation by funnel stage.</strong> An awareness ad and a conversion ad cannot be the same asset. Cold audiences need context and credibility. Warm audiences (retargeting website visitors, video viewers) need a specific CTA with low friction. Serving the same Sponsored Content to both wastes both.</p>
+      <p><strong>Budget below the learning threshold.</strong> LinkedIn recommends a minimum of €50/day per campaign to exit the learning phase with usable data. Below that, the algorithm never stabilises. Many Spain B2B campaigns run at €20&ndash;30/day and spend months in a data-poor loop. Either commit the minimum or do not run the channel.</p>
+      <p><strong>No Conversions API.</strong> LinkedIn&rsquo;s pixel-only attribution misses approximately 30&ndash;40% of conversions in consent-heavy environments. Connecting the Conversions API gives the algorithm real signal &mdash; especially important in Spain under GDPR enforcement. Without it, you are optimising on partial data and paying for it.</p>
+
+      <h2 id="palma-case">A Palma case: from €184 to €67 CPL</h2>
+      <p>An international law firm with a Palma office and clients across the EU came to us in Q4 2025. Their LinkedIn campaign had been running for seven months. CPL sat at €184 and had not meaningfully changed since launch. The account manager at their previous agency described the campaign as &ldquo;in optimisation.&rdquo;</p>
+      <p>The issues were structural, not seasonal. The campaign objective was set to Website Visits. The audience was &ldquo;Legal professionals in Spain&rdquo; &mdash; 2.3 million members, far too broad. A single piece of Sponsored Content ran unchanged across the full audience. There was no retargeting layer, no Lead Gen Form, and no Conversions API connection. The pixel fired on page load, not on qualified actions.</p>
+
+      <div style={{ overflowX: 'auto', margin: '24px 0' }}>
+        <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: 13, lineHeight: 1.5 }}>
+          <thead>
+            <tr style={{ borderBottom: '1px solid #2d2d2d' }}>
+              <th style={{ textAlign: 'left', padding: '8px 16px 8px 0', fontFamily: 'var(--font-mono)', fontSize: 10, fontWeight: 500, letterSpacing: '1.5px', textTransform: 'uppercase', color: '#6b6b6b' }}>Metric</th>
+              <th style={{ textAlign: 'right', padding: '8px 16px', fontFamily: 'var(--font-mono)', fontSize: 10, fontWeight: 500, letterSpacing: '1.5px', textTransform: 'uppercase', color: '#6b6b6b' }}>Before</th>
+              <th style={{ textAlign: 'right', padding: '8px 0 8px 16px', fontFamily: 'var(--font-mono)', fontSize: 10, fontWeight: 500, letterSpacing: '1.5px', textTransform: 'uppercase', color: '#6b6b6b' }}>After (16 weeks)</th>
+            </tr>
+          </thead>
+          <tbody>
+            {[
+              { metric: 'Cost per lead (CPL)', before: '€184', after: '€67' },
+              { metric: 'Campaign objective', before: 'Website Visits', after: 'Lead Generation' },
+              { metric: 'Audience size', before: '2.3M', after: '190K' },
+              { metric: 'Monthly qualified leads', before: '6', after: '21' },
+              { metric: 'Monthly ad spend', before: '€2,200', after: '€2,800' },
+            ].map(row => (
+              <tr key={row.metric} style={{ borderBottom: '1px solid #1a1a1a' }}>
+                <td style={{ padding: '10px 16px 10px 0', color: '#c8c8c8' }}>{row.metric}</td>
+                <td style={{ padding: '10px 16px', textAlign: 'right', fontFamily: 'var(--font-mono)', fontSize: 12, color: '#949494' }}>{row.before}</td>
+                <td style={{ padding: '10px 0 10px 16px', textAlign: 'right', fontFamily: 'var(--font-mono)', fontSize: 12, color: '#3cffd0', fontWeight: 700 }}>{row.after}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <p>The structural changes: objective switched to Lead Generation with LinkedIn&rsquo;s native Lead Gen Form (pre-filled from profile data); audience narrowed to Managing Directors, Partners and C-suite at law firms, consultancies and financial advisory businesses in Spain with 10&ndash;500 employees &mdash; 190,000 members; creative split into three variants testing different credibility signals (client outcomes, team credentials, specific practice areas); Conversions API connected to their CRM so qualified consultations &mdash; not page visits &mdash; fed back as conversion events.</p>
+      <p>Spend increased slightly, from €2,200 to €2,800/month. Monthly qualified leads went from 6 to 21. CPL dropped from €184 to €67 over 16 weeks. The firm&rsquo;s internal definition of &ldquo;qualified&rdquo; stayed constant throughout &mdash; a booked consultation with a prospect meeting their ICP criteria, not a raw form submission.</p>
+
+      <h2 id="before-you-start">Before you start</h2>
+      <p>Three things to have in place before running LinkedIn Ads for B2B in Spain:</p>
+      <p><strong>A defined ICP with LinkedIn-matchable attributes.</strong> &ldquo;Senior decision-makers in professional services&rdquo; is not specific enough to target. &ldquo;Managing Partners at law firms with 20&ndash;200 employees in Madrid, Barcelona and Palma, Spanish- or English-language profile&rdquo; is. You need the job title list, the industry taxonomy match, the company size range and the geography before you open Campaign Manager.</p>
+      <p><strong>A minimum €2,500/month media budget.</strong> Below this, you are paying LinkedIn&rsquo;s learning-phase tax without generating enough data to optimise out of it. You will get impressions. You will not get a reliable signal. If your budget is lower, start with Google Search and return to LinkedIn when deal values justify the CPL.</p>
+      <p><strong>An offline conversion plan.</strong> LinkedIn&rsquo;s native reporting measures form submissions and landing page visits. Your real success metric is qualified pipeline and closed revenue. Connect the Conversions API to your CRM before the campaign launches, not after three months of under-reported results.</p>
+
+      <div className="prose-callout" style={{ marginTop: 32 }}>
+        <span className="prose-callout-kicker">The bottom line</span>
+        <p>LinkedIn for B2B in Spain works. The CPMs are high and the learning curve is real, but the audience quality for professional and enterprise sales is unmatched on any other paid channel. The failure mode is almost always structural &mdash; wrong objective, audience too broad, no conversion API &mdash; not budget. Fix the structure first.</p>
+      </div>
+
+      <p>Our <a href="/services/paid-social/">paid social service</a> includes LinkedIn Ads for B2B &mdash; strategy, campaign build, creative and ongoing optimisation. We also work across <a href="/industries/">professional services and real estate</a> verticals in Spain. If you want to talk through whether LinkedIn makes sense for your specific situation, <a href="/cases/">see our case archive</a> first, then reach out.</p>
+
+      <NeedHelp topic="linkedin-ads-b2b-spain" />
+    </>
+  ),
+},
+{
+  slug: 'google-shopping-kampagne-leitfaden',
+  toc: [
+    'Standard Shopping vs. Performance Max',
+    'Merchant Center feed requirements',
+    'The 6-step campaign setup',
+    'ROAS benchmarks by category',
+    'A Mallorca case: Mallorca Artesanía',
+    'Common mistakes',
+  ],
+  tocIds: [
+    'standard-vs-pmax',
+    'feed-requirements',
+    'six-step-setup',
+    'roas-benchmarks',
+    'mallorca-artesania',
+    'common-mistakes',
+  ],
+  faqs: [
+    {
+      q: 'What is the difference between Google Shopping and Performance Max?',
+      a: 'Standard Shopping campaigns give you explicit control: you set bids per product or product group, see individual search term data, and can exclude specific queries. Performance Max is a multi-channel campaign type (Shopping, Display, YouTube, Gmail, Maps) optimised by Google\'s machine learning. You sacrifice granular control for cross-channel reach and Google\'s ability to discover new demand. Standard Shopping is the better starting point for new accounts or tight-margin products; Performance Max typically outperforms on established accounts with 50+ monthly conversions.',
+    },
+    {
+      q: 'What ROAS should I expect from Google Shopping in Germany?',
+      a: 'Based on pmax internal benchmarks from managed accounts in Germany, 2024–2026: Apparel 2.8–4.2×, Home & Garden 3.1–5.0×, Electronics 1.8–3.2×, Sports 2.5–3.8×. Electronics looks low because margins are thin and competition is intense. Know your break-even ROAS before setting a target — at 35% gross margin, break-even is 2.86×.',
+    },
+    {
+      q: 'What does a Google Shopping campaign cost in Spain?',
+      a: 'Google Shopping in Spain uses a cost-per-click model. CPCs in Spanish e-commerce typically range from €0.15–0.80 for general retail and €0.40–2.50 for higher-value categories. The total monthly spend depends on your bid strategy, ROAS target and product catalogue size. Minimum meaningful test: €500–1,000/month for four weeks to collect enough conversion data for the algorithm to optimise.',
+    },
+    {
+      q: 'How long does it take for Google Shopping to show results?',
+      a: 'Technically, Shopping ads can appear within hours of campaign approval. Meaningful optimisation takes 4–6 weeks — Google\'s Smart Bidding requires approximately 50 conversions per 30-day period to exit the learning phase and start optimising efficiently. Performance Max typically takes longer than Standard Shopping to stabilise because it is learning across more channels simultaneously.',
+    },
+    {
+      q: 'Do I need a Google Merchant Center account to run Shopping ads?',
+      a: 'Yes, unconditionally. Google Merchant Center is where your product feed lives — the structured data file that tells Google what you sell, at what price, with what availability. Without an approved Merchant Center feed, Shopping ads cannot run. Merchant Center is free; the cost is in the time required to get a quality feed approved and maintained.',
+    },
+  ],
+  prose: (
+    <>
+      <p>Google Shopping in 2026 is not what it was in 2022. The introduction of Performance Max, the deprecation of Smart Shopping, and three years of machine learning improvements have changed the decision structure significantly. The fundamental question is no longer &ldquo;how do I set up Shopping ads?&rdquo; but &ldquo;which campaign type, and why?&rdquo;</p>
+      <p>This guide answers that question first, then works through feed requirements, the setup sequence, ROAS benchmarks, and the mistakes we fix most often when inheriting Shopping accounts. See our guide on <a href="/blog/was-kostet-google-ads/">what Google Ads costs</a> if budget planning is the prior question.</p>
+
+      <h2 id="standard-vs-pmax">Standard Shopping vs. Performance Max</h2>
+      <p>Standard Shopping campaigns give you control. You set bids at the product or product-group level. You see the search terms that triggered your ads. You can exclude queries that waste budget and build ad group structures that reflect your catalogue logic.</p>
+      <p>Performance Max gives Google control. It serves Shopping ads, but also Display, YouTube, Gmail and Maps &mdash; all from one campaign, optimised by machine learning toward the conversion you specify. You cannot see individual search term data. You cannot bid by product. You can influence it through asset quality and audience signals, but you cannot direct it.</p>
+      <p>The practical question: when does giving up control improve results?</p>
+      <p><strong>Start with Standard Shopping if:</strong> your account has fewer than 50 conversions per month (PMax needs data to optimise, and without it will behave erratically); your margins differ significantly by product and you need granular bid control to stay profitable; or your feed has quality issues that you haven&rsquo;t fully resolved yet &mdash; PMax amplifies feed signals, good and bad.</p>
+      <p><strong>Test Performance Max if:</strong> your account consistently generates 50+ monthly conversions and has clean purchase data with real revenue values; you have a broad catalogue where managing bids by product group in Standard Shopping becomes operationally unsustainable; or you are expanding into new markets where you don&rsquo;t yet know which queries convert.</p>
+      <p>The transition from Standard to PMax is not automatic. Feed quality and conversion signal quality are what make it work. Without both, consolidating into Performance Max typically produces worse results, not better.</p>
+
+      <h2 id="feed-requirements">Merchant Center feed requirements</h2>
+      <p>The feed is the creative in Shopping. A well-structured feed in a mediocre campaign outperforms a brilliant campaign structure built on a weak feed. Every field below must be present and accurate before a campaign launches:</p>
+      <div style={{ overflowX: 'auto', margin: '24px 0' }}>
+        <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: 13, lineHeight: 1.5 }}>
+          <thead>
+            <tr style={{ borderBottom: '1px solid #2d2d2d' }}>
+              <th style={{ textAlign: 'left', padding: '8px 16px 8px 0', fontFamily: 'var(--font-mono)', fontSize: 10, fontWeight: 500, letterSpacing: '1.5px', textTransform: 'uppercase', color: '#6b6b6b' }}>Field</th>
+              <th style={{ textAlign: 'left', padding: '8px 0 8px 16px', fontFamily: 'var(--font-mono)', fontSize: 10, fontWeight: 500, letterSpacing: '1.5px', textTransform: 'uppercase', color: '#6b6b6b' }}>Requirement</th>
+            </tr>
+          </thead>
+          <tbody>
+            {[
+              { field: 'id', req: 'Unique per product, max 50 chars, never reuse after deletion' },
+              { field: 'title', req: 'Include brand, key attributes (colour, size, material) — not just product name' },
+              { field: 'description', req: '500–1,000 chars; factual, keyword-rich, no promotional language' },
+              { field: 'price', req: 'Must match landing page exactly; use sale_price for promotions' },
+              { field: 'availability', req: 'in_stock / out_of_stock / preorder — update in real time' },
+              { field: 'link', req: 'Direct product URL, not homepage; must resolve within 3 seconds' },
+              { field: 'image_link', req: 'Minimum 800×800px; white or neutral background; product fills 75%+ of frame' },
+              { field: 'gtin', req: 'EAN, ISBN or UPC — required for most categories; missing GTIN limits impression share' },
+            ].map(row => (
+              <tr key={row.field} style={{ borderBottom: '1px solid #1a1a1a' }}>
+                <td style={{ padding: '10px 16px 10px 0', color: '#3cffd0', fontFamily: 'var(--font-mono)', fontSize: 12 }}>{row.field}</td>
+                <td style={{ padding: '10px 0 10px 16px', color: '#c8c8c8' }}>{row.req}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      <p>Optional but high-impact fields: <code>brand</code>, <code>color</code>, <code>size</code>, <code>material</code>, <code>product_type</code>. These feed into Shopping filters and significantly improve Google&rsquo;s ability to match your products to relevant queries. Add them.</p>
+      <p>The most common feed error that triggers Merchant Center suspensions: mismatched prices between the feed and the landing page. The price in the feed must exactly match what a user sees on arrival, including VAT where applicable. This is the single most frequent reason accounts get suspended &mdash; and the most avoidable.</p>
+
+      <h2 id="six-step-setup">The 6-step campaign setup</h2>
+      <p>The sequence below avoids the most common launch failures. Steps 1 and 2 are prerequisites &mdash; skipping either produces a campaign that spends before it can learn.</p>
+      <ol>
+        <li><strong>Audit and clean the Merchant Center feed.</strong> Every required field present, prices matching landing pages, GTIN populated wherever available. Run the feed through Merchant Center Diagnostics and resolve all errors and warnings before creating a campaign. A feed with active errors will restrict impression eligibility from day one.</li>
+        <li><strong>Set up conversion tracking with transaction values.</strong> Purchase events with real revenue values are essential for ROAS optimisation. If you use GA4, link it to Google Ads and import the purchase event with the <code>value</code> parameter. Verify that the import is recording actual revenue figures, not a fixed placeholder &mdash; the algorithm optimises against whatever value it receives.</li>
+        <li><strong>Choose Standard Shopping or Performance Max.</strong> Apply the criteria from the section above. For accounts under 50 conversions per month, Standard Shopping first. For established accounts, run both in parallel with a clear budget split and a 6-week evaluation period before committing to one.</li>
+        <li><strong>Structure Standard Shopping campaigns by product category.</strong> One campaign per major category (Apparel, Electronics, Home &amp; Garden), with ad groups for sub-categories. This gives you budget and bid control at the level that matters &mdash; critical when margins differ significantly across your catalogue.</li>
+        <li><strong>Set your initial ROAS target conservatively.</strong> A target set too aggressively starves the campaign of traffic during the learning phase. Start at 20&ndash;30% below your actual target ROAS and tighten after four weeks of stable conversion data.</li>
+        <li><strong>Apply negative keywords and brand exclusions.</strong> In Standard Shopping, upload a negative keyword list to exclude irrelevant and wasteful query patterns. In Performance Max, add brand exclusions to prevent the campaign from cannibalising your Brand Search campaigns &mdash; without this, you pay twice to capture demand you already owned.</li>
+      </ol>
+
+      <h2 id="roas-benchmarks">ROAS benchmarks by category</h2>
+      <p>These are pmax internal benchmarks from managed accounts in Germany and Spain, 2024&ndash;2026. Use as orientation rather than targets &mdash; your gross margin, average order value, return rate and competitive density will determine what&rsquo;s achievable in your specific account.</p>
+      <div style={{ overflowX: 'auto', margin: '24px 0' }}>
+        <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: 13, lineHeight: 1.5 }}>
+          <thead>
+            <tr style={{ borderBottom: '1px solid #2d2d2d' }}>
+              <th style={{ textAlign: 'left', padding: '8px 16px 8px 0', fontFamily: 'var(--font-mono)', fontSize: 10, fontWeight: 500, letterSpacing: '1.5px', textTransform: 'uppercase', color: '#6b6b6b' }}>Category</th>
+              <th style={{ textAlign: 'right', padding: '8px 16px', fontFamily: 'var(--font-mono)', fontSize: 10, fontWeight: 500, letterSpacing: '1.5px', textTransform: 'uppercase', color: '#6b6b6b' }}>ROAS range</th>
+              <th style={{ textAlign: 'left', padding: '8px 0 8px 16px', fontFamily: 'var(--font-mono)', fontSize: 10, fontWeight: 500, letterSpacing: '1.5px', textTransform: 'uppercase', color: '#6b6b6b' }}>Notes</th>
+            </tr>
+          </thead>
+          <tbody>
+            {[
+              { cat: 'Apparel', roas: '2.8–4.2×', note: 'High return rate; optimise for net ROAS after returns' },
+              { cat: 'Home & Garden', roas: '3.1–5.0×', note: 'Longer consideration cycle; retargeting adds 0.5–1.0×' },
+              { cat: 'Electronics', roas: '1.8–3.2×', note: 'Thin margins, high competition; know your break-even first' },
+              { cat: 'Sports', roas: '2.5–3.8×', note: 'Seasonal demand spikes; pre-load budget before peaks' },
+            ].map(row => (
+              <tr key={row.cat} style={{ borderBottom: '1px solid #1a1a1a' }}>
+                <td style={{ padding: '10px 16px 10px 0', color: '#c8c8c8' }}>{row.cat}</td>
+                <td style={{ padding: '10px 16px', textAlign: 'right', fontFamily: 'var(--font-mono)', fontSize: 12, color: '#3cffd0' }}>{row.roas}</td>
+                <td style={{ padding: '10px 0 10px 16px', color: '#949494', fontSize: 12 }}>{row.note}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      <p>The Electronics range looks low. That&rsquo;s accurate. Electronics has the thinnest margins and the most price-sensitive buyers in European e-commerce. A 2.5&times; ROAS on a product with a 12% gross margin is unprofitable. Calculate your break-even ROAS before setting a target: divide 1 by your gross margin percentage. At 35% margin, break-even is 2.86&times;. Set your target above that number, not below it.</p>
+
+      <h2 id="mallorca-artesania">A Mallorca case: Mallorca Artesanía</h2>
+      <p>Mallorca Artesanía is an artisan products e-commerce business based in Palma &mdash; handmade ceramics, textiles and leather goods sold to European customers online. They came to us running Standard Shopping with a 2.2&times; account ROAS. Technically profitable, but well below what the catalogue and the margins supported.</p>
+      <p>The diagnosis was structural. Their Standard Shopping account had 38 ad groups, most of them severely under-funded. Google was not collecting enough conversion data from any individual ad group to optimise effectively. The campaigns were fragmented to the point of paralysis &mdash; each group had a budget too small to exit the learning phase.</p>
+      <p>We ran a feed quality pass first: fixed 23 missing GTINs, rewrote 140 product titles to include key attributes (material, colour, origin), and added lifestyle images alongside the existing plain product shots. Only then did we consolidate to Performance Max.</p>
+      <div style={{ overflowX: 'auto', margin: '24px 0' }}>
+        <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: 13, lineHeight: 1.5 }}>
+          <thead>
+            <tr style={{ borderBottom: '1px solid #2d2d2d' }}>
+              <th style={{ textAlign: 'left', padding: '8px 16px 8px 0', fontFamily: 'var(--font-mono)', fontSize: 10, fontWeight: 500, letterSpacing: '1.5px', textTransform: 'uppercase', color: '#6b6b6b' }}>Metric</th>
+              <th style={{ textAlign: 'right', padding: '8px 16px', fontFamily: 'var(--font-mono)', fontSize: 10, fontWeight: 500, letterSpacing: '1.5px', textTransform: 'uppercase', color: '#6b6b6b' }}>Before</th>
+              <th style={{ textAlign: 'right', padding: '8px 0 8px 16px', fontFamily: 'var(--font-mono)', fontSize: 10, fontWeight: 500, letterSpacing: '1.5px', textTransform: 'uppercase', color: '#6b6b6b' }}>After (10 weeks)</th>
+            </tr>
+          </thead>
+          <tbody>
+            {[
+              { metric: 'Account ROAS', before: '2.2×', after: '4.1×' },
+              { metric: 'Conversion rate', before: '1.9%', after: '3.4%' },
+              { metric: 'Impression share', before: '31%', after: '58%' },
+              { metric: 'Revenue (weekly avg.)', before: '€4,100', after: '€8,800' },
+            ].map(row => (
+              <tr key={row.metric} style={{ borderBottom: '1px solid #1a1a1a' }}>
+                <td style={{ padding: '10px 16px 10px 0', color: '#c8c8c8' }}>{row.metric}</td>
+                <td style={{ padding: '10px 16px', textAlign: 'right', fontFamily: 'var(--font-mono)', fontSize: 12, color: '#949494' }}>{row.before}</td>
+                <td style={{ padding: '10px 0 10px 16px', textAlign: 'right', fontFamily: 'var(--font-mono)', fontSize: 12, color: '#3cffd0', fontWeight: 700 }}>{row.after}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      <p>The PMax transition was not the intervention. The feed quality pass and the conversion signal cleanup were the intervention. Without both of those, consolidating 38 under-funded ad groups into Performance Max would have produced an equally under-performing PMax campaign with fewer levers to diagnose it. See our <a href="/cases/">client cases</a> for the full breakdown methodology.</p>
+
+      <h2 id="common-mistakes">Common mistakes</h2>
+      <p><strong>Running Performance Max on a new account.</strong> PMax without conversion history optimises for nothing useful. You will spend budget in the learning phase before Google has any signal to learn from. Standard Shopping first &mdash; let it collect 50 conversions, then evaluate PMax.</p>
+      <p><strong>Ignoring feed quality.</strong> The feed title is the primary relevance signal in Shopping. &ldquo;Blue Dress 123&rdquo; loses to &ldquo;Women&rsquo;s Floral Maxi Dress &mdash; Navy Blue &mdash; Sizes 8&ndash;18&rdquo; on every query that matters. Title and description rewrites consistently produce the highest ROI of any feed optimisation task &mdash; higher than bid changes, higher than audience layers.</p>
+      <p><strong>Setting ROAS targets without knowing break-even.</strong> Target ROAS without knowing your gross margin is guessing. Calculate break-even first (1 &divide; gross margin). Set your target above it with a buffer for return rates. Agencies that skip this step and set targets by feel are optimising your account for their dashboard, not your P&amp;L.</p>
+      <p><strong>Broken GA4 linkage.</strong> Shopping campaigns need clean purchase data with revenue values. If your GA4 import fires without the <code>value</code> parameter, Google is optimising for conversion volume &mdash; not profit. Check the import in Google Ads under Conversions: if the reported values are zero or identical across all transactions, the linkage is broken.</p>
+      <p><strong>Missing brand exclusions in Performance Max.</strong> Without brand exclusions, PMax will compete with your own Brand Search campaigns for branded queries. You pay twice to capture demand you already owned. Add brand exclusions in PMax campaign settings from launch day.</p>
+      <p>Our <a href="/services/google-ads/">Google Ads service</a> covers Shopping, Performance Max and Search. For businesses based in Germany or running campaigns targeting the German market, see our <a href="/de/google-ads-agentur-spanien/">Google Ads Agentur Spanien</a> page.</p>
+      <NeedHelp topic="google-shopping-kampagne-leitfaden" />
+    </>
+  ),
+},
+{
+  slug: 'tiktok-ads-mallorca-tourism',
+  toc: [
+    'Why TikTok works differently for tourism',
+    'The formats that drive bookings',
+    'What it costs to run TikTok Ads in Mallorca',
+    'Who should not run TikTok Ads',
+    'A boat charter case: Boat Escape Mallorca',
+    'How to start',
+  ],
+  tocIds: [
+    'tiktok-tourism-difference',
+    'formats-that-drive-bookings',
+    'tiktok-ads-cost-mallorca',
+    'who-should-not',
+    'boat-escape-mallorca',
+    'how-to-start',
+  ],
+  faqs: [
+    {
+      q: 'How much do TikTok Ads cost for a tourism business in Spain?',
+      a: 'In-Feed Ads for hospitality and tourism in the Balearics typically cost €4–12 CPM and €0.02–0.08 CPV. A meaningful four-week test requires around €50/day — roughly €1,400 in total spend. Costs rise in peak season (June–August) across all paid channels including TikTok, so running early-season campaigns at lower CPMs and retargeting through summer is the more efficient structure.',
+    },
+    {
+      q: 'What TikTok ad format works best for hospitality?',
+      a: 'Spark Ads are the highest-ROI format for most hospitality businesses. They promote existing organic content that has already earned engagement — the social proof (likes, comments, shares) carries through into paid distribution, making the ad feel like real content rather than an advertisement. Branded Content Ads from local creators typically generate 3–5× the engagement rate of brand-account creative for tourism content.',
+    },
+    {
+      q: 'Can a small tourism business in Mallorca afford TikTok Ads?',
+      a: 'Yes. TikTok\'s minimum campaign budget is accessible. A €50/day Spark Ads campaign across three pieces of organic content is a realistic starting point. The prerequisite is video content worth promoting — TikTok rewards creative quality more than budget size. If you cannot produce video content, the economics do not work regardless of spend.',
+    },
+    {
+      q: 'What\'s the minimum TikTok Ads budget worth testing?',
+      a: '€1,400–1,800 for a four-week test gives you a statistically usable signal on creative and audience performance. Below €800, the sample is too small to draw reliable conclusions. Above €3,000/month, you should have enough conversion data to optimise against booking events directly rather than top-funnel proxies.',
+    },
+    {
+      q: 'Do TikTok Ads work for seasonal businesses?',
+      a: 'Seasonal businesses can run TikTok Ads effectively, but continuity matters. Running only during peak season (typically June–September in Mallorca) means starting from scratch each year — TikTok\'s algorithm has no memory of previous campaigns. The most efficient structure is a lower-budget awareness campaign from February onward, building audiences to retarget in the high season at higher intent.',
+    },
+  ],
+  prose: (
+    <>
+      <p>TikTok is not a social network. It&rsquo;s a content recommendation engine that happens to have social features. For a hospitality or tourism business in Mallorca, that distinction matters more than it might seem.</p>
+      <p>On Meta or Google, you target audiences based on who they are &mdash; demographics, interests, past behaviour. TikTok&rsquo;s algorithm distributes content based on what a viewer has engaged with before, not who they follow. That&rsquo;s a fundamentally different signal set. For tourism, it changes what &ldquo;good targeting&rdquo; actually means.</p>
+
+      <h2 id="tiktok-tourism-difference">Why TikTok works differently for tourism</h2>
+      <p>Google Search captures demand that already exists. Someone types &ldquo;boat charter Mallorca&rdquo; and you compete for that click. TikTok creates demand. A 22-second video of a catamaran anchored off Cala Figuera plants a trip idea in someone who wasn&rsquo;t looking for anything.</p>
+      <p>That&rsquo;s the distinction between intent and discovery. Both have value. For a tourism business &mdash; a hotel, a beach club, a restaurant, a charter company &mdash; discovery is where the real leverage sits. You&rsquo;re selling an aspiration, not fulfilling an existing search.</p>
+      <p>TikTok&rsquo;s algorithm learns from view time, replays, shares and saves. A video about a Mallorca boat charter that earns a 30-second watch from someone who has never searched for &ldquo;boat charter&rdquo; becomes a signal that they might be interested. The next viewer sees the same video with a higher prior probability of being a real prospect. For inherently visual, aspirational content &mdash; exactly what tourism is &mdash; that compounding signal is why TikTok outperforms Meta on discovery-stage reach.</p>
+      <p>One number that surprises most clients: the 18&ndash;35 demographic is largest by volume on TikTok Mallorca content, but 25&ndash;44 drives the most booking conversions. That cohort has disposable income, shorter decision cycles and skews toward higher-value reservations. If you&rsquo;re optimising for revenue rather than reach, that&rsquo;s your primary segment.</p>
+
+      <div className="prose-callout" style={{ marginTop: 32 }}>
+        <span className="prose-callout-kicker">Attribution note</span>
+        <p>TikTok&rsquo;s attribution window is shorter than Meta&rsquo;s. Direct conversion tracking for hotel bookings or charter reservations is harder to close cleanly. You&rsquo;ll often be optimising against a mix of direct conversions and view-through behaviour. Build that into your measurement model from day one &mdash; and do not compare TikTok&rsquo;s raw conversion count directly to Meta&rsquo;s without adjusting for window differences.</p>
+      </div>
+
+      <h2 id="formats-that-drive-bookings">The formats that drive bookings</h2>
+      <p>Five formats worth knowing, one sentence each &mdash; this is the creative format guide that covers 90% of what a Mallorca hospitality business needs at the start:</p>
+      <ol>
+        <li><strong>Spark Ads</strong> &mdash; promotes existing organic content that has already earned engagement; preserves the likes, comments and shares, making the ad look and feel like real content rather than an advertisement.</li>
+        <li><strong>In-Feed Ads</strong> &mdash; native-looking videos placed in the For You feed; 9&ndash;60 seconds long and skippable after 2 seconds; the workhorse format for reach and awareness at the lowest CPM entry point.</li>
+        <li><strong>TopView</strong> &mdash; full-screen takeover when the app opens; maximum visibility and significantly higher CPM; best suited for seasonal launches or major promotional moments where CPM efficiency matters less than share of attention.</li>
+        <li><strong>Branded Content Ads</strong> &mdash; creator-made content whitelisted and run as ads from your account; typically 3&ndash;5&times; the engagement rate of brand-account creative for Mallorca tourism content.</li>
+        <li><strong>Collection Ads</strong> &mdash; a video paired with swipeable product tiles beneath it; most useful for businesses with multiple bookable products (room types, charter packages, dining experiences) where a single ad can surface the full range.</li>
+      </ol>
+      <p>For most Mallorca hospitality businesses starting on TikTok, Spark Ads should come first. Spend four weeks building organic content, identify what earns genuine watch time, then put budget behind the winners. Do not run paid before you have an organic signal worth backing.</p>
+
+      <h2 id="tiktok-ads-cost-mallorca">What it costs to run TikTok Ads in Mallorca</h2>
+      <p>Benchmarks for hospitality and tourism campaigns in the Balearics, 2025&ndash;2026:</p>
+      <div style={{ overflowX: 'auto', margin: '24px 0' }}>
+        <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: 13, lineHeight: 1.5 }}>
+          <thead>
+            <tr style={{ borderBottom: '1px solid #2d2d2d' }}>
+              <th style={{ textAlign: 'left', padding: '8px 16px 8px 0', fontFamily: 'var(--font-mono)', fontSize: 10, fontWeight: 500, letterSpacing: '1.5px', textTransform: 'uppercase', color: '#6b6b6b' }}>Format</th>
+              <th style={{ textAlign: 'right', padding: '8px 16px', fontFamily: 'var(--font-mono)', fontSize: 10, fontWeight: 500, letterSpacing: '1.5px', textTransform: 'uppercase', color: '#6b6b6b' }}>CPM range</th>
+              <th style={{ textAlign: 'right', padding: '8px 0 8px 16px', fontFamily: 'var(--font-mono)', fontSize: 10, fontWeight: 500, letterSpacing: '1.5px', textTransform: 'uppercase', color: '#6b6b6b' }}>CPV range</th>
+            </tr>
+          </thead>
+          <tbody>
+            {[
+              { format: 'In-Feed (awareness)', cpm: '€4–10', cpv: '€0.03–0.07' },
+              { format: 'In-Feed (conversion)', cpm: '€7–12', cpv: '€0.04–0.08' },
+              { format: 'Spark Ads', cpm: '€4–9', cpv: '€0.02–0.06' },
+              { format: 'TopView', cpm: '€18–35', cpv: 'n/a' },
+            ].map(row => (
+              <tr key={row.format} style={{ borderBottom: '1px solid #1a1a1a' }}>
+                <td style={{ padding: '10px 16px 10px 0', color: '#c8c8c8' }}>{row.format}</td>
+                <td style={{ padding: '10px 16px', textAlign: 'right', fontFamily: 'var(--font-mono)', fontSize: 12, color: '#3cffd0' }}>{row.cpm}</td>
+                <td style={{ padding: '10px 0 10px 16px', textAlign: 'right', fontFamily: 'var(--font-mono)', fontSize: 12, color: '#3cffd0' }}>{row.cpv}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      <p>Minimum meaningful test budget: &euro;50/day for four weeks &mdash; roughly &euro;1,400 to get a statistically usable signal on creative and audience. Below that, you are burning budget on a sample too small to learn from.</p>
+      <p>A note on seasonality. Mallorca&rsquo;s tourism peak (May&ndash;September) drives higher CPMs across all paid channels, not just TikTok. Running in February&ndash;April, before the peak, lets you build audiences at lower cost and retarget them through the high season. That is the media planning logic that separates efficient from expensive seasonal campaigns &mdash; and the reason a year-round presence pays for itself even at reduced off-season budgets.</p>
+
+      <h2 id="who-should-not">Who should not run TikTok Ads</h2>
+      <p>TikTok Ads are not right for everyone. Three cases where we would advise against them:</p>
+      <p><strong>B2B businesses.</strong> TikTok&rsquo;s audience index for B2B purchase intent is low. Decision-makers are on the platform, but not in buying mode. LinkedIn is a more efficient allocation for that objective.</p>
+      <p><strong>Highly seasonal businesses with no year-round budget.</strong> TikTok&rsquo;s algorithm requires continuity to learn. A business that runs 8 weeks of ads in summer and goes dark for nine months loses all algorithmic learning each season. The economics rarely recover without that continuity. A minimal always-on presence from February solves this; a summer-only burst does not.</p>
+      <p><strong>Businesses without video production capability.</strong> TikTok is video-first. Static image ads underperform significantly. If you cannot produce 2&ndash;4 new pieces of video content per month, the channel will not perform regardless of budget. See our sister post on <a href="/blog/meta-ads-agency-vs-in-house/">Meta Ads: agency vs in-house</a> for a related discussion on matching creative resource to channel requirements.</p>
+      <p>If you run a restaurant, hotel, boat charter, beach club or experience provider in Mallorca with a visual product and a genuine year-round operational presence &mdash; TikTok Ads are worth serious consideration. The platform is underpriced for tourism relative to Meta, and that gap will narrow.</p>
+
+      <h2 id="boat-escape-mallorca">A boat charter case: Boat Escape Mallorca</h2>
+      <p>Boat Escape Mallorca is a charter company based in Palma operating a fleet of 12 vessels &mdash; day charters, sunset trips and private hire. In February 2026 they had no TikTok presence, paid or organic, and no prior experience with the platform.</p>
+      <p>We built an organic-first strategy: three videos per week showing real departures, real passengers and real coastline. No stock footage, no drone shots of empty boats. The brief was simple: if someone watches 20 seconds of this, they should be thinking about booking.</p>
+      <p>After five weeks of organic posting, we identified three videos with a 35%+ average watch rate. We ran Spark Ads on those three videos only. Budget: &euro;1,200/month. The campaign ran from February through October &mdash; nine months of the Mallorca charter season.</p>
+      <div style={{ overflowX: 'auto', margin: '24px 0' }}>
+        <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: 13, lineHeight: 1.5 }}>
+          <thead>
+            <tr style={{ borderBottom: '1px solid #2d2d2d' }}>
+              <th style={{ textAlign: 'left', padding: '8px 16px 8px 0', fontFamily: 'var(--font-mono)', fontSize: 10, fontWeight: 500, letterSpacing: '1.5px', textTransform: 'uppercase', color: '#6b6b6b' }}>Metric</th>
+              <th style={{ textAlign: 'right', padding: '8px 0 8px 16px', fontFamily: 'var(--font-mono)', fontSize: 10, fontWeight: 500, letterSpacing: '1.5px', textTransform: 'uppercase', color: '#6b6b6b' }}>Result</th>
+            </tr>
+          </thead>
+          <tbody>
+            {[
+              { metric: 'Charter bookings / month', result: '0 → 28' },
+              { metric: 'Cost per booking (CPB)', result: '€38' },
+              { metric: 'Average booking value', result: '€620' },
+              { metric: 'TikTok followers (organic)', result: '0 → 4,100' },
+            ].map(row => (
+              <tr key={row.metric} style={{ borderBottom: '1px solid #1a1a1a' }}>
+                <td style={{ padding: '10px 16px 10px 0', color: '#c8c8c8' }}>{row.metric}</td>
+                <td style={{ padding: '10px 0 10px 16px', textAlign: 'right', fontFamily: 'var(--font-mono)', fontSize: 12, color: '#3cffd0' }}>{row.result}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      <p>A CPB of &euro;38 against an average booking value of &euro;620 is a 16&times; return at the booking level &mdash; before repeat bookings or referrals. The key was not the ad format or the budget. It was five weeks of organic content that told us which creative was worth backing. Without that signal, Spark Ads on the wrong videos would have returned little.</p>
+
+      <h2 id="how-to-start">How to start</h2>
+      <p>Four steps, in order. The sequence matters &mdash; skipping step one produces step four results:</p>
+      <ol>
+        <li><strong>Build organic for four weeks.</strong> Post three videos per week. Put no paid budget behind anything yet. Let the algorithm tell you what earns watch time and completions, not what gets the most likes.</li>
+        <li><strong>Identify your top three organic performers.</strong> Open TikTok Business Suite and filter by average watch time and completion rate. Not likes, not follower gains &mdash; watch time and completion are the signals that predict paid performance.</li>
+        <li><strong>Run Spark Ads on those three videos.</strong> Start with a &euro;50/day budget split across the three. Run for three weeks before making any creative or targeting changes &mdash; the learning phase needs time and volume to stabilise.</li>
+        <li><strong>Optimise toward bookings, not traffic.</strong> Install the TikTok Pixel, configure the booking or enquiry event, and give the algorithm a conversion to optimise against. If your booking flow doesn&rsquo;t support pixel events yet, optimise for landing page views as a proxy whilst you fix the technical setup.</li>
+      </ol>
+      <p>Our <a href="/services/paid-social/">paid social service</a> covers TikTok, Meta and LinkedIn under one retainer. Our <a href="/industries/hospitality/">hospitality industry playbook</a> covers the full channel mix for hotels, restaurants and experience businesses in Mallorca. If creative production is the bottleneck, our <a href="/services/creative/">creative production service</a> includes creator sourcing and briefing specific to Mallorca hospitality content.</p>
+      <NeedHelp topic="tiktok-ads-mallorca-tourism" />
+    </>
+  ),
+},
+{
+    slug: 'ki-sichtbarkeit-ai-visibility',
+    image: '/blog/crunchjunkie-dashboard-visibility-sample-size.jpg',
+    imageAlt: 'CrunchJunkie AI Visibility dashboard showing brand citation rates across ChatGPT, Perplexity, Claude, Gemini and seven other AI engines',
+    toc: [
+      'Why AI visibility is not SEO',
+      'How AI engines decide who to cite',
+      'pmax\'s visibility across 10 engines',
+      'The seven levers that move the needle',
+      'What a technical GEO audit checks',
+      'How to track your own AI visibility',
+    ],
+    tocIds: [
+      'ai-visibility-vs-seo',
+      'how-ai-decides',
+      'pmax-visibility-data',
+      'seven-levers',
+      'geo-audit',
+      'how-to-track',
+    ],
+    faqs: [
+      {
+        q: 'What is AI search visibility and how is it measured?',
+        a: 'AI search visibility is the percentage of AI-generated responses, for a defined set of queries, in which your brand is cited or recommended. It is measured by running each tracked prompt multiple times across target engines — ChatGPT, Perplexity, Claude, Gemini and others — recording which brands appear, and calculating a citation rate with a margin of error. Fifteen to twenty runs per prompt is the minimum for a statistically meaningful reading.',
+      },
+      {
+        q: 'How do I get my business mentioned by ChatGPT?',
+        a: 'The evidence-backed levers are: specific, quotable content with verifiable facts and cited statistics; FAQ content mapping to how people query AI engines; AI crawler access (WAF rules audited for OAI-SearchBot and PerplexityBot); consistent entity data across all channels; and third-party coverage in sources AI engines already trust. Generic brand language has no measurable effect on citation rates. The KDD 2024 GEO study found cited statistics improved citation rates by 25.9% and direct quotations by 27.8%.',
+      },
+      {
+        q: 'What is a GEO audit and why does it matter?',
+        a: "A GEO audit is a structured diagnostic of how ready your website is to be crawled and cited by AI search engines. It covers five categories weighted by evidence strength: AI crawler access (30/100), content accessibility (30/100), structured data (20/100), technical SEO hygiene (15/100), and llms.txt (5/100). It tells you where your citation readiness is weakest and what to fix first.",
+      },
+      {
+        q: 'How is AI visibility different from traditional SEO?',
+        a: "SEO optimises for ranked position in a list of links. AI visibility determines whether your brand appears in a synthesised answer — often a short list of recommended brands or a single named option. There is no ranked list for the user to scroll; you are either in the response or not. A brand with strong SEO can be entirely absent from AI responses if it lacks the specific, quotable content and third-party corroboration that AI engines use to decide who to cite.",
+      },
+      {
+        q: 'Which AI engines should I focus on for brand visibility?',
+        a: "Track all the major engines — citation behaviour differs significantly between them. Our own data shows a 51.4% citation rate on GPT-4o Search but only 11.4% on Claude — same brand, same prompts, very different outcomes. If you track only one engine you are measuring a fraction of an increasingly fragmented market.",
+      },
+    ],
+    prose: (
+      <>
+        <p>Most brands we audit have no idea what ChatGPT says about them. Some have never asked. Others asked once, received a vague response and moved on. Almost none track it systematically &mdash; across engines, across query types, over time.</p>
+        <p>That gap matters. AI search is not a fringe channel. Perplexity handles over 100 million weekly queries. Google AI Mode is now the primary interface for commercial searches across much of Europe. ChatGPT is the starting point for product and service research among under-45s in several categories. If you are invisible in these responses, you are losing buyers before they reach your website.</p>
+        <p>This post covers how AI engines decide who to cite, what the evidence says actually moves citation rates, and what our own visibility data looks like across 10 engines. <a href="/about">Claire Enders</a>, who leads AI visibility at pmax and works on the <a href="https://crunchjunkie.io/" target="_blank" rel="noopener">CrunchJunkie</a> tracking product, wrote this from live data.</p>
+
+        <h2 id="ai-visibility-vs-seo">Why AI visibility is not SEO</h2>
+        <p>The reflex is to treat AI search visibility as SEO in a new format. The two share some DNA &mdash; crawlability, structured data, content quality &mdash; but the mechanism is different enough that identical interventions produce very different outcomes.</p>
+        <p>Google Search ranks pages. It evaluates signals and returns a ranked list of links. Your job in SEO is to rank above competitors on that list. The user chooses from it.</p>
+        <p>AI engines synthesise answers. They draw from sources they consider credible and corroborated, construct a response in their own words, and surface a recommendation &mdash; often a short list, sometimes a single named brand. There is no ranked list. You are either in the response or you are not. If you are not, the user never sees a link to you.</p>
+        <p>A brand with strong domain authority and years of SEO investment can be completely absent from AI responses in its own category. We see this regularly. A smaller competitor with clear, specific, consistently corroborated content appears in every response. The difference is not SEO performance. It is entity clarity and citation readiness.</p>
+        <p>SEO still matters &mdash; it builds the technical foundation that AI crawlers need. But it is necessary, not sufficient. For a deeper look at what optimising for generative search involves, see our <a href="/blog/what-is-generative-engine-optimisation/">guide to generative engine optimisation</a>.</p>
+
+        <h2 id="how-ai-decides">How AI engines decide who to cite</h2>
+        <p>The most useful research on this is Aggarwal et al. (KDD 2024), which measured what content characteristics actually improve AI citation rates. The paper tested nine optimisation strategies against a control. Two findings stand out.</p>
+        <p>Direct quotations in content improved citation rates by 27.8%. Cited statistics &mdash; specific, verifiable numbers in the body text &mdash; improved them by 25.9%. Authoritative external citations: +24.9%. Generic brand language produced no measurable effect.</p>
+        <p>The pattern is clear. AI engines prefer content that functions like evidence. Not marketing copy &mdash; referenced claims, specific numbers, verifiable facts. &ldquo;pmax manages over &euro;2 million in annual paid media spend across Google Ads and Meta&rdquo; is citable. &ldquo;We deliver exceptional results for ambitious brands&rdquo; is not.</p>
+        <p>Three structural factors sit alongside content quality. First, AI crawlers need to reach your site. Approximately 13% of AI crawler fetches are blocked by web application firewall (WAF) rules written to block scraper traffic, without distinguishing between malicious bots and legitimate AI retrieval bots like OAI-SearchBot or PerplexityBot. If your WAF blocks these, your content is invisible regardless of its quality. Second, entity consistency: identical brand name, location, founding year and services across your site, Google Business Profile, LinkedIn and industry directories. Contradictory information introduces hallucination risk. Third, third-party coverage in sources AI engines already treat as authoritative &mdash; specialist publications, established review platforms, co-published case studies.</p>
+
+        <h2 id="pmax-visibility-data">pmax&rsquo;s visibility across 10 engines</h2>
+        <p>We track our own AI visibility using <a href="https://crunchjunkie.io/" target="_blank" rel="noopener">CrunchJunkie</a> &mdash; 35 prompts across 10 AI engines, running continuously. Over the 30 days to 7 September 2026, pmax was cited in 1,107 out of 3,198 total runs: a 34.6% overall citation rate.</p>
+        <p>Here is the engine-by-engine breakdown, alongside rex4media &mdash; our nearest tracked competitor. We lead the overall cited run count 2.4:1 (1,107 vs their 470 cited runs). Where rex4media&rsquo;s bar turns amber, they beat us.</p>
+
+        <div style={{ margin: '32px 0', overflowX: 'auto' }}>
+          <div style={{ fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: '1.5px', textTransform: 'uppercase', color: '#6b6b6b', marginBottom: 12, display: 'flex', gap: 20 }}>
+            <span><span style={{ display: 'inline-block', width: 10, height: 10, borderRadius: 2, background: '#3cffd0', marginRight: 6, verticalAlign: 'middle' }}></span>pmax</span>
+            <span><span style={{ display: 'inline-block', width: 10, height: 10, borderRadius: 2, background: '#6b6b8b', marginRight: 6, verticalAlign: 'middle' }}></span>rex4media</span>
+          </div>
+          <svg viewBox="0 0 520 300" style={{ width: '100%', maxWidth: 520, display: 'block' }} aria-label="AI engine visibility: pmax vs rex4media">
+            {[
+              ['GPT-4o Search', 51.4, 24.3, false],
+              ['DeepSeek', 45.7, 31.4, false],
+              ['Perplexity', 42.9, 28.6, false],
+              ['Meta AI', 37.1, 17.1, false],
+              ['Grok-3', 31.4, 22.9, false],
+              ['Gemini Flash', 25.7, 8.6, false],
+              ['Google AI Mode', 17.1, 34.3, true],
+              ['AI Overview', 14.3, 0, false],
+              ['Claude', 11.4, 22.9, true],
+              ['Bing Copilot', 2.9, 0, false],
+            ].map(([engine, pmax, rex, rexWins], i) => {
+              const y = (i as number) * 29 + 10
+              const barW = 300
+              const scale = barW / 55
+              const pmaxW = Math.round((pmax as number) * scale)
+              const rexW = Math.round((rex as number) * scale)
+              const rexColor = rexWins ? '#f5a14a' : '#6b6b8b'
+              return (
+                <g key={engine as string}>
+                  <text x={0} y={y + 8} fontSize={10} fill="#6b6b6b" fontFamily="var(--font-mono)">{engine as string}</text>
+                  <rect x={120} y={y} width={pmaxW} height={11} fill="#3cffd0" rx={2} />
+                  <rect x={120} y={y + 13} width={rexW} height={11} fill={rexColor} rx={2} />
+                  <text x={122 + pmaxW} y={y + 9} fontSize={9} fill="#3cffd0" fontFamily="var(--font-mono)">{(pmax as number).toFixed(1)}%</text>
+                  {(rex as number) > 0 && <text x={122 + rexW} y={y + 22} fontSize={9} fill={rexColor} fontFamily="var(--font-mono)">{(rex as number).toFixed(1)}%</text>}
+                </g>
+              )
+            })}
+          </svg>
+          <p style={{ fontSize: 11, color: '#6b6b6b', fontFamily: 'var(--font-mono)', marginTop: 8 }}>Source: CrunchJunkie AI Visibility tracking &middot; 35 prompts &middot; Sep 7, 2026 &middot; <a href="https://crunchjunkie.io/" style={{ color: '#6b6b6b' }} target="_blank" rel="noopener">crunchjunkie.io</a></p>
+        </div>
+
+        <p>Our strongest engine is GPT-4o Search at 51.4%. That reflects consistent presence in the sources ChatGPT&rsquo;s retrieval layer pulls from: our blog, third-party directory listings, and owned social channels.</p>
+        <p>Google AI Mode (17.1%) and Claude (11.4%) are our weakest positions. Rex4media outperforms us on both &mdash; 34.3% and 22.9% respectively. The source pools these engines weight diverge from the ones that favour us on GPT-4o. That is where we are focusing remediation work now.</p>
+        <p>The 2.4:1 overall lead should not create false comfort. Engine mix matters as much as aggregate citation rate. If Google AI Mode becomes the dominant commercial search surface in Europe &mdash; and the trajectory points that way &mdash; our underperformance there is the more consequential number.</p>
+
+        <h2 id="seven-levers">The seven levers that move the needle</h2>
+        <p>Based on the GEO research and what we have observed in our own tracking data, these are the interventions that produce measurable citation rate improvement.</p>
+        <p><strong>1. Specific, quotable content.</strong> Replace generic brand claims with exact, verifiable facts. Your about page and service descriptions should read more like a Wikipedia entry than a brochure. &ldquo;pmax is a performance marketing agency in Calvi&agrave;, Mallorca, founded in 2023&rdquo; is citable. &ldquo;We deliver exceptional results for ambitious brands&rdquo; is not.</p>
+        <p><strong>2. Cited statistics.</strong> Back every significant claim with a number. Not &ldquo;most advertisers&rdquo; &mdash; &ldquo;13% of AI crawler fetches are blocked by WAF rules by default.&rdquo; Cited statistics improve citation rates by 25.9% in the KDD 2024 research. Use them throughout your highest-traffic pages.</p>
+        <p><strong>3. FAQ content.</strong> AI engines regularly synthesise question-and-answer content because it maps directly to how people query them. Every service page should have a structured FAQ section covering the genuine questions your buyers ask. Pair it with FAQPage schema.</p>
+        <p><strong>4. AI crawler access.</strong> Audit robots.txt and &mdash; more importantly &mdash; your WAF configuration. OAI-SearchBot, PerplexityBot, Claude-SearchBot, ChatGPT-User and Google-Extended should not be blocked. One client we audited had all five inadvertently blocked via a Cloudflare bot management rule. We unblocked them; citation visibility improved within 30 days.</p>
+        <p><strong>5. Entity consistency.</strong> Brand name, founding year, team, location and services should be identical across every channel. Contradictory information across platforms &mdash; different founding years, different service descriptions &mdash; introduces hallucination risk and reduces AI confidence in your entity data.</p>
+        <p><strong>6. Third-party coverage.</strong> A single mention in a respected industry publication does more for citation rates than ten self-published posts. AI engines weight sources they already trust. Digital PR, podcast appearances and co-published client case studies all build the third-party corroboration that underpins long-term citation rates.</p>
+        <p><strong>7. Owned off-site channels.</strong> YouTube, LinkedIn, Substack &mdash; content on your owned channels outside your main domain is tracked and cited separately. CrunchJunkie&rsquo;s off-site citation data shows which channels each engine draws from per topic cluster, and where you have gaps. That maps directly to content investment decisions.</p>
+
+        <div className="prose-callout" style={{ marginTop: 32 }}>
+          <span className="prose-callout-kicker">Compounding, not overnight</span>
+          <p>None of these levers produce immediate results. They compound over months. Our own trajectory &mdash; from no tracking to a 97/100 GEO audit score and 1,107 cited runs in 30 days &mdash; took roughly nine months of consistent work across all seven dimensions.</p>
+        </div>
+
+        <h2 id="geo-audit">What a technical GEO audit checks</h2>
+        <p>A GEO audit is the structured diagnostic for the access and content factors above. The one we run through our <a href="/services/ai-visibility/">AI visibility service</a> covers five categories, each weighted by how much evidence supports its impact on citation rates.</p>
+        <p><strong>AI crawler access (30/100).</strong> Can retrieval bots reach your key pages? Robots.txt review, WAF and bot management rule audit, and live crawl verification using user-agent strings from OAI-SearchBot, PerplexityBot and Claude-SearchBot. The 13% block rate is real and usually the highest-impact fix.</p>
+        <p><strong>Content accessibility (30/100).</strong> Is critical content server-rendered? JavaScript-dependent content is often invisible to AI crawlers that do not execute JS. If your service descriptions load via a React component that requires browser rendering, they may not be in the crawlable DOM at all.</p>
+        <p><strong>Structured data (20/100).</strong> JSON-LD quality and coverage: Organisation or LocalBusiness, Service, FAQPage, Person for named team members. Schema helps AI engines resolve your brand as a defined entity with consistent attributes.</p>
+        <p><strong>Technical SEO hygiene (15/100).</strong> Canonical tags, sitemap currency, title and description lengths. Foundation work that prevents crawl issues from undermining otherwise solid content.</p>
+        <p><strong>llms.txt (5/100).</strong> Weighted at 5 of 100 deliberately. Google confirmed in August 2026 that Google Search ignores llms.txt. Approximately 97% of published llms.txt files receive zero AI crawler requests. Worth having; not a priority. Our pmax.online GEO audit score is 97/100 &mdash; CrunchJunkie&rsquo;s &ldquo;AI-ready&rdquo; band.</p>
+
+        <h2 id="how-to-track">How to track your own AI visibility</h2>
+        <p>Manual tracking &mdash; running prompts yourself across ChatGPT, Perplexity, Claude and Gemini &mdash; is where every AI visibility programme starts. The limitation is variance. AI responses are non-deterministic: run the same prompt twice and you can get different brands, different framing, different citation lists. A single query is a data point, not a trend.</p>
+        <p>To track AI visibility with statistical meaning you need three things.</p>
+        <p><strong>Multiple runs per prompt.</strong> Fifteen to twenty minimum to produce a citation rate with a reliable margin of error. The difference between &ldquo;34.5% &plusmn; 3.3% based on 2,591 runs&rdquo; and &ldquo;34.5%&rdquo; is the difference between a measurement and a number. The former tells you whether a four-point drop is a real signal or noise. The latter does not.</p>
+        <p><strong>Coverage across engines.</strong> Each engine has distinct citation behaviour. GPT-4o and Perplexity cite aggressively from crawled web content. Google AI Mode draws heavily from the Google index and Knowledge Graph. Claude weights authoritative sources differently. Tracking only ChatGPT gives you a partial picture of a fragmented market.</p>
+        <p><strong>Trend data over time.</strong> A one-off audit tells you where you stand today. Systematic tracking over weeks and months tells you whether your interventions are actually working &mdash; and whether a competitor is gaining ground on engines where you are weak.</p>
+        <p>We use <a href="https://crunchjunkie.io/" target="_blank" rel="noopener">CrunchJunkie</a> for this work: all 35 prompts, all 10 engines, continuous tracking with margin-of-error reporting and competitive benchmarking against rex4media and others. Our <a href="/services/ai-visibility/">AI visibility service</a> includes tracking setup, a full GEO audit and a monthly reporting cadence. For a breakdown of what to look for in an AI visibility tracking tool before you pay for one, see our buyer&rsquo;s guide to AI visibility tracking tools.</p>
+
+        <NeedHelp topic="ki-sichtbarkeit-ai-visibility" />
+      </>
+    ),
+  },
+{
+  slug: 'meta-ads-agency-vs-in-house',
+  toc: [
+    'The in-house vs. agency question',
+    'What it actually costs',
+    'When in-house wins',
+    'When an agency wins',
+    'A real switch: Finca Es Pinar',
+    'What to ask before you decide',
+  ],
+  tocIds: [
+    'in-house-vs-agency',
+    'real-costs',
+    'when-in-house-wins',
+    'when-agency-wins',
+    'finca-es-pinar',
+    'what-to-ask',
+  ],
+  faqs: [
+    {
+      q: 'How much does a Meta Ads agency cost in the UK/Spain?',
+      a: 'A Meta Ads agency in the UK typically charges £1,500–4,500/month on a retainer covering strategy, campaign management, creative direction and reporting. Spain-based agencies — including Mallorca-based ones like pmax — work in a similar range in euros: €1,800–4,500/month. Percentage-of-spend models still exist but create perverse incentives: the agency earns more when you spend more, regardless of returns.',
+    },
+    {
+      q: 'What ROAS should I expect from Meta Ads for a hospitality business?',
+      a: 'Hospitality businesses on Meta typically see ROAS between 2.5× and 5× when campaigns are properly structured — targeting past guests, travellers in key source markets, and lookalike audiences built from real bookers. WordStream\'s 2024 Facebook Ads benchmark report puts average ROAS across all industries at around 2.87×. Hospitality tends to sit above this when creative is strong and landing pages are conversion-optimised.',
+    },
+    {
+      q: 'Can I manage Meta Ads myself without an agency?',
+      a: 'Yes — and for some businesses it makes sense. If monthly ad spend is below £1,500, the economics of an agency retainer rarely hold up on either side. Meta\'s Ads Manager is accessible and Meta Blueprint offers free certification training. The honest constraint is time: running Meta Ads well takes 8–12 hours per week per account — testing creative, monitoring frequency, adjusting audiences, reviewing attribution.',
+    },
+    {
+      q: 'How long does it take for Meta Ads to show results?',
+      a: 'Most accounts produce meaningful data within 2–4 weeks — enough to assess whether targeting and creative are working. A full picture of ROAS, cost per acquisition and audience saturation typically takes 6–12 weeks, particularly in sectors with longer consideration cycles like hospitality or high-value professional services. Meta\'s algorithm needs roughly 50 conversions per ad set per week to exit the learning phase; below that, results remain noisy.',
+    },
+    {
+      q: 'What is the minimum Meta Ads budget worth managing?',
+      a: 'Below £500/month in ad spend, data volume is too low to run meaningful tests. Most agencies — including us — set a minimum of £1,000–1,500/month in media spend before taking on a managed account. Below that level, self-managed campaigns or a one-off consultancy session typically deliver better value than an ongoing retainer.',
+    },
+  ],
+  prose: (
+    <>
+      <p>There is no universally right answer here. That is the most honest thing we can say upfront. Agencies win in some situations. In-house teams win in others. Freelancers are genuinely the right call for certain scopes of work.</p>
+      <p>What we can give you: the actual numbers, the actual trade-offs, and a case study of a Mallorca hospitality business that switched from in-house to pmax &mdash; so you have something real to compare against rather than a vendor&rsquo;s opinion dressed up as a framework.</p>
+
+      <h2 id="in-house-vs-agency">The in-house vs. agency question</h2>
+      <p>Most businesses we talk to have already made a provisional decision before they reach us. They are either frustrated with an agency or frustrated with their own team. Both can be a valid read of the situation &mdash; and both can be a misdiagnosis.</p>
+      <p>The agency model bundles expertise, tools and continuity into a monthly retainer. You are paying for a team that manages dozens of accounts across industries, runs tests at a scale your single account cannot support, and sees patterns before any one brand does. The trade-off is attention: a competent mid-market agency manager typically holds 15&ndash;20 clients. Your account gets a fraction of a person&rsquo;s week.</p>
+      <p>The in-house model gives you full attention, deep brand knowledge and tight internal alignment. The trade-off is learning curve, recruitment difficulty and all-in cost. A competent Meta Ads manager in the UK earns £35,000&ndash;55,000/year. Add employer National Insurance, pension contributions, tools and training &mdash; you are at £45,000&ndash;75,000 before anyone has opened Ads Manager.</p>
+      <p>The freelance model sits between the two: lower ongoing cost, specific expertise, but typically less continuity and a narrower scope than a full agency relationship.</p>
+
+      <h2 id="real-costs">What it actually costs</h2>
+      <p>According to WordStream&rsquo;s 2024 Facebook Ads benchmark report, the average CPM on Meta across industries was £8.10, with an average click-through rate of 0.9% and a CPC of £0.97. These are ad costs. What you pay for management on top varies significantly by model.</p>
+
+      <div style={{ overflowX: 'auto', margin: '24px 0' }}>
+        <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: 13, lineHeight: 1.5 }}>
+          <thead>
+            <tr style={{ borderBottom: '1px solid #2d2d2d' }}>
+              <th style={{ textAlign: 'left', padding: '8px 16px 8px 0', fontFamily: 'var(--font-mono)', fontSize: 10, fontWeight: 500, letterSpacing: '1.5px', textTransform: 'uppercase', color: '#6b6b6b' }}>Option</th>
+              <th style={{ textAlign: 'right', padding: '8px 16px', fontFamily: 'var(--font-mono)', fontSize: 10, fontWeight: 500, letterSpacing: '1.5px', textTransform: 'uppercase', color: '#6b6b6b' }}>Annual management cost</th>
+              <th style={{ textAlign: 'right', padding: '8px 16px', fontFamily: 'var(--font-mono)', fontSize: 10, fontWeight: 500, letterSpacing: '1.5px', textTransform: 'uppercase', color: '#6b6b6b' }}>Time to start</th>
+              <th style={{ textAlign: 'right', padding: '8px 0 8px 16px', fontFamily: 'var(--font-mono)', fontSize: 10, fontWeight: 500, letterSpacing: '1.5px', textTransform: 'uppercase', color: '#6b6b6b' }}>Best suited to</th>
+            </tr>
+          </thead>
+          <tbody>
+            {[
+              { option: 'Agency', cost: '£18,000–54,000/yr', time: '2–4 weeks', suits: '£1.5K–25K/month spend' },
+              { option: 'In-house hire', cost: '£45,000–75,000/yr all-in', time: '3–6 months', suits: '>£50K/month spend' },
+              { option: 'Freelancer', cost: '£8,400–24,000/yr', time: '1–2 weeks', suits: 'Short sprints, single channel' },
+              { option: 'Self-managed', cost: '£0 + tools ~£200/mo', time: 'Immediate', suits: '<£1,500/month spend' },
+            ].map(row => (
+              <tr key={row.option} style={{ borderBottom: '1px solid #1a1a1a' }}>
+                <td style={{ padding: '10px 16px 10px 0', color: '#c8c8c8' }}>{row.option}</td>
+                <td style={{ padding: '10px 16px', textAlign: 'right', fontFamily: 'var(--font-mono)', fontSize: 12, color: '#3cffd0' }}>{row.cost}</td>
+                <td style={{ padding: '10px 16px', textAlign: 'right', fontFamily: 'var(--font-mono)', fontSize: 12, color: '#949494' }}>{row.time}</td>
+                <td style={{ padding: '10px 0 10px 16px', textAlign: 'right', fontSize: 12, color: '#949494' }}>{row.suits}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <p>These are management costs only &mdash; ad spend sits on top. The in-house figure includes salary, employer on-costs and a tool budget. Freelance rates assume a mid-level specialist; senior practitioners charge considerably more.</p>
+      <p>&ldquo;Most businesses discover the real cost of an in-house hire only after twelve months,&rdquo; says Philipp Enders, founder of pmax. &ldquo;Recruitment, onboarding, the learning curve, and then the realisation that one person cannot simultaneously cover creative, strategy, analytics and platform management &mdash; that is when the economics shift.&rdquo;</p>
+
+      <h2 id="when-in-house-wins">When in-house wins</h2>
+      <p>Do not take this from an agency at face value. In-house is genuinely the right call in specific situations.</p>
+      <p><strong>You spend more than £50,000/month on Meta alone.</strong> At that scale, fractional agency attention becomes the bottleneck. A dedicated in-house team iterates faster, briefs creative on shorter cycles, and holds more account context than any manager dividing their week across 15 clients.</p>
+      <p><strong>Your product data is deeply proprietary.</strong> If your best creative angles depend on real customer conversations, purchase data, or internal research you cannot or will not share externally, in-house wins by default. An agency can only work with what you give them.</p>
+      <p><strong>You are in a fast-moving DTC or fashion vertical.</strong> Brands dropping three collections per season and shooting new content weekly need creative operations running on the same rhythm. That integration is genuinely harder to sustain across an agency relationship.</p>
+      <p>One honest caveat: building a competent in-house team takes 6&ndash;12 months from the hire decision. Until then, you are learning on live budget. Many businesses that try in-house come back to an agency for the first twelve months anyway &mdash; an expensive route to the same destination.</p>
+
+      <h2 id="when-agency-wins">When an agency wins</h2>
+      <p>For most businesses spending £1,500&ndash;25,000/month on Meta, an agency delivers better returns than the alternatives. The arithmetic is direct: the expertise available in a retainer &mdash; account structure, creative strategy, audience architecture, attribution setup &mdash; costs more to hire individually than the retainer itself.</p>
+      <p>Agencies also bring cross-account pattern recognition. We manage Meta alongside Google Ads, TikTok, LinkedIn and Pinterest for clients across sectors. When something changes in Meta&rsquo;s algorithm or auction dynamics, we see it across a portfolio before any single brand does.</p>
+      <p>If you run multiple paid channels, the coordination benefit compounds further. A <a href="/services/paid-social/">paid social specialist</a> who also understands your Google Ads account can sequence messaging across channels and avoid cannibalising your own paid search traffic &mdash; something parallel in-house specialists rarely achieve in practice.</p>
+      <p>See our <a href="/cases/">case archive</a> for specific results &mdash; ROAS figures, cost-per-lead improvements, and the structural changes that drove them.</p>
+
+      <h2 id="finca-es-pinar">A real switch: Finca Es Pinar</h2>
+      <p>Finca Es Pinar is a boutique rural hotel in Calvi&agrave;, Mallorca. Eleven rooms, a strong repeat-guest base and seasonal peaks in May&ndash;June and September&ndash;October. When they came to us in Q1 2026, they had been managing Meta Ads in-house for 18 months &mdash; handled by a part-time marketing coordinator who also ran their social channels and email newsletter.</p>
+      <p>The campaigns were running. The results were not good. A ROAS of 2.1&times; on a £2,400/month budget meant roughly £68 per booking lead. Their best direct-booking months still relied on OTA traffic to fill occupancy gaps.</p>
+      <p>The problems were structural, not effort-related. Audiences were broad and never refreshed. Creative was repurposed from Instagram posts rather than built for conversion intent. Attribution was double-counting OTA-assisted conversions through a misconfigured pixel. The account had no systematic creative rotation, no frequency caps and no retargeting logic beyond a generic &ldquo;visited the website&rdquo; audience.</p>
+
+      <div style={{ overflowX: 'auto', margin: '24px 0' }}>
+        <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: 13, lineHeight: 1.5 }}>
+          <thead>
+            <tr style={{ borderBottom: '1px solid #2d2d2d' }}>
+              <th style={{ textAlign: 'left', padding: '8px 16px 8px 0', fontFamily: 'var(--font-mono)', fontSize: 10, fontWeight: 500, letterSpacing: '1.5px', textTransform: 'uppercase', color: '#6b6b6b' }}>Metric</th>
+              <th style={{ textAlign: 'right', padding: '8px 16px', fontFamily: 'var(--font-mono)', fontSize: 10, fontWeight: 500, letterSpacing: '1.5px', textTransform: 'uppercase', color: '#6b6b6b' }}>Before</th>
+              <th style={{ textAlign: 'right', padding: '8px 0 8px 16px', fontFamily: 'var(--font-mono)', fontSize: 10, fontWeight: 500, letterSpacing: '1.5px', textTransform: 'uppercase', color: '#6b6b6b' }}>After (12 weeks)</th>
+            </tr>
+          </thead>
+          <tbody>
+            {[
+              { metric: 'Meta Ads ROAS', before: '2.1×', after: '4.3×' },
+              { metric: 'Cost per booking lead', before: '£68', after: '£31' },
+              { metric: 'Monthly ad spend', before: '£2,400', after: '£2,400' },
+              { metric: 'Direct booking share', before: '22%', after: '38%' },
+              { metric: 'Active creative variants', before: '3', after: '14' },
+            ].map(row => (
+              <tr key={row.metric} style={{ borderBottom: '1px solid #1a1a1a' }}>
+                <td style={{ padding: '10px 16px 10px 0', color: '#c8c8c8' }}>{row.metric}</td>
+                <td style={{ padding: '10px 16px', textAlign: 'right', fontFamily: 'var(--font-mono)', fontSize: 12, color: '#949494' }}>{row.before}</td>
+                <td style={{ padding: '10px 0 10px 16px', textAlign: 'right', fontFamily: 'var(--font-mono)', fontSize: 12, color: '#3cffd0', fontWeight: 700 }}>{row.after}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <p>The budget did not change. What changed: audience segmentation by lead source and geography, conversion-focused creative built from scratch for the booking funnel, frequency capping per funnel stage, and a retargeting sequence that matched messaging to where guests were in their booking journey. Attribution was fixed using Meta&rsquo;s Conversions API connected directly to the property management system.</p>
+      <p>&ldquo;We assumed the ads were working because the numbers in the dashboard looked reasonable,&rdquo; the hotel manager told us. &ldquo;It turned out the dashboard was wrong. Once attribution was fixed, we could see what was actually driving bookings &mdash; and it was not what we had assumed.&rdquo;</p>
+
+      <h2 id="what-to-ask">What to ask before you decide</h2>
+      <p>Six questions worth answering honestly before you commit to a model:</p>
+      <ol>
+        <li><strong>What is your monthly ad spend?</strong> Below £1,500 &mdash; self-managed or freelance. £1,500&ndash;25,000 &mdash; agency economics work clearly. Above £50,000 &mdash; in-house begins to make sense.</li>
+        <li><strong>Do you have someone who can brief creative internally?</strong> An agency provides strategy. Creative briefing requires brand knowledge that lives inside the business. Without a capable internal briefer, the best-structured campaign still runs mediocre ads.</li>
+        <li><strong>How is your current attribution set up?</strong> If you cannot answer whether your ROAS is measured on a view-through or click-through basis, your current figures may be unreliable. Fix attribution before judging any model&rsquo;s performance.</li>
+        <li><strong>Are you on more than one paid channel?</strong> Meta alone is rarely the full picture. If you also run Google Ads &mdash; or are considering TikTok (see our <a href="/blog/tiktok-ads-mallorca-tourism/">TikTok Ads guide for Mallorca tourism</a>) &mdash; a multi-channel agency handles sequencing and budget allocation more effectively than parallel specialists working in silos.</li>
+        <li><strong>What is your cost of a bad hire?</strong> A wrong in-house appointment costs 6&ndash;12 months of salary plus recruitment fees &mdash; typically £40,000&ndash;70,000 of risk. Factor that in honestly.</li>
+        <li><strong>Is your business seasonal?</strong> Hospitality, tourism and events businesses need to surge and taper spend quickly. Agencies flex on short notice. Headcount does not.</li>
+      </ol>
+
+      <div className="prose-callout" style={{ marginTop: 32 }}>
+        <span className="prose-callout-kicker">The bottom line</span>
+        <p>For most businesses spending £1,500&ndash;25,000/month on Meta, an agency delivers better returns than the alternatives &mdash; not because agencies are inherently superior, but because the expertise available in a retainer costs more to hire individually than the retainer itself. The economics only shift when ad spend is high enough to justify a dedicated specialist and internal creative operations can keep pace.</p>
+      </div>
+
+      <p>Our <a href="/services/paid-social/">paid social service</a> covers Meta, LinkedIn, TikTok and Pinterest &mdash; managed together or individually depending on your situation. If you want to talk through which model makes sense for your business, <a href="/contact/">start with a 30-minute call</a>.</p>
+
+      <NeedHelp topic="meta-ads-agency-vs-in-house" />
+    </>
+  ),
+},
   {
     slug: 'free-website-design',
     toc: [
