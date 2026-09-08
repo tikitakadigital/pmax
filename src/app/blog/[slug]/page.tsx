@@ -24,6 +24,7 @@ const categoryKeywords: Record<string, string[]> = {
   'Renewables':  ['solar marketing', 'renewable energy marketing', 'EV marketing'],
   'Boating':     ['yacht charter marketing', 'Mediterranean boating', 'marina marketing'],
   'Op-ed':       ['digital marketing agency', 'flat fee agency', 'Mallorca agency'],
+  'Web design':  ['free website design', 'website redesign', 'website rebuild', 'website revamp', 'conversion rate optimisation', 'web design'],
 }
 
 const categoryLinks: Record<string, { label: string; href: string }[]> = {
@@ -40,6 +41,7 @@ const categoryLinks: Record<string, { label: string; href: string }[]> = {
   'Real estate':  [{ label: 'Real estate marketing', href: '/industries/real-estate' }, { label: 'SEO', href: '/seo-company-mallorca' }],
   'Renewables':   [{ label: 'Renewables marketing', href: '/industries/renewables' }, { label: 'Google Ads', href: '/services/google-ads' }],
   'Boating':      [{ label: 'Boating & yachting marketing', href: '/industries/boating' }, { label: 'Paid social', href: '/services/paid-social' }],
+  'Web design':   [{ label: 'Conversion design', href: '/services/conversion-design' }, { label: 'Google Ads', href: '/services/google-ads' }],
 }
 
 export function generateStaticParams() {

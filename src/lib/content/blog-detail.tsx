@@ -20,6 +20,120 @@ const NeedHelp = ({ topic }: { topic: string }) => (
 
 export const blogDetails: BlogDetail[] = [
   {
+    slug: 'free-website-design',
+    toc: [
+      'Why we offer this',
+      'What the deal actually looks like',
+      'Who qualifies',
+      'A real rebuild: Portals Properties',
+      'What you keep',
+      'How to start',
+    ],
+    tocIds: [
+      'why-we-offer-this',
+      'what-the-deal-looks-like',
+      'who-qualifies',
+      'portals-properties',
+      'what-you-keep',
+      'how-to-start',
+    ],
+    faqs: [
+      {
+        q: 'What does free website design from pmax include?',
+        a: 'Everything from strategy through to launch: UX design, information architecture, copy direction, development, conversion optimisation and launch. The site is built on a fast, modern stack with Core Web Vitals compliance from day one. You own the completed site unconditionally — no proprietary platform, no ongoing licence fee, no lock-in.',
+      },
+      {
+        q: 'Is there a minimum ad spend to qualify for free website design?',
+        a: 'We discuss this case by case, but the deal typically works for businesses spending £1,500/month or more on paid advertising — Google Ads, Meta Ads, or both — or businesses with a firm and budgeted plan to begin. Below that level, the economics do not hold up on either side.',
+      },
+      {
+        q: 'Who owns the website after pmax builds it?',
+        a: 'You do, unconditionally. Domain, source code, hosting provider and all assets are yours from launch day. If you ever end the advertising management arrangement, the website goes with you. We do not build on proprietary platforms or use site ownership as a retention mechanism.',
+      },
+      {
+        q: 'How long does a free website rebuild take?',
+        a: 'Typically six to ten weeks from strategy kick-off to launch. The main variable is content readiness — the faster you can supply photography, copy, and product or service information, the faster we move.',
+      },
+      {
+        q: 'Does the free website deal work if I do not currently run any advertising?',
+        a: 'Sometimes. If you have a firm plan to start paid advertising and the budget to commit, the conversation is worth having. What does not work is enquiries from businesses with no current or planned ad spend — the deal is structured around a paid media management relationship, not a stand-alone web design commission.',
+      },
+    ],
+    prose: (
+      <>
+        <p>Most website design quotes start at &pound;3,000. Rebuilding an established site &mdash; moving platforms, restructuring pages, rewriting copy &mdash; is typically more than that. We do it for free.</p>
+        <p>This is not a loss leader with a catch buried in the small print. The deal is straightforward, and so is the explanation.</p>
+
+        <h2 id="why-we-offer-this">Why we offer this</h2>
+        <p>We run paid advertising for businesses across Europe &mdash; Google Ads, Meta, LinkedIn. The single biggest constraint on paid media performance is usually not the ads. It is the website.</p>
+        <p>A well-structured campaign driving high-intent traffic to a slow, confusing, or badly-converting site wastes most of its budget before it has a chance to work. We have inherited enough of those situations to know exactly what they cost: typically 40&ndash;70% of potential conversion volume, gone before a form is submitted or a product added to cart.</p>
+        <p>We cannot fix a client&rsquo;s performance numbers without fixing the page the ads land on. And asking a new client to spend &pound;5,000 on a website rebuild before they have seen a single month of results from a new agency is a hard sell &mdash; reasonably so.</p>
+        <p>So we changed the structure. We absorb the website build. You pay us to manage your advertising.</p>
+
+        <h2 id="what-the-deal-looks-like">What the deal actually looks like</h2>
+        <p>No proprietary platform, no lock-in clause, no &ldquo;free&rdquo; that converts to a monthly fee after six months. The mechanics:</p>
+        <p><strong>We design and build your website.</strong> This includes UX strategy, information architecture, conversion-optimised page design, copy direction, development and launch. The site is built on a modern, fast stack &mdash; Core Web Vitals compliance from the first commit. You receive the completed site and hold full ownership from day one.</p>
+        <p><strong>You engage us to manage your paid media.</strong> Minimum commitment is discussed case by case. The deal makes sense for businesses with an existing advertising budget &mdash; typically &pound;1,500/month or more in active spend, or a clear and budgeted plan to begin. We manage Google Ads, Meta Ads, or both.</p>
+        <p><strong>We work on both together.</strong> The ads and the website are not separate projects. Creative briefs inform landing page decisions. Page performance data informs bid strategy. Copy tested in search ads improves page headlines. The two feed each other in ways that a web agency and a media agency working separately never manage to replicate.</p>
+
+        <h2 id="who-qualifies">Who qualifies</h2>
+        <p>You are probably a fit if:</p>
+        <ul>
+          <li>You are running Google Ads or Meta in-house (or with an existing agency) and underperforming on cost per lead or ROAS</li>
+          <li>You are spending &pound;1,500&ndash;&pound;25,000/month on paid advertising</li>
+          <li>Your website is more than three years old, or was not built with conversion in mind</li>
+          <li>You operate in a sector with real transaction values: real estate, hospitality, professional services, e-commerce, renewables, marine</li>
+        </ul>
+        <p>You are less likely to be a fit if you have no current or planned ad spend, if you are looking for a web design agency only, or if your business is pre-revenue. The free <a href="/services/conversion-design/">website redesign</a> deal is structured around a paid media management relationship &mdash; without that, it does not make sense on either side.</p>
+        <p>We work with businesses across the UK, Spain, Germany, and the wider EU.</p>
+
+        <h2 id="portals-properties">A real rebuild: Portals Properties</h2>
+        <p>Portals Properties is a boutique real estate agency based in Puerto Portals, Mallorca, specialising in property sales and long-term rentals for UK buyers. When they came to us in Q4 2025, they were spending &pound;6,200/month on Google Ads and generating around 28 qualified inquiries per month &mdash; a cost per qualified lead of &pound;221.</p>
+        <p>The ads were reasonably structured. The website was the problem.</p>
+        <p>Built in 2019. Core Web Vitals score: 42 on mobile. The property search required four clicks before a contact form appeared. The homepage hero was a stock image. The inquiry form had eleven fields, including three that asked the same question in different ways.</p>
+        <p>We rebuilt the site over eight weeks alongside the ad account transition. The new site loads in under 1.5 seconds on mobile (Core Web Vitals: 91), surfaces a two-field inquiry form on every page, replaces stock photography with the team&rsquo;s own images and a 90-second property tour, and shows real sold prices and client testimonials on every listing &mdash; because Mallorca property buyers choose their agent as much as they choose the property.</p>
+        <p>After 14 weeks of the rebuilt site and our Google Ads management running together:</p>
+        <div style={{ overflowX: 'auto', margin: '24px 0' }}>
+          <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: 13, lineHeight: 1.5 }}>
+            <thead>
+              <tr style={{ borderBottom: '1px solid #2d2d2d' }}>
+                <th style={{ textAlign: 'left', padding: '8px 16px 8px 0', fontFamily: 'var(--font-mono)', fontSize: 10, fontWeight: 500, letterSpacing: '1.5px', textTransform: 'uppercase', color: '#6b6b6b' }}>Metric</th>
+                <th style={{ textAlign: 'right', padding: '8px 16px', fontFamily: 'var(--font-mono)', fontSize: 10, fontWeight: 500, letterSpacing: '1.5px', textTransform: 'uppercase', color: '#6b6b6b' }}>Before</th>
+                <th style={{ textAlign: 'right', padding: '8px 0 8px 16px', fontFamily: 'var(--font-mono)', fontSize: 10, fontWeight: 500, letterSpacing: '1.5px', textTransform: 'uppercase', color: '#6b6b6b' }}>After (14 weeks)</th>
+              </tr>
+            </thead>
+            <tbody>
+              {[
+                { metric: 'Qualified leads / month', before: '28', after: '71  (+154%)' },
+                { metric: 'Cost per qualified lead', before: '£221', after: '£94' },
+                { metric: 'Google Ads ROAS', before: '1.9×', after: '4.6×' },
+                { metric: 'Core Web Vitals — mobile', before: '42 / 100', after: '91 / 100' },
+                { metric: 'Organic form submissions / month', before: '11', after: '21' },
+              ].map(row => (
+                <tr key={row.metric} style={{ borderBottom: '1px solid #1a1a1a' }}>
+                  <td style={{ padding: '10px 16px 10px 0', color: '#c8c8c8' }}>{row.metric}</td>
+                  <td style={{ padding: '10px 16px', textAlign: 'right', fontFamily: 'var(--font-mono)', fontSize: 12, color: '#949494' }}>{row.before}</td>
+                  <td style={{ padding: '10px 0 10px 16px', textAlign: 'right', fontFamily: 'var(--font-mono)', fontSize: 12, color: '#3cffd0', fontWeight: 700 }}>{row.after}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <p>The advertising budget did not change. What changed was where the traffic arrived, and what it found when it got there.</p>
+
+        <h2 id="what-you-keep">What you keep</h2>
+        <p>The website is yours. Unconditionally. Domain, source code, hosting choices, all assets &mdash; yours from day one. If you end the advertising arrangement, the website goes with you, intact.</p>
+        <p>The same applies to your ad accounts. Your Google Ads account stays under your email. Your Meta Business Manager is yours. We operate inside both as a manager, not as the account owner. Campaign history, audience data, and creative libraries belong to your business, not ours.</p>
+        <p>We are direct about this because the opposite &mdash; agencies that own your accounts and websites &mdash; is not unusual, and it causes serious problems for businesses that want to move or renegotiate later. We have inherited enough of those situations to know what they cost. We made it a point of principle to do the opposite.</p>
+
+        <h2 id="how-to-start">How to start</h2>
+        <p>Tell us your current ad spend, your website, and the result you are trying to achieve. The first call is 30 minutes and on us.</p>
+        <p>We will tell you clearly whether your situation is a fit for the free website design deal, and if not, what the honest alternative looks like. We don&rsquo;t take on every enquiry &mdash; and we won&rsquo;t tell you otherwise.</p>
+        <NeedHelp topic="free-website-design" />
+      </>
+    ),
+  },
+  {
     slug: 'ai-visibility-tracking-tools-2026',
     image: '/blog/crunchjunkie-dashboard-visibility-sample-size.jpg',
     imageAlt: 'CrunchJunkie AI Visibility dashboard showing Visibility 34.5% ± 3.3% based on 2,591 runs, Average Position 1.7, Sentiment 69/100, and Share of Voice 47.7% — every metric shown with its sample size and margin of error',

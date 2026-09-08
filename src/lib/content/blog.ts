@@ -17,6 +17,18 @@ export interface Post {
 
 export const posts: Post[] = [
   {
+    slug: 'free-website-design',
+    stamp: 'SEP 08',
+    date: 'Sep 8, 2026',
+    readTime: '9 min',
+    category: 'Web design',
+    title: "We'll rebuild your website for free. Here's exactly what we get in return.",
+    seoTitle: "Free Website Design & Rebuild — How pmax Does It | pmax",
+    deck: "We redesign and rebuild websites at no upfront cost. In exchange, we take over your paid advertising. This is the full deal — how it works, who it's for, and what a real rebuild looks like.",
+    variant: 'is-mint',
+    featured: true,
+  },
+  {
     slug: 'ai-visibility-tracking-tools-2026',
     stamp: 'AUG 27',
     date: 'Aug 27, 2026',
