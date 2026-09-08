@@ -44,7 +44,7 @@ export const blogDetails: BlogDetail[] = [
       },
       {
         q: 'Is there a minimum ad spend to qualify for free website design?',
-        a: 'We discuss this case by case, but the deal typically works for businesses spending £1,500/month or more on paid advertising — Google Ads, Meta Ads, or both — or businesses with a firm and budgeted plan to begin. Below that level, the economics do not hold up on either side.',
+        a: 'We discuss this case by case, but the deal typically works for businesses spending £1,500/month or more on paid advertising — on any platform: Google Ads, Meta, TikTok, LinkedIn, Pinterest, Outbrain, or others — or businesses with a firm and budgeted plan to begin. Below that level, the economics do not hold up on either side.',
       },
       {
         q: 'Who owns the website after pmax builds it?',
@@ -65,7 +65,7 @@ export const blogDetails: BlogDetail[] = [
         <p>This is not a loss leader with a catch buried in the small print. The deal is straightforward, and so is the explanation.</p>
 
         <h2 id="why-we-offer-this">Why we offer this</h2>
-        <p>We run paid advertising for businesses across Europe &mdash; Google Ads, Meta, LinkedIn. The single biggest constraint on paid media performance is usually not the ads. It is the website.</p>
+        <p>We run paid advertising for businesses across Europe &mdash; Google Ads, Meta, TikTok, LinkedIn, Pinterest, Outbrain and more. The single biggest constraint on paid media performance is usually not the ads. It is the website.</p>
         <p>A well-structured campaign driving high-intent traffic to a slow, confusing, or badly-converting site wastes most of its budget before it has a chance to work. We have inherited enough of those situations to know exactly what they cost: typically 40&ndash;70% of potential conversion volume, gone before a form is submitted or a product added to cart.</p>
         <p>We cannot fix a client&rsquo;s performance numbers without fixing the page the ads land on. And asking a new client to spend &pound;5,000 on a website rebuild before they have seen a single month of results from a new agency is a hard sell &mdash; reasonably so.</p>
         <p>So we changed the structure. We absorb the website build. You pay us to manage your advertising.</p>
@@ -73,13 +73,13 @@ export const blogDetails: BlogDetail[] = [
         <h2 id="what-the-deal-looks-like">What the deal actually looks like</h2>
         <p>No proprietary platform, no lock-in clause, no &ldquo;free&rdquo; that converts to a monthly fee after six months. The mechanics:</p>
         <p><strong>We design and build your website.</strong> This includes UX strategy, information architecture, conversion-optimised page design, copy direction, development and launch. The site is built on a modern, fast stack &mdash; Core Web Vitals compliance from the first commit. You receive the completed site and hold full ownership from day one.</p>
-        <p><strong>You engage us to manage your paid media.</strong> Minimum commitment is discussed case by case. The deal makes sense for businesses with an existing advertising budget &mdash; typically &pound;1,500/month or more in active spend, or a clear and budgeted plan to begin. We manage Google Ads, Meta Ads, or both.</p>
+        <p><strong>You engage us to manage your paid media.</strong> Minimum commitment is discussed case by case. The deal makes sense for businesses with an existing advertising budget &mdash; typically &pound;1,500/month or more in active spend, or a clear and budgeted plan to begin. We manage whichever paid channels make sense for your business: Google Ads, Meta, TikTok, LinkedIn, Pinterest, Outbrain, or any combination.</p>
         <p><strong>We work on both together.</strong> The ads and the website are not separate projects. Creative briefs inform landing page decisions. Page performance data informs bid strategy. Copy tested in search ads improves page headlines. The two feed each other in ways that a web agency and a media agency working separately never manage to replicate.</p>
 
         <h2 id="who-qualifies">Who qualifies</h2>
         <p>You are probably a fit if:</p>
         <ul>
-          <li>You are running Google Ads or Meta in-house (or with an existing agency) and underperforming on cost per lead or ROAS</li>
+          <li>You are running paid advertising in-house (or with an existing agency) and underperforming on cost per lead or ROAS &mdash; on any platform: Google, Meta, TikTok, LinkedIn, Pinterest, Outbrain, or others</li>
           <li>You are spending &pound;1,500&ndash;&pound;25,000/month on paid advertising</li>
           <li>Your website is more than three years old, or was not built with conversion in mind</li>
           <li>You operate in a sector with real transaction values: real estate, hospitality, professional services, e-commerce, renewables, marine</li>
