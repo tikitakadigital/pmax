@@ -8,7 +8,11 @@ import type { LeadStatus } from '@/lib/db'
 export const metadata: Metadata = { title: 'Lead detail' }
 export const revalidate = 0
 
-const STATUSES: LeadStatus[] = ['new', 'contacted', 'qualified', 'won', 'lost', 'archived']
+const STATUSES: LeadStatus[] = [
+  'new', 'contacted', 'qualified', 'proposal_sent', 'negotiating', 'on_hold',
+  'won', 'lost', 'archived',
+  'job_application', 'service_offer', 'spam',
+]
 
 function fmt(iso: string) {
   return new Date(iso).toLocaleString('en-GB', { day: '2-digit', month: 'short', year: 'numeric', hour: '2-digit', minute: '2-digit' })

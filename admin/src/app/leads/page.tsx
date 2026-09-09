@@ -7,8 +7,18 @@ export const metadata: Metadata = { title: 'Leads' }
 export const revalidate = 0
 
 const STATUS_LABELS: Record<string, string> = {
-  new: 'New', contacted: 'Contacted', qualified: 'Qualified',
-  won: 'Won', lost: 'Lost', archived: 'Archived',
+  new: 'New',
+  contacted: 'Contacted',
+  qualified: 'Qualified',
+  proposal_sent: 'Proposal sent',
+  negotiating: 'Negotiating',
+  on_hold: 'On hold',
+  won: 'Won',
+  lost: 'Lost',
+  archived: 'Archived',
+  job_application: 'Job application',
+  service_offer: 'Service offer',
+  spam: 'Spam',
 }
 
 function fmt(iso: string) {

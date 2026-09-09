@@ -10,7 +10,7 @@ export const db = createClient(url, key, {
   auth: { persistSession: false },
 })
 
-export type LeadStatus = 'new' | 'contacted' | 'qualified' | 'won' | 'lost' | 'archived'
+export type LeadStatus = 'new' | 'contacted' | 'qualified' | 'proposal_sent' | 'negotiating' | 'on_hold' | 'won' | 'lost' | 'archived' | 'job_application' | 'service_offer' | 'spam'
 
 export interface Lead {
   id: string
