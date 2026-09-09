@@ -460,7 +460,30 @@
 /* ── Print ──────────────────────────────────────────────────────────────────── */
 
 @media print {
-  @page { margin: 2cm 2.5cm; size: A4; }
+  @page {
+    margin: 1.8cm 2.2cm 2cm;
+    size: A4;
+
+    @bottom-left {
+      content: "pmax.online";
+      font-size: 7pt;
+      color: #bbb;
+      font-family: system-ui, sans-serif;
+      letter-spacing: .04em;
+    }
+
+    @bottom-right {
+      content: counter(page);
+      font-size: 7pt;
+      color: #bbb;
+      font-family: system-ui, sans-serif;
+    }
+  }
+
+  @page :first {
+    @bottom-left  { content: none; }
+    @bottom-right { content: none; }
+  }
 
   .page { background: white; padding: 0; }
 
@@ -471,11 +494,50 @@
     margin: 0;
   }
 
-  .actions { display: none; }
-  .noPrint { display: none !important; }
+  .actions   { display: none; }
+  .noPrint   { display: none !important; }
 
-  .sec { page-break-inside: avoid; }
+  /* Typography */
+  .p         { font-size: 9.5pt; line-height: 1.68; orphans: 3; widows: 3; }
+  .ul li,
+  .ol li     { font-size: 9pt; }
+  .tbl td    { font-size: 8.5pt; padding: .5rem .65rem; }
+  .tbl th    { font-size: 6.5pt; }
+  .subLabel  { font-size: 6pt; }
+  .metaKey   { font-size: 6pt; }
+  .docTitle  { font-size: 1.75rem; }
+  .sh        { font-size: 1rem; }
 
-  .pricingBox { background: #111 !important; }
-  .coreMsg, .hint { background: #f6f6f2 !important; }
+  /* Page-break control */
+  .sh  { break-after: avoid; page-break-after: avoid; }
+  .sec { break-inside: auto; page-break-inside: auto; }
+
+  .tbl thead { display: table-header-group; }
+  .tbl tr { break-inside: avoid; page-break-inside: avoid; }
+  .pricingBox { break-inside: avoid; page-break-inside: avoid; }
+
+  /* Colour preservation */
+  .n,
+  .logoDot,
+  .hintLabel { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+
+  .coreMsg {
+    background: #f6f6f2 !important;
+    border-left-color: #3cffd0 !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .hint {
+    background: #f6f6f2 !important;
+    border-left-color: #3cffd0 !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .pricingBox {
+    background: #111 !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
 }

@@ -389,7 +389,7 @@ export default function ProposalPage() {
         {/* ── 11 Next step ── */}
         <section className={s.sec}>
           <h2 className={s.sh}><span className={s.n}>11</span>Next Step</h2>
-          <p className={s.p}>Tell us which option works for you. For the start we will need:</p>
+          <p className={s.p}>To get started, we will need:</p>
           <ol className={s.ol}>
             {offer.next_steps.map((step, i) => <li key={i}>{step}</li>)}
           </ol>
