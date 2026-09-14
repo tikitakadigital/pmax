@@ -3008,7 +3008,7 @@ export const es = {
         <p>El 50 % de las búsquedas comerciales en Mallorca ocurren entre abril y septiembre. No ejecutes pujas planas todo el año. Construye estrategias de puja por franja horaria y estación que coincidan con la curva real de demanda.</p>
         <h2>Local pack y Maps</h2>
         <p>Si eres un negocio de servicios, tu Perfil de Empresa de Google genera más ingresos que tus anuncios. Optimízalo correctamente: fotos actualizadas mensualmente, reseñas solicitadas cada trimestre, servicios correctamente categorizados. El trabajo se acumula.</p>
-        <p>Nuestro <a href="/es/services/google-ads/">servicio de Google Ads &amp; Performance Max</a> — adaptado a la demanda multilingüe y estacional de Mallorca. ¿Campañas en España en general? Ver nuestra <a href="/es/agencia-google-ads-espana/">agencia de Google Ads en España</a>. ¿Full-service — paid, SEO y social bajo un retainer? Ver nuestra <a href="/es/agencia-de-marketing-mallorca/">agencia de marketing en Mallorca</a>.</p>
+        <p>Nuestro <a href="/es/services/google-ads/">servicio de Google Ads &amp; Performance Max</a> — adaptado a la demanda multilingüe y estacional de Mallorca. ¿Buscas agencia y no sabes qué evaluar? Lee nuestra guía para <a href="/es/blog/google-ads-agency-mallorca/">elegir una agencia de Google Ads en Mallorca</a>. ¿Campañas en España en general? Ver nuestra <a href="/es/agencia-google-ads-espana/">agencia de Google Ads en España</a>.</p>
         <h2>¿Necesitas ayuda con esto?</h2>
         <p>Si algo de lo anterior te resulta familiar, <a href="/es/contact/?topic=google-ads-mallorca">cuéntanos brevemente tu situación</a> y te respondemos en un día laborable. Primera conversación: 30 minutos, sin coste.</p>
       </>),

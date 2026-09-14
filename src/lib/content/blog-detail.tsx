@@ -28,6 +28,13 @@ export const blogDetails: BlogDetail[] = [
     'Real numbers from accounts we manage here',
     'The question to ask before you sign',
   ],
+  tocIds: [
+    'mallorca-different',
+    'variables-ignored',
+    'how-to-tell',
+    'real-numbers',
+    'question-before-signing',
+  ],
   faqs: [
     {
       q: 'How much does a Google Ads agency in Mallorca typically charge?',
@@ -46,24 +53,24 @@ export const blogDetails: BlogDetail[] = [
     <>
       <p>Most Google Ads agencies in Mallorca sell the same package. You get campaigns, a monthly PDF, and a call every few weeks to talk about impressions and clicks. Fees are percentage-based. The campaigns are built the same way they would be for a business in Madrid.</p>
       <p>The problem: Mallorca is not Madrid. The market is genuinely different in ways that most agencies — especially those based on the mainland — do not adapt for.</p>
-      <h2>What makes Mallorca different</h2>
+      <h2 id="mallorca-different">What makes Mallorca different</h2>
       <p>Three things drive the difference:</p>
       <ol>
         <li><strong>Language complexity.</strong> Customers here search in Spanish, German, English and sometimes Mallorquín — often the same person across multiple sessions before they decide. A campaign built around Spanish keywords misses 40–60% of commercial search intent depending on the season. Most agencies don't have the infrastructure to run campaigns in all four languages.</li>
         <li><strong>Severe seasonality.</strong> The 12 weeks between June and September account for 50–70% of annual revenue for most hospitality and tourism businesses. A campaign running flat budgets year-round destroys value during shoulder months. Bid strategies need to be built around the actual demand curve, not the annual average.</li>
         <li><strong>Wrong default targeting.</strong> Google Ads ships with "Presence or interest" as the location setting. For a local business in Mallorca, this means showing ads to anyone in Spain who has ever shown interest in Mallorca — millions of people, very few of them your customers. This needs to be changed on day one. Many agencies haven't done it.</li>
       </ol>
-      <h2>The variables most agencies ignore</h2>
+      <h2 id="variables-ignored">The variables most agencies ignore</h2>
       <p>Beyond the basics, there are three things that separate a setup that works from one that technically runs but underperforms.</p>
       <p><strong>Conversion tracking quality.</strong> For businesses with a physical location, Google's Store Visits conversion is free to set up and most agencies have not done it. Call tracking, offline conversion imports from your CRM — if the account is only optimising toward form completions, its signal is wrong and so is everything the algorithm does with it.</p>
       <p><strong>Language-level performance data.</strong> If you cannot separate cost per conversion by the language of the ad and the time of year, you are flying blind. German tourists do not behave the same as Spanish residents. A campaign targeting both without separating them averages out their differences and misses both.</p>
       <p><strong>Seasonal budget curves.</strong> June–September is not where you save budget. January–March is. Most mainland agencies apply the same monthly spend across the year and call it "optimised." It is not.</p>
-      <h2>How to tell a good one from a mediocre one</h2>
+      <h2 id="how-to-tell">How to tell a good one from a mediocre one</h2>
       <p>Three questions that reveal whether an agency understands Mallorca or is applying a generic template:</p>
       <p><strong>Ask them to break down your CPC by language and month, not by campaign.</strong> If they cannot, they are not managing the account — they are watching it.</p>
       <p><strong>Ask how they charge.</strong> Percentage of spend gives the agency a financial incentive to grow your budget, not your results. Flat fees align the agency with the client. Not every agency works this way — ask directly and make it a condition.</p>
       <p><strong>Ask what the conversion tracking covers.</strong> A good answer covers: form completions, phone calls, store visits, and (if you have a CRM) offline conversion imports. A vague answer — "we track conversions in Google Ads" — is a red flag.</p>
-      <h2>Real numbers from accounts we manage here</h2>
+      <h2 id="real-numbers">Real numbers from accounts we manage here</h2>
       <p>These are actual account averages from Q1–Q2 2026. We share them because vague claims about "better performance" are how bad agencies sell themselves.</p>
       <ul>
         <li>Average CPC in Mallorca hospitality (German + English): €0.67–€1.40 depending on season and match type</li>
@@ -71,7 +78,7 @@ export const blogDetails: BlogDetail[] = [
         <li>Reduction in wasted spend after switching from "Presence or interest" to "Presence only": typically 35–45% of impression volume eliminated, cost per conversion down 28% on average</li>
         <li>Time before data is meaningful in a low-volume local market: 6–8 weeks minimum</li>
       </ul>
-      <h2>The question to ask before you sign</h2>
+      <h2 id="question-before-signing">The question to ask before you sign</h2>
       <p>Ask the agency to explain, specifically, how they would structure a campaign for a business with your customer profile. Not in general. For your type of customer, in your geography, in your languages.</p>
       <p>If the answer is vague — "we would set up Google Ads and optimise it monthly" — that is your answer.</p>
       <NeedHelp topic="google-ads-agency-mallorca" />
@@ -135,7 +142,7 @@ export const blogDetails: BlogDetail[] = [
         <p><strong>Geo-targeting requires precision.</strong> Targeting &ldquo;Spain&rdquo; broadly pulls in traffic from Madrid and Barcelona with no intention of visiting your Mallorca business. We build campaigns with island-specific geo-targeting plus extended coverage for tourists searching from Germany and the UK before departure &mdash; two very different configurations that most single-market setups miss entirely.</p>
         <p><strong>German-language search volume is underserved.</strong> &ldquo;Finca mieten Mallorca&rdquo;, &ldquo;Immobilien Mallorca kaufen&rdquo;, &ldquo;Zahnarzt Mallorca&rdquo; &mdash; German-language queries for Mallorca-specific services generate meaningful volume and face materially less competition than their English equivalents. German-language ads pointing to German-language landing pages, served to users in Germany before their trip, convert at rates most Mallorca advertisers are not currently capturing.</p>
         <p><strong>Budget strategy: annual vs seasonal.</strong> Professional services and real estate businesses advertise year-round with relatively flat seasonality. Tourism-dependent businesses front-load spend in Q1 to capture pre-trip research, then maintain through peak.</p>
-        <p>Minimum viable budget: &euro;800/month. Below that, the data volume is too thin for meaningful optimisation. Read our full guide: <a href="/blog/google-ads-mallorca/">Google Ads in Mallorca</a>. Our <a href="/services/google-ads">Google Ads service</a> page covers how we structure campaigns. For cost benchmarks in German, see our guide to <a href="/blog/was-kostet-google-ads/">was kostet Google Ads</a>.</p>
+        <p>Minimum viable budget: &euro;800/month. Below that, the data volume is too thin for meaningful optimisation. Read our full guide: <a href="/blog/google-ads-mallorca/">Google Ads in Mallorca</a>. Evaluating agencies and not sure what to look for? See our guide to <a href="/blog/google-ads-agency-mallorca/">choosing a Google Ads agency in Mallorca</a>. Our <a href="/services/google-ads">Google Ads service</a> page covers how we structure campaigns. For cost benchmarks in German, see our guide to <a href="/blog/was-kostet-google-ads/">was kostet Google Ads</a>.</p>
 
         <h2 id="meta-ads-mallorca">Meta Ads for Mallorca businesses</h2>
         <p>Meta is the dominant discovery-phase channel for hospitality, tourism, and B2C businesses in Mallorca. It is where people find restaurants, experiences, and holiday accommodation before purchase intent crystallises.</p>
@@ -2381,7 +2388,7 @@ export const blogDetails: BlogDetail[] = [
         <p>50% of Mallorca&rsquo;s commercial searches happen between April and September. Do not run flat bids year-round. Build day-parted, season-parted bidding strategies that match the actual demand curve.</p>
         <h2>Local-pack and Maps</h2>
         <p>If you are a service business, your Google Business Profile drives more revenue than your ads do. Optimise it properly: photos updated monthly, reviews requested every quarter, services properly categorised. The work compounds.</p>
-        <p>See our <a href="/services/google-ads/">Google Ads &amp; Performance Max service</a> &mdash; built for Mallorca&rsquo;s multilingual, seasonal demand. Running campaigns across Spain more broadly? See our <a href="/google-ads-agency-spain/">Google Ads agency in Spain</a> page. Want paid search, SEO and paid social under one retainer? See our <a href="/marketing-agency-mallorca/">marketing agency in Mallorca</a> overview.</p>
+        <p>See our <a href="/services/google-ads/">Google Ads &amp; Performance Max service</a> &mdash; built for Mallorca&rsquo;s multilingual, seasonal demand. Running campaigns across Spain more broadly? See our <a href="/google-ads-agency-spain/">Google Ads agency in Spain</a> page. Not sure what to look for when evaluating an agency? See our guide to <a href="/blog/google-ads-agency-mallorca/">choosing a Google Ads agency in Mallorca</a>.</p>
         <NeedHelp topic="google-ads-mallorca" />
       </>
     ),
