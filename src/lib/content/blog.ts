@@ -17,6 +17,17 @@ export interface Post {
 
 export const posts: Post[] = [
   {
+    slug: 'google-ads-agency-mallorca',
+    stamp: 'DEC 22',
+    date: 'Dec 22, 2026',
+    readTime: '8 min',
+    category: 'Local SEO',
+    title: 'How to choose a Google Ads agency in Mallorca — and the questions that separate them',
+    seoTitle: 'How to Choose a Google Ads Agency in Mallorca | pmax',
+    deck: 'Most Google Ads agencies in Mallorca sell the same package. Here is how to tell which ones actually understand the local market — and three questions that reveal whether an agency is worth its fee.',
+    variant: 'is-yellow',
+  },
+  {
       slug: 'how-to-advertise-business-mallorca',
       stamp: 'DEC 15',
       date: 'Dec 15, 2026',

@@ -787,6 +787,7 @@ export const es = {
     promoDeck: 'No gestionamos una lista de email — pero si hay un tema sobre el que quieras que escribamos, cuéntanoslo.',
     promoBtn: 'Sugerir un tema',
     posts: [
+      { slug: 'google-ads-agency-mallorca', title: 'Cómo elegir una agencia de Google Ads en Mallorca — y las preguntas que las distinguen', deck: 'La mayoría de agencias de Google Ads en Mallorca venden el mismo paquete. Aquí está cómo identificar cuáles conocen realmente el mercado local — y las tres preguntas que revelan si una agencia vale lo que cobra.' },
       { slug: 'how-to-advertise-business-mallorca', title: 'Cómo anunciarse en Mallorca: la guía completa para negocios', deck: 'Mallorca tiene 900.000 habitantes y casi 10 millones de visitantes al año. Los turistas alemanes gastan una media de 1.200 € por estancia. La guía completa de publicidad digital en Mallorca — todos los canales clave, con presupuestos concretos y contexto específico de la isla.' },
       { slug: 'was-kostet-google-ads', title: 'Cuánto cuesta Google Ads en 2026: lo que pagas de verdad', deck: 'Una guía honesta y concreta sobre costes de Google Ads. CPCs medios por sector en Alemania, la ecuación de coste total, tres escenarios de presupuesto y una agencia inmobiliaria en Palma que redujo el coste por lead de 200 € a 83 €.' },
       { slug: 'conversion-rate-optimisation-checklist', title: 'Checklist de CRO 2026: 15 puntos que realmente mueven el resultado', deck: 'Una checklist CRO de 15 puntos para empresas y marketers. Benchmarks por sector, quick wins, mejoras estructurales — y un caso real: de 28 a 71 leads cualificados al mes sin tocar el presupuesto publicitario.' },
@@ -3657,6 +3658,45 @@ export const es = {
           <p>Si algo de lo anterior te resulta familiar, <a href="/es/contact/?topic=free-website-design">cu&eacute;ntanos brevemente tu situaci&oacute;n</a> y te respondemos en un d&iacute;a laborable. Primera conversaci&oacute;n: 30 minutos, sin coste.</p>
         </>
       ),
+    },
+    'google-ads-agency-mallorca': {
+      title: 'Cómo elegir una agencia de Google Ads en Mallorca — y las preguntas que las distinguen',
+      toc: ['Por qué Mallorca es diferente', 'Lo que la mayoría de agencias ignoran', 'Cómo reconocer una buena agencia de Google Ads en Mallorca', 'Números reales de cuentas que gestionamos aquí', 'La pregunta que vale la pena hacer antes de firmar'],
+      prose: (<>
+        <p>Hay muchas agencias de Google Ads en Mallorca. Y en Madrid. Y en Barcelona, que también dicen trabajar en Mallorca. La mayoría venden el mismo paquete: campañas, un informe mensual en PDF y una llamada de seguimiento. Las tarifas van por porcentaje de inversión. Las campañas se configuran igual que para un negocio en la península.</p>
+        <p>El problema: Mallorca no es Madrid. El mercado tiene particularidades reales que la mayoría de las agencias &mdash;especialmente las del continente&mdash; no adaptan.</p>
+        <h2>Por qué Mallorca es diferente</h2>
+        <p>Tres variables impulsan la diferencia:</p>
+        <ol>
+          <li><strong>Complejidad lingüística.</strong> Tus clientes buscan en español, alemán, inglés y a veces en mallorquín &mdash;muchas veces el mismo perfil de cliente, en varias sesiones, antes de decidir. Una campaña construida solo sobre palabras clave en español pierde entre el 40 y el 60&nbsp;% del intento de búsqueda comercial según la temporada. La mayoría de las agencias no tienen la capacidad operativa para construir campañas en los cuatro idiomas.</li>
+          <li><strong>Estacionalidad pronunciada.</strong> Las 12 semanas entre junio y septiembre concentran el 50&ndash;70&nbsp;% de la facturación anual en hostelería y turismo. Una campaña con presupuesto plano todo el año destruye valor en temporada baja. Las estrategias de puja deben construirse sobre la curva real de demanda, no sobre el promedio anual.</li>
+          <li><strong>Geolocalización predeterminada incorrecta.</strong> Google Ads viene por defecto con «Presencia o interés» como configuración de ubicación. Para un negocio local en Mallorca, esto significa mostrar anuncios a cualquier persona en España que haya mostrado algún interés en la isla &mdash;millones de personas, muy pocas de ellas clientes reales. Hay que cambiarlo el primer día. Muchas agencias no lo han hecho.</li>
+        </ol>
+        <h2>Lo que la mayoría de agencias ignoran</h2>
+        <p>Más allá de lo básico, hay tres elementos que separan una configuración que funciona de una que técnicamente está activa pero rinde por debajo de su potencial.</p>
+        <p><strong>Calidad del tracking de conversiones.</strong> Para negocios con ubicación física, la conversión «Store Visits» de Google es gratuita y la mayoría de agencias no la han configurado. Tracking de llamadas, importación de conversiones offline desde CRM &mdash;si la cuenta solo optimiza hacia formularios completados, la señal está mal, y la optimización también.</p>
+        <p><strong>Datos de rendimiento por idioma.</strong> Si no puedes separar el coste por conversión por idioma del anuncio y por época del año, estás operando a ciegas. Los turistas alemanes no se comportan igual que los residentes españoles. Una campaña que mezcla ambos sin separarlos promedia sus diferencias y pierde en ambos frentes.</p>
+        <p><strong>Curvas de presupuesto estacional.</strong> Junio&ndash;septiembre no es donde recortas. Enero&ndash;marzo es cuando bajas. La mayoría de agencias del continente aplican el mismo gasto mensual todo el año y lo llaman «optimizado». No lo es.</p>
+        <h2>Cómo reconocer una buena agencia de Google Ads en Mallorca</h2>
+        <p>Tres preguntas que revelan si una agencia entiende Mallorca o aplica una plantilla genérica:</p>
+        <p><strong>Pídeles que desglosen el CPC efectivo por idioma y mes, no solo por campaña.</strong> Si no pueden, no están gestionando la cuenta: la están observando.</p>
+        <p><strong>Pregunta cómo cobran.</strong> El porcentaje de inversión le da a la agencia un incentivo económico para recomendar más presupuesto, no mejores resultados. Las tarifas fijas alinean los intereses. No todas las agencias funcionan así &mdash;pregúntalo directamente y conviértelo en condición.</p>
+        <p><strong>Pregunta qué cubre el tracking de conversiones de la cuenta.</strong> Una buena respuesta abarca: formularios completados, llamadas telefónicas, visitas a tienda y &mdash;si tienes CRM&mdash; importación de conversiones offline. Una respuesta vaga es una señal de alarma.</p>
+        <h2>Números reales de cuentas que gestionamos aquí</h2>
+        <p>Estos son promedios reales de cuentas de Q1&ndash;Q2 de 2026. Los compartimos porque las afirmaciones vagas sobre «mejor rendimiento» son la forma en que las malas agencias se venden.</p>
+        <ul>
+          <li>CPC medio en hostelería en Mallorca (alemán + inglés): 0,67&ndash;1,40&nbsp;€ según temporada y tipo de concordancia</li>
+          <li>Tasa de conversión media en formularios de captación de leads inmobiliarios: 2,8&ndash;5,1&nbsp;%</li>
+          <li>Reducción de gasto ineficiente al cambiar de «Presencia o interés» a «Solo presencia»: típicamente un 35&ndash;45&nbsp;% menos de volumen de impresiones, coste por conversión un 28&nbsp;% inferior de media</li>
+          <li>Tiempo mínimo hasta que los datos son significativos en un mercado local de bajo volumen: 6&ndash;8 semanas</li>
+        </ul>
+        <h2>La pregunta que vale la pena hacer antes de firmar</h2>
+        <p>Pide a la agencia que explique, concretamente, cómo estructuraría una campaña para un negocio con tu perfil de cliente. No en general. Para tu tipo de cliente, en tu geografía, en tus idiomas.</p>
+        <p>Si la respuesta es vaga &mdash;«montaríamos Google Ads y lo iríamos optimizando»&mdash; ya tienes la respuesta.</p>
+        <p>Lecturas relacionadas: nuestra <a href="/es/agencia-google-ads-espana/">agencia de Google Ads en España</a>, nuestra guía de <a href="/es/blog/google-ads-mallorca/">targeting local en Mallorca</a> y la <a href="/es/blog/how-to-advertise-business-mallorca/">guía completa de publicidad digital en Mallorca</a>.</p>
+        <h2>¿Necesitas ayuda con esto?</h2>
+        <p>Si algo de lo anterior te resulta familiar, <a href="/es/contact/?topic=google-ads-agency-mallorca">cuéntanos brevemente tu situación</a> y te respondemos en un día laborable. Primera conversación: 30 minutos, sin coste.</p>
+      </>),
     },
   } as Record<string, LocalizedBlogDetail>,
 }
