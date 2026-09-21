@@ -143,7 +143,7 @@ export default function AboutPage() {
                 We run <Link href="/services/google-ads">Google Ads</Link>, <Link href="/services/paid-social">paid social</Link>, <Link href="/seo-company-mallorca">SEO</Link>, <Link href="/services/ai-visibility">AI search visibility</Link>, <Link href="/services/analytics">analytics</Link>, <Link href="/services/conversion-design">conversion design</Link> and <Link href="/services/creative">creative production</Link> — seven services, one operating system. <Link href="/services">See all services →</Link>
               </p>
               <p>
-                A selection of <Link href="/cases">client results</Link> is available in our work archive — ten projects with the actual numbers.
+                A selection of <Link href="/cases">client results</Link> is available in our work archive — eleven projects with the actual numbers.
               </p>
             </div>
 

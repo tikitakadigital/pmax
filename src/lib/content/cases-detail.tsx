@@ -326,6 +326,95 @@ export const caseDetails: CaseDetail[] = [
   },
 
   {
+    slug: 'training-school-google-ads',
+    metaTitle: 'Training school — 2.2× leads at the same Google Ads budget | pmax',
+    metaDesc: 'A multi-location training school in Germany: tracking rebuilt around real enquiries, then one account structure per location. 250 verified leads in five months at €41 each, on last year’s budget.',
+    breadcrumbLabel: 'Multi-location training school',
+    heroVariant: 'is-violet',
+    heroKicker: 'EDUCATION · MULTI-LOCATION · GOOGLE ADS CASE STUDY',
+    heroTitle: 'Same budget, 2.2× the leads — rebuilding a multi-location Google Ads account from the tracking up.',
+    heroDeck: 'The account wasn’t short of budget. It was short of honest data. We fixed what counted as a conversion first, rebuilt the structure second, and only then let Smart Bidding off the leash.',
+    stats: [
+      { num: '2.2×', label: 'Leads at the same budget (Mar–Jul, YoY)' },
+      { num: '−55%', label: 'Cost per lead, €92 → €41' },
+      { num: '+114%', label: 'Non-brand leads' },
+      { num: '2.5×', label: 'Conversion rate, 1.1% → 2.9%' },
+    ],
+    prose: (
+      <>
+        <div className="case-brief">
+          <p>A German training school with three locations, selling practical courses that people book after comparing a handful of local providers. Google Search is the main acquisition channel: prospects search, land on a course page and send an enquiry or book directly. The brief was simple to say and harder to do — more real enquiries, without raising the budget. We&rsquo;ve kept the client anonymous and left out the brand, the cities and anything else that would identify them. The numbers are unchanged.</p>
+        </div>
+        <section className="case-chapter">
+          <span className="case-chapter-num">01</span>
+          <h2>The starting point: a dashboard nobody could trust</h2>
+          <p>The first problem wasn&rsquo;t in the campaigns. It was in the conversion setup. The account was partly counting page views as conversions, while some real enquiries weren&rsquo;t being tracked at all. So the reported numbers were inflated and incomplete at the same time, and none of them carried a value. Smart Bidding was being trained on a signal that mixed people who had glanced at a page with people who wanted to book a course.</p>
+          <p>The structure had the same problem. Campaigns had piled up over the years, brand and non-brand traffic ran through the same campaigns, and many ads in the older campaigns had been disapproved. Two campaigns stood out once we took them apart:</p>
+          <ul>
+            <li>A national, location-agnostic campaign spent roughly a quarter of the year&rsquo;s budget at about <strong>€570 per conversion</strong>.</li>
+            <li>A single city campaign spent another quarter at about <strong>€300 per conversion</strong>.</li>
+          </ul>
+          <p>Together they took about half the budget and delivered about 14% of the conversions. That&rsquo;s using the old, flattering definition of a conversion. Against real enquiries they did even worse.</p>
+        </section>
+        <section className="case-chapter">
+          <span className="case-chapter-num">02</span>
+          <h2>Fix the measurement before touching the bids</h2>
+          <p>Optimising an account against a broken signal only gets you better at the wrong thing. So the first job was to rebuild tracking around the actions that actually mean business:</p>
+          <ul>
+            <li><strong>Server-side tagging</strong>, so conversions survive ad blockers, browser restrictions and consent gaps far better than a browser-only setup.</li>
+            <li><strong>Real conversions only.</strong> Form submissions and other genuine enquiry actions count. Page views don&rsquo;t.</li>
+            <li><strong>Conversion values on every lead</strong>, so the bidding algorithm can tell a valuable enquiry from a cheap one, not just count them.</li>
+          </ul>
+          <p>For the first time, the account knew what a lead was worth. Between March and July it recorded around €13,000 in conversion value. The year before, the account had tracked practically none.</p>
+        </section>
+        <section className="case-chapter">
+          <span className="case-chapter-num">03</span>
+          <h2>Rebuild the structure around locations and intent</h2>
+          <p>In February we rebuilt the account around how people actually search for a local course provider: by location, and by whether they already know the brand.</p>
+          <ul>
+            <li><strong>One brand and one generic campaign per location</strong>, so budget, bids and ad copy could follow local demand instead of being averaged across three cities.</li>
+            <li><strong>Retired the dead weight.</strong> The national catch-all campaign, dynamic search ads, voucher campaigns and a location outside the core catchment were switched off.</li>
+            <li><strong>No gap in lead flow.</strong> The old campaigns kept running alongside on Maximise Clicks until April, while the new structure built up enough conversion history to bid properly.</li>
+            <li><strong>Protected peak season.</strong> In June and July we added Target Impression Share campaigns to hold visibility on the searches that mattered most when demand was highest.</li>
+          </ul>
+        </section>
+        <section className="case-chapter">
+          <span className="case-chapter-num">04</span>
+          <h2>The results: March to July 2026 vs. the same months in 2025</h2>
+          <p>We compare March to July because that&rsquo;s the period the new structure was fully live, and it covers the same season in both years. Spend was almost identical: €10,272 against €10,552.</p>
+          <ul>
+            <li><strong>250 leads, up from 115</strong> — 2.2× as many at the same budget.</li>
+            <li><strong>Cost per lead down 55%</strong>, from €92 to €41.</li>
+            <li><strong>Conversion rate up from 1.1% to 2.9%</strong>.</li>
+            <li><strong>Non-brand leads up 114%</strong>, at around €53 each instead of €118. The growth didn&rsquo;t come from people who were already searching for the brand.</li>
+            <li><strong>Best month: May 2026</strong>, at €31 per lead and a 3.2% conversion rate, against €67 a year earlier.</li>
+          </ul>
+          <div className="prose-callout">
+            <div className="prose-callout-kicker">A note on the comparison</div>
+            <p>The two years weren&rsquo;t measured the same way. The 2025 figures include page views counted as conversions and miss some real enquiries; the 2026 figures count verified enquiries only. So treat the year-on-year percentages as directional rather than exact. What isn&rsquo;t directional: 250 real enquiries in five months, each one tracked with a value, at €41 apiece, on the same budget as the year before.</p>
+          </div>
+        </section>
+        <div className="case-takeaway">
+          <span className="case-takeaway-kicker">What made it work</span>
+          <p>Most underperforming lead-gen accounts don&rsquo;t have a bidding problem. They have a measurement problem that looks like a bidding problem. When page views count as conversions, the algorithm cheerfully buys more page views. The order matters: decide what a real lead is, track it properly with a value, rebuild the structure around how customers actually search, and only then ask Smart Bidding to find more of them.</p>
+        </div>
+      </>
+    ),
+    relatedCases: [
+      { slug: 'imero', variant: 'is-yellow', title: 'IMERO e-label — +307% sign-ups' },
+      { slug: 'luxaflex', variant: 'is-orange', title: 'Luxaflex — +3,191% contact requests' },
+      { slug: 'unisono', variant: 'is-pink', title: 'Unisono — +183% phone leads' },
+    ],
+    promo: {
+      eyebrow: 'Free 30-minute Google Ads consultation',
+      headline: 'Not sure your conversions are real?',
+      deck: 'Share read access. We’ll check what your account is actually counting as a conversion and send back a one-page diagnosis. No deck, no pitch.',
+      topic: 'google-ads-audit',
+      ctaLabel: 'Request a consultation',
+    },
+  },
+
+  {
     slug: 'ledxpress',
     metaTitle: 'LEDXpress — +365% SEO revenue in 8 months | pmax',
     metaDesc: 'Structured SEO programme grew LEDXpress revenue 365% in 8 months — technical foundations, intent-first content and paid-data validation.',

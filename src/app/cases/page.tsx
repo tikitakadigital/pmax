@@ -8,7 +8,7 @@ import { cases } from '@/lib/content/cases'
 
 export const metadata: Metadata = {
   title: 'Case studies — digital marketing results | pmax',
-  description: '10 digital marketing case studies: +365% SEO revenue, −93% cost per lead, +307% sign-ups. Real results from e-commerce, real estate, SaaS, retail and more.',
+  description: '11 digital marketing case studies: +365% SEO revenue, −93% cost per lead, +307% sign-ups. Real results from e-commerce, real estate, SaaS, retail and more.',
   alternates: siteAlternates('/cases/'),
 }
 
@@ -22,7 +22,7 @@ const jsonLd = [
     '@type': 'CollectionPage',
     '@id': 'https://pmax.online/cases/#collection',
     name: 'Work — Client Case Studies | pmax',
-    description: '10 digital marketing case studies: Google Ads, SEO, paid social and AI visibility results from real clients across e-commerce, real estate, SaaS, retail and more.',
+    description: '11 digital marketing case studies: Google Ads, SEO, paid social and AI visibility results from real clients across e-commerce, real estate, SaaS, retail and more.',
     url: 'https://pmax.online/cases/',
     publisher: { '@id': 'https://pmax.online/#org' },
     inLanguage: 'en',
@@ -49,7 +49,7 @@ export default function CasesPage() {
               Real <em>numbers</em><br />from real clients.
             </h1>
             <p className="page-intro-deck">
-              Ten projects where the right small change moved the business. We share what we built,
+              Eleven projects where the right small change moved the business. We share what we built,
               what worked, and — where useful — what didn&apos;t.
             </p>
           </div>
@@ -60,7 +60,7 @@ export default function CasesPage() {
             <header className="section-head reveal">
               <div style={{ flex: 1, minWidth: 280 }}>
                 <div className="section-head-kicker">All work · 2024–2026</div>
-                <h2 className="section-head-title">Ten projects.</h2>
+                <h2 className="section-head-title">Eleven projects.</h2>
               </div>
               <Link href="/services" className="btn-tertiary">See our services →</Link>
             </header>

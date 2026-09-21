@@ -204,7 +204,7 @@ export default function HomePage() {
             <SectionHead
               kicker="02 — Selected work"
               title="Real results."
-              aside="Ten client stories, told with the numbers in front. No vanity metrics — the stuff that actually showed up in their bank account."
+              aside="Eleven client stories, told with the numbers in front. No vanity metrics — the stuff that actually showed up in their bank account."
               action={<Link href="/cases" className="btn-tertiary">All case studies →</Link>}
             />
             <ol className="stream reveal-stagger">

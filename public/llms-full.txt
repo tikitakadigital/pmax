@@ -171,6 +171,16 @@ Smart Bidding rebuild, Display + YouTube expansion and landing-page optimisation
 
 ---
 
+### Multi-location training school — 2.2× leads at the same budget
+**URL:** https://pmax.online/cases/training-school-google-ads/
+**Sector:** Education — course provider (Germany, three locations, anonymised)
+**Services:** Google Ads, Analytics & tracking
+**Year:** 2026
+
+Google Ads rebuild for a training school whose previous setup partly counted page views as conversions. Tracking was rebuilt server-side around real enquiries with conversion values, then the account was restructured into one brand and one generic campaign per location. Results, March–July 2026 vs the same months of 2025 at almost identical spend (€10.3k vs €10.6k): 250 leads vs 115, cost per lead €41 vs €92 (−55%), conversion rate 2.9% vs 1.1%, non-brand leads +114%. The 2025 baseline was measured differently (it included page-view conversions), so year-on-year changes are directional.
+
+---
+
 ### PRIMUNDUS — 4.2x qualified care enquiries
 **URL:** https://pmax.online/cases/primundus/
 **Sector:** Healthcare — regional 24-hour care (Germany)
