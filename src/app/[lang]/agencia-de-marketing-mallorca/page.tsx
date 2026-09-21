@@ -8,6 +8,7 @@ import SectionHead from '@/components/SectionHead'
 import PromoBlock from '@/components/PromoBlock'
 import { breadcrumb, faqPage } from '@/lib/schema'
 import { cases } from '@/lib/content/cases'
+import { casePath } from '@/lib/content/case-slugs'
 
 export function generateStaticParams() {
   return [{ lang: 'es' }]
@@ -312,7 +313,7 @@ export default function AgenciaDeMarketingMallorcaPage() {
           <ol className="stream reveal-stagger" style={{ listStyle: 'none', padding: 0 }}>
             <li className="stream-item">
               <span className="stream-stamp">{unisono.stamp}</span>
-              <Link href={`/es/cases/${unisono.slug}`} className={`stream-card ${unisono.variant}`}>
+              <Link href={casePath(unisono.slug, 'es')} className={`stream-card ${unisono.variant}`}>
                 <div>
                   <span className="stream-kicker">{unisono.kicker}</span>
                   <h3 className="stream-head">{unisono.title}</h3>
@@ -327,7 +328,7 @@ export default function AgenciaDeMarketingMallorcaPage() {
             </li>
             <li className="stream-item">
               <span className="stream-stamp">{ledxpress.stamp}</span>
-              <Link href={`/es/cases/${ledxpress.slug}`} className={`stream-card ${ledxpress.variant}`}>
+              <Link href={casePath(ledxpress.slug, 'es')} className={`stream-card ${ledxpress.variant}`}>
                 <div>
                   <span className="stream-kicker">{ledxpress.kicker}</span>
                   <h3 className="stream-head">{ledxpress.title}</h3>
@@ -342,7 +343,7 @@ export default function AgenciaDeMarketingMallorcaPage() {
             </li>
             <li className="stream-item">
               <span className="stream-stamp">{gabiona.stamp}</span>
-              <Link href={`/es/cases/${gabiona.slug}`} className={`stream-card ${gabiona.variant}`}>
+              <Link href={casePath(gabiona.slug, 'es')} className={`stream-card ${gabiona.variant}`}>
                 <div>
                   <span className="stream-kicker">{gabiona.kicker}</span>
                   <h3 className="stream-head">{gabiona.title}</h3>

@@ -7,13 +7,16 @@ import { breadcrumb, orgRef } from '@/lib/schema'
 import { cases } from '@/lib/content/cases'
 import { getCaseDetail } from '@/lib/content/cases-detail'
 import { getT } from '@/lib/i18n'
+import { caseSlug, canonicalCaseSlug, casePath, caseAlternates } from '@/lib/content/case-slugs'
 
 export function generateStaticParams() {
-  return ['de','es'].flatMap(lang => cases.map(c => ({ lang, slug: c.slug })))
+  return ['de','es'].flatMap(lang => cases.map(c => ({ lang, slug: caseSlug(c.slug, lang) })))
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string; slug: string }> }): Promise<Metadata> {
-  const { lang, slug } = await params
+  const { lang, slug: localSlug } = await params
+  const slug = canonicalCaseSlug(localSlug, lang)
+  if (!slug) return {}
   const t = getT(lang)
   const locItem = t.cases.items.find(i => i.slug === slug)
   const detail = getCaseDetail(slug)
@@ -22,15 +25,14 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   return {
     title: loc?.metaTitle ?? detail?.metaTitle ?? `${locItem?.title} | pmax`,
     description: loc?.metaDesc ?? detail?.metaDesc,
-    alternates: {
-      canonical: `https://pmax.online/${lang}/cases/${slug}/`,
-      languages: { 'en': `https://pmax.online/cases/${slug}/`, 'de': `https://pmax.online/de/cases/${slug}/`, 'es': `https://pmax.online/es/cases/${slug}/`, 'x-default': `https://pmax.online/cases/${slug}/` },
-    },
+    alternates: caseAlternates(slug, lang as 'de' | 'es'),
   }
 }
 
 export default async function CasePage({ params }: { params: Promise<{ lang: string; slug: string }> }) {
-  const { lang, slug } = await params
+  const { lang, slug: localSlug } = await params
+  const slug = canonicalCaseSlug(localSlug, lang)
+  if (!slug) notFound()
   const t = getT(lang)
   const detail = getCaseDetail(slug)
   const locItem = t.cases.items.find(i => i.slug === slug)
@@ -44,7 +46,7 @@ export default async function CasePage({ params }: { params: Promise<{ lang: str
   const prose = loc?.prose ?? detail.prose
   const isTranslated = !!loc?.prose
 
-  const caseUrl = `https://pmax.online/${lang}/cases/${slug}/`
+  const caseUrl = `https://pmax.online${casePath(slug, lang)}`
   const jsonLd = [
     breadcrumb([
       { name: 'Home', url: `https://pmax.online/${lang}/` },
@@ -101,7 +103,7 @@ export default async function CasePage({ params }: { params: Promise<{ lang: str
             {!isTranslated && (
               <div style={{ marginBottom: 32, padding: '14px 20px', background: 'rgba(255,255,255,0.04)', border: '1px solid #2d2d2d', borderRadius: 8, fontFamily: 'var(--font-mono)', fontSize: 11, letterSpacing: '1.5px', textTransform: 'uppercase', color: '#949494', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: 12 }}>
                 <span>{lang === 'de' ? 'Diese Fallstudie ist auf Englisch verfügbar' : 'Este caso de estudio está disponible en inglés'}</span>
-                <Link href={`/cases/${slug}`} style={{ color: 'var(--color-jelly-mint)' }}>
+                <Link href={casePath(slug, 'en')} style={{ color: 'var(--color-jelly-mint)' }}>
                   {lang === 'de' ? 'Auf Englisch lesen →' : 'Leer en inglés →'}
                 </Link>
               </div>
@@ -122,7 +124,7 @@ export default async function CasePage({ params }: { params: Promise<{ lang: str
             </header>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 20 }}>
               {detail.relatedCases.map(rc => (
-                <Link key={rc.slug} href={`${p}/cases/${rc.slug}`} className={`stream-card ${rc.variant}`}>
+                <Link key={rc.slug} href={casePath(rc.slug, lang)} className={`stream-card ${rc.variant}`}>
                   <div>
                     <span className="stream-kicker">{lang === 'de' ? 'Fallstudie' : lang === 'es' ? 'Caso de estudio' : 'Case study'}</span>
                     <h3 className="stream-head">{rc.title}</h3>

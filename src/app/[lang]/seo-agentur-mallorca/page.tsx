@@ -7,6 +7,7 @@ import SectionHead from '@/components/SectionHead'
 import PromoBlock from '@/components/PromoBlock'
 import { breadcrumb, faqPage } from '@/lib/schema'
 import { cases } from '@/lib/content/cases'
+import { casePath } from '@/lib/content/case-slugs'
 
 // Only build /de/seo-agentur-mallorca/ — not /es/seo-agentur-mallorca/
 export function generateStaticParams() {
@@ -284,7 +285,7 @@ export default function SeoAgenturMallorcaPage() {
           <ol className="stream reveal-stagger" style={{ listStyle: 'none', padding: 0 }}>
             <li className="stream-item">
               <span className="stream-stamp">{ledxpress.stamp}</span>
-              <Link href={`/de/cases/${ledxpress.slug}`} className={`stream-card ${ledxpress.variant}`}>
+              <Link href={casePath(ledxpress.slug, 'de')} className={`stream-card ${ledxpress.variant}`}>
                 <div>
                   <span className="stream-kicker">Case Study</span>
                   <h3 className="stream-head">LEDXpress — +365% organischer Umsatz in 14 Monaten</h3>

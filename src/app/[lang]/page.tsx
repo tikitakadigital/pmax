@@ -9,6 +9,7 @@ import PromoBlock from '@/components/PromoBlock'
 import FaqList from '@/components/FaqList'
 import { getT } from '@/lib/i18n'
 import { cases } from '@/lib/content/cases'
+import { casePath } from '@/lib/content/case-slugs'
 import { posts as allPosts } from '@/lib/content/blog'
 import { faqPage } from '@/lib/schema'
 
@@ -122,7 +123,7 @@ export default async function LangHomePage({ params }: { params: Promise<{ lang:
                 return (
                   <li key={c.slug} className="stream-item">
                     <span className="stream-stamp">{loc?.stamp ?? c.stamp}</span>
-                    <Link href={`${p}/cases/${c.slug}`} className={`stream-card ${c.variant}`}>
+                    <Link href={casePath(c.slug, lang)} className={`stream-card ${c.variant}`}>
                       <div>
                         <span className="stream-kicker">{loc?.kicker ?? c.kicker}</span>
                         <h3 className="stream-head">{loc?.title ?? c.title}</h3>

@@ -8,6 +8,7 @@ import SectionHead from '@/components/SectionHead'
 import PromoBlock from '@/components/PromoBlock'
 import { breadcrumb, faqPage } from '@/lib/schema'
 import { cases } from '@/lib/content/cases'
+import { casePath } from '@/lib/content/case-slugs'
 
 export function generateStaticParams() {
   return [{ lang: 'de' }]
@@ -314,7 +315,7 @@ export default function GoogleAdsAgenturSpanienPage() {
           <ol className="stream reveal-stagger" style={{ listStyle: 'none', padding: 0 }}>
             <li className="stream-item">
               <span className="stream-stamp">{imero.stamp}</span>
-              <Link href={`/de/cases/${imero.slug}`} className={`stream-card ${imero.variant}`}>
+              <Link href={casePath(imero.slug, 'de')} className={`stream-card ${imero.variant}`}>
                 <div>
                   <span className="stream-kicker">{imero.kicker}</span>
                   <h3 className="stream-head">{imero.title}</h3>
@@ -331,7 +332,7 @@ export default function GoogleAdsAgenturSpanienPage() {
             </li>
             <li className="stream-item">
               <span className="stream-stamp">{gabiona.stamp}</span>
-              <Link href={`/de/cases/${gabiona.slug}`} className={`stream-card ${gabiona.variant}`}>
+              <Link href={casePath(gabiona.slug, 'de')} className={`stream-card ${gabiona.variant}`}>
                 <div>
                   <span className="stream-kicker">{gabiona.kicker}</span>
                   <h3 className="stream-head">{gabiona.title}</h3>
@@ -348,7 +349,7 @@ export default function GoogleAdsAgenturSpanienPage() {
             </li>
             <li className="stream-item">
               <span className="stream-stamp">{luxaflex.stamp}</span>
-              <Link href={`/de/cases/${luxaflex.slug}`} className={`stream-card ${luxaflex.variant}`}>
+              <Link href={casePath(luxaflex.slug, 'de')} className={`stream-card ${luxaflex.variant}`}>
                 <div>
                   <span className="stream-kicker">{luxaflex.kicker}</span>
                   <h3 className="stream-head">{luxaflex.title}</h3>

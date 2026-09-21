@@ -61,6 +61,15 @@ ErrorDocument 404 /404.html
   RewriteRule ^industries-we-serve/mallorca-industries/?$ /industries/ [R=301,L]
   RewriteRule ^digital-compass/?$ /services/ [R=301,L]
 
+  # Case studies moved to localised slugs (see src/lib/content/case-slugs.ts)
+  RewriteRule ^de/cases/automotive/?$ /de/cases/automobil/ [R=301,L]
+  RewriteRule ^es/cases/automotive/?$ /es/cases/automocion/ [R=301,L]
+  RewriteRule ^de/cases/energy-utility/?$ /de/cases/energieversorger/ [R=301,L]
+  RewriteRule ^es/cases/energy-utility/?$ /es/cases/empresa-energetica/ [R=301,L]
+  RewriteRule ^es/cases/vc-investor/?$ /es/cases/inversor-capital-riesgo/ [R=301,L]
+  RewriteRule ^de/cases/training-school-google-ads/?$ /de/cases/schulungsanbieter-google-ads/ [R=301,L]
+  RewriteRule ^es/cases/training-school-google-ads/?$ /es/cases/centro-formacion-google-ads/ [R=301,L]
+
   # Redirect www to non-www (canonical domain)
   RewriteCond %{HTTP_HOST} ^www\.pmax\.online [NC]
   RewriteRule ^(.*)$ https://pmax.online/$1 [R=301,L]

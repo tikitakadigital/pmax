@@ -4,7 +4,7 @@ import { notFound } from 'next/navigation'
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
 import { breadcrumb, orgRef } from '@/lib/schema'
-import { siteAlternates } from '@/lib/hreflang'
+import { caseAlternates } from '@/lib/content/case-slugs'
 import { caseDetails, getCaseDetail } from '@/lib/content/cases-detail'
 
 export function generateStaticParams() {
@@ -18,7 +18,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   return {
     title: detail.metaTitle,
     description: detail.metaDesc,
-    alternates: siteAlternates(`/cases/${slug}/`),
+    alternates: caseAlternates(slug),
   }
 }
 

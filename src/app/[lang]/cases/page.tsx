@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import { casePath } from '@/lib/content/case-slugs'
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
 import { breadcrumb, orgRef } from '@/lib/schema'
@@ -71,7 +72,7 @@ export default async function CasesPage({ params }: { params: Promise<{ lang: st
               {c.items.map(item => (
                 <li key={item.slug} className="stream-item">
                   <span className="stream-stamp">{item.stamp}</span>
-                  <Link href={`${p}/cases/${item.slug}`} className={`stream-card ${item.variant}`}>
+                  <Link href={casePath(item.slug, lang)} className={`stream-card ${item.variant}`}>
                     <div>
                       <span className="stream-kicker">{item.kicker}</span>
                       <h2 className="stream-head">{item.title}</h2>

@@ -3,6 +3,7 @@ import type { MetadataRoute } from 'next'
 export const dynamic = 'force-static'
 import { services } from '@/lib/content/services'
 import { cases } from '@/lib/content/cases'
+import { casePath } from '@/lib/content/case-slugs'
 import { posts } from '@/lib/content/blog'
 import { translatedLocales } from '@/lib/i18n'
 import { industryDetails } from '@/lib/content/industries-detail'
@@ -54,7 +55,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const casePages: MetadataRoute.Sitemap = [
     ...cases.map(c => ({ url: `${base}/cases/${c.slug}/`, lastModified: '2026-04-01', changeFrequency: 'yearly' as const, priority: 0.7 })),
-    ...langs.flatMap(lang => cases.map(c => ({ url: `${base}/${lang}/cases/${c.slug}/`, lastModified: '2026-04-01', changeFrequency: 'yearly' as const, priority: 0.6 }))),
+    ...langs.flatMap(lang => cases.map(c => ({ url: `${base}${casePath(c.slug, lang)}`, lastModified: '2026-04-01', changeFrequency: 'yearly' as const, priority: 0.6 }))),
   ]
 
   // Localised post URLs are listed ONLY where a translation actually exists.

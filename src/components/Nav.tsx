@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
+import { canonicalCaseSlug, casePath } from '@/lib/content/case-slugs'
 
 const labels = {
   en: { services: 'Services', industries: 'Industries', cases: 'Work', blog: 'Journal', about: 'About', cta: 'Start a project' },
@@ -34,6 +35,11 @@ function switchedPath(pathname: string, target: Locale): string {
   const stripped = pathname.replace(/^\/(de|es)/, '') || '/'
   const key = stripped.replace(/\/$/, '') || '/'
   if (localeSlugs[key]) return localeSlugs[key][target]
+  const caseMatch = key.match(/^\/cases\/([^/]+)$/)
+  if (caseMatch) {
+    const slug = canonicalCaseSlug(caseMatch[1], detectLocale(pathname))
+    if (slug) return casePath(slug, target)
+  }
   if (target === 'en') return stripped
   return `/${target}${stripped === '/' ? '/' : stripped}`
 }
