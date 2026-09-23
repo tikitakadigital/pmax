@@ -13,7 +13,9 @@ ErrorDocument 404 /404.html
   Header always set X-XSS-Protection "0"
   Header always set Cross-Origin-Opener-Policy "same-origin"
   Header always set Cross-Origin-Resource-Policy "cross-origin"
-  Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self' data:; connect-src 'self' https://admin.pmax.online https://pmax-mailer.long-math-4fe4.workers.dev; frame-ancestors 'none'; base-uri 'self'; form-action 'self'"
+  # Allowed third parties: Google Tag Manager, GA4, Google Ads, Microsoft Clarity, YouTube.
+  # Anything blocked here fails silently in the browser — check the console after changing it.
+  Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://ssl.google-analytics.com https://www.googleadservices.com https://googleads.g.doubleclick.net https://www.clarity.ms https://*.clarity.ms; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://www.googletagmanager.com https://www.google-analytics.com https://*.google-analytics.com https://*.g.doubleclick.net https://www.google.com https://www.google.de https://www.google.es https://*.clarity.ms https://c.bing.com; font-src 'self' data:; connect-src 'self' https://admin.pmax.online https://pmax-mailer.long-math-4fe4.workers.dev https://www.googletagmanager.com https://www.google-analytics.com https://*.google-analytics.com https://*.analytics.google.com https://stats.g.doubleclick.net https://*.clarity.ms https://c.bing.com; frame-src 'self' https://www.googletagmanager.com https://td.doubleclick.net https://www.youtube.com https://www.youtube-nocookie.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self'"
   Header unset X-Powered-By
 </IfModule>
 
