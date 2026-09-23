@@ -8,6 +8,20 @@ import s from './proposal.module.css'
 
 type OfferStatus = 'draft' | 'sent' | 'accepted' | 'expired'
 
+
+// ─── Blocks ───────────────────────────────────────────────────────────────────
+// A blocks-based offer composes its own sections, in its own order. Offers
+// without blocks fall back to the fixed sprint/retainer layout below.
+
+export type Block =
+  | { type: 'text'; title?: string; paragraphs: string[] }
+  | { type: 'statement'; title?: string; text: string }
+  | { type: 'list'; title?: string; intro?: string; items: string[]; ordered?: boolean }
+  | { type: 'packages'; title?: string; intro?: string; items: { name: string; meta?: string; price?: string; price_note?: string; includes?: string[]; note?: string }[] }
+  | { type: 'table'; title?: string; intro?: string; headers: string[]; rows: string[][]; note?: string }
+  | { type: 'summary'; title?: string; intro?: string; rows: { label: string; value: string; note?: string }[]; footnote?: string }
+  | { type: 'note'; label?: string; text: string }
+
 export interface Offer {
   code: string
   /** Language of the offer content — drives the UI labels. Defaults to English. */
@@ -18,34 +32,39 @@ export interface Offer {
 
   client_name: string
   client_website?: string
+  client_address?: string
   client_email: string
   client_phone?: string
   contact_person: string
 
   title: string
-  intro: string
 
-  situation_strengths: string
-  situation_gaps: string[]
+  /** Composed sections. When present, they replace the fixed layout below. */
+  blocks?: Block[]
 
-  positioning_core: string
-  positioning_pillars: { pillar: string; what: string; message: string }[]
-  positioning_strategy: string
+  intro?: string
+
+  situation_strengths?: string
+  situation_gaps?: string[]
+
+  positioning_core?: string
+  positioning_pillars?: { pillar: string; what: string; message: string }[]
+  positioning_strategy?: string
   positioning_note?: string
 
-  channels: { name: string; benefit: string; timeframe: string; optional?: boolean }[]
+  channels?: { name: string; benefit: string; timeframe: string; optional?: boolean }[]
   channels_glossary?: { term: string; short: string }[]
 
-  sprint_price: number
-  sprint_days: number
+  sprint_price?: number
+  sprint_days?: number
   /** Hour-based packages: shown instead of days when set. */
   sprint_hours?: number
-  sprint_includes: string[]
+  sprint_includes?: string[]
   sprint_flex_note?: string
 
-  retainer_fixed: string[]
-  retainer_variable: string[]
-  retainer_variants: {
+  retainer_fixed?: string[]
+  retainer_variable?: string[]
+  retainer_variants?: {
     label: string
     days: number
     /** Hour-based retainer: shown instead of days when set. */
@@ -54,21 +73,21 @@ export interface Offer {
     focus: string
     fits_when: string
   }[]
-  retainer_note: string
+  retainer_note?: string
 
-  decision_text: string
+  decision_text?: string
 
-  timeline: { period: string; description: string }[]
+  timeline?: { period: string; description: string }[]
 
-  kpis: string[]
-  expectations: string[]
+  kpis?: string[]
+  expectations?: string[]
 
-  external_costs: { item: string; recommendation: string }[]
-  external_costs_note: string
+  external_costs?: { item: string; recommendation: string }[]
+  external_costs_note?: string
 
-  conditions: string[]
+  conditions?: string[]
 
-  next_steps: string[]
+  next_steps?: string[]
 
   glossary?: { term: string; definition: string }[]
 }
@@ -82,7 +101,7 @@ const LABELS = {
   en: {
     savePdf: 'Save as PDF', acceptBar: 'Accept proposal', accepted: '✓ Accepted',
     expiredOn: 'Expired on', draft: 'Draft',
-    metaFor: 'FOR', metaFrom: 'FROM', metaDate: 'DATE', metaValid: 'VALID UNTIL', metaContact: 'CONTACT',
+    metaCode: 'PROPOSAL NO.', metaFor: 'FOR', metaFrom: 'FROM', metaDate: 'DATE', metaValid: 'VALID UNTIL', metaContact: 'CONTACT',
     s01: 'Opening',
     s02: 'Situation', strengths: 'Strengths:', gaps: 'Gaps:',
     s03: 'Your Positioning — a brief note',
@@ -124,7 +143,7 @@ const LABELS = {
   de: {
     savePdf: 'PDF speichern', acceptBar: 'Angebot annehmen', accepted: '✓ Angenommen',
     expiredOn: 'Abgelaufen am', draft: 'Entwurf',
-    metaFor: 'FÜR', metaFrom: 'VON', metaDate: 'DATUM', metaValid: 'GÜLTIG BIS', metaContact: 'KONTAKT',
+    metaCode: 'ANGEBOTSNUMMER', metaFor: 'FÜR', metaFrom: 'VON', metaDate: 'DATUM', metaValid: 'GÜLTIG BIS', metaContact: 'KONTAKT',
     s01: 'Kurz vorab',
     s02: 'Ausgangslage', strengths: 'Was gut ist:', gaps: 'Was fehlt:',
     s03: 'Deine Positionierung — kurz festgehalten',
@@ -175,6 +194,102 @@ function fmtPrice(n: number) {
   return new Intl.NumberFormat('de-DE', { style: 'currency', currency: 'EUR', maximumFractionDigits: 0 }).format(n)
 }
 
+
+// ─── Block renderer ───────────────────────────────────────────────────────────
+
+function Block({ block: b, num }: { block: Block; num: string }) {
+  const head = 'title' in b && b.title
+    ? <h2 className={s.sh}>{num && <span className={s.n}>{num}</span>}{b.title}</h2>
+    : null
+
+  if (b.type === 'note') {
+    return (
+      <div className={s.hint}>
+        {b.label && <span className={s.hintLabel}>{b.label}</span>}
+        <p>{b.text}</p>
+      </div>
+    )
+  }
+
+  return (
+    <section className={s.sec}>
+      {head}
+
+      {b.type === 'text' && b.paragraphs.map((t, i) => <p key={i} className={s.p}>{t}</p>)}
+
+      {b.type === 'statement' && <div className={s.coreMsg}>{b.text}</div>}
+
+      {b.type === 'list' && (
+        <>
+          {b.intro && <p className={s.p}>{b.intro}</p>}
+          {b.ordered
+            ? <ol className={s.ol}>{b.items.map((t, i) => <li key={i}>{t}</li>)}</ol>
+            : <ul className={s.ul}>{b.items.map((t, i) => <li key={i}>{t}</li>)}</ul>}
+        </>
+      )}
+
+      {b.type === 'packages' && (
+        <>
+          {b.intro && <p className={s.p}>{b.intro}</p>}
+          {b.items.map((pkg, i) => (
+            <article key={i} className={s.pkg}>
+              <header className={s.pkgHead}>
+                <div>
+                  <h3 className={s.pkgName}>{pkg.name}</h3>
+                  {pkg.meta && <p className={s.pkgMeta}>{pkg.meta}</p>}
+                </div>
+                {pkg.price && (
+                  <div className={s.pkgPriceBox}>
+                    <span className={s.pkgPrice}>{pkg.price}</span>
+                    {pkg.price_note && <span className={s.pkgPriceNote}>{pkg.price_note}</span>}
+                  </div>
+                )}
+              </header>
+              {pkg.includes && pkg.includes.length > 0 && (
+                <ul className={s.ul}>{pkg.includes.map((t, j) => <li key={j}>{t}</li>)}</ul>
+              )}
+              {pkg.note && <p className={s.pkgNote}>{pkg.note}</p>}
+            </article>
+          ))}
+        </>
+      )}
+
+      {b.type === 'table' && (
+        <>
+          {b.intro && <p className={s.p}>{b.intro}</p>}
+          <table className={s.tbl}>
+            <thead><tr>{b.headers.map((h, i) => <th key={i}>{h}</th>)}</tr></thead>
+            <tbody>
+              {b.rows.map((row, i) => (
+                <tr key={i}>
+                  {row.map((cell, j) => <td key={j}>{j === 0 ? <strong>{cell}</strong> : cell}</td>)}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+          {b.note && <p className={s.p} style={{ marginTop: '1rem' }}>{b.note}</p>}
+        </>
+      )}
+
+      {b.type === 'summary' && (
+        <>
+          {b.intro && <p className={s.p}>{b.intro}</p>}
+          <div className={s.pricingGrid}>
+            {b.rows.map((row, i) => (
+              <div key={i} className={s.pricingBox}>
+                <div className={s.pricingLabel}>{row.label}</div>
+                <div className={s.pricingAmount}>{row.value}</div>
+                {row.note && <div className={s.pricingNote}>{row.note}</div>}
+              </div>
+            ))}
+          </div>
+          {b.footnote && <p className={s.footnote}>{b.footnote}</p>}
+        </>
+      )}
+    </section>
+  )
+}
+
 // ─── Page ─────────────────────────────────────────────────────────────────────
 
 type State = 'loading' | 'not_found' | 'error' | 'ok'
@@ -206,6 +321,17 @@ export default function ProposalPage() {
       .catch(() => setPageState('error'))
   }, [code])
 
+  // Browsers name a print-to-PDF file after document.title, so the download
+  // reads "KVA165 — rasten projects — Angebot" instead of "pmax".
+  useEffect(() => {
+    if (!offer) return
+    const label = offer.lang === 'de' ? 'Angebot' : 'Proposal'
+    const parts = [offer.code, offer.client_name, label].filter(Boolean)
+    const previous = document.title
+    document.title = parts.join(' — ')
+    return () => { document.title = previous }
+  }, [offer])
+
   async function handleAccept() {
     if (!code) return
     try {
@@ -220,15 +346,21 @@ export default function ProposalPage() {
   if (!offer) return null
 
   const L = LABELS[offer.lang === 'de' ? 'de' : 'en']
+  const blocks = offer.blocks ?? []
+  // Numbered section headings, counted across the blocks that carry a title.
+  let n = 0
+  const sectionNumbers = blocks.map(b => ('title' in b && b.title ? String(++n).padStart(2, '0') : ''))
+  const hasBlocks = blocks.length > 0
+  // Offers without blocks always carry the full legacy content.
+  const lo = offer as Required<Offer>
   const isExpired = new Date(offer.valid_until) < new Date()
   const isAccepted = offer.status === 'accepted' || accepted
   const isDraft = offer.status === 'draft'
   const canAccept = !isAccepted && !isExpired && !isDraft
 
-  const sprintTotal3m = offer.retainer_variants.map(v => ({
-    ...v,
-    total: v.price * 3 + offer.sprint_price,
-  }))
+  const sprintTotal3m = hasBlocks
+    ? []
+    : lo.retainer_variants.map(v => ({ ...v, total: v.price * 3 + lo.sprint_price }))
 
   return (
     <div className={s.page}>
@@ -269,13 +401,19 @@ export default function ProposalPage() {
 
         <table className={s.metaTable}>
           <tbody>
+            <tr><td className={s.metaKey}>{L.metaCode}</td><td style={{ fontFamily: 'var(--font-mono, monospace)' }}>{offer.code}</td></tr>
             <tr>
               <td className={s.metaKey}>{L.metaFor}</td>
               <td>
                 {offer.client_name}
-                {offer.client_website && <> · {offer.client_website}</>}
-                {offer.client_email && <> · {offer.client_email}</>}
-                {offer.client_phone && <> · {offer.client_phone}</>}
+                {offer.client_address && offer.client_address.split('\n').filter(Boolean).map((line, i) => (
+                  <span key={i} className={s.metaAddrLine}>{line}</span>
+                ))}
+                {(offer.client_website || offer.client_email || offer.client_phone) && (
+                  <span className={s.metaAddrLine}>
+                    {[offer.client_website, offer.client_email, offer.client_phone].filter(Boolean).join(' · ')}
+                  </span>
+                )}
               </td>
             </tr>
             <tr><td className={s.metaKey}>{L.metaFrom}</td><td>PMAX Online SL, Palmanova</td></tr>
@@ -287,19 +425,25 @@ export default function ProposalPage() {
 
         <hr className={s.rule} />
 
+        {/* ── Composed blocks ── */}
+        {hasBlocks && blocks.map((b, i) => (
+          <Block key={i} block={b} num={sectionNumbers[i]} />
+        ))}
+
+        {!hasBlocks && (<>
         {/* ── 01 Opening ── */}
         <section className={s.sec}>
           <h2 className={s.sh}><span className={s.n}>01</span>{L.s01}</h2>
-          <p className={s.p}>{offer.intro}</p>
+          <p className={s.p}>{lo.intro}</p>
         </section>
 
         {/* ── 02 Situation ── */}
         <section className={s.sec}>
           <h2 className={s.sh}><span className={s.n}>02</span>{L.s02}</h2>
-          <p className={s.p}><strong>{L.strengths}</strong> {offer.situation_strengths}</p>
+          <p className={s.p}><strong>{L.strengths}</strong> {lo.situation_strengths}</p>
           <p className={s.label}>{L.gaps}</p>
           <ol className={s.ol}>
-            {offer.situation_gaps.map((g, i) => <li key={i}>{g}</li>)}
+            {lo.situation_gaps.map((g, i) => <li key={i}>{g}</li>)}
           </ol>
         </section>
 
@@ -308,12 +452,12 @@ export default function ProposalPage() {
           <h2 className={s.sh}><span className={s.n}>03</span>{L.s03}</h2>
           <p className={s.p}>{L.posIntro}</p>
           <p className={s.subLabel}>{L.coreMessage}</p>
-          <div className={s.coreMsg}>{offer.positioning_core}</div>
+          <div className={s.coreMsg}>{lo.positioning_core}</div>
           <p className={s.subLabel}>{L.threePillars}</p>
           <table className={s.tbl}>
             <thead><tr><th>{L.thPillar}</th><th>{L.thBehind}</th><th>{L.thMessage}</th></tr></thead>
             <tbody>
-              {offer.positioning_pillars.map((p, i) => (
+              {lo.positioning_pillars.map((p, i) => (
                 <tr key={i}>
                   <td><strong>{p.pillar}</strong></td>
                   <td>{p.what}</td>
@@ -323,11 +467,11 @@ export default function ProposalPage() {
             </tbody>
           </table>
           <p className={s.subLabel}>{L.keyPoint}</p>
-          <p className={s.p}>{offer.positioning_strategy}</p>
-          {offer.positioning_note && (
+          <p className={s.p}>{lo.positioning_strategy}</p>
+          {lo.positioning_note && (
             <div className={s.hint}>
               <span className={s.hintLabel}>{L.note}</span>
-              <p>{offer.positioning_note}</p>
+              <p>{lo.positioning_note}</p>
             </div>
           )}
         </section>
@@ -338,7 +482,7 @@ export default function ProposalPage() {
           <table className={s.tbl}>
             <thead><tr><th>{L.thChannel}</th><th>{L.thDelivers}</th><th>{L.thSoon}</th></tr></thead>
             <tbody>
-              {offer.channels.map((c, i) => (
+              {lo.channels.map((c, i) => (
                 <tr key={i}>
                   <td><strong>{c.name}{c.optional ? ' (optional)' : ''}</strong></td>
                   <td>{c.benefit}</td>
@@ -347,11 +491,11 @@ export default function ProposalPage() {
               ))}
             </tbody>
           </table>
-          {offer.channels_glossary && offer.channels_glossary.length > 0 && (
+          {lo.channels_glossary && lo.channels_glossary.length > 0 && (
             <>
               <p className={s.subLabel} style={{ marginTop: '1.5rem' }}>{L.inBrief}</p>
               <ul className={s.ul}>
-                {offer.channels_glossary.map((g, i) => <li key={i}><strong>{g.term}:</strong> {g.short}</li>)}
+                {lo.channels_glossary.map((g, i) => <li key={i}><strong>{g.term}:</strong> {g.short}</li>)}
               </ul>
             </>
           )}
@@ -362,61 +506,61 @@ export default function ProposalPage() {
           <h2 className={s.sh}><span className={s.n}>05</span>{L.s05}</h2>
           <p className={s.p}>{L.retainerIntro}</p>
 
-          <p className={s.subLabel}>{offer.sprint_hours ? L.sprintTitleHours(offer.sprint_hours, fmtPrice(offer.sprint_price)) : L.sprintTitle(offer.sprint_days, fmtPrice(offer.sprint_price))}</p>
+          <p className={s.subLabel}>{lo.sprint_hours ? L.sprintTitleHours(lo.sprint_hours, fmtPrice(lo.sprint_price)) : L.sprintTitle(lo.sprint_days, fmtPrice(lo.sprint_price))}</p>
           <p className={s.p}>{L.sprintIntro}</p>
           <ul className={s.ul}>
-            {offer.sprint_includes.map((item, i) => <li key={i}>{item}</li>)}
+            {lo.sprint_includes.map((item, i) => <li key={i}>{item}</li>)}
           </ul>
-          {offer.sprint_flex_note && (
+          {lo.sprint_flex_note && (
             <div className={s.hint}>
               <span className={s.hintLabel}>{L.flexStart}</span>
-              <p>{offer.sprint_flex_note}</p>
+              <p>{lo.sprint_flex_note}</p>
             </div>
           )}
 
-          <p className={s.subLabel} style={{ marginTop: '1.75rem' }}>{L.retainerOptions(offer.retainer_variants.length)}</p>
+          <p className={s.subLabel} style={{ marginTop: '1.75rem' }}>{L.retainerOptions(lo.retainer_variants.length)}</p>
           <p className={s.label}>{L.alwaysIncluded}</p>
           <ul className={s.ul}>
-            {offer.retainer_fixed.map((item, i) => <li key={i}>{item}</li>)}
+            {lo.retainer_fixed.map((item, i) => <li key={i}>{item}</li>)}
           </ul>
           <p className={s.label}>{L.variableLabel}</p>
           <ul className={s.ul}>
-            {offer.retainer_variable.map((item, i) => <li key={i}>{item}</li>)}
+            {lo.retainer_variable.map((item, i) => <li key={i}>{item}</li>)}
           </ul>
 
           <table className={s.tbl} style={{ marginTop: '1.5rem' }}>
             <thead>
               <tr>
                 <th></th>
-                {offer.retainer_variants.map(v => <th key={v.label}>{v.label} — {v.hours ? `${v.hours} ${L.hoursMonth}` : `${v.days} ${L.daysMonth}`}</th>)}
+                {lo.retainer_variants.map(v => <th key={v.label}>{v.label} — {v.hours ? `${v.hours} ${L.hoursMonth}` : `${v.days} ${L.daysMonth}`}</th>)}
               </tr>
             </thead>
             <tbody>
               <tr>
                 <td><strong>{L.time}</strong></td>
-                {offer.retainer_variants.map(v => <td key={v.label}>{L.hours(v.hours ?? v.days * 8)}</td>)}
+                {lo.retainer_variants.map(v => <td key={v.label}>{L.hours(v.hours ?? v.days * 8)}</td>)}
               </tr>
               <tr>
                 <td><strong>{L.fee}</strong></td>
-                {offer.retainer_variants.map(v => <td key={v.label}><strong>{L.perMonthNet(fmtPrice(v.price))}</strong></td>)}
+                {lo.retainer_variants.map(v => <td key={v.label}><strong>{L.perMonthNet(fmtPrice(v.price))}</strong></td>)}
               </tr>
               <tr>
                 <td><strong>{L.focus}</strong></td>
-                {offer.retainer_variants.map(v => <td key={v.label}>{v.focus}</td>)}
+                {lo.retainer_variants.map(v => <td key={v.label}>{v.focus}</td>)}
               </tr>
               <tr>
                 <td><strong>{L.bestWhen}</strong></td>
-                {offer.retainer_variants.map(v => <td key={v.label}>{v.fits_when}</td>)}
+                {lo.retainer_variants.map(v => <td key={v.label}>{v.fits_when}</td>)}
               </tr>
             </tbody>
           </table>
-          <p className={s.p} style={{ marginTop: '1rem' }}>{offer.retainer_note}</p>
+          <p className={s.p} style={{ marginTop: '1rem' }}>{lo.retainer_note}</p>
         </section>
 
         {/* ── 06 How to choose ── */}
         <section className={s.sec}>
           <h2 className={s.sh}><span className={s.n}>06</span>{L.s06}</h2>
-          <p className={s.p}>{offer.decision_text}</p>
+          <p className={s.p}>{lo.decision_text}</p>
         </section>
 
         {/* ── 07 Timeline ── */}
@@ -425,7 +569,7 @@ export default function ProposalPage() {
           <table className={s.tbl}>
             <thead><tr><th>{L.thPeriod}</th><th>{L.thHappens}</th></tr></thead>
             <tbody>
-              {offer.timeline.map((row, i) => (
+              {lo.timeline.map((row, i) => (
                 <tr key={i}>
                   <td style={{ whiteSpace: 'nowrap' }}><strong>{row.period}</strong></td>
                   <td>{row.description}</td>
@@ -440,22 +584,22 @@ export default function ProposalPage() {
           <h2 className={s.sh}><span className={s.n}>08</span>{L.s08}</h2>
           <p className={s.label}>{L.kpis}</p>
           <ul className={s.ul}>
-            {offer.kpis.map((kpi, i) => <li key={i}>{kpi}</li>)}
+            {lo.kpis.map((kpi, i) => <li key={i}>{kpi}</li>)}
           </ul>
           <p className={s.label}>{L.expectations}</p>
           <ul className={s.ul}>
-            {offer.expectations.map((e, i) => <li key={i}>{e}</li>)}
+            {lo.expectations.map((e, i) => <li key={i}>{e}</li>)}
           </ul>
         </section>
 
         {/* ── 09 External costs ── */}
         <section className={s.sec}>
           <h2 className={s.sh}><span className={s.n}>09</span>{L.s09}</h2>
-          <p className={s.p}>{offer.external_costs_note}</p>
+          <p className={s.p}>{lo.external_costs_note}</p>
           <table className={s.tbl}>
             <thead><tr><th>{L.thItem}</th><th>{L.thRecommendation}</th></tr></thead>
             <tbody>
-              {offer.external_costs.map((row, i) => (
+              {lo.external_costs.map((row, i) => (
                 <tr key={i}>
                   <td><strong>{row.item}</strong></td>
                   <td>{row.recommendation}</td>
@@ -470,7 +614,7 @@ export default function ProposalPage() {
         <section className={s.sec}>
           <h2 className={s.sh}><span className={s.n}>10</span>{L.s10}</h2>
           <ul className={s.ul}>
-            {offer.conditions.map((c, i) => <li key={i}>{c}</li>)}
+            {lo.conditions.map((c, i) => <li key={i}>{c}</li>)}
           </ul>
           <p className={s.subLabel} style={{ marginTop: '2rem' }}>{L.overview}</p>
           <div className={s.pricingGrid}>
@@ -478,7 +622,7 @@ export default function ProposalPage() {
               <div key={v.label} className={s.pricingBox}>
                 <div className={s.pricingLabel}>{v.hours ? L.pricingLabelHours(v.label, v.hours) : L.pricingLabel(v.label, v.days)}</div>
                 <div className={s.pricingAmount}>{fmtPrice(v.price)} <span>{L.perMonth}</span></div>
-                <div className={s.pricingNote}>{L.pricingNote(fmtPrice(offer.sprint_price), fmtPrice(v.total))}</div>
+                <div className={s.pricingNote}>{L.pricingNote(fmtPrice(lo.sprint_price), fmtPrice(v.total))}</div>
               </div>
             ))}
           </div>
@@ -490,10 +634,12 @@ export default function ProposalPage() {
           <h2 className={s.sh}><span className={s.n}>11</span>{L.s11}</h2>
           <p className={s.p}>{L.nextIntro}</p>
           <ol className={s.ol}>
-            {offer.next_steps.map((step, i) => <li key={i}>{step}</li>)}
+            {lo.next_steps.map((step, i) => <li key={i}>{step}</li>)}
           </ol>
           <p className={s.p}>{L.discuss}</p>
         </section>
+
+        </>)}
 
         {/* ── Accept CTA (screen only) ── */}
         {canAccept && (

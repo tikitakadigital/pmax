@@ -16,7 +16,9 @@ function fmt(iso: string) {
 async function updateOffer(fd: FormData) {
   'use server'
   const id = fd.get('_id') as string
-  const content = formToContent(fd)
+  // Keep content the form doesn't know about (blocks, lang, hour-based pricing).
+  const { data: existing } = await db.from('offers').select('content').eq('id', id).single()
+  const content = { ...(existing?.content ?? {}), ...formToContent(fd) }
 
   await db.from('offers').update({
     code: (fd.get('code') as string).toUpperCase().trim(),
@@ -25,6 +27,7 @@ async function updateOffer(fd: FormData) {
     valid_until: fd.get('valid_until') as string,
     client_name: fd.get('client_name') as string,
     client_website: (fd.get('client_website') as string) || null,
+    client_address: (fd.get('client_address') as string) || null,
     client_email: fd.get('client_email') as string,
     client_phone: (fd.get('client_phone') as string) || null,
     contact_person: fd.get('contact_person') as string,
@@ -50,6 +53,7 @@ export default async function OfferDetailPage({ params }: { params: Promise<{ id
     valid_until: offer.valid_until,
     client_name: offer.client_name,
     client_website: offer.client_website ?? '',
+    client_address: offer.client_address ?? '',
     client_email: offer.client_email,
     client_phone: offer.client_phone ?? '',
     contact_person: offer.contact_person,
@@ -105,6 +109,13 @@ export default async function OfferDetailPage({ params }: { params: Promise<{ id
             });
           });
         `}} />
+
+        {Array.isArray(offer.content?.blocks) && offer.content.blocks.length > 0 && (
+          <div style={{ background: 'var(--panel)', border: '1px solid var(--border)', borderLeft: '3px solid #3cffd0', borderRadius: 6, padding: '12px 16px', marginBottom: 16, fontSize: 12, lineHeight: 1.6 }}>
+            <strong>Blocks-based offer ({offer.content.blocks.length} blocks).</strong> The proposal page renders those blocks, not the fields below.
+            Client details, dates and status here still apply. The blocks themselves are edited in SQL — saving this form keeps them untouched.
+          </div>
+        )}
 
         <form action={updateOffer}>
           <input type="hidden" name="_id" value={offer.id} />

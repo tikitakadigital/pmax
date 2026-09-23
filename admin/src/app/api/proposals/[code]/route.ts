@@ -41,6 +41,7 @@ export async function GET(
     viewed_at: data.viewed_at,
     client_name: data.client_name,
     client_website: data.client_website,
+    client_address: data.client_address,
     client_email: data.client_email,
     client_phone: data.client_phone,
     contact_person: data.contact_person,

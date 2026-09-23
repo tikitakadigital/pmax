@@ -31,7 +31,18 @@ export interface Lead {
 
 export type OfferStatus = 'draft' | 'sent' | 'accepted' | 'expired'
 
+export type OfferBlock =
+  | { type: 'text'; title?: string; paragraphs: string[] }
+  | { type: 'statement'; title?: string; text: string }
+  | { type: 'list'; title?: string; intro?: string; items: string[]; ordered?: boolean }
+  | { type: 'packages'; title?: string; intro?: string; items: { name: string; meta?: string; price?: string; price_note?: string; includes?: string[]; note?: string }[] }
+  | { type: 'table'; title?: string; intro?: string; headers: string[]; rows: string[][]; note?: string }
+  | { type: 'summary'; title?: string; intro?: string; rows: { label: string; value: string; note?: string }[]; footnote?: string }
+  | { type: 'note'; label?: string; text: string }
+
 export interface OfferContent {
+  /** Composed sections. When present, the proposal page renders these instead of the fixed layout. */
+  blocks?: OfferBlock[]
   /** Language of the content — the public proposal page uses it for its labels. Defaults to English. */
   lang?: 'de' | 'en'
   intro: string
@@ -73,6 +84,7 @@ export interface Offer {
   accepted_at: string | null
   client_name: string
   client_website: string | null
+  client_address: string | null
   client_email: string
   client_phone: string | null
   contact_person: string

@@ -82,6 +82,11 @@ export function OfferForm({ defaults }: Props) {
             <input name="client_website" defaultValue={d.client_website} placeholder="example.com" />
           </div>
         </div>
+        <div style={{ ...FIELD, marginTop: 16 }}>
+          <label style={LABEL}>Address</label>
+          <textarea name="client_address" defaultValue={d.client_address} rows={3} placeholder={'Calle Ejemplo 1\n07180 Santa Ponsa\nIlles Balears, España'} />
+          <span style={HINT}>One line per address line. Appears in the FOR block and in the PDF.</span>
+        </div>
       </div>
 
       {/* ── 01 Intro ── */}

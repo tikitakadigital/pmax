@@ -541,3 +541,77 @@
     print-color-adjust: exact;
   }
 }
+
+/* ── Package cards (blocks-based offers) ────────────────────────────────────── */
+
+.pkg {
+  border: 1px solid #e2e2dc;
+  border-left: 3px solid #111;
+  border-radius: 4px;
+  padding: 1.15rem 1.35rem 1.25rem;
+  margin: 1rem 0;
+  background: #fbfbf9;
+}
+
+.pkgHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+  margin-bottom: .6rem;
+}
+
+.pkgName {
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: -.01em;
+  margin: 0;
+  color: #111;
+}
+
+.pkgMeta {
+  margin: .2rem 0 0;
+  font-size: .75rem;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  color: #777;
+}
+
+.pkgPriceBox { text-align: right; white-space: nowrap; }
+
+.pkgPrice {
+  display: block;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #111;
+}
+
+.pkgPriceNote {
+  display: block;
+  font-size: .7rem;
+  color: #777;
+  margin-top: .1rem;
+}
+
+.pkg .ul { margin: .5rem 0 0; }
+
+.pkgNote {
+  margin: .75rem 0 0;
+  font-size: .8rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+@media print {
+  .pkg { break-inside: avoid; page-break-inside: avoid; background: #fff; }
+  .pkgName { font-size: 10.5pt; }
+  .pkgPrice { font-size: 11pt; }
+  .pkgMeta, .pkgPriceNote { font-size: 8pt; }
+  .pkgNote { font-size: 8.5pt; }
+}
+
+.metaAddrLine {
+  display: block;
+  line-height: 1.5;
+}
