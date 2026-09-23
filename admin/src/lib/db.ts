@@ -32,6 +32,8 @@ export interface Lead {
 export type OfferStatus = 'draft' | 'sent' | 'accepted' | 'expired'
 
 export interface OfferContent {
+  /** Language of the content — the public proposal page uses it for its labels. Defaults to English. */
+  lang?: 'de' | 'en'
   intro: string
   situation_strengths: string
   situation_gaps: string[]
@@ -43,11 +45,12 @@ export interface OfferContent {
   channels_glossary?: { term: string; short: string }[]
   sprint_price: number
   sprint_days: number
+  sprint_hours?: number
   sprint_includes: string[]
   sprint_flex_note?: string
   retainer_fixed: string[]
   retainer_variable: string[]
-  retainer_variants: { label: string; days: number; price: number; focus: string; fits_when: string }[]
+  retainer_variants: { label: string; days: number; hours?: number; price: number; focus: string; fits_when: string }[]
   retainer_note: string
   decision_text: string
   timeline: { period: string; description: string }[]
