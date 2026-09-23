@@ -45,14 +45,14 @@ export interface OfferContent {
   blocks?: OfferBlock[]
   /** Language of the content — the public proposal page uses it for its labels. Defaults to English. */
   lang?: 'de' | 'en'
-  intro: string
-  situation_strengths: string
-  situation_gaps: string[]
-  positioning_core: string
-  positioning_pillars: { pillar: string; what: string; message: string }[]
-  positioning_strategy: string
+  intro?: string
+  situation_strengths?: string
+  situation_gaps?: string[]
+  positioning_core?: string
+  positioning_pillars?: { pillar: string; what: string; message: string }[]
+  positioning_strategy?: string
   positioning_note?: string
-  channels: { name: string; benefit: string; timeframe: string; optional?: boolean }[]
+  channels?: { name: string; benefit: string; timeframe: string; optional?: boolean }[]
   channels_glossary?: { term: string; short: string }[]
   sprint_price: number
   sprint_days: number

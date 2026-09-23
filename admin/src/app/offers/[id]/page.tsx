@@ -16,9 +16,13 @@ function fmt(iso: string) {
 async function updateOffer(fd: FormData) {
   'use server'
   const id = fd.get('_id') as string
-  // Keep content the form doesn't know about (blocks, lang, hour-based pricing).
+  // Blocks-based offers are authored in SQL: keep their content as it is and
+  // only update the metadata columns. Others merge, so lang and hour-based
+  // pricing survive a save from the form.
   const { data: existing } = await db.from('offers').select('content').eq('id', id).single()
-  const content = { ...(existing?.content ?? {}), ...formToContent(fd) }
+  const existingContent = existing?.content ?? {}
+  const hasBlocks = Array.isArray(existingContent.blocks) && existingContent.blocks.length > 0
+  const content = hasBlocks ? existingContent : { ...existingContent, ...formToContent(fd) }
 
   await db.from('offers').update({
     code: (fd.get('code') as string).toUpperCase().trim(),
