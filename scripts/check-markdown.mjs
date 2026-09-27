@@ -96,8 +96,14 @@ const htaccess = fs.readFileSync(path.join(ROOT, '.htaccess'), 'utf8')
 if (!/RewriteRule \^\(\.\+\)\\\.md\$ \/_md\.php/.test(htaccess)) {
   errors.push('.htaccess no longer routes .md twin URLs to _md.php')
 }
+// Negotiation on page URLs may be switched off while the CDN in front caches
+// HTML without honouring Vary (see docs/markdown-for-agents.md), but the rule
+// must stay in the file, ready to re-enable, and must stay Accept-based.
 if (!/RewriteCond %\{HTTP_ACCEPT\} text\/markdown/.test(htaccess)) {
-  errors.push('.htaccess no longer negotiates on the Accept header')
+  errors.push('.htaccess no longer carries the Accept negotiation rule')
+}
+if (/^\s*#\s*RewriteCond %\{HTTP_ACCEPT\} text\/markdown/m.test(htaccess)) {
+  notes.push('negotiation on page URLs is disabled — .md twins only (pending the Cloudflare bypass rule)')
 }
 if (/RewriteCond %\{HTTP_USER_AGENT\}[^\n]*(GPTBot|ClaudeBot|bot|crawler)/i.test(htaccess)) {
   errors.push('.htaccess decides by user agent — that is cloaking, not negotiation')
