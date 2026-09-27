@@ -23,6 +23,10 @@
 - [Visibility Engineering](https://pmax.online/services/visibility-engineering/): Flagship integrated programme combining GEO, SEO, digital PR and reputation management — because AI platforms and search engines judge brands holistically.
 - [GEO Audit](https://pmax.online/services/geo-audit/): A structured review of what ChatGPT, Perplexity, Claude and Gemini say about your brand — and a prioritised list of what to fix first. Free initial audit available.
 
+## Markdown for agents
+
+Every page on this site has a Markdown twin at the same path with `.md` appended, and the page URL itself answers `Accept: text/markdown` with the same document. The homepage twin is https://pmax.online/index.md; an article twin looks like https://pmax.online/blog/cookieless-tracking.md. Each twin carries YAML front matter (title, url, canonical_url, markdown_url, language, type, summary) and links back to the canonical HTML page. The HTML and the Markdown contain the same content — only navigation, scripts and forms are left out. This file is an index, nothing more.
+
 ## Case studies
 
 - [Luxaflex dealer network](https://pmax.online/cases/luxaflex/): +184% showroom visits across 60+ franchisees — multi-location performance marketing at scale.

@@ -4,16 +4,17 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && node scripts/generate-markdown.mjs out",
     "start": "next start",
-    "check:hreflang": "node scripts/check-hreflang.mjs out"
+    "check:hreflang": "node scripts/check-hreflang.mjs out",
+    "check:markdown": "node scripts/check-markdown.mjs out"
   },
   "dependencies": {
+    "@gsap/react": "^2.1.2",
+    "gsap": "^3.12.7",
     "next": "^15.3.0",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "gsap": "^3.12.7",
-    "@gsap/react": "^2.1.2"
+    "react-dom": "^19.0.0"
   },
   "browserslist": [
     "defaults",
@@ -26,9 +27,12 @@
     "@types/node": "^22.0.0",
     "@types/react": "^19.0.0",
     "@types/react-dom": "^19.0.0",
-    "typescript": "^5.7.0",
-    "tailwindcss": "^3.4.17",
     "autoprefixer": "^10.4.20",
-    "postcss": "^8.5.0"
+    "cheerio": "^1.2.0",
+    "postcss": "^8.5.0",
+    "tailwindcss": "^3.4.17",
+    "turndown": "^7.2.4",
+    "turndown-plugin-gfm": "^1.0.2",
+    "typescript": "^5.7.0"
   }
 }

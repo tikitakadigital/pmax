@@ -33,6 +33,12 @@ jobs:
       - name: Check hreflang
         run: npm run check:hreflang
 
+      # Blocks the deploy if Markdown-for-agents broke: a missing twin, a page
+      # that stopped declaring its alternate, or negotiation turned into
+      # user-agent sniffing (which is cloaking). See docs/markdown-for-agents.md.
+      - name: Check Markdown for agents
+        run: npm run check:markdown
+
       - name: Inject deploy secret into webhook script
         env:
           DEPLOY_SECRET: ${{ secrets.DEPLOY_SECRET }}
