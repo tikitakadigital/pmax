@@ -102,19 +102,19 @@ ErrorDocument 404 /404.html
   # 1. The twin URL itself — always Markdown, no negotiation.
   RewriteRule ^(.+)\.md$ /_md.php [L]
 
-  # 2. Page URLs: DISABLED UNTIL THE CLOUDFLARE RULE EXISTS.
-  #    The origin logic is correct and verified, but this zone caches HTML and
-  #    ignores both `Vary: Accept` and our `Cache-Control: private, no-store`:
-  #    on 27 Sep 2026 it stored the Markdown response under https://pmax.online/
-  #    and served it to browsers for 31 seconds until the next purge. Until a
-  #    Cache Rule bypasses the cache for these requests, agents use the .md twin
-  #    that every page declares. Re-enable together with:
+  # 2. Page URLs: only requests that mention text/markdown reach PHP at all.
+  #    PHP compares the q values and still answers HTML when HTML wins.
+  #
+  #    This is only safe because a Cloudflare Cache Rule bypasses the cache for
+  #    these requests. The edge caches HTML per URL and honours neither
+  #    `Vary: Accept` nor `Cache-Control: private, no-store` — on 27 Sep 2026 it
+  #    served a cached Markdown response to browsers until the next purge. If
+  #    that rule is ever removed, comment this block out again:
   #      Cache Rules → Bypass cache
   #      any(http.request.headers["accept"][*] contains "text/markdown")
-  #    See docs/markdown-for-agents.md.
-  # RewriteCond %{HTTP_ACCEPT} text/markdown [NC]
-  # RewriteCond %{REQUEST_URI} !^/_
-  # RewriteRule ^ /_md.php [L]
+  RewriteCond %{HTTP_ACCEPT} text/markdown [NC]
+  RewriteCond %{REQUEST_URI} !^/_
+  RewriteRule ^ /_md.php [L]
 
   # Serve existing files and directories directly
   RewriteCond %{REQUEST_FILENAME} -f [OR]
