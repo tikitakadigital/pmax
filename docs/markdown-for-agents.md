@@ -72,15 +72,23 @@ caches.
 
 ## Cloudflare
 
-The zone caches HTML. A cached HIT never reaches the origin, so without a rule
-the negotiation is simply skipped and agents get HTML (safe, but pointless). The
-rule that makes it work:
+The zone caches HTML per URL and honours neither `Vary: Accept` nor
+`Cache-Control: private, no-store`. On 27 September 2026, with negotiation on
+and no cache rule, the edge stored the Markdown response under
+`https://pmax.online/` and served it to browsers until the next purge. That is
+the failure this whole page exists to prevent.
+
+What makes negotiation safe here is a Cache Rule, live since 27 September 2026:
 
 > Cache Rules → *Bypass cache for Markdown requests*
 > Expression: `any(http.request.headers["accept"][*] contains "text/markdown")`
 > Setting: **Bypass cache**
 
-The `.md` twins work with or without that rule, because they have their own URLs.
+Verify it with `cf-cache-status`: a request whose `Accept` mentions
+`text/markdown` must come back `DYNAMIC` (straight to the origin), while a
+browser request still comes back `HIT`. **If that rule is ever removed, comment
+the negotiation block in `.htaccess` out again** — the `.md` twins keep working
+either way, because they have their own URLs.
 
 ## Verifying
 
