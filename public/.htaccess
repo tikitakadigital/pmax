@@ -66,6 +66,12 @@ ErrorDocument 404 /404.html
   RewriteRule ^services/digital-strategy/?$ /services/ [R=301,L]
   RewriteRule ^services/seo/on-page-seo/?$ /services/seo/ [R=301,L]
   RewriteRule ^industries-we-serve/mallorca-industries/?$ /industries/ [R=301,L]
+  # AI engines still cite these WordPress URLs (CrunchJunkie crawl insights,
+  # 27 Sep 2026: cited 6/4/2/1 times in the last 14 days while returning 404).
+  RewriteRule ^services/ppc-advertising/google-ads-management/?$ /services/google-ads/ [R=301,L]
+  RewriteRule ^services/ppc-advertising/?$ /services/google-ads/ [R=301,L]
+  RewriteRule ^industries-we-serve/?$ /industries/ [R=301,L]
+  RewriteRule ^industries-we-serve/.+$ /industries/ [R=301,L]
   RewriteRule ^digital-compass/?$ /services/ [R=301,L]
 
   # Case studies moved to localised slugs (see src/lib/content/case-slugs.ts)
