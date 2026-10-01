@@ -1,5 +1,6 @@
 import { de } from './de'
 import { es } from './es'
+import { blogPath } from '@/lib/content/blog-slugs'
 
 export type Lang = 'de' | 'es'
 export type Translations = typeof de
@@ -64,7 +65,7 @@ export function blogAlternates(slug: string): Record<string, string> | undefined
   const en = `${BASE}/blog/${slug}/`
   return {
     en,
-    ...Object.fromEntries(locales.map(l => [l, `${BASE}/${l}/blog/${slug}/`])),
+    ...Object.fromEntries(locales.map(l => [l, `${BASE}${blogPath(slug, l)}`])),
     'x-default': en,
   }
 }

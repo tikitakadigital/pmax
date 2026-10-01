@@ -4,6 +4,7 @@ export const dynamic = 'force-static'
 import { services } from '@/lib/content/services'
 import { cases } from '@/lib/content/cases'
 import { casePath } from '@/lib/content/case-slugs'
+import { blogPath } from '@/lib/content/blog-slugs'
 import { posts } from '@/lib/content/blog'
 import { translatedLocales } from '@/lib/i18n'
 import { industryDetails } from '@/lib/content/industries-detail'
@@ -64,7 +65,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Same predicate as the two blog routes — see translatedLocales().
   const blogPages: MetadataRoute.Sitemap = [
     ...posts.map(p => ({ url: `${base}/blog/${p.slug}/`, lastModified: new Date(p.date), changeFrequency: 'monthly' as const, priority: 0.7 })),
-    ...posts.flatMap(p => translatedLocales(p.slug).map(lang => ({ url: `${base}/${lang}/blog/${p.slug}/`, lastModified: new Date(p.date), changeFrequency: 'monthly' as const, priority: 0.6 }))),
+    ...posts.flatMap(p => translatedLocales(p.slug).map(lang => ({ url: `${base}${blogPath(p.slug, lang)}`, lastModified: new Date(p.date), changeFrequency: 'monthly' as const, priority: 0.6 }))),
   ]
 
   const legalPages: MetadataRoute.Sitemap = [

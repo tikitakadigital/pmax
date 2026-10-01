@@ -74,6 +74,11 @@ ErrorDocument 404 /404.html
   RewriteRule ^industries-we-serve/.+$ /industries/ [R=301,L]
   RewriteRule ^digital-compass/?$ /services/ [R=301,L]
 
+  # Blog posts published from October 2026 carry localised DE/ES slugs
+  # (see src/lib/content/blog-slugs.ts). Older posts keep their English slug.
+  RewriteRule ^de/blog/how-to-test-ai-max/?$ /de/blog/ai-max-richtig-testen/ [R=301,L]
+  RewriteRule ^es/blog/how-to-test-ai-max/?$ /es/blog/como-probar-ai-max/ [R=301,L]
+
   # Case studies moved to localised slugs (see src/lib/content/case-slugs.ts)
   RewriteRule ^de/cases/automotive/?$ /de/cases/automobil/ [R=301,L]
   RewriteRule ^es/cases/automotive/?$ /es/cases/automocion/ [R=301,L]

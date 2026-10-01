@@ -39,7 +39,11 @@ const pages = new Map();
 for (const f of files) {
   const html = fs.readFileSync(f, "utf8");
   const alts = {};
-  const re = /<link rel="alternate" hrefLang="([^"]+)" href="([^"]+)"/g;
+  // Attribute case matters here: Next renders React's `hrefLang`, but
+  // scripts/generate-markdown.mjs re-serialises every page through cheerio,
+  // which lowercases attribute names. Matching only the camelCase spelling
+  // made this check silently pass on an export where it matched nothing.
+  const re = /<link rel="alternate" href[Ll]ang="([^"]+)" href="([^"]+)"/g;
   let m;
   while ((m = re.exec(html))) alts[m[1]] = m[2];
   const rel = path.relative(ROOT, path.dirname(f)).replace(/\\/g, "/");

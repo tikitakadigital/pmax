@@ -95,7 +95,27 @@ export const blogDetails: BlogDetail[] = [
         <li><strong>Test one thing.</strong> Leave automatic text customisation and final URL expansion off for the first test. With all three on you are measuring a package, and when the result is negative you will not know which part caused it.</li>
         <li><strong>Write the success criteria down first.</strong> Primary metric, the threshold that counts as a win, and what you do in each outcome. Criteria written after the result are not criteria, they are a story.</li>
       </ol>
-      <p>On the test mechanism itself: Google&rsquo;s AI Max experiment splits traffic within one campaign, with a control arm that has AI Max off and a trial arm that has it on, which is cleaner than any duplicate-campaign construction. It is not available everywhere — campaigns using portfolio bidding, shared budgets, text customisation or another running experiment are excluded — and in those cases a frozen before/after comparison is the honest fallback. It is weaker evidence, and worth saying so in the report.</p>
+      <figure style={{ margin: '36px 0' }}>
+        <div style={{ overflowX: 'auto' }}>
+          <svg viewBox="0 0 640 170" style={{ width: '100%', maxWidth: 640, display: 'block' }} role="img" aria-label="Test window: six weeks before, the switch, two weeks of learning excluded, four or more weeks measured">
+            <rect x="0" y="54" width="196" height="40" rx="3" fill="none" stroke="#2d2d2d" strokeWidth="1.5" />
+            <rect x="204" y="54" width="128" height="40" rx="3" fill="#1b1b1b" stroke="#3a3a3a" strokeWidth="1.5" strokeDasharray="5 4" />
+            <rect x="340" y="54" width="300" height="40" rx="3" fill="#3cffd0" fillOpacity="0.16" stroke="#3cffd0" strokeWidth="1.5" />
+            <line x1="200" y1="36" x2="200" y2="112" stroke="#3cffd0" strokeWidth="2" />
+            <circle cx="200" cy="36" r="4" fill="#3cffd0" />
+            <text x="200" y="26" textAnchor="middle" fontFamily="var(--font-mono), monospace" fontSize="10" letterSpacing="1.5" fill="#3cffd0">AI MAX ON</text>
+            <text x="98" y="79" textAnchor="middle" fontFamily="var(--font-sans), sans-serif" fontSize="13" fill="#e8e8e8">Baseline — 6 weeks</text>
+            <text x="268" y="73" textAnchor="middle" fontFamily="var(--font-sans), sans-serif" fontSize="13" fill="#949494">Learning — 2 weeks</text>
+            <text x="268" y="89" textAnchor="middle" fontFamily="var(--font-mono), monospace" fontSize="9" letterSpacing="1" fill="#6b6b6b">EXCLUDED</text>
+            <text x="490" y="73" textAnchor="middle" fontFamily="var(--font-sans), sans-serif" fontSize="13" fill="#e8e8e8">Test — 4+ weeks</text>
+            <text x="490" y="89" textAnchor="middle" fontFamily="var(--font-mono), monospace" fontSize="9" letterSpacing="1" fill="#3cffd0">MEASURED</text>
+            <line x1="0" y1="126" x2="640" y2="126" stroke="#2d2d2d" strokeWidth="1" />
+            <text x="320" y="146" textAnchor="middle" fontFamily="var(--font-mono), monospace" fontSize="10" letterSpacing="1.2" fill="#949494">BUDGET, TARGET CPA, KEYWORDS AND LANDING PAGES FROZEN THROUGHOUT</text>
+          </svg>
+        </div>
+        <figcaption style={{ fontSize: 13, color: '#949494', marginTop: 12, lineHeight: 1.6 }}>A test window that answers the question: six weeks of baseline, then roughly two weeks of learning that never enter the evaluation, then at least four weeks of measurement — with every other lever frozen from start to finish.</figcaption>
+      </figure>
+          <p>On the test mechanism itself: Google&rsquo;s AI Max experiment splits traffic within one campaign, with a control arm that has AI Max off and a trial arm that has it on, which is cleaner than any duplicate-campaign construction. It is not available everywhere — campaigns using portfolio bidding, shared budgets, text customisation or another running experiment are excluded — and in those cases a frozen before/after comparison is the honest fallback. It is weaker evidence, and worth saying so in the report.</p>
 
       <h2 id="what-to-measure">What to measure — and the metric nobody watches</h2>
       <p>Campaign-level KPIs are where this kind of change goes to hide. Conversions, cost per conversion and CTR for the whole campaign are averages, and an average absorbs a redistribution without showing it.</p>
@@ -107,7 +127,23 @@ export const blogDetails: BlogDetail[] = [
         <li>Impression share lost to rank</li>
         <li>Conversions and cost per conversion</li>
       </ul>
-      <p>We learned this the uncomfortable way. In a brand campaign test last spring, the campaign-level numbers moved by single digits while the one query that mattered lost 29% of its conversions — the entire loss of the campaign sat in a line nobody was reporting. <a href="https://tikitaka.digital/en/ai-max-brand-campaign/" target="_blank" rel="noopener noreferrer">We published the full test and the numbers</a> on our sister site.</p>
+      <figure style={{ margin: '36px 0' }}>
+        <div style={{ overflowX: 'auto' }}>
+          <svg viewBox="0 0 560 190" style={{ width: '100%', maxWidth: 560, display: 'block' }} role="img" aria-label="Campaign-level conversions fell 9% while the single most valuable query fell 29%">
+            <text x="0" y="16" fontFamily="var(--font-mono), monospace" fontSize="10" letterSpacing="1.5" fill="#6b6b6b">CHANGE IN CONVERSIONS, AFTER VS BEFORE</text>
+            <text x="0" y="48" fontFamily="var(--font-sans), sans-serif" fontSize="13" fill="#e8e8e8">Campaign level (what the report showed)</text>
+            <rect x="0" y="58" width="135" height="26" rx="2" fill="#6b6b8b" />
+            <text x="147" y="76" fontFamily="var(--font-sans), sans-serif" fontSize="14" fontWeight="700" fill="#6b6b8b">−9%</text>
+            <text x="0" y="118" fontFamily="var(--font-sans), sans-serif" fontSize="13" fill="#e8e8e8">The single most valuable query</text>
+            <rect x="0" y="128" width="435" height="26" rx="2" fill="#3cffd0" />
+            <text x="447" y="146" fontFamily="var(--font-sans), sans-serif" fontSize="14" fontWeight="700" fill="#3cffd0">−29%</text>
+            <line x1="0" y1="172" x2="560" y2="172" stroke="#2d2d2d" strokeWidth="1" />
+            <text x="0" y="188" fontFamily="var(--font-mono), monospace" fontSize="9" letterSpacing="1.2" fill="#6b6b6b">BRAND CAMPAIGN TEST, SPRING 2026 · IDENTICAL BUDGET AND TARGET CPA</text>
+          </svg>
+        </div>
+        <figcaption style={{ fontSize: 13, color: '#949494', marginTop: 12, lineHeight: 1.6 }}>The same test, two levels of reporting. At campaign level the loss looks like a bad month. The query that carried the campaign lost three times as much — and that one line accounted for the entire drop.</figcaption>
+      </figure>
+          <p>We learned this the uncomfortable way. In a brand campaign test last spring, the campaign-level numbers moved by single digits while the one query that mattered lost 29% of its conversions — the entire loss of the campaign sat in a line nobody was reporting. <a href="https://tikitaka.digital/en/ai-max-brand-campaign/" target="_blank" rel="noopener noreferrer">We published the full test and the numbers</a> on our sister site.</p>
       <p>One reporting limit to plan around: a large share of AI Max traffic — in our test roughly 60% — appears in the search terms report only as &ldquo;other search terms&rdquo;. Your query-level analysis is therefore a sample, not a census. Treat it as directional, and do not build a case on the visible half alone.</p>
 
       <h2 id="reading-the-result">How to read the result</h2>

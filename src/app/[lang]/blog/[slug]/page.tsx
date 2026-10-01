@@ -8,15 +8,18 @@ import { breadcrumb, faqPage } from '@/lib/schema'
 import { posts, getPost } from '@/lib/content/blog'
 import { getBlogDetail } from '@/lib/content/blog-detail'
 import { getT, isPostTranslated, blogAlternates } from '@/lib/i18n'
+import { blogSlug, canonicalBlogSlug, blogPath } from '@/lib/content/blog-slugs'
 
 export function generateStaticParams() {
   return ['de','es'].flatMap(lang =>
-    posts.filter(p => !p.external && isPostTranslated(p.slug, lang)).map(p => ({ lang, slug: p.slug }))
+    posts.filter(p => !p.external && isPostTranslated(p.slug, lang)).map(p => ({ lang, slug: blogSlug(p.slug, lang) }))
   )
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string; slug: string }> }): Promise<Metadata> {
-  const { lang, slug } = await params
+  const { lang, slug: localSlug } = await params
+  const slug = canonicalBlogSlug(localSlug, lang)
+  if (!slug) return {}
   const t = getT(lang)
   const post = getPost(slug)
   const loc = t.blogPostDetail[slug]
@@ -34,7 +37,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
     description: loc?.deck ?? locPost?.deck ?? post.deck,
     ...(isTranslated ? {} : { robots: { index: false } }),
     alternates: isTranslated ? {
-      canonical: `https://pmax.online/${lang}/blog/${slug}/`,
+      canonical: `https://pmax.online${blogPath(slug, lang)}`,
       languages: blogAlternates(slug),
     } : {
       // Untranslated: this page consolidates into the English one, so it carries
@@ -58,9 +61,10 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
 }
 
 export default async function BlogPostPage({ params }: { params: Promise<{ lang: string; slug: string }> }) {
-  const { lang, slug } = await params
-  const post = getPost(slug)
-  if (!post || !isPostTranslated(slug, lang)) notFound()
+  const { lang, slug: localSlug } = await params
+  const slug = canonicalBlogSlug(localSlug, lang)
+  const post = slug ? getPost(slug) : undefined
+  if (!slug || !post || !isPostTranslated(slug, lang)) notFound()
 
   const t = getT(lang)
   const b = t.blog
@@ -89,7 +93,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ lang:
     breadcrumb([
       { name: 'Home', url: `https://pmax.online/${lang}/` },
       { name: blogLabel, url: `https://pmax.online/${lang}/blog/` },
-      { name: localCategory, url: `https://pmax.online/${lang}/blog/${slug}/` },
+      { name: localCategory, url: `https://pmax.online${blogPath(slug, lang)}` },
     ]),
     ...(localFaqs?.length ? [{ ...faqPage(localFaqs), inLanguage: lang }] : []),
   ]

@@ -2708,6 +2708,26 @@ export const de = {
             <li><strong>Eine Sache testen.</strong> Automatische Textanpassung und Erweiterung der finalen URL bleiben beim ersten Test aus. Mit allen dreien messen Sie ein Paket — und wissen bei einem negativen Ergebnis nicht, welcher Teil es verursacht hat.</li>
             <li><strong>Erfolgskriterien vorher aufschreiben.</strong> Primäre Kennzahl, Schwelle für einen Erfolg, und was Sie bei welchem Ausgang tun. Kriterien, die nach dem Ergebnis entstehen, sind keine Kriterien, sondern eine Erzählung.</li>
           </ol>
+          <figure style={{ margin: '36px 0' }}>
+        <div style={{ overflowX: 'auto' }}>
+          <svg viewBox="0 0 640 170" style={{ width: '100%', maxWidth: 640, display: 'block' }} role="img" aria-label="Testfenster: sechs Wochen davor, Umschaltung, zwei Wochen Lernphase ausgeschlossen, vier oder mehr Wochen gemessen">
+            <rect x="0" y="54" width="196" height="40" rx="3" fill="none" stroke="#2d2d2d" strokeWidth="1.5" />
+            <rect x="204" y="54" width="128" height="40" rx="3" fill="#1b1b1b" stroke="#3a3a3a" strokeWidth="1.5" strokeDasharray="5 4" />
+            <rect x="340" y="54" width="300" height="40" rx="3" fill="#3cffd0" fillOpacity="0.16" stroke="#3cffd0" strokeWidth="1.5" />
+            <line x1="200" y1="36" x2="200" y2="112" stroke="#3cffd0" strokeWidth="2" />
+            <circle cx="200" cy="36" r="4" fill="#3cffd0" />
+            <text x="200" y="26" textAnchor="middle" fontFamily="var(--font-mono), monospace" fontSize="10" letterSpacing="1.5" fill="#3cffd0">AI MAX AN</text>
+            <text x="98" y="79" textAnchor="middle" fontFamily="var(--font-sans), sans-serif" fontSize="13" fill="#e8e8e8">Basis — 6 Wochen</text>
+            <text x="268" y="73" textAnchor="middle" fontFamily="var(--font-sans), sans-serif" fontSize="13" fill="#949494">Lernphase — 2 Wochen</text>
+            <text x="268" y="89" textAnchor="middle" fontFamily="var(--font-mono), monospace" fontSize="9" letterSpacing="1" fill="#6b6b6b">AUSGESCHLOSSEN</text>
+            <text x="490" y="73" textAnchor="middle" fontFamily="var(--font-sans), sans-serif" fontSize="13" fill="#e8e8e8">Test — 4+ Wochen</text>
+            <text x="490" y="89" textAnchor="middle" fontFamily="var(--font-mono), monospace" fontSize="9" letterSpacing="1" fill="#3cffd0">GEMESSEN</text>
+            <line x1="0" y1="126" x2="640" y2="126" stroke="#2d2d2d" strokeWidth="1" />
+            <text x="320" y="146" textAnchor="middle" fontFamily="var(--font-mono), monospace" fontSize="10" letterSpacing="1.2" fill="#949494">BUDGET, ZIEL-CPA, KEYWORDS UND LANDINGPAGES DURCHGEHEND EINGEFROREN</text>
+          </svg>
+        </div>
+        <figcaption style={{ fontSize: 13, color: '#949494', marginTop: 12, lineHeight: 1.6 }}>Ein Testfenster, das die Frage beantwortet: sechs Wochen Basis, danach rund zwei Wochen Lernphase, die nie in die Auswertung eingehen, dann mindestens vier Wochen Messung — mit eingefrorenen Stellschrauben von Anfang bis Ende.</figcaption>
+      </figure>
           <p>Zum Testaufbau selbst: Googles AI-Max-Experiment teilt den Traffic innerhalb einer Kampagne in einen Kontroll- und einen Testarm — sauberer als jede Dublettenkonstruktion. Verfügbar ist es nicht überall: Kampagnen mit Portfolio-Gebotsstrategien, gemeinsamen Budgets, aktivierter Textanpassung oder einem laufenden Experiment sind ausgeschlossen. Dann bleibt der eingefrorene Vorher-Nachher-Vergleich als ehrliche Alternative. Er ist schwächere Evidenz, und das gehört so in den Report.</p>
 
           <h2 id="what-to-measure">Was Sie messen — und die Kennzahl, die niemand ansieht</h2>
@@ -2720,6 +2740,22 @@ export const de = {
             <li>Durch Rang verlorener Impressionsanteil</li>
             <li>Conversions und Kosten pro Conversion</li>
           </ul>
+          <figure style={{ margin: '36px 0' }}>
+        <div style={{ overflowX: 'auto' }}>
+          <svg viewBox="0 0 560 190" style={{ width: '100%', maxWidth: 560, display: 'block' }} role="img" aria-label="Auf Kampagnenebene sanken die Conversions um 9 Prozent, bei der wertvollsten Einzelanfrage um 29 Prozent">
+            <text x="0" y="16" fontFamily="var(--font-mono), monospace" fontSize="10" letterSpacing="1.5" fill="#6b6b6b">VERÄNDERUNG DER CONVERSIONS, NACHHER VS. VORHER</text>
+            <text x="0" y="48" fontFamily="var(--font-sans), sans-serif" fontSize="13" fill="#e8e8e8">Kampagnenebene (was im Report stand)</text>
+            <rect x="0" y="58" width="135" height="26" rx="2" fill="#6b6b8b" />
+            <text x="147" y="76" fontFamily="var(--font-sans), sans-serif" fontSize="14" fontWeight="700" fill="#6b6b8b">−9%</text>
+            <text x="0" y="118" fontFamily="var(--font-sans), sans-serif" fontSize="13" fill="#e8e8e8">Die wertvollste einzelne Suchanfrage</text>
+            <rect x="0" y="128" width="435" height="26" rx="2" fill="#3cffd0" />
+            <text x="447" y="146" fontFamily="var(--font-sans), sans-serif" fontSize="14" fontWeight="700" fill="#3cffd0">−29%</text>
+            <line x1="0" y1="172" x2="560" y2="172" stroke="#2d2d2d" strokeWidth="1" />
+            <text x="0" y="188" fontFamily="var(--font-mono), monospace" fontSize="9" letterSpacing="1.2" fill="#6b6b6b">BRAND-KAMPAGNEN-TEST, FRÜHJAHR 2026 · GLEICHES BUDGET UND ZIEL-CPA</text>
+          </svg>
+        </div>
+        <figcaption style={{ fontSize: 13, color: '#949494', marginTop: 12, lineHeight: 1.6 }}>Derselbe Test, zwei Berichtsebenen. Auf Kampagnenebene sieht der Verlust nach einem schlechten Monat aus. Die Anfrage, die die Kampagne getragen hat, verlor dreimal so viel — und diese eine Zeile erklärt den gesamten Rückgang.</figcaption>
+      </figure>
           <p>Wir haben das auf die unangenehme Art gelernt. In einem Brand-Kampagnen-Test im Frühjahr bewegten sich die Kampagnenzahlen im einstelligen Bereich, während die eine entscheidende Anfrage 29 % ihrer Conversions verlor — der gesamte Verlust der Kampagne steckte in einer Zeile, die niemand berichtet hat. <a href="https://tikitaka.digital/ai-max-brand-kampagne/" target="_blank" rel="noopener noreferrer">Den vollständigen Test samt Zahlen haben wir veröffentlicht</a>, auf unserer Schwesterseite.</p>
           <p>Eine Berichtsgrenze sollten Sie einplanen: Ein großer Teil des AI-Max-Traffics — in unserem Test rund 60 % — erscheint im Suchbegriffsbericht nur als „andere Suchbegriffe". Ihre Analyse auf Anfrageebene ist also eine Stichprobe, keine Vollerhebung. Behandeln Sie sie als Richtungsangabe und bauen Sie keinen Beweis auf der sichtbaren Hälfte auf.</p>
 
@@ -2811,7 +2847,7 @@ export const de = {
           </div>
 
           <p>Wenn Sie nicht jede Kampagne von Hand vor dem Stichtag prüfen wollen &mdash; genau das ist unsere Arbeit. Wir betreuen <a href="/de/services/google-ads/">Google Ads und Performance Max</a> zum festen Monatshonorar &mdash; nie als Prozentsatz Ihrer Ausgaben &mdash; damit es nie einen Anreiz gibt, mehr Werbung zu empfehlen, als das Konto braucht. Erstgespräch sind 30 Minuten, auf unsere Rechnung: <a href="/de/contact/">Erzählen Sie uns, was Sie wachsen lassen möchten &rarr;</a></p>
-          <p>Weiterlesen: <a href="/de/blog/performance-max-2026/">Performance Max 2026 &mdash; die Einstellungen, die wir zuerst ändern</a> &middot; <a href="/de/blog/cookieless-tracking/">Cookieless Tracking: Was sich geändert hat</a> &middot; <a href="/de/blog/how-to-test-ai-max/">AI Max testen, ohne sich selbst zu täuschen</a></p>
+          <p>Weiterlesen: <a href="/de/blog/performance-max-2026/">Performance Max 2026 &mdash; die Einstellungen, die wir zuerst ändern</a> &middot; <a href="/de/blog/cookieless-tracking/">Cookieless Tracking: Was sich geändert hat</a> &middot; <a href="/de/blog/ai-max-richtig-testen/">AI Max testen, ohne sich selbst zu täuschen</a></p>
         </>
       ),
     },

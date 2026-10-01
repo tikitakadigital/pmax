@@ -12,6 +12,7 @@ import { cases } from '@/lib/content/cases'
 import { casePath } from '@/lib/content/case-slugs'
 import { posts as allPosts } from '@/lib/content/blog'
 import { faqPage } from '@/lib/schema'
+import { blogPath } from '@/lib/content/blog-slugs'
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
   const { lang } = await params
@@ -170,7 +171,7 @@ export default async function LangHomePage({ params }: { params: Promise<{ lang:
               {allPosts.filter(post => !post.external).slice(0, 3).map(post => {
                 const loc = t.blog.posts.find(bp => bp.slug === post.slug)
                 return (
-                  <Link key={post.slug} href={`${p}/blog/${post.slug}`} className={`svc-card ${post.variant}${post.featured ? ' featured' : ''}`}>
+                  <Link key={post.slug} href={blogPath(post.slug, lang)} className={`svc-card ${post.variant}${post.featured ? ' featured' : ''}`}>
                     <span className="svc-num">{post.date} · {post.readTime}</span>
                     <h3 className="svc-title">{loc?.title ?? post.title}</h3>
                     <p className="svc-deck">{loc?.deck ?? post.deck}</p>

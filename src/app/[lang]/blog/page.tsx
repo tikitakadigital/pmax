@@ -5,6 +5,7 @@ import Footer from '@/components/Footer'
 import { breadcrumb, orgRef } from '@/lib/schema'
 import { posts } from '@/lib/content/blog'
 import { getT, isPostTranslated } from '@/lib/i18n'
+import { blogPath } from '@/lib/content/blog-slugs'
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
   const { lang } = await params
@@ -37,7 +38,7 @@ export default async function BlogPage({ params }: { params: Promise<{ lang: str
       itemListElement: posts.filter(p => !p.external).map((post, i) => {
         const locPost = b.posts.find(lp => lp.slug === post.slug)
         const url = isPostTranslated(post.slug, lang)
-          ? `https://pmax.online/${lang}/blog/${post.slug}/`
+          ? `https://pmax.online${blogPath(post.slug, lang)}`
           : `https://pmax.online/blog/${post.slug}/`
         return { '@type': 'ListItem', position: i + 1, url, name: locPost?.title ?? post.title }
       }),
@@ -68,7 +69,7 @@ export default async function BlogPage({ params }: { params: Promise<{ lang: str
             <ol className="stream reveal" style={{ listStyle: 'none' }}>
               {posts.map(post => {
                 const locPost = b.posts.find(lp => lp.slug === post.slug)
-                const postHref = isPostTranslated(post.slug, lang) ? `${p}/blog/${post.slug}` : `/blog/${post.slug}`
+                const postHref = isPostTranslated(post.slug, lang) ? blogPath(post.slug, lang) : `/blog/${post.slug}/`
                 return (
                   <li key={post.slug} className="stream-item">
                     <span className="stream-stamp">{post.stamp}</span>

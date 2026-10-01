@@ -43,8 +43,8 @@ Every page on this site has a Markdown twin at the same path with `.md` appended
 
 ## Journal
 - [How to test AI Max without fooling yourself](https://pmax.online/blog/how-to-test-ai-max/): A method for testing Google's AI Max — why most tests measure the learning phase or a budget change, how to tell whether there is undiscovered demand to find at all, five rules for a clean test, and the query-level metric that hides bid redistribution.
-- [AI Max testen, ohne sich selbst zu täuschen (DE)](https://pmax.online/de/blog/how-to-test-ai-max/): Methode für einen sauberen AI-Max-Test — Lernphase ausschließen, Stellschrauben einfrieren, wertvollste Suchanfrage einzeln berichten.
-- [Cómo probar AI Max sin engañarte a ti mismo (ES)](https://pmax.online/es/blog/how-to-test-ai-max/): Método para una prueba limpia de AI Max — excluir la fase de aprendizaje, congelar las palancas e informar por separado de la consulta más valiosa.
+- [AI Max testen, ohne sich selbst zu täuschen (DE)](https://pmax.online/de/blog/ai-max-richtig-testen/): Methode für einen sauberen AI-Max-Test — Lernphase ausschließen, Stellschrauben einfrieren, wertvollste Suchanfrage einzeln berichten.
+- [Cómo probar AI Max sin engañarte a ti mismo (ES)](https://pmax.online/es/blog/como-probar-ai-max/): Método para una prueba limpia de AI Max — excluir la fase de aprendizaje, congelar las palancas e informar por separado de la consulta más valiosa.
 
 - [Google's AI Label Is on Your Ads. You Probably Didn't Decide That.](https://pmax.online/blog/google-ads-ai-disclosure-label/): Google's AI disclosure label is live on European SERPs from July 2026. Most advertisers who have it didn't consciously opt in — Performance Max's automatic asset generation triggered it. Covers the three routes to the label, the CTR question (no data yet), and what PMax accounts should check now.
 - [What Is a GEO Audit — And How to Run One](https://pmax.online/blog/what-is-a-geo-audit/): A GEO audit tells you what ChatGPT, Perplexity and Gemini say about your brand — what they get wrong, which sources they draw on, and a five-layer framework for fixing it.
