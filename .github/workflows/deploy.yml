@@ -88,6 +88,16 @@ jobs:
             https://pmax.online/_deploy.php)
           echo "Deploy: $RESP"
 
+          # The webhook can be intercepted by the host's bot protection, which
+          # answers with a JS cookie challenge instead of running the deploy.
+          # That happened on 1 Oct 2026: .htaccess was bootstrapped, the files
+          # never landed, and this workflow still reported success — so the
+          # site served 301s to pages that did not exist. Fail loudly instead.
+          case "$RESP" in
+            *"Deployed at"*) ;;
+            *) echo "::error::Deploy webhook did not run (no 'Deployed at' in response). Files were NOT extracted."; exit 1 ;;
+          esac
+
           HTTP=$(curl -s -o /dev/null -w "%{http_code}" https://pmax.online)
           echo "Site: $HTTP"
 
