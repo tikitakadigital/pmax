@@ -20,6 +20,123 @@ const NeedHelp = ({ topic }: { topic: string }) => (
 
 export const blogDetails: BlogDetail[] = [
 {
+  slug: 'how-to-test-ai-max',
+  toc: [
+    'Three ways an AI Max test lies to you',
+    'First: is there anything to find?',
+    'Five rules for a clean test',
+    'What to measure — and the metric nobody watches',
+    'How to read the result',
+    'When a rollout makes sense',
+    'Common questions',
+  ],
+  tocIds: [
+    'how-tests-lie',
+    'anything-to-find',
+    'five-rules',
+    'what-to-measure',
+    'reading-the-result',
+    'when-to-roll-out',
+    'faq',
+  ],
+  faqs: [
+    {
+      q: 'How long does an AI Max test need to run?',
+      a: 'Six weeks as a minimum: roughly two weeks of learning that you exclude from the evaluation, then at least four weeks of measurement. Shorter tests mostly measure how long the bidding strategy took to settle, not what AI Max did.',
+    },
+    {
+      q: 'Does AI Max have a learning phase, and how long is it?',
+      a: 'Yes. Enabling or disabling search term matching restarts learning for the campaign, typically one to two weeks. Both the switch-on and the switch-off have one, which is why a reverse test also needs a waiting period before you read the numbers.',
+    },
+    {
+      q: 'Can I A/B test AI Max by duplicating the campaign?',
+      a: 'No. Two campaigns bidding on the same queries compete with each other in the same auctions, so the result tells you about the collision rather than about AI Max. Use the built-in AI Max experiment, which splits traffic inside one campaign, or run a clean before/after comparison with every other lever frozen.',
+    },
+    {
+      q: 'What is the difference between AI Max and broad match?',
+      a: 'Broad match still starts from a keyword you booked and matches queries around it. AI Max adds keywordless matching: it can serve on queries that match none of your keywords, choosing them from your ads, keywords and landing pages. Broad match widens a keyword; AI Max widens the campaign.',
+    },
+    {
+      q: 'Should I test AI Max on a brand campaign?',
+      a: 'Usually not. A brand campaign has almost no undiscovered search volume, so there is little to gain, while the extra traffic can pull your bidding strategy away from the one query that carries the campaign. Start where there is genuinely something to find: generic campaigns with open intent.',
+    },
+  ],
+  prose: (
+    <>
+      <p>Google reports that advertisers who switch on <a href="https://support.google.com/google-ads/answer/15910366?hl=en" target="_blank" rel="noopener noreferrer">AI Max for Search campaigns</a> typically see 14% more conversions or conversion value at a similar CPA. That is an average across accounts that chose to turn it on. It is not a forecast for your account, and the only way to find out what it does to yours is to test it.</p>
+      <p>The problem is that most AI Max tests answer a different question than the one that was asked. They measure the learning phase, or a budget change, or a campaign competing against itself. This is a method, not a verdict: how to set a test up so the result means something, and how to read it when it arrives.</p>
+
+      <h2 id="how-tests-lie">Three ways an AI Max test lies to you</h2>
+      <p>Before the setup, the three failures that account for nearly every inconclusive AI Max test we have seen:</p>
+      <ol>
+        <li><strong>The learning phase sits inside the measurement window.</strong> Turning search term matching on restarts learning for the campaign. If your &ldquo;after&rdquo; period starts on the day you flipped the switch, the first week or two mostly describes an algorithm finding its feet. Campaigns usually look worse during it, which is why the internet is full of AI Max horror stories that are really learning-phase screenshots.</li>
+        <li><strong>Something else changed at the same time.</strong> A budget increase, a new target CPA, a seasonal peak, a landing page release. Any one of them makes attribution impossible, and the temptation to adjust is strongest exactly when the test dips.</li>
+        <li><strong>The A/B test is two campaigns fighting each other.</strong> Duplicating a campaign to run a control and a variant sounds rigorous and is the worst option of the three: both campaigns enter the same auctions for the same queries, so what you measure is the collision. Google&rsquo;s own <a href="https://support.google.com/google-ads/answer/16450159?hl=en" target="_blank" rel="noopener noreferrer">AI Max experiments</a> avoid this by splitting traffic inside a single campaign.</li>
+      </ol>
+
+      <h2 id="anything-to-find">First: is there anything to find?</h2>
+      <p>This is the question to answer before you plan a test at all, and it gets skipped almost every time.</p>
+      <p>AI Max earns its keep by serving on queries you never booked. So the size of the upside is set by one thing: how much relevant demand exists outside your keyword list. That is not a matter of opinion — your own account will tell you in about twenty minutes.</p>
+      <ul>
+        <li><strong>How much of your conversion volume comes from brand terms?</strong> If it is most of it, the campaign is already harvesting demand that knows you exist. There is little left to discover and a lot to disturb.</li>
+        <li><strong>How tight is your match type mix?</strong> A campaign running on exact match in a well-mapped category has a smaller unknown space than one running broad across an exploratory category.</li>
+        <li><strong>Look at the last 90 days of search terms.</strong> How many genuinely new converting queries appeared that you had not booked? If the answer is &ldquo;a handful a quarter&rdquo;, that is your realistic discovery ceiling.</li>
+        <li><strong>Can your site answer the adjacent intents?</strong> This one decides more than people expect. Expansion reaches service enquiries, dealer and location searches, support questions and neighbouring product categories — and sends all of them to the landing page you already use. If that page answers exactly one intent, the new traffic cannot convert, no matter how good the bidding is.</li>
+      </ul>
+      <p>Two shapes follow from this. In campaigns with <strong>closed search volume</strong> — brand campaigns, tightly mapped exact-match sets — the discovery upside is small and the downside is real. In <strong>generic campaigns with open intent</strong>, there genuinely is something out there to find, and that is where a test is worth running.</p>
+      <p>If the honest answer is &ldquo;there is nothing to discover here&rdquo;, you have saved yourself six weeks. That is a legitimate outcome of this step.</p>
+
+      <h2 id="five-rules">Five rules for a clean test</h2>
+      <p>Assuming there is something to find, five rules carry the whole method:</p>
+      <ol>
+        <li><strong>Exclude the learning phase.</strong> Plan two weeks of learning that are not part of the evaluation. Write the dates down before you start, so the window cannot quietly move once the first numbers look bad.</li>
+        <li><strong>Freeze the levers.</strong> Budget, target CPA or ROAS, bidding strategy, keyword structure and landing pages stay untouched for the full test. If you have to change one, the test ends and a new one begins.</li>
+        <li><strong>Give it at least four weeks of measurement</strong> after the learning period. In a campaign with a handful of conversions a week, longer — a result built on fifteen conversions is a coin toss with extra steps.</li>
+        <li><strong>Test one thing.</strong> Leave automatic text customisation and final URL expansion off for the first test. With all three on you are measuring a package, and when the result is negative you will not know which part caused it.</li>
+        <li><strong>Write the success criteria down first.</strong> Primary metric, the threshold that counts as a win, and what you do in each outcome. Criteria written after the result are not criteria, they are a story.</li>
+      </ol>
+      <p>On the test mechanism itself: Google&rsquo;s AI Max experiment splits traffic within one campaign, with a control arm that has AI Max off and a trial arm that has it on, which is cleaner than any duplicate-campaign construction. It is not available everywhere — campaigns using portfolio bidding, shared budgets, text customisation or another running experiment are excluded — and in those cases a frozen before/after comparison is the honest fallback. It is weaker evidence, and worth saying so in the report.</p>
+
+      <h2 id="what-to-measure">What to measure — and the metric nobody watches</h2>
+      <p>Campaign-level KPIs are where this kind of change goes to hide. Conversions, cost per conversion and CTR for the whole campaign are averages, and an average absorbs a redistribution without showing it.</p>
+      <p>The mechanism is simple enough to state in one sentence: when a smart bidding strategy takes on extra traffic that converts at a different rate, it rebalances bids to keep hitting its target — which can mean bidding less on the single query that was carrying the campaign.</p>
+      <p>So alongside the usual campaign metrics, report your <strong>most valuable individual query</strong> on its own:</p>
+      <ul>
+        <li>Clicks and CTR</li>
+        <li>Absolute top impression share</li>
+        <li>Impression share lost to rank</li>
+        <li>Conversions and cost per conversion</li>
+      </ul>
+      <p>We learned this the uncomfortable way. In a brand campaign test last spring, the campaign-level numbers moved by single digits while the one query that mattered lost 29% of its conversions — the entire loss of the campaign sat in a line nobody was reporting. <a href="https://tikitaka.digital/en/ai-max-brand-campaign/" target="_blank" rel="noopener noreferrer">We published the full test and the numbers</a> on our sister site.</p>
+      <p>One reporting limit to plan around: a large share of AI Max traffic — in our test roughly 60% — appears in the search terms report only as &ldquo;other search terms&rdquo;. Your query-level analysis is therefore a sample, not a census. Treat it as directional, and do not build a case on the visible half alone.</p>
+
+      <h2 id="reading-the-result">How to read the result</h2>
+      <p>Three questions, in this order:</p>
+      <ul>
+        <li><strong>Is the difference bigger than your normal noise?</strong> Look at weekly variation in the six weeks before the test. If conversions routinely swing 15% week to week, a 7% difference is not a finding.</li>
+        <li><strong>Did your most valuable query survive?</strong> A campaign that gained 5% overall while its best query lost 20% has not improved. It has redistributed, and the redistribution will usually keep going.</li>
+        <li><strong>Does it reverse?</strong> The cheapest confirmation available: switch AI Max off, wait out the new learning period, measure three unchanged weeks. If the metrics return, you have a mechanism rather than a coincidence.</li>
+      </ul>
+      <p>Whatever the verdict, one thing is worth keeping: the queries AI Max discovered that converted. Book them as keywords in their own right. Even a failed test usually pays for itself here, and the keywords stay yours after you switch it off.</p>
+      <p>Be honest about the strength of the evidence, too. A before/after comparison with frozen levers is good practical evidence, not proof — the campaign still ran in a world where competitors, demand and Google&rsquo;s own systems moved. Say &ldquo;most plausible explanation&rdquo; when that is what you have. Everyone reading your report already knows the difference.</p>
+
+      <h2 id="when-to-roll-out">When a rollout makes sense</h2>
+      <p>Four conditions, all of which should hold before you widen AI Max beyond the test campaign:</p>
+      <ul>
+        <li>The test campaign had genuine undiscovered demand, and the search terms report proves it did — new converting queries, not just more volume on the old ones.</li>
+        <li>Your most valuable queries held their position through the test.</li>
+        <li>Your negative keyword list covers the intents you cannot serve: service, support, careers, dealer and location searches, adjacent product categories.</li>
+        <li>Landing pages exist for the intents the expansion actually reaches. If they do not, build them first — that is a cheaper fix than paying for traffic that lands on the wrong page.</li>
+      </ul>
+      <p>Roll out campaign by campaign, not account-wide in one evening. Each campaign has its own mix of brand and generic demand, and the mechanism that makes AI Max useful in one is the mechanism that makes it expensive in another.</p>
+      <p>Related reading: <a href="/blog/performance-max-bidding-change-august-2026/">the Performance Max bidding change</a> works on the same principle — a target that gets applied across a changed mix of traffic — and <a href="/blog/crm-conversion-imports/">CRM conversion imports</a> are what stop a bidding strategy optimising toward leads that never close. If you want the setup checked by someone who runs these tests weekly, that is what our <a href="/services/google-ads/">Google Ads work</a> is.</p>
+
+      <h2 id="faq">Common questions</h2>
+    </>
+  ),
+},
+
+{
   slug: 'google-ads-agency-mallorca',
   toc: [
     'What makes Mallorca different',
@@ -2164,7 +2281,7 @@ export const blogDetails: BlogDetail[] = [
           <p>This isn&rsquo;t a feature you switch on. It&rsquo;s a behavioural change that arrives on its own on 17 August, and it quietly favours whoever has kept their targets honest. Walk in with a per-campaign plan and you keep both your efficiency and your scale. Walk in with targets nobody has looked at since spring and you&rsquo;ll likely watch your cost per conversion drift upward.</p>
         </div>
 
-        <p>Related: <a href="/blog/performance-max-2026/">Performance Max in 2026 &mdash; the settings we change first</a> &middot; <a href="/blog/cookieless-tracking/">Cookieless tracking: what changed and what to do</a></p>
+        <p>Related: <a href="/blog/performance-max-2026/">Performance Max in 2026 &mdash; the settings we change first</a> &middot; <a href="/blog/how-to-test-ai-max/">how to test AI Max without fooling yourself</a>, which deals with the same mechanism inside Search &middot; <a href="/blog/cookieless-tracking/">Cookieless tracking: what changed and what to do</a></p>
         <NeedHelp topic="performance-max-bidding-change-august-2026" />
       </>
     ),

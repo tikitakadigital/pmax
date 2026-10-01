@@ -788,6 +788,7 @@ export const es = {
     promoDeck: 'No gestionamos una lista de email — pero si hay un tema sobre el que quieras que escribamos, cuéntanoslo.',
     promoBtn: 'Sugerir un tema',
     posts: [
+      { slug: 'how-to-test-ai-max', title: 'Cómo probar AI Max sin engañarte a ti mismo', deck: 'La mayoría de pruebas de AI Max miden la fase de aprendizaje, un cambio de presupuesto o una campaña que se canibaliza — no AI Max. Así se monta una prueba limpia.' },
       { slug: 'google-ads-agency-mallorca', title: 'Cómo elegir una agencia de Google Ads en Mallorca — y las preguntas que las distinguen', deck: 'La mayoría de agencias de Google Ads en Mallorca venden el mismo paquete. Aquí está cómo identificar cuáles conocen realmente el mercado local — y las tres preguntas que revelan si una agencia vale lo que cobra.' },
       { slug: 'how-to-advertise-business-mallorca', title: 'Cómo anunciarse en Mallorca: la guía completa para negocios', deck: 'Mallorca tiene 900.000 habitantes y casi 10 millones de visitantes al año. Los turistas alemanes gastan una media de 1.200 € por estancia. La guía completa de publicidad digital en Mallorca — todos los canales clave, con presupuestos concretos y contexto específico de la isla.' },
       { slug: 'was-kostet-google-ads', title: 'Cuánto cuesta Google Ads en 2026: lo que pagas de verdad', deck: 'Una guía honesta y concreta sobre costes de Google Ads. CPCs medios por sector en Alemania, la ecuación de coste total, tres escenarios de presupuesto y una agencia inmobiliaria en Palma que redujo el coste por lead de 200 € a 83 €.' },
@@ -2767,6 +2768,89 @@ export const es = {
         </>
       ),
     },
+    'how-to-test-ai-max': {
+      toc: ['Tres formas en que una prueba de AI Max te engaña', 'Primero: ¿hay algo que descubrir?', 'Cinco reglas para una prueba limpia', 'Qué medir — y la métrica que nadie mira', 'Cómo leer el resultado', 'Cuándo tiene sentido ampliarlo', 'Preguntas frecuentes'],
+      faqs: [
+        { q: '¿Cuánto tiempo debe durar una prueba de AI Max?', a: 'Seis semanas como mínimo: unas dos semanas de aprendizaje que excluyes de la evaluación y, después, al menos cuatro semanas de medición. Las pruebas más cortas miden sobre todo cuánto tardó la estrategia de puja en estabilizarse, no lo que hizo AI Max.' },
+        { q: '¿AI Max tiene fase de aprendizaje y cuánto dura?', a: 'Sí. Activar o desactivar la concordancia de términos de búsqueda reinicia el aprendizaje de la campaña, normalmente entre una y dos semanas. También lo hace al desactivarlo, por eso la prueba inversa necesita igualmente un periodo de espera antes de leer las cifras.' },
+        { q: '¿Puedo hacer un A/B de AI Max duplicando la campaña?', a: 'No. Dos campañas que pujan por las mismas búsquedas compiten entre sí en las mismas subastas, así que medirías la colisión y no AI Max. Usa el experimento de AI Max integrado, que divide el tráfico dentro de una misma campaña, o una comparación limpia antes/después con el resto de palancas congeladas.' },
+        { q: '¿Qué diferencia hay entre AI Max y la concordancia amplia?', a: 'La concordancia amplia sigue partiendo de una palabra clave que has reservado y busca consultas alrededor. AI Max añade concordancia sin palabras clave: puede mostrarse en búsquedas que no coinciden con ninguna de tus palabras clave, deduciéndolas de tus anuncios, keywords y páginas de destino. La concordancia amplia amplía una palabra clave; AI Max amplía la campaña.' },
+        { q: '¿Debería probar AI Max en una campaña de marca?', a: 'Normalmente no. Una campaña de marca apenas tiene volumen de búsqueda por descubrir, así que hay poco que ganar, mientras que el tráfico adicional puede alejar la estrategia de puja de la única consulta que sostiene la campaña. Empieza donde sí hay algo que encontrar: campañas genéricas con intención abierta.' },
+      ],
+      prose: (
+        <>
+          <p>Google informa de que los anunciantes que activan <a href="https://support.google.com/google-ads/answer/15910366?hl=es" target="_blank" rel="noopener noreferrer">AI Max para campañas de Search</a> suelen ver un 14 % más de conversiones o de valor de conversión con un CPA similar. Es una media de cuentas que decidieron activarlo. No es una previsión para tu cuenta, y la única forma de saber qué hace en la tuya es probarlo.</p>
+          <p>El problema es que la mayoría de pruebas de AI Max responden a una pregunta distinta de la planteada. Miden la fase de aprendizaje, un cambio de presupuesto o una campaña compitiendo contra sí misma. Esto es un método, no un veredicto: cómo montar una prueba cuyo resultado signifique algo, y cómo leerla cuando llegue.</p>
+
+          <h2 id="how-tests-lie">Tres formas en que una prueba de AI Max te engaña</h2>
+          <p>Tres fallos explican casi todas las pruebas de AI Max sin conclusión que hemos visto:</p>
+          <ol>
+            <li><strong>La fase de aprendizaje queda dentro de la ventana de medición.</strong> Activar la concordancia de términos de búsqueda reinicia el aprendizaje de la campaña. Si tu periodo «después» empieza el día que lo activaste, la primera semana o dos describen sobre todo a un algoritmo recolocándose. Las campañas suelen verse peor durante ese tiempo: de ahí tantas historias de terror sobre AI Max que en realidad son capturas de la fase de aprendizaje.</li>
+            <li><strong>Cambió algo más al mismo tiempo.</strong> Más presupuesto, un nuevo CPA objetivo, un pico estacional, una nueva página de destino. Cualquiera de ellos hace imposible la atribución, y la tentación de ajustar es mayor justo cuando la prueba baja.</li>
+            <li><strong>El A/B son dos campañas peleándose.</strong> Duplicar una campaña suena riguroso y es la peor de las tres opciones: ambas entran en las mismas subastas por las mismas búsquedas, así que lo que mides es la colisión. Los propios <a href="https://support.google.com/google-ads/answer/16450159?hl=es" target="_blank" rel="noopener noreferrer">experimentos de AI Max</a> de Google lo evitan dividiendo el tráfico dentro de una sola campaña.</li>
+          </ol>
+
+          <h2 id="anything-to-find">Primero: ¿hay algo que descubrir?</h2>
+          <p>Esta es la pregunta previa a planificar cualquier prueba, y casi siempre se salta.</p>
+          <p>AI Max se gana su sitio mostrándose en búsquedas que nunca reservaste. El tamaño de la oportunidad depende, por tanto, de una sola cosa: cuánta demanda relevante existe fuera de tu lista de palabras clave. No es cuestión de opinión — tu propia cuenta lo responde en unos veinte minutos.</p>
+          <ul>
+            <li><strong>¿Qué parte de tus conversiones viene de términos de marca?</strong> Si es la mayoría, la campaña ya está recogiendo demanda de quien te conoce. Queda poco por descubrir y mucho por alterar.</li>
+            <li><strong>¿Cómo de cerrado es tu mix de concordancias?</strong> Una campaña de concordancia exacta en una categoría bien mapeada tiene un espacio desconocido menor que una amplia en un mercado exploratorio.</li>
+            <li><strong>Mira 90 días de términos de búsqueda.</strong> ¿Cuántas consultas realmente nuevas y con conversión aparecieron sin que las tuvieras reservadas? Si la respuesta es «un puñado por trimestre», ese es tu techo realista de descubrimiento.</li>
+            <li><strong>¿Puede tu web responder a las intenciones adyacentes?</strong> Este punto decide más de lo que la gente espera. La expansión alcanza consultas de servicio, búsquedas de distribuidor y ubicación, preguntas de soporte y categorías de producto vecinas — y las manda todas a la página de destino que ya usas. Si esa página responde a una sola intención, el tráfico nuevo no puede convertir, por buena que sea la puja.</li>
+          </ul>
+          <p>De ahí salen dos patrones. En campañas con <strong>volumen de búsqueda cerrado</strong> — campañas de marca, conjuntos de concordancia exacta bien mapeados — el potencial de descubrimiento es pequeño y el riesgo es real. En <strong>campañas genéricas con intención abierta</strong> sí hay algo que encontrar, y ahí la prueba merece la pena.</p>
+          <p>Si la respuesta honesta es «aquí no hay nada que descubrir», te has ahorrado seis semanas. También eso es un resultado válido de este paso.</p>
+
+          <h2 id="five-rules">Cinco reglas para una prueba limpia</h2>
+          <p>Si hay algo que encontrar, cinco reglas sostienen todo el método:</p>
+          <ol>
+            <li><strong>Excluye la fase de aprendizaje.</strong> Planifica dos semanas de aprendizaje que no formen parte de la evaluación. Anota las fechas antes de empezar, para que la ventana no se desplace en silencio cuando las primeras cifras pinten mal.</li>
+            <li><strong>Congela las palancas.</strong> Presupuesto, CPA o ROAS objetivo, estrategia de puja, estructura de palabras clave y páginas de destino se quedan intactos durante toda la prueba. Si hay que cambiar algo, la prueba termina y empieza otra.</li>
+            <li><strong>Mide al menos cuatro semanas</strong> después del aprendizaje. En una campaña con pocas conversiones semanales, más: un resultado construido sobre quince conversiones es lanzar una moneda con pasos intermedios.</li>
+            <li><strong>Prueba una sola cosa.</strong> Deja desactivadas la personalización automática de texto y la expansión de la URL final en la primera prueba. Con las tres activas mides un paquete, y ante un resultado negativo no sabrás qué parte lo causó.</li>
+            <li><strong>Escribe los criterios de éxito antes.</strong> Métrica principal, umbral que cuenta como éxito y qué harás en cada escenario. Los criterios escritos después del resultado no son criterios, son un relato.</li>
+          </ol>
+          <p>Sobre el mecanismo de prueba: el experimento de AI Max de Google divide el tráfico dentro de una campaña, con un grupo de control sin AI Max y uno de prueba con él — más limpio que cualquier montaje con campañas duplicadas. No está disponible en todos los casos: quedan fuera las campañas con estrategias de puja de cartera, presupuestos compartidos, personalización de texto activada u otro experimento en marcha. Entonces la alternativa honesta es la comparación antes/después con las palancas congeladas. Es evidencia más débil, y conviene decirlo en el informe.</p>
+
+          <h2 id="what-to-measure">Qué medir — y la métrica que nadie mira</h2>
+          <p>Las métricas a nivel de campaña son donde este tipo de cambio se esconde. Conversiones, coste por conversión y CTR del conjunto son medias, y una media absorbe una redistribución sin mostrarla.</p>
+          <p>El mecanismo cabe en una frase: cuando una estrategia de Smart Bidding recibe tráfico adicional que convierte a otra tasa, reequilibra las pujas para seguir cumpliendo su objetivo — y eso puede significar pujar menos por la única consulta que sostenía la campaña.</p>
+          <p>Por eso, junto a las métricas de campaña, informa por separado de tu <strong>consulta individual más valiosa</strong>:</p>
+          <ul>
+            <li>Clics y CTR</li>
+            <li>Porcentaje de impresiones en la parte superior absoluta</li>
+            <li>Porcentaje de impresiones perdido por ranking</li>
+            <li>Conversiones y coste por conversión</li>
+          </ul>
+          <p>Lo aprendimos por las malas. En una prueba sobre una campaña de marca la pasada primavera, las cifras a nivel de campaña se movieron en un dígito mientras la única consulta que importaba perdía el 29 % de sus conversiones: toda la pérdida de la campaña estaba en una línea que nadie informaba. <a href="https://tikitaka.digital/es/ai-max-campana-de-marca/" target="_blank" rel="noopener noreferrer">Publicamos la prueba completa con las cifras</a> en nuestra web hermana.</p>
+          <p>Un límite de medición que conviene prever: buena parte del tráfico de AI Max — en nuestra prueba, alrededor del 60 % — aparece en el informe de términos de búsqueda solo como «otros términos de búsqueda». Tu análisis por consulta es, por tanto, una muestra y no un censo. Trátalo como orientación y no construyas una tesis sobre la mitad visible.</p>
+
+          <h2 id="reading-the-result">Cómo leer el resultado</h2>
+          <p>Tres preguntas, en este orden:</p>
+          <ul>
+            <li><strong>¿La diferencia supera tu ruido habitual?</strong> Mira la variación semanal de las seis semanas previas. Si las conversiones oscilan un 15 % de una semana a otra, una diferencia del 7 % no es un hallazgo.</li>
+            <li><strong>¿Sobrevivió tu consulta más valiosa?</strong> Una campaña que gana un 5 % global mientras su mejor consulta pierde un 20 % no ha mejorado. Ha redistribuido, y la redistribución suele continuar.</li>
+            <li><strong>¿Se revierte?</strong> La confirmación más barata que existe: desactiva AI Max, espera la nueva fase de aprendizaje y mide tres semanas sin tocar nada. Si las métricas vuelven, tienes un mecanismo y no una coincidencia.</li>
+          </ul>
+          <p>Sea cual sea el veredicto, hay algo que merece conservarse: las consultas que AI Max descubrió y que convirtieron. Resérvalas como palabras clave propias. Incluso una prueba fallida suele amortizarse aquí, y las keywords siguen siendo tuyas después de desactivarlo.</p>
+          <p>Sé honesto también con la fuerza de la evidencia. Una comparación antes/después con las palancas congeladas es buena evidencia práctica, no una prueba: la campaña siguió funcionando en un mundo donde competidores, demanda y los propios sistemas de Google se movieron. Escribe «explicación más plausible» cuando sea eso lo que tienes. Quien lea tu informe ya conoce la diferencia.</p>
+
+          <h2 id="when-to-roll-out">Cuándo tiene sentido ampliarlo</h2>
+          <p>Cuatro condiciones que deberían cumplirse antes de extender AI Max más allá de la campaña de prueba:</p>
+          <ul>
+            <li>La campaña de prueba tenía demanda real sin descubrir, y el informe de términos de búsqueda lo demuestra: consultas nuevas con conversión, no solo más volumen en las de siempre.</li>
+            <li>Tus consultas más valiosas mantuvieron su posición durante la prueba.</li>
+            <li>Tu lista de negativas cubre las intenciones que no puedes atender: servicio, soporte, empleo, búsquedas de distribuidor y ubicación, categorías de producto adyacentes.</li>
+            <li>Existen páginas de destino para las intenciones que la expansión alcanza de verdad. Si no, constrúyelas primero: sale más barato que pagar tráfico que aterriza en la página equivocada.</li>
+          </ul>
+          <p>Amplía campaña por campaña, no toda la cuenta en una tarde. Cada campaña tiene su propia mezcla de demanda de marca y genérica, y el mecanismo que hace útil a AI Max en una es el que lo hace caro en otra.</p>
+          <p>Para seguir leyendo: <a href="/es/blog/performance-max-bidding-change-august-2026/">el cambio de pujas de Performance Max</a> funciona con el mismo principio — un objetivo aplicado sobre una mezcla de tráfico que ha cambiado. Y <a href="/es/blog/crm-conversion-imports/">las importaciones de conversiones desde el CRM</a> son lo que evita que una estrategia de puja optimice hacia leads que nunca cierran. Si quieres que alguien que hace estas pruebas cada semana revise el montaje, de eso va nuestro <a href="/es/services/google-ads/">trabajo en Google Ads</a>.</p>
+
+          <h2 id="faq">Preguntas frecuentes</h2>
+        </>
+      ),
+    },
     'performance-max-bidding-change-august-2026': {
       toc: ['El cambio: Bidding Target Optimization', 'Tu ventana de seis semanas', 'Las dos betas', 'Lo que hacemos antes del 17 de agosto', 'Preguntas frecuentes'],
       faqs: [
@@ -2830,7 +2914,7 @@ export const es = {
           </div>
 
           <p>Si prefieres no auditar cada campaña a mano antes de la fecha límite, eso es justo lo que hacemos. Gestionamos <a href="/es/services/google-ads/">Google Ads y Performance Max</a> con una tarifa mensual fija &mdash; nunca un porcentaje de tu inversión &mdash; para no tener nunca el incentivo de recomendar más publicidad de la que la cuenta necesita. La primera llamada son 30 minutos, invita la casa: <a href="/es/contact/">cuéntanos qué quieres hacer crecer &rarr;</a></p>
-          <p>Relacionado: <a href="/es/blog/performance-max-2026/">Performance Max en 2026 &mdash; los ajustes que cambiamos primero</a> &middot; <a href="/es/blog/cookieless-tracking/">Cookieless tracking: qué cambió y qué hacer</a></p>
+          <p>Relacionado: <a href="/es/blog/performance-max-2026/">Performance Max en 2026 &mdash; los ajustes que cambiamos primero</a> &middot; <a href="/es/blog/cookieless-tracking/">Cookieless tracking: qué cambió y qué hacer</a> &middot; <a href="/es/blog/how-to-test-ai-max/">cómo probar AI Max sin engañarte a ti mismo</a></p>
         </>
       ),
     },

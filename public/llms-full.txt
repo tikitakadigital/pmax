@@ -253,6 +253,15 @@ Meta + Instagram brand campaign for a major European auto manufacturer with a fo
 
 ## Blog posts (all articles)
 
+### How to Test AI Max Without Fooling Yourself
+**URL:** https://pmax.online/blog/how-to-test-ai-max/
+**Published:** Oct 1, 2026
+**Also in:** DE · ES
+
+A method for testing Google's AI Max for Search campaigns, written from first-hand testing. Covers the three failure modes that invalidate most AI Max tests (learning phase inside the measurement window, a budget or target CPA change mid-test, and duplicate-campaign A/B tests where both campaigns bid on the same queries and cannibalise each other in the auction); a pre-test qualification step asking whether undiscovered demand exists at all (share of conversions from brand terms, match type mix, new converting queries in the last 90 days, whether landing pages can answer adjacent intents such as service, dealer and support searches); five rules for a clean test (exclude the two-week learning phase, freeze budget and target CPA, measure at least four weeks, leave text customisation and final URL expansion off, write success criteria first); Google's built-in AI Max experiments, which split traffic inside a single campaign rather than duplicating it, and the campaign types excluded from them; what to measure, including the single most valuable query reported separately on CTR, absolute top impression share, impression share lost to rank and conversions, because campaign-level averages hide bid redistribution; how to read the result against normal weekly noise and how to confirm it with a reverse test; and the conditions for rolling AI Max out beyond the test campaign. Cites a published brand-campaign test in which campaign-level metrics moved by single digits while the single most valuable query lost 29% of its conversions, and notes that roughly 60% of AI Max traffic appears in the search terms report only as "other search terms". Answers: how to test AI Max, AI Max test setup, AI Max learning phase, AI Max vs broad match, when to use AI Max, can I A/B test AI Max.
+
+---
+
 ### What Is a GEO Audit — And How to Run One
 **URL:** https://pmax.online/blog/what-is-a-geo-audit/
 **Published:** Aug 8, 2026

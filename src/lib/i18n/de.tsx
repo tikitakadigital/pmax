@@ -824,6 +824,7 @@ export const de = {
     promoDeck: 'Wir betreiben keine E-Mail-Liste — aber wenn Sie ein Thema haben, über das wir schreiben sollen, lassen Sie es uns wissen.',
     promoBtn: 'Thema einreichen',
     posts: [
+      { slug: 'how-to-test-ai-max', title: 'AI Max testen, ohne sich selbst zu täuschen', deck: 'Die meisten AI-Max-Tests messen die Lernphase, eine Budgetänderung oder eine Kampagne, die sich selbst kannibalisiert — nicht AI Max. So geht ein sauberer Test.' },
       { slug: 'google-ads-agency-mallorca', title: 'Google Ads Agentur Mallorca: Was Sie prüfen sollten, bevor Sie unterschreiben', deck: 'Die meisten Google-Ads-Agenturen auf Mallorca verkaufen dasselbe Paket. Hier ist, wie Sie erkennen, welche den Markt wirklich kennen — und die drei Fragen, die eine gute Agentur von einer mittelmäßigen trennen.' },
       { slug: 'how-to-advertise-business-mallorca', title: 'Werbung auf Mallorca: Der vollständige Leitfaden für Unternehmen', deck: 'Mallorca hat 900.000 Einwohner und fast 10 Millionen Besucher pro Jahr. Deutsche Touristen geben im Schnitt 1.200 € pro Aufenthalt aus. Der vollständige Leitfaden zu digitaler Werbung auf Mallorca — alle wichtigen Kanäle, mit konkreten Budgets und Mallorca-spezifischem Kontext.' },
       { slug: 'was-kostet-google-ads', title: 'Google Ads Kosten 2026: Was Sie wirklich zahlen', deck: 'Ein ehrlicher, konkreter Leitfaden zu Google Ads Kosten 2026. Durchschnittliche Klickpreise nach Branche in Deutschland, die Gesamtkosten-Gleichung, drei Budgetszenarien — und eine Immobilienagentur in Palma, die den Cost-per-Lead von 200 € auf 83 € senkte.' },
@@ -2664,6 +2665,89 @@ export const de = {
         </>
       ),
     },
+    'how-to-test-ai-max': {
+      toc: ['Drei Arten, wie ein AI-Max-Test lügt', 'Zuerst: Gibt es überhaupt etwas zu finden?', 'Fünf Regeln für einen sauberen Test', 'Was Sie messen — und die Kennzahl, die niemand ansieht', 'Wie Sie das Ergebnis lesen', 'Wann ein Rollout sinnvoll ist', 'Häufige Fragen'],
+      faqs: [
+        { q: 'Wie lange muss ein AI-Max-Test laufen?', a: 'Mindestens sechs Wochen: rund zwei Wochen Lernphase, die Sie aus der Auswertung ausschließen, danach mindestens vier Wochen Messung. Kürzere Tests messen vor allem, wie lange die Gebotsstrategie zum Einschwingen brauchte — nicht, was AI Max bewirkt hat.' },
+        { q: 'Hat AI Max eine Lernphase, und wie lang ist sie?', a: 'Ja. Das Ein- oder Ausschalten des Suchbegriffsabgleichs startet die Lernphase der Kampagne neu, typischerweise ein bis zwei Wochen. Auch das Abschalten hat eine — deshalb braucht der Gegentest ebenfalls eine Wartezeit, bevor Sie die Zahlen lesen.' },
+        { q: 'Kann ich AI Max mit einer duplizierten Kampagne A/B-testen?', a: 'Nein. Zwei Kampagnen, die auf dieselben Suchanfragen bieten, treten in denselben Auktionen gegeneinander an. Sie messen dann die Kollision, nicht AI Max. Nutzen Sie das eingebaute AI-Max-Experiment, das den Traffic innerhalb einer Kampagne aufteilt, oder einen sauberen Vorher-Nachher-Vergleich mit eingefrorenen Stellschrauben.' },
+        { q: 'Was ist der Unterschied zwischen AI Max und Broad Match?', a: 'Broad Match geht weiterhin von einem gebuchten Keyword aus und matcht Anfragen darum herum. AI Max ergänzt keywordloses Matching: Die Kampagne kann auf Anfragen ausgespielt werden, die zu keinem Ihrer Keywords passen — Google leitet sie aus Anzeigen, Keywords und Landingpages ab. Broad Match erweitert ein Keyword, AI Max erweitert die Kampagne.' },
+        { q: 'Sollte ich AI Max in einer Brand-Kampagne testen?', a: 'Meist nicht. Eine Brand-Kampagne hat kaum unentdecktes Suchvolumen, also wenig zu gewinnen — während der zusätzliche Traffic die Gebotsstrategie von genau der Anfrage wegziehen kann, die die Kampagne trägt. Testen Sie dort, wo es wirklich etwas zu entdecken gibt: in generischen Kampagnen mit offener Suchintention.' },
+      ],
+      prose: (
+        <>
+          <p>Google berichtet, dass Werbetreibende, die <a href="https://support.google.com/google-ads/answer/15910366?hl=de" target="_blank" rel="noopener noreferrer">AI Max für Suchkampagnen</a> aktivieren, typischerweise 14 % mehr Conversions oder Conversion-Wert bei ähnlichem CPA sehen. Das ist ein Durchschnitt über Konten, die sich für die Aktivierung entschieden haben. Es ist keine Prognose für Ihr Konto — und der einzige Weg herauszufinden, was es dort bewirkt, ist ein Test.</p>
+          <p>Das Problem: Die meisten AI-Max-Tests beantworten eine andere Frage als die gestellte. Sie messen die Lernphase, eine Budgetänderung oder eine Kampagne, die gegen sich selbst antritt. Dieser Artikel ist eine Methode, kein Urteil: wie Sie einen Test so aufsetzen, dass das Ergebnis etwas bedeutet — und wie Sie es anschließend lesen.</p>
+
+          <h2 id="how-tests-lie">Drei Arten, wie ein AI-Max-Test lügt</h2>
+          <p>Drei Fehler erklären fast jeden ergebnislosen AI-Max-Test, den wir gesehen haben:</p>
+          <ol>
+            <li><strong>Die Lernphase liegt im Messfenster.</strong> Das Einschalten des Suchbegriffsabgleichs startet die Lernphase neu. Beginnt Ihr Nachher-Zeitraum am Tag des Umschaltens, beschreibt die erste Woche oder zwei vor allem einen Algorithmus, der sich sortiert. Kampagnen sehen in dieser Zeit meist schlechter aus — daher die vielen AI-Max-Horrorgeschichten, die in Wahrheit Screenshots aus der Lernphase sind.</li>
+            <li><strong>Gleichzeitig hat sich etwas anderes geändert.</strong> Mehr Budget, ein neuer Ziel-CPA, eine Saisonspitze, ein Landingpage-Release. Jedes Einzelne macht die Zuordnung unmöglich — und die Versuchung nachzujustieren ist genau dann am größten, wenn der Test einbricht.</li>
+            <li><strong>Der A/B-Test sind zwei Kampagnen, die sich bekämpfen.</strong> Eine Kampagne zu duplizieren klingt sauber und ist die schlechteste der drei Varianten: Beide Kampagnen treten in denselben Auktionen für dieselben Anfragen an, gemessen wird die Kollision. Googles eigene <a href="https://support.google.com/google-ads/answer/16450159?hl=de" target="_blank" rel="noopener noreferrer">AI-Max-Experimente</a> umgehen das, indem sie den Traffic innerhalb einer einzigen Kampagne aufteilen.</li>
+          </ol>
+
+          <h2 id="anything-to-find">Zuerst: Gibt es überhaupt etwas zu finden?</h2>
+          <p>Diese Frage gehört vor jede Testplanung — und wird fast immer übersprungen.</p>
+          <p>AI Max verdient sein Geld damit, auf Anfragen auszuspielen, die Sie nie gebucht haben. Die Größe des Potenzials hängt also an einer einzigen Größe: wie viel relevante Nachfrage außerhalb Ihrer Keyword-Liste existiert. Das ist keine Meinungsfrage — Ihr Konto beantwortet sie in etwa zwanzig Minuten.</p>
+          <ul>
+            <li><strong>Wie viel Ihres Conversion-Volumens kommt über Markenbegriffe?</strong> Wenn es der Großteil ist, erntet die Kampagne bereits Nachfrage von Menschen, die Sie kennen. Da bleibt wenig zu entdecken und viel zu stören.</li>
+            <li><strong>Wie eng ist Ihr Match-Type-Mix?</strong> Eine Kampagne auf exakt passenden Keywords in einer gut kartierten Kategorie hat einen kleineren unbekannten Raum als eine breit laufende in einem explorativen Markt.</li>
+            <li><strong>Sehen Sie sich 90 Tage Suchbegriffe an.</strong> Wie viele wirklich neue, konvertierende Anfragen tauchten auf, die Sie nicht gebucht hatten? Lautet die Antwort „eine Handvoll pro Quartal", ist das Ihre realistische Obergrenze.</li>
+            <li><strong>Kann Ihre Website die angrenzenden Intentionen beantworten?</strong> Dieser Punkt entscheidet mehr, als die meisten erwarten. Die Erweiterung erreicht Serviceanfragen, Händler- und Standortsuchen, Supportfragen und benachbarte Produktkategorien — und schickt alles auf die Landingpage, die Sie ohnehin nutzen. Beantwortet diese Seite genau eine Intention, kann der neue Traffic nicht konvertieren, egal wie gut geboten wird.</li>
+          </ul>
+          <p>Daraus folgen zwei Muster. In Kampagnen mit <strong>geschlossenem Suchvolumen</strong> — Brand-Kampagnen, eng kartierte Exact-Match-Sets — ist das Entdeckungspotenzial klein und das Risiko real. In <strong>generischen Kampagnen mit offener Suchintention</strong> gibt es tatsächlich etwas zu finden, und dort lohnt der Test.</p>
+          <p>Lautet die ehrliche Antwort „hier gibt es nichts zu entdecken", haben Sie sich sechs Wochen gespart. Auch das ist ein gültiges Ergebnis dieses Schritts.</p>
+
+          <h2 id="five-rules">Fünf Regeln für einen sauberen Test</h2>
+          <p>Wenn es etwas zu finden gibt, tragen fünf Regeln die ganze Methode:</p>
+          <ol>
+            <li><strong>Lernphase ausschließen.</strong> Planen Sie zwei Wochen Lernphase ein, die nicht Teil der Auswertung sind. Schreiben Sie die Daten vorher auf, damit sich das Fenster nicht stillschweigend verschiebt, sobald die ersten Zahlen schlecht aussehen.</li>
+            <li><strong>Stellschrauben einfrieren.</strong> Budget, Ziel-CPA oder Ziel-ROAS, Gebotsstrategie, Keyword-Struktur und Landingpages bleiben über den gesamten Test unberührt. Muss doch etwas geändert werden, endet der Test und ein neuer beginnt.</li>
+            <li><strong>Mindestens vier Wochen messen</strong> — nach der Lernphase. Bei einer Kampagne mit wenigen Conversions pro Woche entsprechend länger: Ein Ergebnis auf Basis von fünfzehn Conversions ist ein Münzwurf mit Zwischenschritten.</li>
+            <li><strong>Eine Sache testen.</strong> Automatische Textanpassung und Erweiterung der finalen URL bleiben beim ersten Test aus. Mit allen dreien messen Sie ein Paket — und wissen bei einem negativen Ergebnis nicht, welcher Teil es verursacht hat.</li>
+            <li><strong>Erfolgskriterien vorher aufschreiben.</strong> Primäre Kennzahl, Schwelle für einen Erfolg, und was Sie bei welchem Ausgang tun. Kriterien, die nach dem Ergebnis entstehen, sind keine Kriterien, sondern eine Erzählung.</li>
+          </ol>
+          <p>Zum Testaufbau selbst: Googles AI-Max-Experiment teilt den Traffic innerhalb einer Kampagne in einen Kontroll- und einen Testarm — sauberer als jede Dublettenkonstruktion. Verfügbar ist es nicht überall: Kampagnen mit Portfolio-Gebotsstrategien, gemeinsamen Budgets, aktivierter Textanpassung oder einem laufenden Experiment sind ausgeschlossen. Dann bleibt der eingefrorene Vorher-Nachher-Vergleich als ehrliche Alternative. Er ist schwächere Evidenz, und das gehört so in den Report.</p>
+
+          <h2 id="what-to-measure">Was Sie messen — und die Kennzahl, die niemand ansieht</h2>
+          <p>Auf Kampagnenebene verschwindet genau diese Art von Veränderung. Conversions, Kosten pro Conversion und CTR der Gesamtkampagne sind Durchschnitte — und ein Durchschnitt schluckt eine Umverteilung, ohne sie zu zeigen.</p>
+          <p>Der Mechanismus lässt sich in einem Satz sagen: Bekommt eine Smart-Bidding-Strategie zusätzlichen Traffic mit anderer Conversion-Rate, verteilt sie die Gebote neu, um ihr Ziel zu halten — und bietet dabei womöglich weniger auf die eine Anfrage, die die Kampagne getragen hat.</p>
+          <p>Berichten Sie deshalb neben den Kampagnenkennzahlen Ihre <strong>wertvollste einzelne Suchanfrage</strong> gesondert:</p>
+          <ul>
+            <li>Klicks und CTR</li>
+            <li>Anteil an oberster Impressionen-Position (absolut)</li>
+            <li>Durch Rang verlorener Impressionsanteil</li>
+            <li>Conversions und Kosten pro Conversion</li>
+          </ul>
+          <p>Wir haben das auf die unangenehme Art gelernt. In einem Brand-Kampagnen-Test im Frühjahr bewegten sich die Kampagnenzahlen im einstelligen Bereich, während die eine entscheidende Anfrage 29 % ihrer Conversions verlor — der gesamte Verlust der Kampagne steckte in einer Zeile, die niemand berichtet hat. <a href="https://tikitaka.digital/ai-max-brand-kampagne/" target="_blank" rel="noopener noreferrer">Den vollständigen Test samt Zahlen haben wir veröffentlicht</a>, auf unserer Schwesterseite.</p>
+          <p>Eine Berichtsgrenze sollten Sie einplanen: Ein großer Teil des AI-Max-Traffics — in unserem Test rund 60 % — erscheint im Suchbegriffsbericht nur als „andere Suchbegriffe". Ihre Analyse auf Anfrageebene ist also eine Stichprobe, keine Vollerhebung. Behandeln Sie sie als Richtungsangabe und bauen Sie keinen Beweis auf der sichtbaren Hälfte auf.</p>
+
+          <h2 id="reading-the-result">Wie Sie das Ergebnis lesen</h2>
+          <p>Drei Fragen, in dieser Reihenfolge:</p>
+          <ul>
+            <li><strong>Ist der Unterschied größer als Ihr normales Rauschen?</strong> Sehen Sie sich die Wochenschwankung der sechs Wochen vor dem Test an. Schwanken Conversions regelmäßig um 15 % von Woche zu Woche, ist ein Unterschied von 7 % kein Befund.</li>
+            <li><strong>Hat Ihre wertvollste Anfrage überlebt?</strong> Eine Kampagne, die insgesamt 5 % gewinnt, während ihre beste Anfrage 20 % verliert, hat sich nicht verbessert. Sie hat umverteilt — und die Umverteilung geht in der Regel weiter.</li>
+            <li><strong>Lässt es sich umkehren?</strong> Die günstigste Bestätigung, die es gibt: AI Max abschalten, die neue Lernphase abwarten, drei unveränderte Wochen messen. Kehren die Kennzahlen zurück, haben Sie einen Mechanismus statt eines Zufalls.</li>
+          </ul>
+          <p>Eines lohnt sich unabhängig vom Urteil: die Anfragen behalten, die AI Max gefunden hat und die konvertiert haben. Buchen Sie sie als eigene Keywords. Selbst ein gescheiterter Test zahlt sich hier meist aus — und die Keywords bleiben Ihnen, auch nach dem Abschalten.</p>
+          <p>Seien Sie außerdem ehrlich zur Beweiskraft. Ein Vorher-Nachher-Vergleich mit eingefrorenen Stellschrauben ist gute Praxisevidenz, kein Beweis — die Kampagne lief weiterhin in einer Welt, in der sich Wettbewerber, Nachfrage und Googles Systeme bewegt haben. Schreiben Sie „plausibelste Erklärung", wenn es das ist. Jeder, der Ihren Report liest, kennt den Unterschied ohnehin.</p>
+
+          <h2 id="when-to-roll-out">Wann ein Rollout sinnvoll ist</h2>
+          <p>Vier Bedingungen, die alle erfüllt sein sollten, bevor Sie AI Max über die Testkampagne hinaus ausweiten:</p>
+          <ul>
+            <li>Die Testkampagne hatte echte unentdeckte Nachfrage, und der Suchbegriffsbericht belegt es — neue konvertierende Anfragen, nicht nur mehr Volumen auf den alten.</li>
+            <li>Ihre wertvollsten Anfragen haben ihre Position über den Test gehalten.</li>
+            <li>Ihre Ausschlussliste deckt die Intentionen ab, die Sie nicht bedienen können: Service, Support, Karriere, Händler- und Standortsuchen, angrenzende Produktkategorien.</li>
+            <li>Für die Intentionen, die die Erweiterung tatsächlich erreicht, existieren Landingpages. Wenn nicht: zuerst bauen. Das ist billiger, als Traffic zu bezahlen, der auf der falschen Seite landet.</li>
+          </ul>
+          <p>Rollen Sie Kampagne für Kampagne aus, nicht kontoweit an einem Abend. Jede Kampagne hat ihren eigenen Mix aus Marken- und generischer Nachfrage — und derselbe Mechanismus, der AI Max in der einen nützlich macht, macht ihn in der anderen teuer.</p>
+          <p>Weiterlesen: <a href="/de/blog/performance-max-bidding-change-august-2026/">die Gebotsänderung bei Performance Max</a> funktioniert nach demselben Prinzip — ein Ziel, das auf einen veränderten Traffic-Mix angewendet wird. Und <a href="/de/blog/crm-conversion-imports/">CRM-Conversion-Importe</a> verhindern, dass eine Gebotsstrategie auf Leads optimiert, die nie abschließen. Wenn jemand den Aufbau prüfen soll, der solche Tests wöchentlich fährt: Das ist unsere <a href="/de/services/google-ads/">Google-Ads-Arbeit</a>.</p>
+
+          <h2 id="faq">Häufige Fragen</h2>
+        </>
+      ),
+    },
     'performance-max-bidding-change-august-2026': {
       toc: ['Die Änderung: Bidding Target Optimization', 'Ihr Sechs-Wochen-Fenster', 'Die zwei Betas', 'Was wir vor dem 17. August tun', 'Häufige Fragen'],
       faqs: [
@@ -2727,7 +2811,7 @@ export const de = {
           </div>
 
           <p>Wenn Sie nicht jede Kampagne von Hand vor dem Stichtag prüfen wollen &mdash; genau das ist unsere Arbeit. Wir betreuen <a href="/de/services/google-ads/">Google Ads und Performance Max</a> zum festen Monatshonorar &mdash; nie als Prozentsatz Ihrer Ausgaben &mdash; damit es nie einen Anreiz gibt, mehr Werbung zu empfehlen, als das Konto braucht. Erstgespräch sind 30 Minuten, auf unsere Rechnung: <a href="/de/contact/">Erzählen Sie uns, was Sie wachsen lassen möchten &rarr;</a></p>
-          <p>Weiterlesen: <a href="/de/blog/performance-max-2026/">Performance Max 2026 &mdash; die Einstellungen, die wir zuerst ändern</a> &middot; <a href="/de/blog/cookieless-tracking/">Cookieless Tracking: Was sich geändert hat</a></p>
+          <p>Weiterlesen: <a href="/de/blog/performance-max-2026/">Performance Max 2026 &mdash; die Einstellungen, die wir zuerst ändern</a> &middot; <a href="/de/blog/cookieless-tracking/">Cookieless Tracking: Was sich geändert hat</a> &middot; <a href="/de/blog/how-to-test-ai-max/">AI Max testen, ohne sich selbst zu täuschen</a></p>
         </>
       ),
     },

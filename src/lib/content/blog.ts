@@ -17,6 +17,20 @@ export interface Post {
 
 export const posts: Post[] = [
   {
+    slug: 'how-to-test-ai-max',
+    stamp: 'OCT 01',
+    date: 'Oct 1, 2026',
+    readTime: '8 min',
+    category: 'Google Ads',
+    title: 'How to test AI Max without fooling yourself',
+    seoTitle: 'How to Test AI Max Properly: A Clean Setup | pmax',
+    deck: 'Most AI Max tests measure the learning phase, a budget change or a campaign cannibalising itself — not AI Max. Here is how to run one that answers it.',
+    variant: 'is-slate',
+    featured: true,
+    ogImage: '/og/how-to-test-ai-max.jpg',
+    author: 'Philipp Enders',
+  },
+  {
     slug: 'google-ads-agency-mallorca',
     stamp: 'DEC 22',
     date: 'Dec 22, 2026',
