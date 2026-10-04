@@ -7,7 +7,8 @@
     "build": "next build && node scripts/generate-markdown.mjs out",
     "start": "next start",
     "check:hreflang": "node scripts/check-hreflang.mjs out",
-    "check:markdown": "node scripts/check-markdown.mjs out"
+    "check:markdown": "node scripts/check-markdown.mjs out",
+    "check:links": "node scripts/check-links.mjs out"
   },
   "dependencies": {
     "@gsap/react": "^2.1.2",

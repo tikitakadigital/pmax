@@ -1121,7 +1121,7 @@ export const de = {
         <>
           <p>Mallorca ist kein normaler lokaler Markt. Die st&auml;ndige Bev&ouml;lkerung betr&auml;gt rund 900.000 &mdash; klein nach europ&auml;ischen Ma&szlig;st&auml;ben. Doch der Tourismus macht rund 70&nbsp;% des BIP der Balearen aus. Fast 10 Millionen Besucher kommen j&auml;hrlich auf die Insel.</p>
           <p>Deutsche Touristen: 3,7 Millionen pro Jahr, 37&nbsp;% der Gesamtbesucher, durchschnittlich 1.200&nbsp;&euro; Ausgaben pro Aufenthalt laut Balearischen Tourismusstatistiken. UK-Touristen: 1,6 Millionen pro Jahr (16&nbsp;%). Diese Gruppen unterscheiden sich in Kaufverhalten, Sprache und Plattformnutzung so stark, dass eine gemeinsame Werbestrategie fast nie funktioniert.</p>
-          <p>Dieser Leitfaden richtet sich an Unternehmer auf Mallorca &mdash; insbesondere deutschsprachige Gesch&auml;ftsinhaber, Expats und Unternehmen, die deutsche Touristen als Zielgruppe haben. Wir sind eine <a href="/de/marketing-agency-mallorca">Marketingagentur mit Sitz in Calvi&agrave;</a>. Das ist der Markt, in dem wir t&auml;glich arbeiten.</p>
+          <p>Dieser Leitfaden richtet sich an Unternehmer auf Mallorca &mdash; insbesondere deutschsprachige Gesch&auml;ftsinhaber, Expats und Unternehmen, die deutsche Touristen als Zielgruppe haben. Wir sind eine <a href="/de/marketing-agentur-mallorca/">Marketingagentur mit Sitz in Calvi&agrave;</a>. Das ist der Markt, in dem wir t&auml;glich arbeiten.</p>
 
           <h2 id="mallorca-market">Der Mallorca-Markt: Was ihn besonders macht</h2>
           <p>Drei Fakten bestimmen die Mallorca-Werbelandschaft.</p>

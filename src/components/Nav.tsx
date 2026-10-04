@@ -35,6 +35,10 @@ const localeSlugs: Record<string, Record<Locale, string>> = {
 function switchedPath(pathname: string, target: Locale): string {
   const stripped = pathname.replace(/^\/(de|es)/, '') || '/'
   const key = stripped.replace(/\/$/, '') || '/'
+  // Next's internal routes (/_not-found during export) have no localised twin,
+  // so the switcher would point at /de/_not-found/ — a 404 offered from the 404
+  // page. Send those to the language home instead.
+  if (key.startsWith('/_')) return target === 'en' ? '/' : `/${target}/`
   if (localeSlugs[key]) return localeSlugs[key][target]
   const caseMatch = key.match(/^\/cases\/([^/]+)$/)
   if (caseMatch) {

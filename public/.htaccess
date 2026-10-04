@@ -74,6 +74,12 @@ ErrorDocument 404 /404.html
   RewriteRule ^industries-we-serve/.+$ /industries/ [R=301,L]
   RewriteRule ^digital-compass/?$ /services/ [R=301,L]
 
+  # Two localised pages linked to the English slug under /de/ and /es/ from
+  # 14 Sep to 4 Oct 2026. The links are fixed; these catch anything that
+  # recorded the 404 in the meantime.
+  RewriteRule ^de/marketing-agency-mallorca/?$ /de/marketing-agentur-mallorca/ [R=301,L]
+  RewriteRule ^es/marketing-agency-mallorca/?$ /es/agencia-de-marketing-mallorca/ [R=301,L]
+
   # Blog posts published from October 2026 carry localised DE/ES slugs
   # (see src/lib/content/blog-slugs.ts). Older posts keep their English slug.
   RewriteRule ^de/blog/how-to-test-ai-max/?$ /de/blog/ai-max-richtig-testen/ [R=301,L]

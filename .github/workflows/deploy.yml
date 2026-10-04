@@ -39,6 +39,12 @@ jobs:
       - name: Check Markdown for agents
         run: npm run check:markdown
 
+      # Blocks the deploy on internal 404s. Two localised pages linked to an
+      # English slug under /de/ and /es/ from 14 Sep 2026 and nobody noticed
+      # for three weeks — the linking page renders perfectly either way.
+      - name: Check internal links
+        run: npm run check:links
+
       - name: Inject deploy secret into webhook script
         env:
           DEPLOY_SECRET: ${{ secrets.DEPLOY_SECRET }}
