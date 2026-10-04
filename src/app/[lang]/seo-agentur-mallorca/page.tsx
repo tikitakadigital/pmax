@@ -307,7 +307,7 @@ export default function SeoAgenturMallorcaPage() {
           eyebrow="Kostenloses 30-Min-SEO-Audit"
           headline={<>Wissen Sie, wo Sie auf Mallorca<br />wirklich ranken?</>}
           deck="Geben Sie uns Lesezugriff und sagen Sie uns, in welchen Sprachen Ihre Kunden suchen — wir senden Ihnen eine einseitige Diagnose mit drei konkreten Dingen, die Sie dieses Quartal beheben sollten. Kein Verkaufsdruck, keine Präsentation."
-          ctaHref="/contact"
+          ctaHref="/de/contact/"
           ctaLabel="Audit anfragen"
           secondaryHref="/de/services/seo"
           secondaryLabel="Unser SEO-Angebot →"

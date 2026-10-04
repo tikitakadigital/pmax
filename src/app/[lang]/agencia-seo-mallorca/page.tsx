@@ -305,7 +305,7 @@ export default function AgenciaSeoMallorcaPage() {
           eyebrow="Auditoría SEO gratis de 30 min"
           headline={<>¿Sabes dónde posicionas de verdad<br />en Mallorca?</>}
           deck="Danos acceso de lectura y dinos en qué idiomas buscan tus clientes — te enviaremos un diagnóstico de una página con tres cosas concretas que arreglar este trimestre. Sin presión comercial, sin presentación."
-          ctaHref="/contact"
+          ctaHref="/es/contact/"
           ctaLabel="Solicitar auditoría"
           secondaryHref="/es/services/seo"
           secondaryLabel="Nuestro servicio SEO →"
