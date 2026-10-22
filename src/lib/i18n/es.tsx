@@ -2838,7 +2838,7 @@ export const es = {
             <li>¿Muestra las fuentes citadas por separado de las menciones de marca? Que te citen y que te nombren son <a href="/es/blog/ki-sichtbarkeit-ai-visibility/">problemas distintos</a>. Un motor puede citar tu artículo del blog y recomendar a un competidor en la misma respuesta.</li>
             <li>¿Muestra las búsquedas que hizo el motor? Son las consultas en las que tus páginas tienen que posicionar si quieres entrar en la respuesta, como la lista del principio de este artículo. Cómo funciona eso en ChatGPT lo explicamos en <a href="/es/blog/how-to-get-mentioned-by-chatgpt/">nuestra guía para que ChatGPT te recomiende</a>.</li>
             <li>¿Aparece el número de respuestas junto a cada porcentaje? Un 40&thinsp;% de visibilidad sobre 5 respuestas y un 40&thinsp;% sobre 500 son hallazgos muy distintos.</li>
-            <li>¿Qué motores funcionan durante la prueba, y son los del plan que comprarías? Una prueba con tres motores no te dice nada del cuarto, el que usan tus clientes. La mayoría de proveedores no lo aclara: de las 19 pruebas de la tabla de más abajo, solo seis nombran los motores que incluyen. Compruébalo el primer día, no el séptimo.</li>
+            <li>¿Qué motores funcionan durante la prueba, y son los del plan que comprarías? Una prueba con tres motores no te dice nada del cuarto, el que usan tus clientes. La mayoría de proveedores no lo aclara: de las 19 pruebas de la tabla de más abajo, solo seis nombran los motores que incluyen, y una de esas seis es la nuestra. Compruébalo el primer día, no el séptimo.</li>
             <li>¿Puedes exportar los datos o llevarlos a un informe? Si se quedan en el panel, alguien acabará copiando cifras a mano en diapositivas cada mes.</li>
           </ol>
 

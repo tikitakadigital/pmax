@@ -210,7 +210,7 @@ export const blogDetails: BlogDetail[] = [
         <li>Are cited sources shown separately from brand mentions? Getting cited and getting named are <a href="/blog/ki-sichtbarkeit-ai-visibility/">different problems</a>. An engine can cite your blog post and recommend a competitor in the same answer.</li>
         <li>Does it show the searches the engine ran? Those are the queries your pages need to rank for if you want to be in the answer, like the list at the top of this page. We explain how that works for one engine in <a href="/blog/how-to-get-mentioned-by-chatgpt/">how to get mentioned by ChatGPT</a>.</li>
         <li>Is the number of answers shown next to every percentage? 40% visibility from 5 answers and 40% from 500 answers are very different findings.</li>
-        <li>Which engines run during the trial, and are they the ones on the plan you would buy? A trial on three engines tells you nothing about the fourth one your buyers use. Most vendors don&rsquo;t say: of the 19 trials in the table below, only six name the engines they cover. Check on day one, not on day seven.</li>
+        <li>Which engines run during the trial, and are they the ones on the plan you would buy? A trial on three engines tells you nothing about the fourth one your buyers use. Most vendors don&rsquo;t say: of the 19 trials in the table below, only six name the engines they cover, and one of those six is ours. Check on day one, not on day seven.</li>
         <li>Can you export the data or put it in a report? If it stays in the dashboard, someone will end up copying numbers into slides by hand every month.</li>
       </ol>
 
