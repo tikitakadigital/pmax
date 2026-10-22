@@ -1850,7 +1850,7 @@ export const blogDetails: BlogDetail[] = [
     faqs: [
       {
         q: 'What is BYOK in AI visibility tracking?',
-        a: 'BYOK stands for Bring Your Own Key. Instead of a tool wrapping API calls inside a prompt quota and charging a marked-up flat fee, a BYOK model lets you connect your own API keys directly to the model providers (OpenAI, Google, Anthropic, etc.). You pay the providers at cost; the platform charges a subscription based on something else — in CrunchJunkie\'s case, how many brands you track. The practical consequence is no prompt cap and transparent costs.',
+        a: 'BYOK stands for Bring Your Own Key. Instead of a tool wrapping API calls inside a prompt quota and charging a marked-up flat fee, a BYOK model lets you connect your own API keys directly to the model providers (OpenAI, Google, Anthropic, etc.). You pay the providers at cost; the platform charges a subscription based on something else — in CrunchJunkie\'s case, how many brands you track. CrunchJunkie offers BYOK alongside Managed AI, where CrunchJunkie runs the scans on its own accounts and bills them as a separate line. Either way, there is no prompt cap and the scan cost is shown on its own.',
       },
       {
         q: 'What is Follow-up Survival in AI search?',
@@ -1866,7 +1866,7 @@ export const blogDetails: BlogDetail[] = [
       },
       {
         q: 'What AI visibility tools are cheapest for tracking multiple brands?',
-        a: 'At a configuration of 50 prompts per brand, 5 engines, and weekly scanning, CrunchJunkie is the cheapest option that scales across multiple brands. At 5 brands the annual cost is approximately $2,873 (platform fee plus BYOK API costs) versus $3,229 for LLM Pulse, $4,884 for OtterlyAI, and $9,636 for Peec AI. LLM Pulse is cheaper at a single brand (~$529/year vs CrunchJunkie\'s ~$601), but imposes prompt caps and treats several engines as paid add-ons. Pricing verified August 2026.',
+        a: 'At a configuration of 50 prompts per brand, 5 engines, and weekly scanning, CrunchJunkie is the cheapest option that scales across multiple brands. At 5 brands the annual cost is approximately $2,873 (platform fee plus BYOK API costs) versus $3,229 for LLM Pulse, $4,884 for OtterlyAI, and $9,636 for Peec AI. LLM Pulse is cheaper at a single brand (~$529/year vs CrunchJunkie\'s ~$601), but imposes prompt caps and treats several engines as paid add-ons. These figures are an August 2026 estimate at the plan prices of the time; CrunchJunkie\'s plans have changed since.',
       },
     ],
     prose: (
@@ -1896,9 +1896,9 @@ export const blogDetails: BlogDetail[] = [
         <p><strong>Per-domain or per-brand metering.</strong> Semrush&rsquo;s AI Visibility Toolkit charges $99 per domain per month. Transparent and predictable at one brand; brutal when you multiply it across an agency client list.</p>
 
         <h2 id="byok">What BYOK actually changes</h2>
-        <p>CrunchJunkie takes a different approach to the whole pricing question. Instead of wrapping API calls inside a prompt quota and charging a marked-up flat fee, it lets you connect your own API keys. Your queries go directly to OpenAI, Google, Anthropic, and the other providers &mdash; you pay them at cost. The platform charges a subscription based on how many brands you track, not how many prompts you run.</p>
+        <p>CrunchJunkie takes a different approach to the whole pricing question. Instead of wrapping API calls inside a prompt quota, it splits the bill in two: a subscription based on how many brands you track, and the scans. You pay for the scans one of two ways. With Managed AI, CrunchJunkie runs them on its own accounts and bills them as a separate line. With your own API keys (BYOK), your queries go directly to OpenAI, Google, Anthropic and the other providers, and you pay them at cost.</p>
         <p>The result: no prompt cap. All ten engines &mdash; ChatGPT, Gemini, <a href="/blog/perplexity-visibility/">Perplexity</a>, Claude, Google AI Overviews, Google AI Mode, Microsoft Copilot, Grok, Meta AI, and DeepSeek &mdash; are included on every plan from the lowest tier upward. No per-engine add-ons.</p>
-        <p>That changes the incentive structure in a concrete way. With a prompt cap, you have a reason to track fewer queries than you should. With BYOK and no cap, you track what&rsquo;s actually useful.</p>
+        <p>That changes the incentive structure in a concrete way. With a prompt cap, you have a reason to track fewer queries than you should. Without one, you track what&rsquo;s actually useful.</p>
         <p>Here&rsquo;s what the annual cost looks like at a consistent configuration &mdash; 50 prompts per brand, 5 engines, weekly scanning, annual billing &mdash; across the tools where pricing is publicly available:</p>
 
         <div style={{ overflowX: 'auto', margin: '24px 0 8px' }}>
@@ -1936,6 +1936,7 @@ export const blogDetails: BlogDetail[] = [
           </table>
         </div>
         <div style={{ fontSize: 12, color: '#949494', lineHeight: 1.75, marginBottom: 24, borderTop: '1px solid #2d2d2d', paddingTop: 16 }}>
+          <p style={{ margin: '0 0 12px', color: '#f6f4ef' }}>These figures are an August 2026 estimate at the plan prices of the time. CrunchJunkie&rsquo;s plans have gone up since (current prices below), and competitor prices may have changed too.</p>
           <p style={{ margin: '0 0 8px', color: '#b4b4b4', fontWeight: 500 }}>How to read this table</p>
           <p style={{ margin: '0 0 6px' }}>Every tool is priced at the same configuration so the numbers are directly comparable: <strong style={{ color: '#f6f4ef' }}>50 prompts per brand, 5 AI engines, weekly scanning, annual billing</strong>. Only the plan cost at that exact setup is shown &mdash; no cherry-picking a cheaper tier that wouldn&rsquo;t cover the workload.</p>
           <p style={{ margin: '0 0 6px' }}>CrunchJunkie&rsquo;s figure is the platform subscription <em>plus</em> estimated BYOK API costs (what you pay OpenAI, Google, Anthropic etc. directly). The estimate is conservative &mdash; real API cost at 50 prompts/week is typically lower, and you can see exactly what you&rsquo;re spending because you pay the providers directly at cost, with no markup.</p>
@@ -1946,12 +1947,12 @@ export const blogDetails: BlogDetail[] = [
           <p style={{ margin: 0, fontFamily: 'var(--font-mono)', fontSize: 11, letterSpacing: '0.5px' }}>Competitor prices verified from public pricing pages where accessible; secondary sources otherwise. Prices change frequently &mdash; verify before committing.</p>
         </div>
 
-        <p>One honest caveat that this table shouldn&rsquo;t hide: <strong>LLM Pulse is cheaper at one brand</strong> (&sim;$529/year vs CrunchJunkie&rsquo;s &sim;$601). If you&rsquo;re tracking a single brand on a tight budget, it&rsquo;s worth evaluating. LLM Pulse does enforce prompt caps and treats Copilot and Claude as paid add-ons &mdash; but at one brand with limited prompts and a few engines, those constraints may not bite you.</p>
+        <p>One honest caveat that this table shouldn&rsquo;t hide: <strong>LLM Pulse is cheaper at one brand</strong> (&sim;$529/year vs CrunchJunkie&rsquo;s &sim;$601 in the August estimate). If you&rsquo;re tracking a single brand on a tight budget, it&rsquo;s worth evaluating. LLM Pulse does enforce prompt caps and treats Copilot and Claude as paid add-ons &mdash; but at one brand with limited prompts and a few engines, those constraints may not bite you.</p>
         <p>The calculus flips at five brands. At ten brands, Peec AI can&rsquo;t even quote the configuration without a custom enterprise call. Semrush is running at $19,000+ per year before you add the required base subscription.</p>
-        <p>CrunchJunkie plans (EUR, annual billing): <strong>Solo &euro;9/month</strong> (1 brand) &middot; <strong>Starter &euro;39/month</strong> (5 brands) &middot; <strong>Pro &euro;99/month</strong> (20 brands) &middot; <strong>Agency &euro;149/month</strong> (40 brands), plus your BYOK API costs.</p>
+        <p>CrunchJunkie plans today (EUR excl. VAT, billed annually): <strong>Solo &euro;12/month</strong> (1 brand) &middot; <strong>Starter &euro;49/month</strong> (5 brands) &middot; <strong>Pro &euro;124/month</strong> (20 brands) &middot; <strong>Agency &euro;186/month</strong> (40 brands). Billed monthly: &euro;14 / &euro;59 / &euro;149 / &euro;224. Scans come on top, either on Managed AI or on your own API keys at cost.</p>
         <figure style={{ margin: '24px 0' }}>
           <Image src="/blog/crunchjunkie-pricing-plans.jpg" alt="CrunchJunkie pricing page showing Solo at €12/month for 1 brand, Starter at €49/month for 5 brands, Pro at €124/month for 20 brands, and Agency at €186/month for 40 brands — all plans include all 10 AI engines with no per-engine fees and no prompt limits" width={1520} height={1213} style={{ width: '100%', height: 'auto', borderRadius: 4, border: '1px solid #2d2d2d' }} />
-          <figcaption style={{ fontSize: 11, color: '#6a6a6a', fontFamily: 'var(--font-mono)', letterSpacing: '0.5px', marginTop: 8 }}>CrunchJunkie plans are metered by brand, not by prompt or engine. All 10 AI engines are included on every plan. The variable cost is your BYOK API usage, paid directly to the providers at cost &mdash; no markup.</figcaption>
+          <figcaption style={{ fontSize: 11, color: '#6a6a6a', fontFamily: 'var(--font-mono)', letterSpacing: '0.5px', marginTop: 8 }}>CrunchJunkie plans are metered by brand, not by prompt or engine. All 10 AI engines are included on every plan. The variable cost is the scans, billed by CrunchJunkie on Managed AI or paid to the providers at cost with your own keys.</figcaption>
         </figure>
 
         <h2 id="sample-sizes">Why visibility percentages lie without sample sizes</h2>
@@ -2032,14 +2033,13 @@ export const blogDetails: BlogDetail[] = [
           <Image src="/blog/semrush-site-audit-ai-search-health.jpg" alt="Semrush Site Audit dashboard showing Site Health 95%, AI Search Health 100% with a note that the website is better optimised for AI search engines, and Blocked from AI Search section showing ChatGPT-User, OAI-SearchBot, Googlebot and Google-Extended all with green checkmarks. The left sidebar shows the full Semrush SEO suite including keyword research, backlink analysis and position tracking." width={1520} height={1108} style={{ width: '100%', height: 'auto', borderRadius: 4, border: '1px solid #e8e8e8' }} />
           <figcaption style={{ fontSize: 11, color: '#6a6a6a', fontFamily: 'var(--font-mono)', letterSpacing: '0.5px', marginTop: 8 }}>Semrush Site Audit with the AI Search Health panel. The integration argument is real: one platform, one login, SEO and AI crawler access in the same view. If your workflow already runs through Semrush, that has genuine value &mdash; even at the higher per-domain price.</figcaption>
         </figure>
-        <p><strong>If you want everything fully managed:</strong> The BYOK model requires setting up API keys with individual providers. For teams that want a completely managed option, CrunchJunkie offers that too, but the pricing advantage is sharpest on BYOK.</p>
 
         <h2 id="summary">The honest summary</h2>
         <p>Most AI visibility tools in 2026 were built for the single-brand case and are awkwardly retrofitting their pricing and architecture for multi-brand use. Engine gating and prompt caps are how they manage the cost they can&rsquo;t transparently pass through to you.</p>
-        <p>CrunchJunkie was built with multi-brand tracking as a first-class case. BYOK means your costs scale linearly and transparently with actual usage. No prompt rationing, no engine add-ons, no contact-sales wall at five clients.</p>
+        <p>CrunchJunkie was built with multi-brand tracking as a first-class case. Scans are billed separately from the subscription, on Managed AI or your own keys, so your costs follow what you actually scan. No prompt rationing, no engine add-ons, no contact-sales wall at five clients.</p>
         <p>The things that differentiate it in practice are less about feature lists and more about intellectual honesty: Follow-up Survival because recommendation stickiness under refinement matters more than headline visibility; sample sizes and error bounds because AI answers are volatile; an evidence-based audit because not everything vendors call a &ldquo;GEO signal&rdquo; has actually been measured.</p>
         <p>Those are the things that determine whether you can build a reporting practice on it &mdash; and whether what you show clients means something.</p>
-        <p style={{ marginTop: 32, fontFamily: 'var(--font-mono)', fontSize: 11, letterSpacing: '1.5px', textTransform: 'uppercase', color: '#6a6a6a' }}>Pricing verified August 2026 from public pricing pages and, for CrunchJunkie, directly from the production codebase. Competitor prices verified against public pricing pages where accessible; secondary sources otherwise. Prices in this category change frequently &mdash; verify before committing.</p>
+        <p style={{ marginTop: 32, fontFamily: 'var(--font-mono)', fontSize: 11, letterSpacing: '1.5px', textTransform: 'uppercase', color: '#6a6a6a' }}>Competitor pricing and the cost table verified August 2026. CrunchJunkie plan prices updated 22 October 2026 from crunchjunkie.io/pricing. Competitor prices verified against public pricing pages where accessible; secondary sources otherwise. Prices in this category change frequently &mdash; verify before committing.</p>
 
         <NeedHelp topic="geo-audit" />
       </>
