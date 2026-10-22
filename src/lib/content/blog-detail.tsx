@@ -22,7 +22,7 @@ const NeedHelp = ({ topic }: { topic: string }) => (
 const freeTrialFaqs = [
   {
     q: 'Which AI visibility tools have a free trial without a credit card?',
-    a: 'Of the tools we checked on 22 October 2026, Otterly.AI (7 days) and the SE Ranking platform (14 days) say on their own pages that no credit card is needed. Peec AI says the same, but only on a comparison page, not on its pricing page. CrunchJunkie and LLM Pulse run 14-day trials that need a card or payment method. Scrunch contradicts itself, and Profound, Rankscale and SE Visible do not say. These terms change, so check the vendor\'s own page on the day you sign up.',
+    a: 'Of the tools we checked on 22 October 2026, Otterly.AI (7 days) and the SE Ranking platform (14 days) say on their own pages that no credit card is needed. Peec AI says the same, but only on a comparison page, not on its pricing page. CrunchJunkie and LLM Pulse run 14-day trials that need a card or payment method. Scrunch\'s FAQ says its 7-day trial needs a card, though its pricing page says otherwise. Profound, Rankscale and SE Visible do not say. These terms change, so check the vendor\'s own page on the day you sign up.',
   },
   {
     q: 'Is 7 days enough to test an AI visibility tool?',
@@ -89,7 +89,7 @@ export const blogDetails: BlogDetail[] = [
       <p>If a tool fails one of these on day two, you have your answer five days early.</p>
 
       <h2 id="before-day-one">Before day one</h2>
-      <p>If the trial needs a card, put a reminder in your calendar for two days before it ends. That leaves time to decide on purpose instead of finding out from your bank statement.</p>
+      <p>If the trial needs a card, put a reminder in your calendar for two days before it ends. Most vendors don&rsquo;t say what happens on the last day. Of the 18 tools in our comparison, four say the trial turns into a paid plan unless you cancel, three say it stops without charging, and eleven say nothing. The reminder gives you time to decide on purpose instead of finding out from your bank statement.</p>
       <p>Then choose the prompts. Pick 10 to 20 questions you would actually put in a report, the ones a buyer types when comparing options in your category. Keep branded prompts, such as &ldquo;is [your brand] any good&rdquo;, in a separate group. They show how engines describe you, which is a different question from whether they recommend you. Mixed in with the rest, they make your numbers look better than they are.</p>
       <p>Add three to five competitors, ideally the ones you already lose deals to. A visibility figure for your brand alone has nothing to compare against.</p>
       <p>Do all of this in the first hour. On a 7-day trial, a prompt list you finish on day three has cost you almost half the trial.</p>
@@ -130,7 +130,7 @@ export const blogDetails: BlogDetail[] = [
               { tool: 'LLM Pulse', href: 'https://llmpulse.ai/pricing', trial: '14 days (weekly plans)', card: 'Yes, payment method', engines: 'Not stated on page', highlight: false },
               { tool: 'SE Visible', href: 'https://visible.seranking.com', trial: '10 days', card: 'Not stated on page', engines: 'Not stated on page', highlight: false },
               { tool: 'Otterly.AI', href: 'https://help.otterly.ai/free-trial', trial: '7 days', card: 'No', engines: 'Not stated on page', highlight: false },
-              { tool: 'Scrunch', href: 'https://scrunch.com/faqs/does-scrunch-offer-a-free-trial', trial: '7 days (Core plan)', card: 'Its own pages disagree', engines: 'ChatGPT, Perplexity, Google AI Overviews, Copilot', highlight: false },
+              { tool: 'Scrunch', href: 'https://scrunch.com/faqs/what-features-are-included-in-scrunchs-free-trial', trial: '7 days (Core plan)', card: 'Yes, per its FAQ; its pricing page says otherwise', engines: 'ChatGPT, Perplexity, Google AI Overviews, Copilot', highlight: false },
               { tool: 'Profound', href: 'https://www.tryprofound.com/pricing', trial: '7 days (Trial plan)', card: 'Not stated on page', engines: 'ChatGPT, Gemini, Google AI Overviews', highlight: false },
               { tool: 'Rankscale', href: 'https://rankscale.ai/pricing', trial: '7 days (Pro)', card: 'Not stated on page', engines: 'Not stated on page', highlight: false },
               { tool: 'Peec AI', href: 'https://peec.ai/comparison/peec-ai-vs-ahrefs-brand-radar', trial: '7 days, on a comparison page only', card: 'No, same page only', engines: 'Not stated on page', highlight: false },
@@ -146,7 +146,7 @@ export const blogDetails: BlogDetail[] = [
           </tbody>
         </table>
       </div>
-      <p style={{ margin: '0 0 24px', fontFamily: 'var(--font-mono)', fontSize: 11, letterSpacing: '0.5px', color: '#949494' }}>Each tool name links to the vendor page the row comes from, read on 22 October 2026. Otterly&rsquo;s homepage says 14 days and its help centre says 7; the table uses the help centre. Scrunch&rsquo;s pricing page says no card is required and its FAQ says one is, and its trial turns into a paid plan unless you cancel. Peec AI&rsquo;s pricing page states no trial terms. Semrush&rsquo;s 7-day trial applies to its SEO plans, not to the standalone AI Visibility Toolkit.</p>
+      <p style={{ margin: '0 0 24px', fontFamily: 'var(--font-mono)', fontSize: 11, letterSpacing: '0.5px', color: '#949494' }}>Each tool name links to the vendor page the row comes from, read on 22 October 2026. Otterly&rsquo;s homepage says 14 days and its help centre says 7; the table uses the help centre. Scrunch&rsquo;s FAQ says a card is required and the trial turns into a paid plan unless you cancel; its pricing page says no credit card is required. Peec AI&rsquo;s pricing page states no trial terms. Semrush&rsquo;s 7-day trial applies to its SEO plans, not to the standalone AI Visibility Toolkit.</p>
       <p>Trial terms change often, so check the vendor&rsquo;s page on the day you sign up. For caps, prices after the trial and more tools, <a href="https://tikitaka.digital/en/ai-visibility-tools-free-trial/" target="_blank" rel="noopener noreferrer">we checked every vendor&rsquo;s trial terms in a separate comparison</a>.</p>
 
       <h2 id="crunchjunkie-trial">CrunchJunkie&rsquo;s trial, plainly</h2>
