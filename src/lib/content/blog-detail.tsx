@@ -38,7 +38,51 @@ const freeTrialFaqs = [
   },
 ]
 
+// The free-trial post's table, shared by EN, DE and ES. Tools, sources and
+// order live here once; each language passes its own cell text in this order.
+// Rows copied from tikitaka's verified-trial-terms.md (vendor pages, 22 Oct 2026).
+const TRIAL_TOOLS = [
+  { tool: 'CrunchJunkie', href: 'https://crunchjunkie.io/pricing', highlight: true },
+  { tool: 'SE Ranking', href: 'https://seranking.com/subscription.html', highlight: false },
+  { tool: 'LLM Pulse', href: 'https://llmpulse.ai/pricing', highlight: false },
+  { tool: 'SE Visible', href: 'https://visible.seranking.com', highlight: false },
+  { tool: 'Otterly.AI', href: 'https://help.otterly.ai/free-trial', highlight: false },
+  { tool: 'Scrunch', href: 'https://scrunch.com/faqs/what-features-are-included-in-scrunchs-free-trial', highlight: false },
+  { tool: 'Profound', href: 'https://www.tryprofound.com/pricing', highlight: false },
+  { tool: 'Rankscale', href: 'https://rankscale.ai/pricing', highlight: false },
+  { tool: 'Peec AI', href: 'https://peec.ai/comparison/peec-ai-vs-ahrefs-brand-radar', highlight: false },
+  { tool: 'Semrush AI Visibility Toolkit', href: 'https://www.semrush.com/kb/1493-ai-visibility-toolkit', highlight: false },
+]
+
 const trialTh = { textAlign: 'left' as const, padding: '8px 16px 8px 0', fontFamily: 'var(--font-mono)', fontSize: 10, fontWeight: 500, letterSpacing: '1.5px', textTransform: 'uppercase' as const, color: '#6b6b6b', whiteSpace: 'nowrap' as const }
+
+/** head: tool, trial, card, engines. rows: [trial, card, engines] per TRIAL_TOOLS entry; names: optional label overrides. */
+export function TrialTermsTable({ head, rows, names = {} }: { head: [string, string, string, string]; rows: [string, string, string][]; names?: Record<string, string> }) {
+  return (
+    <div style={{ overflowX: 'auto', margin: '24px 0 8px' }}>
+      <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: 13, lineHeight: 1.5 }}>
+        <thead>
+          <tr style={{ borderBottom: '1px solid #2d2d2d' }}>
+            <th style={trialTh}>{head[0]}</th>
+            <th style={{ ...trialTh, padding: '8px 16px' }}>{head[1]}</th>
+            <th style={{ ...trialTh, padding: '8px 16px' }}>{head[2]}</th>
+            <th style={{ ...trialTh, padding: '8px 0 8px 16px' }}>{head[3]}</th>
+          </tr>
+        </thead>
+        <tbody>
+          {TRIAL_TOOLS.map(({ tool, href, highlight }, i) => (
+            <tr key={tool} style={{ borderBottom: '1px solid #1e1e1e' }}>
+              <td style={{ padding: '10px 16px 10px 0', fontWeight: highlight ? 600 : 400, color: highlight ? '#f6f4ef' : '#b4b4b4', whiteSpace: 'nowrap' }}><a href={href} target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'none' }}>{names[tool] ?? tool}</a></td>
+              <td style={{ padding: '10px 16px', fontFamily: 'var(--font-mono)', fontSize: 12, color: highlight ? '#3cffd0' : '#b4b4b4', whiteSpace: 'nowrap' }}>{rows[i][0]}</td>
+              <td style={{ padding: '10px 16px', fontSize: 12, color: '#949494' }}>{rows[i][1]}</td>
+              <td style={{ padding: '10px 0 10px 16px', fontSize: 12, color: '#949494' }}>{rows[i][2]}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  )
+}
 
 export const blogDetails: BlogDetail[] = [
 {
@@ -95,10 +139,10 @@ export const blogDetails: BlogDetail[] = [
       <p>Do all of this in the first hour. On a 7-day trial, a prompt list you finish on day three has cost you almost half the trial.</p>
 
       <h2 id="what-a-week-shows">What a 7-day trial can and can&rsquo;t tell you</h2>
-      <p>Do the arithmetic before you start. Say you track 10 prompts on 4 engines, and the tool scans twice during the trial. That gives you 80 answers in total, and only 2 per prompt per engine.</p>
+      <p>Do the arithmetic before you start. Say you track 10 prompts on 4 engines, and the tool scans weekly. A 7-day trial then gives you one or two scans. Two scans make 80 answers in total, and only 2 per prompt per engine.</p>
       <p>Two answers per prompt are enough to see which engines bring up your category&rsquo;s brands at all, and which sources they cite. You can also check that the tool records all of it properly. They are not enough to read a trend. If your brand shows up in one of two Gemini answers, the next two could show it twice or not at all, and neither result would mean anything had changed.</p>
-      <p>Trials that scan every day give you more to look at. Profound&rsquo;s trial runs 50 prompts daily for 7 days on three engines, which comes to 7 answers per prompt per engine. That is better for judging coverage. It is still one week, so it still says little about where your visibility is heading.</p>
-      <p>A longer trial doesn&rsquo;t fix this. Use the trial for the questions a week can answer, and leave the trend to the first paid months.</p>
+      <p>Daily scans change the picture. Profound&rsquo;s trial runs 50 prompts every day for 7 days on three engines, which comes to 7 answers per prompt per engine. CrunchJunkie&rsquo;s trial also scans daily: 10 prompts with up to 2 runs each, over 14 days, is up to 280 answers on Perplexity alone. That is enough to see how much the answers move from one day to the next, which is worth knowing before you trust any weekly figure.</p>
+      <p>It is still two weeks at most, so it says little about where your visibility is heading over a quarter. Use the trial for the questions it can answer, and leave the trend to the first paid months.</p>
 
       <h2 id="checks">The checks to run on every tool</h2>
       <p>Run the same six checks on every tool you trial, in the same order, so you compare like with like.</p>
@@ -113,51 +157,34 @@ export const blogDetails: BlogDetail[] = [
 
       <h2 id="trial-terms">Trial terms at a glance</h2>
       <p>These are the tools the AI answers name most often for this question, plus CrunchJunkie, with what each vendor&rsquo;s own pages said on 22 October 2026. Where a page doesn&rsquo;t say something, the table says so rather than borrowing a number from a review site.</p>
-      <div style={{ overflowX: 'auto', margin: '24px 0 8px' }}>
-        <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: 13, lineHeight: 1.5 }}>
-          <thead>
-            <tr style={{ borderBottom: '1px solid #2d2d2d' }}>
-              <th style={trialTh}>Tool</th>
-              <th style={{ ...trialTh, padding: '8px 16px' }}>Trial</th>
-              <th style={{ ...trialTh, padding: '8px 16px' }}>Card</th>
-              <th style={{ ...trialTh, padding: '8px 0 8px 16px' }}>Engines during trial</th>
-            </tr>
-          </thead>
-          <tbody>
-            {[
-              { tool: 'CrunchJunkie', href: 'https://crunchjunkie.io/pricing', trial: '14 days', card: 'Yes, no charge before day 14', engines: 'Perplexity at no cost; others with your own API keys', highlight: true },
-              { tool: 'SE Ranking (platform)', href: 'https://seranking.com/subscription.html', trial: '14 days', card: 'No', engines: 'Not stated on page', highlight: false },
-              { tool: 'LLM Pulse', href: 'https://llmpulse.ai/pricing', trial: '14 days (weekly plans)', card: 'Yes, payment method', engines: 'Not stated on page', highlight: false },
-              { tool: 'SE Visible', href: 'https://visible.seranking.com', trial: '10 days', card: 'Not stated on page', engines: 'Not stated on page', highlight: false },
-              { tool: 'Otterly.AI', href: 'https://help.otterly.ai/free-trial', trial: '7 days', card: 'No', engines: 'Not stated on page', highlight: false },
-              { tool: 'Scrunch', href: 'https://scrunch.com/faqs/what-features-are-included-in-scrunchs-free-trial', trial: '7 days (Core plan)', card: 'Yes, per its FAQ; its pricing page says otherwise', engines: 'ChatGPT, Perplexity, Google AI Overviews, Copilot', highlight: false },
-              { tool: 'Profound', href: 'https://www.tryprofound.com/pricing', trial: '7 days (Trial plan)', card: 'Not stated on page', engines: 'ChatGPT, Gemini, Google AI Overviews', highlight: false },
-              { tool: 'Rankscale', href: 'https://rankscale.ai/pricing', trial: '7 days (Pro)', card: 'Not stated on page', engines: 'Not stated on page', highlight: false },
-              { tool: 'Peec AI', href: 'https://peec.ai/comparison/peec-ai-vs-ahrefs-brand-radar', trial: '7 days, on a comparison page only', card: 'No, same page only', engines: 'Not stated on page', highlight: false },
-              { tool: 'Semrush AI Visibility Toolkit', href: 'https://www.semrush.com/kb/1493-ai-visibility-toolkit', trial: 'None', card: '—', engines: '—', highlight: false },
-            ].map(({ tool, href, trial, card, engines, highlight }) => (
-              <tr key={tool} style={{ borderBottom: '1px solid #1e1e1e' }}>
-                <td style={{ padding: '10px 16px 10px 0', fontWeight: highlight ? 600 : 400, color: highlight ? '#f6f4ef' : '#b4b4b4', whiteSpace: 'nowrap' }}><a href={href} target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'none' }}>{tool}</a></td>
-                <td style={{ padding: '10px 16px', fontFamily: 'var(--font-mono)', fontSize: 12, color: highlight ? '#3cffd0' : '#b4b4b4', whiteSpace: 'nowrap' }}>{trial}</td>
-                <td style={{ padding: '10px 16px', fontSize: 12, color: '#949494' }}>{card}</td>
-                <td style={{ padding: '10px 0 10px 16px', fontSize: 12, color: '#949494' }}>{engines}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
+      <TrialTermsTable
+        head={['Tool', 'Trial', 'Card', 'Engines during trial']}
+        names={{ 'SE Ranking': 'SE Ranking (platform)' }}
+        rows={[
+          ['14 days', 'Yes, no charge before day 14', 'Perplexity at no cost; others with your own API keys'],
+          ['14 days', 'No', 'Not stated on page'],
+          ['14 days (weekly plans)', 'Yes, payment method', 'Not stated on page'],
+          ['10 days', 'Not stated on page', 'Not stated on page'],
+          ['7 days', 'No', 'Not stated on page'],
+          ['7 days (Core plan)', 'Yes, per its FAQ; its pricing page says otherwise', 'ChatGPT, Perplexity, Google AI Overviews, Copilot'],
+          ['7 days (Trial plan)', 'Not stated on page', 'ChatGPT, Gemini, Google AI Overviews'],
+          ['7 days (Pro)', 'Not stated on page', 'Not stated on page'],
+          ['7 days, on a comparison page only', 'No, same page only', 'Not stated on page'],
+          ['None', '—', '—'],
+        ]}
+      />
       <p style={{ margin: '0 0 24px', fontFamily: 'var(--font-mono)', fontSize: 11, letterSpacing: '0.5px', color: '#949494' }}>Each tool name links to the vendor page the row comes from, read on 22 October 2026. Otterly&rsquo;s homepage says 14 days and its help centre says 7; the table uses the help centre. Scrunch&rsquo;s FAQ says a card is required and the trial turns into a paid plan unless you cancel; its pricing page says no credit card is required. Peec AI&rsquo;s pricing page states no trial terms. Semrush&rsquo;s 7-day trial applies to its SEO plans, not to the standalone AI Visibility Toolkit.</p>
       <p>Trial terms change often, so check the vendor&rsquo;s page on the day you sign up. For caps, prices after the trial and more tools, <a href="https://tikitaka.digital/en/ai-visibility-tools-free-trial/" target="_blank" rel="noopener noreferrer">we checked every vendor&rsquo;s trial terms in a separate comparison</a>.</p>
 
       <h2 id="crunchjunkie-trial">CrunchJunkie&rsquo;s trial, plainly</h2>
       <p>CrunchJunkie&rsquo;s trial lasts 14 days. You need a card to start it, but nothing is charged before day 14, and if you cancel before then you pay nothing.</p>
-      <p>Every report and feature is included. The visibility scans run on Perplexity on CrunchJunkie&rsquo;s own API keys, so they cost you nothing. To test other engines during the trial, you connect your own API keys for them. The trial is capped at 1 brand and 10 prompts, with up to 2 runs per prompt and weekly scans.</p>
+      <p>Every report and feature is included. The visibility scans run on Perplexity on CrunchJunkie&rsquo;s own API keys, so they cost you nothing. To test other engines during the trial, you connect your own API keys for them. The trial is capped at 1 brand and 10 prompts, with up to 2 runs per prompt, and the scans run daily without you having to start them.</p>
       <figure style={{ margin: '24px 0' }}>
         <Image src="/blog/crunchjunkie-pricing-trial-card.jpg" alt="CrunchJunkie pricing: €37/mo for 1 brand, 20 prompts checked weekly across four engines, made up of €12 for the software and €25 for the scans; the 14-day trial runs on Perplexity at no cost" width={1042} height={1014} style={{ width: '100%', maxWidth: 521, height: 'auto', borderRadius: 4, border: '1px solid #e8e8e8' }} />
         <figcaption style={{ fontSize: 11, color: '#6a6a6a', fontFamily: 'var(--font-mono)', letterSpacing: '0.5px', marginTop: 8 }}>CrunchJunkie&rsquo;s pricing card: &euro;37 a month excluding VAT for one brand and 20 prompts checked weekly on four engines, of which &euro;12 is the software and &euro;25 the scans.</figcaption>
       </figure>
       <p>After the trial, every plan includes all ten engines: ChatGPT, Gemini, Claude, Perplexity, Grok, DeepSeek, Microsoft Copilot, Google AI Overviews, Google AI Mode and Meta AI. There is no per-engine fee and no prompt limit. The scans run either on Managed AI, where CrunchJunkie runs and bills them, or on your own keys at the providers&rsquo; prices. Plans and the current prices are on the <a href="https://crunchjunkie.io/pricing" target="_blank" rel="noopener noreferrer">CrunchJunkie pricing page</a>.</p>
-      <p>The limitation is worth stating plainly. You need a card to start, and the free scans cover one engine. Testing ChatGPT, Claude or Gemini during those 14 days means setting up your own API keys. Ten prompts on Perplexity, scanned weekly, is a good test of the tool and a thin test of your market. That is the point of the section above, and it applies to CrunchJunkie as much as to anyone.</p>
+      <p>The limitation is worth stating plainly. You need a card to start, and the free scans cover one engine. Testing ChatGPT, Claude or Gemini during those 14 days means setting up your own API keys. With 10 prompts, it is a good test of the tool and a partial view of your market.</p>
 
       <h2 id="when-the-trial-ends">When the trial ends</h2>
       <p>Go back to the criteria you wrote down before day one and mark each one pass or fail before you look at price.</p>
