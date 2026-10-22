@@ -5,6 +5,7 @@ import { notFound } from 'next/navigation'
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
 import FaqList from '@/components/FaqList'
+import ImageZoom from '@/components/ImageZoom'
 import { breadcrumb, article as articleSchema, faqPage } from '@/lib/schema'
 import { posts, getPost } from '@/lib/content/blog'
 import { getBlogDetail } from '@/lib/content/blog-detail'
@@ -233,6 +234,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
           </section>
 
         </article>
+        <ImageZoom />
       </main>
       <Footer />
     </>
