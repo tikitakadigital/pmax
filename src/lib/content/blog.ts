@@ -17,6 +17,19 @@ export interface Post {
 
 export const posts: Post[] = [
   {
+    slug: 'ai-visibility-tool-free-trial',
+    stamp: 'OCT 22',
+    date: 'Oct 22, 2026',
+    readTime: '8 min',
+    category: 'AI search',
+    title: 'How to test an AI visibility tool in a 7- or 14-day free trial',
+    seoTitle: 'AI Visibility Tool Free Trials: How to Test One | pmax',
+    deck: "A 7- or 14-day trial can't show whether your AI visibility is good. It can show whether the tool is. What to check before the card is charged.",
+    variant: 'is-mint',
+    ogImage: '/og/ai-visibility-tool-free-trial.jpg',
+    author: 'Claire Enders',
+  },
+  {
     slug: 'how-to-test-ai-max',
     stamp: 'OCT 01',
     date: 'Oct 1, 2026',

@@ -18,7 +18,164 @@ const NeedHelp = ({ topic }: { topic: string }) => (
   </>
 )
 
+// Rendered on the page and in the FAQPage schema, so the two can't drift apart.
+const freeTrialFaqs = [
+  {
+    q: 'Which AI visibility tools have a free trial without a credit card?',
+    a: 'Of the tools we checked on 22 October 2026, Otterly.AI (7 days) and the SE Ranking platform (14 days) say on their own pages that no credit card is needed. Peec AI says the same, but only on a comparison page, not on its pricing page. CrunchJunkie and LLM Pulse run 14-day trials that need a card or payment method. Scrunch contradicts itself, and Profound, Rankscale and SE Visible do not say. These terms change, so check the vendor\'s own page on the day you sign up.',
+  },
+  {
+    q: 'Is 7 days enough to test an AI visibility tool?',
+    a: 'It is enough to test the tool and not enough to judge your visibility. In a week you can check whether the tool keeps the full answers, separates citations from mentions and shows how many answers sit behind each percentage. One or two scans cannot show a trend, because AI answers change from one run to the next.',
+  },
+  {
+    q: 'Do free trials include every AI engine?',
+    a: 'Rarely, and most vendors do not say. Profound\'s trial covers ChatGPT, Gemini and Google AI Overviews, and Scrunch\'s covers ChatGPT, Perplexity, Google AI Overviews and Copilot. CrunchJunkie\'s trial runs on Perplexity at no cost, and other engines need your own API keys. Most other vendors list engines only for their paid plans. Compare the engines in the trial with the engines on the plan you would actually buy.',
+  },
+  {
+    q: 'What\'s the difference between a free trial and a free tier?',
+    a: 'A free trial gives you a paid plan, or a cut-down version of one, for a fixed number of days. After that you pay or lose access, and some trials convert to a paid plan automatically. A free tier is a permanent plan with smaller limits that costs nothing. A trial is for deciding whether to buy; a free tier is for keeping an eye on a few prompts.',
+  },
+]
+
+const trialTh = { textAlign: 'left' as const, padding: '8px 16px 8px 0', fontFamily: 'var(--font-mono)', fontSize: 10, fontWeight: 500, letterSpacing: '1.5px', textTransform: 'uppercase' as const, color: '#6b6b6b', whiteSpace: 'nowrap' as const }
+
 export const blogDetails: BlogDetail[] = [
+{
+  slug: 'ai-visibility-tool-free-trial',
+  toc: [
+    'Decide what you’re testing',
+    'Before day one',
+    'What a 7-day trial can and can’t tell you',
+    'The checks to run on every tool',
+    'Trial terms at a glance',
+    'CrunchJunkie’s trial, plainly',
+    'When the trial ends',
+    'Common questions',
+  ],
+  tocIds: [
+    'what-youre-testing',
+    'before-day-one',
+    'what-a-week-shows',
+    'checks',
+    'trial-terms',
+    'crunchjunkie-trial',
+    'when-the-trial-ends',
+    'faq',
+  ],
+  faqs: freeTrialFaqs,
+  prose: (
+    <>
+      <p>Ask Claude or Gemini which AI visibility tracking tools have a free trial, and neither answers from memory. Both search the web first. We track that question in CrunchJunkie, which records the searches an engine runs before it answers. In the 30 days to 22 October 2026, all 12 answers searched for &ldquo;AI visibility tracking tools free trial&rdquo;. Two also searched for &ldquo;GEO tracking tools AI search free trial&rdquo;. The rest added a year, the word &ldquo;pricing&rdquo; or a vendor name.</p>
+      <figure style={{ margin: '24px 0' }}>
+        <Image src="/blog/ai-fanout-searches-free-trial.jpg" alt="Searches Claude and Gemini ran before answering “Which AI visibility tracking tools have a free trial?”: “AI visibility tracking tools free trial” in 12 of 12 answers, “GEO tracking tools AI search free trial” in 2, and one answer each for “Semrush AI visibility free trial”, “best AI search visibility tools free trial 2026 Profound Peec AI Otterly” and eight similar searches (CrunchJunkie, 30 days to 22 Oct 2026)" width={1020} height={240} style={{ width: '100%', height: 'auto', borderRadius: 4, border: '1px solid #e8e8e8' }} />
+        <figcaption style={{ fontSize: 11, color: '#6a6a6a', fontFamily: 'var(--font-mono)', letterSpacing: '0.5px', marginTop: 8 }}>The searches Claude and Gemini ran before answering &ldquo;Which AI visibility tracking tools have a free trial?&rdquo;, captured word for word. Source: CrunchJunkie, 12 answers in the 30 days to 22 October 2026.</figcaption>
+      </figure>
+      <p>The answers they built from those searches don&rsquo;t agree. One gave Otterly.AI a 7-day trial and another gave it 14 days. Peec AI got 7 days in one answer and 14 days with a card in another. Two answers ended by telling the reader to confirm the terms on each vendor&rsquo;s pricing page.</p>
+      <p>That is good advice, and harder to follow than it looks. On 22 October, Otterly&rsquo;s help centre said 7 days with no card, while its homepage still said 14, so both answers had a source. Peec AI&rsquo;s pricing page has a &ldquo;Start free trial&rdquo; button and says nothing about length or card. The 7 days and &ldquo;no credit card&rdquo; appear on one of its comparison pages. One answer searched for &ldquo;Semrush AI visibility free trial&rdquo;. Semrush&rsquo;s own knowledge base says the AI Visibility Toolkit has no free trial.</p>
+      <p>So check the terms on the vendor&rsquo;s own page, and plan the trial before the clock starts. The rest of this piece is about the planning.</p>
+      <p>A disclosure first: the data above comes from CrunchJunkie. Philipp Enders, who runs pmax, co-founded it, and I work on it too. Its trial is in the table below with its limits, written the same way as everyone else&rsquo;s.</p>
+
+      <h2 id="what-youre-testing">Decide what you&rsquo;re testing</h2>
+      <p>A short trial measures very little about your brand. AI answers change from run to run: ask the same question twice and you can get a different list of brands. A week of data on a handful of prompts gives you a few answers each. That can&rsquo;t tell you whether your visibility is good, and it certainly can&rsquo;t tell you whether it is improving.</p>
+      <p>What a trial can tell you is whether the tool is any good. You can see what it stores and what it shows you, and work out what it would cost at the number of prompts you would really track. Test the tool, not your ranking.</p>
+      <p>Before day one, write down three or four things the tool has to do. Mine are usually these:</p>
+      <ul>
+        <li>It keeps the full answer text, not just a yes or no for each brand.</li>
+        <li>It shows cited sources separately from brand mentions.</li>
+        <li>It shows how many answers each percentage is based on.</li>
+        <li>I can work out the monthly cost at my real prompt count, on the engines I need.</li>
+      </ul>
+      <p>If a tool fails one of these on day two, you have your answer five days early.</p>
+
+      <h2 id="before-day-one">Before day one</h2>
+      <p>If the trial needs a card, put a reminder in your calendar for two days before it ends. That leaves time to decide on purpose instead of finding out from your bank statement.</p>
+      <p>Then choose the prompts. Pick 10 to 20 questions you would actually put in a report, the ones a buyer types when comparing options in your category. Keep branded prompts, such as &ldquo;is [your brand] any good&rdquo;, in a separate group. They show how engines describe you, which is a different question from whether they recommend you. Mixed in with the rest, they make your numbers look better than they are.</p>
+      <p>Add three to five competitors, ideally the ones you already lose deals to. A visibility figure for your brand alone has nothing to compare against.</p>
+      <p>Do all of this in the first hour. On a 7-day trial, a prompt list you finish on day three has cost you almost half the trial.</p>
+
+      <h2 id="what-a-week-shows">What a 7-day trial can and can&rsquo;t tell you</h2>
+      <p>Do the arithmetic before you start. Say you track 10 prompts on 4 engines, and the tool scans twice during the trial. That gives you 80 answers in total, and only 2 per prompt per engine.</p>
+      <p>Two answers per prompt are enough to see which engines bring up your category&rsquo;s brands at all, and which sources they cite. You can also check that the tool records all of it properly. They are not enough to read a trend. If your brand shows up in one of two Gemini answers, the next two could show it twice or not at all, and neither result would mean anything had changed.</p>
+      <p>Trials that scan every day give you more to look at. Profound&rsquo;s trial runs 50 prompts daily for 7 days on three engines, which comes to 7 answers per prompt per engine. That is better for judging coverage. It is still one week, so it still says little about where your visibility is heading.</p>
+      <p>A longer trial doesn&rsquo;t fix this. Use the trial for the questions a week can answer, and leave the trend to the first paid months.</p>
+
+      <h2 id="checks">The checks to run on every tool</h2>
+      <p>Run the same six checks on every tool you trial, in the same order, so you compare like with like.</p>
+      <ol>
+        <li>Can you open the actual answer text? A tool that only shows &ldquo;mentioned: yes&rdquo; gives you no way to check what the engine said, or where in the answer your brand appeared.</li>
+        <li>Are cited sources shown separately from brand mentions? Getting cited and getting named are different problems. An engine can cite your blog post and recommend a competitor in the same answer.</li>
+        <li>Does it show the searches the engine ran? Those are the queries your pages need to rank for if you want to be in the answer, like the list at the top of this page.</li>
+        <li>Is the number of answers shown next to every percentage? 40% visibility from 5 answers and 40% from 500 answers are very different findings.</li>
+        <li>Which engines run during the trial, and are they the ones on the plan you would buy? A trial on three engines tells you nothing about the fourth one your buyers use. Most vendors don&rsquo;t say: of 18 tools in our comparison, only four state which engines run during the trial. Check on day one, not on day seven.</li>
+        <li>Can you export the data or put it in a report? If it stays in the dashboard, someone will end up copying numbers into slides by hand every month.</li>
+      </ol>
+
+      <h2 id="trial-terms">Trial terms at a glance</h2>
+      <p>These are the tools the AI answers name most often for this question, plus CrunchJunkie, with what each vendor&rsquo;s own pages said on 22 October 2026. Where a page doesn&rsquo;t say something, the table says so rather than borrowing a number from a review site.</p>
+      <div style={{ overflowX: 'auto', margin: '24px 0 8px' }}>
+        <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: 13, lineHeight: 1.5 }}>
+          <thead>
+            <tr style={{ borderBottom: '1px solid #2d2d2d' }}>
+              <th style={trialTh}>Tool</th>
+              <th style={{ ...trialTh, padding: '8px 16px' }}>Trial</th>
+              <th style={{ ...trialTh, padding: '8px 16px' }}>Card</th>
+              <th style={{ ...trialTh, padding: '8px 0 8px 16px' }}>Engines during trial</th>
+            </tr>
+          </thead>
+          <tbody>
+            {[
+              { tool: 'CrunchJunkie', href: 'https://crunchjunkie.io/pricing', trial: '14 days', card: 'Yes, no charge before day 14', engines: 'Perplexity at no cost; others with your own API keys', highlight: true },
+              { tool: 'SE Ranking (platform)', href: 'https://seranking.com/subscription.html', trial: '14 days', card: 'No', engines: 'Not stated on page', highlight: false },
+              { tool: 'LLM Pulse', href: 'https://llmpulse.ai/pricing', trial: '14 days (weekly plans)', card: 'Yes, payment method', engines: 'Not stated on page', highlight: false },
+              { tool: 'SE Visible', href: 'https://visible.seranking.com', trial: '10 days', card: 'Not stated on page', engines: 'Not stated on page', highlight: false },
+              { tool: 'Otterly.AI', href: 'https://help.otterly.ai/free-trial', trial: '7 days', card: 'No', engines: 'Not stated on page', highlight: false },
+              { tool: 'Scrunch', href: 'https://scrunch.com/faqs/does-scrunch-offer-a-free-trial', trial: '7 days (Core plan)', card: 'Its own pages disagree', engines: 'ChatGPT, Perplexity, Google AI Overviews, Copilot', highlight: false },
+              { tool: 'Profound', href: 'https://www.tryprofound.com/pricing', trial: '7 days (Trial plan)', card: 'Not stated on page', engines: 'ChatGPT, Gemini, Google AI Overviews', highlight: false },
+              { tool: 'Rankscale', href: 'https://rankscale.ai/pricing', trial: '7 days (Pro)', card: 'Not stated on page', engines: 'Not stated on page', highlight: false },
+              { tool: 'Peec AI', href: 'https://peec.ai/comparison/peec-ai-vs-ahrefs-brand-radar', trial: '7 days, on a comparison page only', card: 'No, same page only', engines: 'Not stated on page', highlight: false },
+              { tool: 'Semrush AI Visibility Toolkit', href: 'https://www.semrush.com/kb/1493-ai-visibility-toolkit', trial: 'None', card: '—', engines: '—', highlight: false },
+            ].map(({ tool, href, trial, card, engines, highlight }) => (
+              <tr key={tool} style={{ borderBottom: '1px solid #1e1e1e' }}>
+                <td style={{ padding: '10px 16px 10px 0', fontWeight: highlight ? 600 : 400, color: highlight ? '#f6f4ef' : '#b4b4b4', whiteSpace: 'nowrap' }}><a href={href} target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'none' }}>{tool}</a></td>
+                <td style={{ padding: '10px 16px', fontFamily: 'var(--font-mono)', fontSize: 12, color: highlight ? '#3cffd0' : '#b4b4b4', whiteSpace: 'nowrap' }}>{trial}</td>
+                <td style={{ padding: '10px 16px', fontSize: 12, color: '#949494' }}>{card}</td>
+                <td style={{ padding: '10px 0 10px 16px', fontSize: 12, color: '#949494' }}>{engines}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      <p style={{ margin: '0 0 24px', fontFamily: 'var(--font-mono)', fontSize: 11, letterSpacing: '0.5px', color: '#949494' }}>Each tool name links to the vendor page the row comes from, read on 22 October 2026. Otterly&rsquo;s homepage says 14 days and its help centre says 7; the table uses the help centre. Scrunch&rsquo;s pricing page says no card is required and its FAQ says one is, and its trial turns into a paid plan unless you cancel. Peec AI&rsquo;s pricing page states no trial terms. Semrush&rsquo;s 7-day trial applies to its SEO plans, not to the standalone AI Visibility Toolkit.</p>
+      <p>Trial terms change often, so check the vendor&rsquo;s page on the day you sign up. For caps, prices after the trial and more tools, <a href="https://tikitaka.digital/en/ai-visibility-tools-free-trial/" target="_blank" rel="noopener noreferrer">we checked every vendor&rsquo;s trial terms in a separate comparison</a>.</p>
+
+      <h2 id="crunchjunkie-trial">CrunchJunkie&rsquo;s trial, plainly</h2>
+      <p>CrunchJunkie&rsquo;s trial lasts 14 days. You need a card to start it, but nothing is charged before day 14, and if you cancel before then you pay nothing.</p>
+      <p>Every report and feature is included. The visibility scans run on Perplexity on CrunchJunkie&rsquo;s own API keys, so they cost you nothing. To test other engines during the trial, you connect your own API keys for them. The trial is capped at 1 brand and 10 prompts, with up to 2 runs per prompt and weekly scans.</p>
+      <figure style={{ margin: '24px 0' }}>
+        <Image src="/blog/crunchjunkie-pricing-trial-card.jpg" alt="CrunchJunkie pricing: €37/mo for 1 brand, 20 prompts checked weekly across four engines, made up of €12 for the software and €25 for the scans; the 14-day trial runs on Perplexity at no cost" width={1042} height={1014} style={{ width: '100%', maxWidth: 521, height: 'auto', borderRadius: 4, border: '1px solid #e8e8e8' }} />
+        <figcaption style={{ fontSize: 11, color: '#6a6a6a', fontFamily: 'var(--font-mono)', letterSpacing: '0.5px', marginTop: 8 }}>CrunchJunkie&rsquo;s pricing card: &euro;37 a month excluding VAT for one brand and 20 prompts checked weekly on four engines, of which &euro;12 is the software and &euro;25 the scans.</figcaption>
+      </figure>
+      <p>After the trial, every plan includes all ten engines: ChatGPT, Gemini, Claude, Perplexity, Grok, DeepSeek, Microsoft Copilot, Google AI Overviews, Google AI Mode and Meta AI. There is no per-engine fee and no prompt limit. The scans run either on Managed AI, where CrunchJunkie runs and bills them, or on your own keys at the providers&rsquo; prices. Plans and the current prices are on the <a href="https://crunchjunkie.io/pricing" target="_blank" rel="noopener noreferrer">CrunchJunkie pricing page</a>.</p>
+      <p>The limitation is worth stating plainly. You need a card to start, and the free scans cover one engine. Testing ChatGPT, Claude or Gemini during those 14 days means setting up your own API keys. Ten prompts on Perplexity, scanned weekly, is a good test of the tool and a thin test of your market. That is the point of the section above, and it applies to CrunchJunkie as much as to anyone.</p>
+
+      <h2 id="when-the-trial-ends">When the trial ends</h2>
+      <p>Go back to the criteria you wrote down before day one and mark each one pass or fail before you look at price.</p>
+      <p>Then compare prices properly. The headline price is rarely what you pay. Work out the monthly cost at your real number of prompts, on the engines you need, at the scan frequency you need. Some tools charge by prompt, some charge extra per engine and some charge per domain, so the same workload can land in very different places. Our <a href="/blog/ai-visibility-tracking-tools-2026/">buyer&rsquo;s guide to AI visibility tracking tools</a> shows how each pricing model adds up.</p>
+      <p>If two tools pass, take the one whose cost you can predict at next year&rsquo;s prompt count, not this month&rsquo;s.</p>
+
+      <h2 id="faq">Common questions</h2>
+      {freeTrialFaqs.map(({ q, a }) => (
+        <div key={q}>
+          <h3>{q}</h3>
+          <p>{a}</p>
+        </div>
+      ))}
+
+      <NeedHelp topic="geo-audit" />
+    </>
+  ),
+},
 {
   slug: 'how-to-test-ai-max',
   toc: [
