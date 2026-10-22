@@ -2859,7 +2859,7 @@ export const es = {
             ]}
           />
           <p style={{ margin: '0 0 24px', fontFamily: 'var(--font-mono)', fontSize: 11, letterSpacing: '0.5px', color: '#949494' }}>Cada nombre enlaza a la página del proveedor de la que sale la fila, consultada el 22 de octubre de 2026. La página de inicio de Otterly dice 14 días y su centro de ayuda, 7; la tabla sigue al centro de ayuda. Según la FAQ de Scrunch, hace falta tarjeta y la prueba pasa a un plan de pago si no cancelas; su página de precios dice que no hace falta tarjeta. La página de precios de Peec AI no da condiciones de prueba. La prueba de 7 días de Semrush es para sus planes de SEO, no para el AI Visibility Toolkit por separado.</p>
-          <p>Las condiciones cambian a menudo, así que revisa la página del proveedor el día que te registres. Para los límites, los precios después de la prueba y más herramientas, <a href="https://tikitaka.digital/en/ai-visibility-tools-free-trial/" target="_blank" rel="noopener noreferrer">revisamos las condiciones de prueba de todos los proveedores en una comparativa aparte</a> (en inglés).</p>
+          <p>Las condiciones cambian a menudo, así que revisa la página del proveedor el día que te registres. Para los límites, los precios después de la prueba y más herramientas, <a href="https://tikitaka.digital/es/herramientas-ai-visibility-prueba-gratis/" target="_blank" rel="noopener noreferrer">revisamos las condiciones de prueba de todos los proveedores en una comparativa aparte</a>.</p>
 
           <h2 id="crunchjunkie-trial">La prueba de CrunchJunkie, sin adornos</h2>
           <p>La prueba de CrunchJunkie dura 14 días. Necesitas una tarjeta para empezar, pero no se cobra nada antes del día 14, y si cancelas antes no pagas nada.</p>
