@@ -7,7 +7,8 @@ import Footer from '@/components/Footer'
 import { breadcrumb, article as articleSchema, faqPage } from '@/lib/schema'
 import { posts, getPost } from '@/lib/content/blog'
 import { getBlogDetail } from '@/lib/content/blog-detail'
-import { getT, blogAlternates } from '@/lib/i18n'
+import { getT, blogAlternates, isPostTranslated } from '@/lib/i18n'
+import { blogPath } from '@/lib/content/blog-slugs'
 
 const categoryKeywords: Record<string, string[]> = {
   'AI search':   ['AI search visibility', 'GEO', 'generative engine optimisation', 'ChatGPT citations', 'Perplexity'],
@@ -109,7 +110,11 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-      <Nav />
+      {/* An untranslated post has no /de or /es twin: switch to that language's journal instead. */}
+      <Nav localePaths={{
+        de: isPostTranslated(slug, 'de') ? blogPath(slug, 'de') : '/de/blog/',
+        es: isPostTranslated(slug, 'es') ? blogPath(slug, 'es') : '/es/blog/',
+      }} />
       <main id="main">
         <article>
 

@@ -54,7 +54,10 @@ function switchedPath(pathname: string, target: Locale): string {
   return `/${target}${stripped === '/' ? '/' : stripped}`
 }
 
-export default function Nav() {
+// A page that knows better than the URL can override the switcher's targets.
+// The English blog post does: switchedPath() would offer /de/ and /es/ twins
+// that only exist when the post is translated.
+export default function Nav({ localePaths }: { localePaths?: Partial<Record<Locale, string>> } = {}) {
   const pathname = usePathname()
   const [open, setOpen] = useState(false)
 
@@ -103,7 +106,7 @@ export default function Nav() {
           <div className="nav-right">
             <div className="lang-switch" role="group" aria-label="Language">
               {(['en', 'de', 'es'] as Locale[]).map(l => (
-                <Link key={l} href={switchedPath(pathname, l)} aria-current={locale === l ? 'page' : undefined}>
+                <Link key={l} href={localePaths?.[l] ?? switchedPath(pathname, l)} aria-current={locale === l ? 'page' : undefined}>
                   {l.toUpperCase()}
                 </Link>
               ))}
@@ -142,7 +145,7 @@ export default function Nav() {
           {(['en', 'de', 'es'] as Locale[]).map(l => (
             <Link
               key={l}
-              href={switchedPath(pathname, l)}
+              href={localePaths?.[l] ?? switchedPath(pathname, l)}
               aria-current={locale === l ? 'page' : undefined}
               style={{
                 fontFamily: 'var(--font-mono)', fontSize: 11, fontWeight: 700,
