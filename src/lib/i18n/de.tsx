@@ -1,5 +1,6 @@
 import type { ReactNode } from 'react'
 import Image from 'next/image'
+import { TrialTermsTable } from '@/lib/content/blog-detail'
 
 export interface ServiceDetail {
   metaTitle: string
@@ -37,6 +38,26 @@ export interface LocalizedBlogDetail {
   toc?: string[]
   faqs?: { q: string; a: string }[]
 }
+
+// Free-trial post: rendered on the page and in the FAQPage schema from one array.
+const deFreeTrialFaqs = [
+  {
+    q: 'Welche KI-Sichtbarkeits-Tools haben eine kostenlose Testphase ohne Kreditkarte?',
+    a: 'Von den Tools, die wir am 22. Oktober 2026 geprüft haben, schreiben Otterly.AI (7 Tage) und die SE-Ranking-Plattform (14 Tage) auf ihren eigenen Seiten, dass keine Kreditkarte nötig ist. Peec AI schreibt das auch, allerdings nur auf einer Vergleichsseite, nicht auf der Preisseite. CrunchJunkie und LLM Pulse verlangen für ihre 14-tägigen Testphasen eine Karte oder ein Zahlungsmittel. Laut FAQ braucht auch die 7-tägige Testphase von Scrunch eine Karte, die Preisseite sagt etwas anderes. Profound, Rankscale und SE Visible machen keine Angabe. Die Bedingungen ändern sich, prüfen Sie deshalb am Tag der Anmeldung die Seite des Anbieters.',
+  },
+  {
+    q: 'Reichen 7 Tage, um ein KI-Sichtbarkeits-Tool zu testen?',
+    a: 'Für das Tool ja, für Ihre Sichtbarkeit nein. In einer Woche können Sie prüfen, ob das Tool die vollständigen Antworten speichert, Zitate von Nennungen trennt und zeigt, wie viele Antworten hinter jedem Prozentwert stehen. Ein oder zwei Scans zeigen keinen Trend, weil sich KI-Antworten von Durchlauf zu Durchlauf ändern.',
+  },
+  {
+    q: 'Enthalten kostenlose Testphasen alle KI-Engines?',
+    a: 'Selten, und die meisten Anbieter sagen es nicht. Die Testphase von Profound umfasst ChatGPT, Gemini und Google AI Overviews, die von Scrunch ChatGPT, Perplexity, Google AI Overviews und Copilot. Bei CrunchJunkie läuft die Testphase kostenlos auf Perplexity, für andere Engines brauchen Sie eigene API-Keys. Die meisten anderen Anbieter nennen Engines nur für ihre bezahlten Pläne. Vergleichen Sie die Engines der Testphase mit denen des Plans, den Sie tatsächlich kaufen würden.',
+  },
+  {
+    q: 'Was ist der Unterschied zwischen einer Testphase und einem kostenlosen Plan?',
+    a: 'Eine Testphase gibt Ihnen einen bezahlten Plan oder eine abgespeckte Version davon für eine feste Zahl von Tagen. Danach zahlen Sie oder verlieren den Zugang, und manche Testphasen gehen automatisch in einen bezahlten Plan über. Ein kostenloser Plan ist dauerhaft, hat kleinere Limits und kostet nichts. Die Testphase dient der Kaufentscheidung, der kostenlose Plan dem Mitlesen bei ein paar Prompts.',
+  },
+]
 
 export const de = {
   lang: 'de' as const,
@@ -824,6 +845,7 @@ export const de = {
     promoDeck: 'Wir betreiben keine E-Mail-Liste — aber wenn Sie ein Thema haben, über das wir schreiben sollen, lassen Sie es uns wissen.',
     promoBtn: 'Thema einreichen',
     posts: [
+      { slug: 'ai-visibility-tool-free-trial', title: 'KI-Sichtbarkeits-Tools richtig testen: 7 oder 14 Tage', deck: '7 oder 14 Tage zeigen nicht, wie sichtbar Ihre Marke in KI-Antworten ist. Aber sie zeigen, ob das Tool taugt. So prüfen Sie es vor der ersten Abbuchung.' },
       { slug: 'how-to-test-ai-max', title: 'AI Max testen, ohne sich selbst zu täuschen', deck: 'Die meisten AI-Max-Tests messen die Lernphase, eine Budgetänderung oder eine Kampagne, die sich selbst kannibalisiert — nicht AI Max. So geht ein sauberer Test.' },
       { slug: 'google-ads-agency-mallorca', title: 'Google Ads Agentur Mallorca: Was Sie prüfen sollten, bevor Sie unterschreiben', deck: 'Die meisten Google-Ads-Agenturen auf Mallorca verkaufen dasselbe Paket. Hier ist, wie Sie erkennen, welche den Markt wirklich kennen — und die drei Fragen, die eine gute Agentur von einer mittelmäßigen trennen.' },
       { slug: 'how-to-advertise-business-mallorca', title: 'Werbung auf Mallorca: Der vollständige Leitfaden für Unternehmen', deck: 'Mallorca hat 900.000 Einwohner und fast 10 Millionen Besucher pro Jahr. Deutsche Touristen geben im Schnitt 1.200 € pro Aufenthalt aus. Der vollständige Leitfaden zu digitaler Werbung auf Mallorca — alle wichtigen Kanäle, mit konkreten Budgets und Mallorca-spezifischem Kontext.' },
@@ -2662,6 +2684,104 @@ export const de = {
           </div>
 
           <p>Falls Ihnen das oben Genannte bekannt vorkommt, <a href="/de/contact/?topic=geo-audit">schildern Sie uns kurz Ihre Situation</a> und wir melden uns innerhalb eines Werktages. Das erste Gespräch: 30 Minuten, auf unsere Rechnung.</p>
+        </>
+      ),
+    },
+    'ai-visibility-tool-free-trial': {
+      toc: ['Klären Sie, was Sie testen', 'Vor dem ersten Tag', 'Was sieben Tage zeigen können und was nicht', 'Sechs Prüfungen für jedes Tool', 'Testphasen im Überblick', 'Die Testphase von CrunchJunkie, nüchtern betrachtet', 'Wenn die Testphase endet', 'Häufige Fragen'],
+      faqs: deFreeTrialFaqs,
+      prose: (
+        <>
+          <p>Fragt man Claude oder Gemini, welche Tools für AI-Visibility-Tracking eine kostenlose Testphase haben, antwortet keiner von beiden aus dem Gedächtnis. Beide suchen zuerst im Web. Wir verfolgen genau diese Frage in CrunchJunkie, und CrunchJunkie schreibt mit, wonach eine Engine sucht, bevor sie antwortet. In den 30 Tagen bis zum 22. Oktober 2026 suchten alle 12 Antworten nach „AI visibility tracking tools free trial“. Zwei suchten zusätzlich nach „GEO tracking tools AI search free trial“. Die übrigen hängten eine Jahreszahl, das Wort „pricing“ oder einen Anbieternamen an. Die Frage war auf Englisch gestellt, die Suchen sind es auch.</p>
+          <figure style={{ margin: '24px 0' }}>
+            <Image src="/blog/ai-fanout-searches-free-trial.jpg" alt="Suchen, die Claude und Gemini vor der Antwort auf „Which AI visibility tracking tools have a free trial?“ ausgeführt haben: „AI visibility tracking tools free trial“ in 12 von 12 Antworten, „GEO tracking tools AI search free trial“ in 2, dazu je einmal „Semrush AI visibility free trial“, „best AI search visibility tools free trial 2026 Profound Peec AI Otterly“ und acht ähnliche Suchen (CrunchJunkie, 30 Tage bis 22. Oktober 2026)" width={1020} height={240} style={{ width: '100%', height: 'auto', borderRadius: 4, border: '1px solid #e8e8e8' }} />
+            <figcaption style={{ fontSize: 11, color: '#6a6a6a', fontFamily: 'var(--font-mono)', letterSpacing: '0.5px', marginTop: 8 }}>Die Suchen, die Claude und Gemini vor ihrer Antwort auf „Which AI visibility tracking tools have a free trial?“ ausgeführt haben, wörtlich erfasst. Quelle: CrunchJunkie, 12 Antworten in den 30 Tagen bis zum 22. Oktober 2026.</figcaption>
+          </figure>
+          <p>Die Antworten, die daraus entstanden, widersprechen sich. Eine gab Otterly.AI 7 Tage Testphase, eine andere 14. Peec AI bekam in einer Antwort 7 Tage, in einer anderen 14 Tage mit Kreditkarte. Zwei Antworten endeten mit dem Rat, die Bedingungen auf der Preisseite jedes Anbieters nachzuprüfen.</p>
+          <p>Der Rat ist richtig, aber schwerer zu befolgen, als er klingt. Am 22. Oktober stand im Hilfecenter von Otterly „7 Tage, keine Kreditkarte“, auf der Startseite dagegen 14 Tage. Beide Antworten hatten also eine Quelle. Die Preisseite von Peec AI hat einen Button „Start free trial“ und sagt weder etwas zur Dauer noch zur Karte. Die 7 Tage und das „no credit card“ stehen auf einer Vergleichsseite. Eine Antwort suchte nach „Semrush AI visibility free trial“. Laut Semrushs eigener Wissensdatenbank hat das AI Visibility Toolkit gar keine kostenlose Testphase.</p>
+          <p>Prüfen Sie die Bedingungen also direkt beim Anbieter, und planen Sie die Testphase, bevor die Uhr läuft. Um diese Planung geht es im Rest des Artikels.</p>
+          <p>Vorab in eigener Sache: Die Daten oben stammen aus CrunchJunkie. Philipp Enders, der pmax führt, hat CrunchJunkie mitgegründet, und ich arbeite ebenfalls daran. Die Testphase von CrunchJunkie steht unten in der Tabelle, mit ihren Grenzen und nach denselben Regeln wie alle anderen.</p>
+
+          <h2 id="what-youre-testing">Klären Sie, was Sie testen</h2>
+          <p>Eine kurze Testphase sagt wenig über Ihre Marke. KI-Antworten ändern sich von Durchlauf zu Durchlauf: Wer dieselbe Frage zweimal stellt, bekommt oft eine andere Liste von Marken. Eine Woche Daten zu einer Handvoll Prompts liefert pro Prompt ein paar Antworten. Daraus lässt sich nicht ablesen, ob Ihre Sichtbarkeit gut ist, und erst recht nicht, ob sie besser wird.</p>
+          <p>Was eine Testphase zeigen kann: ob das Tool etwas taugt. Sie sehen, was es speichert und was es Ihnen anzeigt, und Sie können ausrechnen, was es bei der Zahl an Prompts kosten würde, die Sie tatsächlich tracken wollen. Testen Sie das Tool, nicht Ihr Ranking.</p>
+          <p>Schreiben Sie vor dem ersten Tag drei oder vier Dinge auf, die das Tool können muss. Meine sind meistens diese:</p>
+          <ul>
+            <li>Es speichert den vollständigen Antworttext, nicht nur ein Ja oder Nein pro Marke.</li>
+            <li>Es zeigt zitierte Quellen getrennt von Markennennungen.</li>
+            <li>Es zeigt, auf wie vielen Antworten jeder Prozentwert beruht.</li>
+            <li>Ich kann die monatlichen Kosten bei meiner echten Prompt-Zahl ausrechnen, auf den Engines, die ich brauche.</li>
+          </ul>
+          <p>Fällt ein Tool schon am zweiten Tag bei einem dieser Punkte durch, haben Sie Ihre Antwort fünf Tage früher.</p>
+
+          <h2 id="before-day-one">Vor dem ersten Tag</h2>
+          <p>Verlangt die Testphase eine Karte, tragen Sie sich zwei Tage vor dem Ende eine Erinnerung in den Kalender ein. Die meisten Anbieter sagen nicht, was am letzten Tag passiert. Von den 18 Tools in unserem Vergleich nennen vier eine automatische Umstellung auf einen bezahlten Plan, wenn Sie nicht kündigen, drei ein Ende ohne Abbuchung, und elf sagen gar nichts. Mit der Erinnerung entscheiden Sie selbst und erfahren es nicht erst vom Kontoauszug.</p>
+          <p>Dann die Prompts. Wählen Sie 10 bis 20 Fragen, die Sie tatsächlich in einen Report schreiben würden: die Fragen, die ein Käufer stellt, wenn er in Ihrer Kategorie Angebote vergleicht. Halten Sie Marken-Prompts wie „Ist [Ihre Marke] gut?“ in einer eigenen Gruppe. Sie zeigen, wie die Engines Sie beschreiben. Ob die Engines Sie empfehlen, ist eine andere Frage, und mit den übrigen Prompts vermischt lassen Marken-Prompts Ihre Zahlen besser aussehen, als sie sind.</p>
+          <p>Legen Sie drei bis fünf Wettbewerber an, am besten die, an die Sie heute schon Aufträge verlieren. Eine Sichtbarkeitszahl nur für Ihre eigene Marke hat keinen Vergleichspunkt.</p>
+          <p>Erledigen Sie all das in der ersten Stunde. Bei sieben Tagen kostet eine Prompt-Liste, die erst an Tag drei fertig ist, fast die Hälfte der Testphase.</p>
+
+          <h2 id="what-a-week-shows">Was sieben Tage zeigen können und was nicht</h2>
+          <p>Rechnen Sie vorher nach. Angenommen, Sie tracken 10 Prompts auf 4 Engines, und das Tool scannt wöchentlich. Dann bringt eine Testphase von sieben Tagen ein oder zwei Scans. Zwei Scans ergeben 80 Antworten insgesamt, aber nur 2 pro Prompt und Engine.</p>
+          <p>Zwei Antworten pro Prompt reichen, um zu sehen, welche Engines die Marken Ihrer Kategorie überhaupt nennen und welche Quellen sie zitieren. Sie können auch prüfen, ob das Tool all das sauber erfasst. Für einen Trend reichen sie nicht. Taucht Ihre Marke in einer von zwei Gemini-Antworten auf, können die nächsten beiden sie zweimal zeigen oder gar nicht, und keins von beidem hieße, dass sich etwas verändert hat.</p>
+          <p>Tägliche Scans ändern das Bild. Die Testphase von Profound fragt sieben Tage lang täglich 50 Prompts auf drei Engines ab, das sind 7 Antworten pro Prompt und Engine. Auch CrunchJunkie scannt in der Testphase täglich: 10 Prompts mit bis zu 2 Durchläufen über 14 Tage ergeben bis zu 280 Antworten, allein auf Perplexity. Das genügt, um zu sehen, wie stark sich die Antworten von Tag zu Tag bewegen. Das sollten Sie wissen, bevor Sie einer Wochenzahl trauen.</p>
+          <p>Mehr als zwei Wochen sind es trotzdem nicht, und über die Entwicklung eines Quartals sagt das wenig. Nutzen Sie die Testphase für die Fragen, die sie beantworten kann, und überlassen Sie den Trend den ersten bezahlten Monaten.</p>
+
+          <h2 id="checks">Sechs Prüfungen für jedes Tool</h2>
+          <p>Gehen Sie bei jedem Tool dieselben sechs Punkte in derselben Reihenfolge durch. Dann vergleichen Sie Gleiches mit Gleichem.</p>
+          <ol>
+            <li>Können Sie den eigentlichen Antworttext öffnen? Ein Tool, das nur „erwähnt: ja“ anzeigt, lässt Sie nicht nachprüfen, was die Engine gesagt hat und an welcher Stelle Ihre Marke vorkam.</li>
+            <li>Werden zitierte Quellen getrennt von Markennennungen gezeigt? Zitiert werden und genannt werden sind zwei verschiedene Probleme. Eine Engine kann in derselben Antwort Ihren Blogartikel zitieren und einen Wettbewerber empfehlen.</li>
+            <li>Zeigt es die Suchen, die die Engine ausgeführt hat? Für genau diese Suchanfragen müssen Ihre Seiten ranken, wenn Sie in der Antwort vorkommen wollen, so wie bei der Liste oben auf dieser Seite.</li>
+            <li>Steht neben jedem Prozentwert die Zahl der Antworten? 40&nbsp;% Sichtbarkeit aus 5 Antworten und 40&nbsp;% aus 500 Antworten sind sehr unterschiedliche Befunde.</li>
+            <li>Welche Engines laufen in der Testphase, und sind es dieselben wie in dem Plan, den Sie kaufen würden? Eine Testphase auf drei Engines sagt nichts über die vierte, die Ihre Kunden nutzen. Die meisten Anbieter verraten es nicht: Von 18 Tools in unserem Vergleich nennen nur vier die Engines ihrer Testphase. Prüfen Sie es am ersten Tag, nicht am siebten.</li>
+            <li>Können Sie die Daten exportieren oder in einen Report übernehmen? Bleiben sie im Dashboard, kopiert irgendwann jemand jeden Monat Zahlen von Hand in Folien.</li>
+          </ol>
+
+          <h2 id="trial-terms">Testphasen im Überblick</h2>
+          <p>Das sind die Tools, die KI-Antworten zu dieser Frage am häufigsten nennen, plus CrunchJunkie, jeweils mit dem, was am 22. Oktober 2026 auf den Seiten des Anbieters stand. Wo eine Seite etwas nicht angibt, steht das so in der Tabelle. Zahlen von Bewertungsportalen übernehmen wir nicht.</p>
+          <TrialTermsTable
+            head={['Tool', 'Testphase', 'Karte', 'Engines in der Testphase']}
+            names={{ 'SE Ranking': 'SE Ranking (Plattform)' }}
+            rows={[
+              ['14 Tage', 'Ja, keine Abbuchung vor Tag 14', 'Perplexity kostenlos, weitere mit eigenen API-Keys'],
+              ['14 Tage', 'Nein', 'Nicht auf der Seite angegeben'],
+              ['14 Tage (Wochenpläne)', 'Ja, Zahlungsmittel', 'Nicht auf der Seite angegeben'],
+              ['10 Tage', 'Nicht auf der Seite angegeben', 'Nicht auf der Seite angegeben'],
+              ['7 Tage', 'Nein', 'Nicht auf der Seite angegeben'],
+              ['7 Tage (Core-Plan)', 'Ja laut FAQ; die Preisseite sagt etwas anderes', 'ChatGPT, Perplexity, Google AI Overviews, Copilot'],
+              ['7 Tage (Trial-Plan)', 'Nicht auf der Seite angegeben', 'ChatGPT, Gemini, Google AI Overviews'],
+              ['7 Tage (Pro)', 'Nicht auf der Seite angegeben', 'Nicht auf der Seite angegeben'],
+              ['7 Tage, nur auf einer Vergleichsseite', 'Nein, nur auf derselben Seite', 'Nicht auf der Seite angegeben'],
+              ['Keine', '—', '—'],
+            ]}
+          />
+          <p style={{ margin: '0 0 24px', fontFamily: 'var(--font-mono)', fontSize: 11, letterSpacing: '0.5px', color: '#949494' }}>Jeder Toolname verlinkt auf die Anbieterseite, aus der die Zeile stammt, gelesen am 22. Oktober 2026. Otterlys Startseite nennt 14 Tage, das Hilfecenter 7; die Tabelle folgt dem Hilfecenter. Laut Scrunch-FAQ ist eine Karte nötig, und die Testphase geht ohne Kündigung in einen bezahlten Plan über; die Preisseite sagt, es sei keine Kreditkarte nötig. Die Preisseite von Peec AI nennt keine Testbedingungen. Semrushs 7-Tage-Test gilt für die SEO-Pläne, nicht für das separate AI Visibility Toolkit.</p>
+          <p>Die Bedingungen ändern sich oft. Prüfen Sie deshalb am Tag der Anmeldung die Seite des Anbieters. Für Limits, Preise nach der Testphase und weitere Tools <a href="https://tikitaka.digital/ai-visibility-tools-kostenlos-testen/" target="_blank" rel="noopener noreferrer">haben wir die Testbedingungen aller Anbieter in einem eigenen Vergleich geprüft</a>.</p>
+
+          <h2 id="crunchjunkie-trial">Die Testphase von CrunchJunkie, nüchtern betrachtet</h2>
+          <p>Die Testphase von CrunchJunkie dauert 14 Tage. Zum Start brauchen Sie eine Karte. Abgebucht wird aber nichts vor Tag 14, und wenn Sie vorher kündigen, zahlen Sie nichts.</p>
+          <p>Alle Reports und Funktionen sind enthalten. Die Sichtbarkeits-Scans laufen auf Perplexity über die API-Keys von CrunchJunkie und kosten Sie nichts. Andere Engines testen Sie in dieser Zeit mit Ihren eigenen API-Keys. Die Testphase ist auf 1 Marke und 10 Prompts mit bis zu 2 Durchläufen pro Prompt begrenzt, und die Scans laufen täglich, ohne dass Sie sie anstoßen müssen.</p>
+          <figure style={{ margin: '24px 0' }}>
+            <Image src="/blog/crunchjunkie-pricing-trial-card.jpg" alt="Preiskarte von CrunchJunkie: 37 € im Monat für 1 Marke und 20 Prompts, wöchentlich auf vier Engines geprüft, davon 12 € für die Software und 25 € für die Scans; die 14-tägige Testphase läuft kostenlos auf Perplexity" width={1042} height={1014} style={{ width: '100%', maxWidth: 521, height: 'auto', borderRadius: 4, border: '1px solid #e8e8e8' }} />
+            <figcaption style={{ fontSize: 11, color: '#6a6a6a', fontFamily: 'var(--font-mono)', letterSpacing: '0.5px', marginTop: 8 }}>Die Preiskarte von CrunchJunkie: 37&nbsp;&euro; im Monat zzgl. MwSt. für eine Marke und 20 Prompts, wöchentlich auf vier Engines geprüft. Davon entfallen 12&nbsp;&euro; auf die Software und 25&nbsp;&euro; auf die Scans.</figcaption>
+          </figure>
+          <p>Nach der Testphase enthält jeder Plan alle zehn Engines: ChatGPT, Gemini, Claude, Perplexity, Grok, DeepSeek, Microsoft Copilot, Google AI Overviews, Google AI Mode und Meta AI. Es gibt keine Gebühr pro Engine und kein Prompt-Limit. Die Scans laufen entweder über Managed AI, dann führt CrunchJunkie sie aus und rechnet sie ab, oder über Ihre eigenen Keys zu den Preisen der Anbieter. Pläne und aktuelle Preise stehen auf der <a href="https://crunchjunkie.io/pricing" target="_blank" rel="noopener noreferrer">Preisseite von CrunchJunkie</a>.</p>
+          <p>Die Einschränkung gehört offen gesagt. Ohne Karte kein Start, und die kostenlosen Scans decken eine einzige Engine ab. Wer in den 14 Tagen ChatGPT, Claude oder Gemini testen will, richtet eigene API-Keys ein. Mit 10 Prompts ist das ein guter Test des Tools und ein Ausschnitt Ihres Markts.</p>
+
+          <h2 id="when-the-trial-ends">Wenn die Testphase endet</h2>
+          <p>Nehmen Sie die Kriterien vom Anfang wieder zur Hand und haken Sie jedes als bestanden oder nicht bestanden ab, bevor Sie auf den Preis schauen.</p>
+          <p>Dann vergleichen Sie die Preise, und zwar richtig. Der Preis, der groß auf der Seite steht, ist selten der, den Sie zahlen. Rechnen Sie die monatlichen Kosten für Ihre echte Prompt-Zahl aus, auf den Engines und im Scan-Rhythmus, die Sie brauchen. Manche Tools rechnen pro Prompt ab, manche verlangen für jede Engine extra, andere rechnen pro Domain. Dieselbe Arbeit kann deshalb sehr unterschiedlich viel kosten. Unser <a href="/de/blog/ai-visibility-tracking-tools-2026/">Leitfaden zu KI-Sichtbarkeits-Tools</a> zeigt, wie sich die einzelnen Preismodelle zusammenrechnen.</p>
+          <p>Bestehen zwei Tools, nehmen Sie das, dessen Kosten Sie auch für die Prompt-Zahl im nächsten Jahr vorhersagen können, nicht nur für diesen Monat.</p>
+
+          <h2 id="faq">Häufige Fragen</h2>
+          {deFreeTrialFaqs.map(({ q, a }) => (
+            <div key={q}>
+              <h3>{q}</h3>
+              <p>{a}</p>
+            </div>
+          ))}
+
+          <p>Möchten Sie wissen, wie Ihre Marke in der KI-Suche abschneidet? <a href="/de/contact/?topic=geo-audit">Schildern Sie uns kurz Ihre Situation</a> &mdash; wir melden uns innerhalb eines Werktages. Das erste Gespräch: 30 Minuten, auf unsere Rechnung.</p>
         </>
       ),
     },

@@ -1,7 +1,28 @@
 import type { ReactNode } from 'react'
 import Image from 'next/image'
+import { TrialTermsTable } from '@/lib/content/blog-detail'
 import type { ServiceDetail, IndustryDetail, LocalizedCaseDetail, LocalizedBlogDetail } from './de'
 export type { ServiceDetail, IndustryDetail, LocalizedCaseDetail, LocalizedBlogDetail }
+
+// Free-trial post: rendered on the page and in the FAQPage schema from one array.
+const esFreeTrialFaqs = [
+  {
+    q: '¿Qué herramientas de visibilidad en IA tienen prueba gratuita sin tarjeta de crédito?',
+    a: 'De las herramientas que revisamos el 22 de octubre de 2026, Otterly.AI (7 días) y la plataforma de SE Ranking (14 días) dicen en sus propias páginas que no hace falta tarjeta. Peec AI también lo dice, pero solo en una página comparativa, no en su página de precios. CrunchJunkie y LLM Pulse piden tarjeta o método de pago para sus pruebas de 14 días. La FAQ de Scrunch dice que su prueba de 7 días también pide tarjeta, aunque su página de precios dice lo contrario. Profound, Rankscale y SE Visible no lo indican. Estas condiciones cambian, así que revisa la página del proveedor el día que te registres.',
+  },
+  {
+    q: '¿Bastan 7 días para probar una herramienta de visibilidad en IA?',
+    a: 'Bastan para probar la herramienta, no para juzgar tu visibilidad. En una semana puedes comprobar si guarda las respuestas completas, si separa citas de menciones y si muestra cuántas respuestas hay detrás de cada porcentaje. Uno o dos escaneos no muestran una tendencia, porque las respuestas de IA cambian de una ejecución a otra.',
+  },
+  {
+    q: '¿Las pruebas gratuitas incluyen todos los motores de IA?',
+    a: 'Casi nunca, y la mayoría de proveedores no lo dice. La prueba de Profound cubre ChatGPT, Gemini y Google AI Overviews, y la de Scrunch, ChatGPT, Perplexity, Google AI Overviews y Copilot. La de CrunchJunkie funciona en Perplexity sin coste, y para otros motores necesitas tus propias claves de API. La mayoría de proveedores solo detalla los motores de sus planes de pago. Compara los motores de la prueba con los del plan que de verdad comprarías.',
+  },
+  {
+    q: '¿Qué diferencia hay entre una prueba gratuita y un plan gratuito?',
+    a: 'Una prueba gratuita te da un plan de pago, o una versión recortada, durante un número fijo de días. Después pagas o pierdes el acceso, y algunas pruebas pasan solas a un plan de pago. Un plan gratuito es permanente, tiene límites más bajos y no cuesta nada. La prueba sirve para decidir si compras; el plan gratuito, para vigilar unos pocos prompts.',
+  },
+]
 
 export const es = {
   lang: 'es' as const,
@@ -788,6 +809,7 @@ export const es = {
     promoDeck: 'No gestionamos una lista de email — pero si hay un tema sobre el que quieras que escribamos, cuéntanoslo.',
     promoBtn: 'Sugerir un tema',
     posts: [
+      { slug: 'ai-visibility-tool-free-trial', title: 'Cómo probar una herramienta de visibilidad en IA', deck: 'Una prueba de 7 o 14 días no dice si tu marca es visible en las respuestas de IA. Sí dice si la herramienta sirve. Qué revisar antes del primer cobro.' },
       { slug: 'how-to-test-ai-max', title: 'Cómo probar AI Max sin engañarte a ti mismo', deck: 'La mayoría de pruebas de AI Max miden la fase de aprendizaje, un cambio de presupuesto o una campaña que se canibaliza — no AI Max. Así se monta una prueba limpia.' },
       { slug: 'google-ads-agency-mallorca', title: 'Cómo elegir una agencia de Google Ads en Mallorca — y las preguntas que las distinguen', deck: 'La mayoría de agencias de Google Ads en Mallorca venden el mismo paquete. Aquí está cómo identificar cuáles conocen realmente el mercado local — y las tres preguntas que revelan si una agencia vale lo que cobra.' },
       { slug: 'how-to-advertise-business-mallorca', title: 'Cómo anunciarse en Mallorca: la guía completa para negocios', deck: 'Mallorca tiene 900.000 habitantes y casi 10 millones de visitantes al año. Los turistas alemanes gastan una media de 1.200 € por estancia. La guía completa de publicidad digital en Mallorca — todos los canales clave, con presupuestos concretos y contexto específico de la isla.' },
@@ -2765,6 +2787,104 @@ export const es = {
           </div>
 
           <p>Si algo de lo anterior te resulta familiar, <a href="/es/contact/?topic=geo-audit">cuéntanos un poco tu situación</a> y te respondemos en un día laborable. La primera conversación son 30 minutos, invita la casa.</p>
+        </>
+      ),
+    },
+    'ai-visibility-tool-free-trial': {
+      toc: ['Decide qué estás probando', 'Antes del primer día', 'Lo que 7 días pueden y no pueden decirte', 'Seis comprobaciones para cada herramienta', 'Las pruebas gratuitas, de un vistazo', 'La prueba de CrunchJunkie, sin adornos', 'Cuando termina la prueba', 'Preguntas frecuentes'],
+      faqs: esFreeTrialFaqs,
+      prose: (
+        <>
+          <p>Si preguntas a Claude o a Gemini qué herramientas de seguimiento de visibilidad en IA tienen prueba gratuita, ninguno responde de memoria. Los dos buscan antes en la web. Seguimos esa pregunta en CrunchJunkie, que registra las búsquedas que hace un motor antes de responder. En los 30 días hasta el 22 de octubre de 2026, las 12 respuestas buscaron «AI visibility tracking tools free trial». Dos buscaron además «GEO tracking tools AI search free trial». El resto añadió un año, la palabra «pricing» o el nombre de un proveedor. La pregunta estaba en inglés, y las búsquedas también.</p>
+          <figure style={{ margin: '24px 0' }}>
+            <Image src="/blog/ai-fanout-searches-free-trial.jpg" alt="Búsquedas que hicieron Claude y Gemini antes de responder a «Which AI visibility tracking tools have a free trial?»: «AI visibility tracking tools free trial» en 12 de 12 respuestas, «GEO tracking tools AI search free trial» en 2, y una vez cada una «Semrush AI visibility free trial», «best AI search visibility tools free trial 2026 Profound Peec AI Otterly» y otras ocho parecidas (CrunchJunkie, 30 días hasta el 22 de octubre de 2026)" width={1020} height={240} style={{ width: '100%', height: 'auto', borderRadius: 4, border: '1px solid #e8e8e8' }} />
+            <figcaption style={{ fontSize: 11, color: '#6a6a6a', fontFamily: 'var(--font-mono)', letterSpacing: '0.5px', marginTop: 8 }}>Las búsquedas que hicieron Claude y Gemini antes de responder a «Which AI visibility tracking tools have a free trial?», recogidas palabra por palabra. Fuente: CrunchJunkie, 12 respuestas en los 30 días hasta el 22 de octubre de 2026.</figcaption>
+          </figure>
+          <p>Las respuestas que construyeron con esas búsquedas no coinciden. Una dio a Otterly.AI 7 días de prueba y otra, 14. Peec AI recibió 7 días en una respuesta y 14 días con tarjeta en otra. Dos respuestas terminaban recomendando confirmar las condiciones en la página de precios de cada proveedor.</p>
+          <p>Es un buen consejo, y cuesta más seguirlo de lo que parece. El 22 de octubre, el centro de ayuda de Otterly decía 7 días sin tarjeta, mientras que su página de inicio seguía diciendo 14. Las dos respuestas tenían fuente. La página de precios de Peec AI tiene un botón «Start free trial» y no dice nada ni de la duración ni de la tarjeta. Los 7 días y el «no credit card» aparecen en una de sus páginas comparativas. Una respuesta buscó «Semrush AI visibility free trial». Según la propia base de conocimiento de Semrush, el AI Visibility Toolkit no tiene prueba gratuita.</p>
+          <p>Así que revisa las condiciones en la página del propio proveedor y planifica la prueba antes de que empiece a correr el reloj. De esa planificación trata el resto del artículo.</p>
+          <p>Una aclaración antes de seguir: los datos de arriba salen de CrunchJunkie. Philipp Enders, que dirige pmax, es cofundador de la herramienta, y yo también trabajo en ella. Su prueba está en la tabla de más abajo, con sus límites y con las mismas reglas que las demás.</p>
+
+          <h2 id="what-youre-testing">Decide qué estás probando</h2>
+          <p>Una prueba corta mide muy poco de tu marca. Las respuestas de IA cambian de una ejecución a otra: haz la misma pregunta dos veces y puedes obtener otra lista de marcas. Una semana de datos sobre un puñado de prompts te da unas pocas respuestas por prompt. Con eso no sabes si tu visibilidad es buena, y mucho menos si está mejorando.</p>
+          <p>Lo que sí puede decirte una prueba es si la herramienta merece la pena. Ves qué guarda y qué te muestra, y puedes calcular cuánto costaría con el número de prompts que de verdad vas a seguir. Prueba la herramienta, no tu posición.</p>
+          <p>Antes del primer día, apunta tres o cuatro cosas que la herramienta tiene que hacer. Las mías suelen ser estas:</p>
+          <ul>
+            <li>Guarda el texto completo de la respuesta, no solo un sí o un no por marca.</li>
+            <li>Muestra las fuentes citadas por separado de las menciones de marca.</li>
+            <li>Indica en cuántas respuestas se basa cada porcentaje.</li>
+            <li>Puedo calcular el coste mensual con mi número real de prompts, en los motores que necesito.</li>
+          </ul>
+          <p>Si una herramienta falla en uno de estos puntos el segundo día, tienes la respuesta cinco días antes.</p>
+
+          <h2 id="before-day-one">Antes del primer día</h2>
+          <p>Si la prueba pide tarjeta, ponte un recordatorio en el calendario dos días antes de que termine. La mayoría de proveedores no dice qué pasa el último día. De las 18 herramientas de nuestra comparativa, cuatro dicen que la prueba pasa a un plan de pago si no cancelas, tres que termina sin cobro, y once no dicen nada. Con el recordatorio decides tú, y no te enteras por el extracto del banco.</p>
+          <p>Después, elige los prompts. Quédate con 10 a 20 preguntas que de verdad pondrías en un informe: las que escribe un comprador cuando compara opciones en tu categoría. Separa en otro grupo los prompts de marca, del tipo «¿[tu marca] es buena?». Muestran cómo te describen los motores, que no es lo mismo que si te recomiendan, y mezclados con el resto hacen que tus números parezcan mejores de lo que son.</p>
+          <p>Añade de tres a cinco competidores, mejor si son los que ya te quitan clientes. Una cifra de visibilidad solo de tu marca no tiene con qué compararse.</p>
+          <p>Hazlo todo en la primera hora. En una prueba de 7 días, una lista de prompts que terminas el tercer día te ha costado casi la mitad de la prueba.</p>
+
+          <h2 id="what-a-week-shows">Lo que 7 días pueden y no pueden decirte</h2>
+          <p>Haz las cuentas antes de empezar. Imagina que sigues 10 prompts en 4 motores y que la herramienta escanea una vez por semana. Una prueba de 7 días te da entonces uno o dos escaneos. Dos escaneos son 80 respuestas en total, y solo 2 por prompt y motor.</p>
+          <p>Dos respuestas por prompt bastan para ver qué motores mencionan siquiera las marcas de tu categoría y qué fuentes citan. También te permiten comprobar si la herramienta lo registra todo bien. Para leer una tendencia no bastan. Si tu marca sale en una de dos respuestas de Gemini, las dos siguientes pueden mostrarla dos veces o ninguna, y ninguno de los dos resultados significaría que algo ha cambiado.</p>
+          <p>Los escaneos diarios cambian las cosas. La prueba de Profound lanza 50 prompts cada día durante 7 días en tres motores, lo que da 7 respuestas por prompt y motor. La prueba de CrunchJunkie también escanea a diario: 10 prompts con hasta 2 ejecuciones cada uno durante 14 días suman hasta 280 respuestas, solo en Perplexity. Es suficiente para ver cuánto se mueven las respuestas de un día a otro, algo que conviene saber antes de fiarte de cualquier cifra semanal.</p>
+          <p>Aun así son dos semanas como mucho, y eso dice poco de hacia dónde va tu visibilidad en un trimestre. Usa la prueba para las preguntas que puede responder y deja la tendencia para los primeros meses de pago.</p>
+
+          <h2 id="checks">Seis comprobaciones para cada herramienta</h2>
+          <p>Haz las mismas seis comprobaciones en cada herramienta que pruebes, y en el mismo orden, para comparar lo mismo con lo mismo.</p>
+          <ol>
+            <li>¿Puedes abrir el texto real de la respuesta? Una herramienta que solo muestra «mencionada: sí» no te deja comprobar qué dijo el motor ni en qué parte de la respuesta apareció tu marca.</li>
+            <li>¿Muestra las fuentes citadas por separado de las menciones de marca? Que te citen y que te nombren son problemas distintos. Un motor puede citar tu artículo del blog y recomendar a un competidor en la misma respuesta.</li>
+            <li>¿Muestra las búsquedas que hizo el motor? Son las consultas en las que tus páginas tienen que posicionar si quieres entrar en la respuesta, como la lista del principio de este artículo.</li>
+            <li>¿Aparece el número de respuestas junto a cada porcentaje? Un 40&thinsp;% de visibilidad sobre 5 respuestas y un 40&thinsp;% sobre 500 son hallazgos muy distintos.</li>
+            <li>¿Qué motores funcionan durante la prueba, y son los del plan que comprarías? Una prueba con tres motores no te dice nada del cuarto, el que usan tus clientes. La mayoría de proveedores no lo aclara: de las 18 herramientas de nuestra comparativa, solo cuatro indican qué motores corren durante la prueba. Compruébalo el primer día, no el séptimo.</li>
+            <li>¿Puedes exportar los datos o llevarlos a un informe? Si se quedan en el panel, alguien acabará copiando cifras a mano en diapositivas cada mes.</li>
+          </ol>
+
+          <h2 id="trial-terms">Las pruebas gratuitas, de un vistazo</h2>
+          <p>Estas son las herramientas que más nombran las respuestas de IA para esta pregunta, más CrunchJunkie, con lo que decían las páginas de cada proveedor el 22 de octubre de 2026. Cuando una página no dice algo, la tabla lo indica en lugar de tomar prestada una cifra de una web de reseñas.</p>
+          <TrialTermsTable
+            head={['Herramienta', 'Prueba', 'Tarjeta', 'Motores en la prueba']}
+            names={{ 'SE Ranking': 'SE Ranking (plataforma)' }}
+            rows={[
+              ['14 días', 'Sí, sin cobro antes del día 14', 'Perplexity sin coste; los demás con tus propias claves de API'],
+              ['14 días', 'No', 'No consta en la página'],
+              ['14 días (planes semanales)', 'Sí, método de pago', 'No consta en la página'],
+              ['10 días', 'No consta en la página', 'No consta en la página'],
+              ['7 días', 'No', 'No consta en la página'],
+              ['7 días (plan Core)', 'Sí según su FAQ; su página de precios dice lo contrario', 'ChatGPT, Perplexity, Google AI Overviews, Copilot'],
+              ['7 días (plan Trial)', 'No consta en la página', 'ChatGPT, Gemini, Google AI Overviews'],
+              ['7 días (Pro)', 'No consta en la página', 'No consta en la página'],
+              ['7 días, solo en una página comparativa', 'No, solo en esa misma página', 'No consta en la página'],
+              ['Ninguna', '—', '—'],
+            ]}
+          />
+          <p style={{ margin: '0 0 24px', fontFamily: 'var(--font-mono)', fontSize: 11, letterSpacing: '0.5px', color: '#949494' }}>Cada nombre enlaza a la página del proveedor de la que sale la fila, consultada el 22 de octubre de 2026. La página de inicio de Otterly dice 14 días y su centro de ayuda, 7; la tabla sigue al centro de ayuda. Según la FAQ de Scrunch, hace falta tarjeta y la prueba pasa a un plan de pago si no cancelas; su página de precios dice que no hace falta tarjeta. La página de precios de Peec AI no da condiciones de prueba. La prueba de 7 días de Semrush es para sus planes de SEO, no para el AI Visibility Toolkit por separado.</p>
+          <p>Las condiciones cambian a menudo, así que revisa la página del proveedor el día que te registres. Para los límites, los precios después de la prueba y más herramientas, <a href="https://tikitaka.digital/en/ai-visibility-tools-free-trial/" target="_blank" rel="noopener noreferrer">revisamos las condiciones de prueba de todos los proveedores en una comparativa aparte</a> (en inglés).</p>
+
+          <h2 id="crunchjunkie-trial">La prueba de CrunchJunkie, sin adornos</h2>
+          <p>La prueba de CrunchJunkie dura 14 días. Necesitas una tarjeta para empezar, pero no se cobra nada antes del día 14, y si cancelas antes no pagas nada.</p>
+          <p>Incluye todos los informes y funciones. Los escaneos de visibilidad corren en Perplexity con las claves de API de CrunchJunkie, así que no te cuestan nada. Para probar otros motores durante esos días, conectas tus propias claves de API. La prueba está limitada a 1 marca y 10 prompts, con hasta 2 ejecuciones por prompt, y los escaneos se lanzan a diario sin que tengas que hacer nada.</p>
+          <figure style={{ margin: '24px 0' }}>
+            <Image src="/blog/crunchjunkie-pricing-trial-card.jpg" alt="Tarjeta de precios de CrunchJunkie: 37 € al mes por 1 marca y 20 prompts revisados cada semana en cuatro motores, de los que 12 € son el software y 25 € los escaneos; la prueba de 14 días funciona en Perplexity sin coste" width={1042} height={1014} style={{ width: '100%', maxWidth: 521, height: 'auto', borderRadius: 4, border: '1px solid #e8e8e8' }} />
+            <figcaption style={{ fontSize: 11, color: '#6a6a6a', fontFamily: 'var(--font-mono)', letterSpacing: '0.5px', marginTop: 8 }}>La tarjeta de precios de CrunchJunkie: 37&nbsp;&euro; al mes sin IVA por una marca y 20 prompts revisados cada semana en cuatro motores, de los que 12&nbsp;&euro; son el software y 25&nbsp;&euro; los escaneos.</figcaption>
+          </figure>
+          <p>Después de la prueba, todos los planes incluyen los diez motores: ChatGPT, Gemini, Claude, Perplexity, Grok, DeepSeek, Microsoft Copilot, Google AI Overviews, Google AI Mode y Meta AI. No hay tarifa por motor ni límite de prompts. Los escaneos se hacen con Managed AI, donde CrunchJunkie los ejecuta y los factura, o con tus propias claves al precio de cada proveedor. Los planes y los precios actuales están en la <a href="https://crunchjunkie.io/pricing" target="_blank" rel="noopener noreferrer">página de precios de CrunchJunkie</a>.</p>
+          <p>La limitación hay que decirla claramente. Necesitas tarjeta para empezar, y los escaneos gratuitos cubren un solo motor. Probar ChatGPT, Claude o Gemini durante esos 14 días implica configurar tus propias claves de API. Con 10 prompts, es una buena prueba de la herramienta y una visión parcial de tu mercado.</p>
+
+          <h2 id="when-the-trial-ends">Cuando termina la prueba</h2>
+          <p>Recupera los criterios que apuntaste antes del primer día y marca cada uno como superado o no superado, antes de mirar el precio.</p>
+          <p>Después compara precios, y hazlo bien. El precio que aparece en grande rara vez es el que pagas. Calcula el coste mensual con tu número real de prompts, en los motores que necesitas y con la frecuencia de escaneo que necesitas. Unas herramientas cobran por prompt, otras cobran aparte cada motor y otras cobran por dominio, así que el mismo trabajo puede salir muy distinto. Nuestra <a href="/es/blog/ai-visibility-tracking-tools-2026/">guía de herramientas de seguimiento de visibilidad en IA</a> muestra cómo suma cada modelo de precios.</p>
+          <p>Si dos herramientas superan la prueba, quédate con la que te deja prever el coste con los prompts del año que viene, no solo con los de este mes.</p>
+
+          <h2 id="faq">Preguntas frecuentes</h2>
+          {esFreeTrialFaqs.map(({ q, a }) => (
+            <div key={q}>
+              <h3>{q}</h3>
+              <p>{a}</p>
+            </div>
+          ))}
+
+          <p>¿Quieres saber cómo aparece tu marca en la búsqueda con IA? <a href="/es/contact/?topic=geo-audit">Cuéntanos tu situación</a> &mdash; te respondemos en menos de un día hábil. La primera conversación: 30 minutos, sin coste.</p>
         </>
       ),
     },

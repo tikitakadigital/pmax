@@ -15,6 +15,7 @@
  */
 const localSlugs: Record<string, { de: string; es: string }> = {
   'how-to-test-ai-max': { de: 'ai-max-richtig-testen', es: 'como-probar-ai-max' },
+  'ai-visibility-tool-free-trial': { de: 'ki-sichtbarkeits-tool-testen', es: 'probar-herramienta-visibilidad-ia' },
 }
 
 const BASE = 'https://pmax.online'
