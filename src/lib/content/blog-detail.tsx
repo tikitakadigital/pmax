@@ -1,5 +1,6 @@
 import type { ReactNode } from 'react'
 import Image from 'next/image'
+import { imageSize } from '@/lib/image-size'
 
 export interface BlogDetail {
   slug: string
@@ -18,11 +19,57 @@ const NeedHelp = ({ topic }: { topic: string }) => (
   </>
 )
 
+// Vendor screenshots behind the table, taken 22 Oct 2026 and cropped to the
+// trial terms. Same order as the table; each language passes its captions.
+const TRIAL_SHOTS = [
+  { key: 'nightwatch', vendor: 'Nightwatch', src: '/blog/nightwatch-free-trial-pricing.webp', href: 'https://nightwatch.io/pricing/' },
+  { key: 'se-ranking', vendor: 'SE Ranking', src: '/blog/se-ranking-free-trial-pricing.webp', href: 'https://seranking.com/subscription.html' },
+  { key: 'searchable', vendor: 'Searchable', src: '/blog/searchable-free-trial-pricing.webp', href: 'https://searchable.com/pricing' },
+  { key: 'llm-pulse', vendor: 'LLM Pulse', src: '/blog/llm-pulse-free-trial-homepage.webp', href: 'https://llmpulse.ai/' },
+  { key: 'se-visible', vendor: 'SE Visible', src: '/blog/se-visible-free-trial-pricing.webp', href: 'https://visible.seranking.com/' },
+  { key: 'otterly', vendor: 'Otterly.AI', src: '/blog/otterly-ai-pricing.webp', href: 'https://otterly.ai/pricing' },
+  { key: 'maxaeo', vendor: 'MaxAEO', src: '/blog/maxaeo-free-trial-homepage.webp', href: 'https://maxaeo.ai/' },
+  { key: 'ziptie', vendor: 'ZipTie', src: '/blog/ziptie-free-trial-pricing.webp', href: 'https://ziptie.ai/pricing/' },
+  { key: 'scrunch', vendor: 'Scrunch', src: '/blog/scrunch-free-trial-pricing.webp', href: 'https://scrunch.com/pricing/' },
+  { key: 'profound', vendor: 'Profound', src: '/blog/profound-free-trial-pricing.webp', href: 'https://www.tryprofound.com/pricing' },
+  { key: 'rankscale', vendor: 'Rankscale', src: '/blog/rankscale-free-trial-pricing.webp', href: 'https://rankscale.ai/pricing' },
+  { key: 'kime', vendor: 'KIME', src: '/blog/kime-free-trial-pricing.webp', href: 'https://kime.ai/pricing' },
+  { key: 'writesonic', vendor: 'Writesonic', src: '/blog/writesonic-free-trial-homepage.webp', href: 'https://writesonic.com/' },
+  { key: 'knowatoa', vendor: 'Knowatoa', src: '/blog/knowatoa-free-trial-pricing.webp', href: 'https://knowatoa.com/pricing' },
+  { key: 'promptwatch', vendor: 'Promptwatch', src: '/blog/promptwatch-free-trial-pricing.webp', href: 'https://www.promptwatch.com/pricing' },
+  { key: 'llmrefs', vendor: 'LLMrefs', src: '/blog/llmrefs-free-trial-pricing.webp', href: 'https://llmrefs.com/#pricing' },
+  { key: 'deepsmith', vendor: 'DeepSmith', src: '/blog/deepsmith-free-trial-homepage.webp', href: 'https://deepsmith.ai/' },
+  { key: 'peec', vendor: 'Peec AI', src: '/blog/peec-ai-free-trial-homepage.webp', href: 'https://peec.ai/' },
+] as const
+
+type TrialShotKey = (typeof TRIAL_SHOTS)[number]['key']
+
+/** captions: what each screenshot shows, in the page's language. altPrefix: e.g. 'Screenshot of'. */
+export function TrialScreenshots({ captions, altPrefix }: { captions: Record<TrialShotKey, string>; altPrefix: string }) {
+  return (
+    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 320px), 1fr))', gap: 24, margin: '16px 0 32px' }}>
+      {TRIAL_SHOTS.map(({ key, vendor, src, href }) => {
+        const size = imageSize(src)
+        return (
+          <figure key={key} style={{ margin: 0 }}>
+            <a href={src} target="_blank" rel="noopener">
+              <Image src={src} alt={`${altPrefix} ${vendor}: ${captions[key]}`} width={size?.width ?? 1400} height={size?.height ?? 600} loading="lazy" style={{ width: '100%', height: 'auto', borderRadius: 4, border: '1px solid #e8e8e8' }} />
+            </a>
+            <figcaption style={{ fontSize: 11, color: '#6a6a6a', fontFamily: 'var(--font-mono)', letterSpacing: '0.5px', marginTop: 8, lineHeight: 1.6 }}>
+              <a href={href} target="_blank" rel="noopener noreferrer" style={{ color: 'inherit' }}>{vendor}</a>: {captions[key]}
+            </figcaption>
+          </figure>
+        )
+      })}
+    </div>
+  )
+}
+
 // Rendered on the page and in the FAQPage schema, so the two can't drift apart.
 const freeTrialFaqs = [
   {
     q: 'Which AI visibility tools have a free trial without a credit card?',
-    a: 'Of the tools we checked on 22 October 2026, Otterly.AI (7 days) and the SE Ranking platform (14 days) say on their own pages that no credit card is needed. Peec AI says the same, but only on a comparison page, not on its pricing page. CrunchJunkie and LLM Pulse run 14-day trials that need a card or payment method. Scrunch\'s FAQ says its 7-day trial needs a card, though its pricing page says otherwise. Profound, Rankscale and SE Visible do not say. These terms change, so check the vendor\'s own page on the day you sign up.',
+    a: 'Of the tools we checked on 22 October 2026, Nightwatch and the SE Ranking platform (14 days) and Otterly.AI, MaxAEO, ZipTie and Writesonic (7 days) say on their own pages that no credit card is needed. Peec AI says the same, but only on a comparison page. CrunchJunkie, LLM Pulse, Searchable and KIME ask for a card or payment method, and Scrunch\'s FAQ says it does too, though its pricing page says otherwise. The others don\'t say. These terms change, so check the vendor\'s own page on the day you sign up.',
   },
   {
     q: 'Is 7 days enough to test an AI visibility tool?',
@@ -30,7 +77,7 @@ const freeTrialFaqs = [
   },
   {
     q: 'Do free trials include every AI engine?',
-    a: 'Rarely, and most vendors do not say. Profound\'s trial covers ChatGPT, Gemini and Google AI Overviews, and Scrunch\'s covers ChatGPT, Perplexity, Google AI Overviews and Copilot. CrunchJunkie\'s trial runs on Perplexity at no cost, and other engines need your own API keys. The other vendors in our table don\'t say which engines their trial covers. Compare the engines in the trial with the engines on the plan you would actually buy.',
+    a: 'Rarely, and most vendors do not say. ZipTie\'s trial covers ChatGPT, Google AI Overviews and Microsoft Copilot, Profound\'s ChatGPT, Gemini and Google AI Overviews, and Scrunch\'s ChatGPT, Perplexity, Google AI Overviews and Copilot. MaxAEO runs all eight of its engines during the trial. CrunchJunkie\'s trial runs on Perplexity at no cost, and other engines need your own API keys. Most other vendors list engines only for their paid plans. Compare the engines in the trial with the engines on the plan you would actually buy.',
   },
   {
     q: 'What\'s the difference between a free trial and a free tier?',
@@ -43,13 +90,23 @@ const freeTrialFaqs = [
 // Rows copied from tikitaka's verified-trial-terms.md (vendor pages, 22 Oct 2026).
 const TRIAL_TOOLS = [
   { tool: 'CrunchJunkie', href: 'https://crunchjunkie.io/pricing', highlight: true },
+  { tool: 'Nightwatch', href: 'https://nightwatch.io/pricing/', highlight: false },
   { tool: 'SE Ranking', href: 'https://seranking.com/subscription.html', highlight: false },
+  { tool: 'Searchable', href: 'https://searchable.com/terms', highlight: false },
   { tool: 'LLM Pulse', href: 'https://llmpulse.ai/pricing', highlight: false },
   { tool: 'SE Visible', href: 'https://visible.seranking.com', highlight: false },
   { tool: 'Otterly.AI', href: 'https://help.otterly.ai/free-trial', highlight: false },
+  { tool: 'MaxAEO (maxaeo.ai)', href: 'https://maxaeo.ai/pricing', highlight: false },
+  { tool: 'ZipTie', href: 'https://ziptie.ai/pricing/', highlight: false },
   { tool: 'Scrunch', href: 'https://scrunch.com/faqs/what-features-are-included-in-scrunchs-free-trial', highlight: false },
   { tool: 'Profound', href: 'https://www.tryprofound.com/pricing', highlight: false },
   { tool: 'Rankscale', href: 'https://rankscale.ai/pricing', highlight: false },
+  { tool: 'KIME', href: 'https://kime.ai/pricing', highlight: false },
+  { tool: 'Writesonic', href: 'https://writesonic.com/pricing', highlight: false },
+  { tool: 'Knowatoa', href: 'https://knowatoa.com/onboarding/trial/signup', highlight: false },
+  { tool: 'Promptwatch', href: 'https://www.promptwatch.com/pricing', highlight: false },
+  { tool: 'LLMrefs', href: 'https://llmrefs.com/#pricing', highlight: false },
+  { tool: 'DeepSmith', href: 'https://deepsmith.ai/', highlight: false },
   { tool: 'Peec AI', href: 'https://peec.ai/comparison/peec-ai-vs-ahrefs-brand-radar', highlight: false },
   { tool: 'Semrush AI Visibility Toolkit', href: 'https://www.semrush.com/kb/1493-ai-visibility-toolkit', highlight: false },
 ]
@@ -58,6 +115,7 @@ const trialTh = { textAlign: 'left' as const, padding: '8px 16px 8px 0', fontFam
 
 /** head: tool, trial, card, engines. rows: [trial, card, engines] per TRIAL_TOOLS entry; names: optional label overrides. */
 export function TrialTermsTable({ head, rows, names = {} }: { head: [string, string, string, string]; rows: [string, string, string][]; names?: Record<string, string> }) {
+  if (rows.length !== TRIAL_TOOLS.length) throw new Error(`TrialTermsTable: ${rows.length} rows for ${TRIAL_TOOLS.length} tools`)
   return (
     <div style={{ overflowX: 'auto', margin: '24px 0 8px' }}>
       <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: 13, lineHeight: 1.5 }}>
@@ -112,7 +170,7 @@ export const blogDetails: BlogDetail[] = [
     <>
       <p>Ask Claude or Gemini which AI visibility tracking tools have a free trial, and neither answers from memory. Both search the web first. We track that question in CrunchJunkie, which records the searches an engine runs before it answers. In the 30 days to 22 October 2026, Claude and Gemini answered it 12 times, and 11 of those answers searched for &ldquo;AI visibility tracking tools free trial&rdquo;. The other searches were variations: some added a year, the word &ldquo;pricing&rdquo; or a vendor name, and others swapped in &ldquo;GEO&rdquo;, &ldquo;LLM visibility&rdquo; or &ldquo;Generative Engine Optimization&rdquo;.</p>
       <figure style={{ margin: '24px 0' }}>
-        <Image src="/blog/ai-fanout-searches-free-trial.jpg" alt="Searches Claude and Gemini ran before answering “Which AI visibility tracking tools have a free trial?”: “AI visibility tracking tools free trial” (12×), “GEO tracking tools AI search free trial” (2×), and once each “Semrush AI visibility free trial”, “best AI search visibility tools free trial 2026 Profound Peec AI Otterly” and eight similar searches (CrunchJunkie, 30 days to 22 Oct 2026)" width={1020} height={240} style={{ width: '100%', height: 'auto', borderRadius: 4, border: '1px solid #e8e8e8' }} />
+        <Image src="/blog/ai-fanout-searches-free-trial.webp" alt="Searches Claude and Gemini ran before answering “Which AI visibility tracking tools have a free trial?”: “AI visibility tracking tools free trial” (12×), “GEO tracking tools AI search free trial” (2×), and once each “Semrush AI visibility free trial”, “best AI search visibility tools free trial 2026 Profound Peec AI Otterly” and eight similar searches (CrunchJunkie, 30 days to 22 Oct 2026)" width={1020} height={240} style={{ width: '100%', height: 'auto', borderRadius: 4, border: '1px solid #e8e8e8' }} />
         <figcaption style={{ fontSize: 11, color: '#6a6a6a', fontFamily: 'var(--font-mono)', letterSpacing: '0.5px', marginTop: 8 }}>The searches Claude and Gemini ran before answering &ldquo;Which AI visibility tracking tools have a free trial?&rdquo;, captured word for word by CrunchJunkie in the 30 days to 22 October 2026. The 12× count also includes one answer to our German version of the question.</figcaption>
       </figure>
       <p>The answers they built from those searches don&rsquo;t agree. One gave Otterly.AI a 7-day trial and another gave it 14 days. Peec AI got 7 days in one answer and 14 days with a card in another. All six of Claude&rsquo;s answers told the reader to check the terms on each vendor&rsquo;s own site.</p>
@@ -133,7 +191,7 @@ export const blogDetails: BlogDetail[] = [
       <p>If a tool fails one of these on day two, you have your answer five days early.</p>
 
       <h2 id="before-day-one">Before day one</h2>
-      <p>If the trial needs a card, put a reminder in your calendar for two days before it ends. Most vendors don&rsquo;t say what happens on the last day. On the pages we checked for the table below, only Scrunch and CrunchJunkie spell it out: Scrunch moves you to a paid plan unless you cancel, and CrunchJunkie charges nothing if you cancel before day 14. The reminder gives you time to decide on purpose instead of finding out from your bank statement.</p>
+      <p>If the trial needs a card, put a reminder in your calendar for two days before it ends. Most vendors don&rsquo;t say what happens on the last day. Of those in the table below that do, Scrunch, Searchable and Nightwatch move you to a paid plan unless you cancel, ZipTie and MaxAEO simply stop, and CrunchJunkie charges nothing if you cancel before day 14. The reminder gives you time to decide on purpose instead of finding out from your bank statement.</p>
       <p>Then choose the prompts. Pick 10 to 20 questions you would actually put in a report, the ones a buyer types when comparing options in your category. Keep branded prompts, such as &ldquo;is [your brand] any good&rdquo;, in a separate group. They show how engines describe you, which is a different question from whether they recommend you. Mixed in with the rest, they make your numbers look better than they are.</p>
       <p>Profound is the exception: its trial gives you a prompt set chosen for your industry, and you can&rsquo;t change it.</p>
       <p>Add three to five competitors, ideally the ones you already lose deals to. A visibility figure for your brand alone has nothing to compare against.</p>
@@ -149,56 +207,87 @@ export const blogDetails: BlogDetail[] = [
       <p>Run the same six checks on every tool you trial, in the same order, so you compare like with like.</p>
       <ol>
         <li>Can you open the actual answer text? A tool that only shows &ldquo;mentioned: yes&rdquo; gives you no way to check what the engine said, or where in the answer your brand appeared.</li>
-        <li>Are cited sources shown separately from brand mentions? Getting cited and getting named are different problems. An engine can cite your blog post and recommend a competitor in the same answer.</li>
-        <li>Does it show the searches the engine ran? Those are the queries your pages need to rank for if you want to be in the answer, like the list at the top of this page.</li>
+        <li>Are cited sources shown separately from brand mentions? Getting cited and getting named are <a href="/blog/ki-sichtbarkeit-ai-visibility/">different problems</a>. An engine can cite your blog post and recommend a competitor in the same answer.</li>
+        <li>Does it show the searches the engine ran? Those are the queries your pages need to rank for if you want to be in the answer, like the list at the top of this page. We explain how that works for one engine in <a href="/blog/how-to-get-mentioned-by-chatgpt/">how to get mentioned by ChatGPT</a>.</li>
         <li>Is the number of answers shown next to every percentage? 40% visibility from 5 answers and 40% from 500 answers are very different findings.</li>
-        <li>Which engines run during the trial, and are they the ones on the plan you would buy? A trial on three engines tells you nothing about the fourth one your buyers use. Most vendors don&rsquo;t say: of the nine trials in the table below, only three state which engines they cover. Check on day one, not on day seven.</li>
+        <li>Which engines run during the trial, and are they the ones on the plan you would buy? A trial on three engines tells you nothing about the fourth one your buyers use. Most vendors don&rsquo;t say: of the 19 trials in the table below, only six name the engines they cover. Check on day one, not on day seven.</li>
         <li>Can you export the data or put it in a report? If it stays in the dashboard, someone will end up copying numbers into slides by hand every month.</li>
       </ol>
 
       <h2 id="trial-terms">Trial terms at a glance</h2>
-      <p>These are the tools the AI answers named most often for this question (SE Ranking with both of its products), plus CrunchJunkie, with what each vendor&rsquo;s own pages said on 22 October 2026. Where a page doesn&rsquo;t say something, the table says so rather than borrowing a number from a review site.</p>
+      <p>These are the tools the AI answers named for this question, plus other trackers that advertise a trial, with what each vendor&rsquo;s own pages said on 22 October 2026. CrunchJunkie comes first because it is ours. Where a page doesn&rsquo;t say something, the table says so rather than borrowing a number from a review site.</p>
       <TrialTermsTable
         head={['Tool', 'Trial', 'Card', 'Engines during trial']}
         names={{ 'SE Ranking': 'SE Ranking (platform)' }}
         rows={[
           ['14 days', 'Yes, no charge before day 14', 'Perplexity at no cost; others with your own API keys'],
           ['14 days', 'No', 'Not stated on page'],
+          ['14 days', 'No', 'Not stated on page'],
+          ['14 days', 'Yes, charged the day after the trial', 'ChatGPT, Google AI Overviews, Perplexity'],
           ['14 days (weekly plans)', 'Yes, payment method', 'Not stated on page'],
           ['10 days', 'Not stated on page', 'Not stated on page'],
           ['7 days', 'No', 'Not stated on page'],
+          ['7 days', 'No', 'All eight it tracks'],
+          ['7 days', 'No', 'ChatGPT, Google AI Overviews, Microsoft Copilot'],
           ['7 days (Core plan)', 'Yes, per its FAQ; its pricing page says otherwise', 'ChatGPT, Perplexity, Google AI Overviews, Copilot'],
           ['7 days (Trial plan)', 'Not stated on page', 'ChatGPT, Gemini, Google AI Overviews'],
           ['7 days (Pro)', 'Not stated on page', 'Not stated on page'],
+          ['7 days', 'Yes, not charged during the trial', 'Not named; the full plan you pick'],
+          ['7 days', 'No', 'Not stated on page'],
+          ['7 days', 'Not stated on page', 'Not stated on page'],
+          ['7 days (Essential, Professional)', 'Not stated on page', 'Not stated on page'],
+          ['7 days', 'Not stated for the trial', 'Not stated on page'],
+          ['7 days (homepage)', 'Not stated on page', 'Not stated on page'],
           ['7 days, on a comparison page only', 'No, same page only', 'Not stated on page'],
           ['None', '—', '—'],
         ]}
       />
-      <p style={{ margin: '0 0 24px', fontFamily: 'var(--font-mono)', fontSize: 11, letterSpacing: '0.5px', color: '#949494' }}>Each tool name links to the vendor page the row comes from, read on 22 October 2026. Otterly&rsquo;s homepage button says 14 days, while its help centre and an FAQ on the same homepage say 7; the table uses the help centre. Scrunch&rsquo;s FAQ says a card is required and the trial turns into a paid plan unless you cancel; its pricing page says no credit card is required. Peec AI&rsquo;s pricing page states no trial terms. Semrush offers 7-day trials on most of its toolkits, but its knowledge base says the AI Visibility Toolkit has none.</p>
-      <p>Trial terms change often, so check the vendor&rsquo;s page on the day you sign up. For caps, prices after the trial and more tools, <a href="https://tikitaka.digital/en/ai-visibility-tools-free-trial/" target="_blank" rel="noopener noreferrer">we checked every vendor&rsquo;s trial terms in a separate comparison</a>.</p>
+      <p style={{ margin: '0 0 24px', fontFamily: 'var(--font-mono)', fontSize: 11, letterSpacing: '0.5px', color: '#949494' }}>Each tool name links to the vendor page the row comes from, read on 22 October 2026. Otterly&rsquo;s homepage button says 14 days, while its help centre and an FAQ on the same homepage say 7; the table uses the help centre. Scrunch&rsquo;s FAQ says a card is required and the trial turns into a paid plan unless you cancel; its pricing page says no credit card is required. Peec AI&rsquo;s pricing page states no trial terms. Searchable&rsquo;s terms say the card is charged automatically the day after the trial ends, and Nightwatch&rsquo;s FAQ says it bills you if you don&rsquo;t cancel within 14 days. DeepSmith&rsquo;s pricing page says trial length and limits are given at sign-up. Semrush offers 7-day trials on most of its toolkits, but its knowledge base says the AI Visibility Toolkit has none.</p>
+      <p>Trial terms change often, so check the vendor&rsquo;s page on the day you sign up. For caps and prices after the trial, <a href="https://tikitaka.digital/en/ai-visibility-tools-free-trial/" target="_blank" rel="noopener noreferrer">we checked every vendor&rsquo;s trial terms in a separate comparison</a>.</p>
+      <h3>What the vendor pages showed</h3>
+      <p>Screenshots taken on 22 October 2026 from Spain, cropped to the trial terms. Prices appear in euros because that is what these sites show European visitors.</p>
+      <TrialScreenshots
+        altPrefix="Screenshot of"
+        captions={{
+          nightwatch: 'pricing page, with “14-day free trial · No credit card required” under every plan.',
+          'se-ranking': 'pricing page, with “Start free 14-day trial” and “No credit card required”.',
+          searchable: 'pricing page, with “Try it free, 14 days” on Pro and Scale, and ChatGPT, Google AI Overviews and Perplexity included.',
+          'llm-pulse': 'homepage, with “14-day free trial” and “Cancel anytime”.',
+          'se-visible': 'pricing page: “explore SE Visible with a 10-day free trial”.',
+          otterly: 'pricing page, with plans but no trial terms. The 7-day, no-card trial is stated in its help centre.',
+          maxaeo: 'homepage: “7-day free trial · no credit card”.',
+          ziptie: 'pricing page: 7 days free with 25 daily prompts on ChatGPT, Google AI Overviews and Microsoft Copilot, no card required.',
+          scrunch: 'pricing page: “Start 7-day free trial” on the Core plan, which covers ChatGPT, Perplexity, Google AIO and Copilot.',
+          profound: 'pricing page: a free Trial plan with 50 prompts run daily for 7 days on ChatGPT, Gemini and Google AI Overviews.',
+          rankscale: 'pricing page: “Try Pro free for 7 days”.',
+          kime: 'pricing page, with “Try for free” on Explorer and Core. The 7-day length and the card are explained in its FAQ.',
+          writesonic: 'homepage: “Start 7-Day Free Trial”.',
+          knowatoa: 'pricing page, with “Start free trial” but no length. The 7 days appear on its trial sign-up page.',
+          promptwatch: 'pricing page: “Start 7-day free trial” on Essential and Professional; Business is demo-only.',
+          llmrefs: 'pricing section: “Start 7-day Free Trial” and “Cancel anytime”.',
+          deepsmith: 'homepage: “Start 7-day free trial”.',
+          peec: 'homepage, with a “Start Free Trial” button and no length or card terms.',
+        }}
+      />
 
       <h2 id="crunchjunkie-trial">CrunchJunkie&rsquo;s trial, plainly</h2>
       <p>CrunchJunkie&rsquo;s trial lasts 14 days. You need a card to start it, but nothing is charged before day 14, and if you cancel before then you pay nothing.</p>
       <p>Every report and feature is included. The visibility scans run on Perplexity on CrunchJunkie&rsquo;s own API keys, so they cost you nothing. To test other engines during the trial, you connect your own API keys for them. The trial is capped at 1 brand and 10 prompts, with up to 2 runs per prompt, and the scans run daily without you having to start them.</p>
       <figure style={{ margin: '24px 0' }}>
-        <Image src="/blog/crunchjunkie-pricing-trial-card.jpg" alt="CrunchJunkie pricing: €37/mo for 1 brand, 20 prompts checked weekly across four engines, made up of €12 for the software and €25 for the scans; the 14-day trial runs on Perplexity at no cost" width={1042} height={1014} style={{ width: '100%', maxWidth: 521, height: 'auto', borderRadius: 4, border: '1px solid #e8e8e8' }} />
+        <Image src="/blog/crunchjunkie-pricing-trial-card.webp" alt="CrunchJunkie pricing: €37/mo for 1 brand, 20 prompts checked weekly across four engines, made up of €12 for the software and €25 for the scans; the 14-day trial runs on Perplexity at no cost" width={1042} height={1014} style={{ width: '100%', maxWidth: 521, height: 'auto', borderRadius: 4, border: '1px solid #e8e8e8' }} />
         <figcaption style={{ fontSize: 11, color: '#6a6a6a', fontFamily: 'var(--font-mono)', letterSpacing: '0.5px', marginTop: 8 }}>CrunchJunkie&rsquo;s pricing card: &euro;37 a month excluding VAT for one brand and 20 prompts checked weekly on four engines, of which &euro;12 is the software and &euro;25 the scans.</figcaption>
       </figure>
       <p>After the trial, every plan includes all ten engines: ChatGPT, Gemini, Claude, Perplexity, Grok, DeepSeek, Microsoft Copilot, Google AI Overviews, Google AI Mode and Meta AI. There is no per-engine fee and no prompt limit. The scans run either on Managed AI, where CrunchJunkie runs and bills them, or on your own keys at the providers&rsquo; prices. Plans and the current prices are on the <a href="https://crunchjunkie.io/pricing" target="_blank" rel="noopener noreferrer">CrunchJunkie pricing page</a>.</p>
+      <figure style={{ margin: '24px 0' }}>
+        <Image src="/blog/crunchjunkie-plans-features-overview.webp" alt="CrunchJunkie plans: Solo €12, Starter €49, Pro €124 and Agency €186 a month billed annually, and the features every plan includes: all ten AI engines with no per-engine fee, no prompt limits, unlimited reports and data connections, and your own API keys or Managed AI" width={1400} height={803} loading="lazy" style={{ width: '100%', height: 'auto', borderRadius: 4, border: '1px solid #2d2d2d' }} />
+        <figcaption style={{ fontSize: 11, color: '#6a6a6a', fontFamily: 'var(--font-mono)', letterSpacing: '0.5px', marginTop: 8 }}>CrunchJunkie&rsquo;s plans as shown on 22 October 2026, billed annually and excluding VAT. Plans differ in brands and team seats; all four include the ten engines and have no prompt limit.</figcaption>
+      </figure>
       <p>The limitation is worth stating plainly. You need a card to start, and the free scans cover one engine. Testing ChatGPT, Claude or Gemini during those 14 days means setting up your own API keys. With 10 prompts, it is a good test of the tool and a partial view of your market.</p>
 
       <h2 id="when-the-trial-ends">When the trial ends</h2>
       <p>Go back to the criteria you wrote down before day one and mark each one pass or fail before you look at price.</p>
       <p>Then compare prices properly. The headline price is rarely what you pay. Work out the monthly cost at your real number of prompts, on the engines you need, at the scan frequency you need. Some tools charge by prompt, some charge extra per engine and some charge per domain, so the same workload can land in very different places. Our <a href="/blog/ai-visibility-tracking-tools-2026/">buyer&rsquo;s guide to AI visibility tracking tools</a> shows how each pricing model adds up.</p>
       <p>If two tools pass, take the one whose cost you can predict at next year&rsquo;s prompt count, not this month&rsquo;s.</p>
-
-      <h2 id="faq">Common questions</h2>
-      {freeTrialFaqs.map(({ q, a }) => (
-        <div key={q}>
-          <h3>{q}</h3>
-          <p>{a}</p>
-        </div>
-      ))}
 
       <NeedHelp topic="geo-audit" />
     </>
@@ -352,7 +441,6 @@ export const blogDetails: BlogDetail[] = [
       <p>Roll out campaign by campaign, not account-wide in one evening. Each campaign has its own mix of brand and generic demand, and the mechanism that makes AI Max useful in one is the mechanism that makes it expensive in another.</p>
       <p>Related reading: <a href="/blog/performance-max-bidding-change-august-2026/">the Performance Max bidding change</a> works on the same principle — a target that gets applied across a changed mix of traffic — and <a href="/blog/crm-conversion-imports/">CRM conversion imports</a> are what stop a bidding strategy optimising toward leads that never close. If you want the setup checked by someone who runs these tests weekly, that is what our <a href="/services/google-ads/">Google Ads work</a> is.</p>
 
-      <h2 id="faq">Common questions</h2>
     </>
   ),
 },
@@ -2058,6 +2146,7 @@ export const blogDetails: BlogDetail[] = [
       <>
         <p>The AI visibility tool market has a specific kind of problem: it&rsquo;s moving fast enough that most buyers don&rsquo;t yet know what questions to ask. Vendors know this, and some of them are exploiting it.</p>
         <p>I&rsquo;ve spent the last several months testing these platforms &mdash; not watching demos, but actually running them on client accounts, checking whether the numbers add up, and asking the questions that don&rsquo;t come up in sales calls. This is what I found.</p>
+        <p>About to start a free trial? Read <a href="/blog/ai-visibility-tool-free-trial/">how to test an AI visibility tool in a 7- or 14-day trial</a> first, so the trial answers the question you have.</p>
 
         <h2 id="metering-problem">The metering problem nobody puts in the brochure</h2>
         <p>Before you compare features, understand how each tool charges you. The pricing model determines what you can actually afford to track &mdash; and that shapes what you actually know about your AI search presence.</p>
@@ -2565,16 +2654,6 @@ export const blogDetails: BlogDetail[] = [
 
         <h2>How pmax can help</h2>
         <p>We run AI visibility programmes for businesses across Europe, and we treat Perplexity, ChatGPT and Google&rsquo;s AI Overviews as separate surfaces with separate scorecards &mdash; because they are. That means a per-engine audit, the technical groundwork, content and PR, and monthly measurement you can actually read. If you&rsquo;d like a free one-page Perplexity visibility snapshot for your brand, <a href="/contact/?topic=perplexity-audit">tell us a bit about your situation</a> and we&rsquo;ll send it back within a week.</p>
-
-        <h2>Frequently asked questions</h2>
-        <h3>How do I get my business cited by Perplexity?</h3>
-        <p>Make sure PerplexityBot can crawl your site, publish answer-first content that&rsquo;s easy to quote, and earn mentions on the third-party sources Perplexity trusts &mdash; Wikipedia, established review sites, reputable publications and relevant Reddit threads. Then measure monthly and keep going.</p>
-        <h3>Why doesn&rsquo;t my company appear in Perplexity even though it ranks on Google?</h3>
-        <p>Because they&rsquo;re different systems. Perplexity favours pages it can fetch live and quote cleanly, and it leans on a narrow set of trusted domains for validation. A page can rank on Google yet still be hard to crawl, hard to quote, or unsupported by the third-party signals Perplexity looks for.</p>
-        <h3>Is Perplexity visibility the same as ChatGPT visibility?</h3>
-        <p>No. The domains each engine cites overlap surprisingly little, so the two need separate baselines and, often, separate tactics. Showing up in one doesn&rsquo;t carry over to the other.</p>
-        <h3>How long does Perplexity visibility take?</h3>
-        <p>Technical and structural fixes can show up within weeks because Perplexity re-crawls and re-answers continuously. Building the third-party trust that makes citations reliable typically takes around two to three months of steady work.</p>
 
         <h2>Further reading</h2>
         <ul>
@@ -3142,28 +3221,6 @@ export const blogDetails: BlogDetail[] = [
         <h2 id="verdict">The honest verdict</h2>
         <p>Pinterest Ads in 2026 are genuinely good for a specific, identifiable set of businesses: home and interiors, weddings, fashion, food, DIY &mdash; anything bought through visual planning over a long window. For those, it&rsquo;s one of the most underpriced channels in paid media, and the retargeting tools are better than its &ldquo;inspiration platform&rdquo; reputation suggests. For a local interiors or window-coverings showroom, it&rsquo;s not a long shot at all &mdash; it&rsquo;s close to the platform&rsquo;s core use, and it slots neatly into a cross-platform retargeting strategy alongside YouTube video and static display.</p>
         <p>For everyone else &mdash; commodity ecommerce, impulse products, most B2B, anything price-led &mdash; it&rsquo;s a &ldquo;maybe later&rdquo; channel. Run Google and Meta properly first.</p>
-
-        <h2 id="faqs">Frequently asked questions</h2>
-        <details className="cmp-faq" open>
-          <summary>Can anyone run Pinterest Ads?</summary>
-          <p>Almost. You need a free Pinterest business account and a verifiable website, and Ads Manager is self-serve &mdash; so a solo owner can launch without an agency. The one real gate is geography: Pinterest Ads aren&rsquo;t available in every country, though they are across most of Europe including Spain, Germany, the UK and the wider EU.</p>
-        </details>
-        <details className="cmp-faq">
-          <summary>Who do Pinterest Ads actually work for?</summary>
-          <p>Visually-planned, considered purchases: home decor and interiors, window coverings and furniture, weddings, fashion and beauty, food and DIY, travel. The common thread is people planning a future purchase weeks in advance. Impulse, commodity and price-led categories tend to underperform.</p>
-        </details>
-        <details className="cmp-faq">
-          <summary>How does Pinterest retargeting work?</summary>
-          <p>Install the Pinterest tag (or Conversions API) and you can retarget site visitors, upload a hashed customer list (minimum ~100 matches), retarget people who engaged with your organic Pins, build actalike audiences, and run dynamic retargeting that shows people the exact products they viewed from a catalog feed.</p>
-        </details>
-        <details className="cmp-faq">
-          <summary>Can a local business with one showroom use Pinterest Ads?</summary>
-          <p>Yes. Geo-target delivery to the showroom&rsquo;s city, postal codes or a radius around the store, and use location-specific creative &mdash; ideally with the store address on it. For a local showroom, Pinterest works best as one layer of a cross-platform retargeting strategy alongside YouTube video and static display.</p>
-        </details>
-        <details className="cmp-faq">
-          <summary>How much do Pinterest Ads cost in 2026?</summary>
-          <p>Cheap on a media basis: CPC typically &euro;0.10&ndash;&euro;1.50, CPM around &euro;2&ndash;&euro;5. The low cost is a double-edged sword &mdash; it&rsquo;s easy to spend on reach that never converts, so cost per acquisition (or per qualified showroom visit) is the only number that matters.</p>
-        </details>
 
         <h2 id="closing">Want help deciding if Pinterest fits your business?</h2>
         <p>We run paid media &mdash; Google, Meta, Microsoft, TikTok and Pinterest &mdash; for brands across Europe, and we&rsquo;ll tell you honestly whether Pinterest belongs in your mix or whether the budget is better spent elsewhere. <a href="/contact/?topic=pinterest-ads">Book a free 30-minute call</a>. No deck, no sales pitch.</p>

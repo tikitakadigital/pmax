@@ -4,11 +4,14 @@ import Image from 'next/image'
 import { notFound } from 'next/navigation'
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
+import FaqList from '@/components/FaqList'
 import { breadcrumb, article as articleSchema, faqPage } from '@/lib/schema'
 import { posts, getPost } from '@/lib/content/blog'
 import { getBlogDetail } from '@/lib/content/blog-detail'
 import { getT, blogAlternates, isPostTranslated } from '@/lib/i18n'
 import { blogPath } from '@/lib/content/blog-slugs'
+import { isoDate, postImage, postSocial, relatedPosts } from '@/lib/blog-seo'
+import { imageSize } from '@/lib/image-size'
 
 const categoryKeywords: Record<string, string[]> = {
   'AI search':   ['AI search visibility', 'GEO', 'generative engine optimisation', 'ChatGPT citations', 'Perplexity'],
@@ -53,31 +56,20 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params
   const post = getPost(slug)
   if (!post) return {}
-  const ogImage = post.ogImage ?? '/og-image.jpg'
   // Only the locales actually translated. This used to test German prose and
   // then advertise Spanish as well, which holds only while the two stay in
   // lockstep — the first German-only translation would have pointed hreflang at
   // a noindex Spanish page.
   const languages = blogAlternates(slug)
+  const url = `https://pmax.online/blog/${slug}/`
   return {
     title: post.seoTitle,
     description: post.deck,
     alternates: {
-      canonical: `https://pmax.online/blog/${slug}/`,
+      canonical: url,
       ...(languages && { languages }),
     },
-    openGraph: {
-      siteName: 'pmax',
-      title: post.title,
-      description: post.deck,
-      type: 'article',
-      publishedTime: post.date,
-      images: [{ url: `https://pmax.online${ogImage}`, width: 1200, height: 630, alt: post.title }],
-    },
-    twitter: {
-      card: 'summary_large_image',
-      images: [`https://pmax.online${ogImage}`],
-    },
+    ...postSocial(post, 'en', url, post.title, post.deck),
   }
 }
 
@@ -87,22 +79,24 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
   if (!post) notFound()
 
   const detail = getBlogDetail(slug)
+  const related = relatedPosts(post, 'en')
 
   const jsonLd = [
     breadcrumb([
       { name: 'Home', url: 'https://pmax.online/' },
       { name: 'Journal', url: 'https://pmax.online/blog/' },
-      { name: post.category, url: `https://pmax.online/blog/${slug}/` },
+      { name: post.title, url: `https://pmax.online/blog/${slug}/` },
     ]),
     articleSchema({
       headline: post.title,
       description: post.deck,
       url: `https://pmax.online/blog/${slug}/`,
-      datePublished: post.date,
-      dateModified: post.dateModified,
+      datePublished: isoDate(post.date),
+      dateModified: post.dateModified ? isoDate(post.dateModified) : undefined,
       keywords: categoryKeywords[post.category],
-      image: post.ogImage,
+      image: postImage(post),
       author: post.author,
+      section: post.category,
     }),
     ...(detail?.faqs?.length ? [{ ...faqPage(detail.faqs), inLanguage: 'en' }] : []),
   ]
@@ -145,8 +139,8 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                   <Image
                     src={detail.image}
                     alt={detail.imageAlt ?? post.title}
-                    width={1200}
-                    height={630}
+                    width={imageSize(detail.image)?.width ?? 1200}
+                    height={imageSize(detail.image)?.height ?? 630}
                     priority
                     sizes="(max-width: 768px) 100vw, 760px"
                     style={{ width: '100%', height: 'auto', display: 'block', borderRadius: 4, marginBottom: 32 }}
@@ -154,6 +148,26 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                 )}
                 {detail?.prose ?? (
                   <p>{post.deck}</p>
+                )}
+
+                {/* The FAQPage schema above is built from these same items, so what
+                    search engines read is always what the page shows. */}
+                {detail?.faqs?.length ? (
+                  <>
+                    <h2 id="faq">Common questions</h2>
+                    <FaqList items={detail.faqs} />
+                  </>
+                ) : null}
+
+                {related.length > 0 && (
+                  <div className="prose-callout" style={{ marginTop: 48 }}>
+                    <span className="prose-callout-kicker">More on {post.category}</span>
+                    <ul style={{ margin: '8px 0 0', paddingLeft: 18 }}>
+                      {related.map(r => (
+                        <li key={r.slug}><Link href={`/blog/${r.slug}/`}>{r.title}</Link></li>
+                      ))}
+                    </ul>
+                  </div>
                 )}
 
                 {categoryLinks[post.category] && (

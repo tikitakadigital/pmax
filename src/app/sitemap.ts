@@ -6,6 +6,7 @@ import { cases } from '@/lib/content/cases'
 import { casePath } from '@/lib/content/case-slugs'
 import { blogPath } from '@/lib/content/blog-slugs'
 import { posts } from '@/lib/content/blog'
+import { isoDate, postImage } from '@/lib/blog-seo'
 import { translatedLocales } from '@/lib/i18n'
 import { industryDetails } from '@/lib/content/industries-detail'
 
@@ -64,8 +65,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // so submitting it asks Google to crawl a page we have told it to ignore.
   // Same predicate as the two blog routes — see translatedLocales().
   const blogPages: MetadataRoute.Sitemap = [
-    ...posts.map(p => ({ url: `${base}/blog/${p.slug}/`, lastModified: new Date(p.date), changeFrequency: 'monthly' as const, priority: 0.7 })),
-    ...posts.flatMap(p => translatedLocales(p.slug).map(lang => ({ url: `${base}${blogPath(p.slug, lang)}`, lastModified: new Date(p.date), changeFrequency: 'monthly' as const, priority: 0.6 }))),
+    ...posts.filter(p => !p.external).map(p => ({ url: `${base}/blog/${p.slug}/`, lastModified: isoDate(p.dateModified ?? p.date), changeFrequency: 'monthly' as const, priority: 0.7, images: [postImage(p).url] })),
+    ...posts.filter(p => !p.external).flatMap(p => translatedLocales(p.slug).map(lang => ({ url: `${base}${blogPath(p.slug, lang)}`, lastModified: isoDate(p.dateModified ?? p.date), changeFrequency: 'monthly' as const, priority: 0.6, images: [postImage(p).url] }))),
   ]
 
   const legalPages: MetadataRoute.Sitemap = [

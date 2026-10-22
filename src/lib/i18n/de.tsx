@@ -1,6 +1,6 @@
 import type { ReactNode } from 'react'
 import Image from 'next/image'
-import { TrialTermsTable } from '@/lib/content/blog-detail'
+import { TrialTermsTable, TrialScreenshots } from '@/lib/content/blog-detail'
 
 export interface ServiceDetail {
   metaTitle: string
@@ -43,7 +43,7 @@ export interface LocalizedBlogDetail {
 const deFreeTrialFaqs = [
   {
     q: 'Welche KI-Sichtbarkeits-Tools haben eine kostenlose Testphase ohne Kreditkarte?',
-    a: 'Von den Tools, die wir am 22. Oktober 2026 geprüft haben, schreiben Otterly.AI (7 Tage) und die SE-Ranking-Plattform (14 Tage) auf ihren eigenen Seiten, dass keine Kreditkarte nötig ist. Peec AI schreibt das auch, allerdings nur auf einer Vergleichsseite, nicht auf der Preisseite. CrunchJunkie und LLM Pulse verlangen für ihre 14-tägigen Testphasen eine Karte oder ein Zahlungsmittel. Laut FAQ braucht auch die 7-tägige Testphase von Scrunch eine Karte, die Preisseite sagt etwas anderes. Profound, Rankscale und SE Visible machen keine Angabe. Die Bedingungen ändern sich, prüfen Sie deshalb am Tag der Anmeldung die Seite des Anbieters.',
+    a: 'Von den Tools, die wir am 22. Oktober 2026 geprüft haben, schreiben Nightwatch und die SE-Ranking-Plattform (14 Tage) sowie Otterly.AI, MaxAEO, ZipTie und Writesonic (7 Tage) auf ihren eigenen Seiten, dass keine Kreditkarte nötig ist. Peec AI schreibt das auch, allerdings nur auf einer Vergleichsseite. CrunchJunkie, LLM Pulse, Searchable und KIME verlangen eine Karte oder ein Zahlungsmittel, laut FAQ auch Scrunch, dessen Preisseite etwas anderes sagt. Die übrigen machen keine Angabe. Die Bedingungen ändern sich, prüfen Sie deshalb am Tag der Anmeldung die Seite des Anbieters.',
   },
   {
     q: 'Reichen 7 Tage, um ein KI-Sichtbarkeits-Tool zu testen?',
@@ -51,7 +51,7 @@ const deFreeTrialFaqs = [
   },
   {
     q: 'Enthalten kostenlose Testphasen alle KI-Engines?',
-    a: 'Selten, und die meisten Anbieter sagen es nicht. Die Testphase von Profound umfasst ChatGPT, Gemini und Google AI Overviews, die von Scrunch ChatGPT, Perplexity, Google AI Overviews und Copilot. Bei CrunchJunkie läuft die Testphase kostenlos auf Perplexity, für andere Engines brauchen Sie eigene API-Keys. Die übrigen Anbieter in unserer Tabelle sagen nicht, welche Engines ihre Testphase abdeckt. Vergleichen Sie die Engines der Testphase mit denen des Plans, den Sie tatsächlich kaufen würden.',
+    a: 'Selten, und die meisten Anbieter sagen es nicht. Die Testphase von ZipTie umfasst ChatGPT, Google AI Overviews und Microsoft Copilot, die von Profound ChatGPT, Gemini und Google AI Overviews, die von Scrunch ChatGPT, Perplexity, Google AI Overviews und Copilot. MaxAEO lässt in der Testphase alle acht Engines laufen. Bei CrunchJunkie läuft die Testphase kostenlos auf Perplexity, für andere Engines brauchen Sie eigene API-Keys. Die meisten anderen Anbieter nennen Engines nur für ihre bezahlten Pläne. Vergleichen Sie die Engines der Testphase mit denen des Plans, den Sie tatsächlich kaufen würden.',
   },
   {
     q: 'Was ist der Unterschied zwischen einer Testphase und einem kostenlosen Plan?',
@@ -1227,7 +1227,7 @@ export const de = {
     },
 'was-kostet-google-ads': {
       title: 'Google Ads Kosten 2026: Was Sie wirklich zahlen',
-      deck: 'Ein ehrlicher, konkreter Leitfaden zu Google-Ads-Kosten 2026. Durchschnittliche Klickpreise nach Branche in Deutschland, die Gesamtkosten-Gleichung, drei Budgetszenarien &mdash; und ein Palma-Fall mit 58,5&thinsp;% niedrigerem Cost-per-Lead.',
+      deck: 'Ein ehrlicher, konkreter Leitfaden zu Google-Ads-Kosten 2026. Durchschnittliche Klickpreise nach Branche in Deutschland, die Gesamtkosten-Gleichung, drei Budgetszenarien — und ein Palma-Fall mit 58,5 % niedrigerem Cost-per-Lead.',
       toc: [
         'Wie Google-Ads-Preise tats&auml;chlich funktionieren',
         'Durchschnittliche Klickpreise nach Branche in Deutschland',
@@ -1691,8 +1691,8 @@ export const de = {
   ),
 },
 'linkedin-ads-b2b-spain': {
-  title: 'LinkedIn Ads f&uuml;r B2B in Spanien: was f&uuml;r deutschsprachige Unternehmer auf Mallorca wirklich funktioniert',
-  deck: 'CPL-Benchmarks nach Branche, die Targeting-Checkliste und eine Palma-Kanzlei, die den Cost-per-Lead von 184 &euro; auf 67 &euro; senkte &mdash; in 16 Wochen.',
+  title: 'LinkedIn Ads für B2B in Spanien: was für deutschsprachige Unternehmer auf Mallorca wirklich funktioniert',
+  deck: 'CPL-Benchmarks nach Branche, die Targeting-Checkliste und eine Palma-Kanzlei, die den Cost-per-Lead von 184 € auf 67 € senkte — in 16 Wochen.',
   toc: ['LinkedIn vs. Meta f&uuml;r B2B', 'CPL-Benchmarks in Spanien', 'Die Targeting-Checkliste', 'Warum die meisten Kampagnen scheitern', 'Fallstudie Palma: von 184 &euro; auf 67 &euro;', 'Bevor Sie starten'],
   faqs: [
     {
@@ -1974,7 +1974,7 @@ export const de = {
   ),
 },
 'tiktok-ads-mallorca-tourism': {
-  title: 'TikTok Ads f&uuml;r Gastgewerbe und Tourismus auf Mallorca',
+  title: 'TikTok Ads für Gastgewerbe und Tourismus auf Mallorca',
   toc: ['Warum TikTok Tourismus-Marketing anders macht', 'Die Formate, die Buchungen generieren', 'Was TikTok-Anzeigen auf Mallorca kosten', 'Wer TikTok-Anzeigen nicht schalten sollte', 'Ein Boot-Charter-Fall: Boat Escape Mallorca', 'So starten Sie'],
   faqs: [
     {
@@ -2101,7 +2101,7 @@ export const de = {
 },
 'ki-sichtbarkeit-ai-visibility': {
       title: 'KI-Sichtbarkeit: Wie Ihre Marke von KI-Engines zitiert wird',
-      deck: 'Die meisten Marken wissen nicht, was ChatGPT &uuml;ber sie sagt &mdash; oder warum. Der datenbasierte Leitfaden zur KI-Sichtbarkeit: wie Zitierungen funktionieren, welche Hebel wirken und was unsere eigenen Zahlen &uuml;ber 10 Engines zeigen.',
+      deck: 'Die meisten Marken wissen nicht, was ChatGPT über sie sagt — oder warum. Der datenbasierte Leitfaden zur KI-Sichtbarkeit: wie Zitierungen funktionieren, welche Hebel wirken und was unsere eigenen Zahlen über 10 Engines zeigen.',
       toc: [
         'KI-Sichtbarkeit ist kein SEO',
         'Wie KI-Engines entscheiden, wen sie zitieren',
@@ -2227,7 +2227,7 @@ export const de = {
     },
 'meta-ads-agency-vs-in-house': {
   title: 'Meta Ads Agentur oder In-House? Ein ehrlicher Vergleich.',
-  deck: 'Agentur-Retainer, In-House-Stelle oder Freelancer &mdash; echte Kosten, realistische ROAS-Benchmarks und wann welche Option wirklich die richtige ist.',
+  deck: 'Agentur-Retainer, In-House-Stelle oder Freelancer — echte Kosten, realistische ROAS-Benchmarks und wann welche Option wirklich die richtige ist.',
   toc: ['Die Kernfrage', 'Was es wirklich kostet', 'Wann In-House gewinnt', 'Wann die Agentur gewinnt', 'Finca Es Pinar: ein echter Wechsel', 'Sechs Fragen vor der Entscheidung'],
   faqs: [
     {
@@ -2386,6 +2386,7 @@ export const de = {
         <>
           <p>Der Markt für KI-Sichtbarkeits-Tools hat ein spezifisches Problem: Er entwickelt sich schnell genug, dass die meisten Käufer noch nicht wissen, welche Fragen sie stellen sollen. Anbieter wissen das, und manche nutzen es aus.</p>
           <p>Ich habe die letzten Monate damit verbracht, diese Plattformen zu testen &mdash; nicht Demo-Calls anzuschauen, sondern sie tatsächlich auf Kundenkonten laufen zu lassen, zu prüfen, ob die Zahlen stimmen, und Fragen zu stellen, die in Verkaufsgesprächen nicht auftauchen. Das sind meine Erkenntnisse.</p>
+          <p>Sie wollen gerade eine kostenlose Testphase starten? Lesen Sie vorher, <a href="/de/blog/ki-sichtbarkeits-tool-testen/">wie Sie ein KI-Sichtbarkeits-Tool in 7 oder 14 Tagen richtig testen</a>, damit die Testphase Ihre Frage beantwortet.</p>
 
           <h2 id="metering-problem">Das Abrechnungsproblem, das kein Anbieter bewirbt</h2>
           <p>Bevor Sie Features vergleichen, verstehen Sie, wie jedes Tool abrechnet. Das Preismodell bestimmt, was Sie sich leisten können zu tracken &mdash; und das bestimmt, was Sie tatsächlich über Ihre KI-Suchpräsenz wissen.</p>
@@ -2694,7 +2695,7 @@ export const de = {
         <>
           <p>Fragt man Claude oder Gemini, welche Tools für AI-Visibility-Tracking eine kostenlose Testphase haben, antwortet keiner von beiden aus dem Gedächtnis. Beide suchen zuerst im Web. Wir verfolgen genau diese Frage in CrunchJunkie, und CrunchJunkie schreibt mit, wonach eine Engine sucht, bevor sie antwortet. In den 30 Tagen bis zum 22. Oktober 2026 haben Claude und Gemini die Frage 12-mal beantwortet, und 11 dieser Antworten suchten nach „AI visibility tracking tools free trial“. Die übrigen Suchen waren Varianten: Manche hängten eine Jahreszahl, das Wort „pricing“ oder einen Anbieternamen an, andere setzten Begriffe wie „GEO“, „LLM visibility“ oder „Generative Engine Optimization“ ein. Die Frage war auf Englisch gestellt, die Suchen sind es auch.</p>
           <figure style={{ margin: '24px 0' }}>
-            <Image src="/blog/ai-fanout-searches-free-trial.jpg" alt="Suchen, die Claude und Gemini vor der Antwort auf „Which AI visibility tracking tools have a free trial?“ ausgeführt haben: „AI visibility tracking tools free trial“ (12×), „GEO tracking tools AI search free trial“ (2×), dazu je einmal „Semrush AI visibility free trial“, „best AI search visibility tools free trial 2026 Profound Peec AI Otterly“ und acht ähnliche Suchen (CrunchJunkie, 30 Tage bis 22. Oktober 2026)" width={1020} height={240} style={{ width: '100%', height: 'auto', borderRadius: 4, border: '1px solid #e8e8e8' }} />
+            <Image src="/blog/ai-fanout-searches-free-trial.webp" alt="Suchen, die Claude und Gemini vor der Antwort auf „Which AI visibility tracking tools have a free trial?“ ausgeführt haben: „AI visibility tracking tools free trial“ (12×), „GEO tracking tools AI search free trial“ (2×), dazu je einmal „Semrush AI visibility free trial“, „best AI search visibility tools free trial 2026 Profound Peec AI Otterly“ und acht ähnliche Suchen (CrunchJunkie, 30 Tage bis 22. Oktober 2026)" width={1020} height={240} style={{ width: '100%', height: 'auto', borderRadius: 4, border: '1px solid #e8e8e8' }} />
             <figcaption style={{ fontSize: 11, color: '#6a6a6a', fontFamily: 'var(--font-mono)', letterSpacing: '0.5px', marginTop: 8 }}>Die Suchen, die Claude und Gemini vor ihrer Antwort auf „Which AI visibility tracking tools have a free trial?“ ausgeführt haben, wörtlich erfasst von CrunchJunkie in den 30 Tagen bis zum 22. Oktober 2026. Die Angabe 12× enthält auch eine Antwort auf unsere deutsche Fassung der Frage.</figcaption>
           </figure>
           <p>Die Antworten, die daraus entstanden, widersprechen sich. Eine gab Otterly.AI 7 Tage Testphase, eine andere 14. Peec AI bekam in einer Antwort 7 Tage, in einer anderen 14 Tage mit Kreditkarte. Alle sechs Antworten von Claude rieten, die Bedingungen auf der Website des jeweiligen Anbieters nachzuprüfen.</p>
@@ -2715,7 +2716,7 @@ export const de = {
           <p>Fällt ein Tool schon am zweiten Tag bei einem dieser Punkte durch, haben Sie Ihre Antwort fünf Tage früher.</p>
 
           <h2 id="before-day-one">Vor dem ersten Tag</h2>
-          <p>Verlangt die Testphase eine Karte, tragen Sie sich zwei Tage vor dem Ende eine Erinnerung in den Kalender ein. Die meisten Anbieter sagen nicht, was am letzten Tag passiert. Auf den Seiten, die wir für die Tabelle unten geprüft haben, sagen es nur Scrunch und CrunchJunkie klar: Scrunch stellt ohne Kündigung auf einen bezahlten Plan um, und bei CrunchJunkie zahlen Sie nichts, wenn Sie vor Tag 14 kündigen. Mit der Erinnerung entscheiden Sie selbst und erfahren es nicht erst vom Kontoauszug.</p>
+          <p>Verlangt die Testphase eine Karte, tragen Sie sich zwei Tage vor dem Ende eine Erinnerung in den Kalender ein. Die meisten Anbieter sagen nicht, was am letzten Tag passiert. Von denen in der Tabelle unten, die es sagen, stellen Scrunch, Searchable und Nightwatch ohne Kündigung auf einen bezahlten Plan um, ZipTie und MaxAEO hören einfach auf, und bei CrunchJunkie zahlen Sie nichts, wenn Sie vor Tag 14 kündigen. Mit der Erinnerung entscheiden Sie selbst und erfahren es nicht erst vom Kontoauszug.</p>
           <p>Dann die Prompts. Wählen Sie 10 bis 20 Fragen, die Sie tatsächlich in einen Report schreiben würden: die Fragen, die ein Käufer stellt, wenn er in Ihrer Kategorie Angebote vergleicht. Halten Sie Marken-Prompts wie „Ist [Ihre Marke] gut?“ in einer eigenen Gruppe. Sie zeigen, wie die Engines Sie beschreiben. Ob die Engines Sie empfehlen, ist eine andere Frage, und mit den übrigen Prompts vermischt lassen Marken-Prompts Ihre Zahlen besser aussehen, als sie sind.</p>
           <p>Profound ist die Ausnahme: In der Testphase bekommen Sie ein Prompt-Set, das für Ihre Branche ausgewählt wird, und können es nicht ändern.</p>
           <p>Legen Sie drei bis fünf Wettbewerber an, am besten die, an die Sie heute schon Aufträge verlieren. Eine Sichtbarkeitszahl nur für Ihre eigene Marke hat keinen Vergleichspunkt.</p>
@@ -2731,56 +2732,87 @@ export const de = {
           <p>Gehen Sie bei jedem Tool dieselben sechs Punkte in derselben Reihenfolge durch. Dann vergleichen Sie Gleiches mit Gleichem.</p>
           <ol>
             <li>Können Sie den eigentlichen Antworttext öffnen? Ein Tool, das nur „erwähnt: ja“ anzeigt, lässt Sie nicht nachprüfen, was die Engine gesagt hat und an welcher Stelle Ihre Marke vorkam.</li>
-            <li>Werden zitierte Quellen getrennt von Markennennungen gezeigt? Zitiert werden und genannt werden sind zwei verschiedene Probleme. Eine Engine kann in derselben Antwort Ihren Blogartikel zitieren und einen Wettbewerber empfehlen.</li>
-            <li>Zeigt es die Suchen, die die Engine ausgeführt hat? Für genau diese Suchanfragen müssen Ihre Seiten ranken, wenn Sie in der Antwort vorkommen wollen, so wie bei der Liste oben auf dieser Seite.</li>
+            <li>Werden zitierte Quellen getrennt von Markennennungen gezeigt? Zitiert werden und genannt werden sind <a href="/de/blog/ki-sichtbarkeit-ai-visibility/">zwei verschiedene Probleme</a>. Eine Engine kann in derselben Antwort Ihren Blogartikel zitieren und einen Wettbewerber empfehlen.</li>
+            <li>Zeigt es die Suchen, die die Engine ausgeführt hat? Für genau diese Suchanfragen müssen Ihre Seiten ranken, wenn Sie in der Antwort vorkommen wollen, so wie bei der Liste oben auf dieser Seite. Wie das bei ChatGPT funktioniert, steht in <a href="/de/blog/how-to-get-mentioned-by-chatgpt/">unserem Leitfaden zu ChatGPT-Empfehlungen</a>.</li>
             <li>Steht neben jedem Prozentwert die Zahl der Antworten? 40&nbsp;% Sichtbarkeit aus 5 Antworten und 40&nbsp;% aus 500 Antworten sind sehr unterschiedliche Befunde.</li>
-            <li>Welche Engines laufen in der Testphase, und sind es dieselben wie in dem Plan, den Sie kaufen würden? Eine Testphase auf drei Engines sagt nichts über die vierte, die Ihre Kunden nutzen. Die meisten Anbieter verraten es nicht: Von den neun Testphasen in der Tabelle unten nennen nur drei ihre Engines. Prüfen Sie es am ersten Tag, nicht am siebten.</li>
+            <li>Welche Engines laufen in der Testphase, und sind es dieselben wie in dem Plan, den Sie kaufen würden? Eine Testphase auf drei Engines sagt nichts über die vierte, die Ihre Kunden nutzen. Die meisten Anbieter verraten es nicht: Von den 19 Testphasen in der Tabelle unten nennen nur sechs ihre Engines. Prüfen Sie es am ersten Tag, nicht am siebten.</li>
             <li>Können Sie die Daten exportieren oder in einen Report übernehmen? Bleiben sie im Dashboard, kopiert irgendwann jemand jeden Monat Zahlen von Hand in Folien.</li>
           </ol>
 
           <h2 id="trial-terms">Testphasen im Überblick</h2>
-          <p>Das sind die Tools, die die KI-Antworten zu dieser Frage am häufigsten genannt haben (SE Ranking mit seinen beiden Produkten), plus CrunchJunkie, jeweils mit dem, was am 22. Oktober 2026 auf den Seiten des Anbieters stand. Wo eine Seite etwas nicht angibt, steht das so in der Tabelle. Zahlen von Bewertungsportalen übernehmen wir nicht.</p>
+          <p>Das sind die Tools, die die KI-Antworten zu dieser Frage genannt haben, dazu weitere Tracker mit Testphase, jeweils mit dem, was am 22. Oktober 2026 auf den Seiten des Anbieters stand. CrunchJunkie steht oben, weil es unser eigenes Tool ist. Wo eine Seite etwas nicht angibt, steht das so in der Tabelle. Zahlen von Bewertungsportalen übernehmen wir nicht.</p>
           <TrialTermsTable
             head={['Tool', 'Testphase', 'Karte', 'Engines in der Testphase']}
             names={{ 'SE Ranking': 'SE Ranking (Plattform)' }}
             rows={[
               ['14 Tage', 'Ja, keine Abbuchung vor Tag 14', 'Perplexity kostenlos, weitere mit eigenen API-Keys'],
               ['14 Tage', 'Nein', 'Nicht auf der Seite angegeben'],
+              ['14 Tage', 'Nein', 'Nicht auf der Seite angegeben'],
+              ['14 Tage', 'Ja, Abbuchung am Tag nach der Testphase', 'ChatGPT, Google AI Overviews, Perplexity'],
               ['14 Tage (Wochenpläne)', 'Ja, Zahlungsmittel', 'Nicht auf der Seite angegeben'],
               ['10 Tage', 'Nicht auf der Seite angegeben', 'Nicht auf der Seite angegeben'],
               ['7 Tage', 'Nein', 'Nicht auf der Seite angegeben'],
+              ['7 Tage', 'Nein', 'Alle acht, die es abdeckt'],
+              ['7 Tage', 'Nein', 'ChatGPT, Google AI Overviews, Microsoft Copilot'],
               ['7 Tage (Core-Plan)', 'Ja laut FAQ; die Preisseite sagt etwas anderes', 'ChatGPT, Perplexity, Google AI Overviews, Copilot'],
               ['7 Tage (Trial-Plan)', 'Nicht auf der Seite angegeben', 'ChatGPT, Gemini, Google AI Overviews'],
               ['7 Tage (Pro)', 'Nicht auf der Seite angegeben', 'Nicht auf der Seite angegeben'],
+              ['7 Tage', 'Ja, in der Testphase keine Abbuchung', 'Nicht genannt; der volle gewählte Plan'],
+              ['7 Tage', 'Nein', 'Nicht auf der Seite angegeben'],
+              ['7 Tage', 'Nicht auf der Seite angegeben', 'Nicht auf der Seite angegeben'],
+              ['7 Tage (Essential, Professional)', 'Nicht auf der Seite angegeben', 'Nicht auf der Seite angegeben'],
+              ['7 Tage', 'Für die Testphase nicht angegeben', 'Nicht auf der Seite angegeben'],
+              ['7 Tage (Startseite)', 'Nicht auf der Seite angegeben', 'Nicht auf der Seite angegeben'],
               ['7 Tage, nur auf einer Vergleichsseite', 'Nein, nur auf derselben Seite', 'Nicht auf der Seite angegeben'],
               ['Keine', '—', '—'],
             ]}
           />
-          <p style={{ margin: '0 0 24px', fontFamily: 'var(--font-mono)', fontSize: 11, letterSpacing: '0.5px', color: '#949494' }}>Jeder Toolname verlinkt auf die Anbieterseite, aus der die Zeile stammt, gelesen am 22. Oktober 2026. Der Button auf Otterlys Startseite nennt 14 Tage, das Hilfecenter und eine FAQ auf derselben Startseite nennen 7; die Tabelle folgt dem Hilfecenter. Laut Scrunch-FAQ ist eine Karte nötig, und die Testphase geht ohne Kündigung in einen bezahlten Plan über; die Preisseite sagt, es sei keine Kreditkarte nötig. Die Preisseite von Peec AI nennt keine Testbedingungen. Semrush bietet für die meisten seiner Toolkits 7 Tage Testphase an, laut eigener Wissensdatenbank aber nicht für das AI Visibility Toolkit.</p>
-          <p>Die Bedingungen ändern sich oft. Prüfen Sie deshalb am Tag der Anmeldung die Seite des Anbieters. Für Limits, Preise nach der Testphase und weitere Tools <a href="https://tikitaka.digital/ai-visibility-tools-kostenlos-testen/" target="_blank" rel="noopener noreferrer">haben wir die Testbedingungen aller Anbieter in einem eigenen Vergleich geprüft</a>.</p>
+          <p style={{ margin: '0 0 24px', fontFamily: 'var(--font-mono)', fontSize: 11, letterSpacing: '0.5px', color: '#949494' }}>Jeder Toolname verlinkt auf die Anbieterseite, aus der die Zeile stammt, gelesen am 22. Oktober 2026. Der Button auf Otterlys Startseite nennt 14 Tage, das Hilfecenter und eine FAQ auf derselben Startseite nennen 7; die Tabelle folgt dem Hilfecenter. Laut Scrunch-FAQ ist eine Karte nötig, und die Testphase geht ohne Kündigung in einen bezahlten Plan über; die Preisseite sagt, es sei keine Kreditkarte nötig. Die Preisseite von Peec AI nennt keine Testbedingungen. Laut Searchables AGB wird die Karte am Tag nach der Testphase automatisch belastet, und laut Nightwatch-FAQ wird abgerechnet, wenn Sie nicht innerhalb von 14 Tagen kündigen. DeepSmiths Preisseite sagt, Dauer und Limits der Testphase erfahre man bei der Anmeldung. Semrush bietet für die meisten seiner Toolkits 7 Tage Testphase an, laut eigener Wissensdatenbank aber nicht für das AI Visibility Toolkit.</p>
+          <p>Die Bedingungen ändern sich oft. Prüfen Sie deshalb am Tag der Anmeldung die Seite des Anbieters. Für Limits und Preise nach der Testphase <a href="https://tikitaka.digital/ai-visibility-tools-kostenlos-testen/" target="_blank" rel="noopener noreferrer">haben wir die Testbedingungen aller Anbieter in einem eigenen Vergleich geprüft</a>.</p>
+          <h3>Was auf den Seiten der Anbieter stand</h3>
+          <p>Screenshots vom 22. Oktober 2026, aufgenommen in Spanien und auf die Testbedingungen zugeschnitten. Die Preise erscheinen in Euro, weil die Seiten sie europäischen Besuchern so anzeigen.</p>
+          <TrialScreenshots
+            altPrefix="Screenshot von"
+            captions={{
+              nightwatch: 'Preisseite, unter jedem Plan „14-day free trial · No credit card required“.',
+              'se-ranking': 'Preisseite mit „Start free 14-day trial“ und „No credit card required“.',
+              searchable: 'Preisseite mit „Try it free, 14 days“ bei Pro und Scale; ChatGPT, Google AI Overviews und Perplexity sind enthalten.',
+              'llm-pulse': 'Startseite mit „14-day free trial“ und „Cancel anytime“.',
+              'se-visible': 'Preisseite: „explore SE Visible with a 10-day free trial“.',
+              otterly: 'Preisseite mit Plänen, aber ohne Testbedingungen. Die 7 Tage ohne Karte stehen im Hilfecenter.',
+              maxaeo: 'Startseite: „7-day free trial · no credit card“.',
+              ziptie: 'Preisseite: 7 Tage kostenlos mit 25 täglichen Prompts auf ChatGPT, Google AI Overviews und Microsoft Copilot, ohne Karte.',
+              scrunch: 'Preisseite: „Start 7-day free trial“ beim Core-Plan, der ChatGPT, Perplexity, Google AIO und Copilot abdeckt.',
+              profound: 'Preisseite: ein kostenloser Trial-Plan mit 50 Prompts, 7 Tage lang täglich auf ChatGPT, Gemini und Google AI Overviews.',
+              rankscale: 'Preisseite: „Try Pro free for 7 days“.',
+              kime: 'Preisseite mit „Try for free“ bei Explorer und Core. Die 7 Tage und die Karte erklärt die FAQ.',
+              writesonic: 'Startseite: „Start 7-Day Free Trial“.',
+              knowatoa: 'Preisseite mit „Start free trial“, aber ohne Dauer. Die 7 Tage stehen auf der Anmeldeseite für die Testphase.',
+              promptwatch: 'Preisseite: „Start 7-day free trial“ bei Essential und Professional; Business nur per Demo.',
+              llmrefs: 'Preisbereich: „Start 7-day Free Trial“ und „Cancel anytime“.',
+              deepsmith: 'Startseite: „Start 7-day free trial“.',
+              peec: 'Startseite mit einem Button „Start Free Trial“, ohne Angaben zu Dauer oder Karte.',
+            }}
+          />
 
           <h2 id="crunchjunkie-trial">Die Testphase von CrunchJunkie, nüchtern betrachtet</h2>
           <p>Die Testphase von CrunchJunkie dauert 14 Tage. Zum Start brauchen Sie eine Karte. Abgebucht wird aber nichts vor Tag 14, und wenn Sie vorher kündigen, zahlen Sie nichts.</p>
           <p>Alle Reports und Funktionen sind enthalten. Die Sichtbarkeits-Scans laufen auf Perplexity über die API-Keys von CrunchJunkie und kosten Sie nichts. Andere Engines testen Sie in dieser Zeit mit Ihren eigenen API-Keys. Die Testphase ist auf 1 Marke und 10 Prompts mit bis zu 2 Durchläufen pro Prompt begrenzt, und die Scans laufen täglich, ohne dass Sie sie anstoßen müssen.</p>
           <figure style={{ margin: '24px 0' }}>
-            <Image src="/blog/crunchjunkie-pricing-trial-card.jpg" alt="Preiskarte von CrunchJunkie: 37 € im Monat für 1 Marke und 20 Prompts, wöchentlich auf vier Engines geprüft, davon 12 € für die Software und 25 € für die Scans; die 14-tägige Testphase läuft kostenlos auf Perplexity" width={1042} height={1014} style={{ width: '100%', maxWidth: 521, height: 'auto', borderRadius: 4, border: '1px solid #e8e8e8' }} />
+            <Image src="/blog/crunchjunkie-pricing-trial-card.webp" alt="Preiskarte von CrunchJunkie: 37 € im Monat für 1 Marke und 20 Prompts, wöchentlich auf vier Engines geprüft, davon 12 € für die Software und 25 € für die Scans; die 14-tägige Testphase läuft kostenlos auf Perplexity" width={1042} height={1014} style={{ width: '100%', maxWidth: 521, height: 'auto', borderRadius: 4, border: '1px solid #e8e8e8' }} />
             <figcaption style={{ fontSize: 11, color: '#6a6a6a', fontFamily: 'var(--font-mono)', letterSpacing: '0.5px', marginTop: 8 }}>Die Preiskarte von CrunchJunkie: 37&nbsp;&euro; im Monat zzgl. MwSt. für eine Marke und 20 Prompts, wöchentlich auf vier Engines geprüft. Davon entfallen 12&nbsp;&euro; auf die Software und 25&nbsp;&euro; auf die Scans.</figcaption>
           </figure>
           <p>Nach der Testphase enthält jeder Plan alle zehn Engines: ChatGPT, Gemini, Claude, Perplexity, Grok, DeepSeek, Microsoft Copilot, Google AI Overviews, Google AI Mode und Meta AI. Es gibt keine Gebühr pro Engine und kein Prompt-Limit. Die Scans laufen entweder über Managed AI, dann führt CrunchJunkie sie aus und rechnet sie ab, oder über Ihre eigenen Keys zu den Preisen der Anbieter. Pläne und aktuelle Preise stehen auf der <a href="https://crunchjunkie.io/pricing" target="_blank" rel="noopener noreferrer">Preisseite von CrunchJunkie</a>.</p>
+          <figure style={{ margin: '24px 0' }}>
+            <Image src="/blog/crunchjunkie-plans-features-overview.webp" alt="CrunchJunkie-Pläne: Solo 12 €, Starter 49 €, Pro 124 € und Agency 186 € im Monat bei jährlicher Abrechnung, dazu die Funktionen jedes Plans: alle zehn KI-Engines ohne Gebühr pro Engine, kein Prompt-Limit, unbegrenzte Reports und Datenverbindungen, eigene API-Keys oder Managed AI" width={1400} height={803} loading="lazy" style={{ width: '100%', height: 'auto', borderRadius: 4, border: '1px solid #2d2d2d' }} />
+            <figcaption style={{ fontSize: 11, color: '#6a6a6a', fontFamily: 'var(--font-mono)', letterSpacing: '0.5px', marginTop: 8 }}>Die CrunchJunkie-Pläne am 22. Oktober 2026, jährliche Abrechnung, zzgl. MwSt. Die Pläne unterscheiden sich bei Marken und Team-Plätzen; alle vier enthalten die zehn Engines und haben kein Prompt-Limit.</figcaption>
+          </figure>
           <p>Die Einschränkung gehört offen gesagt. Ohne Karte kein Start, und die kostenlosen Scans decken eine einzige Engine ab. Wer in den 14 Tagen ChatGPT, Claude oder Gemini testen will, richtet eigene API-Keys ein. Mit 10 Prompts ist das ein guter Test des Tools und ein Ausschnitt Ihres Markts.</p>
 
           <h2 id="when-the-trial-ends">Wenn die Testphase endet</h2>
           <p>Nehmen Sie die Kriterien vom Anfang wieder zur Hand und haken Sie jedes als bestanden oder nicht bestanden ab, bevor Sie auf den Preis schauen.</p>
           <p>Dann vergleichen Sie die Preise, und zwar richtig. Der Preis, der groß auf der Seite steht, ist selten der, den Sie zahlen. Rechnen Sie die monatlichen Kosten für Ihre echte Prompt-Zahl aus, auf den Engines und im Scan-Rhythmus, die Sie brauchen. Manche Tools rechnen pro Prompt ab, manche verlangen für jede Engine extra, andere rechnen pro Domain. Dieselbe Arbeit kann deshalb sehr unterschiedlich viel kosten. Unser <a href="/de/blog/ai-visibility-tracking-tools-2026/">Leitfaden zu KI-Sichtbarkeits-Tools</a> zeigt, wie sich die einzelnen Preismodelle zusammenrechnen.</p>
           <p>Bestehen zwei Tools, nehmen Sie das, dessen Kosten Sie auch für die Prompt-Zahl im nächsten Jahr vorhersagen können, nicht nur für diesen Monat.</p>
-
-          <h2 id="faq">Häufige Fragen</h2>
-          {deFreeTrialFaqs.map(({ q, a }) => (
-            <div key={q}>
-              <h3>{q}</h3>
-              <p>{a}</p>
-            </div>
-          ))}
 
           <p>Möchten Sie wissen, wie Ihre Marke in der KI-Suche abschneidet? <a href="/de/contact/?topic=geo-audit">Schildern Sie uns kurz Ihre Situation</a> &mdash; wir melden uns innerhalb eines Werktages. Das erste Gespräch: 30 Minuten, auf unsere Rechnung.</p>
         </>
@@ -2901,7 +2933,6 @@ export const de = {
           <p>Rollen Sie Kampagne für Kampagne aus, nicht kontoweit an einem Abend. Jede Kampagne hat ihren eigenen Mix aus Marken- und generischer Nachfrage — und derselbe Mechanismus, der AI Max in der einen nützlich macht, macht ihn in der anderen teuer.</p>
           <p>Weiterlesen: <a href="/de/blog/performance-max-bidding-change-august-2026/">die Gebotsänderung bei Performance Max</a> funktioniert nach demselben Prinzip — ein Ziel, das auf einen veränderten Traffic-Mix angewendet wird. Und <a href="/de/blog/crm-conversion-imports/">CRM-Conversion-Importe</a> verhindern, dass eine Gebotsstrategie auf Leads optimiert, die nie abschließen. Wenn jemand den Aufbau prüfen soll, der solche Tests wöchentlich fährt: Das ist unsere <a href="/de/services/google-ads/">Google-Ads-Arbeit</a>.</p>
 
-          <h2 id="faq">Häufige Fragen</h2>
         </>
       ),
     },
@@ -3022,19 +3053,6 @@ export const de = {
 
           <h2>Wie pmax helfen kann</h2>
           <p>Wir betreiben KI-Sichtbarkeitsprogramme für Unternehmen in ganz Europa und behandeln Perplexity, ChatGPT und Googles KI-Overviews als getrennte Oberflächen mit getrennten Bewertungen &mdash; weil sie es sind. Das heißt: ein Audit pro Maschine, die technischen Grundlagen, Content und PR sowie eine monatliche Messung, die Sie tatsächlich lesen können. Wenn Sie eine kostenlose einseitige Perplexity-Sichtbarkeitsanalyse für Ihre Marke möchten, <a href="/de/contact/?topic=perplexity-audit">schildern Sie uns kurz Ihre Situation</a> und wir senden sie innerhalb einer Woche zurück.</p>
-
-          <h2>Häufige Fragen</h2>
-          <h3>Wie werde ich von Perplexity zitiert?</h3>
-          <p>Sorgen Sie dafür, dass PerplexityBot Ihre Website crawlen kann, veröffentlichen Sie antwortorientierte, leicht zitierbare Inhalte und verdienen Sie Nennungen auf den Quellen, denen Perplexity vertraut &mdash; Wikipedia, etablierte Bewertungsseiten, seriöse Publikationen und relevante Reddit-Threads. Dann messen Sie monatlich und bleiben dran.</p>
-
-          <h3>Warum erscheint mein Unternehmen nicht in Perplexity, obwohl es bei Google rankt?</h3>
-          <p>Weil es unterschiedliche Systeme sind. Perplexity bevorzugt Seiten, die es live abrufen und sauber zitieren kann, und stützt sich auf einen engen Kreis vertrauenswürdiger Domains zur Validierung. Eine Seite kann bei Google ranken und trotzdem schwer crawlbar, schwer zitierbar oder durch die Drittanbieter-Signale, die Perplexity sucht, nicht gestützt sein.</p>
-
-          <h3>Ist Perplexity-Sichtbarkeit dasselbe wie ChatGPT-Sichtbarkeit?</h3>
-          <p>Nein. Die von beiden Maschinen zitierten Domains überschneiden sich erstaunlich wenig, daher brauchen beide eigene Bestandsaufnahmen und oft eigene Taktiken. In der einen aufzutauchen überträgt sich nicht auf die andere.</p>
-
-          <h3>Wie lange dauert Perplexity-Sichtbarkeit?</h3>
-          <p>Technische und strukturelle Korrekturen können innerhalb von Wochen sichtbar werden, weil Perplexity laufend neu crawlt und neu beantwortet. Das Drittanbieter-Vertrauen aufzubauen, das Zitate verlässlich macht, dauert in der Regel etwa zwei bis drei Monate stetiger Arbeit.</p>
 
           <h2>Weiterführende Links</h2>
           <ul>
@@ -3678,28 +3696,6 @@ export const de = {
         <h2 id="verdict">Das ehrliche Fazit</h2>
         <p>Pinterest Ads sind 2026 wirklich gut für eine spezifische, identifizierbare Gruppe von Unternehmen: Wohnen und Einrichten, Hochzeiten, Mode, Food, DIY &mdash; alles, was durch visuelle Planung über ein langes Zeitfenster gekauft wird. Für diese ist es einer der günstigsten Kanäle im Paid Media, und die Retargeting-Tools sind besser als der Ruf der „Inspirationsplattform" vermuten lässt. Für einen lokalen Einrichtungs- oder Sonnenschutz-Showroom ist es kein langer Schuss &mdash; es ist nah am Kernnutzen der Plattform.</p>
         <p>Für alle anderen &mdash; Commodity-E-Commerce, Impulskäufe, die meisten B2B-Fälle, alles Preisgetriebene &mdash; ist es ein „vielleicht später"-Kanal. Fahren Sie zuerst Google und Meta ordentlich.</p>
-
-        <h2 id="faqs">Häufige Fragen</h2>
-        <details className="cmp-faq" open>
-          <summary>Kann jeder Pinterest Ads schalten?</summary>
-          <p>Fast. Sie benötigen ein kostenloses Pinterest-Business-Konto und eine verifizierbare Website &mdash; Ads Manager ist Self-Serve, sodass ein Solo-Inhaber ohne Agentur starten kann. Die einzige echte Hürde ist die Geografie: Pinterest Ads sind nicht in jedem Land verfügbar, aber in den meisten europäischen Ländern, darunter Spanien, Deutschland, UK und die gesamte EU.</p>
-        </details>
-        <details className="cmp-faq">
-          <summary>Für wen funktionieren Pinterest Ads wirklich?</summary>
-          <p>Visuell geplante, durchdachte Käufe: Wohneinrichtung, Sonnenschutz und Möbel, Hochzeiten, Mode und Beauty, Food und DIY, Reisen. Der gemeinsame Nenner sind Menschen, die einen zukünftigen Kauf Wochen im Voraus planen. Impulskauf-, Commodity- und preisgetriebene Kategorien tendieren zur Underperformance.</p>
-        </details>
-        <details className="cmp-faq">
-          <summary>Wie funktioniert Pinterest Retargeting?</summary>
-          <p>Installieren Sie den Pinterest Tag (oder die Conversions API) und Sie können Website-Besucher retargetieren, eine gehashte Kundenliste hochladen (mindestens ~100 Matches), Personen retargetieren, die mit Ihren organischen Pins interagiert haben, Actalike-Zielgruppen erstellen und dynamisches Retargeting betreiben, das Personen die genauen Produkte zeigt, die sie aus einem Catalog-Feed angesehen haben.</p>
-        </details>
-        <details className="cmp-faq">
-          <summary>Kann ein lokales Unternehmen mit einem Showroom Pinterest Ads nutzen?</summary>
-          <p>Ja. Geo-targetieren Sie die Auslieferung auf die Stadt des Showrooms, Postleitzahlen oder einen Radius um das Geschäft, und verwenden Sie ortsspezifisches Creative &mdash; idealerweise mit der Geschäftsadresse darauf. Für einen lokalen Showroom funktioniert Pinterest am besten als eine Schicht einer Cross-Platform-Retargeting-Strategie neben YouTube-Video und statischem Display.</p>
-        </details>
-        <details className="cmp-faq">
-          <summary>Was kosten Pinterest Ads 2026?</summary>
-          <p>Günstig auf Media-Basis: CPC typischerweise &euro;0,10&ndash;&euro;1,50, CPM etwa &euro;2&ndash;&euro;5. Der niedrige Preis ist ein zweischneidiges Schwert &mdash; es ist einfach, Geld für Reichweite auszugeben, die nie konvertiert, also sind Kosten pro Akquisition (oder pro qualifiziertem Showroom-Besuch) die einzige Zahl, die zählt.</p>
-        </details>
 
         <h2 id="closing">Möchten Sie wissen, ob Pinterest zu Ihrem Unternehmen passt?</h2>
         <p>Wir betreiben Paid Media &mdash; Google, Meta, Microsoft, TikTok und Pinterest &mdash; für Marken in ganz Europa und sagen Ihnen ehrlich, ob Pinterest in Ihren Mix gehört oder ob das Budget besser anderswo eingesetzt wird. <a href="/de/contact/?topic=pinterest-ads">Kostenloses 30-Minuten-Gespräch buchen</a>. Keine Folien, kein Sales-Pitch.</p>

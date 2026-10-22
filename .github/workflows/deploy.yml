@@ -45,6 +45,14 @@ jobs:
       - name: Check internal links
         run: npm run check:links
 
+      # Blocks the deploy on blog SEO basics in all three languages: share
+      # images that are missing or declare the wrong size, schema that is not
+      # ISO-dated or lists FAQs the page doesn't show, escaped entities in
+      # titles, and images without alt text, dimensions or a kebab-case name.
+      # Length and future-date issues only warn.
+      - name: Check blog SEO
+        run: npm run check:seo
+
       - name: Inject deploy secret into webhook script
         env:
           DEPLOY_SECRET: ${{ secrets.DEPLOY_SECRET }}

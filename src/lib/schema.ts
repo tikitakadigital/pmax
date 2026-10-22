@@ -113,19 +113,23 @@ const articleAuthors: Record<string, object> = {
   },
 }
 
-export function article({ headline, description, url, datePublished, dateModified, keywords, image, author }: {
+/** Dates must be ISO 8601 (YYYY-MM-DD); blog.ts stores them as 'Oct 22, 2026'. */
+export function article({ headline, description, url, datePublished, dateModified, keywords, image, author, inLanguage = 'en-GB', section }: {
   headline: string
   description: string
   url: string
   datePublished: string
   dateModified?: string
   keywords?: string[]
-  image?: string
+  image?: { url: string; width: number; height: number }
   author?: string
+  inLanguage?: string
+  section?: string
 }) {
   return {
     '@context': 'https://schema.org',
     '@type': 'BlogPosting',
+    '@id': `${url}#article`,
     headline,
     description,
     url,
@@ -133,10 +137,12 @@ export function article({ headline, description, url, datePublished, dateModifie
     dateModified: dateModified ?? datePublished,
     author: articleAuthors[author ?? 'Philipp Enders'] ?? articleAuthors['Philipp Enders'],
     publisher: { '@id': 'https://pmax.online/#org' },
+    isPartOf: { '@id': 'https://pmax.online/#site' },
     mainEntityOfPage: { '@type': 'WebPage', '@id': url },
-    inLanguage: 'en-GB',
+    inLanguage,
+    ...(section && { articleSection: section }),
     ...(keywords?.length && { keywords: keywords.join(', ') }),
-    ...(image && { image: `https://pmax.online${image}` }),
+    ...(image && { image: { '@type': 'ImageObject', url: image.url, width: image.width, height: image.height } }),
   }
 }
 

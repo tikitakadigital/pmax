@@ -4,11 +4,14 @@ import Image from 'next/image'
 import { notFound } from 'next/navigation'
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
-import { breadcrumb, faqPage } from '@/lib/schema'
+import FaqList from '@/components/FaqList'
+import { breadcrumb, article as articleSchema, faqPage } from '@/lib/schema'
 import { posts, getPost } from '@/lib/content/blog'
 import { getBlogDetail } from '@/lib/content/blog-detail'
 import { getT, isPostTranslated, blogAlternates } from '@/lib/i18n'
 import { blogSlug, canonicalBlogSlug, blogPath } from '@/lib/content/blog-slugs'
+import { isoDate, postImage, postSocial, relatedPosts } from '@/lib/blog-seo'
+import { imageSize } from '@/lib/image-size'
 
 export function generateStaticParams() {
   return ['de','es'].flatMap(lang =>
@@ -31,7 +34,8 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   // is matched on exact URLs, so the two sides disagreeing about a trailing
   // slash would break it as surely as a missing tag.
   const isTranslated = isPostTranslated(slug, lang)
-  const ogImage = post.ogImage ?? '/og-image.jpg'
+  const title = loc?.title ?? locPost?.title ?? post.title
+  const description = loc?.deck ?? locPost?.deck ?? post.deck
   return {
     title: loc?.title ? `${loc.title} | pmax` : locPost?.title ? `${locPost.title} | pmax` : post.seoTitle,
     description: loc?.deck ?? locPost?.deck ?? post.deck,
@@ -46,17 +50,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
       // made the page look like part of a cluster it had deliberately left.
       canonical: `https://pmax.online/blog/${slug}/`,
     },
-    openGraph: {
-      siteName: 'pmax',
-      title: loc?.title ?? locPost?.title ?? post.title,
-      description: loc?.deck ?? locPost?.deck ?? post.deck,
-      type: 'article',
-      images: [{ url: `https://pmax.online${ogImage}`, width: 1200, height: 630 }],
-    },
-    twitter: {
-      card: 'summary_large_image',
-      images: [`https://pmax.online${ogImage}`],
-    },
+    ...postSocial(post, lang, `https://pmax.online${blogPath(slug, lang)}`, title, description),
   }
 }
 
@@ -89,12 +83,24 @@ export default async function BlogPostPage({ params }: { params: Promise<{ lang:
   const tocIds = detail?.tocIds
 
   const localFaqs = loc?.faqs ?? detail?.faqs
+  const related = relatedPosts(post, lang)
   const jsonLd = [
     breadcrumb([
       { name: 'Home', url: `https://pmax.online/${lang}/` },
       { name: blogLabel, url: `https://pmax.online/${lang}/blog/` },
-      { name: localCategory, url: `https://pmax.online${blogPath(slug, lang)}` },
+      { name: title, url: `https://pmax.online${blogPath(slug, lang)}` },
     ]),
+    articleSchema({
+      headline: title,
+      description: deck,
+      url: `https://pmax.online${blogPath(slug, lang)}`,
+      datePublished: isoDate(post.date),
+      dateModified: post.dateModified ? isoDate(post.dateModified) : undefined,
+      image: postImage(post),
+      author: post.author,
+      inLanguage: lang,
+      section: localCategory,
+    }),
     ...(localFaqs?.length ? [{ ...faqPage(localFaqs), inLanguage: lang }] : []),
   ]
 
@@ -138,14 +144,33 @@ export default async function BlogPostPage({ params }: { params: Promise<{ lang:
                   <Image
                     src={detail.image}
                     alt={detail.imageAlt ?? post.title}
-                    width={1200}
-                    height={630}
+                    width={imageSize(detail.image)?.width ?? 1200}
+                    height={imageSize(detail.image)?.height ?? 630}
                     priority
                     sizes="(max-width: 768px) 100vw, 760px"
                     style={{ width: '100%', height: 'auto', display: 'block', borderRadius: 4, marginBottom: 32 }}
                   />
                 )}
                 {prose}
+
+                {/* Same items as the FAQPage schema above, so the two always match. */}
+                {localFaqs?.length ? (
+                  <>
+                    <h2 id="faq">{lang === 'de' ? 'Häufige Fragen' : 'Preguntas frecuentes'}</h2>
+                    <FaqList items={localFaqs} />
+                  </>
+                ) : null}
+
+                {related.length > 0 && (
+                  <div className="prose-callout" style={{ marginTop: 48 }}>
+                    <span className="prose-callout-kicker">{lang === 'de' ? `Mehr zum Thema ${localCategory}` : `Más sobre ${localCategory}`}</span>
+                    <ul style={{ margin: '8px 0 0', paddingLeft: 18 }}>
+                      {related.map(r => (
+                        <li key={r.slug}><Link href={blogPath(r.slug, lang)}>{b.posts.find(bp => bp.slug === r.slug)?.title ?? r.title}</Link></li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
               </div>
               <aside className="blog-aside">
                 <div className="blog-aside-label">{lang === 'de' ? 'Auf dieser Seite' : 'En esta página'}</div>
