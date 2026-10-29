@@ -520,11 +520,11 @@ WHERE campaign.advertising_channel_type = 'PERFORMANCE_MAX'`}</code></pre>
   faqs: [
     {
       q: 'How long does an AI Max test need to run?',
-      a: 'Six weeks as a minimum: roughly two weeks of learning that you exclude from the evaluation, then at least four weeks of measurement. Shorter tests mostly measure how long the bidding strategy took to settle, not what AI Max did.',
+      a: 'Six weeks as a minimum: roughly two weeks of ramp-up that you exclude from the evaluation, then at least four weeks of measurement. Shorter tests mostly measure how long the bidding strategy took to settle, not what AI Max did.',
     },
     {
       q: 'Does AI Max have a learning phase, and how long is it?',
-      a: 'Yes. Enabling or disabling search term matching restarts learning for the campaign, typically one to two weeks. Both the switch-on and the switch-off have one, which is why a reverse test also needs a waiting period before you read the numbers.',
+      a: 'Not in the sense of the "Learning" status: Google\'s help page lists only new bid strategies, composition changes and significant conversion-goal changes as triggers. It still needs time. AI Max moves the campaign onto queries it has no conversion history for, Google\'s own AI Max experiment guide plans for a learning period and ramp-up time, and Smart Bidding takes one to two conversion cycles to settle after any change. Plan about two weeks before you read the numbers, after switching on and again after switching off.',
     },
     {
       q: 'Can I A/B test AI Max by duplicating the campaign?',
@@ -542,12 +542,12 @@ WHERE campaign.advertising_channel_type = 'PERFORMANCE_MAX'`}</code></pre>
   prose: (
     <>
       <p>Google reports that advertisers who switch on <a href="https://support.google.com/google-ads/answer/15910366?hl=en" target="_blank" rel="noopener noreferrer">AI Max for Search campaigns</a> typically see 14% more conversions or conversion value at a similar CPA. That is an average across accounts that chose to turn it on. It is not a forecast for your account, and the only way to find out what it does to yours is to test it.</p>
-      <p>The problem is that most AI Max tests answer a different question than the one that was asked. They measure the learning phase, or a budget change, or a campaign competing against itself. This is a method, not a verdict: how to set a test up so the result means something, and how to read it when it arrives.</p>
+      <p>The problem is that most AI Max tests answer a different question than the one that was asked. They measure the ramp-up, or a budget change, or a campaign competing against itself. This is a method, not a verdict: how to set a test up so the result means something, and how to read it when it arrives.</p>
 
       <h2 id="how-tests-lie">Three ways an AI Max test lies to you</h2>
       <p>Before the setup, the three failures that account for nearly every inconclusive AI Max test we have seen:</p>
       <ol>
-        <li><strong>The learning phase sits inside the measurement window.</strong> Turning search term matching on restarts learning for the campaign. If your &ldquo;after&rdquo; period starts on the day you flipped the switch, the first week or two mostly describes an algorithm finding its feet. Campaigns usually look worse during it, which is why the internet is full of AI Max horror stories that are really learning-phase screenshots.</li>
+        <li><strong>The ramp-up sits inside the measurement window.</strong> Turning search term matching on sends the campaign onto queries it has no conversion history for. Google&rsquo;s help page doesn&rsquo;t list that among the triggers of the &ldquo;Learning&rdquo; status, which are new bid strategies, composition changes and significant goal changes, but <a href="https://support.google.com/google-ads/answer/16450159?hl=en" target="_blank" rel="noopener noreferrer">Google&rsquo;s own AI Max experiment guide</a> still plans for a learning period and ramp-up time. If your &ldquo;after&rdquo; period starts on the day you flipped the switch, the first week or two mostly describes the system finding its feet. Campaigns usually look worse during it, which is why the internet is full of AI Max horror stories that are really ramp-up screenshots. What does and doesn&rsquo;t restart learning is covered in <a href="/blog/google-ads-learning-phase-black-friday-2026/">our learning phase guide</a>.</li>
         <li><strong>Something else changed at the same time.</strong> A budget increase, a new target CPA, a seasonal peak, a landing page release. Any one of them makes attribution impossible, and the temptation to adjust is strongest exactly when the test dips.</li>
         <li><strong>The A/B test is two campaigns fighting each other.</strong> Duplicating a campaign to run a control and a variant sounds rigorous and is the worst option of the three: both campaigns enter the same auctions for the same queries, so what you measure is the collision. Google&rsquo;s own <a href="https://support.google.com/google-ads/answer/16450159?hl=en" target="_blank" rel="noopener noreferrer">AI Max experiments</a> avoid this by splitting traffic inside a single campaign.</li>
       </ol>
@@ -567,15 +567,15 @@ WHERE campaign.advertising_channel_type = 'PERFORMANCE_MAX'`}</code></pre>
       <h2 id="five-rules">Five rules for a clean test</h2>
       <p>Assuming there is something to find, five rules carry the whole method:</p>
       <ol>
-        <li><strong>Exclude the learning phase.</strong> Plan two weeks of learning that are not part of the evaluation. Write the dates down before you start, so the window cannot quietly move once the first numbers look bad.</li>
+        <li><strong>Exclude the ramp-up.</strong> Plan two weeks of ramp-up that are not part of the evaluation. Write the dates down before you start, so the window cannot quietly move once the first numbers look bad.</li>
         <li><strong>Freeze the levers.</strong> Budget, target CPA or ROAS, bidding strategy, keyword structure and landing pages stay untouched for the full test. If you have to change one, the test ends and a new one begins.</li>
-        <li><strong>Give it at least four weeks of measurement</strong> after the learning period. In a campaign with a handful of conversions a week, longer — a result built on fifteen conversions is a coin toss with extra steps.</li>
+        <li><strong>Give it at least four weeks of measurement</strong> after the ramp-up. In a campaign with a handful of conversions a week, longer — a result built on fifteen conversions is a coin toss with extra steps.</li>
         <li><strong>Test one thing.</strong> Leave automatic text customisation and final URL expansion off for the first test. With all three on you are measuring a package, and when the result is negative you will not know which part caused it.</li>
         <li><strong>Write the success criteria down first.</strong> Primary metric, the threshold that counts as a win, and what you do in each outcome. Criteria written after the result are not criteria, they are a story.</li>
       </ol>
       <figure style={{ margin: '36px 0' }}>
         <div style={{ overflowX: 'auto' }}>
-          <svg viewBox="0 0 640 170" style={{ width: '100%', maxWidth: 640, display: 'block' }} role="img" aria-label="Test window: six weeks before, the switch, two weeks of learning excluded, four or more weeks measured">
+          <svg viewBox="0 0 640 170" style={{ width: '100%', maxWidth: 640, display: 'block' }} role="img" aria-label="Test window: six weeks before, the switch, two weeks of ramp-up excluded, four or more weeks measured">
             <rect x="0" y="54" width="196" height="40" rx="3" fill="none" stroke="#2d2d2d" strokeWidth="1.5" />
             <rect x="204" y="54" width="128" height="40" rx="3" fill="#1b1b1b" stroke="#3a3a3a" strokeWidth="1.5" strokeDasharray="5 4" />
             <rect x="340" y="54" width="300" height="40" rx="3" fill="#3cffd0" fillOpacity="0.16" stroke="#3cffd0" strokeWidth="1.5" />
@@ -583,7 +583,7 @@ WHERE campaign.advertising_channel_type = 'PERFORMANCE_MAX'`}</code></pre>
             <circle cx="200" cy="36" r="4" fill="#3cffd0" />
             <text x="200" y="26" textAnchor="middle" fontFamily="var(--font-mono), monospace" fontSize="10" letterSpacing="1.5" fill="#3cffd0">AI MAX ON</text>
             <text x="98" y="79" textAnchor="middle" fontFamily="var(--font-sans), sans-serif" fontSize="13" fill="#e8e8e8">Baseline — 6 weeks</text>
-            <text x="268" y="73" textAnchor="middle" fontFamily="var(--font-sans), sans-serif" fontSize="13" fill="#949494">Learning — 2 weeks</text>
+            <text x="268" y="73" textAnchor="middle" fontFamily="var(--font-sans), sans-serif" fontSize="13" fill="#949494">Ramp-up — 2 weeks</text>
             <text x="268" y="89" textAnchor="middle" fontFamily="var(--font-mono), monospace" fontSize="9" letterSpacing="1" fill="#6b6b6b">EXCLUDED</text>
             <text x="490" y="73" textAnchor="middle" fontFamily="var(--font-sans), sans-serif" fontSize="13" fill="#e8e8e8">Test — 4+ weeks</text>
             <text x="490" y="89" textAnchor="middle" fontFamily="var(--font-mono), monospace" fontSize="9" letterSpacing="1" fill="#3cffd0">MEASURED</text>
@@ -591,7 +591,7 @@ WHERE campaign.advertising_channel_type = 'PERFORMANCE_MAX'`}</code></pre>
             <text x="320" y="146" textAnchor="middle" fontFamily="var(--font-mono), monospace" fontSize="10" letterSpacing="1.2" fill="#949494">BUDGET, TARGET CPA, KEYWORDS AND LANDING PAGES FROZEN THROUGHOUT</text>
           </svg>
         </div>
-        <figcaption style={{ fontSize: 13, color: '#949494', marginTop: 12, lineHeight: 1.6 }}>A test window that answers the question: six weeks of baseline, then roughly two weeks of learning that never enter the evaluation, then at least four weeks of measurement — with every other lever frozen from start to finish.</figcaption>
+        <figcaption style={{ fontSize: 13, color: '#949494', marginTop: 12, lineHeight: 1.6 }}>A test window that answers the question: six weeks of baseline, then roughly two weeks of ramp-up that never enter the evaluation, then at least four weeks of measurement — with every other lever frozen from start to finish.</figcaption>
       </figure>
           <p>On the test mechanism itself: Google&rsquo;s AI Max experiment splits traffic within one campaign, with a control arm that has AI Max off and a trial arm that has it on, which is cleaner than any duplicate-campaign construction. It is not available everywhere — campaigns using portfolio bidding, shared budgets, text customisation or another running experiment are excluded — and in those cases a frozen before/after comparison is the honest fallback. It is weaker evidence, and worth saying so in the report.</p>
 
@@ -629,7 +629,7 @@ WHERE campaign.advertising_channel_type = 'PERFORMANCE_MAX'`}</code></pre>
       <ul>
         <li><strong>Is the difference bigger than your normal noise?</strong> Look at weekly variation in the six weeks before the test. If conversions routinely swing 15% week to week, a 7% difference is not a finding.</li>
         <li><strong>Did your most valuable query survive?</strong> A campaign that gained 5% overall while its best query lost 20% has not improved. It has redistributed, and the redistribution will usually keep going.</li>
-        <li><strong>Does it reverse?</strong> The cheapest confirmation available: switch AI Max off, wait out the new learning period, measure three unchanged weeks. If the metrics return, you have a mechanism rather than a coincidence.</li>
+        <li><strong>Does it reverse?</strong> The cheapest confirmation available: switch AI Max off, wait out the ramp-up again, measure three unchanged weeks. If the metrics return, you have a mechanism rather than a coincidence.</li>
       </ul>
       <p>Whatever the verdict, one thing is worth keeping: the queries AI Max discovered that converted. Book them as keywords in their own right. Even a failed test usually pays for itself here, and the keywords stay yours after you switch it off.</p>
       <p>Be honest about the strength of the evidence, too. A before/after comparison with frozen levers is good practical evidence, not proof — the campaign still ran in a world where competitors, demand and Google&rsquo;s own systems moved. Say &ldquo;most plausible explanation&rdquo; when that is what you have. Everyone reading your report already knows the difference.</p>

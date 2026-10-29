@@ -55,6 +55,7 @@ export const posts: Post[] = [
     variant: 'is-slate',
     featured: true,
     ogImage: '/og/how-to-test-ai-max.jpg',
+    dateModified: 'Oct 29, 2026',
     author: 'Philipp Enders',
   },
   {
