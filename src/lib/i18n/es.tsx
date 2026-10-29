@@ -1,6 +1,6 @@
 import type { ReactNode } from 'react'
 import Image from 'next/image'
-import { TrialTermsTable, TrialScreenshots } from '@/lib/content/blog-detail'
+import { TrialTermsTable, TrialScreenshots, DateTimeline } from '@/lib/content/blog-detail'
 import type { ServiceDetail, IndustryDetail, LocalizedCaseDetail, LocalizedBlogDetail } from './de'
 export type { ServiceDetail, IndustryDetail, LocalizedCaseDetail, LocalizedBlogDetail }
 
@@ -809,6 +809,7 @@ export const es = {
     promoDeck: 'No gestionamos una lista de email — pero si hay un tema sobre el que quieras que escribamos, cuéntanoslo.',
     promoBtn: 'Sugerir un tema',
     posts: [
+      { slug: 'google-ads-learning-phase-black-friday-2026', title: 'Antes del Black Friday: qué reinicia la fase de aprendizaje de Google Ads y qué se activa solo', deck: 'Cambiar objetivo o presupuesto no reinicia el aprendizaje, confirma Google. Las campañas nuevas sí, y desde el 4 de diciembre PMax usa las imágenes de tu web.' },
       { slug: 'ai-visibility-tool-free-trial', title: 'Cómo probar una herramienta de visibilidad en IA', deck: 'Una prueba de 7 o 14 días no dice si tu marca es visible en las respuestas de IA. Sí dice si la herramienta sirve. Qué revisar antes del primer cobro.' },
       { slug: 'how-to-test-ai-max', title: 'Cómo probar AI Max sin engañarte a ti mismo', deck: 'La mayoría de pruebas de AI Max miden la fase de aprendizaje, un cambio de presupuesto o una campaña que se canibaliza — no AI Max. Así se monta una prueba limpia.' },
       { slug: 'google-ads-agency-mallorca', title: 'Cómo elegir una agencia de Google Ads en Mallorca — y las preguntas que las distinguen', deck: 'La mayoría de agencias de Google Ads en Mallorca venden el mismo paquete. Aquí está cómo identificar cuáles conocen realmente el mercado local — y las tres preguntas que revelan si una agencia vale lo que cobra.' },
@@ -2788,6 +2789,123 @@ export const es = {
           </div>
 
           <p>Si algo de lo anterior te resulta familiar, <a href="/es/contact/?topic=geo-audit">cuéntanos un poco tu situación</a> y te respondemos en un día laborable. La primera conversación son 30 minutos, invita la casa.</p>
+        </>
+      ),
+    },
+    'google-ads-learning-phase-black-friday-2026': {
+      seoTitle: 'Fase de aprendizaje Google Ads y Black Friday 2026 | pmax',
+      toc: ['Lo que dijo Google exactamente', 'Qué reinicia el aprendizaje y qué no', 'Qué hacer antes del Black Friday', '4 de diciembre: las nuevas campañas PMax usan las imágenes de tu web', 'Las próximas seis semanas, en orden', 'Preguntas frecuentes', 'Fuentes'],
+      faqs: [
+        { q: '¿Cambiar el ROAS objetivo o el CPA objetivo reinicia la fase de aprendizaje en Google Ads?', a: 'No. Según la página de ayuda de Google sobre el periodo de aprendizaje, los cambios en los presupuestos, los objetivos, las creatividades o la segmentación nunca eliminan el historial de datos ni activan el estado "Aprendiendo". Tal Akabas, product manager de Google Ads, lo confirmó para las campañas ya en marcha en el podcast Ads Decoded el 15 de octubre de 2026. El nuevo objetivo se aplica desde la siguiente subasta; el rendimiento tarda entre uno y dos ciclos de conversión en estabilizarse.' },
+        { q: '¿Qué activa la fase de aprendizaje en Google Ads?', a: 'Google señala tres causas: una estrategia de puja nueva o reactivada, campañas o palabras clave que se añaden a una estrategia de puja o se quitan de ella, y un cambio importante en los objetivos o acciones de conversión. Una campaña completamente nueva también muestra el estado, porque todavía no tiene historial propio.' },
+        { q: '¿Cuánto dura la fase de aprendizaje en Google Ads?', a: 'El estado "Aprendiendo" nunca dura más de 7 días, según Google. El rendimiento tarda más: Smart Bidding suele converger con un objetivo nuevo en un plazo de entre 1 y 2 ciclos de conversión. Google recomienda evaluar un cambio durante 2 ciclos de conversión o un periodo de 2 semanas, lo que sea más largo.' },
+        { q: '¿La extracción de imágenes está activada por defecto en Performance Max?', a: 'Desde el 4 de diciembre de 2026, sí, en las campañas nuevas. La extracción de imágenes viene activada por defecto en toda campaña de Performance Max creada a partir de esa fecha, en la interfaz de Google Ads, en Google Ads Editor y en la API, aunque los recursos de imagen dinámica estén desactivados a nivel de cuenta. Las campañas existentes conservan su configuración.' },
+        { q: '¿Cómo evito que Performance Max use imágenes de mi web?', a: 'Decide campaña por campaña. Con la API de Google Ads, pon GENERATE_IMAGE_EXTRACTION en OPTED_OUT dentro de asset_automation_settings al crear la campaña. En la interfaz, revisa la opción de imágenes de la página de destino en cada nueva campaña de Performance Max antes de publicarla, porque desde el 4 de diciembre el ajuste de recursos de imagen dinámica de la cuenta ya no decide por las campañas nuevas.' },
+      ],
+      prose: (
+        <>
+          <p>Si cambias el objetivo o el presupuesto de una campaña de Google Ads que ya está en marcha, no vuelve a una fase de aprendizaje. Lo dijo Tal Akabas, de Google, en el podcast Ads Decoded el 15 de octubre de 2026, y la página de ayuda de Google sobre el periodo de aprendizaje ya lo dice por escrito. Hay dos tipos de cambios que sí la activan: todo lo nuevo y todo lo que cambia aquello para lo que optimiza la campaña.</p>
+          <p>Un segundo cambio llega cuatro días después del Cyber Monday. Desde el 4 de diciembre de 2026, toda campaña nueva de Performance Max toma por defecto imágenes de tus páginas de destino, incluso en cuentas que tienen desactivadas las imágenes dinámicas. Juntando las dos cosas, el plan para las próximas seis semanas es corto: ajusta lo que ya funciona y revisa qué activa por su cuenta todo lo nuevo.</p>
+          <DateTimeline
+            ariaLabel="Línea de tiempo: 15 de octubre, Google confirma que los cambios de objetivo y presupuesto no reinician el aprendizaje; 27 de noviembre, Black Friday; 30 de noviembre, Cyber Monday; 4 de diciembre, extracción de imágenes activada por defecto en las nuevas campañas de Performance Max"
+            caption="Cuatro fechas para el final de 2026. Todo lo anterior al 4 de diciembre va de ajustar campañas que ya funcionan; todo lo posterior afecta a las campañas que crees."
+            items={[
+              { date: '15 OCT', label: 'Google: objetivos y\npresupuestos no reinician\nel aprendizaje' },
+              { date: '27 NOV', label: 'Black Friday', accent: true },
+              { date: '30 NOV', label: 'Cyber Monday', accent: true },
+              { date: '4 DIC', label: 'Nuevas campañas PMax:\nextracción de imágenes\nactivada por defecto' },
+            ]}
+          />
+
+          <h2 id="what-google-said">Lo que dijo Google exactamente</h2>
+          <p>La pregunta salió en <a href="https://www.youtube.com/watch?v=HaoMqRGlmp8" target="_blank" rel="noopener noreferrer">el episodio de Ads Decoded del 15 de octubre</a>, el podcast de Google para anunciantes, presentado por la Ads Product Liaison Ginny Marvin. Akabas, product manager de Google Ads, habló de «mucha desinformación» sobre el periodo de aprendizaje y respondió sin rodeos (traducido del inglés):</p>
+          <blockquote>«Cuando cambias el objetivo de una campaña existente y estable, cuando cambias tu objetivo o tu presupuesto, en realidad no hay un periodo de aprendizaje. El sistema de Google Ads escala las pujas en proporción directa a los cambios de objetivo.»</blockquote>
+          <p>Su razón: Google ya tiene simulaciones de puja y presupuesto de la campaña, que él llamó «landscapes», construidas a partir de su historial de subastas. Un objetivo nuevo es un punto nuevo en una curva que el sistema ya conoce. En una campaña completamente nueva, en cambio, «puede producirse algo de periodo de aprendizaje», porque no hay historial propio desde el que escalar.</p>
+          <p>Por escrito, Google es más preciso que en el podcast. <a href="https://support.google.com/google-ads/answer/13020501?hl=es" target="_blank" rel="noopener noreferrer">La página de ayuda de Google sobre el periodo de aprendizaje</a> recoge tres causas del estado "Aprendiendo": una estrategia nueva, un cambio en la composición y un cambio de objetivo. Y añade: «Los cambios en los presupuestos, los objetivos, las creatividades o la configuración de la segmentación (como los ajustes de ubicación, audiencia o idioma) nunca eliminan el historial de datos ni activan el estado "Aprendiendo".»</p>
+          <p>Otras dos frases de la misma página importan más que la etiqueta. El estado "Aprendiendo" nunca dura más de 7 días. El rendimiento tarda más: según Google, Smart Bidding «suele converger con tu nuevo objetivo en un plazo de entre 1 y 2 ciclos de conversión», y un cambio debe evaluarse durante 2 ciclos de conversión o un periodo de 2 semanas, lo que sea más largo. La etiqueta te dice que la configuración ha cambiado. El ciclo de conversión te dice cuándo puedes leer el resultado.</p>
+
+          <h2 id="what-restarts-learning">Qué reinicia el aprendizaje y qué no</h2>
+          <p>Esta es la página de ayuda de Google en forma de tabla, con lo que añadió Akabas sobre las campañas nuevas.</p>
+          <div style={{ overflowX: 'auto' }}>
+            <table>
+              <thead>
+                <tr><th>Cambio</th><th>Estado "Aprendiendo"</th><th>Qué significa</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>CPA o ROAS objetivo</td><td>No</td><td>Se aplica desde la siguiente subasta. El rendimiento se acerca al nuevo objetivo en uno o dos ciclos de conversión.</td></tr>
+                <tr><td>Presupuesto</td><td>No</td><td>Se aplica de inmediato.</td></tr>
+                <tr><td>Anuncios e imágenes</td><td>No</td><td>El historial se mantiene.</td></tr>
+                <tr><td>Ubicación, audiencia, idioma</td><td>No</td><td>El historial se mantiene.</td></tr>
+                <tr><td>Estrategia de puja nueva</td><td>Sí, hasta 7 días</td><td>También al reactivar una estrategia o aplicar una nueva estrategia de cartera.</td></tr>
+                <tr><td>Composición</td><td>Sí, hasta 7 días</td><td>Campañas, grupos de anuncios o palabras clave que se añaden a una estrategia de puja o se quitan de ella.</td></tr>
+                <tr><td>Objetivos de conversión</td><td>Sí, si el cambio es importante</td><td>La campaña pasa a optimizar para otra cosa.</td></tr>
+                <tr><td>Campaña nueva</td><td>Sí</td><td>Sin historial propio, aunque Smart Bidding usa datos de conversión del resto de la cuenta.</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p>Hay un límite que nadie en Google ha cuantificado: Akabas no dijo a partir de qué tamaño un cambio de objetivo deja de ser un simple escalado proporcional. Pasar un ROAS objetivo de 400 % a 350 % es un ajuste. Un salto de 400 % a 150 % yo lo trataría más bien como una estrategia nueva, diga lo que diga la columna de estado, y le daría el mismo cuidado.</p>
+
+          <h2 id="before-black-friday">Qué hacer antes del Black Friday</h2>
+          <p>Este año el Black Friday cae el 27 de noviembre y el Cyber Monday el 30. Desde finales de octubre quedan cuatro semanas. Con un ciclo de conversión de una semana, da para un cambio por campaña que todavía puedas evaluar antes de la venta, no para tres.</p>
+          <ol>
+            <li>Corrige ahora los objetivos que estén mal. Desde <a href="/es/blog/performance-max-bidding-change-august-2026/">el cambio de pujas del 17 de agosto</a>, las campañas limitadas por presupuesto se ajustan mucho al objetivo que fijas, y Google advierte: «Google no ajustará automáticamente los objetivos de puja ni los presupuestos». Si un objetivo ya no refleja lo que quieres pagar en el pico, cámbialo esta semana y no en la semana de la venta.</li>
+            <li>Cambia cada objetivo una sola vez por ciclo de conversión. La propia Google recomienda evitar varios cambios de objetivo en un mismo ciclo, salvo que sea realmente necesario para tu negocio. Si mueves un objetivo el lunes y otra vez el miércoles, ya no sabrás qué cambio hizo qué.</li>
+            <li>Usa el presupuesto para los días punta y los objetivos para las semanas de alrededor. Una subida de presupuesto se aplica al momento y no reinicia nada, así que es la palanca adecuada para el 27 al 30 de noviembre. Un objetivo es una decisión sobre eficiencia y necesita un ciclo de conversión para notarse.</li>
+            <li>Ajusta una campaña que funciona en lugar de crear otra para la venta. Una campaña nueva empieza sin historial propio. El consejo de Akabas para las campañas nuevas de temporada fue lanzarlas «un par de días» antes de la promoción. Si tu ciclo de conversión es más largo, yo le daría a una campaña nueva al menos un ciclo completo.</li>
+            <li>Lee el ciclo de conversión, no la etiqueta. El estado "Aprendiendo" indica que la configuración ha cambiado. No indica que el rendimiento haya empeorado, y que no aparezca no significa que un cambio haya funcionado. Evalúa cada cambio tras 2 ciclos de conversión o 2 semanas, lo que sea más largo.</li>
+          </ol>
+          <p>Si quieres un objetivo más flexible solo para los días de venta, Google tiene una herramienta para eso. Según Google, el <a href="https://business.google.com/in/accelerate/announcements/bidding-and-budgeting-updates-to-scale-your-growth/" target="_blank" rel="noopener noreferrer">modo promoción</a> permite fijar cambios temporales en la tolerancia del ROAS y añadir presupuesto diario extra en los periodos punta, en campañas de búsqueda y de Performance Max. Salió en beta en junio, y Akabas dijo en octubre que se estaba ampliando, con la reserva «creo que esta semana». Comprueba si está en tu cuenta antes de contar con él.</p>
+
+          <h2 id="image-extraction">4 de diciembre: las nuevas campañas PMax usan las imágenes de tu web</h2>
+          <p>El segundo cambio lo anunció <a href="https://ads-developers.googleblog.com/2026/10/upcoming-changes-to-image-extraction-in.html" target="_blank" rel="noopener noreferrer">el equipo de la API de Google Ads el 21 de octubre</a>, pero se aplica en todas partes. Desde el 4 de diciembre de 2026, la extracción de imágenes viene activada por defecto en toda campaña nueva de Performance Max, tanto si la creas en la interfaz de Google Ads como en Google Ads Editor o con la API. Google analiza entonces tus páginas de destino en busca de imágenes de alta resolución y las usa como recursos de anuncio en la búsqueda, YouTube, Display, Discover, Gmail y Maps.</p>
+          <p>Dos detalles hacen que esto sea más que un cambio de configuración por defecto. El nuevo ajuste a nivel de campaña se aplica, según Google, aunque los recursos de imagen dinámica estén desactivados a nivel de cuenta; hasta ahora, una campaña sin ajuste propio heredaba la decisión de la cuenta. Y las campañas existentes conservan su configuración, así que solo afecta a las campañas creadas desde el 4 de diciembre.</p>
+          <p>Ahí está la clave. La mayoría de campañas de Black Friday estarán en marcha antes del 4 de diciembre. Las que se crean después son las de Navidad, la fecha límite de pedidos y las rebajas de enero, que suelen montarse deprisa y a partir de una plantilla, en cuentas que desactivaron las imágenes dinámicas a nivel de cuenta hace tiempo. Ese ajuste antiguo ya no las protege.</p>
+
+          <h3>Qué revisar en tus páginas de destino</h3>
+          <p>El anuncio de la API pide confirmar que tienes todos los derechos o permisos sobre las imágenes de tus páginas de destino y que permites a Google usarlas con fines publicitarios. <a href="https://support.google.com/google-ads/answer/10109688?hl=es" target="_blank" rel="noopener noreferrer">La página de ayuda de Google sobre los recursos de imagen dinámica</a> dice lo mismo: al activarlos, confirmas «que eres el propietario de todos los derechos legales de las imágenes». Una imagen autorizada para tu web no está automáticamente autorizada para anuncios. Repasa las páginas a las que van a llevar tus nuevas campañas y busca:</p>
+          <ul>
+            <li>Fotos de stock con licencia para la web, pero no para publicidad.</li>
+            <li>Fotos de empleados, modelos o clientes cuyo consentimiento cubre la web, pero no los anuncios.</li>
+            <li>Logos de socios, certificados y sellos de prensa, que pueden acabar en un anuncio sin su contexto.</li>
+            <li>Imágenes con precios, fechas u ofertas, que caducan al día siguiente de la venta.</li>
+            <li>Creatividades de campañas antiguas que siguen en la página, pero ya no son verdad.</li>
+          </ul>
+          <p>Para los recursos de imagen dinámica en la búsqueda, Google indica que las imágenes extraídas pasan controles de calidad automáticos y manuales. Esos controles miran la calidad y la relevancia. No saben lo que dicen tus licencias.</p>
+
+          <h3>Cómo controlarlo</h3>
+          <p>En la interfaz, el ajuste a nivel de cuenta está en Campañas, Recursos, el icono de 3 puntos, Recursos automatizados a nivel de cuenta, de nuevo el icono de 3 puntos, Configuración avanzada, "Recursos de imagen dinámica". Desde el 4 de diciembre, ese interruptor ya no decide por las campañas nuevas de Performance Max, así que revisa la opción de imágenes de la página de destino en cada campaña nueva antes de publicarla.</p>
+          <p>Si creas campañas con la API o con un script, añade el ajuste a la petición de creación antes del 4 de diciembre. Este es el ejemplo de Google:</p>
+          <pre><code>{`{
+  "name": "My Performance Max Campaign",
+  "advertisingChannelType": "PERFORMANCE_MAX",
+  "status": "PAUSED",
+  "assetAutomationSettings": [
+    {
+      "assetAutomationType": "GENERATE_IMAGE_EXTRACTION",
+      "assetAutomationStatus": "OPTED_OUT"
+    }
+  ]
+}`}</code></pre>
+          <p>Para ver cómo están configuradas tus campañas actuales, Google propone esta consulta:</p>
+          <pre><code>{`SELECT
+  campaign.id,
+  campaign.name,
+  campaign.asset_automation_settings
+FROM campaign
+WHERE campaign.advertising_channel_type = 'PERFORMANCE_MAX'`}</code></pre>
+          <p>Una campaña sin entrada para <code>GENERATE_IMAGE_EXTRACTION</code> sigue el ajuste a nivel de cuenta. Una trampa al modificar campañas existentes: <code>asset_automation_settings</code> es un campo repetido, y según Google los ajustes nuevos sustituyen toda la lista en lugar de combinarse con ella. Incluye todos los demás ajustes de automatización que quieras conservar, como la automatización de recursos de texto, o los desactivarás sin querer.</p>
+
+          <h2 id="next-six-weeks">Las próximas seis semanas, en orden</h2>
+          <ul>
+            <li>Esta semana: revisa los objetivos de las campañas en marcha y cambia los que estén mal. Un cambio por campaña y ciclo de conversión.</li>
+            <li>Antes de la venta: lanza cualquier campaña nueva de rebajas al menos un par de días antes, como sugiere Google, o un ciclo de conversión antes si el tuyo es más largo.</li>
+            <li>Del 27 al 30 de noviembre: usa el presupuesto para los días punta. No deshagas un cambio por una etiqueta de estado.</li>
+            <li>Antes del 4 de diciembre: añade el ajuste de extracción de imágenes a todas tus plantillas de campaña, scripts e integraciones con la API.</li>
+            <li>Desde el 4 de diciembre: revisa la extracción de imágenes en cada campaña nueva de Performance Max antes de lanzarla, y también las páginas de destino que hay detrás.</li>
+          </ul>
+          <p>Si quieres que alguien revise tus objetivos antes de la venta, para eso está nuestro <a href="/es/services/google-ads/">servicio de Google Ads</a>. También explicamos <a href="/es/blog/performance-max-2026/">los ajustes de Performance Max que cambiamos primero</a>, que siguen siendo válidos.</p>
+
+          <p>Si algo de lo anterior te resulta familiar, <a href="/es/contact/?topic=google-ads-learning-phase">cuéntanos un poco tu situación</a> y te respondemos en un día laborable. La primera conversación son 30 minutos, invita la casa.</p>
         </>
       ),
     },

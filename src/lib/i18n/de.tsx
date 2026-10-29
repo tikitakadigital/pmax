@@ -1,6 +1,6 @@
 import type { ReactNode } from 'react'
 import Image from 'next/image'
-import { TrialTermsTable, TrialScreenshots } from '@/lib/content/blog-detail'
+import { TrialTermsTable, TrialScreenshots, DateTimeline } from '@/lib/content/blog-detail'
 
 export interface ServiceDetail {
   metaTitle: string
@@ -33,6 +33,8 @@ export interface LocalizedCaseDetail {
 
 export interface LocalizedBlogDetail {
   title?: string
+  /** <title> text when the H1 is too long for search results; " | pmax" is not added. */
+  seoTitle?: string
   deck?: string
   prose?: ReactNode
   toc?: string[]
@@ -845,6 +847,7 @@ export const de = {
     promoDeck: 'Wir betreiben keine E-Mail-Liste — aber wenn Sie ein Thema haben, über das wir schreiben sollen, lassen Sie es uns wissen.',
     promoBtn: 'Thema einreichen',
     posts: [
+      { slug: 'google-ads-learning-phase-black-friday-2026', title: 'Vor dem Black Friday: Was die Google-Ads-Lernphase neu startet und was sich von selbst einschaltet', deck: 'Ziel oder Budget ändern startet keine Lernphase, bestätigt Google. Neue Kampagnen schon, und ab 4. Dezember holen neue PMax-Kampagnen Bilder Ihrer Website.' },
       { slug: 'ai-visibility-tool-free-trial', title: 'KI-Sichtbarkeits-Tools richtig testen: 7 oder 14 Tage', deck: '7 oder 14 Tage zeigen nicht, wie sichtbar Ihre Marke in KI-Antworten ist. Aber sie zeigen, ob das Tool taugt. So prüfen Sie es vor der ersten Abbuchung.' },
       { slug: 'how-to-test-ai-max', title: 'AI Max testen, ohne sich selbst zu täuschen', deck: 'Die meisten AI-Max-Tests messen die Lernphase, eine Budgetänderung oder eine Kampagne, die sich selbst kannibalisiert — nicht AI Max. So geht ein sauberer Test.' },
       { slug: 'google-ads-agency-mallorca', title: 'Google Ads Agentur Mallorca: Was Sie prüfen sollten, bevor Sie unterschreiben', deck: 'Die meisten Google-Ads-Agenturen auf Mallorca verkaufen dasselbe Paket. Hier ist, wie Sie erkennen, welche den Markt wirklich kennen — und die drei Fragen, die eine gute Agentur von einer mittelmäßigen trennen.' },
@@ -2685,6 +2688,123 @@ export const de = {
           </div>
 
           <p>Falls Ihnen das oben Genannte bekannt vorkommt, <a href="/de/contact/?topic=geo-audit">schildern Sie uns kurz Ihre Situation</a> und wir melden uns innerhalb eines Werktages. Das erste Gespräch: 30 Minuten, auf unsere Rechnung.</p>
+        </>
+      ),
+    },
+    'google-ads-learning-phase-black-friday-2026': {
+      seoTitle: 'Google Ads Lernphase vor dem Black Friday 2026 | pmax',
+      toc: ['Was Google tatsächlich gesagt hat', 'Was die Lernphase auslöst und was nicht', 'Was Sie vor dem Black Friday tun sollten', '4. Dezember: Neue PMax-Kampagnen nutzen Ihre Website-Bilder', 'Die nächsten sechs Wochen der Reihe nach', 'Häufige Fragen', 'Quellen'],
+      faqs: [
+        { q: 'Startet eine Änderung des Ziel-ROAS oder Ziel-CPA die Lernphase in Google Ads neu?', a: 'Nein. Laut Googles Hilfeseite zur Lernphase löschen Änderungen an Budgets, Zielen, Creatives oder Targeting-Einstellungen weder Verlaufsdaten noch lösen sie den Status „Lernt“ aus. Google-Produktmanager Tal Akabas hat das für laufende Kampagnen am 15. Oktober 2026 im Podcast Ads Decoded bestätigt. Das neue Ziel gilt ab der nächsten Auktion; die Leistung braucht ein bis zwei Conversion-Zyklen, um sich einzupendeln.' },
+        { q: 'Was löst die Lernphase in Google Ads aus?', a: 'Google nennt drei Auslöser: eine neue oder reaktivierte Gebotsstrategie, Kampagnen oder Keywords, die einer Gebotsstrategie hinzugefügt oder daraus entfernt werden, und eine erhebliche Änderung der Conversion-Zielvorhaben oder -Aktionen. Auch eine ganz neue Kampagne zeigt den Status, weil sie noch keine eigene Historie hat.' },
+        { q: 'Wie lange dauert die Lernphase in Google Ads?', a: 'Der Status „Lernt“ dauert laut Google nie länger als 7 Tage. Die Leistung braucht länger: Smart Bidding nähert sich einem neuen Ziel in der Regel innerhalb von ein bis zwei Conversion-Zyklen an. Google empfiehlt, eine Änderung über 2 Conversion-Zyklen oder 2 Wochen zu bewerten, je nachdem, was länger ist.' },
+        { q: 'Ist die Bildextraktion in Performance Max standardmäßig aktiviert?', a: 'Ab dem 4. Dezember 2026 ja, für neue Kampagnen. Für jede ab diesem Tag erstellte Performance-Max-Kampagne ist die Bildextraktion standardmäßig eingeschaltet, in der Google-Ads-Oberfläche, im Google Ads Editor und über die API, auch wenn dynamische Bilder auf Kontoebene deaktiviert sind. Bestehende Kampagnen behalten ihre Einstellung.' },
+        { q: 'Wie verhindere ich, dass Performance Max Bilder von meiner Website verwendet?', a: 'Entscheiden Sie pro Kampagne. Über die Google Ads API setzen Sie GENERATE_IMAGE_EXTRACTION beim Erstellen der Kampagne in asset_automation_settings auf OPTED_OUT. In der Oberfläche prüfen Sie bei jeder neuen Performance-Max-Kampagne vor der Veröffentlichung die Option für Bilder von Landingpages, denn ab dem 4. Dezember entscheidet die Einstellung für dynamische Bilder auf Kontoebene nicht mehr für neue Kampagnen.' },
+      ],
+      prose: (
+        <>
+          <p>Wenn Sie bei einer laufenden Google-Ads-Kampagne das Ziel oder das Budget ändern, startet keine neue Lernphase. Das hat Tal Akabas von Google am 15. Oktober 2026 im Podcast Ads Decoded gesagt, und Googles Hilfeseite zur Lernphase sagt es inzwischen auch schriftlich. Zwei Arten von Änderungen lösen sie weiterhin aus: alles Neue und alles, was das Optimierungsziel der Kampagne verändert.</p>
+          <p>Eine zweite Änderung kommt vier Tage nach dem Cyber Monday. Ab dem 4. Dezember 2026 holt sich jede neue Performance-Max-Kampagne standardmäßig Bilder von Ihren Landingpages, auch in Konten, in denen dynamische Bilder ausgeschaltet sind. Zusammen ergibt das einen kurzen Plan für die nächsten sechs Wochen: Laufendes anpassen und bei allem Neuen prüfen, was es von selbst einschaltet.</p>
+          <DateTimeline
+            ariaLabel="Zeitleiste: 15. Oktober, Google bestätigt, dass Ziel- und Budgetänderungen keine Lernphase auslösen; 27. November, Black Friday; 30. November, Cyber Monday; 4. Dezember, Bildextraktion standardmäßig an für neue Performance-Max-Kampagnen"
+            caption="Vier Termine für das Jahresende 2026. Alles vor dem 4. Dezember betrifft laufende Kampagnen, alles danach Kampagnen, die Sie neu anlegen."
+            items={[
+              { date: '15. OKT', label: 'Google: Ziele und\nBudgets lösen keine\nLernphase aus' },
+              { date: '27. NOV', label: 'Black Friday', accent: true },
+              { date: '30. NOV', label: 'Cyber Monday', accent: true },
+              { date: '4. DEZ', label: 'Neue PMax-Kampagnen:\nBildextraktion\nstandardmäßig an' },
+            ]}
+          />
+
+          <h2 id="what-google-said">Was Google tatsächlich gesagt hat</h2>
+          <p>Die Frage kam in <a href="https://www.youtube.com/watch?v=HaoMqRGlmp8" target="_blank" rel="noopener noreferrer">der Folge von Ads Decoded vom 15. Oktober</a> auf, Googles Podcast für Werbetreibende, moderiert von Ads Product Liaison Ginny Marvin. Akabas, Produktmanager bei Google Ads, sprach beim Thema Lernphase von „viel Fehlinformation“ und antwortete direkt (aus dem Englischen übersetzt):</p>
+          <blockquote>„Wenn Sie bei einer bestehenden, eingeschwungenen Kampagne Ihr Ziel oder Ihr Budget ändern, gibt es eigentlich keine Lernphase. Das Google-Ads-Backend skaliert die Gebote direkt proportional zu Ihren Zieländerungen.“</blockquote>
+          <p>Seine Begründung: Google hat für die Kampagne bereits Gebots- und Budgetsimulationen aus ihrer Auktionshistorie, die er „Landscapes“ nannte. Ein neues Ziel ist ein neuer Punkt auf einer Kurve, die das System schon kennt. Bei einer komplett neuen Kampagne könne dagegen „eine gewisse Lernphase stattfinden“, weil es keine eigene Historie gibt, von der aus skaliert werden kann.</p>
+          <p>Schriftlich ist Google genauer als im Podcast. <a href="https://support.google.com/google-ads/answer/13020501?hl=de" target="_blank" rel="noopener noreferrer">Googles Hilfeseite zur Lernphase</a> nennt drei Auslöser für den Status „Lernt“: eine neue Strategie, eine Änderung der Zusammensetzung und eine Änderung des Zielvorhabens. Dazu steht dort: „Durch Änderungen an Budgets, Zielen, Creatives oder Targeting-Einstellungen (z. B. Anpassungen von Standort, Zielgruppe oder Sprache) werden Ihre Verlaufsdaten nicht gelöscht und der Status ‚Lernt‘ wird nicht ausgelöst.“</p>
+          <p>Zwei weitere Sätze derselben Seite sind wichtiger als das Label. Der Status „Lernt“ dauert nie länger als 7 Tage. Die Leistung braucht länger: Smart Bidding nähert sich einem neuen Ziel laut Google „in der Regel innerhalb von 1 bis 2 Conversion-Zyklen“ an, und bewertet werden soll eine Änderung über 2 Conversion-Zyklen oder einen Zeitraum von 2 Wochen, je nachdem, was länger ist. Das Label sagt Ihnen, dass sich die Konfiguration geändert hat. Der Conversion-Zyklus sagt Ihnen, wann Sie das Ergebnis lesen können.</p>
+
+          <h2 id="what-restarts-learning">Was die Lernphase auslöst und was nicht</h2>
+          <p>Hier ist Googles Hilfeseite als Tabelle, ergänzt um Akabas’ Hinweis zu neuen Kampagnen.</p>
+          <div style={{ overflowX: 'auto' }}>
+            <table>
+              <thead>
+                <tr><th>Änderung</th><th>Status „Lernt“</th><th>Was das bedeutet</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>Ziel-CPA oder -ROAS</td><td>Nein</td><td>Gilt ab der nächsten Auktion. Die Leistung bewegt sich über ein bis zwei Conversion-Zyklen auf das neue Ziel zu.</td></tr>
+                <tr><td>Budget</td><td>Nein</td><td>Gilt sofort.</td></tr>
+                <tr><td>Anzeigen und Bilder</td><td>Nein</td><td>Die Verlaufsdaten bleiben.</td></tr>
+                <tr><td>Standort, Zielgruppe, Sprache</td><td>Nein</td><td>Die Verlaufsdaten bleiben.</td></tr>
+                <tr><td>Neue Gebotsstrategie</td><td>Ja, bis zu 7 Tage</td><td>Auch eine reaktivierte Strategie und eine neue Portfolio-Strategie.</td></tr>
+                <tr><td>Zusammensetzung</td><td>Ja, bis zu 7 Tage</td><td>Kampagnen, Anzeigengruppen oder Keywords werden einer Gebotsstrategie hinzugefügt oder daraus entfernt.</td></tr>
+                <tr><td>Conversion-Ziele</td><td>Ja, bei erheblicher Änderung</td><td>Die Kampagne optimiert jetzt auf etwas anderes.</td></tr>
+                <tr><td>Neue Kampagne</td><td>Ja</td><td>Keine eigene Historie, auch wenn Smart Bidding Conversion-Daten aus dem restlichen Konto nutzt.</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p>Eine Grenze hat bei Google noch niemand beziffert: Akabas hat nicht gesagt, ab welcher Größe eine Zieländerung nicht mehr sinnvoll als proportionale Skalierung beschrieben ist. Ein Ziel-ROAS von 400 % auf 350 % ist eine Anpassung. Einen Sprung von 400 % auf 150 % würde ich eher wie eine neue Strategie behandeln, egal was in der Statusspalte steht, und ihm dieselbe Sorgfalt geben.</p>
+
+          <h2 id="before-black-friday">Was Sie vor dem Black Friday tun sollten</h2>
+          <p>Black Friday ist dieses Jahr am 27. November, Cyber Monday am 30. November. Ab Ende Oktober bleiben also vier Wochen. Bei einem Conversion-Zyklus von einer Woche reicht das für eine Änderung pro Kampagne, die Sie vor dem Sale noch auswerten können, nicht für drei.</p>
+          <ol>
+            <li>Korrigieren Sie jetzt die Ziele, die nicht stimmen. Seit <a href="/de/blog/performance-max-bidding-change-august-2026/">der Gebotsänderung vom 17. August</a> liefern budgetbegrenzte Kampagnen nah an dem Ziel, das Sie eingetragen haben, und Google schreibt dazu: „Google passt Ihre Gebotsziele oder Budgets nicht automatisch an.“ Wenn ein Ziel nicht mehr dem entspricht, was Sie in der Spitze zahlen wollen, ändern Sie es diese Woche und nicht in der Sale-Woche.</li>
+            <li>Ändern Sie ein Ziel nur einmal pro Conversion-Zyklus. Google rät selbst davon ab, ein Ziel innerhalb eines Zyklus mehrfach zu ändern, wenn es dafür keinen klaren geschäftlichen Grund gibt. Wer am Montag ein Ziel ändert und am Mittwoch wieder, kann hinterher nicht mehr sagen, welche Änderung was bewirkt hat.</li>
+            <li>Nutzen Sie das Budget für die Spitzentage und die Ziele für die Wochen drumherum. Eine Budgeterhöhung wirkt sofort und startet nichts neu, sie ist also der richtige Hebel für den 27. bis 30. November. Ein Ziel ist eine Aussage über Effizienz und braucht einen Conversion-Zyklus, bis es wirkt.</li>
+            <li>Passen Sie eine funktionierende Kampagne an, statt eine eigene für den Sale zu bauen. Eine neue Kampagne startet ohne eigene Historie. Akabas’ Rat für neue Weihnachtskampagnen war, sie „ein paar Tage“ vor der Aktion zu starten. Ist Ihr Conversion-Zyklus länger, würde ich einer neuen Kampagne mindestens einen vollen Zyklus geben.</li>
+            <li>Lesen Sie den Conversion-Zyklus, nicht das Label. Der Status „Lernt“ heißt, dass sich die Konfiguration geändert hat. Er heißt nicht, dass die Leistung schlechter geworden ist, und sein Fehlen heißt nicht, dass eine Änderung funktioniert hat. Bewerten Sie jede Änderung nach 2 Conversion-Zyklen oder 2 Wochen, je nachdem, was länger ist.</li>
+          </ol>
+          <p>Wenn Sie ein lockereres Ziel nur für die Sale-Tage wollen, hat Google dafür ein Werkzeug. Mit dem <a href="https://business.google.com/in/accelerate/announcements/bidding-and-budgeting-updates-to-scale-your-growth/" target="_blank" rel="noopener noreferrer">Promotion-Modus</a> legen Sie laut Google für Spitzenzeiten vorübergehende Änderungen der ROAS-Toleranz und zusätzliches Tagesbudget fest, in Such- und Performance-Max-Kampagnen. Er startete im Juni als Beta, und Akabas sagte im Oktober, er werde breiter ausgerollt, mit der Einschränkung „ich glaube, diese Woche“. Prüfen Sie, ob er in Ihrem Konto verfügbar ist, bevor Sie damit planen.</p>
+
+          <h2 id="image-extraction">4. Dezember: Neue PMax-Kampagnen nutzen Ihre Website-Bilder</h2>
+          <p>Die zweite Änderung kam <a href="https://ads-developers.googleblog.com/2026/10/upcoming-changes-to-image-extraction-in.html" target="_blank" rel="noopener noreferrer">am 21. Oktober vom Google-Ads-API-Team</a>, gilt aber überall. Ab dem 4. Dezember 2026 ist die Bildextraktion für jede neue Performance-Max-Kampagne standardmäßig eingeschaltet, egal ob Sie sie in der Google-Ads-Oberfläche, im Google Ads Editor oder über die API anlegen. Google sucht dann auf Ihren Landingpages nach hochauflösenden Bildern und nutzt sie als Anzeigen-Assets in Suche, YouTube, Display, Discover, Gmail und Maps.</p>
+          <p>Zwei Details machen daraus mehr als eine geänderte Voreinstellung. Die neue Einstellung auf Kampagnenebene gilt laut Google auch dann, wenn dynamische Bilder auf Kontoebene deaktiviert sind; bisher übernahm eine Kampagne ohne eigene Einstellung die Entscheidung des Kontos. Und bestehende Kampagnen behalten ihre Konfiguration. Betroffen sind also nur Kampagnen, die ab dem 4. Dezember entstehen.</p>
+          <p>Genau darin liegt der Punkt. Die meisten Black-Friday-Kampagnen laufen vor dem 4. Dezember. Danach entstehen die Kampagnen für Weihnachten, den letzten Bestelltermin und den Januar-Sale, oft schnell und aus einer Vorlage, in Konten, in denen dynamische Bilder vor langer Zeit auf Kontoebene ausgeschaltet wurden. Dieser alte Schalter schützt sie dann nicht mehr.</p>
+
+          <h3>Was Sie auf Ihren Landingpages prüfen sollten</h3>
+          <p>Die API-Ankündigung verlangt, dass Sie alle Rechte oder Genehmigungen an den Bildern auf Ihren Landingpages haben und Google erlauben, sie für Werbung zu nutzen. <a href="https://support.google.com/google-ads/answer/10109688?hl=de" target="_blank" rel="noopener noreferrer">Googles Hilfeseite zu dynamischen Bildern</a> sagt dasselbe: Wer sie aktiviert, bestätigt, „dass Sie Inhaber sämtlicher Rechte am Bild“ sind. Ein Bild, das für Ihre Website freigegeben ist, ist nicht automatisch für Anzeigen freigegeben. Gehen Sie die Seiten durch, auf die Ihre neuen Kampagnen verlinken, und achten Sie auf:</p>
+          <ul>
+            <li>Stockfotos, die für die Website lizenziert sind, aber nicht für Werbung.</li>
+            <li>Fotos von Mitarbeitern, Models oder Kunden, deren Einwilligung die Website abdeckt, aber keine Anzeigen.</li>
+            <li>Partnerlogos, Zertifikate und Pressebadges, die ohne ihren Zusammenhang in einer Anzeige landen können.</li>
+            <li>Bilder mit Preisen, Daten oder Angeboten darin, die am Tag nach dem Sale veraltet sind.</li>
+            <li>Alte Kampagnenmotive, die noch auf der Seite stehen, aber nicht mehr stimmen.</li>
+          </ul>
+          <p>Für dynamische Bild-Assets in der Suche schreibt Google, dass extrahierte Bilder automatische und manuelle Qualitätsprüfungen durchlaufen. Diese Prüfungen betreffen Qualität und Relevanz. Ihre Lizenzen kennen sie nicht.</p>
+
+          <h3>So steuern Sie es</h3>
+          <p>In der Oberfläche finden Sie die Einstellung auf Kontoebene unter Kampagnen, Assets, Dreipunkt-Menü, Automatisch erstellte Assets auf Kontoebene, erneut Dreipunkt-Menü, Erweiterte Einstellungen, „Assets mit dynamischen Bildern“. Ab dem 4. Dezember entscheidet dieser Schalter nicht mehr für neue Performance-Max-Kampagnen. Prüfen Sie deshalb bei jeder neuen Kampagne vor der Veröffentlichung die Option für Bilder von Landingpages.</p>
+          <p>Wenn Sie Kampagnen über die API oder ein Skript anlegen, nehmen Sie die Einstellung vor dem 4. Dezember in die Anfrage auf. Das ist Googles Beispiel:</p>
+          <pre><code>{`{
+  "name": "My Performance Max Campaign",
+  "advertisingChannelType": "PERFORMANCE_MAX",
+  "status": "PAUSED",
+  "assetAutomationSettings": [
+    {
+      "assetAutomationType": "GENERATE_IMAGE_EXTRACTION",
+      "assetAutomationStatus": "OPTED_OUT"
+    }
+  ]
+}`}</code></pre>
+          <p>Mit dieser Abfrage von Google sehen Sie, wie Ihre bestehenden Kampagnen eingestellt sind:</p>
+          <pre><code>{`SELECT
+  campaign.id,
+  campaign.name,
+  campaign.asset_automation_settings
+FROM campaign
+WHERE campaign.advertising_channel_type = 'PERFORMANCE_MAX'`}</code></pre>
+          <p>Eine Kampagne ohne Eintrag für <code>GENERATE_IMAGE_EXTRACTION</code> folgt weiter der Einstellung auf Kontoebene. Eine Falle beim Ändern bestehender Kampagnen: <code>asset_automation_settings</code> ist ein wiederholtes Feld, und neue Einstellungen ersetzen laut Google das gesamte Array, statt es zu ergänzen. Schicken Sie jede andere Automatisierungseinstellung mit, die Sie behalten wollen, etwa die Automatisierung von Text-Assets, sonst schalten Sie sie versehentlich aus.</p>
+
+          <h2 id="next-six-weeks">Die nächsten sechs Wochen der Reihe nach</h2>
+          <ul>
+            <li>Diese Woche: Ziele laufender Kampagnen prüfen und die falschen ändern. Eine Änderung pro Kampagne und Conversion-Zyklus.</li>
+            <li>Vor dem Sale: Neue Sale-Kampagnen mindestens ein paar Tage früher starten, wie Google es vorschlägt, oder einen Conversion-Zyklus früher, wenn Ihrer länger ist.</li>
+            <li>27. bis 30. November: Budgets für die Spitzentage nutzen. Keine Änderung wegen eines Status-Labels zurücknehmen.</li>
+            <li>Vor dem 4. Dezember: Die Einstellung zur Bildextraktion in jede Kampagnenvorlage, jedes Skript und jede API-Integration aufnehmen.</li>
+            <li>Ab dem 4. Dezember: Bei jeder neuen Performance-Max-Kampagne vor dem Start die Bildextraktion und die Landingpages dahinter prüfen.</li>
+          </ul>
+          <p>Wenn Sie vor dem Sale ein zweites Paar Augen auf Ihre Ziele wollen, ist genau das unsere <a href="/de/services/google-ads/">Google-Ads-Betreuung</a>. Außerdem haben wir aufgeschrieben, <a href="/de/blog/performance-max-2026/">welche Performance-Max-Einstellungen wir zuerst ändern</a>; das gilt weiterhin.</p>
+
+          <p>Falls Ihnen das oben Genannte bekannt vorkommt, <a href="/de/contact/?topic=google-ads-learning-phase">schildern Sie uns kurz Ihre Situation</a> und wir melden uns innerhalb eines Werktages. Das erste Gespräch: 30 Minuten, auf unsere Rechnung.</p>
         </>
       ),
     },

@@ -17,6 +17,20 @@ export interface Post {
 
 export const posts: Post[] = [
   {
+    slug: 'google-ads-learning-phase-black-friday-2026',
+    stamp: 'OCT 29',
+    date: 'Oct 29, 2026',
+    readTime: '9 min',
+    category: 'Google Ads',
+    title: 'Before Black Friday: what restarts the Google Ads learning phase, and what switches on by itself',
+    seoTitle: 'Google Ads Learning Phase Before Black Friday 2026 | pmax',
+    deck: "Changing a target or budget doesn't restart learning, Google now confirms. New campaigns do, and from 4 December new PMax campaigns pull your site's images.",
+    variant: 'is-slate',
+    featured: true,
+    ogImage: '/og/google-ads-learning-phase-black-friday-2026.jpg',
+    author: 'Philipp Enders',
+  },
+  {
     slug: 'ai-visibility-tool-free-trial',
     stamp: 'OCT 22',
     date: 'Oct 22, 2026',

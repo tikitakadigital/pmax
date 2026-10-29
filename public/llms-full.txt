@@ -253,6 +253,15 @@ Meta + Instagram brand campaign for a major European auto manufacturer with a fo
 
 ## Blog posts (all articles)
 
+### Before Black Friday: What Restarts the Google Ads Learning Phase, and What Switches On by Itself
+**URL:** https://pmax.online/blog/google-ads-learning-phase-black-friday-2026/
+**Published:** Oct 29, 2026
+**Also in:** DE · ES
+
+Combines two Google announcements from October 2026. First, Google Ads product manager Tal Akabas said on the Ads Decoded podcast (15 Oct 2026) that changing the target or budget of an established, steady-state campaign does not trigger a learning period, because bids scale in proportion using existing bid landscapes; net-new campaigns can still have one. Google's help page on the learning period lists the three causes of the "Learning" status (new or reactivated bid strategy, composition change, significant conversion-goal change), states that changes to budgets, targets, creatives or targeting settings never trigger it or remove historical data, that the status never lasts more than 7 days, and that performance converges within 1-2 conversion cycles, to be judged over 2 conversion cycles or 2 weeks, whichever is longer. Second, per the Google Ads Developer Blog (21 Oct 2026), from 4 December 2026 image extraction (GENERATE_IMAGE_EXTRACTION) is opted in by default for newly created Performance Max campaigns in the UI, Editor and API, even when dynamic images are disabled at account level; existing campaigns keep their settings. Includes a table of which changes trigger learning, a five-step pre-Black-Friday plan (Black Friday 27 Nov, Cyber Monday 30 Nov 2026), a landing-page image-rights checklist, the API opt-out payload and GAQL audit query, and a dated six-week checklist. Answers: does changing target ROAS reset the learning phase, what triggers the Google Ads learning phase, how long does the learning phase last, is Performance Max image extraction on by default, how to opt out of image extraction.
+
+---
+
 ### How to Test an AI Visibility Tool in a 7- or 14-Day Free Trial
 **URL:** https://pmax.online/blog/ai-visibility-tool-free-trial/
 **Published:** Oct 22, 2026

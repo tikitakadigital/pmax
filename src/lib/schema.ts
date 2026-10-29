@@ -114,7 +114,7 @@ const articleAuthors: Record<string, object> = {
 }
 
 /** Dates must be ISO 8601 (YYYY-MM-DD); blog.ts stores them as 'Oct 22, 2026'. */
-export function article({ headline, description, url, datePublished, dateModified, keywords, image, author, inLanguage = 'en-GB', section }: {
+export function article({ headline, description, url, datePublished, dateModified, keywords, image, author, inLanguage = 'en-GB', section, citations }: {
   headline: string
   description: string
   url: string
@@ -125,6 +125,7 @@ export function article({ headline, description, url, datePublished, dateModifie
   author?: string
   inLanguage?: string
   section?: string
+  citations?: { title: string; url: string; publisher: string; date?: string }[]
 }) {
   return {
     '@context': 'https://schema.org',
@@ -143,6 +144,15 @@ export function article({ headline, description, url, datePublished, dateModifie
     ...(section && { articleSection: section }),
     ...(keywords?.length && { keywords: keywords.join(', ') }),
     ...(image && { image: { '@type': 'ImageObject', url: image.url, width: image.width, height: image.height } }),
+    ...(citations?.length && {
+      citation: citations.map(c => ({
+        '@type': 'CreativeWork',
+        name: c.title,
+        url: c.url,
+        publisher: { '@type': 'Organization', name: c.publisher },
+        ...(c.date && { datePublished: c.date }),
+      })),
+    }),
   }
 }
 

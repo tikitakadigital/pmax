@@ -8,7 +8,7 @@ import FaqList from '@/components/FaqList'
 import ImageZoom from '@/components/ImageZoom'
 import { breadcrumb, article as articleSchema, faqPage } from '@/lib/schema'
 import { posts, getPost } from '@/lib/content/blog'
-import { getBlogDetail } from '@/lib/content/blog-detail'
+import { getBlogDetail, SourcesList } from '@/lib/content/blog-detail'
 import { getT, blogAlternates, isPostTranslated } from '@/lib/i18n'
 import { blogPath } from '@/lib/content/blog-slugs'
 import { isoDate, postImage, postSocial, relatedPosts } from '@/lib/blog-seo'
@@ -98,6 +98,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
       image: postImage(post),
       author: post.author,
       section: post.category,
+      citations: detail?.sources,
     }),
     ...(detail?.faqs?.length ? [{ ...faqPage(detail.faqs), inLanguage: 'en' }] : []),
   ]
@@ -159,6 +160,8 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                     <FaqList items={detail.faqs} />
                   </>
                 ) : null}
+
+                {detail?.sources?.length ? <SourcesList sources={detail.sources} heading="Sources" lang="en" /> : null}
 
                 {related.length > 0 && (
                   <div className="prose-callout" style={{ marginTop: 48 }}>

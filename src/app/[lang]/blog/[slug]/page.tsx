@@ -8,7 +8,7 @@ import FaqList from '@/components/FaqList'
 import ImageZoom from '@/components/ImageZoom'
 import { breadcrumb, article as articleSchema, faqPage } from '@/lib/schema'
 import { posts, getPost } from '@/lib/content/blog'
-import { getBlogDetail } from '@/lib/content/blog-detail'
+import { getBlogDetail, SourcesList } from '@/lib/content/blog-detail'
 import { getT, isPostTranslated, blogAlternates } from '@/lib/i18n'
 import { blogSlug, canonicalBlogSlug, blogPath } from '@/lib/content/blog-slugs'
 import { isoDate, postImage, postSocial, relatedPosts } from '@/lib/blog-seo'
@@ -38,7 +38,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   const title = loc?.title ?? locPost?.title ?? post.title
   const description = loc?.deck ?? locPost?.deck ?? post.deck
   return {
-    title: loc?.title ? `${loc.title} | pmax` : locPost?.title ? `${locPost.title} | pmax` : post.seoTitle,
+    title: loc?.seoTitle ?? (loc?.title ? `${loc.title} | pmax` : locPost?.title ? `${locPost.title} | pmax` : post.seoTitle),
     description: loc?.deck ?? locPost?.deck ?? post.deck,
     ...(isTranslated ? {} : { robots: { index: false } }),
     alternates: isTranslated ? {
@@ -101,6 +101,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ lang:
       author: post.author,
       inLanguage: lang,
       section: localCategory,
+      citations: detail?.sources,
     }),
     ...(localFaqs?.length ? [{ ...faqPage(localFaqs), inLanguage: lang }] : []),
   ]
@@ -161,6 +162,8 @@ export default async function BlogPostPage({ params }: { params: Promise<{ lang:
                     <FaqList items={localFaqs} />
                   </>
                 ) : null}
+
+                {detail?.sources?.length ? <SourcesList sources={detail.sources} heading={lang === 'de' ? 'Quellen' : 'Fuentes'} lang={lang} /> : null}
 
                 {related.length > 0 && (
                   <div className="prose-callout" style={{ marginTop: 48 }}>

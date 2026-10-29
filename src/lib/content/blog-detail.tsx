@@ -10,6 +10,8 @@ export interface BlogDetail {
   faqs?: { q: string; a: string }[]
   image?: string
   imageAlt?: string
+  /** Primary sources. Rendered as a Sources list and emitted as schema.org citation. date: YYYY-MM-DD. */
+  sources?: { title: string; url: string; publisher: string; date?: string }[]
 }
 
 const NeedHelp = ({ topic }: { topic: string }) => (
@@ -18,6 +20,48 @@ const NeedHelp = ({ topic }: { topic: string }) => (
     <p>If any of the above feels like a problem you have, <a href={`/contact/?topic=${topic}`}>tell us a bit about your situation</a> and we will come back within a working day. First conversation is 30 minutes, on us.</p>
   </>
 )
+
+/** A few dated milestones on one line. Labels break on \n; accent marks the dates that need action. */
+export function DateTimeline({ items, ariaLabel, caption }: { items: { date: string; label: string; accent?: boolean }[]; ariaLabel: string; caption: string }) {
+  const x = (i: number) => 70 + i * (500 / Math.max(items.length - 1, 1))
+  return (
+    <figure style={{ margin: '36px 0' }}>
+      <div style={{ overflowX: 'auto' }}>
+        <svg viewBox="0 0 640 170" style={{ width: '100%', maxWidth: 640, display: 'block' }} role="img" aria-label={ariaLabel}>
+          <line x1={x(0)} y1="58" x2={x(items.length - 1)} y2="58" stroke="#2d2d2d" strokeWidth="2" />
+          {items.map((it, i) => (
+            <g key={it.date}>
+              <circle cx={x(i)} cy="58" r="7" fill={it.accent ? '#3cffd0' : '#131313'} stroke={it.accent ? '#3cffd0' : '#949494'} strokeWidth="2" />
+              <text x={x(i)} y="30" textAnchor="middle" fontFamily="var(--font-mono), monospace" fontSize="11" letterSpacing="1.2" fill={it.accent ? '#3cffd0' : '#949494'}>{it.date}</text>
+              {it.label.split('\n').map((line, j) => (
+                <text key={j} x={x(i)} y={92 + j * 17} textAnchor="middle" fontFamily="var(--font-sans), sans-serif" fontSize="13" fill="#e8e8e8">{line}</text>
+              ))}
+            </g>
+          ))}
+        </svg>
+      </div>
+      <figcaption style={{ fontSize: 13, color: '#949494', marginTop: 12, lineHeight: 1.6 }}>{caption}</figcaption>
+    </figure>
+  )
+}
+
+/** The post's primary sources, as a numbered list. Same data as the schema citation. */
+export function SourcesList({ sources, heading, lang }: { sources: NonNullable<BlogDetail['sources']>; heading: string; lang: string }) {
+  const fmt = new Intl.DateTimeFormat(lang === 'en' ? 'en-GB' : lang, { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' })
+  return (
+    <>
+      <h2 id="sources">{heading}</h2>
+      <ol style={{ fontSize: 14, lineHeight: 1.7 }}>
+        {sources.map(s => (
+          <li key={s.url}>
+            {s.publisher}: <a href={s.url} target="_blank" rel="noopener noreferrer">{s.title}</a>
+            {s.date ? `, ${fmt.format(new Date(`${s.date}T00:00:00Z`))}` : ''}
+          </li>
+        ))}
+      </ol>
+    </>
+  )
+}
 
 // Vendor screenshots behind the table, taken 22 Oct 2026 and cropped to the
 // trial terms. Same order as the table; each language passes its captions.
@@ -143,6 +187,166 @@ export function TrialTermsTable({ head, rows, names = {} }: { head: [string, str
 }
 
 export const blogDetails: BlogDetail[] = [
+{
+  slug: 'google-ads-learning-phase-black-friday-2026',
+  toc: [
+    'What Google actually said',
+    'What restarts learning, and what doesn’t',
+    'What to do before Black Friday',
+    '4 December: new PMax campaigns use your site’s images',
+    'The next six weeks, in order',
+    'Common questions',
+    'Sources',
+  ],
+  tocIds: [
+    'what-google-said',
+    'what-restarts-learning',
+    'before-black-friday',
+    'image-extraction',
+    'next-six-weeks',
+    'faq',
+    'sources',
+  ],
+  faqs: [
+    {
+      q: 'Does changing target ROAS or target CPA restart the learning phase in Google Ads?',
+      a: 'No. Google\'s help page on the learning period says changes to budgets, targets, creatives and targeting settings never trigger the "Learning" status or remove historical data. Google product manager Tal Akabas said the same for established campaigns on the Ads Decoded podcast on 15 October 2026. The new target applies from the next auction; performance takes one to two conversion cycles to settle.',
+    },
+    {
+      q: 'What triggers the learning phase in Google Ads?',
+      a: 'Google lists three causes: a new or reactivated bid strategy, campaigns or keywords added to or removed from a bid strategy, and a significant change to the conversion goals or actions the campaign optimises for. A brand-new campaign also shows the status, because it has no history of its own.',
+    },
+    {
+      q: 'How long does the Google Ads learning phase last?',
+      a: 'The "Learning" status never lasts more than seven days, according to Google. Performance takes longer: Google says Smart Bidding typically converges on a new goal within one to two conversion cycles, and recommends judging a change over two conversion cycles or two weeks, whichever is longer.',
+    },
+    {
+      q: 'Is image extraction on by default in Performance Max?',
+      a: 'From 4 December 2026, yes, for new campaigns. Image extraction is switched on by default for every Performance Max campaign created from that date, in the Google Ads interface, Google Ads Editor and the API, even if dynamic images are switched off at account level. Existing campaigns keep their current setting.',
+    },
+    {
+      q: 'How do I stop Performance Max from using images from my website?',
+      a: 'Decide per campaign. Through the Google Ads API, set GENERATE_IMAGE_EXTRACTION to OPTED_OUT in the campaign\'s asset_automation_settings when you create it. In the interface, check the landing page images option on each new Performance Max campaign before you publish it, because from 4 December the account-level dynamic images setting no longer decides for new campaigns.',
+    },
+  ],
+  sources: [
+    { publisher: 'Google Ads Help', title: 'Duration of the learning period for campaigns and what affects it', url: 'https://support.google.com/google-ads/answer/13020501?hl=en' },
+    { publisher: 'Ads Decoded by Google Ads (YouTube)', title: 'How to guide campaign spend with Google Ads budget and bidding controls', url: 'https://www.youtube.com/watch?v=HaoMqRGlmp8', date: '2026-10-15' },
+    { publisher: 'Google Ads Developer Blog', title: 'Upcoming changes to image extraction in Performance Max', url: 'https://ads-developers.googleblog.com/2026/10/upcoming-changes-to-image-extraction-in.html', date: '2026-10-21' },
+    { publisher: 'Google Ads Help', title: 'About dynamic image assets', url: 'https://support.google.com/google-ads/answer/10109688?hl=en' },
+    { publisher: 'Google Ads Help', title: 'Changes to target based bid strategies (17 August 2026)', url: 'https://support.google.com/google-ads/answer/17061251?hl=en' },
+    { publisher: 'Google Business', title: 'Bidding and budgeting updates to scale your growth (promotion mode beta)', url: 'https://business.google.com/in/accelerate/announcements/bidding-and-budgeting-updates-to-scale-your-growth/' },
+    { publisher: 'Ads Decoded by Google Ads', title: 'Budgets, bidding & AI-powered campaigns: best practices for 2026', url: 'https://business.google.com/us/accelerate/podcasts/ads-decoded-s1e4/' },
+    { publisher: 'Common Thread Collective', title: 'Google Just Debunked the Learning Period Myth', url: 'https://commonthreadco.com/blogs/coachs-corner/google-learning-period-myth-debunked-bfcm-ecommerce-2026', date: '2026-10-17' },
+  ],
+  prose: (
+    <>
+      <p>Changing the target or the budget of a Google Ads campaign that is already running does not put it back into a learning phase. Google&rsquo;s Tal Akabas said so on the Ads Decoded podcast on 15 October 2026, and Google&rsquo;s help page on the learning period now says the same thing in writing. Two kinds of change still do: anything new, and anything that changes what the campaign is optimising for.</p>
+      <p>A second change lands four days after Cyber Monday. From 4 December 2026, every new Performance Max campaign pulls images from your landing pages by default, even in accounts where dynamic images are switched off. Put together, the plan for the next six weeks is short: adjust what is already running, and check what anything new switches on.</p>
+      <DateTimeline
+        ariaLabel="Timeline: 15 October, Google confirms target and budget changes don't restart learning; 27 November, Black Friday; 30 November, Cyber Monday; 4 December, image extraction on by default for new Performance Max campaigns"
+        caption="Four dates for the end of 2026. Everything before 4 December is about adjusting campaigns that already run; everything after it applies to campaigns you create."
+        items={[
+          { date: '15 OCT', label: 'Google: targets and\nbudgets don’t restart\nlearning' },
+          { date: '27 NOV', label: 'Black Friday', accent: true },
+          { date: '30 NOV', label: 'Cyber Monday', accent: true },
+          { date: '4 DEC', label: 'New PMax campaigns:\nimage extraction\non by default' },
+        ]}
+      />
+
+      <h2 id="what-google-said">What Google actually said</h2>
+      <p>The question came up in <a href="https://www.youtube.com/watch?v=HaoMqRGlmp8" target="_blank" rel="noopener noreferrer">the 15 October episode of Ads Decoded</a>, Google&rsquo;s podcast for advertisers, hosted by Ads Product Liaison Ginny Marvin. Akabas, a product manager on Google Ads, called the learning period a topic with &ldquo;a lot of misinformation&rdquo; and answered it directly:</p>
+      <blockquote>&ldquo;When you change your target for an existing steady state campaign, when you change your target or your budget, there isn&rsquo;t actually a learning period. The Google Ads back end system will scale bids directly in proportion to your target changes.&rdquo;</blockquote>
+      <p>His reason: Google already holds bid and budget simulations for the campaign, which he called landscapes, built from its auction history. A new target is a new point on a curve the system already knows. For a net-new campaign, he said, &ldquo;some learning period can take place&rdquo;, because there is no history of its own to scale from.</p>
+      <p>The written version is more precise than the podcast. <a href="https://support.google.com/google-ads/answer/13020501?hl=en" target="_blank" rel="noopener noreferrer">Google&rsquo;s help page on the learning period</a> lists three causes of the &ldquo;Learning&rdquo; status: a new or reactivated bid strategy, campaigns or keywords added to or removed from a bid strategy, and a significant change to the conversion goals you optimise for. Then it adds: &ldquo;Changes to budgets, targets, creatives, or targeting settings (such as location or audience) never remove your historical data or trigger &lsquo;Learning&rsquo; status.&rdquo;</p>
+      <p>Two more lines from the same page matter more than the label. The status never lasts more than seven days. Performance takes longer: Google says Smart Bidding typically converges on a new goal &ldquo;within 1 to 2 conversion cycles&rdquo;, and suggests judging a change over two conversion cycles or two weeks, whichever is longer. The label tells you the configuration changed. The conversion cycle tells you when you can read the result.</p>
+
+      <h2 id="what-restarts-learning">What restarts learning, and what doesn&rsquo;t</h2>
+      <p>Here is Google&rsquo;s help page as a table, with the point Akabas added about new campaigns.</p>
+      <div style={{ overflowX: 'auto' }}>
+        <table>
+          <thead>
+            <tr><th>Change</th><th>&ldquo;Learning&rdquo; status</th><th>What it means</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Target CPA or ROAS</td><td>No</td><td>Applies from the next auction. Performance moves towards the new target over one to two conversion cycles.</td></tr>
+            <tr><td>Budget</td><td>No</td><td>Applies immediately.</td></tr>
+            <tr><td>Ads and images</td><td>No</td><td>Historical data stays.</td></tr>
+            <tr><td>Location or audience</td><td>No</td><td>Historical data stays.</td></tr>
+            <tr><td>New bid strategy</td><td>Yes, up to 7 days</td><td>Includes reactivating a strategy and applying a new portfolio strategy.</td></tr>
+            <tr><td>Composition</td><td>Yes, up to 7 days</td><td>Campaigns, ad groups or keywords added to a bid strategy, or removed from it.</td></tr>
+            <tr><td>Conversion goals</td><td>Yes, if significant</td><td>The campaign is now optimising for something else.</td></tr>
+            <tr><td>New campaign</td><td>Yes</td><td>No history of its own, although Smart Bidding draws on conversion data from the rest of the account.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>One limit nobody at Google has put a number on: Akabas didn&rsquo;t say how large a target change can be before scaling in proportion stops being a good description. Moving a target ROAS from 400% to 350% is an adjustment. I&rsquo;d treat a move from 400% to 150% as closer to a new strategy, whatever the status column says, and give it the same care.</p>
+
+      <h2 id="before-black-friday">What to do before Black Friday</h2>
+      <p>Black Friday falls on 27 November this year and Cyber Monday on 30 November. From the end of October that leaves four weeks. With a one-week conversion cycle, that is room for one change per campaign that you can still read before the sale, not three.</p>
+      <ol>
+        <li>Fix the targets that are wrong now. Since <a href="/blog/performance-max-bidding-change-august-2026/">the bidding change of 17 August</a>, campaigns that are limited by budget deliver close to the target you set, and Google&rsquo;s note on that change says it &ldquo;won&rsquo;t automatically adjust your bidding targets or budgets&rdquo;. If a target no longer reflects what you want to pay at peak, change it this week rather than in the week of the sale.</li>
+        <li>Make one target change per conversion cycle. Google&rsquo;s own advice is to avoid several target changes within one cycle unless there is a clear business need. Move a target on Monday and again on Wednesday, and you can no longer tell which change did what.</li>
+        <li>Use budget for the peak days and targets for the weeks around them. A budget increase applies at once and restarts nothing, so it is the right lever for 27 to 30 November. A target is a statement about efficiency, and it needs a conversion cycle to show its effect.</li>
+        <li>Adjust a campaign that works rather than building one for the sale. A new campaign starts without history of its own. Akabas&rsquo;s advice for new holiday campaigns was to launch them &ldquo;a couple of days&rdquo; before the promotion. If your conversion cycle is longer than that, I&rsquo;d give a new campaign at least one full cycle.</li>
+        <li>Read the conversion cycle, not the label. A &ldquo;Learning&rdquo; status says the configuration changed. It doesn&rsquo;t say performance got worse, and its absence doesn&rsquo;t mean a change has worked. Judge each change after two conversion cycles or two weeks, whichever is longer.</li>
+      </ol>
+      <p>If you want a looser target only for the sale days, Google has a tool for that. <a href="https://business.google.com/in/accelerate/announcements/bidding-and-budgeting-updates-to-scale-your-growth/" target="_blank" rel="noopener noreferrer">Promotion mode</a> &ldquo;lets you set temporary changes to your ROAS tolerance and add extra daily budget during peak periods&rdquo; on Search and Performance Max. It launched as a beta in June, and Akabas said in October that it was rolling out more widely, with the hedge &ldquo;I think this week&rdquo;. Check whether it is in your account before you plan around it.</p>
+
+      <h2 id="image-extraction">4 December: new PMax campaigns use your site&rsquo;s images</h2>
+      <p>The second change came from <a href="https://ads-developers.googleblog.com/2026/10/upcoming-changes-to-image-extraction-in.html" target="_blank" rel="noopener noreferrer">the Google Ads API team on 21 October</a>, but it applies everywhere. From 4 December 2026, image extraction is switched on by default for every new Performance Max campaign, whether you create it in the Google Ads interface, in Google Ads Editor or through the API. Google AI then scans your landing pages for high-resolution images and uses them as ad assets across Search, YouTube, Display, Discover, Gmail and Maps.</p>
+      <p>Two details make this more than a default flip. The new campaign-level setting applies &ldquo;even if Dynamic Image Extensions are disabled at the account level&rdquo;; until now, a campaign without its own setting inherited the account&rsquo;s choice. And existing campaigns keep their current configuration, so only campaigns created from 4 December are affected.</p>
+      <p>That timing is the point. Most Black Friday campaigns will be live before 4 December. The campaigns built afterwards are the Christmas, last-order-date and January sale campaigns, which are often built fast and from a template, in accounts where dynamic images were switched off at account level long ago. That old switch no longer protects them.</p>
+
+      <h3>What to check on your landing pages</h3>
+      <p>The API announcement asks you to confirm that you own all legal rights or permissions to the images on your landing pages and allow Google to use them for advertising. <a href="https://support.google.com/google-ads/answer/10109688?hl=en" target="_blank" rel="noopener noreferrer">Google&rsquo;s help page for dynamic image assets</a> says the same. An image cleared for your website isn&rsquo;t automatically cleared for ads, so go through the pages your new campaigns will point to and look for:</p>
+      <ul>
+        <li>Stock photos licensed for web use but not for advertising.</li>
+        <li>Photos of staff, models or customers whose consent covers your website but not ads.</li>
+        <li>Partner logos, certificates and press badges, which can turn up in an ad without their context.</li>
+        <li>Images with prices, dates or offers in them, which go stale the day after the sale.</li>
+        <li>Old campaign visuals that are still on the page but no longer true.</li>
+      </ul>
+      <p>For dynamic image assets in Search, Google says extracted images pass automated and manual quality checks before they serve. Those checks are about quality and relevance. They don&rsquo;t know what your licences say.</p>
+
+      <h3>How to control it</h3>
+      <p>In the interface, the account-level switch sits under Campaigns, Assets, the three-dot menu, Account-level automated assets, the three-dot menu again, Advanced settings, Dynamic images. From 4 December that switch no longer decides for new Performance Max campaigns, so check the landing page images option on each new campaign before you publish it.</p>
+      <p>If you create campaigns through the API or a script, add the setting to the creation request before 4 December. This is Google&rsquo;s example:</p>
+      <pre><code>{`{
+  "name": "My Performance Max Campaign",
+  "advertisingChannelType": "PERFORMANCE_MAX",
+  "status": "PAUSED",
+  "assetAutomationSettings": [
+    {
+      "assetAutomationType": "GENERATE_IMAGE_EXTRACTION",
+      "assetAutomationStatus": "OPTED_OUT"
+    }
+  ]
+}`}</code></pre>
+      <p>To see what your existing campaigns are set to, Google gives this query:</p>
+      <pre><code>{`SELECT
+  campaign.id,
+  campaign.name,
+  campaign.asset_automation_settings
+FROM campaign
+WHERE campaign.advertising_channel_type = 'PERFORMANCE_MAX'`}</code></pre>
+      <p>A campaign without a <code>GENERATE_IMAGE_EXTRACTION</code> entry still follows the account-level setting. One trap when you change existing campaigns: <code>asset_automation_settings</code> is a repeated field, and sending new settings &ldquo;replaces the entire array rather than merging&rdquo;. Include every other automation setting you want to keep, such as text asset automation, or you switch it off by accident.</p>
+
+      <h2 id="next-six-weeks">The next six weeks, in order</h2>
+      <ul>
+        <li>This week: review targets on established campaigns and change the ones that are wrong. One change per campaign per conversion cycle.</li>
+        <li>Before the sale: launch any new sale campaign at least a couple of days early, as Google suggests, or one conversion cycle early if yours is longer.</li>
+        <li>27 to 30 November: use budgets for the peak days. Don&rsquo;t undo a change because of a status label.</li>
+        <li>Before 4 December: add the image extraction setting to every campaign template, script and API integration you use.</li>
+        <li>From 4 December: check image extraction on every new Performance Max campaign before it goes live, and the landing pages behind it.</li>
+      </ul>
+      <p>If you&rsquo;d like a second pair of eyes on targets before the sale, that is what our <a href="/services/google-ads/">Google Ads work</a> is for. We also wrote up <a href="/blog/performance-max-2026/">the Performance Max settings we change first</a>, which still apply.</p>
+
+      <NeedHelp topic="google-ads-learning-phase" />
+    </>
+  ),
+},
+
 {
   slug: 'ai-visibility-tool-free-trial',
   toc: [
