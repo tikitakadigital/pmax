@@ -161,7 +161,10 @@ const { data: existing, error: readError } = await db
 if (readError) fail(`Could not read the briefings table: ${readError.message}. Has admin/supabase/004_briefings.sql been run?`)
 if (!existing && !opts.client) fail('--client is required when a code is loaded for the first time.')
 
-const pdfPath = `${code}/${pdfFilename}`
+// Each version gets its own path, keyed by its content. Storage sits behind a
+// CDN that caches by path, so overwriting one name served the old PDF for up to
+// an hour. The download name stays pdf_filename (set on the signed link).
+const pdfPath = `${code}/${sha(pdf).slice(0, 12)}/${pdfFilename}`
 const { error: uploadError } = await db.storage
   .from('briefings')
   .upload(pdfPath, pdf, { contentType: 'application/pdf', upsert: true })
