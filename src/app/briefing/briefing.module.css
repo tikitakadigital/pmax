@@ -79,18 +79,6 @@
 .btn:focus-visible { outline: 2px solid #f6f4ef; outline-offset: 2px; }
 .btn:disabled { opacity: .7; cursor: progress; }
 
-.pill {
-  font-family: var(--font-mono), monospace;
-  font-size: .7rem;
-  font-weight: 700;
-  letter-spacing: .08em;
-  text-transform: uppercase;
-  padding: .3rem .7rem;
-  border-radius: 2rem;
-  background: #fef9c3;
-  color: #854d0e;
-}
-
 .pdfError {
   font-size: .8rem;
   color: #ffb39c;

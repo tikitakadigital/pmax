@@ -25,9 +25,9 @@ interface Briefing {
 }
 
 const LABELS = {
-  de: { pdf: 'PDF herunterladen', pdfBusy: 'PDF wird vorbereitet…', draft: 'Entwurf', loading: 'Briefing wird geladen…', notFound: 'Dieses Briefing wurde nicht gefunden.', error: 'Fehler beim Laden. Bitte schreib uns an hello@pmax.online.', pdfError: 'Das PDF konnte nicht geladen werden. Bitte lade die Seite neu.' },
-  en: { pdf: 'Download PDF', pdfBusy: 'Preparing PDF…', draft: 'Draft', loading: 'Loading briefing…', notFound: 'This briefing was not found.', error: 'Something went wrong. Please email us at hello@pmax.online.', pdfError: 'The PDF could not be loaded. Please reload the page.' },
-  es: { pdf: 'Descargar PDF', pdfBusy: 'Preparando el PDF…', draft: 'Borrador', loading: 'Cargando el briefing…', notFound: 'No hemos encontrado este briefing.', error: 'Algo ha fallado. Escríbenos a hello@pmax.online.', pdfError: 'No se ha podido cargar el PDF. Recarga la página.' },
+  de: { pdf: 'PDF herunterladen', pdfBusy: 'PDF wird vorbereitet…', loading: 'Briefing wird geladen…', notFound: 'Dieses Briefing wurde nicht gefunden.', error: 'Fehler beim Laden. Bitte schreib uns an hello@pmax.online.', pdfError: 'Das PDF konnte nicht geladen werden. Bitte lade die Seite neu.' },
+  en: { pdf: 'Download PDF', pdfBusy: 'Preparing PDF…', loading: 'Loading briefing…', notFound: 'This briefing was not found.', error: 'Something went wrong. Please email us at hello@pmax.online.', pdfError: 'The PDF could not be loaded. Please reload the page.' },
+  es: { pdf: 'Descargar PDF', pdfBusy: 'Preparando el PDF…', loading: 'Cargando el briefing…', notFound: 'No hemos encontrado este briefing.', error: 'Algo ha fallado. Escríbenos a hello@pmax.online.', pdfError: 'No se ha podido cargar el PDF. Recarga la página.' },
 }
 
 type State = 'loading' | 'not_found' | 'error' | 'ok'
@@ -119,7 +119,6 @@ export default function BriefingPage() {
           <a className={s.logo} href="https://pmax.online/" aria-label="pmax">
             <span>pmax</span><span className={s.logoDot} aria-hidden="true" />
           </a>
-          {briefing.status === 'draft' && <span className={s.pill}>{L.draft}</span>}
           {pdfError && <span className={s.pdfError} role="alert">{L.pdfError}</span>}
           {briefing.pdf_filename && (
             <button className={s.btn} onClick={downloadPdf} disabled={pdfBusy}>

@@ -157,7 +157,7 @@ if (!url || !key) fail('SUPABASE_URL and SUPABASE_SERVICE_ROLE_KEY are not set. 
 const db = createClient(url, key, { auth: { persistSession: false } })
 
 const { data: existing, error: readError } = await db
-  .from('briefings').select('code, status, client_name').eq('code', code).maybeSingle()
+  .from('briefings').select('code, status, client_name, pdf_path').eq('code', code).maybeSingle()
 if (readError) fail(`Could not read the briefings table: ${readError.message}. Has admin/supabase/004_briefings.sql been run?`)
 if (!existing && !opts.client) fail('--client is required when a code is loaded for the first time.')
 
@@ -190,6 +190,12 @@ const { data: saved, error: saveError } = await db
   .from('briefings').upsert(row, { onConflict: 'code' }).select('code, status, access_token').single()
 if (saveError) fail(`Saving the briefing failed: ${saveError.message}`)
 
+// A reload under a new filename leaves the old PDF behind; remove it.
+if (existing?.pdf_path && existing.pdf_path !== pdfPath) {
+  const { error: removeError } = await db.storage.from('briefings').remove([existing.pdf_path])
+  console.log(removeError ? `  ! Could not remove the previous PDF ${existing.pdf_path}: ${removeError.message}` : `  Removed the previous PDF ${existing.pdf_path}.`)
+}
+
 console.log(`\n✓ ${existing ? 'Updated' : 'Created'} ${saved.code} (status: ${saved.status}). The stored PDF matches the local file.`)
 console.log(`\n  https://pmax.online/briefing/${saved.code}/#t=${saved.access_token}\n`)
-if (saved.status === 'draft') console.log('  Still a draft: views are not logged. Set --status sent when it goes to the client.\n')
+if (saved.status === 'draft') console.log('  Draft: views are not logged yet. Set --status sent when it goes to the client.\n')
