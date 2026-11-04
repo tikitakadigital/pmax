@@ -26,8 +26,8 @@ const ROOT = process.argv[2] ?? 'out'
 const ORIGIN = 'https://pmax.online'
 
 // Client-rendered pages have no content in the export: a Markdown twin would be
-// an empty document. /proposal is also token-gated client data.
-const SKIP = [/^\/proposal\//, /^\/404\//]
+// an empty document. /proposal and /briefing are also token-gated client data.
+const SKIP = [/^\/proposal\//, /^\/briefing\//, /^\/404\//]
 
 const turndown = new TurndownService({
   headingStyle: 'atx',

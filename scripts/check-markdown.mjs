@@ -15,7 +15,7 @@ import { execFileSync } from 'node:child_process'
 
 const ROOT = process.argv[2] ?? 'out'
 const ORIGIN = 'https://pmax.online'
-const SKIP = [/^\/proposal\//, /^\/404\//]
+const SKIP = [/^\/proposal\//, /^\/briefing\//, /^\/404\//]
 
 const errors = []
 const notes = []

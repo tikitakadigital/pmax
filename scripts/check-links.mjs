@@ -17,7 +17,7 @@ import path from 'node:path'
 const ROOT = process.argv[2] ?? 'out'
 
 // Served by a rewrite rather than a file, so there is nothing on disk to find.
-const DYNAMIC = [/^\/proposal\/[^/]+\/?$/]
+const DYNAMIC = [/^\/proposal\/[^/]+\/?$/, /^\/briefing\/[^/]+\/?$/]
 
 const ASSET = /\.(xml|txt|ico|svg|jpe?g|png|webp|gif|avif|webmanifest|md|php|pdf|json|css|js|woff2?)$/i
 

@@ -4,3 +4,10 @@ out/
 .env.local
 *.log
 .DS_Store
+
+# Client data never goes in git (the repo is public): one-off SQL with offer
+# or briefing content, and briefing sources if ever copied into the tree.
+admin/supabase/*-insert.sql
+admin/supabase/*-update.sql
+admin/supabase/brf*.sql
+admin/briefings/

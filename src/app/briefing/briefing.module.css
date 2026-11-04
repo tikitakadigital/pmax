@@ -1,0 +1,109 @@
+/* Shell around a stored briefing. The briefing brings its own cover, sections
+   and footer (scoped under .brf); this file only styles the bar above it. */
+
+.page {
+  min-height: 100vh;
+  background: #f2f2ee;
+  font-family: var(--font-sans), system-ui, sans-serif;
+}
+
+.state {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 2rem 1rem;
+  background: #f2f2ee;
+  color: #333;
+  font-family: var(--font-sans), system-ui, sans-serif;
+  text-align: center;
+}
+
+/* ── Actions bar (screen only) ─────────────────────────────────────────────── */
+
+.actions {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(19, 19, 19, 0.96);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid #2d2d2d;
+  padding: .6rem max(16px, env(safe-area-inset-right, 0px)) .6rem max(16px, env(safe-area-inset-left, 0px));
+}
+
+.actionsInner {
+  max-width: 880px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+  flex-wrap: wrap;
+}
+
+.logo {
+  font-family: var(--font-display), Impact, sans-serif;
+  font-size: 22px;
+  line-height: 1;
+  letter-spacing: .02em;
+  color: #f6f4ef;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-right: auto;
+}
+
+.logoDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #3cffd0;
+  display: inline-block;
+}
+
+.btn {
+  padding: .5rem 1.1rem;
+  border: 1.5px solid #3cffd0;
+  background: #3cffd0;
+  color: #131313;
+  border-radius: 3px;
+  font-family: var(--font-mono), monospace;
+  font-size: .75rem;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background .12s, border-color .12s;
+}
+
+.btn:hover { background: #1fe8b8; border-color: #1fe8b8; }
+.btn:focus-visible { outline: 2px solid #f6f4ef; outline-offset: 2px; }
+.btn:disabled { opacity: .7; cursor: progress; }
+
+.pill {
+  font-family: var(--font-mono), monospace;
+  font-size: .7rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  padding: .3rem .7rem;
+  border-radius: 2rem;
+  background: #fef9c3;
+  color: #854d0e;
+}
+
+.pdfError {
+  font-size: .8rem;
+  color: #ffb39c;
+}
+
+/* Briefings are laid out for A4 and desktop. Their .stack grid sizes its one
+   column to the widest table, so on a phone the whole section got wider than
+   the screen instead of letting the table scroll inside .tbl-wrap. Screen-only
+   fix here, so the reviewed HTML and PDF stay exactly as they were approved. */
+.page :global(.brf .stack) { grid-template-columns: minmax(0, 1fr); }
+
+/* The stored briefing has its own @media print rules; the bar stays off paper. */
+@media print {
+  .actions { display: none; }
+  .page { background: #fff; }
+}

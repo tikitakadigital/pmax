@@ -22,6 +22,11 @@ ErrorDocument 404 /404.html
   Header always set Link "<https://pmax.online%{MDTWIN}e>; rel=\"alternate\"; type=\"text/markdown\"" env=MDTWIN
   Header always append Vary Accept env=MDTWIN
   Header unset X-Powered-By
+  # Client documents behind a token: never indexed, never followed. THE_REQUEST
+  # is the original request line, so this holds after the rewrites below.
+  <If "%{THE_REQUEST} =~ m#^[A-Z]+ /(briefing|proposal)/#">
+    Header always set X-Robots-Tag "noindex, nofollow"
+  </If>
 </IfModule>
 
 # Block deploy artefacts and hidden files
@@ -105,6 +110,10 @@ ErrorDocument 404 /404.html
   # Proposal pages — serve /proposal/index.html for any /proposal/[code]/ URL
   RewriteRule ^proposal/[A-Za-z0-9_-]+/?$ /proposal/ [L]
 
+  # Briefing pages — serve /briefing/index.html for any /briefing/[code]/ URL.
+  # The token is in the fragment (#t=…), which never reaches the server.
+  RewriteRule ^briefing/[A-Za-z0-9_-]+/?$ /briefing/ [L]
+
   # ── Markdown for AI agents ──────────────────────────────────────────────
   # Two ways to the same document: the .md twin URL, and content negotiation on
   # the page URL. public/_md.php decides — by the Accept header only, never by
@@ -114,6 +123,7 @@ ErrorDocument 404 /404.html
   RewriteCond %{REQUEST_URI} ^/$
   RewriteRule ^ - [E=MDTWIN:/index.md]
   RewriteCond %{REQUEST_URI} !^/_
+  RewriteCond %{REQUEST_URI} !^/briefing/
   RewriteRule ^(.+)/$ - [E=MDTWIN:/$1.md]
 
   # 1. The twin URL itself — always Markdown, no negotiation.
