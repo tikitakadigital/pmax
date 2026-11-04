@@ -30,6 +30,11 @@ CREATE TABLE IF NOT EXISTS briefings (
 -- means the anon and authenticated keys get nothing, whatever leaks.
 ALTER TABLE briefings ENABLE ROW LEVEL SECURITY;
 
+-- Newer Supabase projects don't grant the API roles access to tables created
+-- in the SQL editor. Grant the service role only; anon and authenticated stay
+-- without access.
+GRANT SELECT, INSERT, UPDATE, DELETE ON TABLE briefings TO service_role;
+
 -- Private bucket for the PDFs. Served only through short-lived signed URLs.
 INSERT INTO storage.buckets (id, name, public, file_size_limit, allowed_mime_types)
 VALUES ('briefings', 'briefings', false, 20971520, ARRAY['application/pdf'])

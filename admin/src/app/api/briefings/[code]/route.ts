@@ -15,7 +15,8 @@ export async function GET(
   const row = await findBriefing(
     code,
     token,
-    'code, lang, date, client_name, client_contact, title, html, css, pdf_path, pdf_filename',
+    // client_contact is for us; the page doesn't need it, so it stays server-side.
+    'code, lang, date, client_name, title, html, css, pdf_path, pdf_filename',
   )
   if (!row) return notFound('GET')
 
