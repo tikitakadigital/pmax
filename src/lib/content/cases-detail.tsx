@@ -327,7 +327,7 @@ export const caseDetails: CaseDetail[] = [
 
   {
     slug: 'training-school-google-ads',
-    metaTitle: 'Training school — 2.2× leads at the same Google Ads budget | pmax',
+    metaTitle: 'Training school: 2.2× leads, same Google Ads budget | pmax',
     metaDesc: 'A multi-location training school in Germany: tracking rebuilt around real enquiries, then one account structure per location. 250 verified leads in five months at €41 each, on last year’s budget.',
     breadcrumbLabel: 'Multi-location training school',
     heroVariant: 'is-violet',

@@ -9,7 +9,7 @@ import { breadcrumb, faqPage } from '@/lib/schema'
 import { cases } from '@/lib/content/cases'
 
 export const metadata: Metadata = {
-  title: 'SEO Company Mallorca | pmax — Local & multilingual SEO from Calvià',
+  title: 'SEO Company Mallorca — Local & Multilingual SEO | pmax',
   description: 'pmax is an SEO company in Mallorca. We rank Balearic businesses in four languages — Spanish, German, English and Catalan — with technical SEO, local search and AI visibility. Based in Calvià.',
   alternates: {
     canonical: 'https://pmax.online/seo-company-mallorca/',

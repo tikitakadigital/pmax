@@ -15,7 +15,7 @@ export function generateStaticParams() {
 }
 
 export const metadata: Metadata = {
-  title: 'SEO Agentur Mallorca | pmax — Lokale & mehrsprachige SEO aus Calvià',
+  title: 'SEO Agentur Mallorca — lokal & mehrsprachig | pmax',
   description: 'pmax ist eine SEO Agentur auf Mallorca. Wir bringen Unternehmen in vier Sprachen nach oben — Deutsch, Spanisch, Englisch und Katalanisch — mit technischem SEO, lokaler Suche und KI-Sichtbarkeit. Sitz in Calvià.',
   alternates: {
     canonical: 'https://pmax.online/de/seo-agentur-mallorca/',

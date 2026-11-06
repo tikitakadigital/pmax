@@ -7,7 +7,7 @@ import { breadcrumb, serviceSchema, faqPage } from '@/lib/schema'
 import { siteAlternates } from '@/lib/hreflang'
 
 export const metadata: Metadata = {
-  title: 'Generative Engine Optimisation Agency | Visibility Engineering',
+  title: 'Generative Engine Optimisation (GEO) Agency | pmax',
   description: 'Visibility Engineering by pmax: GEO, SEO, digital PR and reputation management. Get discovered, trusted and chosen across Google and AI search.',
   alternates: siteAlternates('/services/visibility-engineering/'),
   openGraph: {

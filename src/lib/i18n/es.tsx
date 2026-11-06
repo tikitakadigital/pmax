@@ -54,7 +54,7 @@ export const es = {
   },
 
   home: {
-    metaTitle: 'Agencia de marketing digital Mallorca — Google Ads, SEO & IA | pmax',
+    metaTitle: 'Google Ads, SEO y visibilidad en IA desde Mallorca | pmax',
     metaDesc: 'Google Ads, Meta, LinkedIn, SEO y visibilidad en búsqueda con IA — desde Mallorca para marcas en toda Europa. Tarifas mensuales fijas, sin porcentaje sobre la inversión publicitaria.',
     rotator: ['crecimiento.', 'visibilidad.', 'clientes.', 'resultados.'],
     tagline: 'Una agencia de marketing digital construida para resultados que puedes medir.',
@@ -385,7 +385,7 @@ export const es = {
       ],
     },
     'analytics': {
-      metaTitle: 'Analítica de marketing & tracking — GA4, GTM server-side | pmax',
+      metaTitle: 'Analítica y tracking: GA4 y GTM server-side | pmax',
       metaDesc: 'Tracking que sobrevive a iOS y RGPD. GTM server-side, Consent Mode v2, APIs de conversión e importaciones offline desde CRM — datos reales para cada decisión.',
       headline: <>Analítica y<br />tracking.</>,
       deck: 'GTM server-side, Consent Mode v2, importación de conversiones desde CRM, dashboards que no mienten. La base sobre la que se apoya todo lo demás.',
@@ -811,6 +811,9 @@ export const es = {
     posts: [
       { slug: 'google-ads-learning-phase-black-friday-2026', title: 'Antes del Black Friday: qué reinicia la fase de aprendizaje de Google Ads y qué se activa solo', deck: 'Cambiar objetivo o presupuesto no reinicia el aprendizaje, confirma Google. Las campañas nuevas sí, y desde el 4 de diciembre PMax usa las imágenes de tu web.' },
       { slug: 'ai-visibility-tool-free-trial', title: 'Cómo probar una herramienta de visibilidad en IA', deck: 'Una prueba de 7 o 14 días no dice si tu marca es visible en las respuestas de IA. Sí dice si la herramienta sirve. Qué revisar antes del primer cobro.' },
+      { slug: 'performance-max-bidding-change-august-2026', title: 'Performance Max: qué supone el cambio de pujas del 17 de agosto', deck: 'Desde el 17 de agosto, Google devuelve a su objetivo las campañas de Performance Max que lo superan, sin que hagas nada. Qué revisar y ajustar antes.' },
+      { slug: 'what-is-a-geo-audit', title: 'Qué es una auditoría GEO y cómo hacerla paso a paso', deck: 'Una auditoría GEO te muestra qué dicen ChatGPT, Perplexity y Gemini de tu marca y en qué se equivocan. Así se hace, paso a paso.' },
+      { slug: 'perplexity-visibility', title: 'Cómo mejorar tu visibilidad en Perplexity (y por qué no es ChatGPT)', deck: 'Una guía clara sobre la visibilidad en Perplexity en 2026: qué es, por qué se comporta distinto a ChatGPT y cinco acciones para este mes.' },
       { slug: 'how-to-test-ai-max', title: 'Cómo probar AI Max sin engañarte a ti mismo', deck: 'La mayoría de pruebas de AI Max miden la fase de aprendizaje, un cambio de presupuesto o una campaña que se canibaliza — no AI Max. Así se monta una prueba limpia.' },
       { slug: 'google-ads-agency-mallorca', title: 'Cómo elegir una agencia de Google Ads en Mallorca — y las preguntas que las distinguen', deck: 'La mayoría de agencias de Google Ads en Mallorca venden el mismo paquete. Aquí está cómo identificar cuáles conocen realmente el mercado local — y las tres preguntas que revelan si una agencia vale lo que cobra.' },
       { slug: 'how-to-advertise-business-mallorca', title: 'Cómo anunciarse en Mallorca: la guía completa para negocios', deck: 'Mallorca tiene 900.000 habitantes y casi 10 millones de visitantes al año. Los turistas alemanes gastan una media de 1.200 € por estancia. La guía completa de publicidad digital en Mallorca — todos los canales clave, con presupuestos concretos y contexto específico de la isla.' },
@@ -929,7 +932,7 @@ export const es = {
       </>),
     },
     'training-school-google-ads': {
-      metaTitle: 'Centro de formación — 2,2× leads con el mismo presupuesto de Google Ads | pmax',
+      metaTitle: 'Centro de formación: 2,2× leads, mismo presupuesto | pmax',
       metaDesc: 'Un centro de formación con tres sedes en Alemania: tracking reconstruido en torno a solicitudes reales y una estructura de cuenta por sede. 250 leads verificados en cinco meses a 41 € cada uno, con el presupuesto del año anterior.',
       heroTitle: 'Mismo presupuesto, 2,2× más leads — reconstruir una cuenta de Google Ads con varias sedes empezando por el tracking.',
       heroDeck: 'A la cuenta no le faltaba presupuesto. Le faltaban datos fiables. Primero definimos qué cuenta como conversión, después reconstruimos la estructura y solo entonces dejamos que Smart Bidding hiciera su trabajo.',
@@ -1071,6 +1074,7 @@ export const es = {
 
   blogPostDetail: {
 'how-to-advertise-business-mallorca': {
+      seoTitle: 'Publicidad en Mallorca: guía completa para negocios | pmax',
       toc: [
         'El mercado de Mallorca: qué lo hace diferente',
         'Google Ads en Mallorca',
@@ -2687,6 +2691,7 @@ export const es = {
       ),
     },
     'what-is-a-geo-audit': {
+      seoTitle: 'Qué es una auditoría GEO y cómo hacerla | pmax',
       toc: ['No es una auditoría SEO', 'Qué cubre una auditoría GEO', 'La checklist de auditoría GEO', 'Herramientas', 'Con qué frecuencia hacerla', 'Preguntas frecuentes'],
       faqs: [
         { q: '¿Qué es una auditoría GEO?', a: 'Una auditoría GEO es un análisis estructurado de cómo las plataformas de IA representan tu marca — qué dicen cuando les preguntan por ti, con qué precisión te describen, en qué fuentes se basan, y dónde aparece tu marca o deja de aparecer en las respuestas generadas por IA.' },
@@ -3158,6 +3163,7 @@ WHERE campaign.advertising_channel_type = 'PERFORMANCE_MAX'`}</code></pre>
       ),
     },
     'performance-max-bidding-change-august-2026': {
+      seoTitle: 'Performance Max: el cambio de pujas del 17 de agosto | pmax',
       toc: ['El cambio: Bidding Target Optimization', 'Tu ventana de seis semanas', 'Las dos betas', 'Lo que hacemos antes del 17 de agosto', 'Preguntas frecuentes'],
       faqs: [
         { q: '¿Cuándo entra en vigor el cambio de pujas de Performance Max?', a: 'El 17 de agosto de 2026. La Bid Target Adjustment Tool llega el 6 de julio, con una ventana de unas seis semanas para fijar tus objetivos antes de que el cambio se aplique automáticamente.' },
@@ -3225,6 +3231,7 @@ WHERE campaign.advertising_channel_type = 'PERFORMANCE_MAX'`}</code></pre>
       ),
     },
     'perplexity-visibility': {
+      seoTitle: 'Cómo mejorar tu visibilidad en Perplexity | pmax',
       title: 'Cómo mejorar tu visibilidad en Perplexity (y por qué no es ChatGPT)',
       deck: 'Una guía clara sobre la visibilidad en Perplexity en 2026 — qué es, por qué se comporta distinto a ChatGPT y cinco acciones para este mes.',
       toc: ['¿Qué es la visibilidad en Perplexity?', 'Por qué Perplexity es un problema aparte', 'Cinco acciones para este mes', 'Cómo puede ayudarte pmax', 'Preguntas frecuentes'],
@@ -3325,6 +3332,7 @@ WHERE campaign.advertising_channel_type = 'PERFORMANCE_MAX'`}</code></pre>
       </>),
     },
     'performance-max-2026': {
+      seoTitle: 'Performance Max en 2026: qué ha cambiado | pmax',
       toc: ['Las exclusiones de marca son imprescindibles', 'Reglas de valor por campaña', 'Estructura de grupos de assets', 'Search themes', 'Objetivos tROAS basados en beneficio', 'Grupos de listado para control del catálogo', 'Señales de audiencia de primera parte'],
       prose: (<>
         <p>Performance Max empezó como una caja negra. En 2026 es una caja negra un poco más transparente con muchos más controles. Esto es lo que realmente cambiamos primero.</p>
@@ -4036,6 +4044,7 @@ WHERE campaign.advertising_channel_type = 'PERFORMANCE_MAX'`}</code></pre>
       ),
     },
     'google-ads-agency-mallorca': {
+      seoTitle: 'Cómo elegir una agencia de Google Ads en Mallorca | pmax',
       title: 'Cómo elegir una agencia de Google Ads en Mallorca — y las preguntas que las distinguen',
       toc: ['Por qué Mallorca es diferente', 'Lo que la mayoría de agencias ignoran', 'Cómo reconocer una buena agencia de Google Ads en Mallorca', 'Números reales de cuentas que gestionamos aquí', 'La pregunta que vale la pena hacer antes de firmar'],
       prose: (<>

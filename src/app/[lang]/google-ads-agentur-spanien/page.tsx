@@ -15,7 +15,7 @@ export function generateStaticParams() {
 }
 
 export const metadata: Metadata = {
-  title: 'Google Ads Agentur Spanien | pmax — Performance Max & mehrsprachig, vor Ort',
+  title: 'Google Ads Agentur Spanien — vor Ort & mehrsprachig | pmax',
   description: 'pmax ist eine Google Ads Agentur in Spanien — vor Ort auf Mallorca, nicht aus der Ferne. Search, Shopping und Performance Max in vier Sprachen. Festpreis statt Prozent vom Mediabudget.',
   robots: 'index,follow,max-image-preview:large',
   alternates: {

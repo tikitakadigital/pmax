@@ -91,7 +91,7 @@ export const de = {
   },
 
   home: {
-    metaTitle: 'Digitalagentur Mallorca — Google Ads, SEO & KI-Sichtbarkeit | pmax',
+    metaTitle: 'Digitalagentur Mallorca: Google Ads, SEO & KI | pmax',
     metaDesc: 'Google Ads, Meta, LinkedIn, SEO und KI-Sichtbarkeit — von Mallorca aus für Marken in ganz Europa. Monatliche Festpreise, keine prozentualen Mediagebühren.',
     rotator: ['Wachstum.', 'Sichtbarkeit.', 'Kunden.', 'Performance.'],
     tagline: 'Eine Digitalagentur, die auf messbare Ergebnisse baut.',
@@ -237,7 +237,7 @@ export const de = {
   },
 
   services: {
-    metaTitle: 'Performance-Marketing-Leistungen — Google Ads, SEO & KI | pmax',
+    metaTitle: 'Leistungen: Google Ads, SEO & KI-Sichtbarkeit | pmax',
     metaDesc: 'Google Ads, Meta, LinkedIn, SEO, KI-Sichtbarkeit, Conversion Design, Analytics und GEO-Audit — neun Leistungen für messbares, profitables Wachstum.',
     eyebrow: '01 — Was wir tun',
     title: <>Performance Marketing,<br />gebaut wie <em>Engineering</em>.</>,
@@ -422,7 +422,7 @@ export const de = {
       ],
     },
     'analytics': {
-      metaTitle: 'Marketing Analytics & Tracking — GA4, Server-side GTM | pmax',
+      metaTitle: 'Marketing-Tracking mit GA4 & serverseitigem GTM | pmax',
       metaDesc: 'Tracking, das iOS und DSGVO übersteht. Server-side GTM, Consent Mode v2, Conversion-APIs und CRM-Offline-Imports — echte Daten für jede Marketing-Entscheidung.',
       headline: <>Analytics &<br />Tracking.</>,
       deck: 'Server-seitiges GTM, Consent Mode v2, CRM-Conversion-Imports, Dashboards ohne Lügen. Das Fundament, auf dem alles andere steht.',
@@ -474,7 +474,7 @@ export const de = {
       ],
     },
     'visibility-engineering': {
-      metaTitle: 'Generative Engine Optimisation Agentur | Visibility Engineering',
+      metaTitle: 'GEO-Agentur für Sichtbarkeit in KI-Antworten | pmax',
       metaDesc: 'Visibility Engineering von pmax: GEO, SEO, digitale PR und Reputationsmanagement. Entdeckt, vertraut und gewählt werden — in Google und KI-Suche.',
       headline: <>Visibility<br />Engineering.</>,
       deck: 'Wir helfen Ihnen, die Autorität aufzubauen, durch die Ihre Marke gefunden, vertraut und gewählt wird — in Google und auf allen relevanten KI-Suchplattformen.',
@@ -675,7 +675,7 @@ export const de = {
 
   industryDetail: {
     ecommerce: {
-      metaTitle: 'E-Commerce Marketing — Shopify, DTC & Performance Max | pmax',
+      metaTitle: 'E-Commerce-Marketing für Shopify- & DTC-Marken | pmax',
       metaDesc: 'Wachstumssystem für DTC-, Marktplatz- und Omni-Channel-Händler — Feed-Optimierung, Performance Max, Paid Social, SEO und KI-Shopping-Sichtbarkeit.',
       headline: <>E-Commerce,<br />der wirklich <em>skaliert</em>.</>,
       deck: 'Ein Wachstumssystem für DTC-, Marktplatz- und Omni-Channel-Händler — aufgebaut auf sauberen Conversion-Daten, margenbewusstem Bidding und Creative-Volumen, das mit dem Algorithmus Schritt hält.',
@@ -740,7 +740,7 @@ export const de = {
       ],
     },
     hr: {
-      metaTitle: 'HR & Recruiting Marketing — LinkedIn & Employer Brand | pmax',
+      metaTitle: 'Recruiting-Marketing & Employer Branding | pmax',
       metaDesc: 'LinkedIn Demand Generation für HR-Tech, Recruiting-Plattformen und große Arbeitgeber. CRM-Lead-Scoring, Offline-Conversions und Employer-Brand-Content.',
       headline: <>HR &<br /><em>Recruiting</em>.</>,
       deck: 'B2B-SaaS, Recruiting-Marketing, Employer Branding. LinkedIn ist meist der Leitkanal; alles andere unterstützt ihn.',
@@ -753,7 +753,7 @@ export const de = {
       ],
     },
     retail: {
-      metaTitle: 'Multi-Location Retail Marketing — Local Inventory Ads | pmax',
+      metaTitle: 'Marketing für Filialisten mit Local Inventory Ads | pmax',
       metaDesc: 'Performance-Marketing für Filialbetriebe. Local Inventory Ads, In-Store-Conversion-Tracking, geo-getargeted Meta und Google über 60+ Standorte.',
       headline: <>Einzelhandel.</>,
       deck: 'Multi-Location-Einzelhandel. Local Inventory Ads, In-Store-Conversion-Tracking, geo-getargeted Meta und Google.',
@@ -849,6 +849,9 @@ export const de = {
     posts: [
       { slug: 'google-ads-learning-phase-black-friday-2026', title: 'Vor dem Black Friday: Was die Google-Ads-Lernphase neu startet und was sich von selbst einschaltet', deck: 'Ziel oder Budget ändern startet keine Lernphase, bestätigt Google. Neue Kampagnen schon, und ab 4. Dezember holen neue PMax-Kampagnen Bilder Ihrer Website.' },
       { slug: 'ai-visibility-tool-free-trial', title: 'KI-Sichtbarkeits-Tools richtig testen: 7 oder 14 Tage', deck: '7 oder 14 Tage zeigen nicht, wie sichtbar Ihre Marke in KI-Antworten ist. Aber sie zeigen, ob das Tool taugt. So prüfen Sie es vor der ersten Abbuchung.' },
+      { slug: 'performance-max-bidding-change-august-2026', title: 'Performance Max: Was die Gebotsänderung vom 17. August bedeutet', deck: 'Ab dem 17. August führt Google übererfüllende Performance-Max-Kampagnen automatisch auf ihr Ziel zurück. Was Sie vorher prüfen und anpassen sollten.' },
+      { slug: 'what-is-a-geo-audit', title: 'Was ist ein GEO-Audit – und wie führen Sie es durch?', deck: 'Ein GEO-Audit zeigt, was ChatGPT, Perplexity und Gemini über Ihre Marke sagen und wo sie danebenliegen. So führen Sie es Schritt für Schritt durch.' },
+      { slug: 'perplexity-visibility', title: 'Perplexity-Sichtbarkeit verbessern — ein Praxisleitfaden', deck: 'Ein verständlicher Leitfaden zur Perplexity-Sichtbarkeit 2026: was sie ist, warum sie anders funktioniert als ChatGPT und fünf Maßnahmen für diesen Monat.' },
       { slug: 'how-to-test-ai-max', title: 'AI Max testen, ohne sich selbst zu täuschen', deck: 'Die meisten AI-Max-Tests messen die Lernphase, eine Budgetänderung oder eine Kampagne, die sich selbst kannibalisiert — nicht AI Max. So geht ein sauberer Test.' },
       { slug: 'google-ads-agency-mallorca', title: 'Google Ads Agentur Mallorca: Was Sie prüfen sollten, bevor Sie unterschreiben', deck: 'Die meisten Google-Ads-Agenturen auf Mallorca verkaufen dasselbe Paket. Hier ist, wie Sie erkennen, welche den Markt wirklich kennen — und die drei Fragen, die eine gute Agentur von einer mittelmäßigen trennen.' },
       { slug: 'how-to-advertise-business-mallorca', title: 'Werbung auf Mallorca: Der vollständige Leitfaden für Unternehmen', deck: 'Mallorca hat 900.000 Einwohner und fast 10 Millionen Besucher pro Jahr. Deutsche Touristen geben im Schnitt 1.200 € pro Aufenthalt aus. Der vollständige Leitfaden zu digitaler Werbung auf Mallorca — alle wichtigen Kanäle, mit konkreten Budgets und Mallorca-spezifischem Kontext.' },
@@ -1579,6 +1582,7 @@ export const de = {
       ),
     },
 'performance-marketing-agency-vs-in-house': {
+  seoTitle: 'Performance-Marketing: Agentur oder In-House? | pmax',
   title: 'Performance-Marketing-Agentur oder In-House-Team: Unsere ehrliche Einschätzung',
   deck: 'Die meisten Agenturen empfehlen sich selbst. Wir nicht immer. Eine ehrliche Analyse der echten Kosten, des Break-even-Punkts — und wann der Aufbau eines eigenen Teams die richtige Entscheidung ist.',
   toc: [
@@ -2586,6 +2590,7 @@ export const de = {
       ),
     },
     'what-is-a-geo-audit': {
+      seoTitle: 'Was ist ein GEO-Audit? Ein Praxisleitfaden | pmax',
       toc: ['Nicht einfach ein SEO-Audit', 'Was ein GEO-Audit umfasst', 'Die GEO-Audit-Checkliste', 'Tools', 'Wie oft ist sinnvoll?', 'Häufige Fragen'],
       faqs: [
         { q: 'Was ist ein GEO-Audit?', a: 'Ein GEO-Audit ist eine strukturierte Analyse der Art und Weise, wie KI-Plattformen Ihre Marke darstellen — was sie sagen, wenn man nach Ihnen fragt, wie genau sie Sie beschreiben, welche Quellen sie verwenden und wo Ihre Marke in KI-generierten Antworten erscheint oder eben nicht erscheint.' },
@@ -3057,6 +3062,7 @@ WHERE campaign.advertising_channel_type = 'PERFORMANCE_MAX'`}</code></pre>
       ),
     },
     'performance-max-bidding-change-august-2026': {
+      seoTitle: 'Performance Max: Gebotsänderung zum 17. August | pmax',
       toc: ['Die Änderung: Bidding Target Optimization', 'Ihr Sechs-Wochen-Fenster', 'Die zwei Betas', 'Was wir vor dem 17. August tun', 'Häufige Fragen'],
       faqs: [
         { q: 'Wann tritt die Gebotsänderung von Performance Max in Kraft?', a: 'Am 17. August 2026. Das Bid Target Adjustment Tool kommt am 6. Juli, also bleibt ein Fenster von rund sechs Wochen, um die Ziele zu setzen, bevor die Änderung automatisch greift.' },
@@ -3124,6 +3130,7 @@ WHERE campaign.advertising_channel_type = 'PERFORMANCE_MAX'`}</code></pre>
       ),
     },
     'perplexity-visibility': {
+      seoTitle: 'Sichtbarkeit in Perplexity verbessern: Leitfaden | pmax',
       title: 'Perplexity-Sichtbarkeit verbessern — ein Praxisleitfaden',
       deck: 'Ein verständlicher Leitfaden zur Perplexity-Sichtbarkeit 2026 — was sie ist, warum sie sich anders verhält als ChatGPT und fünf Maßnahmen, die Sie diesen Monat starten können.',
       toc: ['Was ist Perplexity-Sichtbarkeit?', 'Warum Perplexity ein eigenes Thema ist', 'Fünf Maßnahmen für diesen Monat', 'Wie pmax helfen kann', 'Häufige Fragen'],
@@ -3400,6 +3407,7 @@ WHERE campaign.advertising_channel_type = 'PERFORMANCE_MAX'`}</code></pre>
       </>),
     },
     'real-estate-lead-gen': {
+      seoTitle: 'Immobilien-Leads 2026: Warum Ihr Formular bremst | pmax',
       toc: ['Das Problem des kaufbereiten Käufers', 'Mehrschrittig schlägt einschrittig', 'Die einfachen Fragen zuerst stellen', 'Fortschritt anzeigen', 'Vorqualifizierung reduziert Rauschen', 'Mobile-Tastatur-Hygiene'],
       prose: (<>
         <p>Immobilien ist eine der kaufintentionsstärksten Suchkategorien im Internet. Warum konvertieren dann die meisten Makler-Websites unter 1 %? Normalerweise liegt es am Formular.</p>
@@ -3710,6 +3718,7 @@ WHERE campaign.advertising_channel_type = 'PERFORMANCE_MAX'`}</code></pre>
       </>),
     },
     'pinterest-ads-home-interiors-local-2026': {
+      seoTitle: 'Pinterest Ads 2026: Für wen sie sich wirklich lohnen | pmax',
       toc: ["Kann jeder Pinterest Ads schalten?", "Für wen es funktioniert", "Rollos &amp; Sonnenschutz", "Retargeting", "Cross-Platform-Strategie", "Creative-Regeln", "Kosten", "Fazit", "FAQs"],
       faqs: [
         { q: 'Kann jeder Pinterest Ads schalten?', a: 'Fast. Sie benötigen ein kostenloses Pinterest-Business-Konto und eine verifizierbare Website. Ads Manager ist Self-Serve, sodass ein Solo-Inhaber ohne Agentur starten kann. Die einzige echte Hürde ist geografisch: Pinterest Ads sind nicht in jedem Land verfügbar, aber in den meisten europäischen Ländern, darunter Spanien, Deutschland, UK und die gesamte EU.' },
