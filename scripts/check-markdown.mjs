@@ -102,6 +102,11 @@ if (!/RewriteRule \^\(\.\+\)\\\.md\$ \/_md\.php/.test(htaccess)) {
 if (!/RewriteCond %\{HTTP_ACCEPT\} text\/markdown/.test(htaccess)) {
   errors.push('.htaccess no longer carries the Accept negotiation rule')
 }
+// Real files (llms.txt above all) must skip negotiation, or an agent asking for
+// Markdown gets the 404 page instead of the file.
+if (!/RewriteCond %\{HTTP_ACCEPT\} text\/markdown[^\n]*\n(?:[^\n]*\n)*?\s*RewriteCond %\{REQUEST_FILENAME\} !-f\s*\n\s*RewriteRule \^ \/_md\.php/.test(htaccess)) {
+  errors.push('.htaccess negotiates files that exist (llms.txt would 404 for text/markdown)')
+}
 if (/^\s*#\s*RewriteCond %\{HTTP_ACCEPT\} text\/markdown/m.test(htaccess)) {
   notes.push('negotiation on page URLs is disabled — .md twins only (pending the Cloudflare bypass rule)')
 }

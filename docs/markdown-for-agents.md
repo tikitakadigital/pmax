@@ -41,8 +41,10 @@ demand. Every twin is written at build time:
 - **`public/_md.php`** decides what to serve. It parses the `Accept` header
   properly, including q values, and serves the twin file or the HTML page.
 - **`public/.htaccess`** routes `.md` URLs and any request whose `Accept`
-  mentions `text/markdown` to that script, and sets the `Link` alternate header
-  on ordinary HTML responses.
+  mentions `text/markdown` to that script, except files that exist (`llms.txt`,
+  `robots.txt`, `sitemap.xml`, images), and sets the `Link` alternate header
+  on ordinary HTML responses. Until 6 Nov 2026 files were negotiated too, so
+  `/llms.txt` was a 404 for every agent asking for Markdown.
 - **`scripts/check-markdown.mjs`** runs in CI before deploy. It pins the Accept
   rule (ten header cases, exercised in PHP), checks every page has a twin and
   declares it, and fails if the routing starts sniffing user agents.

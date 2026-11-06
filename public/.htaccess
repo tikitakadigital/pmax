@@ -139,8 +139,13 @@ ErrorDocument 404 /404.html
   #    that rule is ever removed, comment this block out again:
   #      Cache Rules → Bypass cache
   #      any(http.request.headers["accept"][*] contains "text/markdown")
+  #
+  #    Files that exist (llms.txt, robots.txt, sitemap.xml, images) are never
+  #    negotiated: they are what they are. Without this line /llms.txt, itself
+  #    Markdown, was a 404 to every agent that asked for text/markdown.
   RewriteCond %{HTTP_ACCEPT} text/markdown [NC]
   RewriteCond %{REQUEST_URI} !^/_
+  RewriteCond %{REQUEST_FILENAME} !-f
   RewriteRule ^ /_md.php [L]
 
   # Serve existing files and directories directly
