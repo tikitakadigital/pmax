@@ -12,7 +12,6 @@ import { industryDetails } from '@/lib/content/industries-detail'
 
 const base = 'https://pmax.online'
 const langs = ['de', 'es'] as const
-const legalSlugs = ['imprint', 'privacy', 'cookies', 'terms'] as const
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const core: MetadataRoute.Sitemap = [
@@ -69,10 +68,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...posts.filter(p => !p.external).flatMap(p => translatedLocales(p.slug).map(lang => ({ url: `${base}${blogPath(p.slug, lang)}`, lastModified: isoDate(p.dateModified ?? p.date), changeFrequency: 'monthly' as const, priority: 0.6, images: [postImage(p).url] }))),
   ]
 
-  const legalPages: MetadataRoute.Sitemap = [
-    ...legalSlugs.map(s => ({ url: `${base}/legal/${s}/`, lastModified: '2026-01-01', changeFrequency: 'yearly' as const, priority: 0.3 })),
-    ...langs.flatMap(lang => legalSlugs.map(s => ({ url: `${base}/${lang}/legal/${s}/`, lastModified: '2026-01-01', changeFrequency: 'yearly' as const, priority: 0.3 }))),
-  ]
-
-  return [...core, ...servicePages, ...industryPages, ...casePages, ...blogPages, ...legalPages]
+  // Legal pages (imprint, privacy, cookies, terms) are noindex on purpose, so
+  // they stay out: a sitemap lists only URLs we want indexed. check-seo enforces it.
+  return [...core, ...servicePages, ...industryPages, ...casePages, ...blogPages]
 }

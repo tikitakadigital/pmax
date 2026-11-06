@@ -171,10 +171,27 @@ for (const file of pages) {
   }
 }
 
+// ── Sitemap: every URL must exist and be indexable ────────────────────────
+// A noindex page in the sitemap asks Google to index a page that says no.
+const sitemapFile = join(OUT, 'sitemap.xml')
+let sitemapUrls = 0
+if (existsSync(sitemapFile)) {
+  for (const [, loc] of readFileSync(sitemapFile, 'utf8').matchAll(/<loc>([^<]+)<\/loc>/g)) {
+    sitemapUrls++
+    const path = loc.replace(SITE, '')
+    const f = join(OUT, decodeURIComponent(path), path.endsWith('/') ? 'index.html' : '')
+    if (!existsSync(f)) { err('sitemap', `lists ${path}, which is not in the export`); continue }
+    const head = readFileSync(f, 'utf8').split('</head>')[0]
+    if (/<meta[^>]*name="robots"[^>]*noindex/i.test(head)) err('sitemap', `lists ${path}, which is noindex`)
+    const canon = head.match(/<link[^>]*rel="canonical"[^>]*href="([^"]+)"/)?.[1]
+    if (canon && canon !== loc) err('sitemap', `lists ${path}, whose canonical is ${canon}`)
+  }
+} else err('sitemap', 'out/sitemap.xml not found')
+
 for (const w of warnings) console.log(`  warn  ${w}`)
 if (errors.length) {
   console.error(`\ncheck-seo: ${errors.length} error(s) across ${pages.length} post pages:\n`)
   for (const e of errors) console.error(`  ${e}`)
   process.exit(1)
 }
-console.log(`check-seo: OK — ${pages.length} post pages, ${warnings.length} warning(s).`)
+console.log(`check-seo: OK — ${pages.length} post pages, ${sitemapUrls} sitemap URLs, ${warnings.length} warning(s).`)
