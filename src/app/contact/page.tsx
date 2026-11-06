@@ -16,7 +16,7 @@ const jsonLd = [
   breadcrumb([{ name: 'Home', url: 'https://pmax.online/' }, { name: 'Contact', url: 'https://pmax.online/contact/' }]),
   {
     '@context': 'https://schema.org',
-    '@type': ['AdvertisingAgency', 'LocalBusiness'],
+    '@type': ['Organization', 'LocalBusiness'],
     '@id': 'https://pmax.online/#org',
     name: 'pmax',
     legalName: 'PMax Online S.L.',

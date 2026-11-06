@@ -1,7 +1,7 @@
 const mallorca = { '@type': 'Place', name: 'Mallorca', containedInPlace: { '@type': 'Country', name: 'Spain' } }
 
 export const org = {
-  '@type': ['Organization', 'AdvertisingAgency', 'LocalBusiness'],
+  '@type': ['Organization', 'LocalBusiness'],
   '@id': 'https://pmax.online/#org',
   name: 'pmax',
   legalName: 'PMax Online S.L.',
@@ -176,11 +176,12 @@ export function serviceSchema({ name, description, url, serviceType }: {
       { '@type': 'Country', name: 'Spain' },
       { '@type': 'AdministrativeArea', name: 'European Union' },
     ],
-    inLanguage: ['en', 'de', 'es'],
+    // Service has no inLanguage in schema.org; ServiceChannel.availableLanguage does.
     availableChannel: {
       '@type': 'ServiceChannel',
       serviceUrl: 'https://pmax.online/contact/',
       servicePhone: '+34871242160',
+      availableLanguage: ['en', 'de', 'es'],
     },
   }
 }
