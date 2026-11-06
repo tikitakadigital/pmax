@@ -13,17 +13,17 @@ const de: Record<string, LegalContent> = {
     description: 'Impressum der PMax Online S.L., Calle Cordova 5, 07184 Calvià, Mallorca, Spanien.',
     body: (
       <div className="prose">
-        <p><em>PMax Online S.L. · Eingetragen im Handelsregister Palma de Mallorca · USt-IdNr. ES B57948123</em></p>
+        <p><em>PMAX ONLINE SL · Eingetragen im Registro Mercantil de Baleares · USt-IdNr. ES B44964633</em></p>
         <h2>Unternehmensangaben</h2>
         <p>
-          <strong>PMax Online S.L.</strong><br />
+          <strong>PMAX ONLINE SL</strong><br />
           Calle Cordova, 5<br />
           07184 Calvià, Mallorca<br />
           Spanien
         </p>
         <p>
-          USt-Identifikationsnummer: ES B57948123<br />
-          Eingetragen im Handelsregister (Registro Mercantil) von Palma de Mallorca
+          USt-Identifikationsnummer: ES B44964633<br />
+          Eingetragen im Handelsregister (Registro Mercantil de Baleares)
         </p>
         <h2>Kontakt</h2>
         <p>
@@ -255,17 +255,18 @@ const es: Record<string, LegalContent> = {
     description: 'Aviso legal de PMax Online S.L., Calle Cordova 5, 07184 Calvià, Mallorca, España.',
     body: (
       <div className="prose">
-        <p><em>PMax Online S.L. · Inscrita en el Registro Mercantil de Palma de Mallorca · NIF ES B57948123</em></p>
+        <p><em>PMAX ONLINE SL · Inscrita en el Registro Mercantil de Baleares · NIF B44964633</em></p>
         <h2>Datos de la empresa</h2>
         <p>
-          <strong>PMax Online S.L.</strong><br />
+          <strong>PMAX ONLINE SL</strong><br />
           Calle Cordova, 5<br />
           07184 Calvià, Mallorca<br />
           España
         </p>
         <p>
-          NIF: ES B57948123<br />
-          Inscrita en el Registro Mercantil de Palma de Mallorca
+          NIF: B44964633<br />
+          NIF-IVA: ES B44964633<br />
+          Inscrita en el Registro Mercantil de Baleares
         </p>
         <h2>Contacto</h2>
         <p>

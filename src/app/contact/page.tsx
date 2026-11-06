@@ -19,7 +19,7 @@ const jsonLd = [
     '@type': ['Organization', 'LocalBusiness'],
     '@id': 'https://pmax.online/#org',
     name: 'pmax',
-    legalName: 'PMax Online S.L.',
+    legalName: 'PMAX ONLINE SL',
     url: 'https://pmax.online/',
     telephone: '+34871242160',
     email: 'hello@pmax.online',

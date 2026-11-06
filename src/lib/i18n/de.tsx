@@ -87,7 +87,7 @@ export const de = {
       blog: 'Journal',
       contact: 'Kontakt',
     },
-    copyright: '© 2026 pmax Online S.L. · USt-IdNr. ES B57948123 · Calvià, Mallorca',
+    copyright: '© 2026 pmax Online S.L. · USt-IdNr. ES B44964633 · Calvià, Mallorca',
   },
 
   home: {

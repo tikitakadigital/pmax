@@ -680,7 +680,7 @@ export default function ProposalPage() {
 
         {/* ── Footer ── */}
         <footer className={s.footer}>
-          PMAX ONLINE SL · CALLE CORDOVA 5 · 07184 CALVIÀ · MALLORCA · CIF ES B57948123 · PMAX.ONLINE
+          PMAX ONLINE SL · CALLE CORDOVA 5 · 07184 CALVIÀ · MALLORCA · CIF B44964633 · PMAX.ONLINE
           {' — '}{L.footerMeta(offer.code, fmtDate(offer.valid_until))}
         </footer>
 

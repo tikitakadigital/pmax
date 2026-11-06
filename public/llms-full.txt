@@ -8,7 +8,7 @@
 ## Company
 
 **Legal name:** PMax Online S.L.
-**VAT:** ES B57948123
+**VAT:** ES B44964633
 **Founded by:** Philipp Enders
 **Location:** Calle Cordova 5, 07184 Calvià, Mallorca, Spain
 **Coordinates:** 39.5639, 2.5070
@@ -516,7 +516,7 @@ The site publishes Schema.org JSON-LD on every page. Root entity:
 - Type: Organization + ProfessionalService + LocalBusiness
 - Name: pmax / PMax Online S.L.
 - Location: Calvià, Mallorca, Spain (39.5639, 2.5070)
-- VAT: ES B57948123
+- VAT: ES B44964633
 - Area served: Mallorca, Spain, Germany, Austria, Switzerland, EU, UK
 - sameAs: LinkedIn, Facebook, Instagram
 

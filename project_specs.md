@@ -83,7 +83,7 @@ Public marketing website for **pmax Online S.L.** — a digital performance mark
 ---
 
 ## Content (from design — confirmed)
-- Company: pmax Online S.L. · VAT ES B57948123
+- Company: pmax Online S.L. · VAT ES B44964633
 - Address: Calle Cordova, 5 · 07184 Calvia · Mallorca · Spain
 - Phone: +34 871 242 160 · Email: hello@pmax.online
 - Founder: Philipp Enders

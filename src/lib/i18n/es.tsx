@@ -50,7 +50,7 @@ export const es = {
       blog: 'Blog',
       contact: 'Contacto',
     },
-    copyright: '© 2026 pmax Online S.L. · NIF ES B57948123 · Calvià, Mallorca',
+    copyright: '© 2026 pmax Online S.L. · NIF B44964633 · Calvià, Mallorca',
   },
 
   home: {

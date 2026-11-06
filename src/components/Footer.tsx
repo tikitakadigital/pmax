@@ -56,19 +56,19 @@ const content = {
   en: {
     tag: 'Digital marketing from Mallorca, for brands across Europe.',
     services: 'Services', industries: 'Industries', company: 'Company', office: 'Mallorca office',
-    copyright: '© 2026 pmax Online S.L. · VAT ES B57948123 · Calvià, Mallorca',
+    copyright: '© 2026 pmax Online S.L. · VAT ES B44964633 · Calvià, Mallorca',
     links: { about: 'About pmax', cases: 'Work', blog: 'Journal', contact: 'Contact' },
   },
   de: {
     tag: 'Digitales Marketing von Mallorca, für Marken in ganz Europa.',
     services: 'Leistungen', industries: 'Branchen', company: 'Unternehmen', office: 'Büro Mallorca',
-    copyright: '© 2026 pmax Online S.L. · USt-IdNr. ES B57948123 · Calvià, Mallorca',
+    copyright: '© 2026 pmax Online S.L. · USt-IdNr. ES B44964633 · Calvià, Mallorca',
     links: { about: 'Über pmax', cases: 'Referenzen', blog: 'Journal', contact: 'Kontakt' },
   },
   es: {
     tag: 'Marketing digital desde Mallorca, para marcas en toda Europa.',
     services: 'Servicios', industries: 'Sectores', company: 'Empresa', office: 'Oficina Mallorca',
-    copyright: '© 2026 pmax Online S.L. · NIF ES B57948123 · Calvià, Mallorca',
+    copyright: '© 2026 pmax Online S.L. · NIF B44964633 · Calvià, Mallorca',
     links: { about: 'Sobre pmax', cases: 'Trabajo', blog: 'Blog', contact: 'Contacto' },
   },
 }

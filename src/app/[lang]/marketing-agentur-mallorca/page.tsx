@@ -82,13 +82,13 @@ const localBusinessSchema = {
   '@type': 'LocalBusiness',
   '@id': 'https://pmax.online/de/marketing-agentur-mallorca/#localbusiness',
   name: 'pmax — Marketing Agentur Mallorca',
-  legalName: 'PMax Online S.L.',
+  legalName: 'PMAX ONLINE SL',
   image: 'https://pmax.online/og-image.jpg',
   url: 'https://pmax.online/de/marketing-agentur-mallorca/',
   telephone: '+34871242160',
   email: 'hello@pmax.online',
   priceRange: '€€',
-  vatID: 'ESB57948123',
+  vatID: 'ESB44964633',
   foundingDate: '2019',
   address: {
     '@type': 'PostalAddress',
@@ -291,7 +291,7 @@ export default function MarketingAgenturMallorcaPage() {
               />
             </div>
             <figcaption style={{ marginTop: 10, fontSize: 13, color: 'var(--color-muted)', fontFamily: 'var(--font-mono)' }}>
-              Standort Calvià, Mallorca (PMax Online S.L. · USt-IdNr. ES B57948123) — 20 Minuten von der Kathedrale in Palma
+              Standort Calvià, Mallorca (PMax Online S.L. · USt-IdNr. ES B44964633) — 20 Minuten von der Kathedrale in Palma
             </figcaption>
           </figure>
         </section>

@@ -11,17 +11,17 @@ const pages: Record<string, { title: string; description: string; body: React.Re
     description: 'Legal notice for PMax Online S.L., Calle Cordova 5, 07184 Calvià, Mallorca, Spain.',
     body: (
       <div className="prose">
-        <p><em>PMax Online S.L. · Registered in Palma de Mallorca · VAT ES B57948123</em></p>
+        <p><em>PMAX ONLINE SL · Registro Mercantil de Baleares · VAT ES B44964633</em></p>
         <h2>Company information</h2>
         <p>
-          <strong>PMax Online S.L.</strong><br />
+          <strong>PMAX ONLINE SL</strong><br />
           Calle Cordova, 5<br />
           07184 Calvià, Mallorca<br />
           Spain
         </p>
         <p>
-          VAT number: ES B57948123<br />
-          Registered in the Mercantile Registry of Palma de Mallorca
+          VAT number: ES B44964633<br />
+          Registered with the Registro Mercantil de Baleares (Mercantile Registry of the Balearic Islands)
         </p>
         <h2>Contact</h2>
         <p>

@@ -93,7 +93,7 @@ Every page on this site has a Markdown twin at the same path with `.md` appended
 **Phone:** +34 871 242 160
 **Address:** Calle Cordova 5, 07184 Calvià, Mallorca, Spain
 **Website:** https://pmax.online
-**VAT:** ES B57948123
+**VAT:** ES B44964633
 
 ## Also available
 
