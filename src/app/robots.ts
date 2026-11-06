@@ -8,13 +8,11 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: '*',
         allow: '/',
-        disallow: [
-          '/api/',
-          '/_next/static/media/',
-          '/contact/?topic=',
-          '/de/contact/?topic=',
-          '/es/contact/?topic=',
-        ],
+        // /contact/?topic=… stays crawlable on purpose: each variant names
+        // /contact/ as its canonical, and a crawler blocked here never sees
+        // that. (The named bots below have their own groups, so they ignore
+        // this group's rules anyway.)
+        disallow: ['/api/', '/_next/static/media/'],
       },
 
       // ── OpenAI / ChatGPT ─────────────────────────────────────────────────
