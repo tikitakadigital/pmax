@@ -236,6 +236,13 @@ export function generateStaticParams() {
   return Object.keys(pages).map(slug => ({ slug }))
 }
 
+const imprintAlternates = {
+  en: 'https://pmax.online/legal/imprint/',
+  de: 'https://pmax.online/de/legal/imprint/',
+  es: 'https://pmax.online/es/legal/imprint/',
+  'x-default': 'https://pmax.online/legal/imprint/',
+}
+
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params
   const page = pages[slug]
@@ -243,8 +250,14 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   return {
     title: `${page.title} — pmax`,
     description: page.description,
-    robots: { index: false },
-    alternates: { canonical: `https://pmax.online/legal/${slug}/` },
+    // The imprint is indexable: it's the page that says who pmax is (legal
+    // name, address, registration), and AI answers cite it. Privacy, cookies
+    // and terms stay out of search.
+    ...(slug === 'imprint' ? {} : { robots: { index: false } }),
+    alternates: {
+      canonical: `https://pmax.online/legal/${slug}/`,
+      ...(slug === 'imprint' && { languages: imprintAlternates }),
+    },
   }
 }
 

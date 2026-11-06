@@ -68,7 +68,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...posts.filter(p => !p.external).flatMap(p => translatedLocales(p.slug).map(lang => ({ url: `${base}${blogPath(p.slug, lang)}`, lastModified: isoDate(p.dateModified ?? p.date), changeFrequency: 'monthly' as const, priority: 0.6, images: [postImage(p).url] }))),
   ]
 
-  // Legal pages (imprint, privacy, cookies, terms) are noindex on purpose, so
-  // they stay out: a sitemap lists only URLs we want indexed. check-seo enforces it.
-  return [...core, ...servicePages, ...industryPages, ...casePages, ...blogPages]
+  // Of the legal pages only the imprint is indexable; privacy, cookies and terms
+  // are noindex and stay out (a sitemap lists only URLs we want indexed, which
+  // check-seo enforces). lastmod: last change to the legal pages.
+  const legalPages: MetadataRoute.Sitemap = ['', '/de', '/es'].map(prefix => ({
+    url: `${base}${prefix}/legal/imprint/`, lastModified: '2026-05-16', changeFrequency: 'yearly' as const, priority: 0.3,
+  }))
+
+  return [...core, ...servicePages, ...industryPages, ...casePages, ...blogPages, ...legalPages]
 }

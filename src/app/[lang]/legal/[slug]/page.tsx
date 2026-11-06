@@ -503,6 +503,13 @@ export function generateStaticParams() {
   return ['de','es'].flatMap(lang => ['imprint','privacy','cookies','terms'].map(slug => ({ lang, slug })))
 }
 
+const imprintAlternates = {
+  en: 'https://pmax.online/legal/imprint/',
+  de: 'https://pmax.online/de/legal/imprint/',
+  es: 'https://pmax.online/es/legal/imprint/',
+  'x-default': 'https://pmax.online/legal/imprint/',
+}
+
 export async function generateMetadata({ params }: { params: Promise<{ lang: string; slug: string }> }): Promise<Metadata> {
   const { lang, slug } = await params
   const page = content[lang]?.[slug]
@@ -510,8 +517,12 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   return {
     title: `${page.title} — pmax`,
     description: page.description,
-    robots: { index: false },
-    alternates: { canonical: `https://pmax.online/${lang}/legal/${slug}/` },
+    // Imprint indexable, the other legal pages not: see src/app/legal/[slug]/page.tsx.
+    ...(slug === 'imprint' ? {} : { robots: { index: false } }),
+    alternates: {
+      canonical: `https://pmax.online/${lang}/legal/${slug}/`,
+      ...(slug === 'imprint' && { languages: imprintAlternates }),
+    },
   }
 }
 
