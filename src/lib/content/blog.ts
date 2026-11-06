@@ -15,7 +15,7 @@ export interface Post {
   author?: string
 }
 
-export const posts: Post[] = [
+const allPosts: Post[] = [
   {
     slug: 'google-ads-learning-phase-black-friday-2026',
     stamp: 'OCT 29',
@@ -60,8 +60,8 @@ export const posts: Post[] = [
   },
   {
     slug: 'google-ads-agency-mallorca',
-    stamp: 'DEC 22',
-    date: 'Dec 22, 2026',
+    stamp: 'SEP 14',
+    date: 'Sep 14, 2026',
     readTime: '8 min',
     category: 'Local SEO',
     title: 'How to choose a Google Ads agency in Mallorca — and the questions that separate them',
@@ -71,8 +71,8 @@ export const posts: Post[] = [
   },
   {
       slug: 'how-to-advertise-business-mallorca',
-      stamp: 'DEC 15',
-      date: 'Dec 15, 2026',
+      stamp: 'SEP 08',
+      date: 'Sep 8, 2026',
       readTime: '13 min',
       category: 'Local SEO',
       title: 'How to Advertise Your Business in Mallorca — The Complete Guide',
@@ -82,8 +82,8 @@ export const posts: Post[] = [
     },
   {
       slug: 'was-kostet-google-ads',
-      stamp: 'DEC 01',
-      date: 'Dec 1, 2026',
+      stamp: 'SEP 08',
+      date: 'Sep 8, 2026',
       readTime: '12 min',
       category: 'Google Ads',
       title: 'Google Ads Cost Guide 2026: What You Actually Pay',
@@ -93,8 +93,8 @@ export const posts: Post[] = [
     },
   {
     slug: 'conversion-rate-optimisation-checklist',
-    stamp: 'NOV 17',
-    date: 'Nov 17, 2026',
+    stamp: 'SEP 08',
+    date: 'Sep 8, 2026',
     readTime: '11 min',
     category: 'Web design',
     title: 'Conversion Rate Optimisation Checklist 2026: 15 Points That Move the Number',
@@ -485,6 +485,11 @@ export const posts: Post[] = [
     variant: 'is-outlined',
   },
 ]
+
+// Newest first, by date, so the journal, the homepage's latest three and
+// the "more on this topic" lists stay in order whatever order posts are
+// added in above. Stable: posts with the same date keep their order.
+export const posts: Post[] = [...allPosts].sort((a, b) => Date.parse(b.date) - Date.parse(a.date))
 
 export function getPost(slug: string) {
   return posts.find(p => p.slug === slug)
