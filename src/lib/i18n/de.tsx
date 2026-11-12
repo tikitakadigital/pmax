@@ -1,6 +1,6 @@
 import type { ReactNode } from 'react'
 import Image from 'next/image'
-import { TrialTermsTable, TrialScreenshots, DateTimeline } from '@/lib/content/blog-detail'
+import { TrialTermsTable, TrialScreenshots, DateTimeline, RerankFigure, LanguageCheckFigure, HreflangShot, LANGUAGE_CHECK_9_NOV } from '@/lib/content/blog-detail'
 
 export interface ServiceDetail {
   metaTitle: string
@@ -2717,12 +2717,32 @@ export const de = {
           <p>Im November 2026 hat die französische Agentur RESONEO die bisher ausführlichste Liste veröffentlicht: <a href="https://think.resoneo.com/twiddlers/" target="_blank" rel="noopener noreferrer">Twiddlers: what still moves a result after ranking</a>, auf Englisch und Französisch. Sie nennt 120 Twiddler-Namen aus Googles internen Schemata für die Web-, Bilder- und Videosuche. Wer die vollständige Liste sucht, findet sie bei RESONEO. Dort ist sie besser aufgehoben, und wir schreiben sie hier nicht ab.</p>
           <p>Zwei Einschränkungen gehören dazu. RESONEO sagt nicht, wie die Agentur an die Schemata gekommen ist, und niemand hat die Namen unabhängig bestätigt. Außerdem zeigt ein Feld in einem Schema nur, dass etwas existiert. Ob es läuft, wie oft und mit welchem Gewicht, zeigt es nicht. Nach dem Leak 2024 hat Google <a href="https://www.theregister.com/2024/05/29/internal_google_search_documents/" target="_blank" rel="noopener noreferrer">davor gewarnt</a>, aus Informationen ohne Kontext, veralteten oder unvollständigen Informationen falsche Schlüsse über die Suche zu ziehen. Das gilt hier genauso. Jeder Twiddler-Name in diesem Artikel ist deshalb das, was RESONEO berichtet, kein bestätigtes Google-System. Wo Google eine Wirkung selbst beschreibt, verlinke ich die Quelle.</p>
           <p>So kann ein zweiter Durchgang aussehen, an einem ausgedachten Beispiel. Ihre Seite über Ferienhäuser in Pollença kommt aus dem Hauptranking auf Platz vier. Ein Forenbeitrag über den Norden der Insel rückt darüber. Für eine Urlauberin, die in Port de Pollença sucht, rückt außerdem ein Vermieter um die Ecke nach oben. Ihr Ranking-Report zeigt weiter Platz vier. Die Urlauberin sieht Sie auf Platz sechs.</p>
+          <RerankFigure
+            titles={['HAUPTRANKING', 'GEZEIGT IN PORT DE POLLENÇA']}
+            ariaLabel='Ausgedachtes Beispiel einer Umsortierung. Hauptranking: 1 Ferienhaus-Portal, 2 Villenagentur in Palma, 3 Reiseführer, 4 Ihre Seite, 5 Forenbeitrag, 6 Vermieter um die Ecke. Gezeigt einer Urlauberin in Port de Pollença: Der Forenbeitrag steigt auf 3, der Vermieter auf 4, Ihre Seite fällt auf 6.'
+            caption='Ein ausgedachtes Beispiel. Links das Hauptranking, rechts die Liste, die eine Urlauberin in Port de Pollença sieht. Ein Forenbeitrag und ein Vermieter in der Nähe rücken nach oben, Ihre Seite fällt von Platz vier auf Platz sechs. Die Arten der Bewegung sind solche, von denen RESONEO berichtet.'
+            items={[
+              { label: 'Ferienhaus-Portal', from: 1, to: 1 },
+              { label: 'Villenagentur in Palma', from: 2, to: 2 },
+              { label: 'Reiseführer zum Norden', from: 3, to: 5 },
+              { label: 'Ihre Seite', from: 4, to: 6, you: true },
+              { label: 'Forenbeitrag', from: 5, to: 3, tag: 'FORUM' },
+              { label: 'Vermieter nebenan', from: 6, to: 4, tag: 'NÄHE' },
+            ]}
+          />
 
           <h2 id="language">Sprache: der Teil, der Mallorca betrifft</h2>
           <p>RESONEO berichtet von einem Twiddler namens ULP, kurz für User Language Profile. Er enthält die Sprachen, die ein Nutzer liest, jeweils mit einer Wahrscheinlichkeit. Die beschriebene Wirkung: Wer zwei Sprachen liest, kann Seiten in beiden angezeigt bekommen. Auf Mallorca ist das wichtiger als fast überall sonst. Eine Deutsche in Palma, die Spanisch liest, bekommt vielleicht Ihre spanische Seite. Ein Urlauber, der nur Deutsch liest, braucht eine deutsche Seite, sonst gibt es für ihn nichts.</p>
           <p>Was Google selbst dokumentiert, ist hreflang. Diese Tags sagen Google, welche Seite die deutsche, englische oder spanische Fassung desselben Inhalts ist. <a href="https://developers.google.com/search/docs/specialty/international/localized-versions?hl=de" target="_blank" rel="noopener noreferrer">Googles Anleitung zu lokalisierten Versionen</a> nennt sogar genau diesen Markt als Beispiel: de-ES, &bdquo;deutschsprachige Inhalte für Nutzer in Spanien&ldquo;. Google kann nur zwischen Fassungen wählen, die es gibt. Steht Ihre Website nur auf Spanisch im Netz, gibt es nichts auszutauschen.</p>
+          <HreflangShot lang="de" alt='Google-Search-Central-Dokumentation mit hreflang-Beispielen: de für deutschsprachige Inhalte unabhängig von der Region, en-GB für englischsprachige Inhalte für Nutzer im Vereinigten Königreich und, hervorgehoben, de-ES für deutschsprachige Inhalte für Nutzer in Spanien' caption={<>Googles eigene hreflang-Beispiele enthalten den Fall Mallorca. Screenshot aus <a href="https://developers.google.com/search/docs/specialty/international/localized-versions?hl=de" target="_blank" rel="noopener noreferrer">Google Search Central</a>, 12. November 2026. Markierung von uns.</>} />
           <p>Dieselbe Dokumentation enthält zwei Warnungen. Leiten Sie Besucher nicht automatisch auf die Sprache um, die Sie bei ihnen vermuten. <a href="https://developers.google.com/search/docs/specialty/international/managing-multi-regional-sites?hl=de" target="_blank" rel="noopener noreferrer">Google schreibt</a>: &bdquo;Eine IP-Standortanalyse ist komplex und meistens nicht zuverlässig.&ldquo; Automatische Weiterleitungen können außerdem verhindern, dass Google Ihre anderen Fassungen sieht. Setzen Sie stattdessen einen sichtbaren Sprachwechsler auf jede Seite. Maschinelle Übersetzung ist eine eigene Frage. Eine deutsche Seite, die nach Übersetzung klingt, sagt einem deutschen Kunden, dass sie nicht für ihn geschrieben wurde.</p>
           <p>Unser eigenes Rank-Tracking zeigt, wie locker die Verbindung zwischen den Tags und dem Ergebnis sein kann. Am 9. November 2026 lief unsere wöchentliche Abfrage aus Spanien, mit der Google-Oberfläche auf Englisch. Sie fand pmax.online achtmal für englischsprachige Keywords. Sechs dieser Treffer waren unsere spanischen Seiten, einer die deutsche Startseite und nur einer die englische Seite. Unsere hreflang-Tags waren vorhanden und korrekt. Die deutschen und spanischen Abfragen im selben Lauf lieferten alle Seiten in der richtigen Sprache. Wir tracken das mit CrunchJunkie, einem Tool, das wir auch selbst entwickeln.</p>
+          <LanguageCheckFigure
+            rows={[{ label: 'Oberfläche Englisch', ...LANGUAGE_CHECK_9_NOV[0] }, { label: 'Oberfläche Deutsch', ...LANGUAGE_CHECK_9_NOV[1] }, { label: 'Oberfläche Spanisch', ...LANGUAGE_CHECK_9_NOV[2] }]}
+            legend={['SEITE IN DER OBERFLÄCHENSPRACHE', 'SEITE IN ANDERER SPRACHE']}
+            ariaLabel='Ranking-Abfrage vom 9. November 2026 aus Spanien. Oberfläche Englisch: 8 Treffer, davon 6 spanische Seiten, 1 deutsche Startseite, 1 englische Seite. Oberfläche Deutsch: 2 Treffer, beide deutsche Seiten. Oberfläche Spanisch: 5 Treffer, alle spanische Seiten.'
+            caption='Unsere wöchentliche Ranking-Abfrage für pmax.online am 9. November 2026: Google, Suche aus Spanien, ohne Anmeldung, Desktop und Mobil, 34 Keywords. Jedes Quadrat ist eine Position, an der die Website auftauchte, beschriftet mit der Sprache der Seite, die Google zeigte.'
+          />
           <p>Eine Messung auf einer einzigen Website beweist wenig, und eine Abfrage ohne Anmeldung hat gar kein Sprachprofil. Sie zeigt aber, was ein Ranking-Report verbirgt. Die Position kann gut aussehen, während die Seite in der falschen Sprache ist.</p>
 
           <h2 id="location">Standort und Unternehmensprofil</h2>

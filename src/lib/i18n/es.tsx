@@ -1,6 +1,6 @@
 import type { ReactNode } from 'react'
 import Image from 'next/image'
-import { TrialTermsTable, TrialScreenshots, DateTimeline } from '@/lib/content/blog-detail'
+import { TrialTermsTable, TrialScreenshots, DateTimeline, RerankFigure, LanguageCheckFigure, HreflangShot, LANGUAGE_CHECK_9_NOV } from '@/lib/content/blog-detail'
 import type { ServiceDetail, IndustryDetail, LocalizedCaseDetail, LocalizedBlogDetail } from './de'
 export type { ServiceDetail, IndustryDetail, LocalizedCaseDetail, LocalizedBlogDetail }
 
@@ -2818,12 +2818,32 @@ export const es = {
           <p>En noviembre de 2026, la agencia francesa RESONEO publicó la lista más detallada hasta ahora: <a href="https://think.resoneo.com/twiddlers/" target="_blank" rel="noopener noreferrer">Twiddlers: what still moves a result after ranking</a>, en inglés y en francés. Recoge 120 nombres de twiddlers encontrados en los esquemas internos de Google para la búsqueda web, de imágenes y de vídeo. Si quieres la lista completa, léela en RESONEO. Allí está mejor explicada y aquí no la vamos a copiar.</p>
           <p>Hay dos matices. RESONEO no dice cómo consiguió los esquemas, y nadie ha confirmado los nombres de forma independiente. Además, un campo en un esquema solo demuestra que algo existe. No demuestra que funcione, ni con qué frecuencia, ni cuánto pesa. Tras la filtración de 2024, Google <a href="https://www.theregister.com/2024/05/29/internal_google_search_documents/" target="_blank" rel="noopener noreferrer">pidió no sacar conclusiones</a> sobre la búsqueda a partir de información sin contexto, desactualizada o incompleta. Aquí vale lo mismo. Por eso, cada nombre de twiddler en este artículo es lo que informa RESONEO, no un sistema de Google confirmado. Cuando Google describe un efecto en su propia documentación, enlazo la fuente.</p>
           <p>Así puede verse una segunda pasada, con un ejemplo inventado. Tu página sobre alquiler vacacional en Pollença sale del ranking principal en cuarta posición. Un hilo de un foro sobre el norte de la isla sube por encima. Para una turista que busca desde el Port de Pollença, también sube una agencia de alquiler que está a la vuelta de la esquina. Tu informe sigue diciendo cuarta. Esa turista te ve en sexta.</p>
+          <RerankFigure
+            titles={['RANKING PRINCIPAL', 'VISTO EN PORT DE POLLENÇA']}
+            ariaLabel='Ejemplo inventado de reordenación. Ranking principal: 1 portal de alquiler vacacional, 2 agencia de villas en Palma, 3 guía de viaje, 4 tu página, 5 hilo de un foro, 6 alquiler muy cerca. Lo que ve una turista en Port de Pollença: el hilo sube a 3, el alquiler cercano a 4 y tu página baja a 6.'
+            caption='Un ejemplo inventado. A la izquierda, el ranking principal. A la derecha, la lista que ve una turista en Port de Pollença. Un hilo de un foro y una agencia de alquiler cercana suben, y tu página baja de la cuarta a la sexta posición. Los tipos de movimiento son los que informa RESONEO.'
+            items={[
+              { label: 'Portal de alquileres', from: 1, to: 1 },
+              { label: 'Agencia de villas en Palma', from: 2, to: 2 },
+              { label: 'Guía de viaje del norte', from: 3, to: 5 },
+              { label: 'Tu página', from: 4, to: 6, you: true },
+              { label: 'Hilo de un foro', from: 5, to: 3, tag: 'FORO' },
+              { label: 'Agencia de alquiler', from: 6, to: 4, tag: 'CERCA' },
+            ]}
+          />
 
           <h2 id="language">El idioma: la parte que afecta a Mallorca</h2>
           <p>RESONEO informa de un twiddler llamado ULP, siglas de User Language Profile. Guarda los idiomas que lee cada usuario, con una probabilidad para cada uno. El efecto descrito es que alguien que lee dos idiomas puede recibir páginas en cualquiera de los dos. En Mallorca eso pesa más que en casi ningún sitio. A una alemana de Palma que lee español puede salirle tu página en español. Un turista que solo lee alemán necesita que exista una página en alemán. Si no la hay, no hay nada que enseñarle.</p>
           <p>Lo que Google sí documenta es hreflang. Estas etiquetas le dicen a Google qué página es la versión en alemán, en inglés o en español del mismo contenido. <a href="https://developers.google.com/search/docs/specialty/international/localized-versions?hl=es" target="_blank" rel="noopener noreferrer">La guía de Google sobre versiones localizadas</a> pone de ejemplo justo este mercado: de-ES, «contenido en alemán para usuarios que estén en España». Google solo puede elegir entre las versiones que existen. Si tu web solo está en español, no hay nada que cambiar.</p>
+          <HreflangShot lang="es" alt='Documentación de Google Search Central con ejemplos de hreflang: de para contenido en alemán independientemente de la región, en-GB para contenido en inglés dirigido a usuarios del Reino Unido y, resaltado, de-ES para contenido en alemán para usuarios que estén en España' caption={<>Los propios ejemplos de hreflang de Google incluyen el caso de Mallorca. Captura de <a href="https://developers.google.com/search/docs/specialty/international/localized-versions?hl=es" target="_blank" rel="noopener noreferrer">Google Search Central</a>, 12 de noviembre de 2026. El resaltado es nuestro.</>} />
           <p>La misma documentación hace dos advertencias. No redirijas a las visitas al idioma que crees que hablan. <a href="https://developers.google.com/search/docs/specialty/international/managing-multi-regional-sites?hl=es" target="_blank" rel="noopener noreferrer">Google lo explica así</a>: «Inferir la ubicación a través de las direcciones IP es difícil y, por lo general, poco preciso». Además, las redirecciones automáticas pueden impedir que Google vea tus otras versiones. Pon un selector de idioma visible en cada página. La traducción automática es otro tema. Una página en alemán que suena a traducción le dice a un cliente alemán que no se escribió para él.</p>
           <p>Nuestro propio seguimiento de posiciones muestra lo flojo que puede ser el vínculo entre las etiquetas y el resultado. El 9 de noviembre de 2026, nuestra consulta semanal se hizo desde España con la interfaz de Google en inglés. Encontró pmax.online ocho veces para palabras clave en inglés. Seis de esos resultados eran nuestras páginas en español, uno la portada en alemán y solo uno la página en inglés. Nuestras etiquetas hreflang estaban puestas y eran correctas. Las consultas en alemán y en español de esa misma ronda devolvieron todas páginas en el idioma correcto. Hacemos este seguimiento con CrunchJunkie, una herramienta que también desarrollamos nosotros.</p>
+          <LanguageCheckFigure
+            rows={[{ label: 'Interfaz en inglés', ...LANGUAGE_CHECK_9_NOV[0] }, { label: 'Interfaz en alemán', ...LANGUAGE_CHECK_9_NOV[1] }, { label: 'Interfaz en español', ...LANGUAGE_CHECK_9_NOV[2] }]}
+            legend={['PÁGINA EN EL IDIOMA DE LA INTERFAZ', 'PÁGINA EN OTRO IDIOMA']}
+            ariaLabel='Consulta de posiciones del 9 de noviembre de 2026 desde España. Interfaz en inglés: 8 resultados, 6 páginas en español, 1 portada en alemán y 1 página en inglés. Interfaz en alemán: 2 resultados, ambos páginas en alemán. Interfaz en español: 5 resultados, todos páginas en español.'
+            caption='Nuestra consulta semanal de posiciones de pmax.online del 9 de noviembre de 2026: Google, búsqueda desde España, sin sesión, ordenador y móvil, 34 palabras clave. Cada cuadrado es una posición en la que apareció la web, marcado con el idioma de la página que mostró Google.'
+          />
           <p>Una sola medición en una sola web demuestra poco, y una consulta sin sesión no tiene perfil de idioma. Pero enseña lo que un informe de posiciones esconde. La posición puede parecer buena mientras la página está en el idioma equivocado.</p>
 
           <h2 id="location">La ubicación y tu Perfil de Empresa</h2>

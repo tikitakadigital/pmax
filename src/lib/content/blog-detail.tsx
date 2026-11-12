@@ -45,6 +45,102 @@ export function DateTimeline({ items, ariaLabel, caption }: { items: { date: str
   )
 }
 
+/**
+ * Main ranking next to the list one person is shown. Each item sits at `from`
+ * on the left and `to` on the right; `you` marks the reader's own page and
+ * `tag` names the reason it moved. Labels come from the caller, so EN, DE and
+ * ES share one drawing.
+ */
+export function RerankFigure({ titles, items, ariaLabel, caption }: { titles: [string, string]; items: { label: string; from: number; to: number; you?: boolean; tag?: string }[]; ariaLabel: string; caption: string }) {
+  const W = 470, boxW = 206, boxH = 34, rowH = 44, top = 44
+  const lx = 0, rx = W - boxW
+  const y = (p: number) => top + (p - 1) * rowH
+  return (
+    <figure style={{ margin: '36px 0' }}>
+      <svg viewBox={`0 0 ${W} ${top + items.length * rowH}`} style={{ width: '100%', maxWidth: W, display: 'block' }} role="img" aria-label={ariaLabel}>
+        <text x={lx} y={22} fontFamily="var(--font-mono), monospace" fontSize="11" letterSpacing="0.6" fill="#949494">{titles[0]}</text>
+        <text x={rx} y={22} fontFamily="var(--font-mono), monospace" fontSize="11" letterSpacing="0.6" fill="#949494">{titles[1]}</text>
+        {items.map(it => {
+          const moved = it.to !== it.from
+          const stroke = it.you ? '#3cffd0' : moved ? '#bdbdbd' : '#3a3a3a'
+          return (
+            <g key={it.label}>
+              <line x1={lx + boxW} y1={y(it.from) + boxH / 2} x2={rx} y2={y(it.to) + boxH / 2} stroke={stroke} strokeWidth={moved ? 2 : 1.5} strokeDasharray={moved ? undefined : '3 5'} />
+              {[{ x: lx, p: it.from, tag: undefined }, { x: rx, p: it.to, tag: it.tag }].map(b => (
+                <g key={b.x}>
+                  <rect x={b.x + 1} y={y(b.p)} width={boxW - 2} height={boxH} rx={6} fill="#131313" stroke={it.you ? '#3cffd0' : '#2d2d2d'} strokeWidth={it.you ? 2 : 1} />
+                  <text x={b.x + 11} y={y(b.p) + 22} fontFamily="var(--font-sans), sans-serif" fontSize="13" fill={it.you ? '#3cffd0' : '#e8e8e8'}>{b.p}. {it.label}</text>
+                  {b.tag && <text x={b.x + boxW - 9} y={y(b.p) + 22} textAnchor="end" fontFamily="var(--font-mono), monospace" fontSize="10" fill="#949494">{b.tag}</text>}
+                </g>
+              ))}
+            </g>
+          )
+        })}
+      </svg>
+      <figcaption style={{ fontSize: 13, color: '#949494', marginTop: 12, lineHeight: 1.6 }}>{caption}</figcaption>
+    </figure>
+  )
+}
+
+type PageLang = 'en' | 'de' | 'es'
+
+/**
+ * One row per interface language; one square per position where the site was
+ * found, lettered with the language of the page Google returned. Filled when
+ * that matches the interface, outlined when it doesn't, so it reads without colour.
+ */
+export function LanguageCheckFigure({ rows, legend, ariaLabel, caption }: { rows: { label: string; lang: PageLang; pages: PageLang[] }[]; legend: [string, string]; ariaLabel: string; caption: string }) {
+  const W = 460, labelW = 150, sq = 30, gap = 6, rowH = 44
+  const h = rows.length * rowH + 56
+  return (
+    <figure style={{ margin: '36px 0' }}>
+      <svg viewBox={`0 0 ${W} ${h}`} style={{ width: '100%', maxWidth: W, display: 'block' }} role="img" aria-label={ariaLabel}>
+        {rows.map((r, i) => (
+          <g key={r.label}>
+            <text x={0} y={i * rowH + 20} fontFamily="var(--font-sans), sans-serif" fontSize="13" fill="#e8e8e8">{r.label}</text>
+            {r.pages.map((pg, j) => {
+              const ok = pg === r.lang
+              const x = labelW + j * (sq + gap)
+              return (
+                <g key={j}>
+                  <rect x={x + 1} y={i * rowH + 1} width={sq - 2} height={sq - 2} rx={5} fill={ok ? '#3cffd0' : '#131313'} stroke={ok ? '#3cffd0' : '#949494'} strokeWidth="1.5" />
+                  <text x={x + sq / 2} y={i * rowH + 19} textAnchor="middle" fontFamily="var(--font-mono), monospace" fontSize="10" fontWeight="700" fill={ok ? '#131313' : '#e8e8e8'}>{pg.toUpperCase()}</text>
+                </g>
+              )
+            })}
+          </g>
+        ))}
+        <g transform={`translate(0 ${rows.length * rowH + 8})`}>
+          <rect x={1} y={1} width={13} height={13} rx={3} fill="#3cffd0" />
+          <text x={22} y={12} fontFamily="var(--font-mono), monospace" fontSize="10" fill="#949494">{legend[0]}</text>
+          <rect x={1} y={23} width={13} height={13} rx={3} fill="#131313" stroke="#949494" strokeWidth="1.5" />
+          <text x={22} y={34} fontFamily="var(--font-mono), monospace" fontSize="10" fill="#949494">{legend[1]}</text>
+        </g>
+      </svg>
+      <figcaption style={{ fontSize: 13, color: '#949494', marginTop: 12, lineHeight: 1.6 }}>{caption}</figcaption>
+    </figure>
+  )
+}
+
+/** Google's hreflang example (de-ES), screenshotted from its docs in each language. */
+export function HreflangShot({ lang, alt, caption }: { lang: PageLang; alt: string; caption: ReactNode }) {
+  const src = `/blog/google-hreflang-de-es-example-${lang}.webp`
+  const size = imageSize(src)
+  return (
+    <figure style={{ margin: '28px 0 36px' }}>
+      <Image src={src} alt={alt} width={size?.width ?? 1486} height={size?.height ?? 344} loading="lazy" style={{ width: '100%', height: 'auto', borderRadius: 4, border: '1px solid #e8e8e8' }} />
+      <figcaption style={{ fontSize: 13, color: '#949494', marginTop: 12, lineHeight: 1.6 }}>{caption}</figcaption>
+    </figure>
+  )
+}
+
+/** The 9 Nov 2026 rank check for pmax.online, shared by EN, DE and ES. */
+export const LANGUAGE_CHECK_9_NOV: { lang: PageLang; pages: PageLang[] }[] = [
+  { lang: 'en', pages: ['es', 'de', 'es', 'es', 'es', 'es', 'es', 'en'] },
+  { lang: 'de', pages: ['de', 'de'] },
+  { lang: 'es', pages: ['es', 'es', 'es', 'es', 'es'] },
+]
+
 /** The post's primary sources, as a numbered list. Same data as the schema citation. */
 export function SourcesList({ sources, heading, lang }: { sources: NonNullable<BlogDetail['sources']>; heading: string; lang: string }) {
   const fmt = new Intl.DateTimeFormat(lang === 'en' ? 'en-GB' : lang, { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' })
@@ -254,12 +350,32 @@ export const blogDetails: BlogDetail[] = [
       <p>In November 2026 the French agency RESONEO published the most detailed list so far: <a href="https://think.resoneo.com/twiddlers/" target="_blank" rel="noopener noreferrer">Twiddlers: what still moves a result after ranking</a>. It reports 120 twiddler names found in Google&rsquo;s internal schemas for web, image and video search. If you want the full list, read RESONEO. It is the better resource for that, and we won&rsquo;t copy it here.</p>
       <p>Two caveats come with it. RESONEO doesn&rsquo;t say how it got the schemas, and nobody has confirmed the names independently. And a field in a schema shows that something exists. It doesn&rsquo;t show that it runs, how often, or with what weight. After the 2024 leak, Google <a href="https://www.theregister.com/2024/05/29/internal_google_search_documents/" target="_blank" rel="noopener noreferrer">warned against</a> &ldquo;inaccurate assumptions about Search based on out-of-context, outdated, or incomplete information&rdquo;. That applies here too. So below, every twiddler name is what RESONEO reports, not a confirmed Google system. Where Google describes an effect in its own documentation, I link to that.</p>
       <p>Here is what a second pass can look like, in a made-up example. Your page about holiday rentals in Pollença leaves the main ranking in fourth place. A forum thread about the north of the island moves above it. For a tourist searching from Port de Pollença, a rental office around the corner moves up as well. Your ranking report still says fourth. That tourist sees you sixth.</p>
+      <RerankFigure
+        titles={['MAIN RANKING', 'SHOWN IN PORT DE POLLENÇA']}
+        ariaLabel='Made-up example of re-ranking. Main ranking: 1 holiday rental portal, 2 villa agency in Palma, 3 travel guide, 4 your page, 5 forum thread, 6 rental office nearby. Shown to a tourist in Port de Pollença: the forum thread rises to 3, the nearby rental office to 4, and your page falls to 6.'
+        caption='A made-up example. On the left, the main ranking. On the right, the list one tourist in Port de Pollença is shown. A forum thread and a rental office nearby move up, and your page drops from fourth to sixth. The kinds of movement are ones RESONEO reports.'
+        items={[
+          { label: 'Holiday rental portal', from: 1, to: 1 },
+          { label: 'Villa agency in Palma', from: 2, to: 2 },
+          { label: 'Travel guide to the north', from: 3, to: 5 },
+          { label: 'Your page', from: 4, to: 6, you: true },
+          { label: 'Forum thread', from: 5, to: 3, tag: 'FORUM' },
+          { label: 'Rental office', from: 6, to: 4, tag: 'NEARBY' },
+        ]}
+      />
 
       <h2 id="language">Language: the Mallorca part</h2>
       <p>RESONEO reports a twiddler called ULP, for User Language Profile. It holds the languages a user reads, with a probability for each. Its described effect is that someone who reads two languages can be shown pages in either. In Mallorca that matters more than in most places. A German resident who reads Spanish may get your Spanish page. A German tourist who reads only German needs a German page to exist.</p>
       <p>The part Google documents is hreflang. These tags tell Google which page is the German, English or Spanish version of the same content. <a href="https://developers.google.com/search/docs/specialty/international/localized-versions" target="_blank" rel="noopener noreferrer">Google&rsquo;s guide to localized versions</a> even uses this market as an example: de-ES, German-language content for users in Spain. Google can only choose between versions you have built. If your site exists only in Spanish, there is nothing to swap in.</p>
+      <HreflangShot lang="en" alt='Google Search Central documentation listing hreflang examples: de for German content independent of region, en-GB for English content for users in the UK, and de-ES, highlighted, for German content for users in Spain' caption={<>Google&rsquo;s own hreflang examples include the Mallorca case. Screenshot from <a href="https://developers.google.com/search/docs/specialty/international/localized-versions" target="_blank" rel="noopener noreferrer">Google Search Central</a>, 12 November 2026. Highlight ours.</>} />
       <p>The same documentation has two warnings. Don&rsquo;t redirect visitors to the language you guess they speak. Google <a href="https://developers.google.com/search/docs/specialty/international/managing-multi-regional-sites" target="_blank" rel="noopener noreferrer">calls IP location analysis</a> &ldquo;difficult and generally not reliable&rdquo;, and automatic redirects can stop Google from seeing your other versions. Put a visible language switch on every page instead. Machine translation is a separate question. A German page that reads like a translation tells a German customer it wasn&rsquo;t written for them.</p>
       <p>Our own rank tracking shows how loose the link between the tags and the result can be. On 9 November 2026 our weekly check ran from Spain with the Google interface in English. It found pmax.online 8 times for English-language keywords. Six of those results were our Spanish pages, one was the German homepage, and only one was the English page. Our hreflang tags were in place and correct. The German and Spanish checks in the same run all returned pages in the right language. We run this tracking in CrunchJunkie, a tool we also build.</p>
+      <LanguageCheckFigure
+        rows={[{ label: 'English interface', ...LANGUAGE_CHECK_9_NOV[0] }, { label: 'German interface', ...LANGUAGE_CHECK_9_NOV[1] }, { label: 'Spanish interface', ...LANGUAGE_CHECK_9_NOV[2] }]}
+        legend={['PAGE IN THE INTERFACE LANGUAGE', 'PAGE IN ANOTHER LANGUAGE']}
+        ariaLabel='Rank check of 9 November 2026 from Spain. English interface: 8 results, 6 Spanish pages, 1 German homepage, 1 English page. German interface: 2 results, both German pages. Spanish interface: 5 results, all Spanish pages.'
+        caption='Our weekly rank check for pmax.online on 9 November 2026: Google, searched from Spain, signed out, desktop and mobile, 34 keywords. Each square is one position where the site appeared, lettered with the language of the page Google showed.'
+      />
       <p>One reading on one site proves little, and a signed-out check has no language profile at all. But it shows what a ranking report hides. The position can look fine while the page is in the wrong language.</p>
 
       <h2 id="location">Location and your Business Profile</h2>
