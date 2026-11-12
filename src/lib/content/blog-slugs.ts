@@ -17,6 +17,7 @@ const localSlugs: Record<string, { de: string; es: string }> = {
   'how-to-test-ai-max': { de: 'ai-max-richtig-testen', es: 'como-probar-ai-max' },
   'ai-visibility-tool-free-trial': { de: 'ki-sichtbarkeits-tool-testen', es: 'probar-herramienta-visibilidad-ia' },
   'google-ads-learning-phase-black-friday-2026': { de: 'google-ads-lernphase-black-friday-2026', es: 'google-ads-fase-aprendizaje-black-friday-2026' },
+  'google-ranking-not-what-customers-see': { de: 'google-ranking-was-kunden-sehen', es: 'posicion-google-lo-que-ve-tu-cliente' },
 }
 
 const BASE = 'https://pmax.online'

@@ -17,6 +17,20 @@ export interface Post {
 
 const allPosts: Post[] = [
   {
+    slug: 'google-ranking-not-what-customers-see',
+    stamp: 'NOV 12',
+    date: 'Nov 12, 2026',
+    readTime: '8 min',
+    category: 'Local SEO',
+    title: 'Your Google ranking is not what your customer sees',
+    seoTitle: 'Why Google Shows Each Customer Different Results | pmax',
+    deck: 'Google ranks your page, then reworks the list for each person by language, location and history. What that means in a three-language market like Mallorca.',
+    variant: 'is-violet',
+    featured: true,
+    ogImage: '/og/google-ranking-not-what-customers-see.jpg',
+    author: 'Philipp Enders',
+  },
+  {
     slug: 'google-ads-learning-phase-black-friday-2026',
     stamp: 'OCT 29',
     date: 'Oct 29, 2026',

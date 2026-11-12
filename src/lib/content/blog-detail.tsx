@@ -188,6 +188,105 @@ export function TrialTermsTable({ head, rows, names = {} }: { head: [string, str
 
 export const blogDetails: BlogDetail[] = [
 {
+  slug: 'google-ranking-not-what-customers-see',
+  toc: [
+    'Ranking happens twice',
+    'Language: the Mallorca part',
+    'Location and your Business Profile',
+    'Forums, deals and specialists',
+    'Freshness without tricks',
+    'How to read your ranking report now',
+    'Common questions',
+    'Sources',
+  ],
+  tocIds: [
+    'ranking-happens-twice',
+    'language',
+    'location',
+    'forums-deals-specialists',
+    'freshness',
+    'rank-reports',
+    'faq',
+    'sources',
+  ],
+  faqs: [
+    {
+      q: 'Why does my business rank differently on my phone than in my ranking report?',
+      a: 'Your phone searches from where you are, in your language settings, and with your history if you are signed in. A rank tracker searches from one fixed place, in one language, signed out. Google reworks the list for each person after ranking, so both readings can be right. Use the report for trends and Search Console for what real searchers saw.',
+    },
+    {
+      q: 'Does Google show German speakers in Mallorca German pages?',
+      a: 'Only if a German page exists and Google knows it belongs with the other versions. Hreflang tags tell Google that, and Google\'s own documentation uses de-ES, German content for users in Spain, as an example. Google still makes the final choice. In our own check on 9 November 2026, English-language searches from Spain mostly returned our Spanish pages, although our hreflang tags were correct.',
+    },
+    {
+      q: 'Does updating the date on a page help it rank?',
+      a: 'Only if the content really changed. Google has freshness systems for searches where newer content is expected. Its guidance on helpful content also asks whether you are changing dates to make pages seem fresh "when the content has not substantially changed", and treats that as a warning sign. Update the page first, then show a visible "Last updated" date.',
+    },
+    {
+      q: 'Can a forum or a directory outrank my own website for my own service?',
+      a: 'Yes. Google shows a Discussions and forums block on many searches, and RESONEO reports separate re-ranking for forums, deals and specialist sites. A thread or a portal can sit above a page that scored higher. Being present there, honestly and under your own name, is part of being found.',
+    },
+    {
+      q: 'Is E-E-A-T a ranking factor?',
+      a: 'Not directly, according to Google: "While E-E-A-T itself isn\'t a specific ranking factor, using a mix of factors that can identify content with good E-E-A-T is useful." RESONEO reports a twiddler named after expertise in Google\'s internal schemas. What it measures, and whether it carries any weight, is not known.',
+    },
+  ],
+  sources: [
+    { publisher: 'RESONEO', title: 'Twiddlers: what still moves a result after ranking', url: 'https://think.resoneo.com/twiddlers/' },
+    { publisher: 'Search Engine Roundtable', title: 'Long List Of Google Twiddlers For Re-Ranking Search Results', url: 'https://www.seroundtable.com/google-twiddlers-42441.html', date: '2026-11-04' },
+    { publisher: 'The Register', title: 'Google’s technical info about search ranking leaks online', url: 'https://www.theregister.com/2024/05/29/internal_google_search_documents/', date: '2024-05-29' },
+    { publisher: 'Google Search Central', title: 'Localized versions of your pages', url: 'https://developers.google.com/search/docs/specialty/international/localized-versions' },
+    { publisher: 'Google Search Central', title: 'Managing multi-regional and multilingual sites', url: 'https://developers.google.com/search/docs/specialty/international/managing-multi-regional-sites' },
+    { publisher: 'Google Business Profile Help', title: 'Tips to improve your local ranking on Google', url: 'https://support.google.com/business/answer/7091' },
+    { publisher: 'Google', title: 'Bringing more voices to Search', url: 'https://blog.google/products-and-platforms/products/search/google-search-discussions-forums-news/', date: '2022-09-28' },
+    { publisher: 'Google Search Central', title: 'A guide to Google Search ranking systems', url: 'https://developers.google.com/search/docs/appearance/ranking-systems-guide' },
+    { publisher: 'Google Search Central', title: 'Creating helpful, reliable, people-first content', url: 'https://developers.google.com/search/docs/fundamentals/creating-helpful-content' },
+    { publisher: 'Google Search Central', title: 'Add a byline date to Google Search results', url: 'https://developers.google.com/search/docs/appearance/publication-dates' },
+    { publisher: 'Google', title: 'How to select Preferred Sources in Google Search', url: 'https://blog.google/products-and-platforms/products/search/preferred-sources/', date: '2025-08-12' },
+  ],
+  prose: (
+    <>
+      <p>Take one search, &ldquo;estate agent Mallorca&rdquo;, typed on the same afternoon by three people. A German couple on holiday in Alcúdia, with their phones set to German. A German who has lived in Palma for ten years and reads Spanish every day. A British buyer at home in Manchester. Each of them can get a different first page. The scene is an illustration, not a test. The mechanism behind it is real.</p>
+      <p>Google ranks pages twice. First it scores them for the query. Then, before anything is shown, it reworks the list for the person asking. Language, location, search history and the type of result all come in after the score. Your ranking report shows the first list. Your customers see the second.</p>
+
+      <h2 id="ranking-happens-twice">Ranking happens twice</h2>
+      <p>Google&rsquo;s main ranking scores hundreds of results for a query. A second pass then adjusts that list before it is shown. Inside Google, the small programs that do this are called twiddlers. Each one recommends a change. It can move a result up or down, remove it, cap how many results of one kind appear, or space out pages from the same site. A framework weighs the recommendations and settles the final order. An internal Google guide from around 2018 describes this framework. It was discussed widely again after Google&rsquo;s search documentation leaked in 2024.</p>
+      <p>In November 2026 the French agency RESONEO published the most detailed list so far: <a href="https://think.resoneo.com/twiddlers/" target="_blank" rel="noopener noreferrer">Twiddlers: what still moves a result after ranking</a>. It reports 120 twiddler names found in Google&rsquo;s internal schemas for web, image and video search. If you want the full list, read RESONEO. It is the better resource for that, and we won&rsquo;t copy it here.</p>
+      <p>Two caveats come with it. RESONEO doesn&rsquo;t say how it got the schemas, and nobody has confirmed the names independently. And a field in a schema shows that something exists. It doesn&rsquo;t show that it runs, how often, or with what weight. After the 2024 leak, Google <a href="https://www.theregister.com/2024/05/29/internal_google_search_documents/" target="_blank" rel="noopener noreferrer">warned against</a> &ldquo;inaccurate assumptions about Search based on out-of-context, outdated, or incomplete information&rdquo;. That applies here too. So below, every twiddler name is what RESONEO reports, not a confirmed Google system. Where Google describes an effect in its own documentation, I link to that.</p>
+      <p>Here is what a second pass can look like, in a made-up example. Your page about holiday rentals in Pollença leaves the main ranking in fourth place. A forum thread about the north of the island moves above it. For a tourist searching from Port de Pollença, a rental office around the corner moves up as well. Your ranking report still says fourth. That tourist sees you sixth.</p>
+
+      <h2 id="language">Language: the Mallorca part</h2>
+      <p>RESONEO reports a twiddler called ULP, for User Language Profile. It holds the languages a user reads, with a probability for each. Its described effect is that someone who reads two languages can be shown pages in either. In Mallorca that matters more than in most places. A German resident who reads Spanish may get your Spanish page. A German tourist who reads only German needs a German page to exist.</p>
+      <p>The part Google documents is hreflang. These tags tell Google which page is the German, English or Spanish version of the same content. <a href="https://developers.google.com/search/docs/specialty/international/localized-versions" target="_blank" rel="noopener noreferrer">Google&rsquo;s guide to localized versions</a> even uses this market as an example: de-ES, German-language content for users in Spain. Google can only choose between versions you have built. If your site exists only in Spanish, there is nothing to swap in.</p>
+      <p>The same documentation has two warnings. Don&rsquo;t redirect visitors to the language you guess they speak. Google <a href="https://developers.google.com/search/docs/specialty/international/managing-multi-regional-sites" target="_blank" rel="noopener noreferrer">calls IP location analysis</a> &ldquo;difficult and generally not reliable&rdquo;, and automatic redirects can stop Google from seeing your other versions. Put a visible language switch on every page instead. Machine translation is a separate question. A German page that reads like a translation tells a German customer it wasn&rsquo;t written for them.</p>
+      <p>Our own rank tracking shows how loose the link between the tags and the result can be. On 9 November 2026 our weekly check ran from Spain with the Google interface in English. It found pmax.online 8 times for English-language keywords. Six of those results were our Spanish pages, one was the German homepage, and only one was the English page. Our hreflang tags were in place and correct. The German and Spanish checks in the same run all returned pages in the right language. We run this tracking in CrunchJunkie, a tool we also build.</p>
+      <p>One reading on one site proves little, and a signed-out check has no language profile at all. But it shows what a ranking report hides. The position can look fine while the page is in the wrong language.</p>
+
+      <h2 id="location">Location and your Business Profile</h2>
+      <p>RESONEO reports a twiddler named Nearby. It measures how close each result is to the person searching, and a nearby business can gain places. Google is open about the principle. <a href="https://support.google.com/business/answer/7091" target="_blank" rel="noopener noreferrer">Its help page on local ranking</a> says local results are &ldquo;mainly based on relevance, distance, and popularity&rdquo;. If someone doesn&rsquo;t share where they are, Google uses what it knows about their location.</p>
+      <p>On an island, distance changes the result quickly. A visitor in Palma and a resident in Pollença are almost an hour apart by car. They don&rsquo;t see the same local results for &ldquo;electrician&rdquo; or &ldquo;boat hire&rdquo;. Your website can&rsquo;t fix that on its own. Your Google Business Profile tells Google where you are and which areas you serve. Keep the categories, opening hours and service area accurate. Answer reviews in the language they were written in. A German customer who reads your German replies knows you will understand them on the phone.</p>
+
+      <h2 id="forums-deals-specialists">Forums, deals and specialists</h2>
+      <p>RESONEO reports separate twiddlers for forums, deals and specialist merchants. In its words, a discussion, a deals page or a product specialist &ldquo;can move ahead of a better-scored page&rdquo;. Google added a <a href="https://blog.google/products-and-platforms/products/search/google-search-discussions-forums-news/" target="_blank" rel="noopener noreferrer">Discussions and forums block</a> to its results in 2022, so part of this is visible on many searches already.</p>
+      <p>For a business in Mallorca, the list your customers see includes places you don&rsquo;t control. Reddit threads, Tripadvisor forums and the big portals in your field all compete for the same space. You can&rsquo;t outrank all of them, but you can be present in them honestly. Answer questions as yourself, under your own name, without turning every reply into an advert. Keep your listings on the portals complete and current. Being there is part of being found.</p>
+
+      <h2 id="freshness">Freshness without tricks</h2>
+      <p>Google has what it calls <a href="https://developers.google.com/search/docs/appearance/ranking-systems-guide" target="_blank" rel="noopener noreferrer">&ldquo;query deserves freshness&rdquo; systems</a>. They show newer content for searches where people expect it. RESONEO reports a freshness twiddler that reads a page&rsquo;s dates and the date Google estimates for its content. A real update with a visible date can move a page ahead of an older one.</p>
+      <p>Changing the date without changing the page is a different matter. <a href="https://developers.google.com/search/docs/fundamentals/creating-helpful-content" target="_blank" rel="noopener noreferrer">Google&rsquo;s guidance on helpful content</a> asks: &ldquo;Are you changing the date of pages to make them seem fresh when the content has not substantially changed?&rdquo; It lists that as a warning sign. Update a page when something has changed, such as prices, opening times, the season or the rules for holiday rentals. Then show the date clearly, labelled &ldquo;Last updated&rdquo;, as <a href="https://developers.google.com/search/docs/appearance/publication-dates" target="_blank" rel="noopener noreferrer">Google recommends</a>.</p>
+
+      <h2 id="rank-reports">How to read your ranking report now</h2>
+      <p>A rank tracker searches from one place, in one language, signed out and with no history. That is what makes it useful. It gives you a neutral reading you can compare from week to week. It isn&rsquo;t what any one customer sees.</p>
+      <p>So read it as a trend. Track each language market separately: German keywords with the German interface, English with English, Spanish with Spanish. Look at weeks, not single days. A move of one or two places on a Tuesday means very little. Check which page ranks, not only where it ranks. Our Spanish pages showing up for English searches would look fine in a position column.</p>
+      <p>Search Console is the other half. Filter it by country and by query, and you see which page actually got the impressions and clicks. Where the two disagree, Search Console is closer to your customers.</p>
+      <p>Some of the second pass no tool can show. Personal history and &ldquo;For you&rdquo; adjustments act on a signed-in user&rsquo;s own results. So do <a href="https://blog.google/products-and-platforms/products/search/preferred-sources/" target="_blank" rel="noopener noreferrer">Preferred sources</a>, which let users pick the news sites they see more often in Top Stories. Nobody outside Google sees those. RESONEO also reports that the search plan behind AI Mode&rsquo;s query fan-out travels into this second pass. That is reported, not shown. How fan-out works is covered in <a href="/blog/what-is-generative-engine-optimisation/">our guide to generative engine optimisation</a>.</p>
+      <p>If you want help setting up tracking per language market, or checking the hreflang on your site, that is part of our <a href="/seo-company-mallorca/">SEO work in Mallorca</a>. For the wider picture, see <a href="/blog/how-to-advertise-business-mallorca/">how to advertise a business in Mallorca</a>.</p>
+
+      <NeedHelp topic="google-ranking-not-what-customers-see" />
+    </>
+  ),
+},
+
+{
   slug: 'google-ads-learning-phase-black-friday-2026',
   toc: [
     'What Google actually said',
