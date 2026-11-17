@@ -8,6 +8,7 @@ import StatCounter from '@/components/StatCounter'
 import SectionHead from '@/components/SectionHead'
 import PromoBlock from '@/components/PromoBlock'
 import FaqList from '@/components/FaqList'
+import Testimonials from '@/components/Testimonials'
 import { faqPage, breadcrumb, serviceSchema } from '@/lib/schema'
 import { siteAlternates } from '@/lib/hreflang'
 import { services } from '@/lib/content/services'
@@ -228,6 +229,7 @@ export default function HomePage() {
                   </li>
                 ))}
             </ol>
+            <Testimonials inSection />
           </div>
         </section>
 

@@ -5,6 +5,7 @@ import Footer from '@/components/Footer'
 import Marquee from '@/components/Marquee'
 import StatCounter from '@/components/StatCounter'
 import SectionHead from '@/components/SectionHead'
+import Testimonials from '@/components/Testimonials'
 import PromoBlock from '@/components/PromoBlock'
 import FaqList from '@/components/FaqList'
 import { getT, isPostTranslated } from '@/lib/i18n'
@@ -139,6 +140,7 @@ export default async function LangHomePage({ params }: { params: Promise<{ lang:
                 )
               })}
             </ol>
+            <Testimonials lang={lang === 'de' ? 'de' : 'es'} inSection />
           </div>
         </section>
 

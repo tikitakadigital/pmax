@@ -1,3 +1,4 @@
+import Testimonials from '@/components/Testimonials'
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -341,6 +342,8 @@ export default function MarketingAgenturMallorcaPage() {
             </li>
           </ol>
         </section>
+
+        <Testimonials lang="de" max={5} />
 
         <section className="section" aria-labelledby="faq-h">
           <div className="container">
