@@ -21,6 +21,29 @@ export interface CaseDetail {
   }
 }
 
+/**
+ * Dates for each case page's Article schema, taken from git: the commit that
+ * added the case and the last one that changed its text in EN, DE or ES.
+ * 2026-05-13 is the repository's first commit, the earliest date git can show.
+ * Update `modified` when a case's text changes.
+ */
+export const caseDates: Record<string, { published: string; modified: string }> = {
+  automotive: { published: '2026-05-13', modified: '2026-05-13' },
+  'energy-utility': { published: '2026-05-13', modified: '2026-05-15' },
+  gabionas: { published: '2026-05-13', modified: '2026-05-13' },
+  imero: { published: '2026-05-13', modified: '2026-05-13' },
+  'training-school-google-ads': { published: '2026-09-21', modified: '2026-11-06' },
+  ledxpress: { published: '2026-05-13', modified: '2026-05-13' },
+  luxaflex: { published: '2026-05-13', modified: '2026-05-13' },
+  preo: { published: '2026-05-13', modified: '2026-05-13' },
+  primundus: { published: '2026-05-13', modified: '2026-05-13' },
+  unisono: { published: '2026-05-13', modified: '2026-05-13' },
+  'vc-investor': { published: '2026-05-13', modified: '2026-05-15' },
+}
+
+/** Case pages have no image of their own; the site's share image stands in. */
+export const CASE_IMAGE = { '@type': 'ImageObject', url: 'https://pmax.online/og-image.jpg', width: 1200, height: 630 } as const
+
 export const caseDetails: CaseDetail[] = [
   {
     slug: 'automotive',

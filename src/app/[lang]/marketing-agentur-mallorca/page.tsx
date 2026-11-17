@@ -111,13 +111,8 @@ const localBusinessSchema = {
   sameAs: [
     'https://www.linkedin.com/company/pmax-online-s-l/',
     'https://www.facebook.com/profile.php?id=61590296614624',
+    'https://www.sortlist.com/agency/pmax-online-sl',
   ],
-  aggregateRating: {
-    '@type': 'AggregateRating',
-    ratingValue: '5.0',
-    reviewCount: '2',
-    bestRating: '5',
-  },
 }
 
 const jsonLd = [

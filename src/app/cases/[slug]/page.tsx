@@ -5,7 +5,7 @@ import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
 import { breadcrumb, orgRef } from '@/lib/schema'
 import { caseAlternates } from '@/lib/content/case-slugs'
-import { caseDetails, getCaseDetail } from '@/lib/content/cases-detail'
+import { caseDetails, getCaseDetail, caseDates, CASE_IMAGE } from '@/lib/content/cases-detail'
 
 export function generateStaticParams() {
   return caseDetails.map(c => ({ slug: c.slug }))
@@ -38,12 +38,15 @@ export default async function CasePage({ params }: { params: Promise<{ slug: str
       '@context': 'https://schema.org',
       '@type': 'Article',
       '@id': `${pageUrl}#article`,
-      headline: detail.metaTitle,
+      headline: detail.metaTitle.replace(/ \| pmax$/, ''),
       description: detail.metaDesc,
       url: pageUrl,
       author: { '@id': 'https://pmax.online/#org' },
       publisher: { '@id': 'https://pmax.online/#org' },
       mainEntityOfPage: { '@type': 'WebPage', '@id': pageUrl },
+      image: CASE_IMAGE,
+      datePublished: caseDates[slug]?.published,
+      dateModified: caseDates[slug]?.modified,
       inLanguage: 'en',
     },
     orgRef,

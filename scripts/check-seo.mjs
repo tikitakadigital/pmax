@@ -171,6 +171,32 @@ for (const file of pages) {
   }
 }
 
+// ── Every Article on the site, not only blog posts ───────────────────────
+// Case pages carried an Article without datePublished or image for months
+// because the checks above only look at /blog/.
+function htmlFiles(dir) {
+  return readdirSync(dir, { withFileTypes: true }).flatMap(e =>
+    e.isDirectory() ? htmlFiles(join(dir, e.name)) : e.name === 'index.html' ? [join(dir, e.name)] : [])
+}
+let articlePages = 0
+for (const f of htmlFiles(OUT)) {
+  const html = readFileSync(f, 'utf8')
+  const page = f.slice(OUT.length).replace(/index\.html$/, '')
+  for (const [, b] of html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)) {
+    let data
+    try { data = JSON.parse(b) } catch { continue } // reported above for blog pages
+    for (const n of [].concat(data)) {
+      // Google ignores self-serving reviews on our own Organization/LocalBusiness,
+      // and a rating nobody can see on the page breaks its review-snippet rules.
+      if ([].concat(n['@type'] ?? []).some(t => /^(Organization|LocalBusiness|ProfessionalService)$/.test(t)) && n.aggregateRating) err(page, 'aggregateRating on our own Organization/LocalBusiness (self-serving review markup)')
+      if (![].concat(n['@type'] ?? []).some(t => /^(Article|BlogPosting|NewsArticle)$/.test(t))) continue
+      articlePages++
+      for (const k of ['headline', 'datePublished', 'image', 'author']) if (!n[k]) err(page, `${n['@type']} is missing ${k}`)
+      if (n.datePublished && !ISO_DATE.test(n.datePublished)) err(page, `datePublished is not ISO 8601: "${n.datePublished}"`)
+    }
+  }
+}
+
 // ── Sitemap: every URL must exist and be indexable ────────────────────────
 // A noindex page in the sitemap asks Google to index a page that says no.
 const sitemapFile = join(OUT, 'sitemap.xml')
@@ -194,4 +220,4 @@ if (errors.length) {
   for (const e of errors) console.error(`  ${e}`)
   process.exit(1)
 }
-console.log(`check-seo: OK — ${pages.length} post pages, ${sitemapUrls} sitemap URLs, ${warnings.length} warning(s).`)
+console.log(`check-seo: OK — ${pages.length} post pages, ${articlePages} Article schemas sitewide, ${sitemapUrls} sitemap URLs, ${warnings.length} warning(s).`)

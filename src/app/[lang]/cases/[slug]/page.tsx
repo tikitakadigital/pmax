@@ -5,7 +5,7 @@ import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
 import { breadcrumb, orgRef } from '@/lib/schema'
 import { cases } from '@/lib/content/cases'
-import { getCaseDetail } from '@/lib/content/cases-detail'
+import { getCaseDetail, caseDates, CASE_IMAGE } from '@/lib/content/cases-detail'
 import { getT } from '@/lib/i18n'
 import { caseSlug, canonicalCaseSlug, casePath, caseAlternates } from '@/lib/content/case-slugs'
 
@@ -57,12 +57,15 @@ export default async function CasePage({ params }: { params: Promise<{ lang: str
       '@context': 'https://schema.org',
       '@type': 'Article',
       '@id': `${caseUrl}#article`,
-      headline: loc?.metaTitle ?? detail.metaTitle,
+      headline: (loc?.metaTitle ?? detail.metaTitle).replace(/ \| pmax$/, ''),
       description: loc?.metaDesc ?? detail.metaDesc,
       url: caseUrl,
       author: { '@id': 'https://pmax.online/#org' },
       publisher: { '@id': 'https://pmax.online/#org' },
       mainEntityOfPage: { '@type': 'WebPage', '@id': caseUrl },
+      image: CASE_IMAGE,
+      datePublished: caseDates[slug]?.published,
+      dateModified: caseDates[slug]?.modified,
       inLanguage: lang,
     },
     orgRef,

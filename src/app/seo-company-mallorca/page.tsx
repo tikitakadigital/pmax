@@ -94,13 +94,7 @@ const localBusinessSchema = {
     { '@type': 'Place', name: 'Balearic Islands' },
   ],
   knowsLanguage: ['es', 'de', 'en', 'ca'],
-  sameAs: ['https://www.linkedin.com/company/pmax-online-s-l/'],
-  aggregateRating: {
-    '@type': 'AggregateRating',
-    ratingValue: '5.0',
-    reviewCount: '2',
-    bestRating: '5',
-  },
+  sameAs: ['https://www.linkedin.com/company/pmax-online-s-l/', 'https://www.sortlist.com/agency/pmax-online-sl'],
 }
 
 const jsonLd = [
