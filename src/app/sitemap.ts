@@ -9,10 +9,14 @@ import { posts } from '@/lib/content/blog'
 import { isoDate, postImage } from '@/lib/blog-seo'
 import { translatedLocales } from '@/lib/i18n'
 import { industryDetails } from '@/lib/content/industries-detail'
+import { caseDates } from '@/lib/content/cases-detail'
 
 const base = 'https://pmax.online'
 const langs = ['de', 'es'] as const
 
+// lastModified below is only a starting value. scripts/page-dates.mjs rewrites
+// <lastmod> after the build: from the page's own schema for posts and cases,
+// from a content hash (scripts/page-dates.json) for everything else.
 export default function sitemap(): MetadataRoute.Sitemap {
   const core: MetadataRoute.Sitemap = [
     { url: `${base}/`, lastModified: '2026-08-08', changeFrequency: 'monthly', priority: 1.0 },
@@ -55,8 +59,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ]
 
   const casePages: MetadataRoute.Sitemap = [
-    ...cases.map(c => ({ url: `${base}/cases/${c.slug}/`, lastModified: '2026-04-01', changeFrequency: 'yearly' as const, priority: 0.7 })),
-    ...langs.flatMap(lang => cases.map(c => ({ url: `${base}${casePath(c.slug, lang)}`, lastModified: '2026-04-01', changeFrequency: 'yearly' as const, priority: 0.6 }))),
+    ...cases.map(c => ({ url: `${base}/cases/${c.slug}/`, lastModified: caseDates[c.slug]?.modified, changeFrequency: 'yearly' as const, priority: 0.7 })),
+    ...langs.flatMap(lang => cases.map(c => ({ url: `${base}${casePath(c.slug, lang)}`, lastModified: caseDates[c.slug]?.modified, changeFrequency: 'yearly' as const, priority: 0.6 }))),
   ]
 
   // Localised post URLs are listed ONLY where a translation actually exists.
