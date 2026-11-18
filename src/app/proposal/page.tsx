@@ -99,7 +99,7 @@ export interface Offer {
 
 const LABELS = {
   en: {
-    savePdf: 'Save as PDF', acceptBar: 'Accept proposal', accepted: '✓ Accepted',
+    savePdf: 'Save as PDF', print: 'Print', acceptBar: 'Accept proposal', accepted: '✓ Accepted',
     expiredOn: 'Expired on', draft: 'Draft',
     metaCode: 'PROPOSAL NO.', metaFor: 'FOR', metaFrom: 'FROM', metaDate: 'DATE', metaValid: 'VALID UNTIL', metaContact: 'CONTACT',
     s01: 'Opening',
@@ -141,7 +141,7 @@ const LABELS = {
     footerMeta: (code: string, until: string) => `PROPOSAL ${code} · CONFIDENTIAL · VALID UNTIL ${until}`,
   },
   de: {
-    savePdf: 'PDF speichern', acceptBar: 'Angebot annehmen', accepted: '✓ Angenommen',
+    savePdf: 'PDF speichern', print: 'Drucken', acceptBar: 'Angebot annehmen', accepted: '✓ Angenommen',
     expiredOn: 'Abgelaufen am', draft: 'Entwurf',
     metaCode: 'ANGEBOTSNUMMER', metaFor: 'FÜR', metaFrom: 'VON', metaDate: 'DATUM', metaValid: 'GÜLTIG BIS', metaContact: 'KONTAKT',
     s01: 'Kurz vorab',
@@ -290,6 +290,49 @@ function Block({ block: b, num }: { block: Block; num: string }) {
   )
 }
 
+// ─── Dark PDF ─────────────────────────────────────────────────────────────────
+// Browsers can't tell "print on paper" from "save as PDF": both are print. So
+// the page offers two buttons. Print (and Ctrl/Cmd+P) uses the white print
+// styles in the CSS module. Save as PDF adds this stylesheet just for that one
+// print job: the dark look of the screen, edge to edge. Page margins are always
+// white in a PDF, so the margin is zero and the spacing sits inside the
+// document, repeated on every page by box-decoration-break.
+
+function darkPdfCss(): string {
+  return `
+@page { size: A4; margin: 0; }
+html, body { background: #0a0a0a !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+.${s.page} { background: #0a0a0a !important; padding: 0 !important; }
+.${s.doc} {
+  background: #0a0a0a !important; color: #d4d4d4; border: none !important;
+  padding: 1.7cm 2.1cm !important;
+  -webkit-box-decoration-break: clone; box-decoration-break: clone;
+}
+.${s.logo}, .${s.docTitle}, .${s.sh}, .${s.label}, .${s.pkgName}, .${s.headerAddr} strong, .${s.pkgPrice} { color: #fff; }
+.${s.n}, .${s.ol} li::marker, .${s.pkgPrice}, .${s.hintLabel}, .${s.pricingLabel} { color: #3cffd0; }
+.${s.headerAddr}, .${s.metaKey}, .${s.subLabel}, .${s.pkgMeta}, .${s.pkgPriceNote}, .${s.tbl} th { color: #8a8a8a; }
+.${s.metaTable} td, .${s.p}, .${s.ul} li, .${s.ol} li, .${s.tbl} td, .${s.hint} p, .${s.sig}, .${s.pkgNote}, .${s.glossaryTbl} td { color: #cfcfcf; }
+.${s.tbl} td strong, .${s.tbl} td:first-child { color: #fff; }
+.${s.tbl} th { border-bottom-color: #2a2a2a; }
+.${s.tbl} td, .${s.glossaryTbl} td { border-bottom-color: #1f1f1f; }
+.${s.rule}, .${s.glossary}, .${s.footer} { border-color: #262626 !important; }
+.${s.coreMsg}, .${s.hint} { background: #161616 !important; color: #fff; }
+.${s.pkg} { background: #141414 !important; border-color: #262626; border-left-color: #3cffd0; }
+.${s.pricingBox} { background: #141414 !important; }
+.${s.badge} { color: #a3a3a3; border-color: #333; }
+.${s.footer} { color: #5c5c5c; }
+`
+}
+
+function saveDarkPdf() {
+  const style = document.createElement('style')
+  style.textContent = darkPdfCss()
+  document.head.appendChild(style)
+  const done = () => { style.remove(); window.removeEventListener('afterprint', done) }
+  window.addEventListener('afterprint', done)
+  window.print()
+}
+
 // ─── Page ─────────────────────────────────────────────────────────────────────
 
 type State = 'loading' | 'not_found' | 'error' | 'ok'
@@ -368,7 +411,8 @@ export default function ProposalPage() {
       {/* ── Actions bar (screen only) ── */}
       <div className={s.actions}>
         <div className={s.actionsInner}>
-          <button className={s.btn} onClick={() => window.print()}>{L.savePdf}</button>
+          <button className={s.btn} onClick={saveDarkPdf}>{L.savePdf}</button>
+          <button className={s.btn} onClick={() => window.print()}>{L.print}</button>
           {canAccept && (
             <button className={`${s.btn} ${s.btnPrimary}`} onClick={handleAccept}>
               {L.acceptBar}
