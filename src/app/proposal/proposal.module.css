@@ -299,7 +299,8 @@
 }
 
 /* Markers: the global reset removes them, and a scope list without them reads
-   as one block. Small square in a mint dark enough for white paper and print. */
+   as one block. Squares in the brand mint, like the section numbers; numerals
+   in the text black, because mint text on white is hard to read. */
 .ul { list-style: none; }
 .ul li { position: relative; }
 .ul li::before {
@@ -309,11 +310,11 @@
   top: .62em;
   width: 6px;
   height: 6px;
-  background: #13a37c;
+  background: #3cffd0;
 }
 .ol { list-style: decimal; }
 .ol li { padding-left: .2rem; }
-.ol li::marker { color: #13a37c; font-weight: 700; }
+.ol li::marker { color: #111; font-weight: 700; }
 
 /* ── Pricing overview ────────────────────────────────────────────────────────── */
 
@@ -631,4 +632,101 @@
 .metaAddrLine {
   display: block;
   line-height: 1.5;
+}
+
+/* ── Brand typography (screen and print) ─────────────────────────────────────
+   The site's display face for the title and section headings, so a proposal
+   reads as pmax rather than as a generic quote document. Anton has one weight. */
+
+.docTitle {
+  font-family: var(--font-display), 'Impact', sans-serif;
+  font-weight: 400;
+  font-size: 2.9rem;
+  line-height: 1.02;
+  letter-spacing: .005em;
+}
+
+.sh {
+  font-family: var(--font-display), 'Impact', sans-serif;
+  font-weight: 400;
+  font-size: 1.55rem;
+  letter-spacing: .01em;
+  line-height: 1.1;
+}
+
+.n {
+  font-family: var(--font-sans), system-ui, sans-serif;
+  font-size: .85rem;
+}
+
+@media print {
+  .docTitle { font-size: 2.1rem; }
+  .sh       { font-size: 1.3rem; }
+  .ol li::marker { color: #111; }
+}
+
+/* ── Dark theme, screen only ──────────────────────────────────────────────────
+   On screen a proposal continues pmax.online: near-black, light text, mint used
+   sparingly (section numbers, list markers, prices). Print and "Save as PDF"
+   keep the white page above: dark pages print badly and waste toner. */
+
+@media screen {
+  .page { background: #0a0a0a; color: #d4d4d4; }
+
+  .doc {
+    background: #121212;
+    color: #d4d4d4;
+    border: 1px solid #1f1f1f;
+    box-shadow: 0 30px 80px rgba(0, 0, 0, .5);
+  }
+
+  .actions { background: rgba(10, 10, 10, .9); border-bottom-color: #1f1f1f; }
+  .btn { border-color: #e8e8e8; color: #f5f5f5; }
+  .btn:hover { background: #f5f5f5; color: #111; }
+  .btnPrimary { border-color: #3cffd0; background: #3cffd0; color: #0a0a0a; }
+  .btnPrimary:hover { background: #1fe8b8; border-color: #1fe8b8; color: #0a0a0a; }
+
+  .pill[data-type="accepted"] { background: rgba(74, 222, 128, .14); color: #4ade80; }
+  .pill[data-type="expired"]  { background: rgba(248, 113, 113, .14); color: #f87171; }
+  .pill[data-type="draft"]    { background: rgba(250, 204, 21, .14); color: #facc15; }
+
+  .logo, .docTitle, .sh, .label, .pkgName, .headerAddr strong { color: #fff; }
+  .headerAddr { color: #8a8a8a; }
+  .badge { color: #a3a3a3; border-color: #333; }
+
+  .metaTable td { color: #d4d4d4; }
+  .metaKey { color: #7a7a7a; }
+  .rule { border-top-color: #262626; }
+
+  .p { color: #cfcfcf; }
+  .subLabel { color: #8a8a8a; }
+
+  .coreMsg { background: #181818; color: #fff; }
+  .hint { background: #181818; }
+  .hint p { color: #cfcfcf; }
+
+  .tbl th { color: #7a7a7a; border-bottom-color: #2a2a2a; }
+  .tbl td { color: #cfcfcf; border-bottom-color: #1f1f1f; }
+  .tbl td strong, .tbl td:first-child { color: #fff; }
+
+  .ul li, .ol li { color: #cfcfcf; }
+  .ol li::marker { color: #3cffd0; }
+
+  .pricingBox { background: #0a0a0a; }
+
+  .acceptBox { background: rgba(60, 255, 208, .05); }
+  .acceptBox p { color: #a3a3a3; }
+  .acceptedBox { background: rgba(74, 222, 128, .08); border-color: #4ade80; color: #4ade80; }
+
+  .sig { color: #cfcfcf; }
+  .glossary { border-top-color: #262626; }
+  .glossaryTbl td { color: #bdbdbd; border-bottom-color: #1f1f1f; }
+  .footer { border-top-color: #262626; color: #5c5c5c; }
+
+  .pkg { background: #161616; border-color: #262626; border-left-color: #3cffd0; }
+  .pkgMeta, .pkgPriceNote { color: #8a8a8a; }
+  .pkgPrice { color: #3cffd0; }
+  .pkgNote { color: #a3a3a3; }
+
+  .state { background: #0a0a0a; color: #a3a3a3; }
 }
