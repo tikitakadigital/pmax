@@ -298,6 +298,23 @@
   margin-bottom: .35rem;
 }
 
+/* Markers: the global reset removes them, and a scope list without them reads
+   as one block. Small square in a mint dark enough for white paper and print. */
+.ul { list-style: none; }
+.ul li { position: relative; }
+.ul li::before {
+  content: '';
+  position: absolute;
+  left: -1.05rem;
+  top: .62em;
+  width: 6px;
+  height: 6px;
+  background: #13a37c;
+}
+.ol { list-style: decimal; }
+.ol li { padding-left: .2rem; }
+.ol li::marker { color: #13a37c; font-weight: 700; }
+
 /* ── Pricing overview ────────────────────────────────────────────────────────── */
 
 .pricingGrid {
