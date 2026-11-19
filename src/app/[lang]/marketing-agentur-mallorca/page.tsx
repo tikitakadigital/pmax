@@ -10,6 +10,7 @@ import PromoBlock from '@/components/PromoBlock'
 import { breadcrumb, faqPage } from '@/lib/schema'
 import { cases } from '@/lib/content/cases'
 import { casePath } from '@/lib/content/case-slugs'
+import { getT } from '@/lib/i18n'
 
 export function generateStaticParams() {
   return [{ lang: 'de' }]
@@ -125,10 +126,18 @@ const jsonLd = [
   faqPage(faqs),
 ]
 
+// Case cards in this page's language: the localised kicker, title, deck and
+// result from the i18n file, falling back to the English case where missing.
+function localCase(slug: string) {
+  const c = cases.find(x => x.slug === slug)!
+  const loc = getT('de').cases.items.find((i: { slug: string }) => i.slug === slug) as Partial<typeof c> | undefined
+  return { ...c, ...(loc ?? {}), result: loc?.result ?? c.result }
+}
+
 export default function MarketingAgenturMallorcaPage() {
-  const unisono = cases.find(c => c.slug === 'unisono')!
-  const ledxpress = cases.find(c => c.slug === 'ledxpress')!
-  const gabiona = cases.find(c => c.slug === 'gabionas')!
+  const unisono = localCase('unisono')
+  const ledxpress = localCase('ledxpress')
+  const gabiona = localCase('gabionas')
 
   return (
     <>
@@ -213,17 +222,41 @@ export default function MarketingAgenturMallorcaPage() {
                 <li><Link href="/de/services/ai-visibility">KI-Sichtbarkeit (GEO)</Link> — das Unternehmen sein, das ChatGPT, Perplexity und Google AI Overviews empfehlen, wenn jemand nach einer Agentur, Villa, einem Hotel oder Dienstleister auf Mallorca fragt.</li>
                 <li><Link href="/de/services/conversion-design">Conversion-Optimierung (CRO)</Link> — mehr Umsatz aus demselben Traffic. Landingpage-Neubauten, Buchungsfluss-Optimierung, A/B-Tests.</li>
                 <li><Link href="/de/services/analytics">Analytics &amp; Tracking</Link> — Server-side GTM, Consent Mode v2, GA4, CRM-gespeiste Offline-Conversions. Das Fundament, auf dem alles andere steht.</li>
-                <li><Link href="/de/services/creative">Kreativproduktion</Link> — Anzeigen, Landingpages und Video im Wochentakt, briefed durch Media-Daten und zum Testen gebaut.</li>
+                <li><Link href="/de/services/creative">Kreativproduktion</Link> — Anzeigen, Landingpages und Video im Wochentakt, auf Basis der Kampagnendaten konzipiert und zum Testen gebaut.</li>
               </ul>
+
+              <h2>Ihre Kunden suchen in Deutschland, bevor sie auf die Insel kommen</h2>
+              <p>
+                Ein Unternehmen auf Mallorca mit deutschsprachigen Kunden hat zwei Märkte. Der eine
+                ist auf der Insel: Residenten und Urlauber, die vor Ort einen Arzt, einen Handwerker
+                oder ein Restaurant suchen. Der andere sitzt in Deutschland, Österreich und der
+                Schweiz und plant von dort aus. Wer eine Finca kaufen oder ein Ferienhaus mieten will,
+                sucht zu Hause, Wochen oder Monate vor der Reise.
+              </p>
+              <p>
+                Die Suchzahlen zeigen das. Aus Deutschland wird „Ferienhaus Mallorca“ rund
+                5.400-mal im Monat gesucht, „Finca Mallorca kaufen“ rund 4.400-mal und
+                „Immobilienmakler Mallorca“ rund 1.300-mal. Dazu kommen Suchen, die ausdrücklich
+                nach Deutsch fragen: „deutscher Arzt Mallorca“ rund 210-mal, „deutscher Zahnarzt
+                Mallorca“ rund 140-mal (Semrush, November 2026).
+              </p>
+              <p>
+                Deshalb trennen wir die beiden Märkte. Für Kunden auf der Insel arbeiten wir mit
+                Standort-Targeting und Ihrem Google-Unternehmensprofil. Für Kunden in Deutschland,
+                Österreich und der Schweiz laufen eigene Kampagnen, auf Deutsch geschrieben und nicht
+                aus dem Englischen übersetzt. Und wenn Ihre Kunden ausdrücklich nach Deutsch fragen,
+                sagen Ihre Website und Ihr Profil es deutlich: Beratung auf Deutsch, Termine auf
+                Deutsch, Ansprechpartner auf Deutsch.
+              </p>
 
               <h2>Mit wem wir auf der Insel arbeiten</h2>
               <ul>
-                <li><strong>Hotellerie und Villenvermietung</strong> — Hotels, Boutique-Vermietungen und Villa-Agenturen. Mehrsprachige Kampagnen für einen Markt, der im Sommer hart piakt und im Januar ruhig wird.</li>
-                <li><strong>Immobilien</strong> — Agenturen, die deutsch- und englischsprachige Käufer bedienen, die in ihrer eigenen Sprache nach Inselobjekten suchen. Mehr in unserem <Link href="/de/industries/real-estate/">Immobilien-Marketing-Playbook</Link>.</li>
-                <li><strong>Yachting &amp; Marine</strong> — Charter-Unternehmen mit langen Buchungsfenstern und einer global zusammengesetzten Kundschaft. Acht-Sprachen-Kampagnen, 90-Tage-Remarketing.</li>
-                <li><strong>Healthcare &amp; Ästhetik</strong> — Kliniken in Palma und Calvià, die internationale Patienten bedienen, die sich in mehreren Sprachen informieren, bevor sie anfragen.</li>
-                <li><strong>Professionelle Dienstleister</strong> — Anwälte, Architekten, Steuerberater und Unternehmensberater für Mallorcas Expat-Community auf Deutsch und Englisch.</li>
-                <li><strong>E-Commerce</strong> — Mallorquinische Marken, die nach Deutschland, UK und in den Rest Europas verkaufen. Mehrsprachiges SEO, Shopping und Performance Max.</li>
+                <li><strong>Hotellerie und Villenvermietung</strong> — Hotels, Boutique-Vermietungen und Villa-Agenturen. Kampagnen in mehreren Sprachen für einen Markt, der im Sommer voll ist und im Januar fast stillsteht.</li>
+                <li><strong>Immobilien</strong> — Makler mit deutsch- und englischsprachigen Käufern, die in ihrer eigenen Sprache nach Objekten auf der Insel suchen, meist von zu Hause aus. Mehr in unserem <Link href="/de/industries/real-estate/">Immobilien-Marketing-Playbook</Link>.</li>
+                <li><strong>Yachting &amp; Marine</strong> — Charter-Unternehmen und Werften mit langen Buchungsfenstern und Kunden aus aller Welt. Kampagnen in mehreren Sprachen, Remarketing über 90 Tage.</li>
+                <li><strong>Gesundheit &amp; Ästhetik</strong> — Kliniken und Praxen in Palma und Calvià, deren Patienten sich vor dem ersten Termin in ihrer Sprache informieren.</li>
+                <li><strong>Beratung und Dienstleistung</strong> — Anwälte, Architekten, Steuerberater und Berater für die deutsch- und englischsprachigen Residenten der Insel.</li>
+                <li><strong>E-Commerce</strong> — Marken von der Insel, die nach Deutschland, Großbritannien und in den Rest Europas verkaufen. Mehrsprachiges SEO, Shopping und Performance Max.</li>
               </ul>
 
               <h2>Wie wir abrechnen</h2>
@@ -231,16 +264,16 @@ export default function MarketingAgenturMallorcaPage() {
                 Eine feste monatliche Pauschale, vorab vereinbart — kein Prozentsatz Ihres
                 Mediabudgets. Typische Retainer liegen bei 1.500–5.000 €/Monat, je nach
                 Kanalanzahl und Umfang. Das Mediabudget zahlen Sie direkt an die Plattformen;
-                wir verwalten es nie. Unser Anreiz ist, das Budget arbeiten zu lassen,
-                nicht es aufzublähen — das ist das strukturelle Problem prozentualsbasierter
-                Agenturen.
+                wir verwalten es nie. Unser Anreiz ist, dass das Budget arbeitet, nicht dass es
+                wächst. Genau das ist das Problem von Agenturen, die einen Prozentsatz des
+                Budgets berechnen.
               </p>
 
               <h2>Wie wir arbeiten — vier Schritte</h2>
               <ol>
                 <li><strong>Zuhören</strong> — erst das Geschäft, dann die Daten, dann die Plattformen. Wir verbringen die erste Woche damit zu verstehen, woher Umsatz tatsächlich kommt, bevor wir eine Kampagne anfassen.</li>
                 <li><strong>Reparieren</strong> — Tracking, Feeds, Schema, Google Unternehmensprofil: das Fundament, auf dem alles andere steht. Die meisten neuen Accounts haben mindestens ein wesentliches Messproblem.</li>
-                <li><strong>Wachsen</strong> — Kampagnen skalieren, Kreation findet ihren Rhythmus, SEO beginnt zu kompoundieren.</li>
+                <li><strong>Wachsen</strong> — Kampagnen skalieren, die Kreation findet ihren Rhythmus, SEO beginnt sich aufzubauen.</li>
                 <li><strong>Verteidigen</strong> — SEO, KI-Suche und Markenschutz, die über Jahre wirken, nicht über Quartale.</li>
               </ol>
 
@@ -249,8 +282,8 @@ export default function MarketingAgenturMallorcaPage() {
                 <p>
                   Marketing funktioniert nicht über Nacht, und jede Agentur, die das behauptet,
                   lügt entweder oder verkauft Ihnen etwas mit kurzen Beinen. Paid-Kanäle bewegen
-                  sich in Wochen. SEO kompoundiert ab Monat drei. KI-Suchsichtbarkeit baut sich
-                  über Quartale auf. Die Unternehmen, mit denen wir drei oder vier Jahre
+                  sich in Wochen. SEO baut sich ab dem dritten Monat auf. KI-Suchsichtbarkeit wächst
+                  über Quartale. Die Unternehmen, mit denen wir drei oder vier Jahre
                   zusammenarbeiten, erzielen dramatisch bessere Ergebnisse als diejenigen, die
                   uns nach 90 Tagen messen. Wenn dieser Zeitrahmen für Sie nicht funktioniert,
                   sind wir wahrscheinlich nicht der richtige Partner — und wir sagen das im

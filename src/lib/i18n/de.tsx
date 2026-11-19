@@ -98,7 +98,7 @@ export const de = {
     deckEyebrow: 'Was wir tun',
     deckText: (
       <>
-        pmax ist eine Agentur für digitales Marketing in Calvià, Mallorca. Wir arbeiten mit deutsch- und englischsprachigen Unternehmern auf der Insel sowie mit Marken in ganz Europa.
+        pmax ist eine <a href="/de/marketing-agentur-mallorca/">Marketing-Agentur auf Mallorca</a> mit Sitz in Calvià. Wir arbeiten mit deutsch- und englischsprachigen Unternehmern auf der Insel sowie mit Marken in ganz Europa.
       </>
     ),
     statSpend: 'verwaltetes Ad-Budget',
@@ -3376,13 +3376,13 @@ WHERE campaign.advertising_channel_type = 'PERFORMANCE_MAX'`}</code></pre>
         <h2>Die Standard-Geo-Einstellungen sind falsch</h2>
         <p>Google Ads wird standardmäßig mit „Präsenz oder Interesse" geliefert. Für lokale Mallorca-Unternehmen bedeutet das, Anzeigen jedem in Spanien zu zeigen, der jemals „Interesse" an Mallorca gezeigt hat — Millionen von Menschen, die niemals Kunden werden. Wechseln Sie am ersten Tag zu „Nur Präsenz".</p>
         <h2>Spracheinstellungen schneiden in beide Richtungen</h2>
-        <p>Mallorca-Kunden googeln auf Spanisch, Katalanisch, Deutsch und Englisch — manchmal alle vier in einer einzigen Session. Entscheiden Sie sich nicht für eine Sprache. Bauen Sie separate Kampagnen pro Sprache auf, mit übersetzten Keywords, Anzeigen und Landingpages. Auto-übersetzte Kopien kosten Sie 30–40 % der Performance.</p>
+        <p>Mallorca-Kunden googeln auf Spanisch, Katalanisch, Deutsch und Englisch — manchmal alle vier in einer einzigen Session. Entscheiden Sie sich nicht für eine Sprache. Bauen Sie separate Kampagnen pro Sprache auf, mit übersetzten Keywords, Anzeigen und Landingpages. Auto-übersetzte Kopien kosten Sie 30–40 % der Performance. Wie wir Kampagnen für Kunden auf der Insel und für Kunden in Deutschland trennen, beschreiben wir auf der Seite unserer <a href="/de/marketing-agentur-mallorca/">Marketing-Agentur auf Mallorca</a>.</p>
         <h2>Lokales Conversion-Tracking</h2>
         <p>Für Unternehmen an physischen Standorten sind Anruf-Tracking und Besuchs-Tracking wichtiger als Formular-Ausfüllungen. Richten Sie sie ein. Googles „Store Visits"-Conversion ist kostenlos und wird zu wenig genutzt.</p>
         <h2>Bidding für touristische Saisonalität</h2>
-        <p>50 % der kommerziellen Suchanfragen auf Mallorca finden zwischen April und September statt. Fahren Sie keine flachen Gebote das ganze Jahr. Bauen Sie tages- und saisonparted Bidding-Strategien, die der tatsächlichen Nachfragekurve entsprechen.</p>
+        <p>50 % der kommerziellen Suchanfragen auf Mallorca finden zwischen April und September statt. Fahren Sie keine flachen Gebote das ganze Jahr. Bauen Sie nach Tageszeit und Saison gestaffelte Gebotsstrategien, die der tatsächlichen Nachfragekurve entsprechen.</p>
         <h2>Local Pack und Maps</h2>
-        <p>Wenn Sie ein Dienstleistungsunternehmen sind, generiert Ihr Google-Unternehmensprofil mehr Umsatz als Ihre Anzeigen. Optimieren Sie es ordentlich: Fotos monatlich aktualisiert, Reviews vierteljährlich angefragt, Leistungen richtig kategorisiert. Die Arbeit kompoundiert.</p>
+        <p>Wenn Sie ein Dienstleistungsunternehmen sind, generiert Ihr Google-Unternehmensprofil mehr Umsatz als Ihre Anzeigen. Optimieren Sie es ordentlich: Fotos monatlich aktualisiert, Reviews vierteljährlich angefragt, Leistungen richtig kategorisiert. Diese Arbeit zahlt sich über Monate aus.</p>
         <p>Unsere <a href="/de/services/google-ads/">Google Ads &amp; Performance Max Leistung</a> — gebaut für Mallorcas mehrsprachige, saisonale Nachfrage. Auf der Suche nach einer Agentur und unsicher, was zu bewerten ist? Lesen Sie unseren Leitfaden zur <a href="/de/blog/google-ads-agency-mallorca/">Auswahl einer Google Ads Agentur auf Mallorca</a>. Kampagnen in ganz Spanien? Sehen Sie unsere <a href="/de/google-ads-agentur-spanien/">Google Ads Agentur Spanien</a>.</p>
         <h2>Brauchen Sie dabei Unterstützung?</h2>
         <p>Falls Ihnen das oben Genannte bekannt vorkommt, <a href="/de/contact/?topic=google-ads-mallorca">schildern Sie uns kurz Ihre Situation</a> und wir melden uns innerhalb eines Werktages. Das erste Gespräch: 30 Minuten, auf unsere Rechnung.</p>
@@ -4039,7 +4039,7 @@ WHERE campaign.advertising_channel_type = 'PERFORMANCE_MAX'`}</code></pre>
           <li>Mindestzeit bis die Datenbasis belastbar ist: 6&ndash;8 Wochen in einem lokalen Markt mit niedrigem Suchvolumen</li>
         </ul>
         <h2>Die entscheidende Frage vor Vertragsschluss</h2>
-        <p>Bitten Sie die Agentur, konkret zu erklären, wie sie eine Kampagne für Ihr Kundenprofil aufbauen würde. Nicht allgemein. Für Ihren spezifischen Kundentyp, in Ihrer Region, in Ihren Sprachen.</p>
+        <p>Bitten Sie die Agentur, konkret zu erklären, wie sie eine Kampagne für Ihr Kundenprofil aufbauen würde. Nicht allgemein. Für Ihren spezifischen Kundentyp, in Ihrer Region, in Ihren Sprachen. Wie wir das für Unternehmen mit deutschsprachigen Kunden auf der Insel und in Deutschland angehen, steht auf der Seite unserer <a href="/de/marketing-agentur-mallorca/">Marketing-Agentur auf Mallorca</a>.</p>
         <p>Wenn die Antwort vage bleibt &mdash; &bdquo;wir richten Google Ads ein und optimieren laufend&ldquo; &mdash; dann haben Sie Ihre Antwort.</p>
         <p>Weiterführende Lektüre: unser <a href="/de/services/google-ads/">Google Ads Service</a>, unser <a href="/de/blog/google-ads-mallorca/">Targeting-Leitfaden für Mallorca</a> und die <a href="/de/blog/how-to-advertise-business-mallorca/">vollständige Anleitung zur digitalen Werbung auf Mallorca</a>.</p>
         <h2>Brauchen Sie dabei Unterstützung?</h2>

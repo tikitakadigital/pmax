@@ -151,6 +151,8 @@ a:hover { color: var(--color-link-hover); }
 .hero-deck-eyebrow { font-family: var(--font-mono); font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--color-jelly-mint); }
 .hero-deck-text { font-family: var(--font-sans); font-weight: 400; font-size: 28px; line-height: 1.25; color: #fff; margin: 16px 0 0; letter-spacing: -0.3px; }
 .hero-deck-text em { font-family: var(--font-serif); font-style: italic; color: var(--color-jelly-mint); }
+.hero-deck-text a { color: inherit; text-decoration: underline; text-decoration-color: var(--color-jelly-mint); text-decoration-thickness: 2px; text-underline-offset: 6px; transition: color 150ms; }
+.hero-deck-text a:hover { color: var(--color-jelly-mint); }
 .hero-deck-side { display: flex; flex-direction: column; gap: 18px; border-left: 1px dashed #3d00bf; padding-left: 24px; }
 .hero-deck-stat { display: flex; flex-direction: column; gap: 4px; }
 .hero-deck-stat-num { font-family: var(--font-display); font-weight: 900; font-size: 56px; line-height: 0.95; color: var(--color-jelly-mint); }

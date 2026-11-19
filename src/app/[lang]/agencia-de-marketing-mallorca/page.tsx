@@ -10,6 +10,7 @@ import PromoBlock from '@/components/PromoBlock'
 import { breadcrumb, faqPage } from '@/lib/schema'
 import { cases } from '@/lib/content/cases'
 import { casePath } from '@/lib/content/case-slugs'
+import { getT } from '@/lib/i18n'
 
 export function generateStaticParams() {
   return [{ lang: 'es' }]
@@ -131,10 +132,18 @@ const jsonLd = [
   faqPage(faqs),
 ]
 
+// Case cards in this page's language: the localised kicker, title, deck and
+// result from the i18n file, falling back to the English case where missing.
+function localCase(slug: string) {
+  const c = cases.find(x => x.slug === slug)!
+  const loc = getT('es').cases.items.find((i: { slug: string }) => i.slug === slug) as Partial<typeof c> | undefined
+  return { ...c, ...(loc ?? {}), result: loc?.result ?? c.result }
+}
+
 export default function AgenciaDeMarketingMallorcaPage() {
-  const unisono = cases.find(c => c.slug === 'unisono')!
-  const ledxpress = cases.find(c => c.slug === 'ledxpress')!
-  const gabiona = cases.find(c => c.slug === 'gabionas')!
+  const unisono = localCase('unisono')
+  const ledxpress = localCase('ledxpress')
+  const gabiona = localCase('gabionas')
 
   return (
     <>
