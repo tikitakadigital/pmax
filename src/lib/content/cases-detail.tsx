@@ -526,7 +526,7 @@ export const caseDetails: CaseDetail[] = [
       </>
     ),
     relatedCases: [
-      { slug: 'gabionas', variant: 'is-mint', title: 'Gabionas — 4.6× blended ROAS' },
+      { slug: 'gabionas', variant: 'is-mint', title: 'Gabiona — +27% revenue, same budget' },
       { slug: 'primundus', variant: 'is-pink', title: 'PRIMUNDUS — 11.2% form conversion' },
       { slug: 'preo', variant: 'is-yellow', title: 'PREO — 71% SAL rate via offline conversions' },
     ],

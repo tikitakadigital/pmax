@@ -1,7 +1,7 @@
 {
   "/": {
     "date": "2026-11-19",
-    "hash": "8a621bbc31fca861"
+    "hash": "5ef67e1714f6bafa"
   },
   "/about/": {
     "date": "2026-09-21",
@@ -12,8 +12,8 @@
     "hash": "3411e008df7b5339"
   },
   "/cases/": {
-    "date": "2026-11-06",
-    "hash": "0083f80f6abcbe2a"
+    "date": "2026-11-19",
+    "hash": "b76e9f542863e854"
   },
   "/contact/": {
     "date": "2026-11-06",
@@ -21,7 +21,7 @@
   },
   "/de/": {
     "date": "2026-11-19",
-    "hash": "fa649d0081aeb6c4"
+    "hash": "129e9b79d468c094"
   },
   "/de/about/": {
     "date": "2026-08-14",
@@ -32,16 +32,16 @@
     "hash": "d491cb3e4118a202"
   },
   "/de/cases/": {
-    "date": "2026-11-06",
-    "hash": "a9cdae315506509d"
+    "date": "2026-11-19",
+    "hash": "58818d69490b0579"
   },
   "/de/contact/": {
     "date": "2026-05-13",
     "hash": "2e5dfa114311980e"
   },
   "/de/google-ads-agentur-spanien/": {
-    "date": "2026-11-06",
-    "hash": "fe451d8e593782df"
+    "date": "2026-11-19",
+    "hash": "594c70f4a90bc899"
   },
   "/de/industries/": {
     "date": "2026-05-13",
@@ -93,7 +93,7 @@
   },
   "/de/marketing-agentur-mallorca/": {
     "date": "2026-11-19",
-    "hash": "31612a78396b9d93"
+    "hash": "68aad40904e81bb8"
   },
   "/de/seo-agentur-mallorca/": {
     "date": "2026-11-06",
@@ -141,7 +141,7 @@
   },
   "/es/": {
     "date": "2026-11-19",
-    "hash": "6066e32ddcbcaccd"
+    "hash": "a47d66e475bc8ff6"
   },
   "/es/about/": {
     "date": "2026-08-14",
@@ -149,11 +149,11 @@
   },
   "/es/agencia-de-marketing-mallorca/": {
     "date": "2026-11-19",
-    "hash": "901bd3881b419deb"
+    "hash": "22f10c19889fc683"
   },
   "/es/agencia-google-ads-espana/": {
-    "date": "2026-09-21",
-    "hash": "74f6e7168e7fb366"
+    "date": "2026-11-19",
+    "hash": "399ead9ed3a121d3"
   },
   "/es/agencia-seo-mallorca/": {
     "date": "2026-10-04",
@@ -164,8 +164,8 @@
     "hash": "31307af983918882"
   },
   "/es/cases/": {
-    "date": "2026-11-06",
-    "hash": "49471b6b708bd8be"
+    "date": "2026-11-19",
+    "hash": "9b2251ef68b97f97"
   },
   "/es/contact/": {
     "date": "2026-05-13",
@@ -260,8 +260,8 @@
     "hash": "98df80254b93a310"
   },
   "/google-ads-agency-spain/": {
-    "date": "2026-11-06",
-    "hash": "fc446b3de909b8d9"
+    "date": "2026-11-19",
+    "hash": "95f44e7438f51889"
   },
   "/industries/": {
     "date": "2026-06-01",
@@ -312,8 +312,8 @@
     "hash": "063fd5c9bdffc09e"
   },
   "/marketing-agency-mallorca/": {
-    "date": "2026-11-17",
-    "hash": "8977e545773fded8"
+    "date": "2026-11-19",
+    "hash": "a743ff78b269262b"
   },
   "/seo-company-mallorca/": {
     "date": "2026-11-06",
@@ -344,12 +344,12 @@
     "hash": "174cdcee909516f3"
   },
   "/services/google-ads/": {
-    "date": "2026-08-08",
-    "hash": "d84ee4c84a818bf0"
+    "date": "2026-11-19",
+    "hash": "4cbaf207dc0e34aa"
   },
   "/services/paid-social/": {
-    "date": "2026-08-08",
-    "hash": "2c76538995d25df7"
+    "date": "2026-11-19",
+    "hash": "bdbd0e02c0ed5bbe"
   },
   "/services/seo/": {
     "date": "2026-08-08",
