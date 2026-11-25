@@ -2744,6 +2744,16 @@ export const de = {
             caption='Unsere wöchentliche Ranking-Abfrage für pmax.online am 9. November 2026: Google, Suche aus Spanien, ohne Anmeldung, Desktop und Mobil, 34 Keywords. Jedes Quadrat ist eine Position, an der die Website auftauchte, beschriftet mit der Sprache der Seite, die Google zeigte.'
           />
           <p>Eine Messung auf einer einzigen Website beweist wenig, und eine Abfrage ohne Anmeldung hat gar kein Sprachprofil. Sie zeigt aber, was ein Ranking-Report verbirgt. Die Position kann gut aussehen, während die Seite in der falschen Sprache ist.</p>
+          <h3 id="update-25-november">Nachtrag, 25. November 2026: ein Keyword, drei Sprachen</h3>
+          <p>Nach der Veröffentlichung haben wir am 16. und am 23. November acht Keywords in allen drei Oberflächensprachen abgefragt: sieben Mallorca-Keywords und &bdquo;performance max agency&ldquo; als Gegenprobe. Gleiches Land, gleiches Tool, ohne Anmeldung, Desktop und Mobil. Am deutlichsten zeigt es die Gegenprobe. Stand 23. November:</p>
+          <div style={{ overflowX: 'auto' }}>
+            <table>
+              <thead><tr><th>Oberfläche</th><th>Desktop</th><th>Mobil</th></tr></thead>
+              <tbody><tr><td>Englisch</td><td>Platz 46, spanische Seite zu unseren Leistungen</td><td>Platz 30, Startseite</td></tr><tr><td>Deutsch</td><td>nicht unter den ersten 78</td><td>Platz 2, Startseite (eine Woche vorher Platz 30)</td></tr><tr><td>Spanisch</td><td>nicht unter den ersten 86</td><td>nicht unter den ersten 83</td></tr></tbody>
+            </table>
+          </div>
+          <p>Ein Keyword, ein Land, ein Morgen, drei verschiedene Antworten. Geändert hat sich nur die Sprache, auf die Google eingestellt war. Die sieben Mallorca-Keywords lieferten zu wenige Treffer für einen sauberen Sprachvergleich und fehlen deshalb in der Tabelle.</p>
+          <p>Zwei Einschränkungen. Googles <a href="https://status.search.google.com/incidents/WLxcJyC6jMWMfryxsKMc" target="_blank" rel="noopener noreferrer">Core Update vom November 2026</a> lief vom 10. bis 24. November. Beide Abfragen fallen also hinein, und es kann einen Teil der Bewegung erklären. Außerdem ist jede Abfrage eine einzelne Stichprobe. Google beantwortet dieselbe Suche manchmal schon Minuten später anders. Die Zahlen veranschaulichen den Mechanismus. Sie messen ihn nicht.</p>
 
           <h2 id="location">Standort und Unternehmensprofil</h2>
           <p>RESONEO berichtet von einem Twiddler namens Nearby. Er misst, wie nah jedes Ergebnis an der suchenden Person liegt, und ein Unternehmen in der Nähe kann Plätze gewinnen. Google sagt das Prinzip offen. <a href="https://support.google.com/business/answer/7091?hl=de" target="_blank" rel="noopener noreferrer">Die Hilfeseite zum lokalen Ranking</a> schreibt: &bdquo;Lokale Suchergebnisse basieren hauptsächlich auf Relevanz, Entfernung und Beliebtheit.&ldquo; Teilt jemand seinen Standort nicht, nutzt Google, was es darüber weiß.</p>

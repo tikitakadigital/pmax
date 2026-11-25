@@ -2845,6 +2845,16 @@ export const es = {
             caption='Nuestra consulta semanal de posiciones de pmax.online del 9 de noviembre de 2026: Google, búsqueda desde España, sin sesión, ordenador y móvil, 34 palabras clave. Cada cuadrado es una posición en la que apareció la web, marcado con el idioma de la página que mostró Google.'
           />
           <p>Una sola medición en una sola web demuestra poco, y una consulta sin sesión no tiene perfil de idioma. Pero enseña lo que un informe de posiciones esconde. La posición puede parecer buena mientras la página está en el idioma equivocado.</p>
+          <h3 id="update-25-november">Actualización, 25 de noviembre de 2026: una palabra clave, tres idiomas</h3>
+          <p>Después de publicar el artículo, el 16 y el 23 de noviembre consultamos ocho palabras clave en los tres idiomas de interfaz: siete sobre Mallorca y «performance max agency» como control. Mismo país, misma herramienta, sin sesión, ordenador y móvil. Donde mejor se ve el efecto es en la palabra de control. A 23 de noviembre:</p>
+          <div style={{ overflowX: 'auto' }}>
+            <table>
+              <thead><tr><th>Interfaz</th><th>Ordenador</th><th>Móvil</th></tr></thead>
+              <tbody><tr><td>Inglés</td><td>puesto 46, página de servicios en español</td><td>puesto 30, portada</td></tr><tr><td>Alemán</td><td>fuera de los primeros 78</td><td>puesto 2, portada (una semana antes, puesto 30)</td></tr><tr><td>Español</td><td>fuera de los primeros 86</td><td>fuera de los primeros 83</td></tr></tbody>
+            </table>
+          </div>
+          <p>Una palabra clave, un país, una misma mañana y tres respuestas distintas. Lo único que cambiaba era el idioma en que estaba configurado Google. Las siete palabras sobre Mallorca dieron muy pocos resultados para comparar bien los idiomas, así que no están en la tabla.</p>
+          <p>Dos salvedades. La <a href="https://status.search.google.com/incidents/WLxcJyC6jMWMfryxsKMc" target="_blank" rel="noopener noreferrer">actualización principal de Google de noviembre de 2026</a> se desplegó del 10 al 24 de noviembre, así que las dos consultas caen dentro, y puede explicar parte del movimiento. Además, cada consulta es una sola muestra. Google puede responder de forma distinta a la misma búsqueda con minutos de diferencia. Las cifras ilustran el mecanismo. No lo miden.</p>
 
           <h2 id="location">La ubicación y tu Perfil de Empresa</h2>
           <p>RESONEO informa de un twiddler llamado Nearby. Mide lo cerca que está cada resultado de la persona que busca, y un negocio cercano puede ganar puestos. Google reconoce el principio sin rodeos. <a href="https://support.google.com/business/answer/7091?hl=es" target="_blank" rel="noopener noreferrer">Su página de ayuda sobre el posicionamiento local</a> dice: «Los resultados locales se basan principalmente en la relevancia, la distancia y la popularidad». Si alguien no comparte su ubicación, Google usa lo que sabe de ella.</p>

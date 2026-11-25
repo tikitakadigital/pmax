@@ -28,6 +28,7 @@ const allPosts: Post[] = [
     variant: 'is-violet',
     featured: true,
     ogImage: '/og/google-ranking-not-what-customers-see.jpg',
+    dateModified: 'Nov 25, 2026',
     author: 'Philipp Enders',
   },
   {

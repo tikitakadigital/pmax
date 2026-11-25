@@ -377,6 +377,16 @@ export const blogDetails: BlogDetail[] = [
         caption='Our weekly rank check for pmax.online on 9 November 2026: Google, searched from Spain, signed out, desktop and mobile, 34 keywords. Each square is one position where the site appeared, lettered with the language of the page Google showed.'
       />
       <p>One reading on one site proves little, and a signed-out check has no language profile at all. But it shows what a ranking report hides. The position can look fine while the page is in the wrong language.</p>
+      <h3 id="update-25-november">Update, 25 November 2026: one keyword, three languages</h3>
+      <p>After publishing, we checked eight keywords in all three interface languages on 16 and 23 November: seven Mallorca keywords and &ldquo;performance max agency&rdquo; as a control. Same country, same tool, signed out, desktop and mobile. The control keyword shows the effect most clearly. On 23 November:</p>
+      <div style={{ overflowX: 'auto' }}>
+        <table>
+          <thead><tr><th>Interface</th><th>Desktop</th><th>Mobile</th></tr></thead>
+          <tbody><tr><td>English</td><td>46th, Spanish services page</td><td>30th, homepage</td></tr><tr><td>German</td><td>not in the first 78</td><td>2nd, homepage (30th a week earlier)</td></tr><tr><td>Spanish</td><td>not in the first 86</td><td>not in the first 83</td></tr></tbody>
+        </table>
+      </div>
+      <p>One keyword, one country, one morning, three different answers. The only thing that changed was the language Google was set to. The seven Mallorca keywords gave too few readings to compare the languages properly, so they aren&rsquo;t in the table.</p>
+      <p>Two caveats. Google&rsquo;s <a href="https://status.search.google.com/incidents/WLxcJyC6jMWMfryxsKMc" target="_blank" rel="noopener noreferrer">November 2026 core update</a> rolled out from 10 to 24 November, so both checks fall inside it, and it may explain part of the movement. And each check is a single sample. Google can answer the same search differently minutes apart. The numbers illustrate the mechanism. They don&rsquo;t measure it.</p>
 
       <h2 id="location">Location and your Business Profile</h2>
       <p>RESONEO reports a twiddler named Nearby. It measures how close each result is to the person searching, and a nearby business can gain places. Google is open about the principle. <a href="https://support.google.com/business/answer/7091" target="_blank" rel="noopener noreferrer">Its help page on local ranking</a> says local results are &ldquo;mainly based on relevance, distance, and popularity&rdquo;. If someone doesn&rsquo;t share where they are, Google uses what it knows about their location.</p>
